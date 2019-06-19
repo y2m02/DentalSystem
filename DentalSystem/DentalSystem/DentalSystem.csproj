@@ -85,6 +85,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DentalSystem.Contract.Repositories\DentalSystem.Contract.Repositories.csproj">
+      <Project>{640cdc16-9fe8-4a1a-a9f8-488e7fff3f30}</Project>
+      <Name>DentalSystem.Contract.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DentalSystem.Contract.Services\DentalSystem.Contract.Services.csproj">
+      <Project>{28cefb78-cf2b-4361-af90-249d8c537d9e}</Project>
+      <Name>DentalSystem.Contract.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DentalSystem.Entities\DentalSystem.Entities.csproj">
       <Project>{f51736f3-80e8-443d-af96-ff81ff0a1411}</Project>
       <Name>DentalSystem.Entities</Name>
@@ -93,10 +101,13 @@
       <Project>{55e7dfb5-9b24-4972-b089-6dae3a91f236}</Project>
       <Name>DentalSystem.Repositories</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DentalSystem.Services\DentalSystem.Services.csproj">
+    <ProjectReference Include="..\DentalSystem.Services\DentalSystem.BL.csproj">
       <Project>{109334c9-6a2f-4228-a294-03f0b5f753b8}</Project>
-      <Name>DentalSystem.Services</Name>
+      <Name>DentalSystem.BL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

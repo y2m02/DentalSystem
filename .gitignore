@@ -7,3 +7,12 @@ DentalSystem/DentalSystem.Services/bin/
 DentalSystem/DentalSystem.Services/obj/
 DentalSystem/DentalSystem/bin/
 DentalSystem/DentalSystem.Repositories/obj/
+DentalSystem/DentalSystem.Contract.Repositories/bin/Debug/DentalSystem.Contract.Repositories.dll
+DentalSystem/DentalSystem.Contract.Repositories/obj/Debug/DentalSystem.Contract.Repositories.dll
+DentalSystem/DentalSystem.Contract.Repositories/obj/Debug/DentalSystem.Contract.Repositories.pdb
+DentalSystem/DentalSystem.Contract.Repositories/bin/Debug/DentalSystem.Contract.Repositories.pdb
+DentalSystem/DentalSystem.Contract.Services/obj/Debug/DentalSystem.Contract.Services.dll
+DentalSystem/DentalSystem.Contract.Services/obj/Debug/DentalSystem.Contract.Services.pdb
+DentalSystem/DentalSystem.Contract.Services/obj/
+DentalSystem/DentalSystem.Contract.Services/bin/
+DentalSystem/DentalSystem.Contract.Repositories/obj/

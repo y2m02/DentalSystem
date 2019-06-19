@@ -1,0 +1,57 @@
+Patient
+	PatientId
+	FullName
+	Age
+	Sex
+	BirthDate
+	PhoneNumber
+	Address
+	Sector
+	Zone
+	HasInsurancePlan
+	NSS
+	AdmissionDate
+	
+PatientHealth
+	PatientHealthId
+	PatientId
+	HasBronchialAsthma
+	HasRenalDisease
+	HasBeenSickRecently
+	DiseaseCause
+	HasAllergy
+	HeartValve
+	IsEpileptic
+	HasHeartMurmur
+	HaAnemia
+	HasDiabeticParents
+	HasTuberculosis
+	HasBleeding
+	HasHepatitis
+	HasAllergicReaction
+	
+AdultOdontogram
+	AdultOdontogramId
+	PatientId
+	Information
+	
+ChildrenOdontogram
+	AdultOdontogramId
+	PatientId
+	Information
+	
+ActivityPerformed
+	ActivityPerformedId
+	PatientId
+	Section
+	Date
+	Description
+	Responsable
+
+Invoice
+	AccountsReceivableId
+	PatientId
+	Total
+	TotalPaid
+	CreatedDate
+	LastPaidDate
