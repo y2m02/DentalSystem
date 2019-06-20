@@ -7,7 +7,7 @@ Patient
 	PhoneNumber
 	Address
 	Sector
-	Zone
+	IsUrbanZone
 	HasInsurancePlan
 	NSS
 	AdmissionDate
@@ -30,15 +30,11 @@ PatientHealth
 	HasHepatitis
 	HasAllergicReaction
 	
-AdultOdontogram
-	AdultOdontogramId
+Odontogram
+	OdontogramId
 	PatientId
 	Information
-	
-ChildrenOdontogram
-	AdultOdontogramId
-	PatientId
-	Information
+	CavitiesQuantity	
 	
 ActivityPerformed
 	ActivityPerformedId
@@ -46,7 +42,7 @@ ActivityPerformed
 	Section
 	Date
 	Description
-	Responsable
+	UserId
 
 Invoice
 	AccountsReceivableId
@@ -55,3 +51,19 @@ Invoice
 	TotalPaid
 	CreatedDate
 	LastPaidDate
+	UserId
+
+Rol
+	RolId
+	Description
+	
+User
+	UserId
+	RolId
+	FullName
+	UserName
+	Password
+	IsActived
+	DeletedOn
+	DeletedBy
+	

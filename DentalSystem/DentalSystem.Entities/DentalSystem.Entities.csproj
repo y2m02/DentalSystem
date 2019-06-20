@@ -48,11 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\DentalSystemContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ActivityPerformed.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Odontogram.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PatientHealth.cs" />
+    <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
