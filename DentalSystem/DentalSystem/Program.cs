@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DentalSystem.Contract.Repositories;
+using DentalSystem.Contract.Services;
+using DentalSystem.Repositories.Repositories;
+using DentalSystem.Services.Services;
+using System;
 using System.Windows.Forms;
+using Unity;
 
 namespace DentalSystem
 {
@@ -14,9 +16,14 @@ namespace DentalSystem
         [STAThread]
         static void Main()
         {
+            IUnityContainer container = new UnityContainer();
+
+            container.RegisterType<IPatientService, PatientService>();
+            container.RegisterType<IPatientRepository, PatientRepository>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(container.Resolve<Form1>());
         }
     }
 }

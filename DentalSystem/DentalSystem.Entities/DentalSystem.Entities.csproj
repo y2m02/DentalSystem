@@ -58,6 +58,8 @@
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AddPatientRequest.cs" />
+    <Compile Include="Results\ListPatientsResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

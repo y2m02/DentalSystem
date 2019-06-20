@@ -10,7 +10,6 @@ namespace DentalSystem.Entities.Models
         public int InvoiceId { get; set; }
 
         [Required]
-
         [ForeignKey("User")]
         public int UserId { get; set; }
 
