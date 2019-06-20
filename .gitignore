@@ -1,0 +1,13 @@
+DentalSystem/DentalSystem/obj/
+DentalSystem/DentalSystem/bin/
+DentalSystem/DentalSystem.Services/obj/
+DentalSystem/DentalSystem.Services/bin/
+DentalSystem/DentalSystem.Repositories/obj/
+DentalSystem/DentalSystem.Repositories/bin/
+DentalSystem/DentalSystem.Entities/obj/
+DentalSystem/DentalSystem.Entities/bin/
+DentalSystem/DentalSystem.Contract.Services/obj/
+DentalSystem/DentalSystem.Contract.Repositories/obj/
+DentalSystem/DentalSystem.Contract.Repositories/bin/
+DentalSystem/.vs/
+DentalSystem/DentalSystem.Contract.Services/bin/
