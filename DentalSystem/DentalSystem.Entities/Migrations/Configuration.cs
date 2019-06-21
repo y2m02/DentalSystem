@@ -1,8 +1,9 @@
+using System.Data.Entity.Migrations;
+using DentalSystem.Entities.Context;
+
 namespace DentalSystem.Entities.Migrations
 {
-    using System.Data.Entity.Migrations;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<DentalSystem.Entities.Context.DentalSystemContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DentalSystemContext>
     {
         public Configuration()
         {
@@ -10,7 +11,7 @@ namespace DentalSystem.Entities.Migrations
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(DentalSystem.Entities.Context.DentalSystemContext context)
+        protected override void Seed(DentalSystemContext context)
         {
             //  This method will be called after migrating to the latest version.
 

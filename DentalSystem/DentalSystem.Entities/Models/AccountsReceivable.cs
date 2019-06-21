@@ -4,18 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DentalSystem.Entities.Models
 {
-    public class Invoice
+    public class AccountsReceivable
     {
-        [Key]
-        public int InvoiceId { get; set; }
-
-        [Required]
-        [ForeignKey("User")]
-        public int UserId { get; set; }
-
-        [ForeignKey("Patient")]
-        [Required]
-        public int PatientId { get; set; }
+        [Key] public int AccountsReceivableId { get; set; }
+        [Required] [ForeignKey("User")] public int UserId { get; set; }
+        [ForeignKey("Patient")] [Required] public int PatientId { get; set; }
 
         [Required]
         [DisplayFormat(DataFormatString = "{0:#.##}")]
@@ -25,11 +18,9 @@ namespace DentalSystem.Entities.Models
         [DisplayFormat(DataFormatString = "{0:#.##}")]
         public decimal TotalPaid { get; set; }
 
-        [Required]
-        public DateTime CreatedDate { get; set; }
+        [Required] public DateTime CreatedDate { get; set; }
 
         public User User { get; set; }
-
         public Patient Patient { get; set; }
     }
 }

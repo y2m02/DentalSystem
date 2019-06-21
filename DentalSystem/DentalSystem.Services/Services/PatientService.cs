@@ -1,11 +1,10 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Contract.Services;
-using DentalSystem.Entities.Requests;
-using DentalSystem.Entities.Results;
-using System;
-using System.Collections.Generic;
 using DentalSystem.Entities.Models;
+using DentalSystem.Entities.Requests.Patient;
+using DentalSystem.Entities.Results.Patient;
 
 namespace DentalSystem.Services.Services
 {
@@ -24,12 +23,31 @@ namespace DentalSystem.Services.Services
             _patientRepository.AddPatient(patient);
         }
 
-        public List<ListPatientsResult> GetAllPatients(IMapper iMapper)
+        public List<GetAllPatientsResult> GetAllPatients(IMapper iMapper)
         {
             var result = _patientRepository.GetAllPatients();
-            var patients = iMapper.Map<List<ListPatientsResult>>(result);
+            var patients = iMapper.Map<List<GetAllPatientsResult>>(result);
 
             return patients;
+        }
+
+        public GetPatientByIdResult GetPatientById(IMapper iMapper, GetPatientByIdRequest request)
+        {
+            var result = _patientRepository.GetPatientById(request.PatientId);
+            var patient = iMapper.Map<GetPatientByIdResult>(result);
+
+            return patient;
+        }
+
+        public void UpdatePatient(IMapper iMapper, UpdatePatientRequest request)
+        {
+            var patient = iMapper.Map<Patient>(request);
+            _patientRepository.UpdatePatient(patient);
+        }
+
+        public void DeletePatient(DeletePatientRequest request)
+        {
+            _patientRepository.DeletePatient(request.PatientId);
         }
     }
 }

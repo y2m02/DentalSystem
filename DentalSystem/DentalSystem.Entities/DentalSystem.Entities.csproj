@@ -51,15 +51,23 @@
     <Compile Include="Context\DentalSystemContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityPerformed.cs" />
-    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\AccountsReceivable.cs" />
+    <Compile Include="Models\InvoiceDetail.cs" />
     <Compile Include="Models\Odontogram.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\PatientHealth.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\AddPatientRequest.cs" />
-    <Compile Include="Results\ListPatientsResult.cs" />
+    <Compile Include="Requests\PatientHealth\AddPatientHealthRequest.cs" />
+    <Compile Include="Requests\Patient\AddPatientRequest.cs" />
+    <Compile Include="Requests\Patient\DeletePatientRequest.cs" />
+    <Compile Include="Requests\Patient\GetPatientByIdRequest.cs" />
+    <Compile Include="Requests\PatientHealth\UpdatePatientHealthRequest.cs" />
+    <Compile Include="Requests\Patient\UpdatePatientRequest.cs" />
+    <Compile Include="Results\Patient\GetAllPatientsResult.cs" />
+    <Compile Include="Results\Patient\GetPatientByIdResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

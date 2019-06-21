@@ -5,16 +5,18 @@ using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
-using DentalSystem.Entities.Results;
+using DentalSystem.Entities.Requests.Patient;
+using DentalSystem.Entities.Requests.PatientHealth;
+using DentalSystem.Entities.Results.Patient;
 using DentalSystem.MapperConfiguration;
 
 namespace DentalSystem
 {
     public partial class Form1 : Form
     {
-        private readonly IPatientService _patientService;
         private readonly IMapper _iMapper;
-        
+        private readonly IPatientService _patientService;
+
         private List<OdontogramTemplate> OdontogramTemplates;
 
         public Form1(IPatientService patientService)
@@ -32,7 +34,13 @@ namespace DentalSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 1;
+            var request = new GetPatientByIdRequest
+            {
+                PatientId = 5
+            };
+
+            _patientService.GetPatientById(_iMapper, request);
+            //tabControl1.SelectedIndex = 1;
         }
 
         private void BtnTeeth1Left_Click(object sender, EventArgs e)
@@ -47,7 +55,7 @@ namespace DentalSystem
             foreach (var control in PnlTeeth1.Controls)
                 if (control is Button)
                 {
-                    var button = (Button) control;
+                    var button = (Button)control;
 
                     var btn = OdontogramTemplates.FirstOrDefault(w => w.ButtonName == button.Name);
                 }
@@ -59,7 +67,7 @@ namespace DentalSystem
             foreach (var control in panel1.Controls)
                 if (control is Button)
                 {
-                    var button = (Button) control;
+                    var button = (Button)control;
 
                     button.Click += delegate
                     {
@@ -79,7 +87,7 @@ namespace DentalSystem
         {
             OdontogramTemplates = new List<OdontogramTemplate>();
 
-            string[] buttonPositions = {"Center", "Top", "Botton", "Right", "Left"};
+            string[] buttonPositions = { "Center", "Top", "Botton", "Right", "Left" };
 
             var j = 1;
             var k = 0;
@@ -98,7 +106,7 @@ namespace DentalSystem
             }
         }
 
-        private IEnumerable<ListPatientsResult> ListPatients()
+        private IEnumerable<GetAllPatientsResult> ListPatients()
         {
             var patients = _patientService.GetAllPatients(_iMapper);
 

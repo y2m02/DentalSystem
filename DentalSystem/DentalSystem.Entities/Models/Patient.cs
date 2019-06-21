@@ -7,32 +7,23 @@ namespace DentalSystem.Entities.Models
     public class Patient
     {
         [Key] public int PatientId { get; set; }
-
         [Required] [StringLength(100)] public string FullName { get; set; }
-
         [StringLength(15)] public string IdentificationCard { get; set; }
-
-        public int Age { get; set; }
-
-        public DateTime BirthDate { get; set; }
-
+        public int? Age { get; set; }
+        public DateTime? BirthDate { get; set; }
         [StringLength(10)] public string PhoneNumber { get; set; }
-
         [StringLength(200)] public string Address { get; set; }
-
         [StringLength(100)] public string Sector { get; set; }
-
-        public bool IsUrbanZone { get; set; }
-
-        public bool HasInsurancePlan { get; set; }
-
+        public bool? IsUrbanZone { get; set; }
+        public bool? HasInsurancePlan { get; set; }
+        // ReSharper disable once InconsistentNaming
         [StringLength(100)] public string NSS { get; set; }
-
         [Required] public DateTime AdmissionDate { get; set; }
+        [StringLength(50)] public string DeletedBy { get; set; }
+        public DateTime? DeletedOn { get; set; }
 
-        public virtual ICollection<PatientHealth> PatientHealths { get; set; }
-        public virtual ICollection<Odontogram> Odontograms { get; set; }
-        public virtual ICollection<ActivityPerformed> ActivitiesPerformed { get; set; }
-        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual PatientHealth PatientHealth { get; set; }
+        public virtual ICollection<Visit> Visits { get; set; }
+        public virtual ICollection<AccountsReceivable> AccountsReceivables { get; set; }
     }
 }

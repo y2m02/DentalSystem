@@ -1,17 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DentalSystem.Entities.Models
+﻿namespace DentalSystem.Entities.Requests.PatientHealth
 {
-    public class PatientHealth
+    public class AddPatientHealthRequest
     {
-        [Key,  ForeignKey("Patient")]
-        public int PatientHealthId { get; set; }
         public bool? HasBronchialAsthma { get; set; }
         public bool? HasRenalDisease { get; set; }
         public bool? HasBeenSickRecently { get; set; }
-
-        [StringLength(200)]
         public string DiseaseCause { get; set; }
         public bool? HasAllergy { get; set; }
         public bool? HeartValve { get; set; }
@@ -23,7 +16,5 @@ namespace DentalSystem.Entities.Models
         public bool? HasBleeding { get; set; }
         public bool? HasHepatitis { get; set; }
         public bool? HasAllergicReaction { get; set; }
-
-        public Patient Patient { get; set; }
     }
 }
