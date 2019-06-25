@@ -10,7 +10,7 @@ namespace DentalSystem.Entities.Results.Patient
         public int Age { get; set; }
         public string PhoneNumber { get; set; }
         public string Sector { get; set; }
-        public bool HasInsurancePlan { get; set; }
+        public string HasInsurancePlan { get; set; }
         public DateTime AdmissionDate { get; set; }
     }
 }

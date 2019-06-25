@@ -1,13 +1,13 @@
-﻿using DentalSystem.Entities.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Contract.Repositories
 {
     public interface IPatientRepository
     {
-        List<Patient> GetAllPatients();
+        List<Patient> GetAllPatients(string filter, bool isFilterByName);
         Patient GetPatientById(int patientId);
-        void AddPatient(Patient patient); 
+        void AddPatient(Patient patient);
         void UpdatePatient(Patient patient);
         void DeletePatient(int patientId);
     }

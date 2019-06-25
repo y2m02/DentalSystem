@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
@@ -11,7 +12,16 @@ namespace DentalSystem.MapperConfiguration
         public MappingProfile()
         {
             // GET
-            CreateMap<Patient, GetAllPatientsResult>();
+            CreateMap<Patient, GetAllPatientsResult>()
+                .ForMember(w => w.HasInsurancePlan,
+                    y => y.MapFrom(r => r.HasInsurancePlan != null ? (bool) r.HasInsurancePlan ? "Sí" : "No" : ""))
+                .ForMember(w => w.AdmissionDate,
+                    y => y.MapFrom(r => r.AdmissionDate != null ? r.AdmissionDate.ToShortDateString() : ""))
+                .ForMember(w => w.PhoneNumber,
+                    y => y.MapFrom(r =>
+                        r.PhoneNumber != null ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####") : ""));
+            //.ForMember(w => w.IdentificationCard,
+            //y => y.MapFrom(r => r.IdentificationCard != null ? Convert.ToDouble(r.IdentificationCard).ToString("###-#######-#") : ""));
 
             // GETBYID
             CreateMap<Patient, GetPatientByIdResult>()

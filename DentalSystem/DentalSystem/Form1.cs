@@ -63,6 +63,7 @@ namespace DentalSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            tabControl1.Width = Width - 100;
             StartButtons();
             foreach (var control in panel1.Controls)
                 if (control is Button)
@@ -80,7 +81,7 @@ namespace DentalSystem
                     };
                 }
 
-            var patients = ListPatients();
+            //var patients = ListPatients();
         }
 
         private void StartButtons()
@@ -106,11 +107,45 @@ namespace DentalSystem
             }
         }
 
-        private IEnumerable<GetAllPatientsResult> ListPatients()
-        {
-            var patients = _patientService.GetAllPatients(_iMapper);
+        //private IEnumerable<GetAllPatientsResult> ListPatients()
+        //{
+        //    var patients = _patientService.GetAllPatients(_iMapper);
 
-            return patients;
+        //    return patients;
+        //}
+
+        private void Form1_MaximumSizeChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("klk");
+        }
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            //tabControl1.Width = Width - 100;
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(800, 600);
+            tabControl1.Width = Width - 100;
+            pnlgrid.Width = tabControl1.Width - 100;
+            //pnlgrid.Left = tabControl1.Width - 100;
+            //pnlgrid.Left = tabControl1.Width - 100;
+
+            pnlgrid.Location = new Point(
+                tabControl1.ClientSize.Width / 2 - pnlgrid.Size.Width / 2,
+                tabControl1.ClientSize.Height / 2 - pnlgrid.Size.Height / 5);
+            pnlgrid.Anchor = AnchorStyles.None;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            //tabControl1.Width = Width - 100;
+        }
+
+        private void TabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

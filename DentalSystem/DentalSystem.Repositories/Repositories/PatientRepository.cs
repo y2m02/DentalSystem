@@ -63,9 +63,35 @@ namespace DentalSystem.Repositories.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Patient> GetAllPatients()
+        //public List<Patient> GetAllPatients()
+        //{
+        //    var patients = _context.Patients.Where(w => w.DeletedOn == null).OrderBy(w => w.FullName).ToList();
+
+        //    return patients;
+        //}
+
+
+        public List<Patient> GetAllPatients(string filter, bool isFilterByName)
         {
-            var patients = _context.Patients.Where(w => w.DeletedOn == null).ToList();
+            var patients = new List<Patient>();
+
+            if (string.IsNullOrEmpty(filter.Trim()))
+                patients = _context.Patients.Where(w => w.DeletedOn == null).OrderBy(w => w.FullName).ToList();
+            else
+                switch (isFilterByName)
+                {
+                    case true:
+                        patients = _context.Patients
+                            .Where(w => w.DeletedOn == null && w.FullName.Contains(filter.Trim()))
+                            .OrderBy(w => w.FullName).ToList();
+                        break;
+
+                    case false:
+                        patients = _context.Patients
+                            .Where(w => w.DeletedOn == null && w.IdentificationCard.Contains(filter.Trim()))
+                            .OrderBy(w => w.FullName).ToList();
+                        break;
+                }
 
             return patients;
         }

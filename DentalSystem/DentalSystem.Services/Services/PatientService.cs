@@ -23,9 +23,9 @@ namespace DentalSystem.Services.Services
             _patientRepository.AddPatient(patient);
         }
 
-        public List<GetAllPatientsResult> GetAllPatients(IMapper iMapper)
+        public List<GetAllPatientsResult> GetAllPatients(IMapper iMapper, string filter, bool isFilterByName)
         {
-            var result = _patientRepository.GetAllPatients();
+            var result = _patientRepository.GetAllPatients(filter, isFilterByName);
             var patients = iMapper.Map<List<GetAllPatientsResult>>(result);
 
             return patients;

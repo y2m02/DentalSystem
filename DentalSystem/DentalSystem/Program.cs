@@ -4,6 +4,7 @@ using DentalSystem.Repositories.Repositories;
 using DentalSystem.Services.Services;
 using System;
 using System.Windows.Forms;
+using DentalSystem.PatientList;
 using Unity;
 
 namespace DentalSystem
@@ -23,7 +24,7 @@ namespace DentalSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(container.Resolve<Form1>());
+            Application.Run(container.Resolve<FrmPatientList>());
         }
     }
 }
