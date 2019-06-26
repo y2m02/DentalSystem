@@ -74,12 +74,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericProperties\GenericUserProperties.cs" />
     <Compile Include="MapperConfiguration\AutoMapperConfiguration.cs" />
     <Compile Include="MapperConfiguration\MappingProfile.cs" />
-    <Compile Include="PatientList\FrmPatientList.cs">
+    <Compile Include="Patient\FrmAddPatient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientList\FrmPatientList.Designer.cs">
+    <Compile Include="Patient\FrmAddPatient.Designer.cs">
+      <DependentUpon>FrmAddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\FrmPatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\FrmPatientList.Designer.cs">
       <DependentUpon>FrmPatientList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -87,7 +94,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientList\FrmPatientList.resx">
+    <EmbeddedResource Include="Patient\FrmAddPatient.resx">
+      <DependentUpon>FrmAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\FrmPatientList.resx">
       <DependentUpon>FrmPatientList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

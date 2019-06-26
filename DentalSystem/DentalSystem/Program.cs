@@ -4,7 +4,7 @@ using DentalSystem.Repositories.Repositories;
 using DentalSystem.Services.Services;
 using System;
 using System.Windows.Forms;
-using DentalSystem.PatientList;
+using DentalSystem.Patient;
 using Unity;
 
 namespace DentalSystem

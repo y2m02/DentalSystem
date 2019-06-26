@@ -18,6 +18,7 @@ namespace DentalSystem.Entities.Models
 
         public virtual Rol Rol { get; set; }
         public virtual ICollection<ActivityPerformed> ActivitiesPerformed { get; set; }
+        public virtual ICollection<Patient> Patients { get; set; }
         //public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
         public virtual ICollection<AccountsReceivable> AccountsReceivables { get; set; }
     }

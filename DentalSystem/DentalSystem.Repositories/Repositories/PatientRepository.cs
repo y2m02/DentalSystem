@@ -58,9 +58,15 @@ namespace DentalSystem.Repositories.Repositories
             _context.SaveChanges();
         }
 
-        public void DeletePatient(int patientId)
+        public void DeletePatient(int patientId, string deletedBy)
         {
-            throw new NotImplementedException();
+            var patient = _context.Patients.FirstOrDefault(w => w.PatientId == patientId);
+
+            if (patient == null) return;
+
+            patient.DeletedOn = DateTime.Now;
+            patient.DeletedBy = deletedBy;
+            _context.SaveChanges();
         }
 
         //public List<Patient> GetAllPatients()
@@ -76,20 +82,21 @@ namespace DentalSystem.Repositories.Repositories
             var patients = new List<Patient>();
 
             if (string.IsNullOrEmpty(filter.Trim()))
-                patients = _context.Patients.Where(w => w.DeletedOn == null).OrderBy(w => w.FullName).ToList();
+                patients = _context.Patients.Where(w => w.DeletedOn == null).Include(w => w.Visits)
+                    .OrderBy(w => w.FullName).ToList();
             else
                 switch (isFilterByName)
                 {
                     case true:
                         patients = _context.Patients
                             .Where(w => w.DeletedOn == null && w.FullName.Contains(filter.Trim()))
-                            .OrderBy(w => w.FullName).ToList();
+                            .Include(w => w.Visits).OrderBy(w => w.FullName).ToList();
                         break;
 
                     case false:
                         patients = _context.Patients
                             .Where(w => w.DeletedOn == null && w.IdentificationCard.Contains(filter.Trim()))
-                            .OrderBy(w => w.FullName).ToList();
+                            .Include(w => w.Visits).OrderBy(w => w.FullName).ToList();
                         break;
                 }
 

@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Linq;
 using AutoMapper;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Results.Patient;
+
+//using DentalSystem.Entities.Results.Patient;
 
 namespace DentalSystem.MapperConfiguration
 {
@@ -12,19 +15,23 @@ namespace DentalSystem.MapperConfiguration
         public MappingProfile()
         {
             // GET
-            CreateMap<Patient, GetAllPatientsResult>()
+            CreateMap<Entities.Models.Patient, GetAllPatientsResult>()
                 .ForMember(w => w.HasInsurancePlan,
                     y => y.MapFrom(r => r.HasInsurancePlan != null ? (bool) r.HasInsurancePlan ? "Sí" : "No" : ""))
                 .ForMember(w => w.AdmissionDate,
                     y => y.MapFrom(r => r.AdmissionDate != null ? r.AdmissionDate.ToShortDateString() : ""))
+                .ForMember(w => w.LastVisitDate,
+                    y => y.MapFrom(r => r.Visits.OrderBy(w => w.VisitId).Select(w => w.CreatedOn).LastOrDefault()))
                 .ForMember(w => w.PhoneNumber,
                     y => y.MapFrom(r =>
-                        r.PhoneNumber != null ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####") : ""));
+                        !string.IsNullOrEmpty(r.PhoneNumber)
+                            ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####")
+                            : ""));
             //.ForMember(w => w.IdentificationCard,
-            //y => y.MapFrom(r => r.IdentificationCard != null ? Convert.ToDouble(r.IdentificationCard).ToString("###-#######-#") : ""));
+            //y => y.MapFrom(r => !string.IsNullOrEmpty(r.IdentificationCard) ? Convert.ToDouble(r.IdentificationCard).ToString("###-#######-#") : ""));
 
             // GETBYID
-            CreateMap<Patient, GetPatientByIdResult>()
+            CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
                 .ForMember(w => w.HasAnemia, y => y.MapFrom(r => r.PatientHealth.HasAnemia))
                 .ForMember(w => w.HasAllergicReaction, y => y.MapFrom(r => r.PatientHealth.HasAllergicReaction))
@@ -40,11 +47,11 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.HeartValve, y => y.MapFrom(r => r.PatientHealth.HeartValve))
                 .ForMember(w => w.IsEpileptic, y => y.MapFrom(r => r.PatientHealth.IsEpileptic));
 
-            //ADD
-            CreateMap<AddPatientRequest, Patient>();
-            CreateMap<UpdatePatientRequest, Patient>();
+            // ADD
+            CreateMap<AddPatientRequest, Entities.Models.Patient>();
+            CreateMap<UpdatePatientRequest, Entities.Models.Patient>();
 
-            //UPDATE
+            // UPDATE
             CreateMap<AddPatientHealthRequest, PatientHealth>();
             CreateMap<UpdatePatientHealthRequest, PatientHealth>();
         }

@@ -47,7 +47,7 @@ namespace DentalSystem.Services.Services
 
         public void DeletePatient(DeletePatientRequest request)
         {
-            _patientRepository.DeletePatient(request.PatientId);
+            _patientRepository.DeletePatient(request.PatientId, request.DeletedBy);
         }
     }
 }
