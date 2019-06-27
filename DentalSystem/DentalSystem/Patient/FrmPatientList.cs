@@ -6,6 +6,7 @@ using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.GenericProperties;
 using DentalSystem.MapperConfiguration;
+using DentalSystem.VisitManagement;
 
 namespace DentalSystem.Patient
 {
@@ -147,6 +148,15 @@ namespace DentalSystem.Patient
                 BtnCreateVisit.Enabled = BtnDetails.Enabled = BtnDelete.Enabled = false;
             else
                 BtnCreateVisit.Enabled = BtnDetails.Enabled = BtnDelete.Enabled = true;
+        }
+
+        private void BtnCreateVisit_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmVisitManagement
+            {
+                DialogResult=DialogResult.None
+            };
+            frm.ShowDialog();
         }
     }
 }

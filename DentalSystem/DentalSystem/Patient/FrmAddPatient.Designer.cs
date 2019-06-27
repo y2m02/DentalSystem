@@ -90,6 +90,7 @@
             // 
             this.TxtName.Location = new System.Drawing.Point(17, 119);
             this.TxtName.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtName.MaxLength = 99;
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(455, 30);
             this.TxtName.TabIndex = 0;
@@ -98,6 +99,7 @@
             // 
             this.TxtAddress.Location = new System.Drawing.Point(558, 320);
             this.TxtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtAddress.MaxLength = 199;
             this.TxtAddress.Name = "TxtAddress";
             this.TxtAddress.Size = new System.Drawing.Size(455, 30);
             this.TxtAddress.TabIndex = 8;
@@ -106,6 +108,7 @@
             // 
             this.TxtSector.Location = new System.Drawing.Point(558, 388);
             this.TxtSector.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtSector.MaxLength = 99;
             this.TxtSector.Name = "TxtSector";
             this.TxtSector.Size = new System.Drawing.Size(455, 30);
             this.TxtSector.TabIndex = 9;
@@ -114,6 +117,7 @@
             // 
             this.TxtPhoneNumber.Location = new System.Drawing.Point(558, 187);
             this.TxtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPhoneNumber.MaxLength = 10;
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
             this.TxtPhoneNumber.ShortcutsEnabled = false;
             this.TxtPhoneNumber.Size = new System.Drawing.Size(455, 30);
@@ -124,6 +128,7 @@
             // 
             this.TxtIdentificationCard.Location = new System.Drawing.Point(17, 187);
             this.TxtIdentificationCard.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtIdentificationCard.MaxLength = 11;
             this.TxtIdentificationCard.Name = "TxtIdentificationCard";
             this.TxtIdentificationCard.ShortcutsEnabled = false;
             this.TxtIdentificationCard.Size = new System.Drawing.Size(455, 30);

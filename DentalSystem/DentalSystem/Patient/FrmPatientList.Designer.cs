@@ -188,7 +188,7 @@
             this.BtnCreateVisit.TabIndex = 2;
             this.BtnCreateVisit.Text = "Crear visita";
             this.BtnCreateVisit.UseVisualStyleBackColor = true;
-            this.BtnCreateVisit.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.BtnCreateVisit.Click += new System.EventHandler(this.BtnCreateVisit_Click);
             // 
             // BtnDelete
             // 
@@ -239,7 +239,7 @@
             this.LblTitle.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitle.Location = new System.Drawing.Point(373, 38);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(551, 40);
+            this.LblTitle.Size = new System.Drawing.Size(536, 38);
             this.LblTitle.TabIndex = 27;
             this.LblTitle.Text = "CLINICA DENTAL DRA. RAMIREZ\t\t\t\t\t\t";
             // 
