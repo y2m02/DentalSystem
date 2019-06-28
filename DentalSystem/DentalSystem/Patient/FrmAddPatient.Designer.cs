@@ -92,7 +92,7 @@
             this.TxtName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtName.MaxLength = 99;
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(455, 30);
+            this.TxtName.Size = new System.Drawing.Size(455, 26);
             this.TxtName.TabIndex = 0;
             // 
             // TxtAddress
@@ -101,7 +101,7 @@
             this.TxtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAddress.MaxLength = 199;
             this.TxtAddress.Name = "TxtAddress";
-            this.TxtAddress.Size = new System.Drawing.Size(455, 30);
+            this.TxtAddress.Size = new System.Drawing.Size(455, 26);
             this.TxtAddress.TabIndex = 8;
             // 
             // TxtSector
@@ -110,7 +110,7 @@
             this.TxtSector.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSector.MaxLength = 99;
             this.TxtSector.Name = "TxtSector";
-            this.TxtSector.Size = new System.Drawing.Size(455, 30);
+            this.TxtSector.Size = new System.Drawing.Size(455, 26);
             this.TxtSector.TabIndex = 9;
             // 
             // TxtPhoneNumber
@@ -120,7 +120,7 @@
             this.TxtPhoneNumber.MaxLength = 10;
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
             this.TxtPhoneNumber.ShortcutsEnabled = false;
-            this.TxtPhoneNumber.Size = new System.Drawing.Size(455, 30);
+            this.TxtPhoneNumber.Size = new System.Drawing.Size(455, 26);
             this.TxtPhoneNumber.TabIndex = 4;
             this.TxtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
             // 
@@ -131,7 +131,7 @@
             this.TxtIdentificationCard.MaxLength = 11;
             this.TxtIdentificationCard.Name = "TxtIdentificationCard";
             this.TxtIdentificationCard.ShortcutsEnabled = false;
-            this.TxtIdentificationCard.Size = new System.Drawing.Size(455, 30);
+            this.TxtIdentificationCard.Size = new System.Drawing.Size(455, 26);
             this.TxtIdentificationCard.TabIndex = 1;
             this.TxtIdentificationCard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
             // 
@@ -142,7 +142,7 @@
             this.label1.Location = new System.Drawing.Point(13, 92);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 24);
+            this.label1.Size = new System.Drawing.Size(70, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nombre";
             // 
@@ -153,7 +153,7 @@
             this.label2.Location = new System.Drawing.Point(13, 159);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 24);
+            this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "Identificación";
             // 
@@ -164,7 +164,7 @@
             this.label3.Location = new System.Drawing.Point(554, 92);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 24);
+            this.label3.Size = new System.Drawing.Size(142, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "Fecha de registro";
             // 
@@ -175,7 +175,7 @@
             this.label4.Location = new System.Drawing.Point(554, 429);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 24);
+            this.label4.Size = new System.Drawing.Size(43, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "NSS";
             // 
@@ -186,7 +186,7 @@
             this.label6.Location = new System.Drawing.Point(554, 293);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 24);
+            this.label6.Size = new System.Drawing.Size(82, 19);
             this.label6.TabIndex = 11;
             this.label6.Text = "Dirección";
             // 
@@ -197,7 +197,7 @@
             this.label7.Location = new System.Drawing.Point(551, 159);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 24);
+            this.label7.Size = new System.Drawing.Size(75, 19);
             this.label7.TabIndex = 12;
             this.label7.Text = "Teléfono";
             // 
@@ -208,7 +208,7 @@
             this.label8.Location = new System.Drawing.Point(13, 293);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(205, 24);
+            this.label8.Size = new System.Drawing.Size(167, 19);
             this.label8.TabIndex = 13;
             this.label8.Text = "Fecha de nacimiento";
             // 
@@ -219,7 +219,7 @@
             this.label9.Location = new System.Drawing.Point(10, 362);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 24);
+            this.label9.Size = new System.Drawing.Size(49, 19);
             this.label9.TabIndex = 14;
             this.label9.Text = "Edad";
             // 
@@ -230,7 +230,7 @@
             this.label11.Location = new System.Drawing.Point(554, 358);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(150, 24);
+            this.label11.Size = new System.Drawing.Size(121, 19);
             this.label11.TabIndex = 16;
             this.label11.Text = "Barrio o paraje";
             // 
@@ -241,7 +241,7 @@
             this.label12.Location = new System.Drawing.Point(4, 8);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 24);
+            this.label12.Size = new System.Drawing.Size(65, 19);
             this.label12.TabIndex = 17;
             this.label12.Text = "Género";
             // 
@@ -252,7 +252,7 @@
             this.LblGeneralInfo.Location = new System.Drawing.Point(420, 28);
             this.LblGeneralInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGeneralInfo.Name = "LblGeneralInfo";
-            this.LblGeneralInfo.Size = new System.Drawing.Size(404, 33);
+            this.LblGeneralInfo.Size = new System.Drawing.Size(305, 26);
             this.LblGeneralInfo.TabIndex = 18;
             this.LblGeneralInfo.Text = "Datos generales del paciente";
             // 
@@ -262,7 +262,7 @@
             this.RbtMale.Checked = true;
             this.RbtMale.Location = new System.Drawing.Point(8, 34);
             this.RbtMale.Name = "RbtMale";
-            this.RbtMale.Size = new System.Drawing.Size(118, 27);
+            this.RbtMale.Size = new System.Drawing.Size(96, 22);
             this.RbtMale.TabIndex = 0;
             this.RbtMale.TabStop = true;
             this.RbtMale.Text = "Masculino";
@@ -273,7 +273,7 @@
             this.RbtFemale.AutoSize = true;
             this.RbtFemale.Location = new System.Drawing.Point(140, 34);
             this.RbtFemale.Name = "RbtFemale";
-            this.RbtFemale.Size = new System.Drawing.Size(116, 27);
+            this.RbtFemale.Size = new System.Drawing.Size(96, 22);
             this.RbtFemale.TabIndex = 1;
             this.RbtFemale.Text = "Femenino";
             this.RbtFemale.UseVisualStyleBackColor = true;
@@ -287,7 +287,7 @@
             0,
             0});
             this.NudAge.Name = "NudAge";
-            this.NudAge.Size = new System.Drawing.Size(452, 30);
+            this.NudAge.Size = new System.Drawing.Size(452, 26);
             this.NudAge.TabIndex = 4;
             this.NudAge.Value = new decimal(new int[] {
             1,
@@ -297,11 +297,12 @@
             // 
             // DtpBirthDate
             // 
-            this.DtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpBirthDate.CustomFormat = "dd/MM/yyyy";
+            this.DtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpBirthDate.Location = new System.Drawing.Point(14, 323);
             this.DtpBirthDate.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpBirthDate.Name = "DtpBirthDate";
-            this.DtpBirthDate.Size = new System.Drawing.Size(452, 30);
+            this.DtpBirthDate.Size = new System.Drawing.Size(452, 26);
             this.DtpBirthDate.TabIndex = 3;
             this.DtpBirthDate.ValueChanged += new System.EventHandler(this.DtpBirthDate_ValueChanged);
             // 
@@ -311,25 +312,27 @@
             this.label14.Location = new System.Drawing.Point(1086, -219);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(165, 23);
+            this.label14.Size = new System.Drawing.Size(131, 18);
             this.label14.TabIndex = 8;
             this.label14.Text = "Fecha de registro";
             // 
             // DtpAdmissionDate
             // 
-            this.DtpAdmissionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpAdmissionDate.CustomFormat = "dd/MM/yyyy";
+            this.DtpAdmissionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpAdmissionDate.Location = new System.Drawing.Point(558, 119);
             this.DtpAdmissionDate.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpAdmissionDate.Name = "DtpAdmissionDate";
-            this.DtpAdmissionDate.Size = new System.Drawing.Size(452, 30);
+            this.DtpAdmissionDate.Size = new System.Drawing.Size(452, 26);
             this.DtpAdmissionDate.TabIndex = 6;
             // 
             // TxtNss
             // 
             this.TxtNss.Location = new System.Drawing.Point(558, 455);
             this.TxtNss.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtNss.MaxLength = 99;
             this.TxtNss.Name = "TxtNss";
-            this.TxtNss.Size = new System.Drawing.Size(455, 30);
+            this.TxtNss.Size = new System.Drawing.Size(455, 26);
             this.TxtNss.TabIndex = 10;
             // 
             // PnlGender
@@ -359,7 +362,7 @@
             this.label15.Location = new System.Drawing.Point(4, 8);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 24);
+            this.label15.Size = new System.Drawing.Size(47, 19);
             this.label15.TabIndex = 17;
             this.label15.Text = "Zona";
             // 
@@ -369,7 +372,7 @@
             this.RbtRural.Checked = true;
             this.RbtRural.Location = new System.Drawing.Point(8, 34);
             this.RbtRural.Name = "RbtRural";
-            this.RbtRural.Size = new System.Drawing.Size(77, 27);
+            this.RbtRural.Size = new System.Drawing.Size(62, 22);
             this.RbtRural.TabIndex = 0;
             this.RbtRural.TabStop = true;
             this.RbtRural.Text = "Rural";
@@ -380,7 +383,7 @@
             this.RbtUrban.AutoSize = true;
             this.RbtUrban.Location = new System.Drawing.Point(100, 34);
             this.RbtUrban.Name = "RbtUrban";
-            this.RbtUrban.Size = new System.Drawing.Size(94, 27);
+            this.RbtUrban.Size = new System.Drawing.Size(77, 22);
             this.RbtUrban.TabIndex = 1;
             this.RbtUrban.Text = "Urbana";
             this.RbtUrban.UseVisualStyleBackColor = true;
@@ -402,7 +405,7 @@
             this.label16.Location = new System.Drawing.Point(4, 6);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(136, 24);
+            this.label16.Size = new System.Drawing.Size(113, 19);
             this.label16.TabIndex = 17;
             this.label16.Text = "¿Asegurado?";
             // 
@@ -412,7 +415,7 @@
             this.RbtInsuranceYes.Checked = true;
             this.RbtInsuranceYes.Location = new System.Drawing.Point(8, 32);
             this.RbtInsuranceYes.Name = "RbtInsuranceYes";
-            this.RbtInsuranceYes.Size = new System.Drawing.Size(50, 27);
+            this.RbtInsuranceYes.Size = new System.Drawing.Size(40, 22);
             this.RbtInsuranceYes.TabIndex = 0;
             this.RbtInsuranceYes.TabStop = true;
             this.RbtInsuranceYes.Text = "Sí";
@@ -423,7 +426,7 @@
             this.RbtInsuranceNo.AutoSize = true;
             this.RbtInsuranceNo.Location = new System.Drawing.Point(82, 32);
             this.RbtInsuranceNo.Name = "RbtInsuranceNo";
-            this.RbtInsuranceNo.Size = new System.Drawing.Size(55, 27);
+            this.RbtInsuranceNo.Size = new System.Drawing.Size(46, 22);
             this.RbtInsuranceNo.TabIndex = 1;
             this.RbtInsuranceNo.Text = "No";
             this.RbtInsuranceNo.UseVisualStyleBackColor = true;
@@ -458,13 +461,14 @@
             this.LblPatientHealth.Location = new System.Drawing.Point(13, 5);
             this.LblPatientHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPatientHealth.Name = "LblPatientHealth";
-            this.LblPatientHealth.Size = new System.Drawing.Size(265, 29);
+            this.LblPatientHealth.Size = new System.Drawing.Size(213, 22);
             this.LblPatientHealth.TabIndex = 25;
             this.LblPatientHealth.Text = "Cuestionario de salud";
             // 
             // TxtDiseaseCause
             // 
             this.TxtDiseaseCause.Location = new System.Drawing.Point(599, 101);
+            this.TxtDiseaseCause.MaxLength = 199;
             this.TxtDiseaseCause.Multiline = true;
             this.TxtDiseaseCause.Name = "TxtDiseaseCause";
             this.TxtDiseaseCause.ReadOnly = true;
@@ -476,7 +480,7 @@
             this.ChkHasAllergicReaction.AutoSize = true;
             this.ChkHasAllergicReaction.Location = new System.Drawing.Point(406, 134);
             this.ChkHasAllergicReaction.Name = "ChkHasAllergicReaction";
-            this.ChkHasAllergicReaction.Size = new System.Drawing.Size(188, 27);
+            this.ChkHasAllergicReaction.Size = new System.Drawing.Size(153, 22);
             this.ChkHasAllergicReaction.TabIndex = 11;
             this.ChkHasAllergicReaction.Text = "Reacción alérgica";
             this.ChkHasAllergicReaction.UseVisualStyleBackColor = true;
@@ -486,7 +490,7 @@
             this.ChkHasDiabeticParents.AutoSize = true;
             this.ChkHasDiabeticParents.Location = new System.Drawing.Point(212, 134);
             this.ChkHasDiabeticParents.Name = "ChkHasDiabeticParents";
-            this.ChkHasDiabeticParents.Size = new System.Drawing.Size(190, 27);
+            this.ChkHasDiabeticParents.Size = new System.Drawing.Size(155, 22);
             this.ChkHasDiabeticParents.TabIndex = 7;
             this.ChkHasDiabeticParents.Text = "Padres diabéticos";
             this.ChkHasDiabeticParents.UseVisualStyleBackColor = true;
@@ -496,7 +500,7 @@
             this.ChkHeartValve.AutoSize = true;
             this.ChkHeartValve.Location = new System.Drawing.Point(19, 134);
             this.ChkHeartValve.Name = "ChkHeartValve";
-            this.ChkHeartValve.Size = new System.Drawing.Size(177, 27);
+            this.ChkHeartValve.Size = new System.Drawing.Size(141, 22);
             this.ChkHeartValve.TabIndex = 3;
             this.ChkHeartValve.Text = "Válvula cardíaca";
             this.ChkHeartValve.UseVisualStyleBackColor = true;
@@ -506,7 +510,7 @@
             this.ChkHasHepatitis.AutoSize = true;
             this.ChkHasHepatitis.Location = new System.Drawing.Point(406, 101);
             this.ChkHasHepatitis.Name = "ChkHasHepatitis";
-            this.ChkHasHepatitis.Size = new System.Drawing.Size(108, 27);
+            this.ChkHasHepatitis.Size = new System.Drawing.Size(89, 22);
             this.ChkHasHepatitis.TabIndex = 10;
             this.ChkHasHepatitis.Text = "Hepatitis";
             this.ChkHasHepatitis.UseVisualStyleBackColor = true;
@@ -516,7 +520,7 @@
             this.ChkHasAnemia.AutoSize = true;
             this.ChkHasAnemia.Location = new System.Drawing.Point(212, 101);
             this.ChkHasAnemia.Name = "ChkHasAnemia";
-            this.ChkHasAnemia.Size = new System.Drawing.Size(97, 27);
+            this.ChkHasAnemia.Size = new System.Drawing.Size(81, 22);
             this.ChkHasAnemia.TabIndex = 6;
             this.ChkHasAnemia.Text = "Anemia";
             this.ChkHasAnemia.UseVisualStyleBackColor = true;
@@ -526,7 +530,7 @@
             this.ChkHasAllergy.AutoSize = true;
             this.ChkHasAllergy.Location = new System.Drawing.Point(19, 101);
             this.ChkHasAllergy.Name = "ChkHasAllergy";
-            this.ChkHasAllergy.Size = new System.Drawing.Size(93, 27);
+            this.ChkHasAllergy.Size = new System.Drawing.Size(77, 22);
             this.ChkHasAllergy.TabIndex = 2;
             this.ChkHasAllergy.Text = "Alergia";
             this.ChkHasAllergy.UseVisualStyleBackColor = true;
@@ -536,7 +540,7 @@
             this.ChkHasBleeding.AutoSize = true;
             this.ChkHasBleeding.Location = new System.Drawing.Point(406, 68);
             this.ChkHasBleeding.Name = "ChkHasBleeding";
-            this.ChkHasBleeding.Size = new System.Drawing.Size(117, 27);
+            this.ChkHasBleeding.Size = new System.Drawing.Size(96, 22);
             this.ChkHasBleeding.TabIndex = 9;
             this.ChkHasBleeding.Text = "Sangrado";
             this.ChkHasBleeding.UseVisualStyleBackColor = true;
@@ -546,7 +550,7 @@
             this.ChkHasHeartMurmur.AutoSize = true;
             this.ChkHasHeartMurmur.Location = new System.Drawing.Point(212, 68);
             this.ChkHasHeartMurmur.Name = "ChkHasHeartMurmur";
-            this.ChkHasHeartMurmur.Size = new System.Drawing.Size(165, 27);
+            this.ChkHasHeartMurmur.Size = new System.Drawing.Size(132, 22);
             this.ChkHasHeartMurmur.TabIndex = 5;
             this.ChkHasHeartMurmur.Text = "Soplo cardíaco";
             this.ChkHasHeartMurmur.UseVisualStyleBackColor = true;
@@ -556,7 +560,7 @@
             this.ChkHasRenalDisease.AutoSize = true;
             this.ChkHasRenalDisease.Location = new System.Drawing.Point(19, 68);
             this.ChkHasRenalDisease.Name = "ChkHasRenalDisease";
-            this.ChkHasRenalDisease.Size = new System.Drawing.Size(188, 27);
+            this.ChkHasRenalDisease.Size = new System.Drawing.Size(151, 22);
             this.ChkHasRenalDisease.TabIndex = 1;
             this.ChkHasRenalDisease.Text = "Enfermedad renal";
             this.ChkHasRenalDisease.UseVisualStyleBackColor = true;
@@ -566,7 +570,7 @@
             this.ChkHasBeenSickRecently.AutoSize = true;
             this.ChkHasBeenSickRecently.Location = new System.Drawing.Point(599, 35);
             this.ChkHasBeenSickRecently.Name = "ChkHasBeenSickRecently";
-            this.ChkHasBeenSickRecently.Size = new System.Drawing.Size(353, 27);
+            this.ChkHasBeenSickRecently.Size = new System.Drawing.Size(282, 22);
             this.ChkHasBeenSickRecently.TabIndex = 12;
             this.ChkHasBeenSickRecently.Text = "¿Ha estado enfermo recientemente?";
             this.ChkHasBeenSickRecently.UseVisualStyleBackColor = true;
@@ -577,7 +581,7 @@
             this.ChkHasTuberculosis.AutoSize = true;
             this.ChkHasTuberculosis.Location = new System.Drawing.Point(406, 35);
             this.ChkHasTuberculosis.Name = "ChkHasTuberculosis";
-            this.ChkHasTuberculosis.Size = new System.Drawing.Size(141, 27);
+            this.ChkHasTuberculosis.Size = new System.Drawing.Size(114, 22);
             this.ChkHasTuberculosis.TabIndex = 8;
             this.ChkHasTuberculosis.Text = "Tuberculosis";
             this.ChkHasTuberculosis.UseVisualStyleBackColor = true;
@@ -587,7 +591,7 @@
             this.ChkIsEpileptic.AutoSize = true;
             this.ChkIsEpileptic.Location = new System.Drawing.Point(212, 35);
             this.ChkIsEpileptic.Name = "ChkIsEpileptic";
-            this.ChkIsEpileptic.Size = new System.Drawing.Size(111, 27);
+            this.ChkIsEpileptic.Size = new System.Drawing.Size(93, 22);
             this.ChkIsEpileptic.TabIndex = 4;
             this.ChkIsEpileptic.Text = "Epilepcia";
             this.ChkIsEpileptic.UseVisualStyleBackColor = true;
@@ -597,7 +601,7 @@
             this.ChkHasBronchialAsthma.AutoSize = true;
             this.ChkHasBronchialAsthma.Location = new System.Drawing.Point(19, 35);
             this.ChkHasBronchialAsthma.Name = "ChkHasBronchialAsthma";
-            this.ChkHasBronchialAsthma.Size = new System.Drawing.Size(169, 27);
+            this.ChkHasBronchialAsthma.Size = new System.Drawing.Size(138, 22);
             this.ChkHasBronchialAsthma.TabIndex = 0;
             this.ChkHasBronchialAsthma.Text = "Asma Branquial";
             this.ChkHasBronchialAsthma.UseVisualStyleBackColor = true;
@@ -609,7 +613,7 @@
             this.label5.Location = new System.Drawing.Point(595, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 24);
+            this.label5.Size = new System.Drawing.Size(58, 19);
             this.label5.TabIndex = 9;
             this.label5.Text = "Causa";
             // 
@@ -636,10 +640,10 @@
             // FrmAddPatient
             // 
             this.AcceptButton = this.BtnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnCancel;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.PnlPatientHealth);

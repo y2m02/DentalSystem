@@ -8,7 +8,8 @@ namespace DentalSystem.Entities.Models
     public class ActivityPerformed
     {
         [Key] public int ActivityPerformedId { get; set; }
-        [Required] [ForeignKey("User")] public int UserId { get; set; }
+        [ForeignKey("User")] public int? UserId { get; set; }
+        [StringLength(100)] public string Responsable { get; set; }
         [Required] [ForeignKey("Visit")] public int VisitId { get; set; }
         [Required] [StringLength(30)] public string Section { get; set; }
         [Required] public DateTime Date { get; set; }

@@ -152,9 +152,12 @@ namespace DentalSystem.Patient
 
         private void BtnCreateVisit_Click(object sender, EventArgs e)
         {
-            var frm = new FrmVisitManagement
+            var patientId = Convert.ToInt32(DgvPatientList.CurrentRow?.Cells["PatientId"].Value);
+
+            var frm = new FrmVisitManagement(_iMapper,_patientService )
             {
-                DialogResult=DialogResult.None
+                PatientId= patientId,
+                DialogResult =DialogResult.None
             };
             frm.ShowDialog();
         }

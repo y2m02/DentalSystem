@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
@@ -36,25 +37,10 @@ namespace DentalSystem.Repositories.Repositories
             var patientToModify = _context.Patients.Include(w => w.PatientHealth)
                 .FirstOrDefault(w => w.PatientId == patient.PatientId && w.DeletedOn == null);
 
-            if (patientToModify != null)
-            {
-                patientToModify.Address = patient.Address;
-                patientToModify.AdmissionDate = patient.AdmissionDate;
-                patientToModify.Age = patient.Age;
-                patientToModify.BirthDate = patient.BirthDate;
-                patientToModify.DeletedBy = patient.DeletedBy;
-                patientToModify.DeletedOn = patient.DeletedOn;
-                patientToModify.FullName = patient.FullName;
-                patientToModify.HasInsurancePlan = patient.HasInsurancePlan;
-                patientToModify.IdentificationCard = patient.IdentificationCard;
-                patientToModify.IsUrbanZone = patient.IsUrbanZone;
-                patientToModify.NSS = patient.NSS;
-                patientToModify.PatientHealth = patient.PatientHealth;
-                patientToModify.PhoneNumber = patient.PhoneNumber;
-                patientToModify.Sector = patient.Sector;
-            }
+            if (patientToModify == null) return;
 
-            //_context.Entry(patient).State = EntityState.Modified;
+            _context.Entry(patientToModify.PatientHealth).CurrentValues.SetValues(patient.PatientHealth);
+            _context.Entry(patientToModify).CurrentValues.SetValues(patient);
             _context.SaveChanges();
         }
 

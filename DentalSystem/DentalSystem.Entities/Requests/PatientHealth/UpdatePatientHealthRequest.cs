@@ -2,6 +2,7 @@
 {
     public class UpdatePatientHealthRequest
     {
+        public int PatientHealthId { get; set; }
         public bool? HasBronchialAsthma { get; set; }
         public bool? HasRenalDisease { get; set; }
         public bool? HasBeenSickRecently { get; set; }
