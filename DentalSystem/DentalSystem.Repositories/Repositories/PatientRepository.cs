@@ -46,7 +46,7 @@ namespace DentalSystem.Repositories.Repositories
 
         public void DeletePatient(int patientId, string deletedBy)
         {
-            var patient = _context.Patients.FirstOrDefault(w => w.PatientId == patientId);
+            var patient = _context.Patients.FirstOrDefault(w => w.PatientId == patientId && w.DeletedOn == null);
 
             if (patient == null) return;
 

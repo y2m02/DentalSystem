@@ -12,15 +12,17 @@ namespace DentalSystem.Patient
 {
     public partial class FrmPatientList : Form
     {
+        private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
         private readonly IPatientService _patientService;
 
-        public FrmPatientList(IPatientService patientService)
+        public FrmPatientList(IPatientService patientService, IActivityPerformedService activityPerformedService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
 
             _patientService = patientService;
+            _activityPerformedService = activityPerformedService;
             InitializeComponent();
         }
 
@@ -127,7 +129,7 @@ namespace DentalSystem.Patient
                 var deletePatientRequest = new DeletePatientRequest
                 {
                     PatientId = id,
-                    DeletedBy=GenericUserProperties.UserName
+                    DeletedBy = GenericUserProperties.UserName
                 };
 
                 _patientService.DeletePatient(deletePatientRequest);
@@ -154,10 +156,10 @@ namespace DentalSystem.Patient
         {
             var patientId = Convert.ToInt32(DgvPatientList.CurrentRow?.Cells["PatientId"].Value);
 
-            var frm = new FrmVisitManagement(_iMapper,_patientService )
+            var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService)
             {
-                PatientId= patientId,
-                DialogResult =DialogResult.None
+                PatientId = patientId,
+                DialogResult = DialogResult.None
             };
             frm.ShowDialog();
         }

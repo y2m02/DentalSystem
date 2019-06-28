@@ -94,20 +94,10 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
-            this.BtnModifyActivity = new System.Windows.Forms.Button();
             this.BtnDeleteActivity = new System.Windows.Forms.Button();
-            this.BtnSaveActivity = new System.Windows.Forms.Button();
-            this.DtpActivityDate = new System.Windows.Forms.DateTimePicker();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.TxtActivityDate = new System.Windows.Forms.TextBox();
-            this.TxtActivityResponsable = new System.Windows.Forms.TextBox();
-            this.TxtActivityDescription = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.CbxSection = new System.Windows.Forms.ComboBox();
-            this.BtnCancelActivity = new System.Windows.Forms.Button();
-            this.BtnNewActivity = new System.Windows.Forms.Button();
+            this.BtnModifyActivity = new System.Windows.Forms.Button();
+            this.btnAddActivity = new System.Windows.Forms.Button();
+            this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -118,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NudAge)).BeginInit();
             this.TabActivitiesPermormed.SuspendLayout();
             this.PnlActivitiesPerformed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).BeginInit();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -861,171 +852,66 @@
             // 
             // PnlActivitiesPerformed
             // 
-            this.PnlActivitiesPerformed.Controls.Add(this.CbxSection);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnNewActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnCancelActivity);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnDeleteActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnSaveActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.DtpActivityDate);
-            this.PnlActivitiesPerformed.Controls.Add(this.label22);
-            this.PnlActivitiesPerformed.Controls.Add(this.label25);
-            this.PnlActivitiesPerformed.Controls.Add(this.label26);
-            this.PnlActivitiesPerformed.Controls.Add(this.label27);
-            this.PnlActivitiesPerformed.Controls.Add(this.TxtActivityDescription);
-            this.PnlActivitiesPerformed.Controls.Add(this.TxtActivityDate);
-            this.PnlActivitiesPerformed.Controls.Add(this.TxtActivityResponsable);
-            this.PnlActivitiesPerformed.Location = new System.Drawing.Point(7, 15);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyActivity);
+            this.PnlActivitiesPerformed.Controls.Add(this.btnAddActivity);
+            this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesList);
+            this.PnlActivitiesPerformed.Location = new System.Drawing.Point(11, 15);
             this.PnlActivitiesPerformed.Name = "PnlActivitiesPerformed";
-            this.PnlActivitiesPerformed.Size = new System.Drawing.Size(964, 590);
+            this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 633);
             this.PnlActivitiesPerformed.TabIndex = 32;
-            // 
-            // BtnModifyActivity
-            // 
-            this.BtnModifyActivity.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnModifyActivity.Location = new System.Drawing.Point(137, 139);
-            this.BtnModifyActivity.Name = "BtnModifyActivity";
-            this.BtnModifyActivity.Size = new System.Drawing.Size(110, 52);
-            this.BtnModifyActivity.TabIndex = 38;
-            this.BtnModifyActivity.Text = "Modificar";
-            this.BtnModifyActivity.UseVisualStyleBackColor = true;
             // 
             // BtnDeleteActivity
             // 
-            this.BtnDeleteActivity.Location = new System.Drawing.Point(253, 139);
+            this.BtnDeleteActivity.Location = new System.Drawing.Point(365, 20);
+            this.BtnDeleteActivity.Margin = new System.Windows.Forms.Padding(1);
             this.BtnDeleteActivity.Name = "BtnDeleteActivity";
-            this.BtnDeleteActivity.Size = new System.Drawing.Size(110, 52);
-            this.BtnDeleteActivity.TabIndex = 35;
+            this.BtnDeleteActivity.Size = new System.Drawing.Size(180, 51);
+            this.BtnDeleteActivity.TabIndex = 8;
             this.BtnDeleteActivity.Text = "Eliminar";
             this.BtnDeleteActivity.UseVisualStyleBackColor = true;
+            this.BtnDeleteActivity.Click += new System.EventHandler(this.BtnDeleteActivity_Click);
             // 
-            // BtnSaveActivity
+            // BtnModifyActivity
             // 
-            this.BtnSaveActivity.Location = new System.Drawing.Point(19, 139);
-            this.BtnSaveActivity.Name = "BtnSaveActivity";
-            this.BtnSaveActivity.Size = new System.Drawing.Size(110, 52);
-            this.BtnSaveActivity.TabIndex = 35;
-            this.BtnSaveActivity.Text = "Guardar";
-            this.BtnSaveActivity.UseVisualStyleBackColor = true;
-            this.BtnSaveActivity.Visible = false;
+            this.BtnModifyActivity.Location = new System.Drawing.Point(183, 20);
+            this.BtnModifyActivity.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnModifyActivity.Name = "BtnModifyActivity";
+            this.BtnModifyActivity.Size = new System.Drawing.Size(180, 51);
+            this.BtnModifyActivity.TabIndex = 6;
+            this.BtnModifyActivity.Text = "Modificar";
+            this.BtnModifyActivity.UseVisualStyleBackColor = true;
+            this.BtnModifyActivity.Click += new System.EventHandler(this.BtnModifyActivity_Click);
             // 
-            // DtpActivityDate
+            // btnAddActivity
             // 
-            this.DtpActivityDate.CustomFormat = "dd/MM/yyyy";
-            this.DtpActivityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpActivityDate.Location = new System.Drawing.Point(495, 38);
-            this.DtpActivityDate.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
-            this.DtpActivityDate.Name = "DtpActivityDate";
-            this.DtpActivityDate.Size = new System.Drawing.Size(452, 26);
-            this.DtpActivityDate.TabIndex = 1;
-            this.DtpActivityDate.Visible = false;
+            this.btnAddActivity.Location = new System.Drawing.Point(1, 20);
+            this.btnAddActivity.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAddActivity.Name = "btnAddActivity";
+            this.btnAddActivity.Size = new System.Drawing.Size(180, 51);
+            this.btnAddActivity.TabIndex = 5;
+            this.btnAddActivity.Text = "Agregar";
+            this.btnAddActivity.UseVisualStyleBackColor = true;
+            this.btnAddActivity.Click += new System.EventHandler(this.BtnAddActivity_Click);
             // 
-            // label22
+            // DgvActivitiesList
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(488, 78);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 19);
-            this.label22.TabIndex = 36;
-            this.label22.Text = "Responsable";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(491, 11);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 19);
-            this.label25.TabIndex = 29;
-            this.label25.Text = "Fecha";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(15, 11);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 19);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "Cuadrante";
-            // 
-            // TxtActivityDate
-            // 
-            this.TxtActivityDate.Location = new System.Drawing.Point(613, 67);
-            this.TxtActivityDate.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtActivityDate.MaxLength = 10;
-            this.TxtActivityDate.Name = "TxtActivityDate";
-            this.TxtActivityDate.ShortcutsEnabled = false;
-            this.TxtActivityDate.Size = new System.Drawing.Size(452, 26);
-            this.TxtActivityDate.TabIndex = 1;
-            this.TxtActivityDate.TabStop = false;
-            // 
-            // TxtActivityResponsable
-            // 
-            this.TxtActivityResponsable.Location = new System.Drawing.Point(495, 106);
-            this.TxtActivityResponsable.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtActivityResponsable.MaxLength = 100;
-            this.TxtActivityResponsable.Name = "TxtActivityResponsable";
-            this.TxtActivityResponsable.ShortcutsEnabled = false;
-            this.TxtActivityResponsable.Size = new System.Drawing.Size(455, 26);
-            this.TxtActivityResponsable.TabIndex = 3;
-            // 
-            // TxtActivityDescription
-            // 
-            this.TxtActivityDescription.Location = new System.Drawing.Point(19, 106);
-            this.TxtActivityDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtActivityDescription.MaxLength = 100;
-            this.TxtActivityDescription.Name = "TxtActivityDescription";
-            this.TxtActivityDescription.ShortcutsEnabled = false;
-            this.TxtActivityDescription.Size = new System.Drawing.Size(455, 26);
-            this.TxtActivityDescription.TabIndex = 2;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(15, 78);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(153, 19);
-            this.label26.TabIndex = 26;
-            this.label26.Text = "Actividad realizada";
-            // 
-            // CbxSection
-            // 
-            this.CbxSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxSection.FormattingEnabled = true;
-            this.CbxSection.Items.AddRange(new object[] {
-            "Primer",
-            "Segundo",
-            "Tercer",
-            "Cuarto"});
-            this.CbxSection.Location = new System.Drawing.Point(19, 38);
-            this.CbxSection.Name = "CbxSection";
-            this.CbxSection.Size = new System.Drawing.Size(455, 26);
-            this.CbxSection.TabIndex = 0;
-            // 
-            // BtnCancelActivity
-            // 
-            this.BtnCancelActivity.Location = new System.Drawing.Point(369, 139);
-            this.BtnCancelActivity.Name = "BtnCancelActivity";
-            this.BtnCancelActivity.Size = new System.Drawing.Size(110, 52);
-            this.BtnCancelActivity.TabIndex = 35;
-            this.BtnCancelActivity.Text = "Cancelar";
-            this.BtnCancelActivity.UseVisualStyleBackColor = true;
-            // 
-            // BtnNewActivity
-            // 
-            this.BtnNewActivity.Location = new System.Drawing.Point(485, 139);
-            this.BtnNewActivity.Name = "BtnNewActivity";
-            this.BtnNewActivity.Size = new System.Drawing.Size(110, 52);
-            this.BtnNewActivity.TabIndex = 35;
-            this.BtnNewActivity.Text = "Nuevo";
-            this.BtnNewActivity.UseVisualStyleBackColor = true;
+            this.DgvActivitiesList.AllowUserToAddRows = false;
+            this.DgvActivitiesList.AllowUserToDeleteRows = false;
+            this.DgvActivitiesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvActivitiesList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvActivitiesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvActivitiesList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 82);
+            this.DgvActivitiesList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvActivitiesList.MultiSelect = false;
+            this.DgvActivitiesList.Name = "DgvActivitiesList";
+            this.DgvActivitiesList.ReadOnly = true;
+            this.DgvActivitiesList.RowHeadersWidth = 51;
+            this.DgvActivitiesList.RowTemplate.Height = 24;
+            this.DgvActivitiesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvActivitiesList.Size = new System.Drawing.Size(1086, 551);
+            this.DgvActivitiesList.TabIndex = 9;
             // 
             // FrmVisitManagement
             // 
@@ -1046,6 +932,7 @@
             this.Name = "FrmVisitManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de visita del paciente";
+            this.Activated += new System.EventHandler(this.FrmVisitManagement_Activated);
             this.Load += new System.EventHandler(this.FrmVisitManagement_Load);
             this.SizeChanged += new System.EventHandler(this.FrmVisitManagement_SizeChanged);
             this.TclVisitManagement.ResumeLayout(false);
@@ -1063,7 +950,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NudAge)).EndInit();
             this.TabActivitiesPermormed.ResumeLayout(false);
             this.PnlActivitiesPerformed.ResumeLayout(false);
-            this.PnlActivitiesPerformed.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1136,19 +1023,9 @@
         private System.Windows.Forms.TextBox TxtAdmissionDate;
         private System.Windows.Forms.TextBox TxtAge;
         private System.Windows.Forms.Panel PnlActivitiesPerformed;
-        private System.Windows.Forms.Button BtnModifyActivity;
         private System.Windows.Forms.Button BtnDeleteActivity;
-        private System.Windows.Forms.Button BtnSaveActivity;
-        private System.Windows.Forms.DateTimePicker DtpActivityDate;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox TxtActivityDate;
-        private System.Windows.Forms.TextBox TxtActivityResponsable;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox TxtActivityDescription;
-        private System.Windows.Forms.ComboBox CbxSection;
-        private System.Windows.Forms.Button BtnNewActivity;
-        private System.Windows.Forms.Button BtnCancelActivity;
+        private System.Windows.Forms.Button BtnModifyActivity;
+        private System.Windows.Forms.Button btnAddActivity;
+        private System.Windows.Forms.DataGridView DgvActivitiesList;
     }
 }

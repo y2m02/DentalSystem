@@ -60,12 +60,17 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\ActivityPerformed\AddActivityPerformedRequest.cs" />
+    <Compile Include="Requests\ActivityPerformed\DeleteActivityPerformedRequest.cs" />
+    <Compile Include="Requests\ActivityPerformed\GetAllActivitiesPerformedRequest.cs" />
+    <Compile Include="Requests\ActivityPerformed\UpdateActivityPerformedRequest.cs" />
     <Compile Include="Requests\PatientHealth\AddPatientHealthRequest.cs" />
     <Compile Include="Requests\Patient\AddPatientRequest.cs" />
     <Compile Include="Requests\Patient\DeletePatientRequest.cs" />
     <Compile Include="Requests\Patient\GetPatientByIdRequest.cs" />
     <Compile Include="Requests\PatientHealth\UpdatePatientHealthRequest.cs" />
     <Compile Include="Requests\Patient\UpdatePatientRequest.cs" />
+    <Compile Include="Results\ActivityPerformed\GetAllActivitiesPerformedResult.cs" />
     <Compile Include="Results\Patient\GetAllPatientsResult.cs" />
     <Compile Include="Results\Patient\GetPatientByIdResult.cs" />
   </ItemGroup>

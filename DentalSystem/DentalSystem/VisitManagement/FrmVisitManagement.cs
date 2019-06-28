@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
+using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.GenericProperties;
@@ -11,18 +12,20 @@ namespace DentalSystem.VisitManagement
 {
     public partial class FrmVisitManagement : Form
     {
+        private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
         private readonly IPatientService _patientService;
 
-        public FrmVisitManagement(IMapper iMapper, IPatientService patientService)
+        public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
+            IActivityPerformedService activityPerformedService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
+            _activityPerformedService = activityPerformedService;
             InitializeComponent();
         }
 
         public int PatientId { get; set; }
-        public int VisitId { get; set; }
 
         private void FrmVisitManagement_Load(object sender, EventArgs e)
         {
@@ -228,6 +231,11 @@ namespace DentalSystem.VisitManagement
             TxtAdmissionDate.Location = new Point(DtpAdmissionDate.Location.X, DtpAdmissionDate.Location.Y);
             TxtBirthDate.Location = new Point(DtpBirthDate.Location.X, DtpBirthDate.Location.Y);
             TxtAge.Location = new Point(NudAge.Location.X, NudAge.Location.Y);
+
+
+            PnlActivitiesPerformed.Location = new Point(
+                TclVisitManagement.Width / 2 - PnlActivitiesPerformed.Size.Width / 2,
+                PnlActivitiesPerformed.Location.Y);
         }
 
         private static void SetControlsStatus(bool isModify, params Panel[] panels)
@@ -349,6 +357,120 @@ namespace DentalSystem.VisitManagement
             TxtAge.Visible = true;
             NudAge.Visible = false;
             TxtAge.Text = NudAge.Text;
+        }
+
+        private void ListActivitiesPerformed()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
+                {
+                    VisitId = GenericUserProperties.VisitId
+                };
+
+                var activities = _activityPerformedService.GetAllActivitiesPerformed(_iMapper, getAllActivitiesPerformedRequest);
+                DgvActivitiesList.DataSource = activities;
+
+                NameGridHeader(DgvActivitiesList);
+                InitializeModifyAndDeleteButtons();
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private static void NameGridHeader(DataGridView dgv)
+        {
+            if (dgv == null) return;
+
+            dgv.Columns["ActivityPerformedId"].Visible = false;
+            dgv.Columns["Section"].HeaderText = "Sección de trabajo";
+            dgv.Columns["Description"].HeaderText = "Actividad realizada";
+            dgv.Columns["Responsable"].HeaderText = "Responsable";
+            dgv.Columns["Date"].HeaderText = "Fecha";
+        }
+
+        private void FrmVisitManagement_Activated(object sender, EventArgs e)
+        {
+            ListActivitiesPerformed();
+        }
+
+        private void BtnDeleteActivity_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DgvActivitiesList.CurrentRow == null) return;
+
+                var id = Convert.ToInt32(DgvActivitiesList.CurrentRow.Cells["ActivityPerformedId"].Value);
+
+                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result != DialogResult.Yes) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+                var deleteActivityPerformedRequest = new DeleteActivityPerformedRequest
+                {
+                    ActivityPerformedId = id,
+                    DeletedBy = GenericUserProperties.UserName
+                };
+
+                _activityPerformedService.DeleteActivityPerformed(deleteActivityPerformedRequest);
+                ListActivitiesPerformed();
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void InitializeModifyAndDeleteButtons()
+        {
+            if (DgvActivitiesList.RowCount < 1)
+                BtnModifyActivity.Enabled = BtnDeleteActivity.Enabled = false;
+            else
+                BtnModifyActivity.Enabled = BtnDeleteActivity.Enabled = true;
+        }
+
+        private void BtnAddActivity_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService)
+            {
+                IsCreate = true,
+                DialogResult = DialogResult.None
+            };
+            frm.ShowDialog();
+        }
+
+        private void BtnModifyActivity_Click(object sender, EventArgs e)
+        {
+            var activityPerformedId = Convert.ToInt32(DgvActivitiesList.CurrentRow?.Cells["ActivityPerformedId"].Value);
+            var section = DgvActivitiesList.CurrentRow?.Cells["Section"].Value.ToString();
+            var description = DgvActivitiesList.CurrentRow?.Cells["Description"].Value.ToString();
+            var responsable = DgvActivitiesList.CurrentRow?.Cells["Responsable"].Value.ToString();
+            var date = Convert.ToDateTime(DgvActivitiesList.CurrentRow?.Cells["Date"].Value);
+
+            var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService)
+            {
+                ActivityPerformedId = activityPerformedId,
+                Section = section,
+                Description = description,
+                Responsable = responsable,
+                Date = date,
+                IsCreate = false,
+                DialogResult = DialogResult.None
+            };
+            frm.ShowDialog();
         }
     }
 }

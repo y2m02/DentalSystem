@@ -11,7 +11,7 @@ namespace DentalSystem.Entities.Models
         [ForeignKey("User")] public int? UserId { get; set; }
         [StringLength(100)] public string Responsable { get; set; }
         [Required] [ForeignKey("Visit")] public int VisitId { get; set; }
-        [Required] [StringLength(30)] public string Section { get; set; }
+        [Required] public int Section { get; set; }
         [Required] public DateTime Date { get; set; }
         [Required] [StringLength(100)] public string Description { get; set; }
         [StringLength(50)] public string DeletedBy { get; set; }

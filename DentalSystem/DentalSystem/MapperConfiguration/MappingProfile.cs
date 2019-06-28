@@ -2,8 +2,10 @@
 using System.Linq;
 using AutoMapper;
 using DentalSystem.Entities.Models;
+using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
+using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.Patient;
 
 //using DentalSystem.Entities.Results.Patient;
@@ -30,6 +32,12 @@ namespace DentalSystem.MapperConfiguration
             //.ForMember(w => w.IdentificationCard,
             //y => y.MapFrom(r => !string.IsNullOrEmpty(r.IdentificationCard) ? Convert.ToDouble(r.IdentificationCard).ToString("###-#######-#") : ""));
 
+            CreateMap<ActivityPerformed, GetAllActivitiesPerformedResult>()
+                .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("dd/MM/yyyy")))
+                .ForMember(w => w.Section,
+                    y => y.MapFrom(r =>
+                        r.Section == 1 ? "Primer" : r.Section == 2 ? "Segundo" : r.Section == 3 ? "Tercer" : "Cuarto"));
+
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -49,11 +57,13 @@ namespace DentalSystem.MapperConfiguration
 
             // ADD
             CreateMap<AddPatientRequest, Entities.Models.Patient>();
-            CreateMap<UpdatePatientRequest, Entities.Models.Patient>();
+            CreateMap<AddPatientHealthRequest, PatientHealth>();
+            CreateMap<AddActivityPerformedRequest, ActivityPerformed>();
 
             // UPDATE
-            CreateMap<AddPatientHealthRequest, PatientHealth>();
+            CreateMap<UpdatePatientRequest, Entities.Models.Patient>();
             CreateMap<UpdatePatientHealthRequest, PatientHealth>();
+            CreateMap<UpdateActivityPerformedRequest, ActivityPerformed>();
         }
     }
 }
