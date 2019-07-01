@@ -3,8 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
+using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.ActivityPerformed;
-using DentalSystem.GenericProperties;
 
 namespace DentalSystem.VisitManagement
 {
@@ -33,12 +33,12 @@ namespace DentalSystem.VisitManagement
             BtnSaveActivity.Visible = IsCreate;
             BtnModifyActivity.Visible = !IsCreate;
             DtpActivityDate.MaxDate = DateTime.Now;
-
+            var date = DateTime.Now.Date;
             if (IsCreate)
             {
                 CbxSection.SelectedIndex = 0;
                 TxtActivityDescription.Clear();
-                DtpActivityDate.Value = DateTime.Now;
+                DtpActivityDate.Value = DateTime.Now.Date;
                 TxtActivityResponsable.Clear();
                 AcceptButton = BtnSaveActivity;
             }
@@ -82,12 +82,12 @@ namespace DentalSystem.VisitManagement
 
                 var addActivityPerformedRequest = new AddActivityPerformedRequest
                 {
-                    VisitId = GenericUserProperties.VisitId,
+                    VisitId = GenericProperties.VisitId,
                     Section = CbxSection.SelectedIndex + 1,
-                    Date = DtpActivityDate.Value,
+                    Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
                     Responsable = TxtActivityResponsable.Text,
-                    UserId = GenericUserProperties.UserId
+                    UserId = GenericProperties.UserId
                 };
 
                 _activityPerformedService.AddActivityPerformed(_iMapper, addActivityPerformedRequest);
@@ -136,12 +136,12 @@ namespace DentalSystem.VisitManagement
                 var updateActivityPerformedRequest = new UpdateActivityPerformedRequest
                 {
                     ActivityPerformedId = ActivityPerformedId,
-                    VisitId = GenericUserProperties.VisitId,
+                    VisitId = GenericProperties.VisitId,
                     Section = CbxSection.SelectedIndex + 1,
-                    Date = DtpActivityDate.Value,
+                    Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
                     Responsable = TxtActivityResponsable.Text,
-                    UserId = GenericUserProperties.UserId
+                    UserId = GenericProperties.UserId
                 };
 
                 _activityPerformedService.UpdateActivityPerformed(_iMapper, updateActivityPerformedRequest);

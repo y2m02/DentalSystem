@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
+using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
-using DentalSystem.GenericProperties;
 
 namespace DentalSystem.Patient
 {
@@ -75,7 +75,7 @@ namespace DentalSystem.Patient
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
                     Gender = RbtMale.Checked ? "M" : "F",
-                    UserId = GenericUserProperties.UserId
+                    UserId = GenericProperties.UserId
                 };
 
                 _patientService.AddPatient(_iMapper, addPatient);

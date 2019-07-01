@@ -9,5 +9,6 @@ namespace DentalSystem.Contract.Repositories
         void AddActivityPerformed(ActivityPerformed activityPerformed);
         void UpdateActivityPerformed(ActivityPerformed activityPerformed);
         void DeleteActivityPerformed(int activityPerformedId, string deletedBy);
+        List<ActivityPerformed> GetAllActivitiesPerformedByPatientId(int patientId, int visitId);
     }
 }

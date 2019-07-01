@@ -17,12 +17,22 @@ namespace DentalSystem.Services.Services
             _activityPerformedRepository = activityPerformedRepository;
         }
 
-        public List<GetAllActivitiesPerformedResult> GetAllActivitiesPerformed(IMapper iMapper, GetAllActivitiesPerformedRequest request)
+        public GetAllActivitiesPerformedResult GetAllActivitiesPerformed(IMapper iMapper,
+            GetAllActivitiesPerformedRequest request)
         {
             var result = _activityPerformedRepository.GetAllActivitiesPerformed(request.VisitId);
-            var activities = iMapper.Map<List<GetAllActivitiesPerformedResult>>(result);
+            var visitActivities = iMapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
 
-            return activities;
+            result =  _activityPerformedRepository.GetAllActivitiesPerformedByPatientId(request.PatientId, request.VisitId);
+            var patientActivities = iMapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
+
+            var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
+            {
+                VisitActivities = visitActivities,
+                PatientActivities = patientActivities
+            };
+
+            return getAllActivitiesPerformedResult;
         }
 
         public void AddActivityPerformed(IMapper iMapper, AddActivityPerformedRequest request)

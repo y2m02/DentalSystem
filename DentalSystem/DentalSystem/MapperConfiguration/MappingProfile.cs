@@ -5,8 +5,10 @@ using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
+using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.Patient;
+using DentalSystem.Entities.Results.Visit;
 
 //using DentalSystem.Entities.Results.Patient;
 
@@ -23,7 +25,21 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.AdmissionDate,
                     y => y.MapFrom(r => r.AdmissionDate != null ? r.AdmissionDate.ToShortDateString() : ""))
                 .ForMember(w => w.LastVisitDate,
-                    y => y.MapFrom(r => r.Visits.OrderBy(w => w.VisitId).Select(w => w.CreatedOn).LastOrDefault()))
+                    y => y.MapFrom(r =>
+                        r.Visits != null && r.Visits.Count != 0
+                            ? r.Visits.OrderByDescending(w => w.VisitId).Select(w => w.CreatedOn).FirstOrDefault()
+                                .ToString("dd/MM/yyyy")
+                            : ""))
+                .ForMember(w => w.VisitHasEnded,
+                    y => y.MapFrom(r =>
+                        r.Visits != null && r.Visits.Count != 0
+                            ? r.Visits.OrderByDescending(w => w.VisitId).Select(w => w.HasEnded).FirstOrDefault()
+                            : null))
+                .ForMember(w => w.VisitId,
+                    y => y.MapFrom(r =>
+                        r.Visits != null && r.Visits.Count != 0
+                            ? r.Visits.OrderByDescending(w => w.VisitId).Select(w => w.VisitId).FirstOrDefault()
+                            : 0))
                 .ForMember(w => w.PhoneNumber,
                     y => y.MapFrom(r =>
                         !string.IsNullOrEmpty(r.PhoneNumber)
@@ -32,7 +48,7 @@ namespace DentalSystem.MapperConfiguration
             //.ForMember(w => w.IdentificationCard,
             //y => y.MapFrom(r => !string.IsNullOrEmpty(r.IdentificationCard) ? Convert.ToDouble(r.IdentificationCard).ToString("###-#######-#") : ""));
 
-            CreateMap<ActivityPerformed, GetAllActivitiesPerformedResult>()
+            CreateMap<ActivityPerformed, GetAllActivitiesPerformedResultModel>()
                 .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("dd/MM/yyyy")))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
@@ -59,11 +75,13 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddPatientRequest, Entities.Models.Patient>();
             CreateMap<AddPatientHealthRequest, PatientHealth>();
             CreateMap<AddActivityPerformedRequest, ActivityPerformed>();
+            CreateMap<AddVisitRequest, Visit>();
 
             // UPDATE
             CreateMap<UpdatePatientRequest, Entities.Models.Patient>();
             CreateMap<UpdatePatientHealthRequest, PatientHealth>();
             CreateMap<UpdateActivityPerformedRequest, ActivityPerformed>();
+            CreateMap<EndVisitRequest, Visit>();
         }
     }
 }

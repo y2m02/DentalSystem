@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Contract.Services;
+using DentalSystem.Entities.Context;
 using DentalSystem.Patient;
 using DentalSystem.Repositories.Repositories;
 using DentalSystem.Services.Services;
@@ -24,6 +25,9 @@ namespace DentalSystem
 
             container.RegisterType<IActivityPerformedService, ActivityPerformedService>();
             container.RegisterType<IActivityPerformedRepository, ActivityPerformedRepository>();
+
+            container.RegisterType<IVisitService, VisitService>();
+            container.RegisterType<IVisitRepository, VisitRepository>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

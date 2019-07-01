@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
+using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.Patient;
-using DentalSystem.GenericProperties;
+using DentalSystem.Entities.Requests.Visit;
+using DentalSystem.Entities.Results.Patient;
 using DentalSystem.MapperConfiguration;
 using DentalSystem.VisitManagement;
 
@@ -15,20 +19,24 @@ namespace DentalSystem.Patient
         private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
         private readonly IPatientService _patientService;
+        private readonly IVisitService _visitService;
+        private bool _alreadyLoaded;
 
-        public FrmPatientList(IPatientService patientService, IActivityPerformedService activityPerformedService)
+        public FrmPatientList(IPatientService patientService, IActivityPerformedService activityPerformedService,
+            IVisitService visitService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
 
             _patientService = patientService;
             _activityPerformedService = activityPerformedService;
+            _visitService = visitService;
             InitializeComponent();
         }
 
         private void FrmPatientList_Load(object sender, EventArgs e)
         {
-            //ListPatients("", false);
+            ListPatients("", false);
         }
 
         private void FrmPatientList_SizeChanged(object sender, EventArgs e)
@@ -48,6 +56,7 @@ namespace DentalSystem.Patient
             BtnDetails.Left = btnAdd.Left + 180;
             BtnCreateVisit.Left = BtnDetails.Left + 180;
             BtnDelete.Left = BtnCreateVisit.Left + 180;
+            BtnBackToVisit.Location = new Point(BtnCreateVisit.Location.X, BtnCreateVisit.Location.Y);
         }
 
         private void ListPatients(string filter, bool isFilterByName)
@@ -55,9 +64,10 @@ namespace DentalSystem.Patient
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
+                _alreadyLoaded = false;
                 var patients = _patientService.GetAllPatients(_iMapper, filter, isFilterByName);
                 DgvPatientList.DataSource = patients;
-
+                _alreadyLoaded = true;
                 NameGridHeader(DgvPatientList);
 
                 InitializeButtons();
@@ -84,6 +94,8 @@ namespace DentalSystem.Patient
             dgv.Columns["HasInsurancePlan"].HeaderText = "¿Asegurado?";
             dgv.Columns["AdmissionDate"].HeaderText = "Fecha de registro";
             dgv.Columns["LastVisitDate"].HeaderText = "Última visita";
+            dgv.Columns["VisitHasEnded"].Visible = false;
+            dgv.Columns["VisitId"].Visible = false;
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -104,20 +116,21 @@ namespace DentalSystem.Patient
                 DialogResult = DialogResult.None
             };
             frm.ShowDialog();
+
+            ListPatients("", false);
         }
 
         private void FrmPatientList_Activated(object sender, EventArgs e)
         {
-            ListPatients("", false);
+            if (DgvPatientList.RowCount == 0) return;
+            DgvPatientList.Rows[0].Selected = true;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                if (DgvPatientList.CurrentRow == null) return;
-
-                var id = Convert.ToInt32(DgvPatientList.CurrentRow.Cells["PatientId"].Value);
+                var id = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
 
                 var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
                     MessageBoxButtons.YesNo,
@@ -129,11 +142,13 @@ namespace DentalSystem.Patient
                 var deletePatientRequest = new DeletePatientRequest
                 {
                     PatientId = id,
-                    DeletedBy = GenericUserProperties.UserName
+                    DeletedBy = GenericProperties.UserName
                 };
 
                 _patientService.DeletePatient(deletePatientRequest);
+
                 ListPatients("", false);
+
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -147,21 +162,102 @@ namespace DentalSystem.Patient
         private void InitializeButtons()
         {
             if (DgvPatientList.RowCount < 1)
-                BtnCreateVisit.Enabled = BtnDetails.Enabled = BtnDelete.Enabled = false;
+                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnDetails.Enabled = BtnDelete.Enabled = false;
             else
-                BtnCreateVisit.Enabled = BtnDetails.Enabled = BtnDelete.Enabled = true;
+                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnDetails.Enabled = BtnDelete.Enabled = true;
+
+            ValidateIfVisitFinished();
+        }
+
+        private void ValidateIfVisitFinished()
+        {
+            if (DgvPatientList.RowCount == 0)
+            {
+                BtnCreateVisit.Visible = true;
+                BtnBackToVisit.Visible = false;
+                return;
+            }
+
+            var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
+
+            var visitHasFinished = (bool?)visitHasEnded ?? true;
+
+            BtnCreateVisit.Visible = visitHasFinished;
+            BtnBackToVisit.Visible = !visitHasFinished;
         }
 
         private void BtnCreateVisit_Click(object sender, EventArgs e)
         {
-            var patientId = Convert.ToInt32(DgvPatientList.CurrentRow?.Cells["PatientId"].Value);
-
-            var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService)
+            try
             {
-                PatientId = patientId,
-                DialogResult = DialogResult.None
-            };
-            frm.ShowDialog();
+                var patientId = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
+                var patientName = DgvPatientList.SelectedRows[0].Cells["FullName"].Value.ToString();
+
+                Cursor.Current = Cursors.WaitCursor;
+                var addVisitRequest = new AddVisitRequest
+                {
+                    PatientId = patientId,
+                    HasEnded = false,
+                    CreatedOn = DateTime.Now
+                };
+
+                var addVisitResult = _visitService.AddVisit(_iMapper, addVisitRequest);
+
+                GenericProperties.VisitId = addVisitResult.VisitId;
+
+                Cursor.Current = Cursors.Default;
+
+                var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService)
+                {
+                    PatientId = patientId,
+                    PatientName= patientName,
+                    DialogResult = DialogResult.None
+                };
+                frm.ShowDialog();
+
+                ListPatients("", false);
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnBackToVisit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var patientId = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
+                var visitId = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["VisitId"].Value);
+                var patientName = DgvPatientList.SelectedRows[0].Cells["FullName"].Value.ToString();
+
+                GenericProperties.VisitId = visitId;
+
+                Cursor.Current = Cursors.Default;
+
+                var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService)
+                {
+                    PatientId = patientId,
+                    PatientName= patientName,
+                    DialogResult = DialogResult.None
+                };
+                frm.ShowDialog();
+
+                ListPatients("", false);
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void DgvPatientList_SelectionChanged(object sender, EventArgs e)
+        {
+            if (_alreadyLoaded) ValidateIfVisitFinished();
         }
     }
 }

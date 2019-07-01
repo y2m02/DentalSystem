@@ -87,17 +87,24 @@
             this.TabInitialOdontogram = new System.Windows.Forms.TabPage();
             this.TabTreatmentOdontogram = new System.Windows.Forms.TabPage();
             this.TabActivitiesPermormed = new System.Windows.Forms.TabPage();
+            this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
+            this.BtnDeleteActivity = new System.Windows.Forms.Button();
+            this.BtnModifyActivity = new System.Windows.Forms.Button();
+            this.btnAddActivity = new System.Windows.Forms.Button();
+            this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TabInvoice = new System.Windows.Forms.TabPage();
             this.BtnGeneralInfo = new System.Windows.Forms.Button();
             this.BtnInitialOdontogram = new System.Windows.Forms.Button();
             this.BtnTreatmentOdontogram = new System.Windows.Forms.Button();
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
-            this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
-            this.BtnDeleteActivity = new System.Windows.Forms.Button();
-            this.BtnModifyActivity = new System.Windows.Forms.Button();
-            this.btnAddActivity = new System.Windows.Forms.Button();
-            this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
+            this.BtnEndVisit = new System.Windows.Forms.Button();
+            this.LblPatientNameInitialOdontogram = new System.Windows.Forms.Label();
+            this.LblPatientNameTreatmentOdontogram = new System.Windows.Forms.Label();
+            this.LblPatientNameActivitiesPerformed = new System.Windows.Forms.Label();
+            this.LblPatientNameInvoice = new System.Windows.Forms.Label();
+            this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -106,9 +113,13 @@
             this.PnlZone.SuspendLayout();
             this.PnlGender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudAge)).BeginInit();
+            this.TabInitialOdontogram.SuspendLayout();
+            this.TabTreatmentOdontogram.SuspendLayout();
             this.TabActivitiesPermormed.SuspendLayout();
             this.PnlActivitiesPerformed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).BeginInit();
+            this.TabInvoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -119,21 +130,21 @@
             this.TclVisitManagement.Controls.Add(this.TabActivitiesPermormed);
             this.TclVisitManagement.Controls.Add(this.TabInvoice);
             this.TclVisitManagement.Dock = System.Windows.Forms.DockStyle.Right;
-            this.TclVisitManagement.Location = new System.Drawing.Point(170, 0);
+            this.TclVisitManagement.Location = new System.Drawing.Point(168, 0);
             this.TclVisitManagement.Name = "TclVisitManagement";
             this.TclVisitManagement.SelectedIndex = 0;
-            this.TclVisitManagement.Size = new System.Drawing.Size(1114, 687);
-            this.TclVisitManagement.TabIndex = 5;
+            this.TclVisitManagement.Size = new System.Drawing.Size(1114, 683);
+            this.TclVisitManagement.TabIndex = 6;
             this.TclVisitManagement.Click += new System.EventHandler(this.TclVisitManagement_Click);
             // 
             // TabGeneralInfo
             // 
             this.TabGeneralInfo.BackColor = System.Drawing.SystemColors.Control;
             this.TabGeneralInfo.Controls.Add(this.PnlInformation);
-            this.TabGeneralInfo.Location = new System.Drawing.Point(4, 27);
+            this.TabGeneralInfo.Location = new System.Drawing.Point(4, 32);
             this.TabGeneralInfo.Name = "TabGeneralInfo";
             this.TabGeneralInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.TabGeneralInfo.Size = new System.Drawing.Size(1106, 656);
+            this.TabGeneralInfo.Size = new System.Drawing.Size(1106, 647);
             this.TabGeneralInfo.TabIndex = 0;
             this.TabGeneralInfo.Text = "Datos generales";
             // 
@@ -234,7 +245,7 @@
             this.LblPatientHealth.Location = new System.Drawing.Point(13, 5);
             this.LblPatientHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPatientHealth.Name = "LblPatientHealth";
-            this.LblPatientHealth.Size = new System.Drawing.Size(213, 22);
+            this.LblPatientHealth.Size = new System.Drawing.Size(265, 29);
             this.LblPatientHealth.TabIndex = 25;
             this.LblPatientHealth.Text = "Cuestionario de salud";
             // 
@@ -243,7 +254,7 @@
             this.ChkHasAllergicReaction.AutoSize = true;
             this.ChkHasAllergicReaction.Location = new System.Drawing.Point(406, 134);
             this.ChkHasAllergicReaction.Name = "ChkHasAllergicReaction";
-            this.ChkHasAllergicReaction.Size = new System.Drawing.Size(153, 22);
+            this.ChkHasAllergicReaction.Size = new System.Drawing.Size(188, 27);
             this.ChkHasAllergicReaction.TabIndex = 11;
             this.ChkHasAllergicReaction.Text = "Reacción alérgica";
             this.ChkHasAllergicReaction.UseVisualStyleBackColor = true;
@@ -253,7 +264,7 @@
             this.ChkHasDiabeticParents.AutoSize = true;
             this.ChkHasDiabeticParents.Location = new System.Drawing.Point(212, 134);
             this.ChkHasDiabeticParents.Name = "ChkHasDiabeticParents";
-            this.ChkHasDiabeticParents.Size = new System.Drawing.Size(155, 22);
+            this.ChkHasDiabeticParents.Size = new System.Drawing.Size(190, 27);
             this.ChkHasDiabeticParents.TabIndex = 7;
             this.ChkHasDiabeticParents.Text = "Padres diabéticos";
             this.ChkHasDiabeticParents.UseVisualStyleBackColor = true;
@@ -263,7 +274,7 @@
             this.ChkHeartValve.AutoSize = true;
             this.ChkHeartValve.Location = new System.Drawing.Point(19, 134);
             this.ChkHeartValve.Name = "ChkHeartValve";
-            this.ChkHeartValve.Size = new System.Drawing.Size(141, 22);
+            this.ChkHeartValve.Size = new System.Drawing.Size(177, 27);
             this.ChkHeartValve.TabIndex = 3;
             this.ChkHeartValve.Text = "Válvula cardíaca";
             this.ChkHeartValve.UseVisualStyleBackColor = true;
@@ -273,7 +284,7 @@
             this.ChkHasHepatitis.AutoSize = true;
             this.ChkHasHepatitis.Location = new System.Drawing.Point(406, 101);
             this.ChkHasHepatitis.Name = "ChkHasHepatitis";
-            this.ChkHasHepatitis.Size = new System.Drawing.Size(89, 22);
+            this.ChkHasHepatitis.Size = new System.Drawing.Size(108, 27);
             this.ChkHasHepatitis.TabIndex = 10;
             this.ChkHasHepatitis.Text = "Hepatitis";
             this.ChkHasHepatitis.UseVisualStyleBackColor = true;
@@ -283,7 +294,7 @@
             this.ChkHasAnemia.AutoSize = true;
             this.ChkHasAnemia.Location = new System.Drawing.Point(212, 101);
             this.ChkHasAnemia.Name = "ChkHasAnemia";
-            this.ChkHasAnemia.Size = new System.Drawing.Size(81, 22);
+            this.ChkHasAnemia.Size = new System.Drawing.Size(97, 27);
             this.ChkHasAnemia.TabIndex = 6;
             this.ChkHasAnemia.Text = "Anemia";
             this.ChkHasAnemia.UseVisualStyleBackColor = true;
@@ -293,7 +304,7 @@
             this.ChkHasAllergy.AutoSize = true;
             this.ChkHasAllergy.Location = new System.Drawing.Point(19, 101);
             this.ChkHasAllergy.Name = "ChkHasAllergy";
-            this.ChkHasAllergy.Size = new System.Drawing.Size(77, 22);
+            this.ChkHasAllergy.Size = new System.Drawing.Size(93, 27);
             this.ChkHasAllergy.TabIndex = 2;
             this.ChkHasAllergy.Text = "Alergia";
             this.ChkHasAllergy.UseVisualStyleBackColor = true;
@@ -303,7 +314,7 @@
             this.ChkHasBleeding.AutoSize = true;
             this.ChkHasBleeding.Location = new System.Drawing.Point(406, 68);
             this.ChkHasBleeding.Name = "ChkHasBleeding";
-            this.ChkHasBleeding.Size = new System.Drawing.Size(96, 22);
+            this.ChkHasBleeding.Size = new System.Drawing.Size(117, 27);
             this.ChkHasBleeding.TabIndex = 9;
             this.ChkHasBleeding.Text = "Sangrado";
             this.ChkHasBleeding.UseVisualStyleBackColor = true;
@@ -313,7 +324,7 @@
             this.ChkHasHeartMurmur.AutoSize = true;
             this.ChkHasHeartMurmur.Location = new System.Drawing.Point(212, 68);
             this.ChkHasHeartMurmur.Name = "ChkHasHeartMurmur";
-            this.ChkHasHeartMurmur.Size = new System.Drawing.Size(132, 22);
+            this.ChkHasHeartMurmur.Size = new System.Drawing.Size(165, 27);
             this.ChkHasHeartMurmur.TabIndex = 5;
             this.ChkHasHeartMurmur.Text = "Soplo cardíaco";
             this.ChkHasHeartMurmur.UseVisualStyleBackColor = true;
@@ -323,7 +334,7 @@
             this.ChkHasRenalDisease.AutoSize = true;
             this.ChkHasRenalDisease.Location = new System.Drawing.Point(19, 68);
             this.ChkHasRenalDisease.Name = "ChkHasRenalDisease";
-            this.ChkHasRenalDisease.Size = new System.Drawing.Size(151, 22);
+            this.ChkHasRenalDisease.Size = new System.Drawing.Size(188, 27);
             this.ChkHasRenalDisease.TabIndex = 1;
             this.ChkHasRenalDisease.Text = "Enfermedad renal";
             this.ChkHasRenalDisease.UseVisualStyleBackColor = true;
@@ -333,7 +344,7 @@
             this.ChkHasBeenSickRecently.AutoSize = true;
             this.ChkHasBeenSickRecently.Location = new System.Drawing.Point(599, 35);
             this.ChkHasBeenSickRecently.Name = "ChkHasBeenSickRecently";
-            this.ChkHasBeenSickRecently.Size = new System.Drawing.Size(282, 22);
+            this.ChkHasBeenSickRecently.Size = new System.Drawing.Size(353, 27);
             this.ChkHasBeenSickRecently.TabIndex = 12;
             this.ChkHasBeenSickRecently.Text = "¿Ha estado enfermo recientemente?";
             this.ChkHasBeenSickRecently.UseVisualStyleBackColor = true;
@@ -344,7 +355,7 @@
             this.ChkHasTuberculosis.AutoSize = true;
             this.ChkHasTuberculosis.Location = new System.Drawing.Point(406, 35);
             this.ChkHasTuberculosis.Name = "ChkHasTuberculosis";
-            this.ChkHasTuberculosis.Size = new System.Drawing.Size(114, 22);
+            this.ChkHasTuberculosis.Size = new System.Drawing.Size(141, 27);
             this.ChkHasTuberculosis.TabIndex = 8;
             this.ChkHasTuberculosis.Text = "Tuberculosis";
             this.ChkHasTuberculosis.UseVisualStyleBackColor = true;
@@ -354,7 +365,7 @@
             this.ChkIsEpileptic.AutoSize = true;
             this.ChkIsEpileptic.Location = new System.Drawing.Point(212, 35);
             this.ChkIsEpileptic.Name = "ChkIsEpileptic";
-            this.ChkIsEpileptic.Size = new System.Drawing.Size(93, 22);
+            this.ChkIsEpileptic.Size = new System.Drawing.Size(111, 27);
             this.ChkIsEpileptic.TabIndex = 4;
             this.ChkIsEpileptic.Text = "Epilepcia";
             this.ChkIsEpileptic.UseVisualStyleBackColor = true;
@@ -364,7 +375,7 @@
             this.ChkHasBronchialAsthma.AutoSize = true;
             this.ChkHasBronchialAsthma.Location = new System.Drawing.Point(19, 35);
             this.ChkHasBronchialAsthma.Name = "ChkHasBronchialAsthma";
-            this.ChkHasBronchialAsthma.Size = new System.Drawing.Size(138, 22);
+            this.ChkHasBronchialAsthma.Size = new System.Drawing.Size(169, 27);
             this.ChkHasBronchialAsthma.TabIndex = 0;
             this.ChkHasBronchialAsthma.Text = "Asma Branquial";
             this.ChkHasBronchialAsthma.UseVisualStyleBackColor = true;
@@ -376,7 +387,7 @@
             this.label5.Location = new System.Drawing.Point(595, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 19);
+            this.label5.Size = new System.Drawing.Size(69, 24);
             this.label5.TabIndex = 9;
             this.label5.Text = "Causa";
             // 
@@ -407,7 +418,7 @@
             this.label16.Location = new System.Drawing.Point(4, 6);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(113, 19);
+            this.label16.Size = new System.Drawing.Size(136, 24);
             this.label16.TabIndex = 17;
             this.label16.Text = "¿Asegurado?";
             // 
@@ -418,7 +429,7 @@
             this.RbtInsuranceYes.Checked = true;
             this.RbtInsuranceYes.Location = new System.Drawing.Point(8, 32);
             this.RbtInsuranceYes.Name = "RbtInsuranceYes";
-            this.RbtInsuranceYes.Size = new System.Drawing.Size(40, 22);
+            this.RbtInsuranceYes.Size = new System.Drawing.Size(50, 27);
             this.RbtInsuranceYes.TabIndex = 0;
             this.RbtInsuranceYes.TabStop = true;
             this.RbtInsuranceYes.Text = "Sí";
@@ -430,7 +441,7 @@
             this.RbtInsuranceNo.AutoSize = true;
             this.RbtInsuranceNo.Location = new System.Drawing.Point(82, 32);
             this.RbtInsuranceNo.Name = "RbtInsuranceNo";
-            this.RbtInsuranceNo.Size = new System.Drawing.Size(46, 22);
+            this.RbtInsuranceNo.Size = new System.Drawing.Size(55, 27);
             this.RbtInsuranceNo.TabIndex = 1;
             this.RbtInsuranceNo.Text = "No";
             this.RbtInsuranceNo.UseVisualStyleBackColor = true;
@@ -452,7 +463,7 @@
             this.label15.Location = new System.Drawing.Point(4, 8);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 19);
+            this.label15.Size = new System.Drawing.Size(56, 24);
             this.label15.TabIndex = 17;
             this.label15.Text = "Zona";
             // 
@@ -463,7 +474,7 @@
             this.RbtRural.Checked = true;
             this.RbtRural.Location = new System.Drawing.Point(8, 34);
             this.RbtRural.Name = "RbtRural";
-            this.RbtRural.Size = new System.Drawing.Size(62, 22);
+            this.RbtRural.Size = new System.Drawing.Size(77, 27);
             this.RbtRural.TabIndex = 0;
             this.RbtRural.TabStop = true;
             this.RbtRural.Text = "Rural";
@@ -475,7 +486,7 @@
             this.RbtUrban.AutoSize = true;
             this.RbtUrban.Location = new System.Drawing.Point(100, 34);
             this.RbtUrban.Name = "RbtUrban";
-            this.RbtUrban.Size = new System.Drawing.Size(77, 22);
+            this.RbtUrban.Size = new System.Drawing.Size(94, 27);
             this.RbtUrban.TabIndex = 1;
             this.RbtUrban.Text = "Urbana";
             this.RbtUrban.UseVisualStyleBackColor = true;
@@ -497,7 +508,7 @@
             this.label12.Location = new System.Drawing.Point(4, 8);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 19);
+            this.label12.Size = new System.Drawing.Size(80, 24);
             this.label12.TabIndex = 17;
             this.label12.Text = "Género";
             // 
@@ -508,7 +519,7 @@
             this.RbtMale.Checked = true;
             this.RbtMale.Location = new System.Drawing.Point(8, 34);
             this.RbtMale.Name = "RbtMale";
-            this.RbtMale.Size = new System.Drawing.Size(96, 22);
+            this.RbtMale.Size = new System.Drawing.Size(118, 27);
             this.RbtMale.TabIndex = 0;
             this.RbtMale.TabStop = true;
             this.RbtMale.Text = "Masculino";
@@ -520,7 +531,7 @@
             this.RbtFemale.AutoSize = true;
             this.RbtFemale.Location = new System.Drawing.Point(140, 34);
             this.RbtFemale.Name = "RbtFemale";
-            this.RbtFemale.Size = new System.Drawing.Size(96, 22);
+            this.RbtFemale.Size = new System.Drawing.Size(116, 27);
             this.RbtFemale.TabIndex = 1;
             this.RbtFemale.Text = "Femenino";
             this.RbtFemale.UseVisualStyleBackColor = true;
@@ -532,7 +543,7 @@
             this.DtpAdmissionDate.Location = new System.Drawing.Point(495, 38);
             this.DtpAdmissionDate.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpAdmissionDate.Name = "DtpAdmissionDate";
-            this.DtpAdmissionDate.Size = new System.Drawing.Size(452, 26);
+            this.DtpAdmissionDate.Size = new System.Drawing.Size(452, 30);
             this.DtpAdmissionDate.TabIndex = 24;
             this.DtpAdmissionDate.Visible = false;
             // 
@@ -543,7 +554,7 @@
             this.DtpBirthDate.Location = new System.Drawing.Point(16, 242);
             this.DtpBirthDate.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpBirthDate.Name = "DtpBirthDate";
-            this.DtpBirthDate.Size = new System.Drawing.Size(452, 26);
+            this.DtpBirthDate.Size = new System.Drawing.Size(452, 30);
             this.DtpBirthDate.TabIndex = 20;
             this.DtpBirthDate.Visible = false;
             this.DtpBirthDate.ValueChanged += new System.EventHandler(this.DtpBirthDate_ValueChanged);
@@ -557,7 +568,7 @@
             0,
             0});
             this.NudAge.Name = "NudAge";
-            this.NudAge.Size = new System.Drawing.Size(452, 26);
+            this.NudAge.Size = new System.Drawing.Size(452, 30);
             this.NudAge.TabIndex = 21;
             this.NudAge.Value = new decimal(new int[] {
             1,
@@ -573,7 +584,7 @@
             this.label11.Location = new System.Drawing.Point(491, 277);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 19);
+            this.label11.Size = new System.Drawing.Size(150, 24);
             this.label11.TabIndex = 40;
             this.label11.Text = "Barrio o paraje";
             // 
@@ -584,7 +595,7 @@
             this.label9.Location = new System.Drawing.Point(12, 281);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 19);
+            this.label9.Size = new System.Drawing.Size(58, 24);
             this.label9.TabIndex = 39;
             this.label9.Text = "Edad";
             // 
@@ -595,7 +606,7 @@
             this.label8.Location = new System.Drawing.Point(15, 212);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 19);
+            this.label8.Size = new System.Drawing.Size(205, 24);
             this.label8.TabIndex = 37;
             this.label8.Text = "Fecha de nacimiento";
             // 
@@ -606,7 +617,7 @@
             this.label7.Location = new System.Drawing.Point(488, 78);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 19);
+            this.label7.Size = new System.Drawing.Size(92, 24);
             this.label7.TabIndex = 36;
             this.label7.Text = "Teléfono";
             // 
@@ -617,7 +628,7 @@
             this.label6.Location = new System.Drawing.Point(491, 212);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 19);
+            this.label6.Size = new System.Drawing.Size(99, 24);
             this.label6.TabIndex = 34;
             this.label6.Text = "Dirección";
             // 
@@ -628,7 +639,7 @@
             this.label4.Location = new System.Drawing.Point(493, 348);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 19);
+            this.label4.Size = new System.Drawing.Size(50, 24);
             this.label4.TabIndex = 30;
             this.label4.Text = "NSS";
             // 
@@ -639,7 +650,7 @@
             this.label3.Location = new System.Drawing.Point(491, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 19);
+            this.label3.Size = new System.Drawing.Size(176, 24);
             this.label3.TabIndex = 29;
             this.label3.Text = "Fecha de registro";
             // 
@@ -650,7 +661,7 @@
             this.label2.Location = new System.Drawing.Point(15, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 19);
+            this.label2.Size = new System.Drawing.Size(136, 24);
             this.label2.TabIndex = 26;
             this.label2.Text = "Identificación";
             // 
@@ -661,7 +672,7 @@
             this.label1.Location = new System.Drawing.Point(15, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 19);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 25;
             this.label1.Text = "Nombre";
             // 
@@ -672,7 +683,7 @@
             this.TxtIdentificationCard.MaxLength = 11;
             this.TxtIdentificationCard.Name = "TxtIdentificationCard";
             this.TxtIdentificationCard.ShortcutsEnabled = false;
-            this.TxtIdentificationCard.Size = new System.Drawing.Size(455, 26);
+            this.TxtIdentificationCard.Size = new System.Drawing.Size(455, 30);
             this.TxtIdentificationCard.TabIndex = 18;
             this.TxtIdentificationCard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
             // 
@@ -683,7 +694,7 @@
             this.TxtAge.MaxLength = 10;
             this.TxtAge.Name = "TxtAge";
             this.TxtAge.ShortcutsEnabled = false;
-            this.TxtAge.Size = new System.Drawing.Size(452, 26);
+            this.TxtAge.Size = new System.Drawing.Size(452, 30);
             this.TxtAge.TabIndex = 22;
             this.TxtAge.TabStop = false;
             // 
@@ -694,7 +705,7 @@
             this.TxtBirthDate.MaxLength = 10;
             this.TxtBirthDate.Name = "TxtBirthDate";
             this.TxtBirthDate.ShortcutsEnabled = false;
-            this.TxtBirthDate.Size = new System.Drawing.Size(452, 26);
+            this.TxtBirthDate.Size = new System.Drawing.Size(452, 30);
             this.TxtBirthDate.TabIndex = 22;
             this.TxtBirthDate.TabStop = false;
             // 
@@ -705,7 +716,7 @@
             this.TxtAdmissionDate.MaxLength = 10;
             this.TxtAdmissionDate.Name = "TxtAdmissionDate";
             this.TxtAdmissionDate.ShortcutsEnabled = false;
-            this.TxtAdmissionDate.Size = new System.Drawing.Size(452, 26);
+            this.TxtAdmissionDate.Size = new System.Drawing.Size(452, 30);
             this.TxtAdmissionDate.TabIndex = 22;
             this.TxtAdmissionDate.TabStop = false;
             // 
@@ -716,7 +727,7 @@
             this.TxtPhoneNumber.MaxLength = 10;
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
             this.TxtPhoneNumber.ShortcutsEnabled = false;
-            this.TxtPhoneNumber.Size = new System.Drawing.Size(455, 26);
+            this.TxtPhoneNumber.Size = new System.Drawing.Size(455, 30);
             this.TxtPhoneNumber.TabIndex = 22;
             this.TxtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
             // 
@@ -726,7 +737,7 @@
             this.TxtNss.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNss.MaxLength = 99;
             this.TxtNss.Name = "TxtNss";
-            this.TxtNss.Size = new System.Drawing.Size(455, 26);
+            this.TxtNss.Size = new System.Drawing.Size(455, 30);
             this.TxtNss.TabIndex = 32;
             // 
             // TxtSector
@@ -735,7 +746,7 @@
             this.TxtSector.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSector.MaxLength = 99;
             this.TxtSector.Name = "TxtSector";
-            this.TxtSector.Size = new System.Drawing.Size(455, 26);
+            this.TxtSector.Size = new System.Drawing.Size(455, 30);
             this.TxtSector.TabIndex = 31;
             // 
             // TxtAddress
@@ -744,7 +755,7 @@
             this.TxtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAddress.MaxLength = 199;
             this.TxtAddress.Name = "TxtAddress";
-            this.TxtAddress.Size = new System.Drawing.Size(455, 26);
+            this.TxtAddress.Size = new System.Drawing.Size(455, 30);
             this.TxtAddress.TabIndex = 28;
             // 
             // TxtName
@@ -753,117 +764,57 @@
             this.TxtName.Margin = new System.Windows.Forms.Padding(4);
             this.TxtName.MaxLength = 99;
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(455, 26);
+            this.TxtName.Size = new System.Drawing.Size(455, 30);
             this.TxtName.TabIndex = 17;
             // 
             // TabInitialOdontogram
             // 
             this.TabInitialOdontogram.BackColor = System.Drawing.SystemColors.Control;
-            this.TabInitialOdontogram.Location = new System.Drawing.Point(4, 27);
+            this.TabInitialOdontogram.Controls.Add(this.LblPatientNameInitialOdontogram);
+            this.TabInitialOdontogram.Location = new System.Drawing.Point(4, 32);
             this.TabInitialOdontogram.Name = "TabInitialOdontogram";
             this.TabInitialOdontogram.Padding = new System.Windows.Forms.Padding(3);
-            this.TabInitialOdontogram.Size = new System.Drawing.Size(1106, 656);
+            this.TabInitialOdontogram.Size = new System.Drawing.Size(1106, 647);
             this.TabInitialOdontogram.TabIndex = 1;
-            this.TabInitialOdontogram.Text = "OdontogramaInicial";
+            this.TabInitialOdontogram.Text = "Odontograma Inicial";
             // 
             // TabTreatmentOdontogram
             // 
             this.TabTreatmentOdontogram.BackColor = System.Drawing.SystemColors.Control;
-            this.TabTreatmentOdontogram.Location = new System.Drawing.Point(4, 27);
+            this.TabTreatmentOdontogram.Controls.Add(this.LblPatientNameTreatmentOdontogram);
+            this.TabTreatmentOdontogram.Location = new System.Drawing.Point(4, 32);
             this.TabTreatmentOdontogram.Name = "TabTreatmentOdontogram";
-            this.TabTreatmentOdontogram.Size = new System.Drawing.Size(1106, 656);
+            this.TabTreatmentOdontogram.Size = new System.Drawing.Size(1106, 647);
             this.TabTreatmentOdontogram.TabIndex = 2;
             this.TabTreatmentOdontogram.Text = "Odontograma tratamiento";
             // 
             // TabActivitiesPermormed
             // 
             this.TabActivitiesPermormed.BackColor = System.Drawing.SystemColors.Control;
+            this.TabActivitiesPermormed.Controls.Add(this.LblPatientNameActivitiesPerformed);
             this.TabActivitiesPermormed.Controls.Add(this.PnlActivitiesPerformed);
-            this.TabActivitiesPermormed.Location = new System.Drawing.Point(4, 27);
+            this.TabActivitiesPermormed.Location = new System.Drawing.Point(4, 32);
             this.TabActivitiesPermormed.Name = "TabActivitiesPermormed";
-            this.TabActivitiesPermormed.Size = new System.Drawing.Size(1106, 656);
+            this.TabActivitiesPermormed.Size = new System.Drawing.Size(1106, 647);
             this.TabActivitiesPermormed.TabIndex = 3;
             this.TabActivitiesPermormed.Text = "Actividades realizadas";
             // 
-            // TabInvoice
-            // 
-            this.TabInvoice.BackColor = System.Drawing.SystemColors.Control;
-            this.TabInvoice.Location = new System.Drawing.Point(4, 27);
-            this.TabInvoice.Name = "TabInvoice";
-            this.TabInvoice.Size = new System.Drawing.Size(1106, 656);
-            this.TabInvoice.TabIndex = 4;
-            this.TabInvoice.Text = "Facturación";
-            // 
-            // BtnGeneralInfo
-            // 
-            this.BtnGeneralInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnGeneralInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGeneralInfo.Location = new System.Drawing.Point(0, 0);
-            this.BtnGeneralInfo.Name = "BtnGeneralInfo";
-            this.BtnGeneralInfo.Size = new System.Drawing.Size(170, 62);
-            this.BtnGeneralInfo.TabIndex = 0;
-            this.BtnGeneralInfo.Text = "Datos generales";
-            this.BtnGeneralInfo.UseVisualStyleBackColor = true;
-            this.BtnGeneralInfo.Click += new System.EventHandler(this.BtnGeneralInfo_Click);
-            // 
-            // BtnInitialOdontogram
-            // 
-            this.BtnInitialOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInitialOdontogram.Location = new System.Drawing.Point(0, 62);
-            this.BtnInitialOdontogram.Name = "BtnInitialOdontogram";
-            this.BtnInitialOdontogram.Size = new System.Drawing.Size(170, 62);
-            this.BtnInitialOdontogram.TabIndex = 1;
-            this.BtnInitialOdontogram.Text = "Odontograma inicial";
-            this.BtnInitialOdontogram.UseVisualStyleBackColor = true;
-            this.BtnInitialOdontogram.Click += new System.EventHandler(this.BtnInitialOdontogram_Click);
-            // 
-            // BtnTreatmentOdontogram
-            // 
-            this.BtnTreatmentOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnTreatmentOdontogram.Location = new System.Drawing.Point(0, 124);
-            this.BtnTreatmentOdontogram.Name = "BtnTreatmentOdontogram";
-            this.BtnTreatmentOdontogram.Size = new System.Drawing.Size(170, 62);
-            this.BtnTreatmentOdontogram.TabIndex = 2;
-            this.BtnTreatmentOdontogram.Text = "Odontograma tratamiento";
-            this.BtnTreatmentOdontogram.UseVisualStyleBackColor = true;
-            this.BtnTreatmentOdontogram.Click += new System.EventHandler(this.BtnTreatmentOdontogram_Click);
-            // 
-            // BtnActivitiesPerformed
-            // 
-            this.BtnActivitiesPerformed.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnActivitiesPerformed.Location = new System.Drawing.Point(0, 186);
-            this.BtnActivitiesPerformed.Name = "BtnActivitiesPerformed";
-            this.BtnActivitiesPerformed.Size = new System.Drawing.Size(170, 62);
-            this.BtnActivitiesPerformed.TabIndex = 3;
-            this.BtnActivitiesPerformed.Text = "Actividades realizadas";
-            this.BtnActivitiesPerformed.UseVisualStyleBackColor = true;
-            this.BtnActivitiesPerformed.Click += new System.EventHandler(this.BtnActivitiesPerformed_Click);
-            // 
-            // BtnInvoice
-            // 
-            this.BtnInvoice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInvoice.Location = new System.Drawing.Point(0, 248);
-            this.BtnInvoice.Name = "BtnInvoice";
-            this.BtnInvoice.Size = new System.Drawing.Size(170, 62);
-            this.BtnInvoice.TabIndex = 4;
-            this.BtnInvoice.Text = "Facturación";
-            this.BtnInvoice.UseVisualStyleBackColor = true;
-            this.BtnInvoice.Click += new System.EventHandler(this.BtnInvoice_Click);
-            // 
             // PnlActivitiesPerformed
             // 
+            this.PnlActivitiesPerformed.Controls.Add(this.label10);
+            this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesListHistory);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnDeleteActivity);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyActivity);
             this.PnlActivitiesPerformed.Controls.Add(this.btnAddActivity);
             this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesList);
-            this.PnlActivitiesPerformed.Location = new System.Drawing.Point(11, 15);
+            this.PnlActivitiesPerformed.Location = new System.Drawing.Point(11, 30);
             this.PnlActivitiesPerformed.Name = "PnlActivitiesPerformed";
-            this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 633);
+            this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 618);
             this.PnlActivitiesPerformed.TabIndex = 32;
             // 
             // BtnDeleteActivity
             // 
-            this.BtnDeleteActivity.Location = new System.Drawing.Point(365, 20);
+            this.BtnDeleteActivity.Location = new System.Drawing.Point(365, 10);
             this.BtnDeleteActivity.Margin = new System.Windows.Forms.Padding(1);
             this.BtnDeleteActivity.Name = "BtnDeleteActivity";
             this.BtnDeleteActivity.Size = new System.Drawing.Size(180, 51);
@@ -874,7 +825,7 @@
             // 
             // BtnModifyActivity
             // 
-            this.BtnModifyActivity.Location = new System.Drawing.Point(183, 20);
+            this.BtnModifyActivity.Location = new System.Drawing.Point(183, 10);
             this.BtnModifyActivity.Margin = new System.Windows.Forms.Padding(1);
             this.BtnModifyActivity.Name = "BtnModifyActivity";
             this.BtnModifyActivity.Size = new System.Drawing.Size(180, 51);
@@ -885,7 +836,7 @@
             // 
             // btnAddActivity
             // 
-            this.btnAddActivity.Location = new System.Drawing.Point(1, 20);
+            this.btnAddActivity.Location = new System.Drawing.Point(1, 10);
             this.btnAddActivity.Margin = new System.Windows.Forms.Padding(1);
             this.btnAddActivity.Name = "btnAddActivity";
             this.btnAddActivity.Size = new System.Drawing.Size(180, 51);
@@ -901,8 +852,7 @@
             this.DgvActivitiesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvActivitiesList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvActivitiesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvActivitiesList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 82);
+            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 70);
             this.DgvActivitiesList.Margin = new System.Windows.Forms.Padding(4);
             this.DgvActivitiesList.MultiSelect = false;
             this.DgvActivitiesList.Name = "DgvActivitiesList";
@@ -910,14 +860,166 @@
             this.DgvActivitiesList.RowHeadersWidth = 51;
             this.DgvActivitiesList.RowTemplate.Height = 24;
             this.DgvActivitiesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivitiesList.Size = new System.Drawing.Size(1086, 551);
+            this.DgvActivitiesList.Size = new System.Drawing.Size(1086, 228);
             this.DgvActivitiesList.TabIndex = 9;
+            // 
+            // TabInvoice
+            // 
+            this.TabInvoice.BackColor = System.Drawing.SystemColors.Control;
+            this.TabInvoice.Controls.Add(this.LblPatientNameInvoice);
+            this.TabInvoice.Location = new System.Drawing.Point(4, 32);
+            this.TabInvoice.Name = "TabInvoice";
+            this.TabInvoice.Size = new System.Drawing.Size(1106, 647);
+            this.TabInvoice.TabIndex = 4;
+            this.TabInvoice.Text = "Facturación";
+            // 
+            // BtnGeneralInfo
+            // 
+            this.BtnGeneralInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGeneralInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGeneralInfo.Location = new System.Drawing.Point(0, 0);
+            this.BtnGeneralInfo.Name = "BtnGeneralInfo";
+            this.BtnGeneralInfo.Size = new System.Drawing.Size(168, 62);
+            this.BtnGeneralInfo.TabIndex = 0;
+            this.BtnGeneralInfo.Text = "Datos generales";
+            this.BtnGeneralInfo.UseVisualStyleBackColor = true;
+            this.BtnGeneralInfo.Click += new System.EventHandler(this.BtnGeneralInfo_Click);
+            // 
+            // BtnInitialOdontogram
+            // 
+            this.BtnInitialOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInitialOdontogram.Location = new System.Drawing.Point(0, 62);
+            this.BtnInitialOdontogram.Name = "BtnInitialOdontogram";
+            this.BtnInitialOdontogram.Size = new System.Drawing.Size(168, 62);
+            this.BtnInitialOdontogram.TabIndex = 1;
+            this.BtnInitialOdontogram.Text = "Odontograma inicial";
+            this.BtnInitialOdontogram.UseVisualStyleBackColor = true;
+            this.BtnInitialOdontogram.Click += new System.EventHandler(this.BtnInitialOdontogram_Click);
+            // 
+            // BtnTreatmentOdontogram
+            // 
+            this.BtnTreatmentOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnTreatmentOdontogram.Location = new System.Drawing.Point(0, 124);
+            this.BtnTreatmentOdontogram.Name = "BtnTreatmentOdontogram";
+            this.BtnTreatmentOdontogram.Size = new System.Drawing.Size(168, 62);
+            this.BtnTreatmentOdontogram.TabIndex = 2;
+            this.BtnTreatmentOdontogram.Text = "Odontograma tratamiento";
+            this.BtnTreatmentOdontogram.UseVisualStyleBackColor = true;
+            this.BtnTreatmentOdontogram.Click += new System.EventHandler(this.BtnTreatmentOdontogram_Click);
+            // 
+            // BtnActivitiesPerformed
+            // 
+            this.BtnActivitiesPerformed.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnActivitiesPerformed.Location = new System.Drawing.Point(0, 186);
+            this.BtnActivitiesPerformed.Name = "BtnActivitiesPerformed";
+            this.BtnActivitiesPerformed.Size = new System.Drawing.Size(168, 62);
+            this.BtnActivitiesPerformed.TabIndex = 3;
+            this.BtnActivitiesPerformed.Text = "Actividades realizadas";
+            this.BtnActivitiesPerformed.UseVisualStyleBackColor = true;
+            this.BtnActivitiesPerformed.Click += new System.EventHandler(this.BtnActivitiesPerformed_Click);
+            // 
+            // BtnInvoice
+            // 
+            this.BtnInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInvoice.Location = new System.Drawing.Point(0, 248);
+            this.BtnInvoice.Name = "BtnInvoice";
+            this.BtnInvoice.Size = new System.Drawing.Size(168, 62);
+            this.BtnInvoice.TabIndex = 4;
+            this.BtnInvoice.Text = "Facturación";
+            this.BtnInvoice.UseVisualStyleBackColor = true;
+            this.BtnInvoice.Click += new System.EventHandler(this.BtnInvoice_Click);
+            // 
+            // BtnEndVisit
+            // 
+            this.BtnEndVisit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEndVisit.Location = new System.Drawing.Point(0, 310);
+            this.BtnEndVisit.Name = "BtnEndVisit";
+            this.BtnEndVisit.Size = new System.Drawing.Size(168, 62);
+            this.BtnEndVisit.TabIndex = 5;
+            this.BtnEndVisit.Text = "Finalizar visita";
+            this.BtnEndVisit.UseVisualStyleBackColor = true;
+            this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
+            // 
+            // LblPatientNameInitialOdontogram
+            // 
+            this.LblPatientNameInitialOdontogram.AutoSize = true;
+            this.LblPatientNameInitialOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameInitialOdontogram.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameInitialOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameInitialOdontogram.Name = "LblPatientNameInitialOdontogram";
+            this.LblPatientNameInitialOdontogram.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameInitialOdontogram.TabIndex = 26;
+            this.LblPatientNameInitialOdontogram.Text = "Nombre del paciente";
+            // 
+            // LblPatientNameTreatmentOdontogram
+            // 
+            this.LblPatientNameTreatmentOdontogram.AutoSize = true;
+            this.LblPatientNameTreatmentOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameTreatmentOdontogram.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameTreatmentOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameTreatmentOdontogram.Name = "LblPatientNameTreatmentOdontogram";
+            this.LblPatientNameTreatmentOdontogram.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameTreatmentOdontogram.TabIndex = 27;
+            this.LblPatientNameTreatmentOdontogram.Text = "Nombre del paciente";
+            // 
+            // LblPatientNameActivitiesPerformed
+            // 
+            this.LblPatientNameActivitiesPerformed.AutoSize = true;
+            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
+            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameActivitiesPerformed.TabIndex = 33;
+            this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
+            // 
+            // LblPatientNameInvoice
+            // 
+            this.LblPatientNameInvoice.AutoSize = true;
+            this.LblPatientNameInvoice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameInvoice.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameInvoice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameInvoice.Name = "LblPatientNameInvoice";
+            this.LblPatientNameInvoice.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameInvoice.TabIndex = 34;
+            this.LblPatientNameInvoice.Text = "Nombre del paciente";
+            // 
+            // DgvActivitiesListHistory
+            // 
+            this.DgvActivitiesListHistory.AllowUserToAddRows = false;
+            this.DgvActivitiesListHistory.AllowUserToDeleteRows = false;
+            this.DgvActivitiesListHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvActivitiesListHistory.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvActivitiesListHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvActivitiesListHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(0, 348);
+            this.DgvActivitiesListHistory.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvActivitiesListHistory.MultiSelect = false;
+            this.DgvActivitiesListHistory.Name = "DgvActivitiesListHistory";
+            this.DgvActivitiesListHistory.ReadOnly = true;
+            this.DgvActivitiesListHistory.RowHeadersWidth = 51;
+            this.DgvActivitiesListHistory.RowTemplate.Height = 24;
+            this.DgvActivitiesListHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(1086, 270);
+            this.DgvActivitiesListHistory.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(4, 320);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(418, 24);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Actividades realizadas en visitas anteriores";
             // 
             // FrmVisitManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 687);
+            this.ClientSize = new System.Drawing.Size(1282, 683);
+            this.Controls.Add(this.BtnEndVisit);
             this.Controls.Add(this.BtnInvoice);
             this.Controls.Add(this.BtnActivitiesPerformed);
             this.Controls.Add(this.BtnTreatmentOdontogram);
@@ -933,6 +1035,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de visita del paciente";
             this.Activated += new System.EventHandler(this.FrmVisitManagement_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVisitManagement_FormClosing);
             this.Load += new System.EventHandler(this.FrmVisitManagement_Load);
             this.SizeChanged += new System.EventHandler(this.FrmVisitManagement_SizeChanged);
             this.TclVisitManagement.ResumeLayout(false);
@@ -948,9 +1051,18 @@
             this.PnlGender.ResumeLayout(false);
             this.PnlGender.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudAge)).EndInit();
+            this.TabInitialOdontogram.ResumeLayout(false);
+            this.TabInitialOdontogram.PerformLayout();
+            this.TabTreatmentOdontogram.ResumeLayout(false);
+            this.TabTreatmentOdontogram.PerformLayout();
             this.TabActivitiesPermormed.ResumeLayout(false);
+            this.TabActivitiesPermormed.PerformLayout();
             this.PnlActivitiesPerformed.ResumeLayout(false);
+            this.PnlActivitiesPerformed.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).EndInit();
+            this.TabInvoice.ResumeLayout(false);
+            this.TabInvoice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1027,5 +1139,12 @@
         private System.Windows.Forms.Button BtnModifyActivity;
         private System.Windows.Forms.Button btnAddActivity;
         private System.Windows.Forms.DataGridView DgvActivitiesList;
+        private System.Windows.Forms.Button BtnEndVisit;
+        private System.Windows.Forms.Label LblPatientNameInitialOdontogram;
+        private System.Windows.Forms.Label LblPatientNameTreatmentOdontogram;
+        private System.Windows.Forms.Label LblPatientNameActivitiesPerformed;
+        private System.Windows.Forms.Label LblPatientNameInvoice;
+        private System.Windows.Forms.DataGridView DgvActivitiesListHistory;
+        private System.Windows.Forms.Label label10;
     }
 }

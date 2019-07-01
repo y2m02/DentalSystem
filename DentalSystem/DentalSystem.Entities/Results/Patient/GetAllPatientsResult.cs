@@ -12,6 +12,8 @@ namespace DentalSystem.Entities.Results.Patient
         public string PhoneNumber { get; set; }
         public string HasInsurancePlan { get; set; }
         public DateTime AdmissionDate { get; set; }
-        public DateTime? LastVisitDate { get; set; }
+        public string LastVisitDate { get; set; }
+        public bool? VisitHasEnded { get; set; }
+        public int VisitId { get; set; }
     }
 }

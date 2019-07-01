@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\DentalSystemContext.cs" />
+    <Compile Include="GenericProperties\GenericProperties.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityPerformed.cs" />
     <Compile Include="Models\AccountsReceivable.cs" />
@@ -70,9 +71,12 @@
     <Compile Include="Requests\Patient\GetPatientByIdRequest.cs" />
     <Compile Include="Requests\PatientHealth\UpdatePatientHealthRequest.cs" />
     <Compile Include="Requests\Patient\UpdatePatientRequest.cs" />
+    <Compile Include="Requests\Visit\AddVisitRequest.cs" />
+    <Compile Include="Requests\Visit\EndVisitRequest.cs" />
     <Compile Include="Results\ActivityPerformed\GetAllActivitiesPerformedResult.cs" />
     <Compile Include="Results\Patient\GetAllPatientsResult.cs" />
     <Compile Include="Results\Patient\GetPatientByIdResult.cs" />
+    <Compile Include="Results\Visit\AddVisitResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

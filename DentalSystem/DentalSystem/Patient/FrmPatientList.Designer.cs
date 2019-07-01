@@ -47,6 +47,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LblTitle = new System.Windows.Forms.Label();
+            this.BtnBackToVisit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -69,13 +70,14 @@
             this.DgvPatientList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvPatientList.Size = new System.Drawing.Size(1351, 726);
             this.DgvPatientList.TabIndex = 4;
+            this.DgvPatientList.SelectionChanged += new System.EventHandler(this.DgvPatientList_SelectionChanged);
             // 
             // TxtSearch
             // 
             this.TxtSearch.Location = new System.Drawing.Point(334, 6);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(367, 30);
+            this.TxtSearch.Size = new System.Drawing.Size(367, 26);
             this.TxtSearch.TabIndex = 2;
             // 
             // RbtIdentification
@@ -85,7 +87,7 @@
             this.RbtIdentification.Location = new System.Drawing.Point(130, 7);
             this.RbtIdentification.Margin = new System.Windows.Forms.Padding(4);
             this.RbtIdentification.Name = "RbtIdentification";
-            this.RbtIdentification.Size = new System.Drawing.Size(92, 27);
+            this.RbtIdentification.Size = new System.Drawing.Size(76, 22);
             this.RbtIdentification.TabIndex = 0;
             this.RbtIdentification.TabStop = true;
             this.RbtIdentification.Text = "Cédula";
@@ -97,7 +99,7 @@
             this.RbtName.Location = new System.Drawing.Point(228, 8);
             this.RbtName.Margin = new System.Windows.Forms.Padding(4);
             this.RbtName.Name = "RbtName";
-            this.RbtName.Size = new System.Drawing.Size(100, 27);
+            this.RbtName.Size = new System.Drawing.Size(82, 22);
             this.RbtName.TabIndex = 1;
             this.RbtName.Text = "Nombre";
             this.RbtName.UseVisualStyleBackColor = true;
@@ -108,7 +110,7 @@
             this.label1.Location = new System.Drawing.Point(15, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 23);
+            this.label1.Size = new System.Drawing.Size(88, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Buscar por:";
             // 
@@ -209,7 +211,7 @@
             this.cuentasPorCobrarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -218,19 +220,19 @@
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // cuentasPorCobrarToolStripMenuItem
             // 
             this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
-            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
             this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
             // 
             // LblTitle
@@ -239,20 +241,32 @@
             this.LblTitle.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitle.Location = new System.Drawing.Point(373, 38);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(536, 38);
+            this.LblTitle.Size = new System.Drawing.Size(450, 32);
             this.LblTitle.TabIndex = 27;
             this.LblTitle.Text = "CLINICA DENTAL DRA. RAMIREZ\t\t\t\t\t\t";
+            // 
+            // BtnBackToVisit
+            // 
+            this.BtnBackToVisit.Location = new System.Drawing.Point(744, 151);
+            this.BtnBackToVisit.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnBackToVisit.Name = "BtnBackToVisit";
+            this.BtnBackToVisit.Size = new System.Drawing.Size(180, 51);
+            this.BtnBackToVisit.TabIndex = 3;
+            this.BtnBackToVisit.Text = "Volver a la visita";
+            this.BtnBackToVisit.UseVisualStyleBackColor = true;
+            this.BtnBackToVisit.Click += new System.EventHandler(this.BtnBackToVisit_Click);
             // 
             // FrmPatientList
             // 
             this.AcceptButton = this.BtnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClear;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.PnlSearch);
+            this.Controls.Add(this.BtnBackToVisit);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnCreateVisit);
             this.Controls.Add(this.BtnDetails);
@@ -298,5 +312,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
         private System.Windows.Forms.Label LblTitle;
+        private System.Windows.Forms.Button BtnBackToVisit;
     }
 }

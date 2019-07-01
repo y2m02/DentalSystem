@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IActivityPerformedRepository.cs" />
     <Compile Include="IPatientRepository.cs" />
+    <Compile Include="IVisitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

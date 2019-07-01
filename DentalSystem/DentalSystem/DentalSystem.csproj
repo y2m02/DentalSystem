@@ -74,8 +74,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFunctions\GeneralInformation.cs" />
-    <Compile Include="GenericProperties\GenericUserProperties.cs" />
     <Compile Include="MapperConfiguration\AutoMapperConfiguration.cs" />
     <Compile Include="MapperConfiguration\MappingProfile.cs" />
     <Compile Include="Patient\FrmAddPatient.cs">

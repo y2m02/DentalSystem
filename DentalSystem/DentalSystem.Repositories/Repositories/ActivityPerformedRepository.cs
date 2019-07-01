@@ -9,48 +9,65 @@ namespace DentalSystem.Repositories.Repositories
 {
     public class ActivityPerformedRepository : IActivityPerformedRepository
     {
-        private readonly DentalSystemContext _context;
-
-        public ActivityPerformedRepository(DentalSystemContext context)
-        {
-            _context = context;
-        }
-
         public List<ActivityPerformed> GetAllActivitiesPerformed(int visitId)
         {
-            var activities = _context.ActivitiesPerformed.Where(w => w.VisitId == visitId && w.DeletedOn == null)
-                .OrderByDescending(w => w.Date).ToList();
+            using (var context = new DentalSystemContext())
+            {
+                var activities = context.ActivitiesPerformed.Where(w => w.VisitId == visitId && w.DeletedOn == null)
+                    .OrderByDescending(w => w.ActivityPerformedId).ToList();
 
-            return activities;
+                return activities;
+            }
         }
 
         public void AddActivityPerformed(ActivityPerformed activityPerformed)
         {
-            _context.ActivitiesPerformed.Add(activityPerformed);
-            _context.SaveChanges();
+            using (var context = new DentalSystemContext())
+            {
+                context.ActivitiesPerformed.Add(activityPerformed);
+                context.SaveChanges();
+            }
         }
 
         public void UpdateActivityPerformed(ActivityPerformed activityPerformed)
         {
-            var activityToModify = _context.ActivitiesPerformed.FirstOrDefault(w =>
-                w.ActivityPerformedId == activityPerformed.ActivityPerformedId && w.DeletedOn == null);
+            using (var context = new DentalSystemContext())
+            {
+                var activityToModify = context.ActivitiesPerformed.FirstOrDefault(w =>
+                    w.ActivityPerformedId == activityPerformed.ActivityPerformedId && w.DeletedOn == null);
 
-            if (activityToModify == null) return;
+                if (activityToModify == null) return;
 
-            _context.Entry(activityToModify).CurrentValues.SetValues(activityPerformed);
-            _context.SaveChanges();
+                context.Entry(activityToModify).CurrentValues.SetValues(activityPerformed);
+                context.SaveChanges();
+            }
         }
 
         public void DeleteActivityPerformed(int activityPerformedId, string deletedBy)
         {
-            var activity = _context.ActivitiesPerformed.FirstOrDefault(w =>
-                w.ActivityPerformedId == activityPerformedId && w.DeletedOn == null);
+            using (var context = new DentalSystemContext())
+            {
+                var activity = context.ActivitiesPerformed.FirstOrDefault(w =>
+                    w.ActivityPerformedId == activityPerformedId && w.DeletedOn == null);
 
-            if (activity == null) return;
+                if (activity == null) return;
 
-            activity.DeletedOn = DateTime.Now;
-            activity.DeletedBy = deletedBy;
-            _context.SaveChanges();
+                activity.DeletedOn = DateTime.Now;
+                activity.DeletedBy = deletedBy;
+                context.SaveChanges();
+            }
+        }
+
+        public List<ActivityPerformed> GetAllActivitiesPerformedByPatientId(int patientId, int visitId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var activities = context.ActivitiesPerformed.Where(w =>
+                        w.Visit.Patient.PatientId == patientId && w.VisitId != visitId && w.DeletedOn == null)
+                    .OrderByDescending(w => w.ActivityPerformedId).ToList();
+
+                return activities;
+            }
         }
     }
 }

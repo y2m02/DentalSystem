@@ -3,10 +3,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
+using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
-using DentalSystem.GenericProperties;
+using DentalSystem.Entities.Requests.Visit;
 
 namespace DentalSystem.VisitManagement
 {
@@ -15,17 +16,21 @@ namespace DentalSystem.VisitManagement
         private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
         private readonly IPatientService _patientService;
+        private readonly IVisitService _visitService;
+        private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
-            IActivityPerformedService activityPerformedService)
+            IActivityPerformedService activityPerformedService, IVisitService visitService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
             _activityPerformedService = activityPerformedService;
+            _visitService = visitService;
             InitializeComponent();
         }
 
         public int PatientId { get; set; }
+        public string PatientName { get; set; }
 
         private void FrmVisitManagement_Load(object sender, EventArgs e)
         {
@@ -35,6 +40,9 @@ namespace DentalSystem.VisitManagement
             TxtAdmissionDate.Text = DtpAdmissionDate.Value.ToString("dd/MM/yyyy");
             TxtBirthDate.Text = DtpBirthDate.Value.ToString("dd/MM/yyyy");
             TxtAge.Text = NudAge.Text;
+            LblPatientNameInitialOdontogram.Text = LblPatientNameTreatmentOdontogram.Text =
+                LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = PatientName;
+
             SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth);
         }
 
@@ -148,14 +156,14 @@ namespace DentalSystem.VisitManagement
                     AdmissionDate = DtpAdmissionDate.Value,
                     PhoneNumber = TxtPhoneNumber.Text.Trim(),
                     Sector = TxtSector.Text.Trim(),
-                    Age = (int) NudAge.Value,
+                    Age = (int)NudAge.Value,
                     BirthDate = DtpBirthDate.Value,
                     HasInsurancePlan = RbtInsuranceYes.Checked,
                     NSS = TxtNss.Text.Trim(),
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
                     Gender = RbtMale.Checked ? "M" : "F",
-                    UserId = GenericUserProperties.UserId
+                    UserId = GenericProperties.UserId
                 };
 
                 _patientService.UpdatePatient(_iMapper, updatePatientRequest);
@@ -216,7 +224,7 @@ namespace DentalSystem.VisitManagement
         public void ValidateOnlyNumbers(KeyPressEventArgs e)
         {
             if (TxtIdentificationCard.ReadOnly) return;
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
 
             MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
@@ -367,13 +375,17 @@ namespace DentalSystem.VisitManagement
 
                 var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
                 {
-                    VisitId = GenericUserProperties.VisitId
+                    PatientId = PatientId,
+                    VisitId = GenericProperties.VisitId
                 };
 
-                var activities = _activityPerformedService.GetAllActivitiesPerformed(_iMapper, getAllActivitiesPerformedRequest);
-                DgvActivitiesList.DataSource = activities;
+                var activities =
+                    _activityPerformedService.GetAllActivitiesPerformed(_iMapper, getAllActivitiesPerformedRequest);
+                DgvActivitiesList.DataSource = activities.VisitActivities;
+                DgvActivitiesListHistory.DataSource = activities.PatientActivities;
 
                 NameGridHeader(DgvActivitiesList);
+                NameGridHeader(DgvActivitiesListHistory);
                 InitializeModifyAndDeleteButtons();
                 Cursor.Current = Cursors.Default;
             }
@@ -419,7 +431,7 @@ namespace DentalSystem.VisitManagement
                 var deleteActivityPerformedRequest = new DeleteActivityPerformedRequest
                 {
                     ActivityPerformedId = id,
-                    DeletedBy = GenericUserProperties.UserName
+                    DeletedBy = GenericProperties.UserName
                 };
 
                 _activityPerformedService.DeleteActivityPerformed(deleteActivityPerformedRequest);
@@ -447,6 +459,7 @@ namespace DentalSystem.VisitManagement
             var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService)
             {
                 IsCreate = true,
+                Text = "Agregar actividad realizada",
                 DialogResult = DialogResult.None
             };
             frm.ShowDialog();
@@ -468,9 +481,99 @@ namespace DentalSystem.VisitManagement
                 Responsable = responsable,
                 Date = date,
                 IsCreate = false,
+                Text = "Modificar actividad realizada",
                 DialogResult = DialogResult.None
             };
             frm.ShowDialog();
+        }
+
+        private void BtnEndVisit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = MessageBox.Show("Está a punto de finalizar esta visita", "Información",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information);
+
+                if (result != DialogResult.OK) return;
+                //if (BtnSaveGeneralInfo.Visible)
+                //{
+                //    result = MessageBox.Show(
+                //        "Los datos generales del paciente no han sido guardados. Si continúa, se perderá la información que ingresó.",
+                //        "Información",
+                //        MessageBoxButtons.OKCancel,
+                //        MessageBoxIcon.Information);
+
+                //    if (result != DialogResult.OK)
+                //    {
+                //        TclVisitManagement.SelectedIndex = 0;
+                //        return;
+                //    }
+
+                //}
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var endVisitRequest = new EndVisitRequest
+                {
+                    VisitId = GenericProperties.VisitId,
+                    PatientId = PatientId,
+                    HasEnded = true
+                };
+
+                _visitService.EndVisit(_iMapper, endVisitRequest);
+                Cursor.Current = Cursors.Default;
+                _isClosing = true;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void FrmVisitManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (!_isClosing)
+                {
+                    var result = MessageBox.Show("¿Desea salir sin finalizar la visita?", "Información",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    if (result != DialogResult.Yes)
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
+
+                    //if (BtnSaveGeneralInfo.Visible)
+                    //{
+                    //    result = MessageBox.Show(
+                    //        "Los datos generales del paciente no han sido guardados. Si continúa, se perderá la información que ingresó.",
+                    //        "Información",
+                    //        MessageBoxButtons.OKCancel,
+                    //        MessageBoxIcon.Information);
+
+                    //    if (result != DialogResult.OK)
+                    //    {
+                    //        e.Cancel = true;
+                    //        TclVisitManagement.SelectedIndex = 0;
+                    //        return;
+                    //    }
+                    //}
+                }
+                e.Cancel = false;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }

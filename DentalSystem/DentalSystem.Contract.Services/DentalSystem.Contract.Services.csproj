@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="IActivityPerformedService.cs" />
     <Compile Include="IPatientService.cs" />
+    <Compile Include="IVisitService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
