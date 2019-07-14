@@ -86,8 +86,7 @@ namespace DentalSystem.VisitManagement
                     Section = CbxSection.SelectedIndex + 1,
                     Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
-                    Responsable = TxtActivityResponsable.Text,
-                    UserId = GenericProperties.UserId
+                    Responsable = TxtActivityResponsable.Text
                 };
 
                 _activityPerformedService.AddActivityPerformed(_iMapper, addActivityPerformedRequest);
@@ -140,8 +139,7 @@ namespace DentalSystem.VisitManagement
                     Section = CbxSection.SelectedIndex + 1,
                     Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
-                    Responsable = TxtActivityResponsable.Text,
-                    UserId = GenericProperties.UserId
+                    Responsable = TxtActivityResponsable.Text
                 };
 
                 _activityPerformedService.UpdateActivityPerformed(_iMapper, updateActivityPerformedRequest);

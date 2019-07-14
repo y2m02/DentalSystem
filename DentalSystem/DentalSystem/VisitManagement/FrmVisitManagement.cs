@@ -162,8 +162,7 @@ namespace DentalSystem.VisitManagement
                     NSS = TxtNss.Text.Trim(),
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
-                    Gender = RbtMale.Checked ? "M" : "F",
-                    UserId = GenericProperties.UserId
+                    Gender = RbtMale.Checked ? "M" : "F"
                 };
 
                 _patientService.UpdatePatient(_iMapper, updatePatientRequest);
@@ -430,8 +429,7 @@ namespace DentalSystem.VisitManagement
                 Cursor.Current = Cursors.WaitCursor;
                 var deleteActivityPerformedRequest = new DeleteActivityPerformedRequest
                 {
-                    ActivityPerformedId = id,
-                    DeletedBy = GenericProperties.UserName
+                    ActivityPerformedId = id
                 };
 
                 _activityPerformedService.DeleteActivityPerformed(deleteActivityPerformedRequest);

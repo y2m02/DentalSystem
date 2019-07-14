@@ -13,8 +13,6 @@ namespace DentalSystem.Entities.Context
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DentalSystemContext, Configuration>());
         }
 
-        public DbSet<Rol> Rols { get; set; }
-        public DbSet<User> Users { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<PatientHealth> PatientHealths { get; set; }
         public DbSet<Odontogram> Odontograms { get; set; }

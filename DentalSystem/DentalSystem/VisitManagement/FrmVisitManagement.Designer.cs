@@ -85,26 +85,26 @@
             this.TxtAddress = new System.Windows.Forms.TextBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.TabInitialOdontogram = new System.Windows.Forms.TabPage();
+            this.LblPatientNameInitialOdontogram = new System.Windows.Forms.Label();
             this.TabTreatmentOdontogram = new System.Windows.Forms.TabPage();
+            this.LblPatientNameTreatmentOdontogram = new System.Windows.Forms.Label();
             this.TabActivitiesPermormed = new System.Windows.Forms.TabPage();
+            this.LblPatientNameActivitiesPerformed = new System.Windows.Forms.Label();
             this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
             this.BtnDeleteActivity = new System.Windows.Forms.Button();
             this.BtnModifyActivity = new System.Windows.Forms.Button();
             this.btnAddActivity = new System.Windows.Forms.Button();
             this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TabInvoice = new System.Windows.Forms.TabPage();
+            this.LblPatientNameInvoice = new System.Windows.Forms.Label();
             this.BtnGeneralInfo = new System.Windows.Forms.Button();
             this.BtnInitialOdontogram = new System.Windows.Forms.Button();
             this.BtnTreatmentOdontogram = new System.Windows.Forms.Button();
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.LblPatientNameInitialOdontogram = new System.Windows.Forms.Label();
-            this.LblPatientNameTreatmentOdontogram = new System.Windows.Forms.Label();
-            this.LblPatientNameActivitiesPerformed = new System.Windows.Forms.Label();
-            this.LblPatientNameInvoice = new System.Windows.Forms.Label();
-            this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -117,9 +117,9 @@
             this.TabTreatmentOdontogram.SuspendLayout();
             this.TabActivitiesPermormed.SuspendLayout();
             this.PnlActivitiesPerformed.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).BeginInit();
             this.TabInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -778,6 +778,17 @@
             this.TabInitialOdontogram.TabIndex = 1;
             this.TabInitialOdontogram.Text = "Odontograma Inicial";
             // 
+            // LblPatientNameInitialOdontogram
+            // 
+            this.LblPatientNameInitialOdontogram.AutoSize = true;
+            this.LblPatientNameInitialOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameInitialOdontogram.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameInitialOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameInitialOdontogram.Name = "LblPatientNameInitialOdontogram";
+            this.LblPatientNameInitialOdontogram.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameInitialOdontogram.TabIndex = 26;
+            this.LblPatientNameInitialOdontogram.Text = "Nombre del paciente";
+            // 
             // TabTreatmentOdontogram
             // 
             this.TabTreatmentOdontogram.BackColor = System.Drawing.SystemColors.Control;
@@ -787,6 +798,17 @@
             this.TabTreatmentOdontogram.Size = new System.Drawing.Size(1106, 647);
             this.TabTreatmentOdontogram.TabIndex = 2;
             this.TabTreatmentOdontogram.Text = "Odontograma tratamiento";
+            // 
+            // LblPatientNameTreatmentOdontogram
+            // 
+            this.LblPatientNameTreatmentOdontogram.AutoSize = true;
+            this.LblPatientNameTreatmentOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameTreatmentOdontogram.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameTreatmentOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameTreatmentOdontogram.Name = "LblPatientNameTreatmentOdontogram";
+            this.LblPatientNameTreatmentOdontogram.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameTreatmentOdontogram.TabIndex = 27;
+            this.LblPatientNameTreatmentOdontogram.Text = "Nombre del paciente";
             // 
             // TabActivitiesPermormed
             // 
@@ -798,6 +820,17 @@
             this.TabActivitiesPermormed.Size = new System.Drawing.Size(1106, 647);
             this.TabActivitiesPermormed.TabIndex = 3;
             this.TabActivitiesPermormed.Text = "Actividades realizadas";
+            // 
+            // LblPatientNameActivitiesPerformed
+            // 
+            this.LblPatientNameActivitiesPerformed.AutoSize = true;
+            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
+            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameActivitiesPerformed.TabIndex = 33;
+            this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
             // 
             // PnlActivitiesPerformed
             // 
@@ -811,6 +844,36 @@
             this.PnlActivitiesPerformed.Name = "PnlActivitiesPerformed";
             this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 618);
             this.PnlActivitiesPerformed.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(4, 320);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(418, 24);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Actividades realizadas en visitas anteriores";
+            // 
+            // DgvActivitiesListHistory
+            // 
+            this.DgvActivitiesListHistory.AllowUserToAddRows = false;
+            this.DgvActivitiesListHistory.AllowUserToDeleteRows = false;
+            this.DgvActivitiesListHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvActivitiesListHistory.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvActivitiesListHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvActivitiesListHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(0, 348);
+            this.DgvActivitiesListHistory.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvActivitiesListHistory.MultiSelect = false;
+            this.DgvActivitiesListHistory.Name = "DgvActivitiesListHistory";
+            this.DgvActivitiesListHistory.ReadOnly = true;
+            this.DgvActivitiesListHistory.RowHeadersWidth = 51;
+            this.DgvActivitiesListHistory.RowTemplate.Height = 24;
+            this.DgvActivitiesListHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(1086, 270);
+            this.DgvActivitiesListHistory.TabIndex = 10;
             // 
             // BtnDeleteActivity
             // 
@@ -872,6 +935,17 @@
             this.TabInvoice.Size = new System.Drawing.Size(1106, 647);
             this.TabInvoice.TabIndex = 4;
             this.TabInvoice.Text = "Facturación";
+            // 
+            // LblPatientNameInvoice
+            // 
+            this.LblPatientNameInvoice.AutoSize = true;
+            this.LblPatientNameInvoice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameInvoice.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameInvoice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameInvoice.Name = "LblPatientNameInvoice";
+            this.LblPatientNameInvoice.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameInvoice.TabIndex = 34;
+            this.LblPatientNameInvoice.Text = "Nombre del paciente";
             // 
             // BtnGeneralInfo
             // 
@@ -940,80 +1014,6 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
-            // LblPatientNameInitialOdontogram
-            // 
-            this.LblPatientNameInitialOdontogram.AutoSize = true;
-            this.LblPatientNameInitialOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameInitialOdontogram.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameInitialOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameInitialOdontogram.Name = "LblPatientNameInitialOdontogram";
-            this.LblPatientNameInitialOdontogram.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameInitialOdontogram.TabIndex = 26;
-            this.LblPatientNameInitialOdontogram.Text = "Nombre del paciente";
-            // 
-            // LblPatientNameTreatmentOdontogram
-            // 
-            this.LblPatientNameTreatmentOdontogram.AutoSize = true;
-            this.LblPatientNameTreatmentOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameTreatmentOdontogram.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameTreatmentOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameTreatmentOdontogram.Name = "LblPatientNameTreatmentOdontogram";
-            this.LblPatientNameTreatmentOdontogram.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameTreatmentOdontogram.TabIndex = 27;
-            this.LblPatientNameTreatmentOdontogram.Text = "Nombre del paciente";
-            // 
-            // LblPatientNameActivitiesPerformed
-            // 
-            this.LblPatientNameActivitiesPerformed.AutoSize = true;
-            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
-            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameActivitiesPerformed.TabIndex = 33;
-            this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
-            // 
-            // LblPatientNameInvoice
-            // 
-            this.LblPatientNameInvoice.AutoSize = true;
-            this.LblPatientNameInvoice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameInvoice.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameInvoice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameInvoice.Name = "LblPatientNameInvoice";
-            this.LblPatientNameInvoice.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameInvoice.TabIndex = 34;
-            this.LblPatientNameInvoice.Text = "Nombre del paciente";
-            // 
-            // DgvActivitiesListHistory
-            // 
-            this.DgvActivitiesListHistory.AllowUserToAddRows = false;
-            this.DgvActivitiesListHistory.AllowUserToDeleteRows = false;
-            this.DgvActivitiesListHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvActivitiesListHistory.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvActivitiesListHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvActivitiesListHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(0, 348);
-            this.DgvActivitiesListHistory.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvActivitiesListHistory.MultiSelect = false;
-            this.DgvActivitiesListHistory.Name = "DgvActivitiesListHistory";
-            this.DgvActivitiesListHistory.ReadOnly = true;
-            this.DgvActivitiesListHistory.RowHeadersWidth = 51;
-            this.DgvActivitiesListHistory.RowTemplate.Height = 24;
-            this.DgvActivitiesListHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(1086, 270);
-            this.DgvActivitiesListHistory.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 320);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(418, 24);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Actividades realizadas en visitas anteriores";
-            // 
             // FrmVisitManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -1028,6 +1028,7 @@
             this.Controls.Add(this.TclVisitManagement);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1300, 730);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1300, 726);
@@ -1059,10 +1060,10 @@
             this.TabActivitiesPermormed.PerformLayout();
             this.PnlActivitiesPerformed.ResumeLayout(false);
             this.PnlActivitiesPerformed.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).EndInit();
             this.TabInvoice.ResumeLayout(false);
             this.TabInvoice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -74,8 +74,7 @@ namespace DentalSystem.Patient
                     NSS = TxtNss.Text.Trim(),
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
-                    Gender = RbtMale.Checked ? "M" : "F",
-                    UserId = GenericProperties.UserId
+                    Gender = RbtMale.Checked ? "M" : "F"
                 };
 
                 _patientService.AddPatient(_iMapper, addPatient);

@@ -141,8 +141,7 @@ namespace DentalSystem.Patient
                 Cursor.Current = Cursors.WaitCursor;
                 var deletePatientRequest = new DeletePatientRequest
                 {
-                    PatientId = id,
-                    DeletedBy = GenericProperties.UserName
+                    PatientId = id
                 };
 
                 _patientService.DeletePatient(deletePatientRequest);

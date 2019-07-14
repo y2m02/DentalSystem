@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DentalSystem.Entities.Models
 {
     public class Patient
     {
         [Key] public int PatientId { get; set; }
-
-        [ForeignKey("User")] public int? UserId { get; set; }
 
         [Required] [StringLength(100)] public string FullName { get; set; }
         [StringLength(15)] public string IdentificationCard { get; set; }
@@ -27,10 +24,8 @@ namespace DentalSystem.Entities.Models
         // ReSharper disable once InconsistentNaming
         [StringLength(100)] public string NSS { get; set; }
         [Required] public DateTime AdmissionDate { get; set; }
-        [StringLength(50)] public string DeletedBy { get; set; }
         public DateTime? DeletedOn { get; set; }
 
-        public virtual User User { get; set; }
         public virtual PatientHealth PatientHealth { get; set; }
         public virtual ICollection<Visit> Visits { get; set; }
         public virtual ICollection<AccountsReceivable> AccountsReceivables { get; set; }

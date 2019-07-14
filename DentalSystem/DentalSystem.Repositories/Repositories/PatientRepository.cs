@@ -45,7 +45,7 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public void DeletePatient(int patientId, string deletedBy)
+        public void DeletePatient(int patientId)
         {
             using (var context = new DentalSystemContext())
             {
@@ -54,7 +54,6 @@ namespace DentalSystem.Repositories.Repositories
                 if (patient == null) return;
 
                 patient.DeletedOn = DateTime.Now;
-                patient.DeletedBy = deletedBy;
                 context.SaveChanges();
             }
         }

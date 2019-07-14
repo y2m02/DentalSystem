@@ -9,6 +9,6 @@ namespace DentalSystem.Contract.Repositories
         Patient GetPatientById(int patientId);
         void AddPatient(Patient patient);
         void UpdatePatient(Patient patient);
-        void DeletePatient(int patientId, string deletedBy);
+        void DeletePatient(int patientId);
     }
 }

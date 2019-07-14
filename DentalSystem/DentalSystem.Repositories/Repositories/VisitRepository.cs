@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;

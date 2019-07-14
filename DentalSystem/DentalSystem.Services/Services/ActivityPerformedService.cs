@@ -49,7 +49,7 @@ namespace DentalSystem.Services.Services
 
         public void DeleteActivityPerformed(DeleteActivityPerformedRequest request)
         {
-            _activityPerformedRepository.DeleteActivityPerformed(request.ActivityPerformedId, request.DeletedBy);
+            _activityPerformedRepository.DeleteActivityPerformed(request.ActivityPerformedId);
         }
     }
 }

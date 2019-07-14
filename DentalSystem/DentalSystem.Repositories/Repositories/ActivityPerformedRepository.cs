@@ -43,7 +43,7 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public void DeleteActivityPerformed(int activityPerformedId, string deletedBy)
+        public void DeleteActivityPerformed(int activityPerformedId)
         {
             using (var context = new DentalSystemContext())
             {
@@ -53,7 +53,6 @@ namespace DentalSystem.Repositories.Repositories
                 if (activity == null) return;
 
                 activity.DeletedOn = DateTime.Now;
-                activity.DeletedBy = deletedBy;
                 context.SaveChanges();
             }
         }

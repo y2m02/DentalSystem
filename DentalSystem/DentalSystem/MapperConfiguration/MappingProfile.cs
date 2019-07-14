@@ -8,7 +8,6 @@ using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.Patient;
-using DentalSystem.Entities.Results.Visit;
 
 //using DentalSystem.Entities.Results.Patient;
 
@@ -52,7 +51,9 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("dd/MM/yyyy")))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
-                        r.Section == 1 ? "Primer" : r.Section == 2 ? "Segundo" : r.Section == 3 ? "Tercer" : "Cuarto"));
+                        r.Section == 1 ? "Primer cuadrante" :
+                        r.Section == 2 ? "Segundo cuadrante" :
+                        r.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
 
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
