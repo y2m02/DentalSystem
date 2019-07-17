@@ -2,11 +2,14 @@
 using System.Linq;
 using AutoMapper;
 using DentalSystem.Entities.Models;
+using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.ActivityPerformed;
+using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.ActivityPerformed;
+using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.Patient;
 
 //using DentalSystem.Entities.Results.Patient;
@@ -49,12 +52,28 @@ namespace DentalSystem.MapperConfiguration
 
             CreateMap<ActivityPerformed, GetAllActivitiesPerformedResultModel>()
                 .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("dd/MM/yyyy")))
+                .ForMember(w => w.InvoiceDetailId, y => y.MapFrom(r => r.InvoiceDetail.InvoiceDetailId))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
                         r.Section == 1 ? "Primer cuadrante" :
                         r.Section == 2 ? "Segundo cuadrante" :
                         r.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
 
+            CreateMap<InvoiceDetail, GetInvoiceDetailByVisitIdResultModel>()
+                .ForMember(w => w.ActivityPerformed, y => y.MapFrom(r => r.ActivityPerformed.Description))
+                .ForMember(w => w.Section,
+                    y => y.MapFrom(r =>
+                        r.ActivityPerformed.Section == 1 ? "Primer cuadrante" :
+                        r.ActivityPerformed.Section == 2 ? "Segundo cuadrante" :
+                        r.ActivityPerformed.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
+
+            CreateMap<InvoiceDetail, GetInvoiceDetailFromOtherVisitsResultModel>()
+                .ForMember(w => w.ActivityPerformed, y => y.MapFrom(r => r.ActivityPerformed.Description))
+                .ForMember(w => w.Section,
+                    y => y.MapFrom(r =>
+                        r.ActivityPerformed.Section == 1 ? "Primer cuadrante" :
+                        r.ActivityPerformed.Section == 2 ? "Segundo cuadrante" :
+                        r.ActivityPerformed.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -77,12 +96,15 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddPatientHealthRequest, PatientHealth>();
             CreateMap<AddActivityPerformedRequest, ActivityPerformed>();
             CreateMap<AddVisitRequest, Visit>();
+            CreateMap<AddInvoiceDetailRequest, InvoiceDetail>();
+            CreateMap<AddAccountsReceivableRequest, AccountsReceivable>();
 
             // UPDATE
             CreateMap<UpdatePatientRequest, Entities.Models.Patient>();
             CreateMap<UpdatePatientHealthRequest, PatientHealth>();
             CreateMap<UpdateActivityPerformedRequest, ActivityPerformed>();
             CreateMap<EndVisitRequest, Visit>();
+            CreateMap<UpdateInvoiceDetailRequest, InvoiceDetail>();
         }
     }
 }

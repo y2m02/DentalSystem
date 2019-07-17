@@ -32,6 +32,7 @@ namespace DentalSystem.Entities.Context
         public PatientMappings()
         {
             HasRequired(c => c.PatientHealth).WithRequiredPrincipal(e => e.Patient);
+            HasRequired(c => c.AccountsReceivable).WithRequiredPrincipal(e => e.Patient);
         }
     }
 
@@ -40,6 +41,14 @@ namespace DentalSystem.Entities.Context
         public VisitMappings()
         {
             HasRequired(c => c.Odontogram).WithRequiredPrincipal(e => e.Visit);
+        }
+    }
+
+    public class ActivityPerformedMappings : EntityTypeConfiguration<ActivityPerformed>
+    {
+        public ActivityPerformedMappings()
+        {
+            HasRequired(c => c.InvoiceDetail).WithRequiredPrincipal(e => e.ActivityPerformed);
         }
     }
 }

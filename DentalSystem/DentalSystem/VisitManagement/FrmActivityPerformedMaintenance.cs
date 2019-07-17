@@ -5,6 +5,7 @@ using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.ActivityPerformed;
+using DentalSystem.Entities.Requests.InvoiceDetail;
 
 namespace DentalSystem.VisitManagement
 {
@@ -44,7 +45,7 @@ namespace DentalSystem.VisitManagement
             }
             else
             {
-                CbxSection.SelectedItem = Section;
+                CbxSection.SelectedItem = Section.Split(' ')[0];
                 TxtActivityDescription.Text = Description;
                 DtpActivityDate.Value = Date;
                 TxtActivityResponsable.Text = Responsable;
@@ -80,13 +81,19 @@ namespace DentalSystem.VisitManagement
             {
                 Cursor.Current = Cursors.WaitCursor;
 
+                var addInvoiceDetailRequests = new AddInvoiceDetailRequest
+                {
+                    Price = 0
+                };
+
                 var addActivityPerformedRequest = new AddActivityPerformedRequest
                 {
                     VisitId = GenericProperties.VisitId,
                     Section = CbxSection.SelectedIndex + 1,
                     Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
-                    Responsable = TxtActivityResponsable.Text
+                    Responsable = TxtActivityResponsable.Text,
+                    InvoiceDetail = addInvoiceDetailRequests
                 };
 
                 _activityPerformedService.AddActivityPerformed(_iMapper, addActivityPerformedRequest);

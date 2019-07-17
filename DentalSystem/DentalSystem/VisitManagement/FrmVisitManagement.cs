@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.ActivityPerformed;
+using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Visit;
+using DentalSystem.Entities.Results.InvoiceDetail;
 
 namespace DentalSystem.VisitManagement
 {
@@ -15,17 +19,20 @@ namespace DentalSystem.VisitManagement
     {
         private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
+        private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IPatientService _patientService;
         private readonly IVisitService _visitService;
         private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
-            IActivityPerformedService activityPerformedService, IVisitService visitService)
+            IActivityPerformedService activityPerformedService, IVisitService visitService,
+            IInvoiceDetailService invoiceDetailService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
             _activityPerformedService = activityPerformedService;
             _visitService = visitService;
+            _invoiceDetailService = invoiceDetailService;
             InitializeComponent();
         }
 
@@ -79,6 +86,7 @@ namespace DentalSystem.VisitManagement
         {
             TclVisitManagement.SelectedIndex = 4;
             ChangeButtonSelectedStatus(BtnInvoice);
+            ListItemsToBill();
         }
 
         private void TclVisitManagement_Click(object sender, EventArgs e)
@@ -99,6 +107,7 @@ namespace DentalSystem.VisitManagement
                     break;
                 case 4:
                     ChangeButtonSelectedStatus(BtnInvoice);
+                    ListItemsToBill();
                     break;
             }
         }
@@ -405,6 +414,7 @@ namespace DentalSystem.VisitManagement
             dgv.Columns["Description"].HeaderText = "Actividad realizada";
             dgv.Columns["Responsable"].HeaderText = "Responsable";
             dgv.Columns["Date"].HeaderText = "Fecha";
+            dgv.Columns["InvoiceDetailId"].Visible = false;
         }
 
         private void FrmVisitManagement_Activated(object sender, EventArgs e)
@@ -419,6 +429,7 @@ namespace DentalSystem.VisitManagement
                 if (DgvActivitiesList.CurrentRow == null) return;
 
                 var id = Convert.ToInt32(DgvActivitiesList.CurrentRow.Cells["ActivityPerformedId"].Value);
+                var invoiceDetailId = Convert.ToInt32(DgvActivitiesList.CurrentRow?.Cells["InvoiceDetailId"].Value);
 
                 var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
                     MessageBoxButtons.YesNo,
@@ -429,7 +440,8 @@ namespace DentalSystem.VisitManagement
                 Cursor.Current = Cursors.WaitCursor;
                 var deleteActivityPerformedRequest = new DeleteActivityPerformedRequest
                 {
-                    ActivityPerformedId = id
+                    ActivityPerformedId = id,
+                    InvoiceDetailId = invoiceDetailId
                 };
 
                 _activityPerformedService.DeleteActivityPerformed(deleteActivityPerformedRequest);
@@ -494,21 +506,6 @@ namespace DentalSystem.VisitManagement
                     MessageBoxIcon.Information);
 
                 if (result != DialogResult.OK) return;
-                //if (BtnSaveGeneralInfo.Visible)
-                //{
-                //    result = MessageBox.Show(
-                //        "Los datos generales del paciente no han sido guardados. Si continúa, se perderá la información que ingresó.",
-                //        "Información",
-                //        MessageBoxButtons.OKCancel,
-                //        MessageBoxIcon.Information);
-
-                //    if (result != DialogResult.OK)
-                //    {
-                //        TclVisitManagement.SelectedIndex = 0;
-                //        return;
-                //    }
-
-                //}
 
                 Cursor.Current = Cursors.WaitCursor;
 
@@ -547,24 +544,118 @@ namespace DentalSystem.VisitManagement
                         e.Cancel = true;
                         return;
                     }
-
-                    //if (BtnSaveGeneralInfo.Visible)
-                    //{
-                    //    result = MessageBox.Show(
-                    //        "Los datos generales del paciente no han sido guardados. Si continúa, se perderá la información que ingresó.",
-                    //        "Información",
-                    //        MessageBoxButtons.OKCancel,
-                    //        MessageBoxIcon.Information);
-
-                    //    if (result != DialogResult.OK)
-                    //    {
-                    //        e.Cancel = true;
-                    //        TclVisitManagement.SelectedIndex = 0;
-                    //        return;
-                    //    }
-                    //}
                 }
+
                 e.Cancel = false;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void ListItemsToBill()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var getInvoiceDetailByVisitIdRequest = new GetInvoiceDetailByVisitIdRequest
+                {
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
+                };
+
+                var itemsToBill =
+                    _invoiceDetailService.GetInvoiceDetailByVisitId(getInvoiceDetailByVisitIdRequest);
+                DgvItemsToBill.DataSource = itemsToBill.ItemsToBill;
+
+                var getInvoiceDetailFromOtherVisitsRequest = new GetInvoiceDetailFromOtherVisitsRequest()
+                {
+                    VisitId = GenericProperties.VisitId,
+                    PatientId = PatientId,
+                    Mapper = _iMapper
+                };
+
+                var invoiceDetailFromOtherVisitsResult =
+                    _invoiceDetailService.GetInvoiceDetailFromOtherVisits(getInvoiceDetailFromOtherVisitsRequest);
+                DgvItemsToBillOtherVisits.DataSource = invoiceDetailFromOtherVisitsResult.InvoiceDetailFromOtherVisits;
+
+                NameItemsToBillGridHeader(DgvItemsToBill, DgvItemsToBillOtherVisits);
+
+                //InitializeModifyAndDeleteButtons();
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private static void NameItemsToBillGridHeader(DataGridView dgv, DataGridView dgvOtherVisits)
+        {
+            if (dgv == null) return;
+            dgv.ReadOnly = false;
+            dgv.Columns["InvoiceDetailId"].Visible = false;
+            dgv.Columns["ActivityPerformed"].HeaderText = "Actividad";
+            dgv.Columns["Section"].HeaderText = "Sección";
+            dgv.Columns["Price"].HeaderText = "Monto";
+
+            dgv.Columns["Price"].ValueType = typeof(int);
+
+            dgv.Columns["ActivityPerformed"].ReadOnly = true;
+            dgv.Columns["Section"].ReadOnly = true;
+
+            if (dgvOtherVisits == null) return;
+            dgvOtherVisits.Columns["InvoiceDetailId"].Visible = false;
+            dgvOtherVisits.Columns["ActivityPerformed"].HeaderText = "Actividad";
+            dgvOtherVisits.Columns["Section"].HeaderText = "Sección";
+            dgvOtherVisits.Columns["Price"].HeaderText = "Monto";
+        }
+
+        private void DgvItemsToBill_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex != 3) return;
+            if (int.TryParse(Convert.ToString(e.FormattedValue), out _) &&
+                Convert.ToInt32(e.FormattedValue) >= 0) return;
+
+            e.Cancel = true;
+            MessageBox.Show("Ingrese solo números enteros positivos", "Información", MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation);
+        }
+
+        private void DgvItemsToBill_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            UpdateInvoiceDetail(e);
+        }
+
+        private void UpdateInvoiceDetail(DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var invoiceDetailId = Convert.ToInt32(DgvItemsToBill.Rows[e.RowIndex].Cells[0].Value);
+                var price = Convert.ToInt32(DgvItemsToBill.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+
+                var updateActivityPerformedRequest = new UpdateInvoiceDetailRequest
+                {
+                    InvoiceDetailId = invoiceDetailId,
+                    Price = price,
+                    Mapper = _iMapper
+                };
+
+                _invoiceDetailService.UpdateInvoiceDetail(updateActivityPerformedRequest);
+
+                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+                var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
+                LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {

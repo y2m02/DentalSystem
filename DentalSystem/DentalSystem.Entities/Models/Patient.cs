@@ -28,6 +28,6 @@ namespace DentalSystem.Entities.Models
 
         public virtual PatientHealth PatientHealth { get; set; }
         public virtual ICollection<Visit> Visits { get; set; }
-        public virtual ICollection<AccountsReceivable> AccountsReceivables { get; set; }
+        public virtual AccountsReceivable AccountsReceivable { get; set; }
     }
 }

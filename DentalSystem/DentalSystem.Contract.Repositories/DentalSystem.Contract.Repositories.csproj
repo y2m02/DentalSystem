@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IActivityPerformedRepository.cs" />
+    <Compile Include="IInvoiceDetailRepository.cs" />
     <Compile Include="IPatientRepository.cs" />
     <Compile Include="IVisitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

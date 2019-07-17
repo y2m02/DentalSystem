@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
@@ -13,7 +14,7 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var activities = context.ActivitiesPerformed.Where(w => w.VisitId == visitId && w.DeletedOn == null)
+                var activities = context.ActivitiesPerformed.Include(w=>w.InvoiceDetail).Where(w => w.VisitId == visitId && w.DeletedOn == null)
                     .OrderByDescending(w => w.ActivityPerformedId).ToList();
 
                 return activities;
@@ -61,7 +62,7 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var activities = context.ActivitiesPerformed.Where(w =>
+                var activities = context.ActivitiesPerformed.Include(w=>w.InvoiceDetail).Where(w =>
                         w.Visit.Patient.PatientId == patientId && w.VisitId != visitId && w.DeletedOn == null)
                     .OrderByDescending(w => w.ActivityPerformedId).ToList();
 

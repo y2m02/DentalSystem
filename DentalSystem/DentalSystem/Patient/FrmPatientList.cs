@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.Visit;
-using DentalSystem.Entities.Results.Patient;
 using DentalSystem.MapperConfiguration;
 using DentalSystem.VisitManagement;
 
@@ -18,12 +15,13 @@ namespace DentalSystem.Patient
     {
         private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
+        private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IPatientService _patientService;
         private readonly IVisitService _visitService;
         private bool _alreadyLoaded;
 
         public FrmPatientList(IPatientService patientService, IActivityPerformedService activityPerformedService,
-            IVisitService visitService)
+            IVisitService visitService, IInvoiceDetailService invoiceDetailService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
@@ -31,6 +29,7 @@ namespace DentalSystem.Patient
             _patientService = patientService;
             _activityPerformedService = activityPerformedService;
             _visitService = visitService;
+            _invoiceDetailService = invoiceDetailService;
             InitializeComponent();
         }
 
@@ -179,7 +178,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?)visitHasEnded ?? true;
+            var visitHasFinished = (bool?) visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -206,10 +205,11 @@ namespace DentalSystem.Patient
 
                 Cursor.Current = Cursors.Default;
 
-                var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService)
+                var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
+                    _invoiceDetailService)
                 {
                     PatientId = patientId,
-                    PatientName= patientName,
+                    PatientName = patientName,
                     DialogResult = DialogResult.None
                 };
                 frm.ShowDialog();
@@ -236,10 +236,11 @@ namespace DentalSystem.Patient
 
                 Cursor.Current = Cursors.Default;
 
-                var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService)
+                var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
+                    _invoiceDetailService)
                 {
                     PatientId = patientId,
-                    PatientName= patientName,
+                    PatientName = patientName,
                     DialogResult = DialogResult.None
                 };
                 frm.ShowDialog();

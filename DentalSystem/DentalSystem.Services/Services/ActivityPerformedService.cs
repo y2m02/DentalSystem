@@ -11,10 +11,13 @@ namespace DentalSystem.Services.Services
     public class ActivityPerformedService : IActivityPerformedService
     {
         private readonly IActivityPerformedRepository _activityPerformedRepository;
+        private readonly IInvoiceDetailRepository _invoiceDetailRepository;
 
-        public ActivityPerformedService(IActivityPerformedRepository activityPerformedRepository)
+        public ActivityPerformedService(IActivityPerformedRepository activityPerformedRepository,
+            IInvoiceDetailRepository invoiceDetailRepository)
         {
             _activityPerformedRepository = activityPerformedRepository;
+            _invoiceDetailRepository = invoiceDetailRepository;
         }
 
         public GetAllActivitiesPerformedResult GetAllActivitiesPerformed(IMapper iMapper,
@@ -23,7 +26,8 @@ namespace DentalSystem.Services.Services
             var result = _activityPerformedRepository.GetAllActivitiesPerformed(request.VisitId);
             var visitActivities = iMapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
 
-            result =  _activityPerformedRepository.GetAllActivitiesPerformedByPatientId(request.PatientId, request.VisitId);
+            result = _activityPerformedRepository.GetAllActivitiesPerformedByPatientId(request.PatientId,
+                request.VisitId);
             var patientActivities = iMapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
 
             var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
@@ -37,8 +41,8 @@ namespace DentalSystem.Services.Services
 
         public void AddActivityPerformed(IMapper iMapper, AddActivityPerformedRequest request)
         {
-            var patient = iMapper.Map<ActivityPerformed>(request);
-            _activityPerformedRepository.AddActivityPerformed(patient);
+            var activityPerformed = iMapper.Map<ActivityPerformed>(request);
+            _activityPerformedRepository.AddActivityPerformed(activityPerformed);
         }
 
         public void UpdateActivityPerformed(IMapper iMapper, UpdateActivityPerformedRequest request)
@@ -50,6 +54,7 @@ namespace DentalSystem.Services.Services
         public void DeleteActivityPerformed(DeleteActivityPerformedRequest request)
         {
             _activityPerformedRepository.DeleteActivityPerformed(request.ActivityPerformedId);
+            _invoiceDetailRepository.DeleteInvoiceDetail(request.InvoiceDetailId);
         }
     }
 }

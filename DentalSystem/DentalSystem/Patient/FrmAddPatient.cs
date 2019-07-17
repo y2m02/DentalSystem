@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
+using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 
@@ -42,6 +43,14 @@ namespace DentalSystem.Patient
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
+
+                var accountsReceivableRequest = new AddAccountsReceivableRequest
+                {
+                    CreatedDate = DateTime.Now.Date,
+                    Total = 0,
+                    TotalPaid = 0
+                };
+
                 var addPatientHealth = new AddPatientHealthRequest
                 {
                     HasHeartMurmur = ChkHasHeartMurmur.Checked,
@@ -74,7 +83,8 @@ namespace DentalSystem.Patient
                     NSS = TxtNss.Text.Trim(),
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
-                    Gender = RbtMale.Checked ? "M" : "F"
+                    Gender = RbtMale.Checked ? "M" : "F",
+                    AccountsReceivable = accountsReceivableRequest
                 };
 
                 _patientService.AddPatient(_iMapper, addPatient);

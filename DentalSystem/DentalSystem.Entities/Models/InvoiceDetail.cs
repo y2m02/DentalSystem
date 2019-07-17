@@ -6,9 +6,10 @@ namespace DentalSystem.Entities.Models
 {
     public class InvoiceDetail
     {
-        [Key] public int InvoiceDetailId { get; set; }
+        [Key, ForeignKey("ActivityPerformed")]
+        public int InvoiceDetailId { get; set; }
         //[ForeignKey("Visit")] public int VisitId { get; set; }
-        [ForeignKey("ActivityPerformed")] public int ActivityPerformedId { get; set; }
+        //[ForeignKey("ActivityPerformed")] public int ActivityPerformedId { get; set; }
         public int Price { get; set; }
         public DateTime? DeletedOn { get; set; }
 

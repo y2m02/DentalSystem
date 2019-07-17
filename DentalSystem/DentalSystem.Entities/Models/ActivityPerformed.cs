@@ -16,6 +16,6 @@ namespace DentalSystem.Entities.Models
         public DateTime? DeletedOn { get; set; }
 
         public virtual Visit Visit { get; set; }
-        public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
+        public virtual InvoiceDetail InvoiceDetail { get; set; }
     }
 }

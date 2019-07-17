@@ -29,6 +29,9 @@ namespace DentalSystem
             container.RegisterType<IVisitService, VisitService>();
             container.RegisterType<IVisitRepository, VisitRepository>();
 
+            container.RegisterType<IInvoiceDetailService, InvoiceDetailService>();
+            container.RegisterType<IInvoiceDetailRepository, InvoiceDetailRepository>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(container.Resolve<FrmPatientList>());

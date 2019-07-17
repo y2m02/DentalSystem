@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace DentalSystem.Entities.Results.ActivityPerformed
 {
@@ -16,5 +15,6 @@ namespace DentalSystem.Entities.Results.ActivityPerformed
         public string Description { get; set; }
         public string Responsable { get; set; }
         public string Date { get; set; }
+        public int InvoiceDetailId { get; set; }
     }
 }

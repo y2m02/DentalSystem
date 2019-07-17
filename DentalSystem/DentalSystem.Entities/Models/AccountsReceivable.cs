@@ -6,8 +6,8 @@ namespace DentalSystem.Entities.Models
 {
     public class AccountsReceivable
     {
-        [Key] public int AccountsReceivableId { get; set; }
-        [ForeignKey("Patient")] [Required] public int PatientId { get; set; }
+        [Key, ForeignKey("Patient")]
+        public int AccountsReceivableId { get; set; }
 
         [Required]
         public int Total { get; set; }
