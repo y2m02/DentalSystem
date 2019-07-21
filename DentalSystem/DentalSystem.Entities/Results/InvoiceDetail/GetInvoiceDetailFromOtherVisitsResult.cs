@@ -10,6 +10,7 @@ namespace DentalSystem.Entities.Results.InvoiceDetail
     public class GetInvoiceDetailFromOtherVisitsResultModel
     {
         public int InvoiceDetailId { get; set; }
+        public int VisitNumber { get; set; }
         public string ActivityPerformed { get; set; }
         public string Section { get; set; }
         public int Price { get; set; }

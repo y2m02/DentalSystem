@@ -53,6 +53,10 @@
   <ItemGroup>
     <Compile Include="Context\DentalSystemContext.cs" />
     <Compile Include="GenericProperties\GenericProperties.cs" />
+    <Compile Include="Migrations\201907180134300_Created.cs" />
+    <Compile Include="Migrations\201907180134300_Created.Designer.cs">
+      <DependentUpon>201907180134300_Created.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityPerformed.cs" />
     <Compile Include="Models\AccountsReceivable.cs" />
@@ -60,9 +64,12 @@
     <Compile Include="Models\Odontogram.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\PatientHealth.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\AccountsReceivable\AddAccountsReceivableRequest.cs" />
+    <Compile Include="Requests\AccountsReceivable\GetAccountsReceivableByPatientIdRequest.cs" />
+    <Compile Include="Requests\AccountsReceivable\UpdateAccountsReceivableRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\AddActivityPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\DeleteActivityPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\GetAllActivitiesPerformedRequest.cs" />
@@ -77,18 +84,34 @@
     <Compile Include="Requests\Patient\GetPatientByIdRequest.cs" />
     <Compile Include="Requests\PatientHealth\UpdatePatientHealthRequest.cs" />
     <Compile Include="Requests\Patient\UpdatePatientRequest.cs" />
+    <Compile Include="Requests\Payment\AddPaymentRequest.cs" />
+    <Compile Include="Requests\Payment\DeletePaymentRequest.cs" />
+    <Compile Include="Requests\Payment\GetPaymentsByAccountReceivableIdRequest.cs" />
     <Compile Include="Requests\Visit\AddVisitRequest.cs" />
     <Compile Include="Requests\Visit\EndVisitRequest.cs" />
+    <Compile Include="Requests\Visit\GetVisitNumberRequest.cs" />
+    <Compile Include="Requests\Visit\SetVisitAsBilledRequest.cs" />
     <Compile Include="Results\ActivityPerformed\GetAllActivitiesPerformedResult.cs" />
+    <Compile Include="Results\AccountsReceivable\GetAccountsReceivableByPatientIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailByVisitIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailFromOtherVisitsResult.cs" />
     <Compile Include="Results\Patient\GetAllPatientsResult.cs" />
     <Compile Include="Results\Patient\GetPatientByIdResult.cs" />
+    <Compile Include="Results\Payment\AddPaymentResult.cs" />
+    <Compile Include="Results\Payment\DeletePaymentResult.cs" />
+    <Compile Include="Results\Payment\GetPaymentsByAccountReceivableIdResult.cs" />
     <Compile Include="Results\Visit\AddVisitResult.cs" />
+    <Compile Include="Results\Visit\GetVisitNumberResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907180134300_Created.resx">
+      <DependentUpon>201907180134300_Created.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

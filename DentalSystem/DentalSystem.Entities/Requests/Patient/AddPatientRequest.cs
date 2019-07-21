@@ -21,6 +21,5 @@ namespace DentalSystem.Entities.Requests.Patient
         public DateTime AdmissionDate { get; set; }
 
         public AddPatientHealthRequest PatientHealth { get; set; }
-        public AddAccountsReceivableRequest AccountsReceivable { get; set; }
     }
 }

@@ -20,13 +20,13 @@ namespace DentalSystem.Services.Services
 
         public AddVisitResult AddVisit(IMapper iMapper, AddVisitRequest request)
         {
-            var visit = iMapper.Map<Visit>(request);
-            var visitId = _visitRepository.AddVisit(visit);
+            var visitNumber = _visitRepository.GetVisitNumber(request.PatientId);
+            request.VisitNumber = visitNumber;
 
-            var addVisitResult = new AddVisitResult
-            {
-                VisitId = visitId
-            };
+            var visit = iMapper.Map<Visit>(request);
+            var visitResult = _visitRepository.AddVisit(visit);
+
+            var addVisitResult = iMapper.Map<AddVisitResult>(visitResult);
 
             return addVisitResult;
         }
@@ -35,6 +35,18 @@ namespace DentalSystem.Services.Services
         {
             var visit = iMapper.Map<Visit>(request);
            _visitRepository.EndVisit(visit);
+        }
+
+        public GetVisitNumberResult GetVisitNumber(GetVisitNumberRequest request)
+        {
+            var visitNumber = _visitRepository.GetVisitNumber(request.PatientId);
+
+            var getVisitNumberResult = new GetVisitNumberResult
+            {
+                VisitNumber = visitNumber
+            };
+
+            return getVisitNumberResult;
         }
     }
 }

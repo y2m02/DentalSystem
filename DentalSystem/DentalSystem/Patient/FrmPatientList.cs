@@ -13,6 +13,7 @@ namespace DentalSystem.Patient
 {
     public partial class FrmPatientList : Form
     {
+        private readonly IAccountReceivableService _accountReceivableService;
         private readonly IActivityPerformedService _activityPerformedService;
         private readonly IMapper _iMapper;
         private readonly IInvoiceDetailService _invoiceDetailService;
@@ -21,7 +22,8 @@ namespace DentalSystem.Patient
         private bool _alreadyLoaded;
 
         public FrmPatientList(IPatientService patientService, IActivityPerformedService activityPerformedService,
-            IVisitService visitService, IInvoiceDetailService invoiceDetailService)
+            IVisitService visitService, IInvoiceDetailService invoiceDetailService,
+            IAccountReceivableService accountReceivableService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
@@ -30,6 +32,7 @@ namespace DentalSystem.Patient
             _activityPerformedService = activityPerformedService;
             _visitService = visitService;
             _invoiceDetailService = invoiceDetailService;
+            _accountReceivableService = accountReceivableService;
             InitializeComponent();
         }
 
@@ -95,6 +98,7 @@ namespace DentalSystem.Patient
             dgv.Columns["LastVisitDate"].HeaderText = "Última visita";
             dgv.Columns["VisitHasEnded"].Visible = false;
             dgv.Columns["VisitId"].Visible = false;
+            dgv.Columns["VisitHasBeenBilled"].Visible = false;
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -178,7 +182,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?) visitHasEnded ?? true;
+            var visitHasFinished = (bool?)visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -192,21 +196,24 @@ namespace DentalSystem.Patient
                 var patientName = DgvPatientList.SelectedRows[0].Cells["FullName"].Value.ToString();
 
                 Cursor.Current = Cursors.WaitCursor;
+
                 var addVisitRequest = new AddVisitRequest
                 {
                     PatientId = patientId,
                     HasEnded = false,
-                    CreatedOn = DateTime.Now
+                    CreatedOn = DateTime.Now,
+                    HasBeenBilled = false
                 };
 
                 var addVisitResult = _visitService.AddVisit(_iMapper, addVisitRequest);
 
                 GenericProperties.VisitId = addVisitResult.VisitId;
+                GenericProperties.VisitHasBeenBilled = addVisitResult.HasBeenBilled;
 
                 Cursor.Current = Cursors.Default;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService)
+                    _invoiceDetailService, _accountReceivableService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,
@@ -231,13 +238,14 @@ namespace DentalSystem.Patient
                 var patientId = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
                 var visitId = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["VisitId"].Value);
                 var patientName = DgvPatientList.SelectedRows[0].Cells["FullName"].Value.ToString();
+                var visitHasBeenBilled = Convert.ToBoolean(DgvPatientList.SelectedRows[0].Cells["VisitHasBeenBilled"].Value);
 
                 GenericProperties.VisitId = visitId;
-
+                GenericProperties.VisitHasBeenBilled = visitHasBeenBilled;
                 Cursor.Current = Cursors.Default;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService)
+                    _invoiceDetailService, _accountReceivableService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,

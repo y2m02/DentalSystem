@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
-using DentalSystem.Entities.Models;
+﻿using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Contract.Repositories
 {
     public interface IVisitRepository
     {
-        int AddVisit(Visit visit);
-       void EndVisit(Visit visit);
+        Visit AddVisit(Visit visit);
+        void EndVisit(Visit visit);
+        void SetVisitAsBilled(Visit visit);
+        int GetVisitNumber(int patientId);
+        bool ValidateIfVisitHasBeenBilled(int visitId);
     }
 }

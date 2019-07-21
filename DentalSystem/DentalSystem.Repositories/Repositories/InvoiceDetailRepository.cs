@@ -63,9 +63,9 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var invoiceDetails = context.InvoiceDetails.Include(w => w.ActivityPerformed).Where(w =>
-                        w.ActivityPerformed.Visit.PatientId == patientId && w.ActivityPerformed.VisitId != visitId &&
-                        w.DeletedOn == null)
+                var invoiceDetails = context.InvoiceDetails.Include(w => w.ActivityPerformed).Include(w => w.ActivityPerformed.Visit).Where(w =>
+                          w.ActivityPerformed.Visit.PatientId == patientId && w.ActivityPerformed.VisitId != visitId &&
+                          w.DeletedOn == null)
                     .OrderByDescending(w => w.InvoiceDetailId).ToList();
 
                 return invoiceDetails;

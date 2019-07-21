@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DentalSystem.Entities.Requests.Patient
+﻿namespace DentalSystem.Entities.Requests.Patient
 {
     public class DeletePatientRequest
     {

@@ -99,8 +99,14 @@
             this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TabInvoice = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnDeletePayment = new System.Windows.Forms.Button();
+            this.BtnEndInvoice = new System.Windows.Forms.Button();
+            this.BtnAddPayment = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.DgvAccountReceivableList = new System.Windows.Forms.DataGridView();
+            this.DgvItemsToBillOtherVisits = new System.Windows.Forms.DataGridView();
             this.DgvItemsToBill = new System.Windows.Forms.DataGridView();
             this.LblPatientNameInvoice = new System.Windows.Forms.Label();
             this.BtnGeneralInfo = new System.Windows.Forms.Button();
@@ -109,15 +115,6 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.DgvItemsToBillOtherVisits = new System.Windows.Forms.DataGridView();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
-            this.LblTotal = new System.Windows.Forms.Label();
-            this.LblTotalPending = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.LblTotalPaid = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -134,9 +131,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).BeginInit();
             this.TabInvoice.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -956,16 +953,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnDeletePayment);
+            this.panel1.Controls.Add(this.BtnEndInvoice);
+            this.panel1.Controls.Add(this.BtnAddPayment);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.LblTotalPending);
-            this.panel1.Controls.Add(this.LblTotal);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.LblTotalPaid);
             this.panel1.Controls.Add(this.LblTotalCurrentVisit);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.DgvAccountReceivableList);
             this.panel1.Controls.Add(this.DgvItemsToBillOtherVisits);
             this.panel1.Controls.Add(this.DgvItemsToBill);
             this.panel1.Location = new System.Drawing.Point(11, 30);
@@ -973,35 +967,108 @@
             this.panel1.Size = new System.Drawing.Size(1086, 618);
             this.panel1.TabIndex = 35;
             // 
-            // label13
+            // BtnDeletePayment
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(4, 450);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(418, 24);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Actividades realizadas en visitas anteriores";
+            this.BtnDeletePayment.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 305);
+            this.BtnDeletePayment.Name = "BtnDeletePayment";
+            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnDeletePayment.TabIndex = 41;
+            this.BtnDeletePayment.Text = "Eliminar abono";
+            this.BtnDeletePayment.UseVisualStyleBackColor = true;
+            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click);
             // 
-            // dataGridView1
+            // BtnEndInvoice
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 486);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1086, 132);
-            this.dataGridView1.TabIndex = 10;
+            this.BtnEndInvoice.Location = new System.Drawing.Point(367, 3);
+            this.BtnEndInvoice.Name = "BtnEndInvoice";
+            this.BtnEndInvoice.Size = new System.Drawing.Size(165, 33);
+            this.BtnEndInvoice.TabIndex = 40;
+            this.BtnEndInvoice.Text = "Finalizar";
+            this.BtnEndInvoice.UseVisualStyleBackColor = true;
+            this.BtnEndInvoice.Click += new System.EventHandler(this.BtnEndInvoice_Click);
+            // 
+            // BtnAddPayment
+            // 
+            this.BtnAddPayment.Location = new System.Drawing.Point(8, 305);
+            this.BtnAddPayment.Name = "BtnAddPayment";
+            this.BtnAddPayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnAddPayment.TabIndex = 40;
+            this.BtnAddPayment.Text = "Abonar";
+            this.BtnAddPayment.UseVisualStyleBackColor = true;
+            this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(556, 5);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(324, 24);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Actividades de visitas anteriores:";
+            // 
+            // LblTotalCurrentVisit
+            // 
+            this.LblTotalCurrentVisit.AutoSize = true;
+            this.LblTotalCurrentVisit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalCurrentVisit.Location = new System.Drawing.Point(4, 264);
+            this.LblTotalCurrentVisit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotalCurrentVisit.Name = "LblTotalCurrentVisit";
+            this.LblTotalCurrentVisit.Size = new System.Drawing.Size(301, 24);
+            this.LblTotalCurrentVisit.TabIndex = 34;
+            this.LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(4, 5);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(257, 24);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Actividades de esta visita:";
+            // 
+            // DgvAccountReceivableList
+            // 
+            this.DgvAccountReceivableList.AllowUserToAddRows = false;
+            this.DgvAccountReceivableList.AllowUserToDeleteRows = false;
+            this.DgvAccountReceivableList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvAccountReceivableList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvAccountReceivableList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvAccountReceivableList.Location = new System.Drawing.Point(0, 351);
+            this.DgvAccountReceivableList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvAccountReceivableList.MultiSelect = false;
+            this.DgvAccountReceivableList.Name = "DgvAccountReceivableList";
+            this.DgvAccountReceivableList.ReadOnly = true;
+            this.DgvAccountReceivableList.RowHeadersWidth = 51;
+            this.DgvAccountReceivableList.RowTemplate.Height = 24;
+            this.DgvAccountReceivableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvAccountReceivableList.Size = new System.Drawing.Size(532, 267);
+            this.DgvAccountReceivableList.TabIndex = 10;
+            // 
+            // DgvItemsToBillOtherVisits
+            // 
+            this.DgvItemsToBillOtherVisits.AllowUserToAddRows = false;
+            this.DgvItemsToBillOtherVisits.AllowUserToDeleteRows = false;
+            this.DgvItemsToBillOtherVisits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvItemsToBillOtherVisits.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvItemsToBillOtherVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvItemsToBillOtherVisits.Location = new System.Drawing.Point(551, 41);
+            this.DgvItemsToBillOtherVisits.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvItemsToBillOtherVisits.MultiSelect = false;
+            this.DgvItemsToBillOtherVisits.Name = "DgvItemsToBillOtherVisits";
+            this.DgvItemsToBillOtherVisits.ReadOnly = true;
+            this.DgvItemsToBillOtherVisits.RowHeadersWidth = 51;
+            this.DgvItemsToBillOtherVisits.RowTemplate.Height = 24;
+            this.DgvItemsToBillOtherVisits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvItemsToBillOtherVisits.Size = new System.Drawing.Size(532, 219);
+            this.DgvItemsToBillOtherVisits.TabIndex = 9;
+            this.DgvItemsToBillOtherVisits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
+            this.DgvItemsToBillOtherVisits.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
+            this.DgvItemsToBillOtherVisits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
             // 
             // DgvItemsToBill
             // 
@@ -1018,7 +1085,7 @@
             this.DgvItemsToBill.RowHeadersWidth = 51;
             this.DgvItemsToBill.RowTemplate.Height = 24;
             this.DgvItemsToBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvItemsToBill.Size = new System.Drawing.Size(532, 228);
+            this.DgvItemsToBill.Size = new System.Drawing.Size(532, 219);
             this.DgvItemsToBill.TabIndex = 9;
             this.DgvItemsToBill.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
             this.DgvItemsToBill.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
@@ -1102,115 +1169,6 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
-            // DgvItemsToBillOtherVisits
-            // 
-            this.DgvItemsToBillOtherVisits.AllowUserToAddRows = false;
-            this.DgvItemsToBillOtherVisits.AllowUserToDeleteRows = false;
-            this.DgvItemsToBillOtherVisits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvItemsToBillOtherVisits.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvItemsToBillOtherVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvItemsToBillOtherVisits.Location = new System.Drawing.Point(551, 41);
-            this.DgvItemsToBillOtherVisits.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvItemsToBillOtherVisits.MultiSelect = false;
-            this.DgvItemsToBillOtherVisits.Name = "DgvItemsToBillOtherVisits";
-            this.DgvItemsToBillOtherVisits.ReadOnly = true;
-            this.DgvItemsToBillOtherVisits.RowHeadersWidth = 51;
-            this.DgvItemsToBillOtherVisits.RowTemplate.Height = 24;
-            this.DgvItemsToBillOtherVisits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvItemsToBillOtherVisits.Size = new System.Drawing.Size(532, 228);
-            this.DgvItemsToBillOtherVisits.TabIndex = 9;
-            this.DgvItemsToBillOtherVisits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
-            this.DgvItemsToBillOtherVisits.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
-            this.DgvItemsToBillOtherVisits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(4, 13);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 24);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Esta visita:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(556, 13);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(182, 24);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Visitas anteriores:";
-            // 
-            // LblTotalCurrentVisit
-            // 
-            this.LblTotalCurrentVisit.AutoSize = true;
-            this.LblTotalCurrentVisit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalCurrentVisit.Location = new System.Drawing.Point(4, 276);
-            this.LblTotalCurrentVisit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotalCurrentVisit.Name = "LblTotalCurrentVisit";
-            this.LblTotalCurrentVisit.Size = new System.Drawing.Size(301, 24);
-            this.LblTotalCurrentVisit.TabIndex = 34;
-            this.LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$";
-            // 
-            // LblTotal
-            // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotal.Location = new System.Drawing.Point(556, 276);
-            this.LblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(125, 24);
-            this.LblTotal.TabIndex = 34;
-            this.LblTotal.Text = "Monto total:";
-            // 
-            // LblTotalPending
-            // 
-            this.LblTotalPending.AutoSize = true;
-            this.LblTotalPending.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalPending.Location = new System.Drawing.Point(556, 346);
-            this.LblTotalPending.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotalPending.Name = "LblTotalPending";
-            this.LblTotalPending.Size = new System.Drawing.Size(176, 24);
-            this.LblTotalPending.TabIndex = 34;
-            this.LblTotalPending.Text = "Monto pendiente:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(556, 310);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(201, 24);
-            this.label21.TabIndex = 34;
-            this.label21.Text = "Monto total pagado:";
-            // 
-            // LblTotalPaid
-            // 
-            this.LblTotalPaid.AutoSize = true;
-            this.LblTotalPaid.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalPaid.Location = new System.Drawing.Point(755, 310);
-            this.LblTotalPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotalPaid.Name = "LblTotalPaid";
-            this.LblTotalPaid.Size = new System.Drawing.Size(60, 24);
-            this.LblTotalPaid.TabIndex = 34;
-            this.LblTotalPaid.Text = "RD$0";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(729, 347);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(60, 24);
-            this.label25.TabIndex = 34;
-            this.label25.Text = "RD$0";
-            // 
             // FrmVisitManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -1263,9 +1221,9 @@
             this.TabInvoice.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1350,17 +1308,14 @@
         private System.Windows.Forms.DataGridView DgvActivitiesListHistory;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvAccountReceivableList;
         private System.Windows.Forms.DataGridView DgvItemsToBill;
         private System.Windows.Forms.DataGridView DgvItemsToBillOtherVisits;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label LblTotalPending;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label LblTotalPaid;
-        private System.Windows.Forms.Label LblTotal;
         private System.Windows.Forms.Label LblTotalCurrentVisit;
+        private System.Windows.Forms.Button BtnDeletePayment;
+        private System.Windows.Forms.Button BtnAddPayment;
+        private System.Windows.Forms.Button BtnEndInvoice;
     }
 }

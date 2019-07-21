@@ -14,6 +14,7 @@ namespace DentalSystem.Entities.Results.Patient
         public DateTime AdmissionDate { get; set; }
         public string LastVisitDate { get; set; }
         public bool? VisitHasEnded { get; set; }
+        public bool VisitHasBeenBilled { get; set; }
         public int VisitId { get; set; }
     }
 }

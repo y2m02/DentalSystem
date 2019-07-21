@@ -44,13 +44,6 @@ namespace DentalSystem.Patient
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                var accountsReceivableRequest = new AddAccountsReceivableRequest
-                {
-                    CreatedDate = DateTime.Now.Date,
-                    Total = 0,
-                    TotalPaid = 0
-                };
-
                 var addPatientHealth = new AddPatientHealthRequest
                 {
                     HasHeartMurmur = ChkHasHeartMurmur.Checked,
@@ -83,8 +76,7 @@ namespace DentalSystem.Patient
                     NSS = TxtNss.Text.Trim(),
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
-                    Gender = RbtMale.Checked ? "M" : "F",
-                    AccountsReceivable = accountsReceivableRequest
+                    Gender = RbtMale.Checked ? "M" : "F"
                 };
 
                 _patientService.AddPatient(_iMapper, addPatient);

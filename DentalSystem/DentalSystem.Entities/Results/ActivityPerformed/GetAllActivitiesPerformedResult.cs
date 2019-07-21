@@ -11,6 +11,7 @@ namespace DentalSystem.Entities.Results.ActivityPerformed
     public class GetAllActivitiesPerformedResultModel
     {
         public int ActivityPerformedId { get; set; }
+        public int VisitNumber { get; set; }
         public string Section { get; set; }
         public string Description { get; set; }
         public string Responsable { get; set; }

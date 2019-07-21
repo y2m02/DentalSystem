@@ -8,5 +8,6 @@ namespace DentalSystem.Contract.Services
     {
         AddVisitResult AddVisit(IMapper iMapper, AddVisitRequest request);
         void EndVisit(IMapper iMapper, EndVisitRequest request);
+        GetVisitNumberResult GetVisitNumber(GetVisitNumberRequest request);
     }
 }

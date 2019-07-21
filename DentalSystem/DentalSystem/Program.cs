@@ -32,6 +32,9 @@ namespace DentalSystem
             container.RegisterType<IInvoiceDetailService, InvoiceDetailService>();
             container.RegisterType<IInvoiceDetailRepository, InvoiceDetailRepository>();
 
+            container.RegisterType<IAccountReceivableService, AccountReceivableService>();
+            container.RegisterType<IAccountReceivableRepository, AccountReceivableRepository>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(container.Resolve<FrmPatientList>());

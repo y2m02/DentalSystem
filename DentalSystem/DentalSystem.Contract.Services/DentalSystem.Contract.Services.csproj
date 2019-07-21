@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAccountReceivableService.cs" />
     <Compile Include="IActivityPerformedService.cs" />
     <Compile Include="IInvoiceDetailService.cs" />
     <Compile Include="IPatientService.cs" />
+    <Compile Include="IPaymentService.cs" />
     <Compile Include="IVisitService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

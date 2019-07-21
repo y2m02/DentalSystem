@@ -7,5 +7,7 @@ namespace DentalSystem.Entities.Requests.Visit
         public int PatientId { get; set; }
         public DateTime CreatedOn { get; set; }
         public bool? HasEnded { get; set; }
+        public int VisitNumber { get; set; }
+        public bool HasBeenBilled { get; set; }
     }
 }

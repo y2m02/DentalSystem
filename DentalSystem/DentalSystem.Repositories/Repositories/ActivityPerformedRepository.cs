@@ -62,7 +62,7 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var activities = context.ActivitiesPerformed.Include(w=>w.InvoiceDetail).Where(w =>
+                var activities = context.ActivitiesPerformed.Include(w=>w.InvoiceDetail).Include(w => w.Visit).Where(w =>
                         w.Visit.Patient.PatientId == patientId && w.VisitId != visitId && w.DeletedOn == null)
                     .OrderByDescending(w => w.ActivityPerformedId).ToList();
 

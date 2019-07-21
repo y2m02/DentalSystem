@@ -8,14 +8,14 @@ namespace DentalSystem.Repositories.Repositories
 {
     public class VisitRepository : IVisitRepository
     {
-        public int AddVisit(Visit visit)
+        public Visit AddVisit(Visit visit)
         {
             using (var context = new DentalSystemContext())
             {
                 context.Visits.Add(visit);
                 context.SaveChanges();
 
-                return visit.VisitId;
+                return visit;
             }
         }
 
@@ -23,15 +23,42 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var visitToModify = context.Visits.Include(w => w.Patient)
-                    .FirstOrDefault(w => w.VisitId == visit.VisitId);
-
-                if (visitToModify == null) return;
-
-                visit.CreatedOn = visitToModify.CreatedOn;
-
-                context.Entry(visitToModify).CurrentValues.SetValues(visit);
+                context.Visits.Attach(visit);
+                context.Entry(visit).Property(x => x.HasEnded).IsModified = true;
                 context.SaveChanges();
+            }
+        }
+
+        public void SetVisitAsBilled(Visit visit)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                context.Visits.Attach(visit);
+                context.Entry(visit).Property(x => x.HasBeenBilled).IsModified = true;
+                context.SaveChanges();
+            }
+        }
+
+        public int GetVisitNumber(int patientId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var totalVisit = context.Visits.Count(w => w.PatientId == patientId);
+
+                var visitNumber = totalVisit + 1;
+
+                return visitNumber;
+            }
+        }
+
+        public bool ValidateIfVisitHasBeenBilled(int visitId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var hasBeenBilled = context.Visits.Where(w => w.VisitId == visitId).Select(w => w.HasBeenBilled);
+
+                return hasBeenBilled.FirstOrDefault();
+
             }
         }
     }

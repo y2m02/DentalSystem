@@ -1,12 +1,12 @@
-﻿using DentalSystem.Entities.Migrations;
-using DentalSystem.Entities.Models;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using DentalSystem.Entities.Migrations;
+using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Entities.Context
 {
-    public class DentalSystemContext:DbContext
+    public class DentalSystemContext : DbContext
     {
         public DentalSystemContext() : base("name=DentalSystemConnection")
         {
@@ -20,6 +20,7 @@ namespace DentalSystem.Entities.Context
         public DbSet<AccountsReceivable> AccountsReceivables { get; set; }
         public DbSet<Visit> Visits { get; set; }
         public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
+        public DbSet<Payment> Payments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,7 +33,6 @@ namespace DentalSystem.Entities.Context
         public PatientMappings()
         {
             HasRequired(c => c.PatientHealth).WithRequiredPrincipal(e => e.Patient);
-            HasRequired(c => c.AccountsReceivable).WithRequiredPrincipal(e => e.Patient);
         }
     }
 
@@ -41,6 +41,7 @@ namespace DentalSystem.Entities.Context
         public VisitMappings()
         {
             HasRequired(c => c.Odontogram).WithRequiredPrincipal(e => e.Visit);
+            HasRequired(c => c.AccountsReceivable).WithRequiredPrincipal(e => e.Visit);
         }
     }
 
