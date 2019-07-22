@@ -19,11 +19,12 @@ namespace DentalSystem.Patient
         private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IPatientService _patientService;
         private readonly IVisitService _visitService;
+        private readonly IPaymentService _paymentService;
         private bool _alreadyLoaded;
 
         public FrmPatientList(IPatientService patientService, IActivityPerformedService activityPerformedService,
             IVisitService visitService, IInvoiceDetailService invoiceDetailService,
-            IAccountReceivableService accountReceivableService)
+            IAccountReceivableService accountReceivableService, IPaymentService paymentService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
@@ -33,6 +34,7 @@ namespace DentalSystem.Patient
             _visitService = visitService;
             _invoiceDetailService = invoiceDetailService;
             _accountReceivableService = accountReceivableService;
+            _paymentService = paymentService;
             InitializeComponent();
         }
 
@@ -213,7 +215,7 @@ namespace DentalSystem.Patient
                 Cursor.Current = Cursors.Default;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService, _accountReceivableService)
+                    _invoiceDetailService, _accountReceivableService, _paymentService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,
@@ -245,7 +247,7 @@ namespace DentalSystem.Patient
                 Cursor.Current = Cursors.Default;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService, _accountReceivableService)
+                    _invoiceDetailService, _accountReceivableService,_paymentService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,

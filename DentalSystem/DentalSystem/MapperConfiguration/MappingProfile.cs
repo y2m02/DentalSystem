@@ -7,12 +7,13 @@ using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
+using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Requests.Visit;
-using DentalSystem.Entities.Results;
 using DentalSystem.Entities.Results.AccountsReceivable;
 using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.Patient;
+using DentalSystem.Entities.Results.Payment;
 using DentalSystem.Entities.Results.Visit;
 
 namespace DentalSystem.MapperConfiguration
@@ -24,18 +25,19 @@ namespace DentalSystem.MapperConfiguration
             // GET
             CreateMap<Entities.Models.Patient, GetAllPatientsResult>()
                 .ForMember(w => w.HasInsurancePlan,
-                    y => y.MapFrom(r => r.HasInsurancePlan != null ? (bool)r.HasInsurancePlan ? "Sí" : "No" : ""))
+                    y => y.MapFrom(r => r.HasInsurancePlan != null ? (bool) r.HasInsurancePlan ? "Sí" : "No" : ""))
                 .ForMember(w => w.AdmissionDate,
                     y => y.MapFrom(r => r.AdmissionDate != null ? r.AdmissionDate.ToShortDateString() : ""))
                 .ForMember(w => w.LastVisitDate,
                     y => y.MapFrom(r =>
                         r.Visits != null && r.Visits.Count != 0
                             ? r.Visits.OrderByDescending(w => w.VisitId).Select(w => w.CreatedOn).FirstOrDefault()
-                                .ToString("dd/MM/yyyy")
+                                .ToString("dd/M/yyyy")
                             : ""))
                 .ForMember(w => w.VisitHasBeenBilled,
                     y => y.MapFrom(r =>
-                        r.Visits != null && r.Visits.Count != 0 && r.Visits.OrderByDescending(w => w.VisitId).Select(w => w.HasBeenBilled).FirstOrDefault()))
+                        r.Visits != null && r.Visits.Count != 0 && r.Visits.OrderByDescending(w => w.VisitId)
+                            .Select(w => w.HasBeenBilled).FirstOrDefault()))
                 .ForMember(w => w.VisitHasEnded,
                     y => y.MapFrom(r =>
                         r.Visits != null && r.Visits.Count != 0
@@ -55,7 +57,7 @@ namespace DentalSystem.MapperConfiguration
             //y => y.MapFrom(r => !string.IsNullOrEmpty(r.IdentificationCard) ? Convert.ToDouble(r.IdentificationCard).ToString("###-#######-#") : ""));
 
             CreateMap<ActivityPerformed, GetAllActivitiesPerformedResultModel>()
-                .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("dd/MM/yyyy")))
+                .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("dd/M/yyyy")))
                 .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.Visit.VisitNumber))
                 .ForMember(w => w.InvoiceDetailId, y => y.MapFrom(r => r.InvoiceDetail.InvoiceDetailId))
                 .ForMember(w => w.Section,
@@ -83,9 +85,12 @@ namespace DentalSystem.MapperConfiguration
 
             CreateMap<AccountsReceivable, GetAccountsReceivableByPatientIdResultModel>()
                 .ForMember(w => w.TotalPending, y => y.MapFrom(r => r.Total - r.TotalPaid))
-                .ForMember(w => w.CreatedDate, y => y.MapFrom(r => r.CreatedDate.ToString("dd/MM/yyyy")))
+                .ForMember(w => w.CreatedDate, y => y.MapFrom(r => r.CreatedDate.ToString("dd/M/yyyy")))
                 .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.Visit.VisitNumber));
-            
+
+            CreateMap<Payment, GetPaymentsByAccountReceivableIdResultModel>()
+                .ForMember(w => w.PaymentDate, y => y.MapFrom(r => r.PaymentDate.ToString("dd/M/yyyy")));
+
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -111,7 +116,9 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddVisitRequest, Visit>();
             CreateMap<AddInvoiceDetailRequest, InvoiceDetail>();
             CreateMap<AddAccountsReceivableRequest, AccountsReceivable>();
+            CreateMap<AddPaymentRequest, Payment>();
             CreateMap<Visit, AddVisitResult>();
+
 
             // UPDATE
             CreateMap<UpdatePatientRequest, Entities.Models.Patient>();
@@ -119,7 +126,11 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<UpdateActivityPerformedRequest, ActivityPerformed>();
             CreateMap<EndVisitRequest, Visit>();
             CreateMap<UpdateInvoiceDetailRequest, InvoiceDetail>();
+            CreateMap<UpdateTotalPaidRequest, AccountsReceivable>();
             CreateMap<SetVisitAsBilledRequest, Visit>();
+
+            //DELETE
+            CreateMap<DeletePaymentRequest, Payment>();
         }
     }
 }

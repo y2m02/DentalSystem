@@ -96,6 +96,12 @@
     <Compile Include="VisitManagement\FrmActivityPerformedMaintenance.Designer.cs">
       <DependentUpon>FrmActivityPerformedMaintenance.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisitManagement\FrmAddPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitManagement\FrmAddPayment.Designer.cs">
+      <DependentUpon>FrmAddPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisitManagement\FrmVisitManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="VisitManagement\FrmActivityPerformedMaintenance.resx">
       <DependentUpon>FrmActivityPerformedMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitManagement\FrmAddPayment.resx">
+      <DependentUpon>FrmAddPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisitManagement\FrmVisitManagement.resx">
       <DependentUpon>FrmVisitManagement.cs</DependentUpon>

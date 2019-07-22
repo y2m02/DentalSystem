@@ -99,12 +99,13 @@
             this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TabInvoice = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnDeletePayment = new System.Windows.Forms.Button();
             this.BtnEndInvoice = new System.Windows.Forms.Button();
             this.BtnAddPayment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.DgvPaymentList = new System.Windows.Forms.DataGridView();
             this.DgvAccountReceivableList = new System.Windows.Forms.DataGridView();
             this.DgvItemsToBillOtherVisits = new System.Windows.Forms.DataGridView();
             this.DgvItemsToBill = new System.Windows.Forms.DataGridView();
@@ -115,6 +116,8 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
+            this.BtnDeletePayment = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -131,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).BeginInit();
             this.TabInvoice.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPaymentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
@@ -838,11 +842,11 @@
             // LblPatientNameActivitiesPerformed
             // 
             this.LblPatientNameActivitiesPerformed.AutoSize = true;
-            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
             this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
-            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(249, 29);
             this.LblPatientNameActivitiesPerformed.TabIndex = 33;
             this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
             // 
@@ -953,12 +957,15 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.BtnDeletePayment);
             this.panel1.Controls.Add(this.BtnEndInvoice);
+            this.panel1.Controls.Add(this.BtnDeletePayment);
             this.panel1.Controls.Add(this.BtnAddPayment);
             this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.LblTotalCurrentVisit);
             this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.DgvPaymentList);
             this.panel1.Controls.Add(this.DgvAccountReceivableList);
             this.panel1.Controls.Add(this.DgvItemsToBillOtherVisits);
             this.panel1.Controls.Add(this.DgvItemsToBill);
@@ -966,17 +973,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1086, 618);
             this.panel1.TabIndex = 35;
-            // 
-            // BtnDeletePayment
-            // 
-            this.BtnDeletePayment.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 305);
-            this.BtnDeletePayment.Name = "BtnDeletePayment";
-            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
-            this.BtnDeletePayment.TabIndex = 41;
-            this.BtnDeletePayment.Text = "Eliminar abono";
-            this.BtnDeletePayment.UseVisualStyleBackColor = true;
-            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click);
             // 
             // BtnEndInvoice
             // 
@@ -990,7 +986,7 @@
             // 
             // BtnAddPayment
             // 
-            this.BtnAddPayment.Location = new System.Drawing.Point(8, 305);
+            this.BtnAddPayment.Location = new System.Drawing.Point(8, 300);
             this.BtnAddPayment.Name = "BtnAddPayment";
             this.BtnAddPayment.Size = new System.Drawing.Size(165, 39);
             this.BtnAddPayment.TabIndex = 40;
@@ -1008,6 +1004,17 @@
             this.label17.Size = new System.Drawing.Size(324, 24);
             this.label17.TabIndex = 34;
             this.label17.Text = "Actividades de visitas anteriores:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(556, 345);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 24);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Abonos:";
             // 
             // LblTotalCurrentVisit
             // 
@@ -1031,6 +1038,24 @@
             this.label14.TabIndex = 34;
             this.label14.Text = "Actividades de esta visita:";
             // 
+            // DgvPaymentList
+            // 
+            this.DgvPaymentList.AllowUserToAddRows = false;
+            this.DgvPaymentList.AllowUserToDeleteRows = false;
+            this.DgvPaymentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvPaymentList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvPaymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPaymentList.Location = new System.Drawing.Point(551, 373);
+            this.DgvPaymentList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvPaymentList.MultiSelect = false;
+            this.DgvPaymentList.Name = "DgvPaymentList";
+            this.DgvPaymentList.ReadOnly = true;
+            this.DgvPaymentList.RowHeadersWidth = 51;
+            this.DgvPaymentList.RowTemplate.Height = 24;
+            this.DgvPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvPaymentList.Size = new System.Drawing.Size(532, 245);
+            this.DgvPaymentList.TabIndex = 10;
+            // 
             // DgvAccountReceivableList
             // 
             this.DgvAccountReceivableList.AllowUserToAddRows = false;
@@ -1038,7 +1063,7 @@
             this.DgvAccountReceivableList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvAccountReceivableList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvAccountReceivableList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAccountReceivableList.Location = new System.Drawing.Point(0, 351);
+            this.DgvAccountReceivableList.Location = new System.Drawing.Point(0, 373);
             this.DgvAccountReceivableList.Margin = new System.Windows.Forms.Padding(4);
             this.DgvAccountReceivableList.MultiSelect = false;
             this.DgvAccountReceivableList.Name = "DgvAccountReceivableList";
@@ -1046,8 +1071,9 @@
             this.DgvAccountReceivableList.RowHeadersWidth = 51;
             this.DgvAccountReceivableList.RowTemplate.Height = 24;
             this.DgvAccountReceivableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvAccountReceivableList.Size = new System.Drawing.Size(532, 267);
+            this.DgvAccountReceivableList.Size = new System.Drawing.Size(532, 245);
             this.DgvAccountReceivableList.TabIndex = 10;
+            this.DgvAccountReceivableList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAccountReceivableList_CellClick);
             // 
             // DgvItemsToBillOtherVisits
             // 
@@ -1169,6 +1195,27 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
+            // BtnDeletePayment
+            // 
+            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 300);
+            this.BtnDeletePayment.Name = "BtnDeletePayment";
+            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnDeletePayment.TabIndex = 40;
+            this.BtnDeletePayment.Text = "Eliminar abono";
+            this.BtnDeletePayment.UseVisualStyleBackColor = true;
+            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click_1);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(4, 345);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(201, 24);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "Cuentas por cobrar:";
+            // 
             // FrmVisitManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -1221,6 +1268,7 @@
             this.TabInvoice.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPaymentList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
@@ -1314,8 +1362,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label LblTotalCurrentVisit;
-        private System.Windows.Forms.Button BtnDeletePayment;
         private System.Windows.Forms.Button BtnAddPayment;
         private System.Windows.Forms.Button BtnEndInvoice;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView DgvPaymentList;
+        private System.Windows.Forms.Button BtnDeletePayment;
+        private System.Windows.Forms.Label label18;
     }
 }

@@ -11,6 +11,7 @@ using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
+using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.InvoiceDetail;
 
@@ -24,11 +25,12 @@ namespace DentalSystem.VisitManagement
         private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IPatientService _patientService;
         private readonly IVisitService _visitService;
+        private readonly IPaymentService _paymentService;
         private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
             IActivityPerformedService activityPerformedService, IVisitService visitService,
-            IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService)
+            IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService, IPaymentService paymentService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
@@ -36,6 +38,7 @@ namespace DentalSystem.VisitManagement
             _visitService = visitService;
             _invoiceDetailService = invoiceDetailService;
             _accountReceivableService = accountReceivableService;
+            _paymentService = paymentService;
             InitializeComponent();
         }
 
@@ -622,6 +625,12 @@ namespace DentalSystem.VisitManagement
                 NameItemsToBillGridHeader(DgvItemsToBill, DgvItemsToBillOtherVisits);
                 NameAccountReceivableGridHeader(DgvAccountReceivableList);
 
+                if (DgvAccountReceivableList.RowCount == 0) return;
+                DgvAccountReceivableList.Rows[0].Selected = true;
+
+                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                ListPaymentsByAccountReceivableId(accountReceivableId);
+
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -635,7 +644,7 @@ namespace DentalSystem.VisitManagement
         private static void NameItemsToBillGridHeader(DataGridView dgv, DataGridView dgvOtherVisits)
         {
             if (dgv == null) return;
-            dgv.ReadOnly = false;
+            dgv.ReadOnly = GenericProperties.VisitHasBeenBilled;
             dgv.Columns["InvoiceDetailId"].Visible = false;
             dgv.Columns["ActivityPerformed"].HeaderText = "Actividad";
             dgv.Columns["Section"].HeaderText = "Sección";
@@ -748,7 +757,7 @@ namespace DentalSystem.VisitManagement
         {
             try
             {
-                if (DgvItemsToBill.RowCount==0)
+                if (DgvItemsToBill.RowCount == 0)
                 {
                     MessageBox.Show(
                         "No hay actividades que facturar. Agregue las actividades en la ventana de Actividades Realizadas",
@@ -796,6 +805,12 @@ namespace DentalSystem.VisitManagement
 
                 ListReceivableByPatientId();
 
+                if (DgvAccountReceivableList.RowCount == 0) return;
+                DgvAccountReceivableList.Rows[0].Selected = true;
+
+                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                ListPaymentsByAccountReceivableId(accountReceivableId);
+
                 DgvItemsToBill.ReadOnly = true;
                 GenericProperties.VisitHasBeenBilled = true;
 
@@ -811,10 +826,195 @@ namespace DentalSystem.VisitManagement
 
         private void BtnDeletePayment_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var id = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["PaymentId"].Value);
+
+                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result != DialogResult.Yes) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
+
+                var updateTotalPaidRequest = new UpdateTotalPaidRequest
+                {
+                    AccountsReceivableId = accountReceivableId,
+                    TotalPaid = totalPaid - paymentTotalPaid
+                };
+
+                var deletePatientRequest = new DeletePaymentRequest
+                {
+                    DeletedOn = DateTime.Now,
+                    Mapper = _iMapper,
+                    PaymentId = id,
+                    UpdateTotalPaidRequest = updateTotalPaidRequest
+                };
+
+                _paymentService.DeletePayment(deletePatientRequest);
+
+                var rowIndex = DgvAccountReceivableList.SelectedRows[0].Index;
+                ListReceivableByPatientId();
+
+                DgvAccountReceivableList.Rows[rowIndex].Selected = true;
+
+                ListPaymentsByAccountReceivableId(accountReceivableId);
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void BtnAddPayment_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var totalPending = DgvAccountReceivableList.SelectedRows[0].Cells["TotalPending"].Value.ToString();
+
+                if (Convert.ToInt32(totalPending)==0)
+                {
+                    MessageBox.Show("Esta cuenta no tiene saldo pendiente", "Información", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+              
+                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+
+                Cursor.Current = Cursors.Default;
+
+                var frm = new FrmAddPayment(_paymentService, _iMapper)
+                {
+                    AccountsReceivableId = accountReceivableId,
+                    TotalPaid = totalPaid,
+                    TotalPending = totalPending,
+                    DialogResult = DialogResult.None
+                };
+                frm.ShowDialog();
+
+                var rowIndex = DgvAccountReceivableList.SelectedRows[0].Index;
+
+                ListReceivableByPatientId();
+
+                DgvAccountReceivableList.Rows[rowIndex].Selected = true;
+
+                ListPaymentsByAccountReceivableId(accountReceivableId);
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void ListPaymentsByAccountReceivableId(int accountReceivableId)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var getPaymentsByAccountReceivableIdRequest = new GetPaymentsByAccountReceivableIdRequest
+                {
+                    Mapper = _iMapper,
+                    AccountsReceivableId = accountReceivableId
+                };
+
+                var payments =
+                    _paymentService.GetPaymentsByAccountReceivableId(getPaymentsByAccountReceivableIdRequest);
+                DgvPaymentList.DataSource = payments.PaymentList;
+
+                NamePaymentGridHeader(DgvPaymentList);
+
+                BtnDeletePayment.Enabled = false;
+                if (DgvPaymentList.RowCount == 0) return;
+                BtnDeletePayment.Enabled = true;
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private static void NamePaymentGridHeader(DataGridView dgv)
+        {
+            if (dgv == null) return;
+
+            dgv.Columns["PaymentId"].Visible = false;
+            dgv.Columns["AmountPaid"].HeaderText = "Abono";
+            dgv.Columns["PaymentDate"].HeaderText = "Fecha";
+        }
+
+        private void DgvAccountReceivableList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+            ListPaymentsByAccountReceivableId(accountReceivableId);
+        }
+
+        private void BtnDeletePayment_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                var id = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["PaymentId"].Value);
+
+                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result != DialogResult.Yes) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
+
+                var updateTotalPaidRequest = new UpdateTotalPaidRequest
+                {
+                    AccountsReceivableId = accountReceivableId,
+                    TotalPaid = totalPaid - paymentTotalPaid
+                };
+
+                var deletePatientRequest = new DeletePaymentRequest
+                {
+                    DeletedOn = DateTime.Now,
+                    Mapper = _iMapper,
+                    PaymentId = id,
+                    UpdateTotalPaidRequest = updateTotalPaidRequest
+                };
+
+                _paymentService.DeletePayment(deletePatientRequest);
+
+                var rowIndex = DgvAccountReceivableList.SelectedRows[0].Index;
+                ListReceivableByPatientId();
+
+                DgvAccountReceivableList.Rows[rowIndex].Selected = true;
+
+                ListPaymentsByAccountReceivableId(accountReceivableId);
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }

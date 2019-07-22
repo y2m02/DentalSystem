@@ -35,6 +35,9 @@ namespace DentalSystem
             container.RegisterType<IAccountReceivableService, AccountReceivableService>();
             container.RegisterType<IAccountReceivableRepository, AccountReceivableRepository>();
 
+            container.RegisterType<IPaymentService, PaymentService>();
+            container.RegisterType<IPaymentRepository, PaymentRepository>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(container.Resolve<FrmPatientList>());

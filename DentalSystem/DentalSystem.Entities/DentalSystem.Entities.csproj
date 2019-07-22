@@ -69,7 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\AccountsReceivable\AddAccountsReceivableRequest.cs" />
     <Compile Include="Requests\AccountsReceivable\GetAccountsReceivableByPatientIdRequest.cs" />
-    <Compile Include="Requests\AccountsReceivable\UpdateAccountsReceivableRequest.cs" />
+    <Compile Include="Requests\AccountsReceivable\UpdateTotalPaidRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\AddActivityPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\DeleteActivityPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\GetAllActivitiesPerformedRequest.cs" />

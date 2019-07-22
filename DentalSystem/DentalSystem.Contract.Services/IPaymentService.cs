@@ -9,6 +9,7 @@ namespace DentalSystem.Contract.Services
             GetPaymentsByAccountReceivableIdRequest request);
 
         void AddPayment(AddPaymentRequest request);
-        DeletePaymentResult DeletePayment(DeletePaymentRequest request);
+
+        void DeletePayment(DeletePaymentRequest request);
     }
 }

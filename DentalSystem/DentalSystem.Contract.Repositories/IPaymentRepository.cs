@@ -7,6 +7,6 @@ namespace DentalSystem.Contract.Repositories
     {
         List<Payment> GetPaymentsByAccountReceivableId(int accountReceivableId);
         void AddPayment(Payment payment);
-        void DeletePayment(int paymentId);
+        void DeletePayment(Payment payment);
     }
 }

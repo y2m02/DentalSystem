@@ -18,6 +18,16 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
+        public void UpdateTotalPaid(AccountsReceivable accountsReceivable)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                context.AccountsReceivables.Attach(accountsReceivable);
+                context.Entry(accountsReceivable).Property(x => x.TotalPaid).IsModified = true;
+                context.SaveChanges();
+            }
+        }
+
         public List<AccountsReceivable> GetAccountsReceivableByPatientId(int patientId)
         {
             using (var context = new DentalSystemContext())

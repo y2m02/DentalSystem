@@ -30,16 +30,12 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public void DeletePayment(int paymentId)
+        public void DeletePayment(Payment payment)
         {
             using (var context = new DentalSystemContext())
             {
-                var payment = context.Payments.FirstOrDefault(w =>
-                    w.PaymentId == paymentId && w.DeletedOn == null);
-
-                if (payment == null) return;
-
-                payment.DeletedOn = DateTime.Now;
+                context.Payments.Attach(payment);
+                context.Entry(payment).Property(x => x.DeletedOn).IsModified = true;
                 context.SaveChanges();
             }
         }

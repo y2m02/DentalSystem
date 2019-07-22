@@ -11,10 +11,12 @@ namespace DentalSystem.Services.Services
     public class PaymentService : IPaymentService
     {
         private readonly IPaymentRepository _paymentRepository;
+        private readonly IAccountReceivableRepository _accountReceivableRepository;
 
-        public PaymentService(IPaymentRepository paymentRepository)
+        public PaymentService(IPaymentRepository paymentRepository, IAccountReceivableRepository accountReceivableRepository)
         {
             _paymentRepository = paymentRepository;
+            _accountReceivableRepository = accountReceivableRepository;
         }
 
         public GetPaymentsByAccountReceivableIdResult
@@ -35,11 +37,18 @@ namespace DentalSystem.Services.Services
         {
             var payment = request.Mapper.Map<Payment>(request);
             _paymentRepository.AddPayment(payment);
+
+            var accountReceivable = request.Mapper.Map<AccountsReceivable>(request.UpdateTotalPaidRequest);
+            _accountReceivableRepository.UpdateTotalPaid(accountReceivable);
         }
 
-        public DeletePaymentResult DeletePayment(DeletePaymentRequest request)
+        public void DeletePayment(DeletePaymentRequest request)
         {
-            throw new NotImplementedException();
+            var payment = request.Mapper.Map<Payment>(request);
+            _paymentRepository.DeletePayment(payment);
+
+            var accountReceivable = request.Mapper.Map<AccountsReceivable>(request.UpdateTotalPaidRequest);
+            _accountReceivableRepository.UpdateTotalPaid(accountReceivable);
         }
     }
 }
