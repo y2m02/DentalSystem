@@ -24,13 +24,14 @@ namespace DentalSystem.VisitManagement
         private readonly IMapper _iMapper;
         private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IPatientService _patientService;
-        private readonly IVisitService _visitService;
         private readonly IPaymentService _paymentService;
+        private readonly IVisitService _visitService;
         private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
             IActivityPerformedService activityPerformedService, IVisitService visitService,
-            IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService, IPaymentService paymentService)
+            IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService,
+            IPaymentService paymentService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
@@ -54,7 +55,7 @@ namespace DentalSystem.VisitManagement
             TxtBirthDate.Text = DtpBirthDate.Value.ToString("dd/MM/yyyy");
             TxtAge.Text = NudAge.Text;
             LblPatientNameInitialOdontogram.Text = LblPatientNameTreatmentOdontogram.Text =
-                LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = PatientName;
+                LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = "Paciente: " + PatientName;
 
             SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth);
         }
@@ -93,9 +94,11 @@ namespace DentalSystem.VisitManagement
             TclVisitManagement.SelectedIndex = 4;
             ChangeButtonSelectedStatus(BtnInvoice);
             GetInvoiceLists();
-            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+            BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
+            BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0;
         }
 
         private void TclVisitManagement_Click(object sender, EventArgs e)
@@ -118,9 +121,11 @@ namespace DentalSystem.VisitManagement
                     ChangeButtonSelectedStatus(BtnInvoice);
                     GetInvoiceLists();
                     var invoiceDetailsCurrentVisit =
-                        (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+                        (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                     LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+                    BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
+                    BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0;
                     break;
             }
         }
@@ -178,7 +183,7 @@ namespace DentalSystem.VisitManagement
                     AdmissionDate = DtpAdmissionDate.Value,
                     PhoneNumber = TxtPhoneNumber.Text.Trim(),
                     Sector = TxtSector.Text.Trim(),
-                    Age = (int)NudAge.Value,
+                    Age = (int) NudAge.Value,
                     BirthDate = DtpBirthDate.Value,
                     HasInsurancePlan = RbtInsuranceYes.Checked,
                     NSS = TxtNss.Text.Trim(),
@@ -191,6 +196,11 @@ namespace DentalSystem.VisitManagement
 
                 ChangeControlsOnSaveOrCancel();
                 SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth);
+
+                LblPatientNameActivitiesPerformed.Text = "Paciente: " + TxtName.Text;
+                LblPatientNameInitialOdontogram.Text = "Paciente: " + TxtName.Text;
+                LblPatientNameTreatmentOdontogram.Text = "Paciente: " + TxtName.Text;
+                LblPatientNameInvoice.Text = "Paciente: " + TxtName.Text;
 
                 Cursor.Current = Cursors.Default;
             }
@@ -245,7 +255,7 @@ namespace DentalSystem.VisitManagement
         public void ValidateOnlyNumbers(KeyPressEventArgs e)
         {
             if (TxtIdentificationCard.ReadOnly) return;
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
 
             MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
@@ -548,9 +558,11 @@ namespace DentalSystem.VisitManagement
         {
             try
             {
-                var result = MessageBox.Show("Está a punto de finalizar esta visita. Una vez ejecute esta acción, solo podrá realizar abonos a través del módulo \"Cuentas por cobrar\"", "Información",
+                var result = MessageBox.Show(
+                    "Está a punto de finalizar esta visita. Una vez ejecute esta acción, solo podrá realizar abonos a través del módulo \"Cuentas por cobrar\"",
+                    "Información",
                     MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Information);
+                    MessageBoxIcon.Warning);
 
                 if (result != DialogResult.OK) return;
 
@@ -628,7 +640,8 @@ namespace DentalSystem.VisitManagement
                 if (DgvAccountReceivableList.RowCount == 0) return;
                 DgvAccountReceivableList.Rows[0].Selected = true;
 
-                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                var accountReceivableId =
+                    Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
                 ListPaymentsByAccountReceivableId(accountReceivableId);
 
                 Cursor.Current = Cursors.Default;
@@ -697,7 +710,7 @@ namespace DentalSystem.VisitManagement
 
                 _invoiceDetailService.UpdateInvoiceDetail(updateActivityPerformedRequest);
 
-                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
                 var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                 LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
 
@@ -778,7 +791,7 @@ namespace DentalSystem.VisitManagement
                     "Está a punto de finalizar el proceso de asignación de precios. Una vez que ejecute esta acción, solo podrá realizar abonos",
                     "Información",
                     MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Exclamation);
+                    MessageBoxIcon.Warning);
 
                 if (result != DialogResult.OK) return;
 
@@ -808,11 +821,14 @@ namespace DentalSystem.VisitManagement
                 if (DgvAccountReceivableList.RowCount == 0) return;
                 DgvAccountReceivableList.Rows[0].Selected = true;
 
-                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                var accountReceivableId =
+                    Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
                 ListPaymentsByAccountReceivableId(accountReceivableId);
 
                 DgvItemsToBill.ReadOnly = true;
                 GenericProperties.VisitHasBeenBilled = true;
+
+                BtnAddPayment.Enabled = true;
 
                 Cursor.Current = Cursors.Default;
             }
@@ -838,7 +854,8 @@ namespace DentalSystem.VisitManagement
 
                 Cursor.Current = Cursors.WaitCursor;
 
-                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                var accountReceivableId =
+                    Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
                 var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
                 var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
 
@@ -881,15 +898,16 @@ namespace DentalSystem.VisitManagement
             {
                 var totalPending = DgvAccountReceivableList.SelectedRows[0].Cells["TotalPending"].Value.ToString();
 
-                if (Convert.ToInt32(totalPending)==0)
+                if (Convert.ToInt32(totalPending) == 0)
                 {
                     MessageBox.Show("Esta cuenta no tiene saldo pendiente", "Información", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
                     return;
                 }
 
-                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
-              
+                var accountReceivableId =
+                    Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+
                 var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
 
                 Cursor.Current = Cursors.Default;
@@ -907,9 +925,19 @@ namespace DentalSystem.VisitManagement
 
                 ListReceivableByPatientId();
 
-                DgvAccountReceivableList.Rows[rowIndex].Selected = true;
+                if (DgvAccountReceivableList.RowCount == 0)
+                {
+                    DgvPaymentList.DataSource = null;
+                    BtnAddPayment.Enabled = false;
+                    BtnDeletePayment.Enabled = false;
+                    return;
+                }
 
-                ListPaymentsByAccountReceivableId(accountReceivableId);
+                if (rowIndex == DgvAccountReceivableList.RowCount) rowIndex -= 1;
+                DgvAccountReceivableList.Rows[rowIndex].Selected = true;
+                var accountId =
+                    Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                ListPaymentsByAccountReceivableId(accountId);
             }
             catch (Exception ex)
             {
@@ -962,7 +990,8 @@ namespace DentalSystem.VisitManagement
 
         private void DgvAccountReceivableList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+            var accountReceivableId =
+                Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
             ListPaymentsByAccountReceivableId(accountReceivableId);
         }
 
@@ -980,7 +1009,8 @@ namespace DentalSystem.VisitManagement
 
                 Cursor.Current = Cursors.WaitCursor;
 
-                var accountReceivableId = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
+                var accountReceivableId =
+                    Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
                 var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
                 var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
 
@@ -1002,6 +1032,12 @@ namespace DentalSystem.VisitManagement
 
                 var rowIndex = DgvAccountReceivableList.SelectedRows[0].Index;
                 ListReceivableByPatientId();
+
+                if (DgvAccountReceivableList.RowCount == 0)
+                {
+                    DgvPaymentList.DataSource = null;
+                    return;
+                }
 
                 DgvAccountReceivableList.Rows[rowIndex].Selected = true;
 

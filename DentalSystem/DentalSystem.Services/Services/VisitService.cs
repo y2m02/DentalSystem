@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using AutoMapper;
+﻿using AutoMapper;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.Visit;
-using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.Visit;
 
 namespace DentalSystem.Services.Services
@@ -34,7 +32,7 @@ namespace DentalSystem.Services.Services
         public void EndVisit(IMapper iMapper, EndVisitRequest request)
         {
             var visit = iMapper.Map<Visit>(request);
-           _visitRepository.EndVisit(visit);
+            _visitRepository.EndVisit(visit);
         }
 
         public GetVisitNumberResult GetVisitNumber(GetVisitNumberRequest request)

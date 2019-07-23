@@ -33,7 +33,8 @@ namespace DentalSystem.Repositories.Repositories
             using (var context = new DentalSystemContext())
             {
                 var accountsReceivable =
-                    context.AccountsReceivables.Include(w => w.Visit).Where(w => w.Patient.PatientId == patientId)
+                    context.AccountsReceivables.Include(w => w.Visit)
+                        .Where(w => w.Patient.PatientId == patientId && w.Total != w.TotalPaid)
                         .OrderByDescending(w => w.Visit.VisitNumber).ToList();
 
                 return accountsReceivable;
