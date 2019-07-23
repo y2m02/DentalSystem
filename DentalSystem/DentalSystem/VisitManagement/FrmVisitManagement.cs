@@ -98,7 +98,7 @@ namespace DentalSystem.VisitManagement
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
-            BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0;
+            BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
         }
 
         private void TclVisitManagement_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace DentalSystem.VisitManagement
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                     LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
-                    BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0;
+                    BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
                     break;
             }
         }

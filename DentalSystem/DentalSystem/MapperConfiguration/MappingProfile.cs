@@ -88,6 +88,11 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.CreatedDate, y => y.MapFrom(r => r.CreatedDate.ToString("dd/M/yyyy")))
                 .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.Visit.VisitNumber));
 
+            CreateMap<AccountsReceivable, GetAllAccountsReceivableByPatientIdResultModel>()
+                .ForMember(w => w.TotalPending, y => y.MapFrom(r => r.Total - r.TotalPaid))
+                .ForMember(w => w.CreatedDate, y => y.MapFrom(r => r.CreatedDate.ToString("dd/M/yyyy")))
+                .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.Visit.VisitNumber));
+
             CreateMap<Payment, GetPaymentsByAccountReceivableIdResultModel>()
                 .ForMember(w => w.PaymentDate, y => y.MapFrom(r => r.PaymentDate.ToString("dd/M/yyyy")));
 

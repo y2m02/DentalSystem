@@ -9,6 +9,19 @@ namespace DentalSystem.Repositories.Repositories
 {
     public class AccountReceivableRepository : IAccountReceivableRepository
     {
+        public List<AccountsReceivable> GetAllAccountsReceivableByPatientId(int patientId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var accountsReceivable =
+                    context.AccountsReceivables.Include(w => w.Visit)
+                        .Where(w => w.Patient.PatientId == patientId)
+                        .OrderByDescending(w => (w.Total - w.TotalPaid)).ThenByDescending(w=>w.Visit.VisitNumber).ToList();
+
+                return accountsReceivable;
+            }
+        }
+
         public void AddAccountReceivable(AccountsReceivable accountsReceivable)
         {
             using (var context = new DentalSystemContext())

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
+using DentalSystem.AccountReceivable;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
+using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.MapperConfiguration;
@@ -60,6 +63,7 @@ namespace DentalSystem.Patient
             BtnDetails.Left = btnAdd.Left + 180;
             BtnCreateVisit.Left = BtnDetails.Left + 180;
             BtnDelete.Left = BtnCreateVisit.Left + 180;
+            BtnAccountReceivable.Left = BtnDelete.Left + 180;
             BtnBackToVisit.Location = new Point(BtnCreateVisit.Location.X, BtnCreateVisit.Location.Y);
         }
 
@@ -268,6 +272,49 @@ namespace DentalSystem.Patient
         private void DgvPatientList_SelectionChanged(object sender, EventArgs e)
         {
             if (_alreadyLoaded) ValidateIfVisitFinished();
+        }
+
+        private void BtnAccountReceivable_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                var patientId = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
+                var name = DgvPatientList.SelectedRows[0].Cells["FullName"].Value.ToString();
+
+                var getAllAccountsReceivableByPatientIdRequest = new GetAllAccountsReceivableByPatientIdRequest
+                {
+                    PatientId = patientId,
+                    Mapper = _iMapper
+                };
+
+                var accountsReceivable =
+                    _accountReceivableService.GetAllAccountsReceivableByPatientId(getAllAccountsReceivableByPatientIdRequest);
+                Cursor.Current = Cursors.Default;
+
+                if (!accountsReceivable.AccountsReceivable.Any())
+                {
+                    Cursor.Current = Cursors.Default;
+                    MessageBox.Show("Este paciente aún no tiene ningún registro monetario", "Información", MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                var frm = new FrmAccountReceivableList(_accountReceivableService, _iMapper, _paymentService)
+                {
+                    PatientId = patientId,
+                    AccountReceivableList = accountsReceivable,
+                    PatientName = name,
+                    DialogResult = DialogResult.None
+                };
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }
