@@ -86,167 +86,324 @@
             this.TxtName = new System.Windows.Forms.TextBox();
             this.TabInitialOdontogram = new System.Windows.Forms.TabPage();
             this.PnlTeeth = new System.Windows.Forms.Panel();
+            this.BtnNewOdontogram = new System.Windows.Forms.Button();
+            this.BtnSaveOdontogram = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button155 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_38 = new System.Windows.Forms.Button();
             this.BtnToothBottom_28 = new System.Windows.Forms.Button();
-            this.button154 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_81 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_41 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_51 = new System.Windows.Forms.Button();
             this.BtnToothBottom_11 = new System.Windows.Forms.Button();
-            this.button153 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_74 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_34 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_64 = new System.Windows.Forms.Button();
             this.BtnToothBottom_24 = new System.Windows.Forms.Button();
-            this.button152 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_85 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_45 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_55 = new System.Windows.Forms.Button();
             this.BtnToothBottom_15 = new System.Windows.Forms.Button();
-            this.button151 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_36 = new System.Windows.Forms.Button();
             this.BtnToothBottom_26 = new System.Windows.Forms.Button();
-            this.button150 = new System.Windows.Forms.Button();
-            this.button149 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_83 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_43 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_72 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_32 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_53 = new System.Windows.Forms.Button();
             this.BtnToothBottom_13 = new System.Windows.Forms.Button();
-            this.button148 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_47 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_62 = new System.Windows.Forms.Button();
             this.BtnToothBottom_22 = new System.Windows.Forms.Button();
-            this.button147 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_37 = new System.Windows.Forms.Button();
             this.BtnToothBottom_17 = new System.Windows.Forms.Button();
-            this.button146 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_82 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_42 = new System.Windows.Forms.Button();
             this.BtnToothBottom_27 = new System.Windows.Forms.Button();
-            this.button145 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_73 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_33 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_52 = new System.Windows.Forms.Button();
             this.BtnToothBottom_12 = new System.Windows.Forms.Button();
-            this.button144 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_46 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_63 = new System.Windows.Forms.Button();
             this.BtnToothBottom_23 = new System.Windows.Forms.Button();
-            this.button143 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_75 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_35 = new System.Windows.Forms.Button();
             this.BtnToothBottom_16 = new System.Windows.Forms.Button();
-            this.button142 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_84 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_44 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_65 = new System.Windows.Forms.Button();
             this.BtnToothBottom_25 = new System.Windows.Forms.Button();
-            this.button141 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_71 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_31 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_54 = new System.Windows.Forms.Button();
             this.BtnToothBottom_14 = new System.Windows.Forms.Button();
-            this.button140 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_48 = new System.Windows.Forms.Button();
+            this.BtnToothBottom_61 = new System.Windows.Forms.Button();
             this.BtnToothBottom_21 = new System.Windows.Forms.Button();
-            this.button139 = new System.Windows.Forms.Button();
+            this.BtnToothRight_38 = new System.Windows.Forms.Button();
             this.BtnToothBottom_18 = new System.Windows.Forms.Button();
-            this.button138 = new System.Windows.Forms.Button();
+            this.BtnToothRight_81 = new System.Windows.Forms.Button();
+            this.BtnToothRight_41 = new System.Windows.Forms.Button();
             this.BtnToothRight_28 = new System.Windows.Forms.Button();
-            this.button137 = new System.Windows.Forms.Button();
+            this.BtnToothRight_74 = new System.Windows.Forms.Button();
+            this.BtnToothRight_34 = new System.Windows.Forms.Button();
+            this.BtnToothRight_51 = new System.Windows.Forms.Button();
             this.BtnToothRight_11 = new System.Windows.Forms.Button();
-            this.button136 = new System.Windows.Forms.Button();
+            this.BtnToothRight_85 = new System.Windows.Forms.Button();
+            this.BtnToothRight_45 = new System.Windows.Forms.Button();
+            this.BtnToothRight_64 = new System.Windows.Forms.Button();
             this.BtnToothRight_24 = new System.Windows.Forms.Button();
-            this.button135 = new System.Windows.Forms.Button();
+            this.BtnToothRight_36 = new System.Windows.Forms.Button();
+            this.BtnToothRight_55 = new System.Windows.Forms.Button();
             this.BtnToothRight_15 = new System.Windows.Forms.Button();
-            this.button134 = new System.Windows.Forms.Button();
+            this.BtnToothRight_83 = new System.Windows.Forms.Button();
+            this.BtnToothRight_43 = new System.Windows.Forms.Button();
             this.BtnToothRight_26 = new System.Windows.Forms.Button();
-            this.button133 = new System.Windows.Forms.Button();
+            this.BtnToothRight_72 = new System.Windows.Forms.Button();
+            this.BtnToothRight_32 = new System.Windows.Forms.Button();
+            this.BtnToothRight_53 = new System.Windows.Forms.Button();
             this.BtnToothRight_13 = new System.Windows.Forms.Button();
-            this.button132 = new System.Windows.Forms.Button();
+            this.BtnToothRight_47 = new System.Windows.Forms.Button();
+            this.BtnToothRight_62 = new System.Windows.Forms.Button();
             this.BtnToothRight_22 = new System.Windows.Forms.Button();
-            this.button131 = new System.Windows.Forms.Button();
+            this.BtnToothRight_37 = new System.Windows.Forms.Button();
             this.BtnToothRight_17 = new System.Windows.Forms.Button();
-            this.button130 = new System.Windows.Forms.Button();
+            this.BtnToothRight_82 = new System.Windows.Forms.Button();
+            this.BtnToothRight_42 = new System.Windows.Forms.Button();
             this.BtnToothRight_27 = new System.Windows.Forms.Button();
-            this.button129 = new System.Windows.Forms.Button();
+            this.BtnToothRight_73 = new System.Windows.Forms.Button();
+            this.BtnToothRight_33 = new System.Windows.Forms.Button();
+            this.BtnToothRight_52 = new System.Windows.Forms.Button();
             this.BtnToothRight_12 = new System.Windows.Forms.Button();
-            this.button128 = new System.Windows.Forms.Button();
+            this.BtnToothRight_46 = new System.Windows.Forms.Button();
+            this.BtnToothRight_63 = new System.Windows.Forms.Button();
             this.BtnToothRight_23 = new System.Windows.Forms.Button();
-            this.button127 = new System.Windows.Forms.Button();
+            this.BtnToothRight_75 = new System.Windows.Forms.Button();
+            this.BtnToothRight_35 = new System.Windows.Forms.Button();
             this.BtnToothRight_16 = new System.Windows.Forms.Button();
-            this.button126 = new System.Windows.Forms.Button();
+            this.BtnToothRight_84 = new System.Windows.Forms.Button();
+            this.BtnToothRight_65 = new System.Windows.Forms.Button();
+            this.BtnToothRight_44 = new System.Windows.Forms.Button();
             this.BtnToothRight_25 = new System.Windows.Forms.Button();
-            this.button125 = new System.Windows.Forms.Button();
+            this.BtnToothRight_71 = new System.Windows.Forms.Button();
+            this.BtnToothRight_31 = new System.Windows.Forms.Button();
+            this.BtnToothRight_54 = new System.Windows.Forms.Button();
             this.BtnToothRight_14 = new System.Windows.Forms.Button();
-            this.button124 = new System.Windows.Forms.Button();
+            this.BtnToothRight_48 = new System.Windows.Forms.Button();
+            this.BtnToothRight_61 = new System.Windows.Forms.Button();
             this.BtnToothRight_21 = new System.Windows.Forms.Button();
             this.BtnToothCenter_38 = new System.Windows.Forms.Button();
             this.BtnToothRight_18 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_81 = new System.Windows.Forms.Button();
             this.BtnToothCenter_41 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_74 = new System.Windows.Forms.Button();
             this.BtnToothCenter_28 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_51 = new System.Windows.Forms.Button();
             this.BtnToothCenter_34 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_85 = new System.Windows.Forms.Button();
             this.BtnToothCenter_11 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_64 = new System.Windows.Forms.Button();
             this.BtnToothCenter_45 = new System.Windows.Forms.Button();
             this.BtnToothCenter_24 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_55 = new System.Windows.Forms.Button();
             this.BtnToothCenter_36 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_83 = new System.Windows.Forms.Button();
             this.BtnToothCenter_15 = new System.Windows.Forms.Button();
             this.BtnToothCenter_43 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_72 = new System.Windows.Forms.Button();
             this.BtnToothCenter_26 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_53 = new System.Windows.Forms.Button();
             this.BtnToothCenter_32 = new System.Windows.Forms.Button();
             this.BtnToothCenter_13 = new System.Windows.Forms.Button();
-            this.button116 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_62 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_38 = new System.Windows.Forms.Button();
             this.BtnToothCenter_22 = new System.Windows.Forms.Button();
             this.BtnToothCenter_47 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_74 = new System.Windows.Forms.Button();
             this.BtnToothLeft_28 = new System.Windows.Forms.Button();
-            this.button114 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_34 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_81 = new System.Windows.Forms.Button();
             this.BtnToothCenter_17 = new System.Windows.Forms.Button();
-            this.button113 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_64 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_41 = new System.Windows.Forms.Button();
             this.BtnToothLeft_24 = new System.Windows.Forms.Button();
-            this.button112 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_51 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_36 = new System.Windows.Forms.Button();
             this.BtnToothLeft_11 = new System.Windows.Forms.Button();
-            this.button111 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_85 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_45 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_72 = new System.Windows.Forms.Button();
             this.BtnToothLeft_26 = new System.Windows.Forms.Button();
-            this.button110 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_32 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_55 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_83 = new System.Windows.Forms.Button();
             this.BtnToothLeft_15 = new System.Windows.Forms.Button();
-            this.button109 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_62 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_43 = new System.Windows.Forms.Button();
             this.BtnToothLeft_22 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_53 = new System.Windows.Forms.Button();
             this.BtnToothCenter_37 = new System.Windows.Forms.Button();
             this.BtnToothLeft_13 = new System.Windows.Forms.Button();
-            this.button107 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_47 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_73 = new System.Windows.Forms.Button();
             this.BtnToothCenter_27 = new System.Windows.Forms.Button();
             this.BtnToothCenter_33 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_82 = new System.Windows.Forms.Button();
             this.BtnToothLeft_17 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_63 = new System.Windows.Forms.Button();
             this.BtnToothCenter_42 = new System.Windows.Forms.Button();
             this.BtnToothCenter_23 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_52 = new System.Windows.Forms.Button();
             this.BtnToothTop_38 = new System.Windows.Forms.Button();
             this.BtnToothCenter_12 = new System.Windows.Forms.Button();
             this.BtnToothCenter_46 = new System.Windows.Forms.Button();
+            this.BtnToothTop_74 = new System.Windows.Forms.Button();
             this.BtnToothTop_28 = new System.Windows.Forms.Button();
             this.BtnToothTop_34 = new System.Windows.Forms.Button();
+            this.BtnToothTop_81 = new System.Windows.Forms.Button();
             this.BtnToothCenter_16 = new System.Windows.Forms.Button();
+            this.BtnToothTop_64 = new System.Windows.Forms.Button();
             this.BtnToothTop_41 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_75 = new System.Windows.Forms.Button();
             this.BtnToothTop_24 = new System.Windows.Forms.Button();
+            this.BtnToothTop_51 = new System.Windows.Forms.Button();
             this.BtnToothCenter_35 = new System.Windows.Forms.Button();
+            this.BtnToothTop_85 = new System.Windows.Forms.Button();
             this.BtnToothTop_11 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_65 = new System.Windows.Forms.Button();
             this.BtnToothTop_45 = new System.Windows.Forms.Button();
             this.BtnToothCenter_25 = new System.Windows.Forms.Button();
-            this.button98 = new System.Windows.Forms.Button();
+            this.BtnToothTop_55 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_37 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_84 = new System.Windows.Forms.Button();
             this.BtnToothTop_15 = new System.Windows.Forms.Button();
             this.BtnToothCenter_44 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_71 = new System.Windows.Forms.Button();
             this.BtnToothLeft_27 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_54 = new System.Windows.Forms.Button();
             this.BtnToothCenter_31 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_82 = new System.Windows.Forms.Button();
             this.BtnToothCenter_14 = new System.Windows.Forms.Button();
-            this.button95 = new System.Windows.Forms.Button();
+            this.BtnToothCenter_61 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_42 = new System.Windows.Forms.Button();
             this.BtnToothCenter_21 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_52 = new System.Windows.Forms.Button();
             this.BtnToothTop_36 = new System.Windows.Forms.Button();
             this.BtnToothLeft_12 = new System.Windows.Forms.Button();
             this.BtnToothCenter_48 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_73 = new System.Windows.Forms.Button();
             this.BtnToothTop_26 = new System.Windows.Forms.Button();
-            this.button92 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_33 = new System.Windows.Forms.Button();
+            this.BtnToothTop_83 = new System.Windows.Forms.Button();
             this.BtnToothCenter_18 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_63 = new System.Windows.Forms.Button();
             this.BtnToothTop_43 = new System.Windows.Forms.Button();
             this.BtnToothLeft_23 = new System.Windows.Forms.Button();
+            this.BtnToothTop_53 = new System.Windows.Forms.Button();
             this.BtnToothTop_37 = new System.Windows.Forms.Button();
             this.BtnToothTop_13 = new System.Windows.Forms.Button();
-            this.button89 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_46 = new System.Windows.Forms.Button();
+            this.BtnToothTop_72 = new System.Windows.Forms.Button();
             this.BtnToothTop_27 = new System.Windows.Forms.Button();
             this.BtnToothTop_32 = new System.Windows.Forms.Button();
+            this.BtnToothTop_82 = new System.Windows.Forms.Button();
             this.BtnToothLeft_16 = new System.Windows.Forms.Button();
+            this.BtnToothTop_62 = new System.Windows.Forms.Button();
             this.BtnToothTop_42 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_75 = new System.Windows.Forms.Button();
             this.BtnToothTop_22 = new System.Windows.Forms.Button();
-            this.button86 = new System.Windows.Forms.Button();
+            this.BtnToothTop_52 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_35 = new System.Windows.Forms.Button();
             this.BtnToothTop_12 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_65 = new System.Windows.Forms.Button();
             this.BtnToothTop_47 = new System.Windows.Forms.Button();
+            this.BtnToothTop_73 = new System.Windows.Forms.Button();
             this.BtnToothLeft_25 = new System.Windows.Forms.Button();
             this.BtnToothTop_33 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_84 = new System.Windows.Forms.Button();
             this.BtnToothTop_17 = new System.Windows.Forms.Button();
-            this.button83 = new System.Windows.Forms.Button();
+            this.BtnToothTop_63 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_44 = new System.Windows.Forms.Button();
+            this.BtnToothTop_75 = new System.Windows.Forms.Button();
             this.BtnToothTop_23 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_54 = new System.Windows.Forms.Button();
             this.BtnToothTop_35 = new System.Windows.Forms.Button();
             this.BtnToothLeft_14 = new System.Windows.Forms.Button();
+            this.BtnToothTop_65 = new System.Windows.Forms.Button();
             this.BtnToothTop_46 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_71 = new System.Windows.Forms.Button();
             this.BtnToothTop_25 = new System.Windows.Forms.Button();
-            this.button80 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_31 = new System.Windows.Forms.Button();
+            this.BtnToothTop_84 = new System.Windows.Forms.Button();
             this.BtnToothTop_16 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_61 = new System.Windows.Forms.Button();
             this.BtnToothTop_44 = new System.Windows.Forms.Button();
+            this.BtnToothTop_71 = new System.Windows.Forms.Button();
             this.BtnToothLeft_21 = new System.Windows.Forms.Button();
+            this.BtnToothTop_54 = new System.Windows.Forms.Button();
             this.BtnToothTop_31 = new System.Windows.Forms.Button();
             this.BtnToothTop_14 = new System.Windows.Forms.Button();
-            this.button77 = new System.Windows.Forms.Button();
+            this.BtnToothTop_61 = new System.Windows.Forms.Button();
+            this.BtnToothLeft_48 = new System.Windows.Forms.Button();
             this.BtnToothTop_21 = new System.Windows.Forms.Button();
             this.BtnToothTop_48 = new System.Windows.Forms.Button();
             this.BtnToothLeft_18 = new System.Windows.Forms.Button();
             this.BtnToothTop_18 = new System.Windows.Forms.Button();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.LblPatientNameInitialOdontogram = new System.Windows.Forms.Label();
             this.TabTreatmentOdontogram = new System.Windows.Forms.TabPage();
             this.LblPatientNameTreatmentOdontogram = new System.Windows.Forms.Label();
@@ -305,163 +462,7 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button156 = new System.Windows.Forms.Button();
-            this.button157 = new System.Windows.Forms.Button();
-            this.button158 = new System.Windows.Forms.Button();
-            this.button159 = new System.Windows.Forms.Button();
-            this.button160 = new System.Windows.Forms.Button();
-            this.button161 = new System.Windows.Forms.Button();
-            this.button162 = new System.Windows.Forms.Button();
-            this.button163 = new System.Windows.Forms.Button();
-            this.button164 = new System.Windows.Forms.Button();
-            this.button165 = new System.Windows.Forms.Button();
-            this.button166 = new System.Windows.Forms.Button();
-            this.button167 = new System.Windows.Forms.Button();
-            this.button168 = new System.Windows.Forms.Button();
-            this.button169 = new System.Windows.Forms.Button();
-            this.button170 = new System.Windows.Forms.Button();
-            this.button171 = new System.Windows.Forms.Button();
-            this.button172 = new System.Windows.Forms.Button();
-            this.button173 = new System.Windows.Forms.Button();
-            this.button174 = new System.Windows.Forms.Button();
-            this.button175 = new System.Windows.Forms.Button();
-            this.button176 = new System.Windows.Forms.Button();
-            this.button177 = new System.Windows.Forms.Button();
-            this.button178 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_61 = new System.Windows.Forms.Button();
-            this.button180 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_54 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_71 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_84 = new System.Windows.Forms.Button();
-            this.button184 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_65 = new System.Windows.Forms.Button();
-            this.button186 = new System.Windows.Forms.Button();
-            this.button187 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_75 = new System.Windows.Forms.Button();
-            this.button189 = new System.Windows.Forms.Button();
-            this.button190 = new System.Windows.Forms.Button();
-            this.button191 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_52 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_63 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_82 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_73 = new System.Windows.Forms.Button();
-            this.button196 = new System.Windows.Forms.Button();
-            this.button197 = new System.Windows.Forms.Button();
-            this.button198 = new System.Windows.Forms.Button();
-            this.button199 = new System.Windows.Forms.Button();
-            this.button200 = new System.Windows.Forms.Button();
-            this.button201 = new System.Windows.Forms.Button();
-            this.button202 = new System.Windows.Forms.Button();
-            this.button203 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_62 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_53 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_72 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_83 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_55 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_64 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_85 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_51 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_74 = new System.Windows.Forms.Button();
-            this.BtnToothCenter_81 = new System.Windows.Forms.Button();
-            this.button214 = new System.Windows.Forms.Button();
-            this.button215 = new System.Windows.Forms.Button();
-            this.button216 = new System.Windows.Forms.Button();
-            this.button217 = new System.Windows.Forms.Button();
-            this.button218 = new System.Windows.Forms.Button();
-            this.button219 = new System.Windows.Forms.Button();
-            this.button220 = new System.Windows.Forms.Button();
-            this.button221 = new System.Windows.Forms.Button();
-            this.button222 = new System.Windows.Forms.Button();
-            this.button223 = new System.Windows.Forms.Button();
-            this.button224 = new System.Windows.Forms.Button();
-            this.button225 = new System.Windows.Forms.Button();
-            this.button226 = new System.Windows.Forms.Button();
-            this.button227 = new System.Windows.Forms.Button();
-            this.button228 = new System.Windows.Forms.Button();
-            this.button229 = new System.Windows.Forms.Button();
-            this.button230 = new System.Windows.Forms.Button();
-            this.button231 = new System.Windows.Forms.Button();
-            this.button232 = new System.Windows.Forms.Button();
-            this.button233 = new System.Windows.Forms.Button();
-            this.button234 = new System.Windows.Forms.Button();
-            this.button235 = new System.Windows.Forms.Button();
-            this.button236 = new System.Windows.Forms.Button();
-            this.button237 = new System.Windows.Forms.Button();
-            this.button238 = new System.Windows.Forms.Button();
-            this.button239 = new System.Windows.Forms.Button();
-            this.button240 = new System.Windows.Forms.Button();
-            this.button241 = new System.Windows.Forms.Button();
-            this.button242 = new System.Windows.Forms.Button();
-            this.button243 = new System.Windows.Forms.Button();
-            this.button244 = new System.Windows.Forms.Button();
-            this.button245 = new System.Windows.Forms.Button();
-            this.button246 = new System.Windows.Forms.Button();
-            this.button247 = new System.Windows.Forms.Button();
-            this.button248 = new System.Windows.Forms.Button();
-            this.button249 = new System.Windows.Forms.Button();
-            this.button250 = new System.Windows.Forms.Button();
-            this.button251 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button252 = new System.Windows.Forms.Button();
-            this.button253 = new System.Windows.Forms.Button();
-            this.button254 = new System.Windows.Forms.Button();
-            this.button255 = new System.Windows.Forms.Button();
-            this.BtnSaveOdontogram = new System.Windows.Forms.Button();
-            this.BtnNewOdontogram = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -484,6 +485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -1145,114 +1147,113 @@
             // 
             // PnlTeeth
             // 
-            this.PnlTeeth.Controls.Add(this.BtnNewOdontogram);
-            this.PnlTeeth.Controls.Add(this.BtnSaveOdontogram);
+            this.PnlTeeth.Controls.Add(this.panel6);
             this.PnlTeeth.Controls.Add(this.panel5);
             this.PnlTeeth.Controls.Add(this.panel4);
             this.PnlTeeth.Controls.Add(this.panel3);
             this.PnlTeeth.Controls.Add(this.panel2);
-            this.PnlTeeth.Controls.Add(this.button155);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_38);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_28);
-            this.PnlTeeth.Controls.Add(this.button251);
-            this.PnlTeeth.Controls.Add(this.button154);
-            this.PnlTeeth.Controls.Add(this.button250);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_81);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_41);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_51);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_11);
-            this.PnlTeeth.Controls.Add(this.button249);
-            this.PnlTeeth.Controls.Add(this.button153);
-            this.PnlTeeth.Controls.Add(this.button248);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_74);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_34);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_64);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_24);
-            this.PnlTeeth.Controls.Add(this.button247);
-            this.PnlTeeth.Controls.Add(this.button152);
-            this.PnlTeeth.Controls.Add(this.button246);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_85);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_45);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_55);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_15);
-            this.PnlTeeth.Controls.Add(this.button151);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_36);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_26);
-            this.PnlTeeth.Controls.Add(this.button245);
-            this.PnlTeeth.Controls.Add(this.button150);
-            this.PnlTeeth.Controls.Add(this.button244);
-            this.PnlTeeth.Controls.Add(this.button149);
-            this.PnlTeeth.Controls.Add(this.button243);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_83);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_43);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_72);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_32);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_53);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_13);
-            this.PnlTeeth.Controls.Add(this.button148);
-            this.PnlTeeth.Controls.Add(this.button242);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_47);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_62);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_22);
-            this.PnlTeeth.Controls.Add(this.button147);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_37);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_17);
-            this.PnlTeeth.Controls.Add(this.button241);
-            this.PnlTeeth.Controls.Add(this.button146);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_82);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_42);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_27);
-            this.PnlTeeth.Controls.Add(this.button240);
-            this.PnlTeeth.Controls.Add(this.button145);
-            this.PnlTeeth.Controls.Add(this.button239);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_73);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_33);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_52);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_12);
-            this.PnlTeeth.Controls.Add(this.button144);
-            this.PnlTeeth.Controls.Add(this.button238);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_46);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_63);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_23);
-            this.PnlTeeth.Controls.Add(this.button237);
-            this.PnlTeeth.Controls.Add(this.button143);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_75);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_35);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_16);
-            this.PnlTeeth.Controls.Add(this.button236);
-            this.PnlTeeth.Controls.Add(this.button142);
-            this.PnlTeeth.Controls.Add(this.button235);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_84);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_44);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_65);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_25);
-            this.PnlTeeth.Controls.Add(this.button234);
-            this.PnlTeeth.Controls.Add(this.button141);
-            this.PnlTeeth.Controls.Add(this.button233);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_71);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_31);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_54);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_14);
-            this.PnlTeeth.Controls.Add(this.button140);
-            this.PnlTeeth.Controls.Add(this.button232);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_48);
+            this.PnlTeeth.Controls.Add(this.BtnToothBottom_61);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_21);
-            this.PnlTeeth.Controls.Add(this.button139);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_38);
             this.PnlTeeth.Controls.Add(this.BtnToothBottom_18);
-            this.PnlTeeth.Controls.Add(this.button231);
-            this.PnlTeeth.Controls.Add(this.button138);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_81);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_41);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_28);
-            this.PnlTeeth.Controls.Add(this.button230);
-            this.PnlTeeth.Controls.Add(this.button137);
-            this.PnlTeeth.Controls.Add(this.button229);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_74);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_34);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_51);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_11);
-            this.PnlTeeth.Controls.Add(this.button228);
-            this.PnlTeeth.Controls.Add(this.button136);
-            this.PnlTeeth.Controls.Add(this.button227);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_85);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_45);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_64);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_24);
-            this.PnlTeeth.Controls.Add(this.button135);
-            this.PnlTeeth.Controls.Add(this.button226);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_36);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_55);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_15);
-            this.PnlTeeth.Controls.Add(this.button225);
-            this.PnlTeeth.Controls.Add(this.button134);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_83);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_43);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_26);
-            this.PnlTeeth.Controls.Add(this.button224);
-            this.PnlTeeth.Controls.Add(this.button133);
-            this.PnlTeeth.Controls.Add(this.button223);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_72);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_32);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_53);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_13);
-            this.PnlTeeth.Controls.Add(this.button132);
-            this.PnlTeeth.Controls.Add(this.button222);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_47);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_62);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_22);
-            this.PnlTeeth.Controls.Add(this.button131);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_37);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_17);
-            this.PnlTeeth.Controls.Add(this.button221);
-            this.PnlTeeth.Controls.Add(this.button130);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_82);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_42);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_27);
-            this.PnlTeeth.Controls.Add(this.button220);
-            this.PnlTeeth.Controls.Add(this.button129);
-            this.PnlTeeth.Controls.Add(this.button219);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_73);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_33);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_52);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_12);
-            this.PnlTeeth.Controls.Add(this.button128);
-            this.PnlTeeth.Controls.Add(this.button218);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_46);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_63);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_23);
-            this.PnlTeeth.Controls.Add(this.button253);
-            this.PnlTeeth.Controls.Add(this.button127);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_75);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_35);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_16);
-            this.PnlTeeth.Controls.Add(this.button217);
-            this.PnlTeeth.Controls.Add(this.button252);
-            this.PnlTeeth.Controls.Add(this.button126);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_84);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_65);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_44);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_25);
-            this.PnlTeeth.Controls.Add(this.button216);
-            this.PnlTeeth.Controls.Add(this.button125);
-            this.PnlTeeth.Controls.Add(this.button215);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_71);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_31);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_54);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_14);
-            this.PnlTeeth.Controls.Add(this.button124);
-            this.PnlTeeth.Controls.Add(this.button214);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_48);
+            this.PnlTeeth.Controls.Add(this.BtnToothRight_61);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_21);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_38);
             this.PnlTeeth.Controls.Add(this.BtnToothRight_18);
@@ -1278,35 +1279,35 @@
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_32);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_13);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_62);
-            this.PnlTeeth.Controls.Add(this.button116);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_38);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_22);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_47);
-            this.PnlTeeth.Controls.Add(this.button203);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_74);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_28);
-            this.PnlTeeth.Controls.Add(this.button114);
-            this.PnlTeeth.Controls.Add(this.button202);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_34);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_81);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_17);
-            this.PnlTeeth.Controls.Add(this.button201);
-            this.PnlTeeth.Controls.Add(this.button113);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_64);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_41);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_24);
-            this.PnlTeeth.Controls.Add(this.button200);
-            this.PnlTeeth.Controls.Add(this.button112);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_51);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_36);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_11);
-            this.PnlTeeth.Controls.Add(this.button255);
-            this.PnlTeeth.Controls.Add(this.button111);
-            this.PnlTeeth.Controls.Add(this.button199);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_85);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_45);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_72);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_26);
-            this.PnlTeeth.Controls.Add(this.button110);
-            this.PnlTeeth.Controls.Add(this.button254);
-            this.PnlTeeth.Controls.Add(this.button198);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_32);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_55);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_83);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_15);
-            this.PnlTeeth.Controls.Add(this.button197);
-            this.PnlTeeth.Controls.Add(this.button109);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_62);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_43);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_22);
-            this.PnlTeeth.Controls.Add(this.button196);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_53);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_37);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_13);
-            this.PnlTeeth.Controls.Add(this.button107);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_47);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_73);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_27);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_33);
@@ -1319,24 +1320,24 @@
             this.PnlTeeth.Controls.Add(this.BtnToothTop_38);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_12);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_46);
-            this.PnlTeeth.Controls.Add(this.button191);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_74);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_28);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_34);
-            this.PnlTeeth.Controls.Add(this.button190);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_81);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_16);
-            this.PnlTeeth.Controls.Add(this.button189);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_64);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_41);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_75);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_24);
-            this.PnlTeeth.Controls.Add(this.button187);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_51);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_35);
-            this.PnlTeeth.Controls.Add(this.button186);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_85);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_11);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_65);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_45);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_25);
-            this.PnlTeeth.Controls.Add(this.button184);
-            this.PnlTeeth.Controls.Add(this.button98);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_55);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_37);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_84);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_15);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_44);
@@ -1344,69 +1345,69 @@
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_27);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_54);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_31);
-            this.PnlTeeth.Controls.Add(this.button180);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_82);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_14);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_61);
-            this.PnlTeeth.Controls.Add(this.button95);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_42);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_21);
-            this.PnlTeeth.Controls.Add(this.button178);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_52);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_36);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_12);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_48);
-            this.PnlTeeth.Controls.Add(this.button177);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_73);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_26);
-            this.PnlTeeth.Controls.Add(this.button92);
-            this.PnlTeeth.Controls.Add(this.button176);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_33);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_83);
             this.PnlTeeth.Controls.Add(this.BtnToothCenter_18);
-            this.PnlTeeth.Controls.Add(this.button175);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_63);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_43);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_23);
-            this.PnlTeeth.Controls.Add(this.button174);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_53);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_37);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_13);
-            this.PnlTeeth.Controls.Add(this.button89);
-            this.PnlTeeth.Controls.Add(this.button173);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_46);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_72);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_27);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_32);
-            this.PnlTeeth.Controls.Add(this.button172);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_82);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_16);
-            this.PnlTeeth.Controls.Add(this.button171);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_62);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_42);
-            this.PnlTeeth.Controls.Add(this.button170);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_75);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_22);
-            this.PnlTeeth.Controls.Add(this.button169);
-            this.PnlTeeth.Controls.Add(this.button86);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_52);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_35);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_12);
-            this.PnlTeeth.Controls.Add(this.button168);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_65);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_47);
-            this.PnlTeeth.Controls.Add(this.button167);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_73);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_25);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_33);
-            this.PnlTeeth.Controls.Add(this.button166);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_84);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_17);
-            this.PnlTeeth.Controls.Add(this.button165);
-            this.PnlTeeth.Controls.Add(this.button83);
-            this.PnlTeeth.Controls.Add(this.button164);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_63);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_44);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_75);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_23);
-            this.PnlTeeth.Controls.Add(this.button163);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_54);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_35);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_14);
-            this.PnlTeeth.Controls.Add(this.button162);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_65);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_46);
-            this.PnlTeeth.Controls.Add(this.button161);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_71);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_25);
-            this.PnlTeeth.Controls.Add(this.button80);
-            this.PnlTeeth.Controls.Add(this.button160);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_31);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_84);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_16);
-            this.PnlTeeth.Controls.Add(this.button159);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_61);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_44);
-            this.PnlTeeth.Controls.Add(this.button158);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_71);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_21);
-            this.PnlTeeth.Controls.Add(this.button157);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_54);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_31);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_14);
-            this.PnlTeeth.Controls.Add(this.button156);
-            this.PnlTeeth.Controls.Add(this.button77);
+            this.PnlTeeth.Controls.Add(this.BtnToothTop_61);
+            this.PnlTeeth.Controls.Add(this.BtnToothLeft_48);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_21);
             this.PnlTeeth.Controls.Add(this.BtnToothTop_48);
             this.PnlTeeth.Controls.Add(this.BtnToothLeft_18);
@@ -1468,6 +1469,50 @@
             this.PnlTeeth.Size = new System.Drawing.Size(1096, 606);
             this.PnlTeeth.TabIndex = 27;
             // 
+            // BtnNewOdontogram
+            // 
+            this.BtnNewOdontogram.Location = new System.Drawing.Point(4, 3);
+            this.BtnNewOdontogram.Name = "BtnNewOdontogram";
+            this.BtnNewOdontogram.Size = new System.Drawing.Size(126, 40);
+            this.BtnNewOdontogram.TabIndex = 36;
+            this.BtnNewOdontogram.Text = "Nuevo";
+            this.BtnNewOdontogram.UseVisualStyleBackColor = true;
+            this.BtnNewOdontogram.Visible = false;
+            // 
+            // BtnSaveOdontogram
+            // 
+            this.BtnSaveOdontogram.Location = new System.Drawing.Point(135, 3);
+            this.BtnSaveOdontogram.Name = "BtnSaveOdontogram";
+            this.BtnSaveOdontogram.Size = new System.Drawing.Size(126, 40);
+            this.BtnSaveOdontogram.TabIndex = 36;
+            this.BtnSaveOdontogram.Text = "Guardar";
+            this.BtnSaveOdontogram.UseVisualStyleBackColor = true;
+            this.BtnSaveOdontogram.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Location = new System.Drawing.Point(547, 334);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(2, 168);
+            this.panel5.TabIndex = 11;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Location = new System.Drawing.Point(547, 96);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(2, 168);
+            this.panel4.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Location = new System.Drawing.Point(195, 418);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(706, 2);
+            this.panel3.TabIndex = 11;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1476,13 +1521,13 @@
             this.panel2.Size = new System.Drawing.Size(1085, 2);
             this.panel2.TabIndex = 11;
             // 
-            // button155
+            // BtnToothBottom_38
             // 
-            this.button155.Location = new System.Drawing.Point(1046, 246);
-            this.button155.Name = "button155";
-            this.button155.Size = new System.Drawing.Size(30, 15);
-            this.button155.TabIndex = 5;
-            this.button155.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_38.Location = new System.Drawing.Point(1046, 246);
+            this.BtnToothBottom_38.Name = "BtnToothBottom_38";
+            this.BtnToothBottom_38.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_38.TabIndex = 5;
+            this.BtnToothBottom_38.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_28
             // 
@@ -1492,13 +1537,29 @@
             this.BtnToothBottom_28.TabIndex = 5;
             this.BtnToothBottom_28.UseVisualStyleBackColor = true;
             // 
-            // button154
+            // BtnToothBottom_81
             // 
-            this.button154.Location = new System.Drawing.Point(468, 246);
-            this.button154.Name = "button154";
-            this.button154.Size = new System.Drawing.Size(30, 15);
-            this.button154.TabIndex = 5;
-            this.button154.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_81.Location = new System.Drawing.Point(468, 484);
+            this.BtnToothBottom_81.Name = "BtnToothBottom_81";
+            this.BtnToothBottom_81.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_81.TabIndex = 5;
+            this.BtnToothBottom_81.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_41
+            // 
+            this.BtnToothBottom_41.Location = new System.Drawing.Point(468, 246);
+            this.BtnToothBottom_41.Name = "BtnToothBottom_41";
+            this.BtnToothBottom_41.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_41.TabIndex = 5;
+            this.BtnToothBottom_41.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_51
+            // 
+            this.BtnToothBottom_51.Location = new System.Drawing.Point(468, 381);
+            this.BtnToothBottom_51.Name = "BtnToothBottom_51";
+            this.BtnToothBottom_51.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_51.TabIndex = 5;
+            this.BtnToothBottom_51.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_11
             // 
@@ -1508,13 +1569,29 @@
             this.BtnToothBottom_11.TabIndex = 5;
             this.BtnToothBottom_11.UseVisualStyleBackColor = true;
             // 
-            // button153
+            // BtnToothBottom_74
             // 
-            this.button153.Location = new System.Drawing.Point(790, 246);
-            this.button153.Name = "button153";
-            this.button153.Size = new System.Drawing.Size(30, 15);
-            this.button153.TabIndex = 5;
-            this.button153.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_74.Location = new System.Drawing.Point(790, 484);
+            this.BtnToothBottom_74.Name = "BtnToothBottom_74";
+            this.BtnToothBottom_74.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_74.TabIndex = 5;
+            this.BtnToothBottom_74.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_34
+            // 
+            this.BtnToothBottom_34.Location = new System.Drawing.Point(790, 246);
+            this.BtnToothBottom_34.Name = "BtnToothBottom_34";
+            this.BtnToothBottom_34.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_34.TabIndex = 5;
+            this.BtnToothBottom_34.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_64
+            // 
+            this.BtnToothBottom_64.Location = new System.Drawing.Point(790, 381);
+            this.BtnToothBottom_64.Name = "BtnToothBottom_64";
+            this.BtnToothBottom_64.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_64.TabIndex = 5;
+            this.BtnToothBottom_64.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_24
             // 
@@ -1524,13 +1601,29 @@
             this.BtnToothBottom_24.TabIndex = 5;
             this.BtnToothBottom_24.UseVisualStyleBackColor = true;
             // 
-            // button152
+            // BtnToothBottom_85
             // 
-            this.button152.Location = new System.Drawing.Point(212, 246);
-            this.button152.Name = "button152";
-            this.button152.Size = new System.Drawing.Size(30, 15);
-            this.button152.TabIndex = 5;
-            this.button152.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_85.Location = new System.Drawing.Point(212, 484);
+            this.BtnToothBottom_85.Name = "BtnToothBottom_85";
+            this.BtnToothBottom_85.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_85.TabIndex = 5;
+            this.BtnToothBottom_85.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_45
+            // 
+            this.BtnToothBottom_45.Location = new System.Drawing.Point(212, 246);
+            this.BtnToothBottom_45.Name = "BtnToothBottom_45";
+            this.BtnToothBottom_45.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_45.TabIndex = 5;
+            this.BtnToothBottom_45.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_55
+            // 
+            this.BtnToothBottom_55.Location = new System.Drawing.Point(212, 381);
+            this.BtnToothBottom_55.Name = "BtnToothBottom_55";
+            this.BtnToothBottom_55.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_55.TabIndex = 5;
+            this.BtnToothBottom_55.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_15
             // 
@@ -1540,13 +1633,13 @@
             this.BtnToothBottom_15.TabIndex = 5;
             this.BtnToothBottom_15.UseVisualStyleBackColor = true;
             // 
-            // button151
+            // BtnToothBottom_36
             // 
-            this.button151.Location = new System.Drawing.Point(918, 246);
-            this.button151.Name = "button151";
-            this.button151.Size = new System.Drawing.Size(30, 15);
-            this.button151.TabIndex = 5;
-            this.button151.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_36.Location = new System.Drawing.Point(918, 246);
+            this.BtnToothBottom_36.Name = "BtnToothBottom_36";
+            this.BtnToothBottom_36.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_36.TabIndex = 5;
+            this.BtnToothBottom_36.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_26
             // 
@@ -1556,21 +1649,45 @@
             this.BtnToothBottom_26.TabIndex = 5;
             this.BtnToothBottom_26.UseVisualStyleBackColor = true;
             // 
-            // button150
+            // BtnToothBottom_83
             // 
-            this.button150.Location = new System.Drawing.Point(340, 246);
-            this.button150.Name = "button150";
-            this.button150.Size = new System.Drawing.Size(30, 15);
-            this.button150.TabIndex = 5;
-            this.button150.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_83.Location = new System.Drawing.Point(340, 484);
+            this.BtnToothBottom_83.Name = "BtnToothBottom_83";
+            this.BtnToothBottom_83.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_83.TabIndex = 5;
+            this.BtnToothBottom_83.UseVisualStyleBackColor = true;
             // 
-            // button149
+            // BtnToothBottom_43
             // 
-            this.button149.Location = new System.Drawing.Point(662, 246);
-            this.button149.Name = "button149";
-            this.button149.Size = new System.Drawing.Size(30, 15);
-            this.button149.TabIndex = 5;
-            this.button149.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_43.Location = new System.Drawing.Point(340, 246);
+            this.BtnToothBottom_43.Name = "BtnToothBottom_43";
+            this.BtnToothBottom_43.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_43.TabIndex = 5;
+            this.BtnToothBottom_43.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_72
+            // 
+            this.BtnToothBottom_72.Location = new System.Drawing.Point(662, 484);
+            this.BtnToothBottom_72.Name = "BtnToothBottom_72";
+            this.BtnToothBottom_72.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_72.TabIndex = 5;
+            this.BtnToothBottom_72.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_32
+            // 
+            this.BtnToothBottom_32.Location = new System.Drawing.Point(662, 246);
+            this.BtnToothBottom_32.Name = "BtnToothBottom_32";
+            this.BtnToothBottom_32.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_32.TabIndex = 5;
+            this.BtnToothBottom_32.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_53
+            // 
+            this.BtnToothBottom_53.Location = new System.Drawing.Point(340, 381);
+            this.BtnToothBottom_53.Name = "BtnToothBottom_53";
+            this.BtnToothBottom_53.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_53.TabIndex = 5;
+            this.BtnToothBottom_53.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_13
             // 
@@ -1580,13 +1697,21 @@
             this.BtnToothBottom_13.TabIndex = 5;
             this.BtnToothBottom_13.UseVisualStyleBackColor = true;
             // 
-            // button148
+            // BtnToothBottom_47
             // 
-            this.button148.Location = new System.Drawing.Point(84, 246);
-            this.button148.Name = "button148";
-            this.button148.Size = new System.Drawing.Size(30, 15);
-            this.button148.TabIndex = 5;
-            this.button148.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_47.Location = new System.Drawing.Point(84, 246);
+            this.BtnToothBottom_47.Name = "BtnToothBottom_47";
+            this.BtnToothBottom_47.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_47.TabIndex = 5;
+            this.BtnToothBottom_47.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_62
+            // 
+            this.BtnToothBottom_62.Location = new System.Drawing.Point(662, 381);
+            this.BtnToothBottom_62.Name = "BtnToothBottom_62";
+            this.BtnToothBottom_62.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_62.TabIndex = 5;
+            this.BtnToothBottom_62.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_22
             // 
@@ -1596,13 +1721,13 @@
             this.BtnToothBottom_22.TabIndex = 5;
             this.BtnToothBottom_22.UseVisualStyleBackColor = true;
             // 
-            // button147
+            // BtnToothBottom_37
             // 
-            this.button147.Location = new System.Drawing.Point(982, 246);
-            this.button147.Name = "button147";
-            this.button147.Size = new System.Drawing.Size(30, 15);
-            this.button147.TabIndex = 5;
-            this.button147.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_37.Location = new System.Drawing.Point(982, 246);
+            this.BtnToothBottom_37.Name = "BtnToothBottom_37";
+            this.BtnToothBottom_37.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_37.TabIndex = 5;
+            this.BtnToothBottom_37.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_17
             // 
@@ -1612,13 +1737,21 @@
             this.BtnToothBottom_17.TabIndex = 5;
             this.BtnToothBottom_17.UseVisualStyleBackColor = true;
             // 
-            // button146
+            // BtnToothBottom_82
             // 
-            this.button146.Location = new System.Drawing.Point(404, 246);
-            this.button146.Name = "button146";
-            this.button146.Size = new System.Drawing.Size(30, 15);
-            this.button146.TabIndex = 5;
-            this.button146.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_82.Location = new System.Drawing.Point(404, 484);
+            this.BtnToothBottom_82.Name = "BtnToothBottom_82";
+            this.BtnToothBottom_82.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_82.TabIndex = 5;
+            this.BtnToothBottom_82.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_42
+            // 
+            this.BtnToothBottom_42.Location = new System.Drawing.Point(404, 246);
+            this.BtnToothBottom_42.Name = "BtnToothBottom_42";
+            this.BtnToothBottom_42.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_42.TabIndex = 5;
+            this.BtnToothBottom_42.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_27
             // 
@@ -1628,13 +1761,29 @@
             this.BtnToothBottom_27.TabIndex = 5;
             this.BtnToothBottom_27.UseVisualStyleBackColor = true;
             // 
-            // button145
+            // BtnToothBottom_73
             // 
-            this.button145.Location = new System.Drawing.Point(726, 246);
-            this.button145.Name = "button145";
-            this.button145.Size = new System.Drawing.Size(30, 15);
-            this.button145.TabIndex = 5;
-            this.button145.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_73.Location = new System.Drawing.Point(726, 484);
+            this.BtnToothBottom_73.Name = "BtnToothBottom_73";
+            this.BtnToothBottom_73.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_73.TabIndex = 5;
+            this.BtnToothBottom_73.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_33
+            // 
+            this.BtnToothBottom_33.Location = new System.Drawing.Point(726, 246);
+            this.BtnToothBottom_33.Name = "BtnToothBottom_33";
+            this.BtnToothBottom_33.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_33.TabIndex = 5;
+            this.BtnToothBottom_33.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_52
+            // 
+            this.BtnToothBottom_52.Location = new System.Drawing.Point(404, 381);
+            this.BtnToothBottom_52.Name = "BtnToothBottom_52";
+            this.BtnToothBottom_52.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_52.TabIndex = 5;
+            this.BtnToothBottom_52.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_12
             // 
@@ -1644,13 +1793,21 @@
             this.BtnToothBottom_12.TabIndex = 5;
             this.BtnToothBottom_12.UseVisualStyleBackColor = true;
             // 
-            // button144
+            // BtnToothBottom_46
             // 
-            this.button144.Location = new System.Drawing.Point(148, 246);
-            this.button144.Name = "button144";
-            this.button144.Size = new System.Drawing.Size(30, 15);
-            this.button144.TabIndex = 5;
-            this.button144.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_46.Location = new System.Drawing.Point(148, 246);
+            this.BtnToothBottom_46.Name = "BtnToothBottom_46";
+            this.BtnToothBottom_46.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_46.TabIndex = 5;
+            this.BtnToothBottom_46.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_63
+            // 
+            this.BtnToothBottom_63.Location = new System.Drawing.Point(726, 381);
+            this.BtnToothBottom_63.Name = "BtnToothBottom_63";
+            this.BtnToothBottom_63.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_63.TabIndex = 5;
+            this.BtnToothBottom_63.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_23
             // 
@@ -1660,13 +1817,21 @@
             this.BtnToothBottom_23.TabIndex = 5;
             this.BtnToothBottom_23.UseVisualStyleBackColor = true;
             // 
-            // button143
+            // BtnToothBottom_75
             // 
-            this.button143.Location = new System.Drawing.Point(854, 246);
-            this.button143.Name = "button143";
-            this.button143.Size = new System.Drawing.Size(30, 15);
-            this.button143.TabIndex = 5;
-            this.button143.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_75.Location = new System.Drawing.Point(854, 484);
+            this.BtnToothBottom_75.Name = "BtnToothBottom_75";
+            this.BtnToothBottom_75.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_75.TabIndex = 5;
+            this.BtnToothBottom_75.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_35
+            // 
+            this.BtnToothBottom_35.Location = new System.Drawing.Point(854, 246);
+            this.BtnToothBottom_35.Name = "BtnToothBottom_35";
+            this.BtnToothBottom_35.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_35.TabIndex = 5;
+            this.BtnToothBottom_35.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_16
             // 
@@ -1676,13 +1841,29 @@
             this.BtnToothBottom_16.TabIndex = 5;
             this.BtnToothBottom_16.UseVisualStyleBackColor = true;
             // 
-            // button142
+            // BtnToothBottom_84
             // 
-            this.button142.Location = new System.Drawing.Point(276, 246);
-            this.button142.Name = "button142";
-            this.button142.Size = new System.Drawing.Size(30, 15);
-            this.button142.TabIndex = 5;
-            this.button142.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_84.Location = new System.Drawing.Point(276, 484);
+            this.BtnToothBottom_84.Name = "BtnToothBottom_84";
+            this.BtnToothBottom_84.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_84.TabIndex = 5;
+            this.BtnToothBottom_84.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_44
+            // 
+            this.BtnToothBottom_44.Location = new System.Drawing.Point(276, 246);
+            this.BtnToothBottom_44.Name = "BtnToothBottom_44";
+            this.BtnToothBottom_44.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_44.TabIndex = 5;
+            this.BtnToothBottom_44.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_65
+            // 
+            this.BtnToothBottom_65.Location = new System.Drawing.Point(854, 381);
+            this.BtnToothBottom_65.Name = "BtnToothBottom_65";
+            this.BtnToothBottom_65.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_65.TabIndex = 5;
+            this.BtnToothBottom_65.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_25
             // 
@@ -1692,13 +1873,29 @@
             this.BtnToothBottom_25.TabIndex = 5;
             this.BtnToothBottom_25.UseVisualStyleBackColor = true;
             // 
-            // button141
+            // BtnToothBottom_71
             // 
-            this.button141.Location = new System.Drawing.Point(598, 246);
-            this.button141.Name = "button141";
-            this.button141.Size = new System.Drawing.Size(30, 15);
-            this.button141.TabIndex = 5;
-            this.button141.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_71.Location = new System.Drawing.Point(598, 484);
+            this.BtnToothBottom_71.Name = "BtnToothBottom_71";
+            this.BtnToothBottom_71.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_71.TabIndex = 5;
+            this.BtnToothBottom_71.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_31
+            // 
+            this.BtnToothBottom_31.Location = new System.Drawing.Point(598, 246);
+            this.BtnToothBottom_31.Name = "BtnToothBottom_31";
+            this.BtnToothBottom_31.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_31.TabIndex = 5;
+            this.BtnToothBottom_31.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_54
+            // 
+            this.BtnToothBottom_54.Location = new System.Drawing.Point(276, 381);
+            this.BtnToothBottom_54.Name = "BtnToothBottom_54";
+            this.BtnToothBottom_54.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_54.TabIndex = 5;
+            this.BtnToothBottom_54.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_14
             // 
@@ -1708,13 +1905,21 @@
             this.BtnToothBottom_14.TabIndex = 5;
             this.BtnToothBottom_14.UseVisualStyleBackColor = true;
             // 
-            // button140
+            // BtnToothBottom_48
             // 
-            this.button140.Location = new System.Drawing.Point(20, 246);
-            this.button140.Name = "button140";
-            this.button140.Size = new System.Drawing.Size(30, 15);
-            this.button140.TabIndex = 5;
-            this.button140.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_48.Location = new System.Drawing.Point(20, 246);
+            this.BtnToothBottom_48.Name = "BtnToothBottom_48";
+            this.BtnToothBottom_48.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_48.TabIndex = 5;
+            this.BtnToothBottom_48.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothBottom_61
+            // 
+            this.BtnToothBottom_61.Location = new System.Drawing.Point(598, 381);
+            this.BtnToothBottom_61.Name = "BtnToothBottom_61";
+            this.BtnToothBottom_61.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothBottom_61.TabIndex = 5;
+            this.BtnToothBottom_61.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_21
             // 
@@ -1724,13 +1929,13 @@
             this.BtnToothBottom_21.TabIndex = 5;
             this.BtnToothBottom_21.UseVisualStyleBackColor = true;
             // 
-            // button139
+            // BtnToothRight_38
             // 
-            this.button139.Location = new System.Drawing.Point(1077, 215);
-            this.button139.Name = "button139";
-            this.button139.Size = new System.Drawing.Size(15, 30);
-            this.button139.TabIndex = 10;
-            this.button139.UseVisualStyleBackColor = true;
+            this.BtnToothRight_38.Location = new System.Drawing.Point(1077, 215);
+            this.BtnToothRight_38.Name = "BtnToothRight_38";
+            this.BtnToothRight_38.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_38.TabIndex = 10;
+            this.BtnToothRight_38.UseVisualStyleBackColor = true;
             // 
             // BtnToothBottom_18
             // 
@@ -1740,13 +1945,21 @@
             this.BtnToothBottom_18.TabIndex = 5;
             this.BtnToothBottom_18.UseVisualStyleBackColor = true;
             // 
-            // button138
+            // BtnToothRight_81
             // 
-            this.button138.Location = new System.Drawing.Point(499, 215);
-            this.button138.Name = "button138";
-            this.button138.Size = new System.Drawing.Size(15, 30);
-            this.button138.TabIndex = 10;
-            this.button138.UseVisualStyleBackColor = true;
+            this.BtnToothRight_81.Location = new System.Drawing.Point(499, 453);
+            this.BtnToothRight_81.Name = "BtnToothRight_81";
+            this.BtnToothRight_81.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_81.TabIndex = 10;
+            this.BtnToothRight_81.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_41
+            // 
+            this.BtnToothRight_41.Location = new System.Drawing.Point(499, 215);
+            this.BtnToothRight_41.Name = "BtnToothRight_41";
+            this.BtnToothRight_41.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_41.TabIndex = 10;
+            this.BtnToothRight_41.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_28
             // 
@@ -1756,13 +1969,29 @@
             this.BtnToothRight_28.TabIndex = 10;
             this.BtnToothRight_28.UseVisualStyleBackColor = true;
             // 
-            // button137
+            // BtnToothRight_74
             // 
-            this.button137.Location = new System.Drawing.Point(821, 215);
-            this.button137.Name = "button137";
-            this.button137.Size = new System.Drawing.Size(15, 30);
-            this.button137.TabIndex = 10;
-            this.button137.UseVisualStyleBackColor = true;
+            this.BtnToothRight_74.Location = new System.Drawing.Point(821, 453);
+            this.BtnToothRight_74.Name = "BtnToothRight_74";
+            this.BtnToothRight_74.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_74.TabIndex = 10;
+            this.BtnToothRight_74.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_34
+            // 
+            this.BtnToothRight_34.Location = new System.Drawing.Point(821, 215);
+            this.BtnToothRight_34.Name = "BtnToothRight_34";
+            this.BtnToothRight_34.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_34.TabIndex = 10;
+            this.BtnToothRight_34.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_51
+            // 
+            this.BtnToothRight_51.Location = new System.Drawing.Point(499, 350);
+            this.BtnToothRight_51.Name = "BtnToothRight_51";
+            this.BtnToothRight_51.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_51.TabIndex = 10;
+            this.BtnToothRight_51.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_11
             // 
@@ -1772,13 +2001,29 @@
             this.BtnToothRight_11.TabIndex = 10;
             this.BtnToothRight_11.UseVisualStyleBackColor = true;
             // 
-            // button136
+            // BtnToothRight_85
             // 
-            this.button136.Location = new System.Drawing.Point(243, 215);
-            this.button136.Name = "button136";
-            this.button136.Size = new System.Drawing.Size(15, 30);
-            this.button136.TabIndex = 10;
-            this.button136.UseVisualStyleBackColor = true;
+            this.BtnToothRight_85.Location = new System.Drawing.Point(243, 453);
+            this.BtnToothRight_85.Name = "BtnToothRight_85";
+            this.BtnToothRight_85.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_85.TabIndex = 10;
+            this.BtnToothRight_85.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_45
+            // 
+            this.BtnToothRight_45.Location = new System.Drawing.Point(243, 215);
+            this.BtnToothRight_45.Name = "BtnToothRight_45";
+            this.BtnToothRight_45.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_45.TabIndex = 10;
+            this.BtnToothRight_45.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_64
+            // 
+            this.BtnToothRight_64.Location = new System.Drawing.Point(821, 350);
+            this.BtnToothRight_64.Name = "BtnToothRight_64";
+            this.BtnToothRight_64.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_64.TabIndex = 10;
+            this.BtnToothRight_64.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_24
             // 
@@ -1788,13 +2033,21 @@
             this.BtnToothRight_24.TabIndex = 10;
             this.BtnToothRight_24.UseVisualStyleBackColor = true;
             // 
-            // button135
+            // BtnToothRight_36
             // 
-            this.button135.Location = new System.Drawing.Point(949, 215);
-            this.button135.Name = "button135";
-            this.button135.Size = new System.Drawing.Size(15, 30);
-            this.button135.TabIndex = 10;
-            this.button135.UseVisualStyleBackColor = true;
+            this.BtnToothRight_36.Location = new System.Drawing.Point(949, 215);
+            this.BtnToothRight_36.Name = "BtnToothRight_36";
+            this.BtnToothRight_36.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_36.TabIndex = 10;
+            this.BtnToothRight_36.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_55
+            // 
+            this.BtnToothRight_55.Location = new System.Drawing.Point(243, 350);
+            this.BtnToothRight_55.Name = "BtnToothRight_55";
+            this.BtnToothRight_55.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_55.TabIndex = 10;
+            this.BtnToothRight_55.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_15
             // 
@@ -1804,13 +2057,21 @@
             this.BtnToothRight_15.TabIndex = 10;
             this.BtnToothRight_15.UseVisualStyleBackColor = true;
             // 
-            // button134
+            // BtnToothRight_83
             // 
-            this.button134.Location = new System.Drawing.Point(371, 215);
-            this.button134.Name = "button134";
-            this.button134.Size = new System.Drawing.Size(15, 30);
-            this.button134.TabIndex = 10;
-            this.button134.UseVisualStyleBackColor = true;
+            this.BtnToothRight_83.Location = new System.Drawing.Point(371, 453);
+            this.BtnToothRight_83.Name = "BtnToothRight_83";
+            this.BtnToothRight_83.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_83.TabIndex = 10;
+            this.BtnToothRight_83.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_43
+            // 
+            this.BtnToothRight_43.Location = new System.Drawing.Point(371, 215);
+            this.BtnToothRight_43.Name = "BtnToothRight_43";
+            this.BtnToothRight_43.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_43.TabIndex = 10;
+            this.BtnToothRight_43.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_26
             // 
@@ -1820,13 +2081,29 @@
             this.BtnToothRight_26.TabIndex = 10;
             this.BtnToothRight_26.UseVisualStyleBackColor = true;
             // 
-            // button133
+            // BtnToothRight_72
             // 
-            this.button133.Location = new System.Drawing.Point(693, 215);
-            this.button133.Name = "button133";
-            this.button133.Size = new System.Drawing.Size(15, 30);
-            this.button133.TabIndex = 10;
-            this.button133.UseVisualStyleBackColor = true;
+            this.BtnToothRight_72.Location = new System.Drawing.Point(693, 453);
+            this.BtnToothRight_72.Name = "BtnToothRight_72";
+            this.BtnToothRight_72.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_72.TabIndex = 10;
+            this.BtnToothRight_72.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_32
+            // 
+            this.BtnToothRight_32.Location = new System.Drawing.Point(693, 215);
+            this.BtnToothRight_32.Name = "BtnToothRight_32";
+            this.BtnToothRight_32.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_32.TabIndex = 10;
+            this.BtnToothRight_32.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_53
+            // 
+            this.BtnToothRight_53.Location = new System.Drawing.Point(371, 350);
+            this.BtnToothRight_53.Name = "BtnToothRight_53";
+            this.BtnToothRight_53.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_53.TabIndex = 10;
+            this.BtnToothRight_53.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_13
             // 
@@ -1836,13 +2113,21 @@
             this.BtnToothRight_13.TabIndex = 10;
             this.BtnToothRight_13.UseVisualStyleBackColor = true;
             // 
-            // button132
+            // BtnToothRight_47
             // 
-            this.button132.Location = new System.Drawing.Point(115, 215);
-            this.button132.Name = "button132";
-            this.button132.Size = new System.Drawing.Size(15, 30);
-            this.button132.TabIndex = 10;
-            this.button132.UseVisualStyleBackColor = true;
+            this.BtnToothRight_47.Location = new System.Drawing.Point(115, 215);
+            this.BtnToothRight_47.Name = "BtnToothRight_47";
+            this.BtnToothRight_47.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_47.TabIndex = 10;
+            this.BtnToothRight_47.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_62
+            // 
+            this.BtnToothRight_62.Location = new System.Drawing.Point(693, 350);
+            this.BtnToothRight_62.Name = "BtnToothRight_62";
+            this.BtnToothRight_62.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_62.TabIndex = 10;
+            this.BtnToothRight_62.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_22
             // 
@@ -1852,13 +2137,13 @@
             this.BtnToothRight_22.TabIndex = 10;
             this.BtnToothRight_22.UseVisualStyleBackColor = true;
             // 
-            // button131
+            // BtnToothRight_37
             // 
-            this.button131.Location = new System.Drawing.Point(1013, 215);
-            this.button131.Name = "button131";
-            this.button131.Size = new System.Drawing.Size(15, 30);
-            this.button131.TabIndex = 10;
-            this.button131.UseVisualStyleBackColor = true;
+            this.BtnToothRight_37.Location = new System.Drawing.Point(1013, 215);
+            this.BtnToothRight_37.Name = "BtnToothRight_37";
+            this.BtnToothRight_37.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_37.TabIndex = 10;
+            this.BtnToothRight_37.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_17
             // 
@@ -1868,13 +2153,21 @@
             this.BtnToothRight_17.TabIndex = 10;
             this.BtnToothRight_17.UseVisualStyleBackColor = true;
             // 
-            // button130
+            // BtnToothRight_82
             // 
-            this.button130.Location = new System.Drawing.Point(435, 215);
-            this.button130.Name = "button130";
-            this.button130.Size = new System.Drawing.Size(15, 30);
-            this.button130.TabIndex = 10;
-            this.button130.UseVisualStyleBackColor = true;
+            this.BtnToothRight_82.Location = new System.Drawing.Point(435, 453);
+            this.BtnToothRight_82.Name = "BtnToothRight_82";
+            this.BtnToothRight_82.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_82.TabIndex = 10;
+            this.BtnToothRight_82.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_42
+            // 
+            this.BtnToothRight_42.Location = new System.Drawing.Point(435, 215);
+            this.BtnToothRight_42.Name = "BtnToothRight_42";
+            this.BtnToothRight_42.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_42.TabIndex = 10;
+            this.BtnToothRight_42.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_27
             // 
@@ -1884,13 +2177,29 @@
             this.BtnToothRight_27.TabIndex = 10;
             this.BtnToothRight_27.UseVisualStyleBackColor = true;
             // 
-            // button129
+            // BtnToothRight_73
             // 
-            this.button129.Location = new System.Drawing.Point(757, 215);
-            this.button129.Name = "button129";
-            this.button129.Size = new System.Drawing.Size(15, 30);
-            this.button129.TabIndex = 10;
-            this.button129.UseVisualStyleBackColor = true;
+            this.BtnToothRight_73.Location = new System.Drawing.Point(757, 453);
+            this.BtnToothRight_73.Name = "BtnToothRight_73";
+            this.BtnToothRight_73.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_73.TabIndex = 10;
+            this.BtnToothRight_73.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_33
+            // 
+            this.BtnToothRight_33.Location = new System.Drawing.Point(757, 215);
+            this.BtnToothRight_33.Name = "BtnToothRight_33";
+            this.BtnToothRight_33.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_33.TabIndex = 10;
+            this.BtnToothRight_33.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_52
+            // 
+            this.BtnToothRight_52.Location = new System.Drawing.Point(435, 350);
+            this.BtnToothRight_52.Name = "BtnToothRight_52";
+            this.BtnToothRight_52.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_52.TabIndex = 10;
+            this.BtnToothRight_52.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_12
             // 
@@ -1900,13 +2209,21 @@
             this.BtnToothRight_12.TabIndex = 10;
             this.BtnToothRight_12.UseVisualStyleBackColor = true;
             // 
-            // button128
+            // BtnToothRight_46
             // 
-            this.button128.Location = new System.Drawing.Point(179, 215);
-            this.button128.Name = "button128";
-            this.button128.Size = new System.Drawing.Size(15, 30);
-            this.button128.TabIndex = 10;
-            this.button128.UseVisualStyleBackColor = true;
+            this.BtnToothRight_46.Location = new System.Drawing.Point(179, 215);
+            this.BtnToothRight_46.Name = "BtnToothRight_46";
+            this.BtnToothRight_46.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_46.TabIndex = 10;
+            this.BtnToothRight_46.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_63
+            // 
+            this.BtnToothRight_63.Location = new System.Drawing.Point(757, 350);
+            this.BtnToothRight_63.Name = "BtnToothRight_63";
+            this.BtnToothRight_63.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_63.TabIndex = 10;
+            this.BtnToothRight_63.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_23
             // 
@@ -1916,13 +2233,21 @@
             this.BtnToothRight_23.TabIndex = 10;
             this.BtnToothRight_23.UseVisualStyleBackColor = true;
             // 
-            // button127
+            // BtnToothRight_75
             // 
-            this.button127.Location = new System.Drawing.Point(885, 215);
-            this.button127.Name = "button127";
-            this.button127.Size = new System.Drawing.Size(15, 30);
-            this.button127.TabIndex = 10;
-            this.button127.UseVisualStyleBackColor = true;
+            this.BtnToothRight_75.Location = new System.Drawing.Point(885, 453);
+            this.BtnToothRight_75.Name = "BtnToothRight_75";
+            this.BtnToothRight_75.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_75.TabIndex = 10;
+            this.BtnToothRight_75.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_35
+            // 
+            this.BtnToothRight_35.Location = new System.Drawing.Point(885, 215);
+            this.BtnToothRight_35.Name = "BtnToothRight_35";
+            this.BtnToothRight_35.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_35.TabIndex = 10;
+            this.BtnToothRight_35.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_16
             // 
@@ -1932,13 +2257,29 @@
             this.BtnToothRight_16.TabIndex = 10;
             this.BtnToothRight_16.UseVisualStyleBackColor = true;
             // 
-            // button126
+            // BtnToothRight_84
             // 
-            this.button126.Location = new System.Drawing.Point(307, 215);
-            this.button126.Name = "button126";
-            this.button126.Size = new System.Drawing.Size(15, 30);
-            this.button126.TabIndex = 10;
-            this.button126.UseVisualStyleBackColor = true;
+            this.BtnToothRight_84.Location = new System.Drawing.Point(307, 453);
+            this.BtnToothRight_84.Name = "BtnToothRight_84";
+            this.BtnToothRight_84.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_84.TabIndex = 10;
+            this.BtnToothRight_84.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_65
+            // 
+            this.BtnToothRight_65.Location = new System.Drawing.Point(885, 350);
+            this.BtnToothRight_65.Name = "BtnToothRight_65";
+            this.BtnToothRight_65.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_65.TabIndex = 10;
+            this.BtnToothRight_65.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_44
+            // 
+            this.BtnToothRight_44.Location = new System.Drawing.Point(307, 215);
+            this.BtnToothRight_44.Name = "BtnToothRight_44";
+            this.BtnToothRight_44.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_44.TabIndex = 10;
+            this.BtnToothRight_44.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_25
             // 
@@ -1948,13 +2289,29 @@
             this.BtnToothRight_25.TabIndex = 10;
             this.BtnToothRight_25.UseVisualStyleBackColor = true;
             // 
-            // button125
+            // BtnToothRight_71
             // 
-            this.button125.Location = new System.Drawing.Point(629, 215);
-            this.button125.Name = "button125";
-            this.button125.Size = new System.Drawing.Size(15, 30);
-            this.button125.TabIndex = 10;
-            this.button125.UseVisualStyleBackColor = true;
+            this.BtnToothRight_71.Location = new System.Drawing.Point(629, 453);
+            this.BtnToothRight_71.Name = "BtnToothRight_71";
+            this.BtnToothRight_71.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_71.TabIndex = 10;
+            this.BtnToothRight_71.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_31
+            // 
+            this.BtnToothRight_31.Location = new System.Drawing.Point(629, 215);
+            this.BtnToothRight_31.Name = "BtnToothRight_31";
+            this.BtnToothRight_31.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_31.TabIndex = 10;
+            this.BtnToothRight_31.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_54
+            // 
+            this.BtnToothRight_54.Location = new System.Drawing.Point(307, 350);
+            this.BtnToothRight_54.Name = "BtnToothRight_54";
+            this.BtnToothRight_54.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_54.TabIndex = 10;
+            this.BtnToothRight_54.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_14
             // 
@@ -1964,13 +2321,21 @@
             this.BtnToothRight_14.TabIndex = 10;
             this.BtnToothRight_14.UseVisualStyleBackColor = true;
             // 
-            // button124
+            // BtnToothRight_48
             // 
-            this.button124.Location = new System.Drawing.Point(51, 215);
-            this.button124.Name = "button124";
-            this.button124.Size = new System.Drawing.Size(15, 30);
-            this.button124.TabIndex = 10;
-            this.button124.UseVisualStyleBackColor = true;
+            this.BtnToothRight_48.Location = new System.Drawing.Point(51, 215);
+            this.BtnToothRight_48.Name = "BtnToothRight_48";
+            this.BtnToothRight_48.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_48.TabIndex = 10;
+            this.BtnToothRight_48.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothRight_61
+            // 
+            this.BtnToothRight_61.Location = new System.Drawing.Point(629, 350);
+            this.BtnToothRight_61.Name = "BtnToothRight_61";
+            this.BtnToothRight_61.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothRight_61.TabIndex = 10;
+            this.BtnToothRight_61.UseVisualStyleBackColor = true;
             // 
             // BtnToothRight_21
             // 
@@ -1996,6 +2361,14 @@
             this.BtnToothRight_18.TabIndex = 10;
             this.BtnToothRight_18.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_81
+            // 
+            this.BtnToothCenter_81.Location = new System.Drawing.Point(468, 453);
+            this.BtnToothCenter_81.Name = "BtnToothCenter_81";
+            this.BtnToothCenter_81.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_81.TabIndex = 9;
+            this.BtnToothCenter_81.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_41
             // 
             this.BtnToothCenter_41.Location = new System.Drawing.Point(468, 215);
@@ -2003,6 +2376,14 @@
             this.BtnToothCenter_41.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_41.TabIndex = 9;
             this.BtnToothCenter_41.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_74
+            // 
+            this.BtnToothCenter_74.Location = new System.Drawing.Point(790, 453);
+            this.BtnToothCenter_74.Name = "BtnToothCenter_74";
+            this.BtnToothCenter_74.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_74.TabIndex = 9;
+            this.BtnToothCenter_74.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_28
             // 
@@ -2012,6 +2393,14 @@
             this.BtnToothCenter_28.TabIndex = 9;
             this.BtnToothCenter_28.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_51
+            // 
+            this.BtnToothCenter_51.Location = new System.Drawing.Point(468, 350);
+            this.BtnToothCenter_51.Name = "BtnToothCenter_51";
+            this.BtnToothCenter_51.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_51.TabIndex = 9;
+            this.BtnToothCenter_51.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_34
             // 
             this.BtnToothCenter_34.Location = new System.Drawing.Point(790, 215);
@@ -2020,6 +2409,14 @@
             this.BtnToothCenter_34.TabIndex = 9;
             this.BtnToothCenter_34.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_85
+            // 
+            this.BtnToothCenter_85.Location = new System.Drawing.Point(212, 453);
+            this.BtnToothCenter_85.Name = "BtnToothCenter_85";
+            this.BtnToothCenter_85.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_85.TabIndex = 9;
+            this.BtnToothCenter_85.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_11
             // 
             this.BtnToothCenter_11.Location = new System.Drawing.Point(468, 112);
@@ -2027,6 +2424,14 @@
             this.BtnToothCenter_11.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_11.TabIndex = 9;
             this.BtnToothCenter_11.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_64
+            // 
+            this.BtnToothCenter_64.Location = new System.Drawing.Point(790, 350);
+            this.BtnToothCenter_64.Name = "BtnToothCenter_64";
+            this.BtnToothCenter_64.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_64.TabIndex = 9;
+            this.BtnToothCenter_64.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_45
             // 
@@ -2044,6 +2449,14 @@
             this.BtnToothCenter_24.TabIndex = 9;
             this.BtnToothCenter_24.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_55
+            // 
+            this.BtnToothCenter_55.Location = new System.Drawing.Point(212, 350);
+            this.BtnToothCenter_55.Name = "BtnToothCenter_55";
+            this.BtnToothCenter_55.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_55.TabIndex = 9;
+            this.BtnToothCenter_55.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_36
             // 
             this.BtnToothCenter_36.Location = new System.Drawing.Point(918, 215);
@@ -2051,6 +2464,14 @@
             this.BtnToothCenter_36.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_36.TabIndex = 9;
             this.BtnToothCenter_36.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_83
+            // 
+            this.BtnToothCenter_83.Location = new System.Drawing.Point(340, 453);
+            this.BtnToothCenter_83.Name = "BtnToothCenter_83";
+            this.BtnToothCenter_83.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_83.TabIndex = 9;
+            this.BtnToothCenter_83.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_15
             // 
@@ -2068,6 +2489,14 @@
             this.BtnToothCenter_43.TabIndex = 9;
             this.BtnToothCenter_43.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_72
+            // 
+            this.BtnToothCenter_72.Location = new System.Drawing.Point(662, 453);
+            this.BtnToothCenter_72.Name = "BtnToothCenter_72";
+            this.BtnToothCenter_72.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_72.TabIndex = 9;
+            this.BtnToothCenter_72.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_26
             // 
             this.BtnToothCenter_26.Location = new System.Drawing.Point(918, 112);
@@ -2075,6 +2504,14 @@
             this.BtnToothCenter_26.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_26.TabIndex = 9;
             this.BtnToothCenter_26.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_53
+            // 
+            this.BtnToothCenter_53.Location = new System.Drawing.Point(340, 350);
+            this.BtnToothCenter_53.Name = "BtnToothCenter_53";
+            this.BtnToothCenter_53.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_53.TabIndex = 9;
+            this.BtnToothCenter_53.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_32
             // 
@@ -2092,13 +2529,21 @@
             this.BtnToothCenter_13.TabIndex = 9;
             this.BtnToothCenter_13.UseVisualStyleBackColor = true;
             // 
-            // button116
+            // BtnToothCenter_62
             // 
-            this.button116.Location = new System.Drawing.Point(1030, 215);
-            this.button116.Name = "button116";
-            this.button116.Size = new System.Drawing.Size(15, 30);
-            this.button116.TabIndex = 9;
-            this.button116.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_62.Location = new System.Drawing.Point(662, 350);
+            this.BtnToothCenter_62.Name = "BtnToothCenter_62";
+            this.BtnToothCenter_62.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_62.TabIndex = 9;
+            this.BtnToothCenter_62.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_38
+            // 
+            this.BtnToothLeft_38.Location = new System.Drawing.Point(1030, 215);
+            this.BtnToothLeft_38.Name = "BtnToothLeft_38";
+            this.BtnToothLeft_38.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_38.TabIndex = 9;
+            this.BtnToothLeft_38.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_22
             // 
@@ -2116,6 +2561,14 @@
             this.BtnToothCenter_47.TabIndex = 9;
             this.BtnToothCenter_47.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_74
+            // 
+            this.BtnToothLeft_74.Location = new System.Drawing.Point(774, 453);
+            this.BtnToothLeft_74.Name = "BtnToothLeft_74";
+            this.BtnToothLeft_74.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_74.TabIndex = 9;
+            this.BtnToothLeft_74.UseVisualStyleBackColor = true;
+            // 
             // BtnToothLeft_28
             // 
             this.BtnToothLeft_28.Location = new System.Drawing.Point(1030, 112);
@@ -2124,13 +2577,21 @@
             this.BtnToothLeft_28.TabIndex = 9;
             this.BtnToothLeft_28.UseVisualStyleBackColor = true;
             // 
-            // button114
+            // BtnToothLeft_34
             // 
-            this.button114.Location = new System.Drawing.Point(774, 215);
-            this.button114.Name = "button114";
-            this.button114.Size = new System.Drawing.Size(15, 30);
-            this.button114.TabIndex = 9;
-            this.button114.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_34.Location = new System.Drawing.Point(774, 215);
+            this.BtnToothLeft_34.Name = "BtnToothLeft_34";
+            this.BtnToothLeft_34.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_34.TabIndex = 9;
+            this.BtnToothLeft_34.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_81
+            // 
+            this.BtnToothLeft_81.Location = new System.Drawing.Point(452, 453);
+            this.BtnToothLeft_81.Name = "BtnToothLeft_81";
+            this.BtnToothLeft_81.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_81.TabIndex = 9;
+            this.BtnToothLeft_81.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_17
             // 
@@ -2140,13 +2601,21 @@
             this.BtnToothCenter_17.TabIndex = 9;
             this.BtnToothCenter_17.UseVisualStyleBackColor = true;
             // 
-            // button113
+            // BtnToothLeft_64
             // 
-            this.button113.Location = new System.Drawing.Point(452, 215);
-            this.button113.Name = "button113";
-            this.button113.Size = new System.Drawing.Size(15, 30);
-            this.button113.TabIndex = 9;
-            this.button113.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_64.Location = new System.Drawing.Point(774, 350);
+            this.BtnToothLeft_64.Name = "BtnToothLeft_64";
+            this.BtnToothLeft_64.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_64.TabIndex = 9;
+            this.BtnToothLeft_64.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_41
+            // 
+            this.BtnToothLeft_41.Location = new System.Drawing.Point(452, 215);
+            this.BtnToothLeft_41.Name = "BtnToothLeft_41";
+            this.BtnToothLeft_41.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_41.TabIndex = 9;
+            this.BtnToothLeft_41.UseVisualStyleBackColor = true;
             // 
             // BtnToothLeft_24
             // 
@@ -2156,13 +2625,21 @@
             this.BtnToothLeft_24.TabIndex = 9;
             this.BtnToothLeft_24.UseVisualStyleBackColor = true;
             // 
-            // button112
+            // BtnToothLeft_51
             // 
-            this.button112.Location = new System.Drawing.Point(902, 215);
-            this.button112.Name = "button112";
-            this.button112.Size = new System.Drawing.Size(15, 30);
-            this.button112.TabIndex = 9;
-            this.button112.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_51.Location = new System.Drawing.Point(452, 350);
+            this.BtnToothLeft_51.Name = "BtnToothLeft_51";
+            this.BtnToothLeft_51.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_51.TabIndex = 9;
+            this.BtnToothLeft_51.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_36
+            // 
+            this.BtnToothLeft_36.Location = new System.Drawing.Point(902, 215);
+            this.BtnToothLeft_36.Name = "BtnToothLeft_36";
+            this.BtnToothLeft_36.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_36.TabIndex = 9;
+            this.BtnToothLeft_36.UseVisualStyleBackColor = true;
             // 
             // BtnToothLeft_11
             // 
@@ -2172,13 +2649,29 @@
             this.BtnToothLeft_11.TabIndex = 9;
             this.BtnToothLeft_11.UseVisualStyleBackColor = true;
             // 
-            // button111
+            // BtnToothLeft_85
             // 
-            this.button111.Location = new System.Drawing.Point(196, 215);
-            this.button111.Name = "button111";
-            this.button111.Size = new System.Drawing.Size(15, 30);
-            this.button111.TabIndex = 9;
-            this.button111.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_85.Location = new System.Drawing.Point(196, 453);
+            this.BtnToothLeft_85.Name = "BtnToothLeft_85";
+            this.BtnToothLeft_85.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_85.TabIndex = 9;
+            this.BtnToothLeft_85.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_45
+            // 
+            this.BtnToothLeft_45.Location = new System.Drawing.Point(196, 215);
+            this.BtnToothLeft_45.Name = "BtnToothLeft_45";
+            this.BtnToothLeft_45.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_45.TabIndex = 9;
+            this.BtnToothLeft_45.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_72
+            // 
+            this.BtnToothLeft_72.Location = new System.Drawing.Point(646, 453);
+            this.BtnToothLeft_72.Name = "BtnToothLeft_72";
+            this.BtnToothLeft_72.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_72.TabIndex = 9;
+            this.BtnToothLeft_72.UseVisualStyleBackColor = true;
             // 
             // BtnToothLeft_26
             // 
@@ -2188,13 +2681,29 @@
             this.BtnToothLeft_26.TabIndex = 9;
             this.BtnToothLeft_26.UseVisualStyleBackColor = true;
             // 
-            // button110
+            // BtnToothLeft_32
             // 
-            this.button110.Location = new System.Drawing.Point(646, 215);
-            this.button110.Name = "button110";
-            this.button110.Size = new System.Drawing.Size(15, 30);
-            this.button110.TabIndex = 9;
-            this.button110.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_32.Location = new System.Drawing.Point(646, 215);
+            this.BtnToothLeft_32.Name = "BtnToothLeft_32";
+            this.BtnToothLeft_32.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_32.TabIndex = 9;
+            this.BtnToothLeft_32.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_55
+            // 
+            this.BtnToothLeft_55.Location = new System.Drawing.Point(196, 350);
+            this.BtnToothLeft_55.Name = "BtnToothLeft_55";
+            this.BtnToothLeft_55.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_55.TabIndex = 9;
+            this.BtnToothLeft_55.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_83
+            // 
+            this.BtnToothLeft_83.Location = new System.Drawing.Point(324, 453);
+            this.BtnToothLeft_83.Name = "BtnToothLeft_83";
+            this.BtnToothLeft_83.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_83.TabIndex = 9;
+            this.BtnToothLeft_83.UseVisualStyleBackColor = true;
             // 
             // BtnToothLeft_15
             // 
@@ -2204,13 +2713,21 @@
             this.BtnToothLeft_15.TabIndex = 9;
             this.BtnToothLeft_15.UseVisualStyleBackColor = true;
             // 
-            // button109
+            // BtnToothLeft_62
             // 
-            this.button109.Location = new System.Drawing.Point(324, 215);
-            this.button109.Name = "button109";
-            this.button109.Size = new System.Drawing.Size(15, 30);
-            this.button109.TabIndex = 9;
-            this.button109.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_62.Location = new System.Drawing.Point(646, 350);
+            this.BtnToothLeft_62.Name = "BtnToothLeft_62";
+            this.BtnToothLeft_62.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_62.TabIndex = 9;
+            this.BtnToothLeft_62.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_43
+            // 
+            this.BtnToothLeft_43.Location = new System.Drawing.Point(324, 215);
+            this.BtnToothLeft_43.Name = "BtnToothLeft_43";
+            this.BtnToothLeft_43.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_43.TabIndex = 9;
+            this.BtnToothLeft_43.UseVisualStyleBackColor = true;
             // 
             // BtnToothLeft_22
             // 
@@ -2219,6 +2736,14 @@
             this.BtnToothLeft_22.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_22.TabIndex = 9;
             this.BtnToothLeft_22.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_53
+            // 
+            this.BtnToothLeft_53.Location = new System.Drawing.Point(324, 350);
+            this.BtnToothLeft_53.Name = "BtnToothLeft_53";
+            this.BtnToothLeft_53.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_53.TabIndex = 9;
+            this.BtnToothLeft_53.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_37
             // 
@@ -2236,13 +2761,21 @@
             this.BtnToothLeft_13.TabIndex = 9;
             this.BtnToothLeft_13.UseVisualStyleBackColor = true;
             // 
-            // button107
+            // BtnToothLeft_47
             // 
-            this.button107.Location = new System.Drawing.Point(68, 215);
-            this.button107.Name = "button107";
-            this.button107.Size = new System.Drawing.Size(15, 30);
-            this.button107.TabIndex = 9;
-            this.button107.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_47.Location = new System.Drawing.Point(68, 215);
+            this.BtnToothLeft_47.Name = "BtnToothLeft_47";
+            this.BtnToothLeft_47.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_47.TabIndex = 9;
+            this.BtnToothLeft_47.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_73
+            // 
+            this.BtnToothCenter_73.Location = new System.Drawing.Point(726, 453);
+            this.BtnToothCenter_73.Name = "BtnToothCenter_73";
+            this.BtnToothCenter_73.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_73.TabIndex = 9;
+            this.BtnToothCenter_73.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_27
             // 
@@ -2260,6 +2793,14 @@
             this.BtnToothCenter_33.TabIndex = 9;
             this.BtnToothCenter_33.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_82
+            // 
+            this.BtnToothCenter_82.Location = new System.Drawing.Point(404, 453);
+            this.BtnToothCenter_82.Name = "BtnToothCenter_82";
+            this.BtnToothCenter_82.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_82.TabIndex = 9;
+            this.BtnToothCenter_82.UseVisualStyleBackColor = true;
+            // 
             // BtnToothLeft_17
             // 
             this.BtnToothLeft_17.Location = new System.Drawing.Point(68, 112);
@@ -2267,6 +2808,14 @@
             this.BtnToothLeft_17.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_17.TabIndex = 9;
             this.BtnToothLeft_17.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_63
+            // 
+            this.BtnToothCenter_63.Location = new System.Drawing.Point(726, 350);
+            this.BtnToothCenter_63.Name = "BtnToothCenter_63";
+            this.BtnToothCenter_63.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_63.TabIndex = 9;
+            this.BtnToothCenter_63.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_42
             // 
@@ -2283,6 +2832,14 @@
             this.BtnToothCenter_23.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_23.TabIndex = 9;
             this.BtnToothCenter_23.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_52
+            // 
+            this.BtnToothCenter_52.Location = new System.Drawing.Point(404, 350);
+            this.BtnToothCenter_52.Name = "BtnToothCenter_52";
+            this.BtnToothCenter_52.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_52.TabIndex = 9;
+            this.BtnToothCenter_52.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_38
             // 
@@ -2308,6 +2865,14 @@
             this.BtnToothCenter_46.TabIndex = 9;
             this.BtnToothCenter_46.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_74
+            // 
+            this.BtnToothTop_74.Location = new System.Drawing.Point(790, 437);
+            this.BtnToothTop_74.Name = "BtnToothTop_74";
+            this.BtnToothTop_74.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_74.TabIndex = 7;
+            this.BtnToothTop_74.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_28
             // 
             this.BtnToothTop_28.Location = new System.Drawing.Point(1046, 96);
@@ -2324,6 +2889,14 @@
             this.BtnToothTop_34.TabIndex = 7;
             this.BtnToothTop_34.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_81
+            // 
+            this.BtnToothTop_81.Location = new System.Drawing.Point(468, 437);
+            this.BtnToothTop_81.Name = "BtnToothTop_81";
+            this.BtnToothTop_81.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_81.TabIndex = 7;
+            this.BtnToothTop_81.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_16
             // 
             this.BtnToothCenter_16.Location = new System.Drawing.Point(148, 112);
@@ -2331,6 +2904,14 @@
             this.BtnToothCenter_16.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_16.TabIndex = 9;
             this.BtnToothCenter_16.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_64
+            // 
+            this.BtnToothTop_64.Location = new System.Drawing.Point(790, 334);
+            this.BtnToothTop_64.Name = "BtnToothTop_64";
+            this.BtnToothTop_64.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_64.TabIndex = 7;
+            this.BtnToothTop_64.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_41
             // 
@@ -2340,6 +2921,14 @@
             this.BtnToothTop_41.TabIndex = 7;
             this.BtnToothTop_41.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_75
+            // 
+            this.BtnToothCenter_75.Location = new System.Drawing.Point(854, 453);
+            this.BtnToothCenter_75.Name = "BtnToothCenter_75";
+            this.BtnToothCenter_75.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_75.TabIndex = 9;
+            this.BtnToothCenter_75.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_24
             // 
             this.BtnToothTop_24.Location = new System.Drawing.Point(790, 96);
@@ -2347,6 +2936,14 @@
             this.BtnToothTop_24.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_24.TabIndex = 7;
             this.BtnToothTop_24.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_51
+            // 
+            this.BtnToothTop_51.Location = new System.Drawing.Point(468, 334);
+            this.BtnToothTop_51.Name = "BtnToothTop_51";
+            this.BtnToothTop_51.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_51.TabIndex = 7;
+            this.BtnToothTop_51.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_35
             // 
@@ -2356,6 +2953,14 @@
             this.BtnToothCenter_35.TabIndex = 9;
             this.BtnToothCenter_35.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_85
+            // 
+            this.BtnToothTop_85.Location = new System.Drawing.Point(212, 437);
+            this.BtnToothTop_85.Name = "BtnToothTop_85";
+            this.BtnToothTop_85.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_85.TabIndex = 7;
+            this.BtnToothTop_85.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_11
             // 
             this.BtnToothTop_11.Location = new System.Drawing.Point(468, 96);
@@ -2363,6 +2968,14 @@
             this.BtnToothTop_11.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_11.TabIndex = 7;
             this.BtnToothTop_11.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_65
+            // 
+            this.BtnToothCenter_65.Location = new System.Drawing.Point(854, 350);
+            this.BtnToothCenter_65.Name = "BtnToothCenter_65";
+            this.BtnToothCenter_65.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_65.TabIndex = 9;
+            this.BtnToothCenter_65.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_45
             // 
@@ -2380,13 +2993,29 @@
             this.BtnToothCenter_25.TabIndex = 9;
             this.BtnToothCenter_25.UseVisualStyleBackColor = true;
             // 
-            // button98
+            // BtnToothTop_55
             // 
-            this.button98.Location = new System.Drawing.Point(966, 215);
-            this.button98.Name = "button98";
-            this.button98.Size = new System.Drawing.Size(15, 30);
-            this.button98.TabIndex = 9;
-            this.button98.UseVisualStyleBackColor = true;
+            this.BtnToothTop_55.Location = new System.Drawing.Point(212, 334);
+            this.BtnToothTop_55.Name = "BtnToothTop_55";
+            this.BtnToothTop_55.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_55.TabIndex = 7;
+            this.BtnToothTop_55.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_37
+            // 
+            this.BtnToothLeft_37.Location = new System.Drawing.Point(966, 215);
+            this.BtnToothLeft_37.Name = "BtnToothLeft_37";
+            this.BtnToothLeft_37.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_37.TabIndex = 9;
+            this.BtnToothLeft_37.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_84
+            // 
+            this.BtnToothCenter_84.Location = new System.Drawing.Point(276, 453);
+            this.BtnToothCenter_84.Name = "BtnToothCenter_84";
+            this.BtnToothCenter_84.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_84.TabIndex = 9;
+            this.BtnToothCenter_84.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_15
             // 
@@ -2404,6 +3033,14 @@
             this.BtnToothCenter_44.TabIndex = 9;
             this.BtnToothCenter_44.UseVisualStyleBackColor = true;
             // 
+            // BtnToothCenter_71
+            // 
+            this.BtnToothCenter_71.Location = new System.Drawing.Point(598, 453);
+            this.BtnToothCenter_71.Name = "BtnToothCenter_71";
+            this.BtnToothCenter_71.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_71.TabIndex = 9;
+            this.BtnToothCenter_71.UseVisualStyleBackColor = true;
+            // 
             // BtnToothLeft_27
             // 
             this.BtnToothLeft_27.Location = new System.Drawing.Point(966, 112);
@@ -2411,6 +3048,14 @@
             this.BtnToothLeft_27.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_27.TabIndex = 9;
             this.BtnToothLeft_27.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothCenter_54
+            // 
+            this.BtnToothCenter_54.Location = new System.Drawing.Point(276, 350);
+            this.BtnToothCenter_54.Name = "BtnToothCenter_54";
+            this.BtnToothCenter_54.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_54.TabIndex = 9;
+            this.BtnToothCenter_54.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_31
             // 
@@ -2420,6 +3065,14 @@
             this.BtnToothCenter_31.TabIndex = 9;
             this.BtnToothCenter_31.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_82
+            // 
+            this.BtnToothLeft_82.Location = new System.Drawing.Point(388, 453);
+            this.BtnToothLeft_82.Name = "BtnToothLeft_82";
+            this.BtnToothLeft_82.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_82.TabIndex = 9;
+            this.BtnToothLeft_82.UseVisualStyleBackColor = true;
+            // 
             // BtnToothCenter_14
             // 
             this.BtnToothCenter_14.Location = new System.Drawing.Point(276, 112);
@@ -2428,13 +3081,21 @@
             this.BtnToothCenter_14.TabIndex = 9;
             this.BtnToothCenter_14.UseVisualStyleBackColor = true;
             // 
-            // button95
+            // BtnToothCenter_61
             // 
-            this.button95.Location = new System.Drawing.Point(388, 215);
-            this.button95.Name = "button95";
-            this.button95.Size = new System.Drawing.Size(15, 30);
-            this.button95.TabIndex = 9;
-            this.button95.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_61.Location = new System.Drawing.Point(598, 350);
+            this.BtnToothCenter_61.Name = "BtnToothCenter_61";
+            this.BtnToothCenter_61.Size = new System.Drawing.Size(30, 30);
+            this.BtnToothCenter_61.TabIndex = 9;
+            this.BtnToothCenter_61.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_42
+            // 
+            this.BtnToothLeft_42.Location = new System.Drawing.Point(388, 215);
+            this.BtnToothLeft_42.Name = "BtnToothLeft_42";
+            this.BtnToothLeft_42.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_42.TabIndex = 9;
+            this.BtnToothLeft_42.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_21
             // 
@@ -2443,6 +3104,14 @@
             this.BtnToothCenter_21.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_21.TabIndex = 9;
             this.BtnToothCenter_21.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_52
+            // 
+            this.BtnToothLeft_52.Location = new System.Drawing.Point(388, 350);
+            this.BtnToothLeft_52.Name = "BtnToothLeft_52";
+            this.BtnToothLeft_52.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_52.TabIndex = 9;
+            this.BtnToothLeft_52.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_36
             // 
@@ -2468,6 +3137,14 @@
             this.BtnToothCenter_48.TabIndex = 9;
             this.BtnToothCenter_48.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_73
+            // 
+            this.BtnToothLeft_73.Location = new System.Drawing.Point(710, 453);
+            this.BtnToothLeft_73.Name = "BtnToothLeft_73";
+            this.BtnToothLeft_73.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_73.TabIndex = 9;
+            this.BtnToothLeft_73.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_26
             // 
             this.BtnToothTop_26.Location = new System.Drawing.Point(918, 96);
@@ -2476,13 +3153,21 @@
             this.BtnToothTop_26.TabIndex = 7;
             this.BtnToothTop_26.UseVisualStyleBackColor = true;
             // 
-            // button92
+            // BtnToothLeft_33
             // 
-            this.button92.Location = new System.Drawing.Point(710, 215);
-            this.button92.Name = "button92";
-            this.button92.Size = new System.Drawing.Size(15, 30);
-            this.button92.TabIndex = 9;
-            this.button92.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_33.Location = new System.Drawing.Point(710, 215);
+            this.BtnToothLeft_33.Name = "BtnToothLeft_33";
+            this.BtnToothLeft_33.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_33.TabIndex = 9;
+            this.BtnToothLeft_33.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_83
+            // 
+            this.BtnToothTop_83.Location = new System.Drawing.Point(340, 437);
+            this.BtnToothTop_83.Name = "BtnToothTop_83";
+            this.BtnToothTop_83.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_83.TabIndex = 7;
+            this.BtnToothTop_83.UseVisualStyleBackColor = true;
             // 
             // BtnToothCenter_18
             // 
@@ -2491,6 +3176,14 @@
             this.BtnToothCenter_18.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_18.TabIndex = 9;
             this.BtnToothCenter_18.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_63
+            // 
+            this.BtnToothLeft_63.Location = new System.Drawing.Point(710, 350);
+            this.BtnToothLeft_63.Name = "BtnToothLeft_63";
+            this.BtnToothLeft_63.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_63.TabIndex = 9;
+            this.BtnToothLeft_63.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_43
             // 
@@ -2508,6 +3201,14 @@
             this.BtnToothLeft_23.TabIndex = 9;
             this.BtnToothLeft_23.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_53
+            // 
+            this.BtnToothTop_53.Location = new System.Drawing.Point(340, 334);
+            this.BtnToothTop_53.Name = "BtnToothTop_53";
+            this.BtnToothTop_53.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_53.TabIndex = 7;
+            this.BtnToothTop_53.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_37
             // 
             this.BtnToothTop_37.Location = new System.Drawing.Point(982, 199);
@@ -2524,13 +3225,21 @@
             this.BtnToothTop_13.TabIndex = 7;
             this.BtnToothTop_13.UseVisualStyleBackColor = true;
             // 
-            // button89
+            // BtnToothLeft_46
             // 
-            this.button89.Location = new System.Drawing.Point(132, 215);
-            this.button89.Name = "button89";
-            this.button89.Size = new System.Drawing.Size(15, 30);
-            this.button89.TabIndex = 9;
-            this.button89.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_46.Location = new System.Drawing.Point(132, 215);
+            this.BtnToothLeft_46.Name = "BtnToothLeft_46";
+            this.BtnToothLeft_46.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_46.TabIndex = 9;
+            this.BtnToothLeft_46.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_72
+            // 
+            this.BtnToothTop_72.Location = new System.Drawing.Point(662, 437);
+            this.BtnToothTop_72.Name = "BtnToothTop_72";
+            this.BtnToothTop_72.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_72.TabIndex = 7;
+            this.BtnToothTop_72.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_27
             // 
@@ -2548,6 +3257,14 @@
             this.BtnToothTop_32.TabIndex = 7;
             this.BtnToothTop_32.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_82
+            // 
+            this.BtnToothTop_82.Location = new System.Drawing.Point(404, 437);
+            this.BtnToothTop_82.Name = "BtnToothTop_82";
+            this.BtnToothTop_82.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_82.TabIndex = 7;
+            this.BtnToothTop_82.UseVisualStyleBackColor = true;
+            // 
             // BtnToothLeft_16
             // 
             this.BtnToothLeft_16.Location = new System.Drawing.Point(132, 112);
@@ -2555,6 +3272,14 @@
             this.BtnToothLeft_16.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_16.TabIndex = 9;
             this.BtnToothLeft_16.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_62
+            // 
+            this.BtnToothTop_62.Location = new System.Drawing.Point(662, 334);
+            this.BtnToothTop_62.Name = "BtnToothTop_62";
+            this.BtnToothTop_62.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_62.TabIndex = 7;
+            this.BtnToothTop_62.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_42
             // 
@@ -2564,6 +3289,14 @@
             this.BtnToothTop_42.TabIndex = 7;
             this.BtnToothTop_42.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_75
+            // 
+            this.BtnToothLeft_75.Location = new System.Drawing.Point(838, 453);
+            this.BtnToothLeft_75.Name = "BtnToothLeft_75";
+            this.BtnToothLeft_75.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_75.TabIndex = 9;
+            this.BtnToothLeft_75.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_22
             // 
             this.BtnToothTop_22.Location = new System.Drawing.Point(662, 96);
@@ -2572,13 +3305,21 @@
             this.BtnToothTop_22.TabIndex = 7;
             this.BtnToothTop_22.UseVisualStyleBackColor = true;
             // 
-            // button86
+            // BtnToothTop_52
             // 
-            this.button86.Location = new System.Drawing.Point(838, 215);
-            this.button86.Name = "button86";
-            this.button86.Size = new System.Drawing.Size(15, 30);
-            this.button86.TabIndex = 9;
-            this.button86.UseVisualStyleBackColor = true;
+            this.BtnToothTop_52.Location = new System.Drawing.Point(404, 334);
+            this.BtnToothTop_52.Name = "BtnToothTop_52";
+            this.BtnToothTop_52.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_52.TabIndex = 7;
+            this.BtnToothTop_52.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_35
+            // 
+            this.BtnToothLeft_35.Location = new System.Drawing.Point(838, 215);
+            this.BtnToothLeft_35.Name = "BtnToothLeft_35";
+            this.BtnToothLeft_35.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_35.TabIndex = 9;
+            this.BtnToothLeft_35.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_12
             // 
@@ -2588,6 +3329,14 @@
             this.BtnToothTop_12.TabIndex = 7;
             this.BtnToothTop_12.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_65
+            // 
+            this.BtnToothLeft_65.Location = new System.Drawing.Point(838, 350);
+            this.BtnToothLeft_65.Name = "BtnToothLeft_65";
+            this.BtnToothLeft_65.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_65.TabIndex = 9;
+            this.BtnToothLeft_65.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_47
             // 
             this.BtnToothTop_47.Location = new System.Drawing.Point(84, 199);
@@ -2595,6 +3344,14 @@
             this.BtnToothTop_47.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_47.TabIndex = 7;
             this.BtnToothTop_47.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_73
+            // 
+            this.BtnToothTop_73.Location = new System.Drawing.Point(726, 437);
+            this.BtnToothTop_73.Name = "BtnToothTop_73";
+            this.BtnToothTop_73.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_73.TabIndex = 7;
+            this.BtnToothTop_73.UseVisualStyleBackColor = true;
             // 
             // BtnToothLeft_25
             // 
@@ -2612,6 +3369,14 @@
             this.BtnToothTop_33.TabIndex = 7;
             this.BtnToothTop_33.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_84
+            // 
+            this.BtnToothLeft_84.Location = new System.Drawing.Point(260, 453);
+            this.BtnToothLeft_84.Name = "BtnToothLeft_84";
+            this.BtnToothLeft_84.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_84.TabIndex = 9;
+            this.BtnToothLeft_84.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_17
             // 
             this.BtnToothTop_17.Location = new System.Drawing.Point(84, 96);
@@ -2620,13 +3385,29 @@
             this.BtnToothTop_17.TabIndex = 7;
             this.BtnToothTop_17.UseVisualStyleBackColor = true;
             // 
-            // button83
+            // BtnToothTop_63
             // 
-            this.button83.Location = new System.Drawing.Point(260, 215);
-            this.button83.Name = "button83";
-            this.button83.Size = new System.Drawing.Size(15, 30);
-            this.button83.TabIndex = 9;
-            this.button83.UseVisualStyleBackColor = true;
+            this.BtnToothTop_63.Location = new System.Drawing.Point(726, 334);
+            this.BtnToothTop_63.Name = "BtnToothTop_63";
+            this.BtnToothTop_63.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_63.TabIndex = 7;
+            this.BtnToothTop_63.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_44
+            // 
+            this.BtnToothLeft_44.Location = new System.Drawing.Point(260, 215);
+            this.BtnToothLeft_44.Name = "BtnToothLeft_44";
+            this.BtnToothLeft_44.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_44.TabIndex = 9;
+            this.BtnToothLeft_44.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_75
+            // 
+            this.BtnToothTop_75.Location = new System.Drawing.Point(854, 437);
+            this.BtnToothTop_75.Name = "BtnToothTop_75";
+            this.BtnToothTop_75.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_75.TabIndex = 7;
+            this.BtnToothTop_75.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_23
             // 
@@ -2635,6 +3416,14 @@
             this.BtnToothTop_23.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_23.TabIndex = 7;
             this.BtnToothTop_23.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_54
+            // 
+            this.BtnToothLeft_54.Location = new System.Drawing.Point(260, 350);
+            this.BtnToothLeft_54.Name = "BtnToothLeft_54";
+            this.BtnToothLeft_54.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_54.TabIndex = 9;
+            this.BtnToothLeft_54.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_35
             // 
@@ -2652,6 +3441,14 @@
             this.BtnToothLeft_14.TabIndex = 9;
             this.BtnToothLeft_14.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_65
+            // 
+            this.BtnToothTop_65.Location = new System.Drawing.Point(854, 334);
+            this.BtnToothTop_65.Name = "BtnToothTop_65";
+            this.BtnToothTop_65.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_65.TabIndex = 7;
+            this.BtnToothTop_65.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_46
             // 
             this.BtnToothTop_46.Location = new System.Drawing.Point(148, 199);
@@ -2659,6 +3456,14 @@
             this.BtnToothTop_46.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_46.TabIndex = 7;
             this.BtnToothTop_46.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_71
+            // 
+            this.BtnToothLeft_71.Location = new System.Drawing.Point(582, 453);
+            this.BtnToothLeft_71.Name = "BtnToothLeft_71";
+            this.BtnToothLeft_71.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_71.TabIndex = 9;
+            this.BtnToothLeft_71.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_25
             // 
@@ -2668,13 +3473,21 @@
             this.BtnToothTop_25.TabIndex = 7;
             this.BtnToothTop_25.UseVisualStyleBackColor = true;
             // 
-            // button80
+            // BtnToothLeft_31
             // 
-            this.button80.Location = new System.Drawing.Point(582, 215);
-            this.button80.Name = "button80";
-            this.button80.Size = new System.Drawing.Size(15, 30);
-            this.button80.TabIndex = 9;
-            this.button80.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_31.Location = new System.Drawing.Point(582, 215);
+            this.BtnToothLeft_31.Name = "BtnToothLeft_31";
+            this.BtnToothLeft_31.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_31.TabIndex = 9;
+            this.BtnToothLeft_31.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_84
+            // 
+            this.BtnToothTop_84.Location = new System.Drawing.Point(276, 437);
+            this.BtnToothTop_84.Name = "BtnToothTop_84";
+            this.BtnToothTop_84.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_84.TabIndex = 7;
+            this.BtnToothTop_84.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_16
             // 
@@ -2684,6 +3497,14 @@
             this.BtnToothTop_16.TabIndex = 7;
             this.BtnToothTop_16.UseVisualStyleBackColor = true;
             // 
+            // BtnToothLeft_61
+            // 
+            this.BtnToothLeft_61.Location = new System.Drawing.Point(582, 350);
+            this.BtnToothLeft_61.Name = "BtnToothLeft_61";
+            this.BtnToothLeft_61.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_61.TabIndex = 9;
+            this.BtnToothLeft_61.UseVisualStyleBackColor = true;
+            // 
             // BtnToothTop_44
             // 
             this.BtnToothTop_44.Location = new System.Drawing.Point(276, 199);
@@ -2692,6 +3513,14 @@
             this.BtnToothTop_44.TabIndex = 7;
             this.BtnToothTop_44.UseVisualStyleBackColor = true;
             // 
+            // BtnToothTop_71
+            // 
+            this.BtnToothTop_71.Location = new System.Drawing.Point(598, 437);
+            this.BtnToothTop_71.Name = "BtnToothTop_71";
+            this.BtnToothTop_71.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_71.TabIndex = 7;
+            this.BtnToothTop_71.UseVisualStyleBackColor = true;
+            // 
             // BtnToothLeft_21
             // 
             this.BtnToothLeft_21.Location = new System.Drawing.Point(582, 112);
@@ -2699,6 +3528,14 @@
             this.BtnToothLeft_21.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_21.TabIndex = 9;
             this.BtnToothLeft_21.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothTop_54
+            // 
+            this.BtnToothTop_54.Location = new System.Drawing.Point(276, 334);
+            this.BtnToothTop_54.Name = "BtnToothTop_54";
+            this.BtnToothTop_54.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_54.TabIndex = 7;
+            this.BtnToothTop_54.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_31
             // 
@@ -2716,13 +3553,21 @@
             this.BtnToothTop_14.TabIndex = 7;
             this.BtnToothTop_14.UseVisualStyleBackColor = true;
             // 
-            // button77
+            // BtnToothTop_61
             // 
-            this.button77.Location = new System.Drawing.Point(4, 215);
-            this.button77.Name = "button77";
-            this.button77.Size = new System.Drawing.Size(15, 30);
-            this.button77.TabIndex = 9;
-            this.button77.UseVisualStyleBackColor = true;
+            this.BtnToothTop_61.Location = new System.Drawing.Point(598, 334);
+            this.BtnToothTop_61.Name = "BtnToothTop_61";
+            this.BtnToothTop_61.Size = new System.Drawing.Size(30, 15);
+            this.BtnToothTop_61.TabIndex = 7;
+            this.BtnToothTop_61.UseVisualStyleBackColor = true;
+            // 
+            // BtnToothLeft_48
+            // 
+            this.BtnToothLeft_48.Location = new System.Drawing.Point(4, 215);
+            this.BtnToothLeft_48.Name = "BtnToothLeft_48";
+            this.BtnToothLeft_48.Size = new System.Drawing.Size(15, 30);
+            this.BtnToothLeft_48.TabIndex = 9;
+            this.BtnToothLeft_48.UseVisualStyleBackColor = true;
             // 
             // BtnToothTop_21
             // 
@@ -2755,6 +3600,630 @@
             this.BtnToothTop_18.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_18.TabIndex = 7;
             this.BtnToothTop_18.UseVisualStyleBackColor = true;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(597, 262);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(32, 22);
+            this.label61.TabIndex = 26;
+            this.label61.Text = "31";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(597, 75);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(32, 22);
+            this.label53.TabIndex = 26;
+            this.label53.Text = "21";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(20, 75);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(32, 22);
+            this.label45.TabIndex = 26;
+            this.label45.Text = "18";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(1046, 262);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(32, 22);
+            this.label60.TabIndex = 26;
+            this.label60.Text = "38";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(1046, 75);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(32, 22);
+            this.label52.TabIndex = 26;
+            this.label52.Text = "28";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(469, 75);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(31, 22);
+            this.label36.TabIndex = 26;
+            this.label36.Text = "11";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(918, 262);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(32, 22);
+            this.label59.TabIndex = 26;
+            this.label59.Text = "36";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(918, 75);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(32, 22);
+            this.label51.TabIndex = 26;
+            this.label51.Text = "26";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(341, 75);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(32, 22);
+            this.label34.TabIndex = 26;
+            this.label34.Text = "13";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(982, 262);
+            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(32, 22);
+            this.label58.TabIndex = 26;
+            this.label58.Text = "37";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(982, 75);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(32, 22);
+            this.label50.TabIndex = 26;
+            this.label50.Text = "27";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(405, 75);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(32, 22);
+            this.label35.TabIndex = 26;
+            this.label35.Text = "12";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(726, 262);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(32, 22);
+            this.label57.TabIndex = 26;
+            this.label57.Text = "33";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(726, 75);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(32, 22);
+            this.label49.TabIndex = 26;
+            this.label49.Text = "23";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(149, 75);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(32, 22);
+            this.label31.TabIndex = 26;
+            this.label31.Text = "16";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(854, 262);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(32, 22);
+            this.label56.TabIndex = 26;
+            this.label56.Text = "35";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(854, 75);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(32, 22);
+            this.label48.TabIndex = 26;
+            this.label48.Text = "25";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(663, 262);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(32, 22);
+            this.label55.TabIndex = 26;
+            this.label55.Text = "32";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(663, 75);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(32, 22);
+            this.label47.TabIndex = 26;
+            this.label47.Text = "22";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(790, 262);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(32, 22);
+            this.label54.TabIndex = 26;
+            this.label54.Text = "34";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(277, 75);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(32, 22);
+            this.label33.TabIndex = 26;
+            this.label33.Text = "14";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(790, 75);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(32, 22);
+            this.label46.TabIndex = 26;
+            this.label46.Text = "24";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(86, 75);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(32, 22);
+            this.label30.TabIndex = 26;
+            this.label30.Text = "17";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(213, 75);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(32, 22);
+            this.label32.TabIndex = 26;
+            this.label32.Text = "15";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(469, 500);
+            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(32, 22);
+            this.label71.TabIndex = 26;
+            this.label71.Text = "81";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(856, 500);
+            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(32, 22);
+            this.label81.TabIndex = 26;
+            this.label81.Text = "75";
+            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Location = new System.Drawing.Point(856, 314);
+            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(32, 22);
+            this.label76.TabIndex = 26;
+            this.label76.Text = "65";
+            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(469, 314);
+            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(32, 22);
+            this.label66.TabIndex = 26;
+            this.label66.Text = "51";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(469, 262);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(32, 22);
+            this.label44.TabIndex = 26;
+            this.label44.Text = "41";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Location = new System.Drawing.Point(341, 500);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(32, 22);
+            this.label70.TabIndex = 26;
+            this.label70.Text = "83";
+            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(728, 500);
+            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(32, 22);
+            this.label80.TabIndex = 26;
+            this.label80.Text = "73";
+            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Location = new System.Drawing.Point(728, 314);
+            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(32, 22);
+            this.label75.TabIndex = 26;
+            this.label75.Text = "63";
+            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(341, 314);
+            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(32, 22);
+            this.label65.TabIndex = 26;
+            this.label65.Text = "53";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(341, 262);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(32, 22);
+            this.label43.TabIndex = 26;
+            this.label43.Text = "43";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(405, 500);
+            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(32, 22);
+            this.label69.TabIndex = 26;
+            this.label69.Text = "82";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(792, 500);
+            this.label79.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(32, 22);
+            this.label79.TabIndex = 26;
+            this.label79.Text = "74";
+            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Location = new System.Drawing.Point(792, 314);
+            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(32, 22);
+            this.label74.TabIndex = 26;
+            this.label74.Text = "64";
+            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(405, 314);
+            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(32, 22);
+            this.label64.TabIndex = 26;
+            this.label64.Text = "52";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(405, 262);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(32, 22);
+            this.label42.TabIndex = 26;
+            this.label42.Text = "42";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(149, 262);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(32, 22);
+            this.label41.TabIndex = 26;
+            this.label41.Text = "46";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(277, 500);
+            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(32, 22);
+            this.label68.TabIndex = 26;
+            this.label68.Text = "84";
+            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Location = new System.Drawing.Point(664, 500);
+            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(32, 22);
+            this.label78.TabIndex = 26;
+            this.label78.Text = "72";
+            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(664, 314);
+            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(32, 22);
+            this.label73.TabIndex = 26;
+            this.label73.Text = "62";
+            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(277, 314);
+            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(32, 22);
+            this.label63.TabIndex = 26;
+            this.label63.Text = "54";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(277, 262);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(32, 22);
+            this.label40.TabIndex = 26;
+            this.label40.Text = "44";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(212, 500);
+            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(32, 22);
+            this.label67.TabIndex = 26;
+            this.label67.Text = "85";
+            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(86, 262);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(32, 22);
+            this.label39.TabIndex = 26;
+            this.label39.Text = "47";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Location = new System.Drawing.Point(599, 500);
+            this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(32, 22);
+            this.label77.TabIndex = 26;
+            this.label77.Text = "71";
+            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Location = new System.Drawing.Point(599, 314);
+            this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(32, 22);
+            this.label72.TabIndex = 26;
+            this.label72.Text = "61";
+            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(212, 314);
+            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(32, 22);
+            this.label62.TabIndex = 26;
+            this.label62.Text = "55";
+            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(212, 262);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(32, 22);
+            this.label38.TabIndex = 26;
+            this.label38.Text = "45";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(22, 262);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(32, 22);
+            this.label37.TabIndex = 26;
+            this.label37.Text = "48";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblPatientNameInitialOdontogram
             // 
@@ -3476,1473 +4945,14 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Location = new System.Drawing.Point(547, 96);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(2, 168);
-            this.panel4.TabIndex = 11;
-            // 
-            // button156
-            // 
-            this.button156.Location = new System.Drawing.Point(598, 334);
-            this.button156.Name = "button156";
-            this.button156.Size = new System.Drawing.Size(30, 15);
-            this.button156.TabIndex = 7;
-            this.button156.UseVisualStyleBackColor = true;
-            // 
-            // button157
-            // 
-            this.button157.Location = new System.Drawing.Point(276, 334);
-            this.button157.Name = "button157";
-            this.button157.Size = new System.Drawing.Size(30, 15);
-            this.button157.TabIndex = 7;
-            this.button157.UseVisualStyleBackColor = true;
-            // 
-            // button158
-            // 
-            this.button158.Location = new System.Drawing.Point(598, 437);
-            this.button158.Name = "button158";
-            this.button158.Size = new System.Drawing.Size(30, 15);
-            this.button158.TabIndex = 7;
-            this.button158.UseVisualStyleBackColor = true;
-            // 
-            // button159
-            // 
-            this.button159.Location = new System.Drawing.Point(582, 350);
-            this.button159.Name = "button159";
-            this.button159.Size = new System.Drawing.Size(15, 30);
-            this.button159.TabIndex = 9;
-            this.button159.UseVisualStyleBackColor = true;
-            // 
-            // button160
-            // 
-            this.button160.Location = new System.Drawing.Point(276, 437);
-            this.button160.Name = "button160";
-            this.button160.Size = new System.Drawing.Size(30, 15);
-            this.button160.TabIndex = 7;
-            this.button160.UseVisualStyleBackColor = true;
-            // 
-            // button161
-            // 
-            this.button161.Location = new System.Drawing.Point(582, 453);
-            this.button161.Name = "button161";
-            this.button161.Size = new System.Drawing.Size(15, 30);
-            this.button161.TabIndex = 9;
-            this.button161.UseVisualStyleBackColor = true;
-            // 
-            // button162
-            // 
-            this.button162.Location = new System.Drawing.Point(854, 334);
-            this.button162.Name = "button162";
-            this.button162.Size = new System.Drawing.Size(30, 15);
-            this.button162.TabIndex = 7;
-            this.button162.UseVisualStyleBackColor = true;
-            // 
-            // button163
-            // 
-            this.button163.Location = new System.Drawing.Point(260, 350);
-            this.button163.Name = "button163";
-            this.button163.Size = new System.Drawing.Size(15, 30);
-            this.button163.TabIndex = 9;
-            this.button163.UseVisualStyleBackColor = true;
-            // 
-            // button164
-            // 
-            this.button164.Location = new System.Drawing.Point(854, 437);
-            this.button164.Name = "button164";
-            this.button164.Size = new System.Drawing.Size(30, 15);
-            this.button164.TabIndex = 7;
-            this.button164.UseVisualStyleBackColor = true;
-            // 
-            // button165
-            // 
-            this.button165.Location = new System.Drawing.Point(726, 334);
-            this.button165.Name = "button165";
-            this.button165.Size = new System.Drawing.Size(30, 15);
-            this.button165.TabIndex = 7;
-            this.button165.UseVisualStyleBackColor = true;
-            // 
-            // button166
-            // 
-            this.button166.Location = new System.Drawing.Point(260, 453);
-            this.button166.Name = "button166";
-            this.button166.Size = new System.Drawing.Size(15, 30);
-            this.button166.TabIndex = 9;
-            this.button166.UseVisualStyleBackColor = true;
-            // 
-            // button167
-            // 
-            this.button167.Location = new System.Drawing.Point(726, 437);
-            this.button167.Name = "button167";
-            this.button167.Size = new System.Drawing.Size(30, 15);
-            this.button167.TabIndex = 7;
-            this.button167.UseVisualStyleBackColor = true;
-            // 
-            // button168
-            // 
-            this.button168.Location = new System.Drawing.Point(838, 350);
-            this.button168.Name = "button168";
-            this.button168.Size = new System.Drawing.Size(15, 30);
-            this.button168.TabIndex = 9;
-            this.button168.UseVisualStyleBackColor = true;
-            // 
-            // button169
-            // 
-            this.button169.Location = new System.Drawing.Point(404, 334);
-            this.button169.Name = "button169";
-            this.button169.Size = new System.Drawing.Size(30, 15);
-            this.button169.TabIndex = 7;
-            this.button169.UseVisualStyleBackColor = true;
-            // 
-            // button170
-            // 
-            this.button170.Location = new System.Drawing.Point(838, 453);
-            this.button170.Name = "button170";
-            this.button170.Size = new System.Drawing.Size(15, 30);
-            this.button170.TabIndex = 9;
-            this.button170.UseVisualStyleBackColor = true;
-            // 
-            // button171
-            // 
-            this.button171.Location = new System.Drawing.Point(662, 334);
-            this.button171.Name = "button171";
-            this.button171.Size = new System.Drawing.Size(30, 15);
-            this.button171.TabIndex = 7;
-            this.button171.UseVisualStyleBackColor = true;
-            // 
-            // button172
-            // 
-            this.button172.Location = new System.Drawing.Point(404, 437);
-            this.button172.Name = "button172";
-            this.button172.Size = new System.Drawing.Size(30, 15);
-            this.button172.TabIndex = 7;
-            this.button172.UseVisualStyleBackColor = true;
-            // 
-            // button173
-            // 
-            this.button173.Location = new System.Drawing.Point(662, 437);
-            this.button173.Name = "button173";
-            this.button173.Size = new System.Drawing.Size(30, 15);
-            this.button173.TabIndex = 7;
-            this.button173.UseVisualStyleBackColor = true;
-            // 
-            // button174
-            // 
-            this.button174.Location = new System.Drawing.Point(340, 334);
-            this.button174.Name = "button174";
-            this.button174.Size = new System.Drawing.Size(30, 15);
-            this.button174.TabIndex = 7;
-            this.button174.UseVisualStyleBackColor = true;
-            // 
-            // button175
-            // 
-            this.button175.Location = new System.Drawing.Point(710, 350);
-            this.button175.Name = "button175";
-            this.button175.Size = new System.Drawing.Size(15, 30);
-            this.button175.TabIndex = 9;
-            this.button175.UseVisualStyleBackColor = true;
-            // 
-            // button176
-            // 
-            this.button176.Location = new System.Drawing.Point(340, 437);
-            this.button176.Name = "button176";
-            this.button176.Size = new System.Drawing.Size(30, 15);
-            this.button176.TabIndex = 7;
-            this.button176.UseVisualStyleBackColor = true;
-            // 
-            // button177
-            // 
-            this.button177.Location = new System.Drawing.Point(710, 453);
-            this.button177.Name = "button177";
-            this.button177.Size = new System.Drawing.Size(15, 30);
-            this.button177.TabIndex = 9;
-            this.button177.UseVisualStyleBackColor = true;
-            // 
-            // button178
-            // 
-            this.button178.Location = new System.Drawing.Point(388, 350);
-            this.button178.Name = "button178";
-            this.button178.Size = new System.Drawing.Size(15, 30);
-            this.button178.TabIndex = 9;
-            this.button178.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_61
-            // 
-            this.BtnToothCenter_61.Location = new System.Drawing.Point(598, 350);
-            this.BtnToothCenter_61.Name = "BtnToothCenter_61";
-            this.BtnToothCenter_61.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_61.TabIndex = 9;
-            this.BtnToothCenter_61.UseVisualStyleBackColor = true;
-            // 
-            // button180
-            // 
-            this.button180.Location = new System.Drawing.Point(388, 453);
-            this.button180.Name = "button180";
-            this.button180.Size = new System.Drawing.Size(15, 30);
-            this.button180.TabIndex = 9;
-            this.button180.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_54
-            // 
-            this.BtnToothCenter_54.Location = new System.Drawing.Point(276, 350);
-            this.BtnToothCenter_54.Name = "BtnToothCenter_54";
-            this.BtnToothCenter_54.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_54.TabIndex = 9;
-            this.BtnToothCenter_54.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_71
-            // 
-            this.BtnToothCenter_71.Location = new System.Drawing.Point(598, 453);
-            this.BtnToothCenter_71.Name = "BtnToothCenter_71";
-            this.BtnToothCenter_71.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_71.TabIndex = 9;
-            this.BtnToothCenter_71.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_84
-            // 
-            this.BtnToothCenter_84.Location = new System.Drawing.Point(276, 453);
-            this.BtnToothCenter_84.Name = "BtnToothCenter_84";
-            this.BtnToothCenter_84.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_84.TabIndex = 9;
-            this.BtnToothCenter_84.UseVisualStyleBackColor = true;
-            // 
-            // button184
-            // 
-            this.button184.Location = new System.Drawing.Point(212, 334);
-            this.button184.Name = "button184";
-            this.button184.Size = new System.Drawing.Size(30, 15);
-            this.button184.TabIndex = 7;
-            this.button184.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_65
-            // 
-            this.BtnToothCenter_65.Location = new System.Drawing.Point(854, 350);
-            this.BtnToothCenter_65.Name = "BtnToothCenter_65";
-            this.BtnToothCenter_65.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_65.TabIndex = 9;
-            this.BtnToothCenter_65.UseVisualStyleBackColor = true;
-            // 
-            // button186
-            // 
-            this.button186.Location = new System.Drawing.Point(212, 437);
-            this.button186.Name = "button186";
-            this.button186.Size = new System.Drawing.Size(30, 15);
-            this.button186.TabIndex = 7;
-            this.button186.UseVisualStyleBackColor = true;
-            // 
-            // button187
-            // 
-            this.button187.Location = new System.Drawing.Point(468, 334);
-            this.button187.Name = "button187";
-            this.button187.Size = new System.Drawing.Size(30, 15);
-            this.button187.TabIndex = 7;
-            this.button187.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_75
-            // 
-            this.BtnToothCenter_75.Location = new System.Drawing.Point(854, 453);
-            this.BtnToothCenter_75.Name = "BtnToothCenter_75";
-            this.BtnToothCenter_75.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_75.TabIndex = 9;
-            this.BtnToothCenter_75.UseVisualStyleBackColor = true;
-            // 
-            // button189
-            // 
-            this.button189.Location = new System.Drawing.Point(790, 334);
-            this.button189.Name = "button189";
-            this.button189.Size = new System.Drawing.Size(30, 15);
-            this.button189.TabIndex = 7;
-            this.button189.UseVisualStyleBackColor = true;
-            // 
-            // button190
-            // 
-            this.button190.Location = new System.Drawing.Point(468, 437);
-            this.button190.Name = "button190";
-            this.button190.Size = new System.Drawing.Size(30, 15);
-            this.button190.TabIndex = 7;
-            this.button190.UseVisualStyleBackColor = true;
-            // 
-            // button191
-            // 
-            this.button191.Location = new System.Drawing.Point(790, 437);
-            this.button191.Name = "button191";
-            this.button191.Size = new System.Drawing.Size(30, 15);
-            this.button191.TabIndex = 7;
-            this.button191.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_52
-            // 
-            this.BtnToothCenter_52.Location = new System.Drawing.Point(404, 350);
-            this.BtnToothCenter_52.Name = "BtnToothCenter_52";
-            this.BtnToothCenter_52.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_52.TabIndex = 9;
-            this.BtnToothCenter_52.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_63
-            // 
-            this.BtnToothCenter_63.Location = new System.Drawing.Point(726, 350);
-            this.BtnToothCenter_63.Name = "BtnToothCenter_63";
-            this.BtnToothCenter_63.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_63.TabIndex = 9;
-            this.BtnToothCenter_63.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_82
-            // 
-            this.BtnToothCenter_82.Location = new System.Drawing.Point(404, 453);
-            this.BtnToothCenter_82.Name = "BtnToothCenter_82";
-            this.BtnToothCenter_82.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_82.TabIndex = 9;
-            this.BtnToothCenter_82.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_73
-            // 
-            this.BtnToothCenter_73.Location = new System.Drawing.Point(726, 453);
-            this.BtnToothCenter_73.Name = "BtnToothCenter_73";
-            this.BtnToothCenter_73.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_73.TabIndex = 9;
-            this.BtnToothCenter_73.UseVisualStyleBackColor = true;
-            // 
-            // button196
-            // 
-            this.button196.Location = new System.Drawing.Point(324, 350);
-            this.button196.Name = "button196";
-            this.button196.Size = new System.Drawing.Size(15, 30);
-            this.button196.TabIndex = 9;
-            this.button196.UseVisualStyleBackColor = true;
-            // 
-            // button197
-            // 
-            this.button197.Location = new System.Drawing.Point(646, 350);
-            this.button197.Name = "button197";
-            this.button197.Size = new System.Drawing.Size(15, 30);
-            this.button197.TabIndex = 9;
-            this.button197.UseVisualStyleBackColor = true;
-            // 
-            // button198
-            // 
-            this.button198.Location = new System.Drawing.Point(324, 453);
-            this.button198.Name = "button198";
-            this.button198.Size = new System.Drawing.Size(15, 30);
-            this.button198.TabIndex = 9;
-            this.button198.UseVisualStyleBackColor = true;
-            // 
-            // button199
-            // 
-            this.button199.Location = new System.Drawing.Point(646, 453);
-            this.button199.Name = "button199";
-            this.button199.Size = new System.Drawing.Size(15, 30);
-            this.button199.TabIndex = 9;
-            this.button199.UseVisualStyleBackColor = true;
-            // 
-            // button200
-            // 
-            this.button200.Location = new System.Drawing.Point(452, 350);
-            this.button200.Name = "button200";
-            this.button200.Size = new System.Drawing.Size(15, 30);
-            this.button200.TabIndex = 9;
-            this.button200.UseVisualStyleBackColor = true;
-            // 
-            // button201
-            // 
-            this.button201.Location = new System.Drawing.Point(774, 350);
-            this.button201.Name = "button201";
-            this.button201.Size = new System.Drawing.Size(15, 30);
-            this.button201.TabIndex = 9;
-            this.button201.UseVisualStyleBackColor = true;
-            // 
-            // button202
-            // 
-            this.button202.Location = new System.Drawing.Point(452, 453);
-            this.button202.Name = "button202";
-            this.button202.Size = new System.Drawing.Size(15, 30);
-            this.button202.TabIndex = 9;
-            this.button202.UseVisualStyleBackColor = true;
-            // 
-            // button203
-            // 
-            this.button203.Location = new System.Drawing.Point(774, 453);
-            this.button203.Name = "button203";
-            this.button203.Size = new System.Drawing.Size(15, 30);
-            this.button203.TabIndex = 9;
-            this.button203.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_62
-            // 
-            this.BtnToothCenter_62.Location = new System.Drawing.Point(662, 350);
-            this.BtnToothCenter_62.Name = "BtnToothCenter_62";
-            this.BtnToothCenter_62.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_62.TabIndex = 9;
-            this.BtnToothCenter_62.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_53
-            // 
-            this.BtnToothCenter_53.Location = new System.Drawing.Point(340, 350);
-            this.BtnToothCenter_53.Name = "BtnToothCenter_53";
-            this.BtnToothCenter_53.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_53.TabIndex = 9;
-            this.BtnToothCenter_53.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_72
-            // 
-            this.BtnToothCenter_72.Location = new System.Drawing.Point(662, 453);
-            this.BtnToothCenter_72.Name = "BtnToothCenter_72";
-            this.BtnToothCenter_72.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_72.TabIndex = 9;
-            this.BtnToothCenter_72.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_83
-            // 
-            this.BtnToothCenter_83.Location = new System.Drawing.Point(340, 453);
-            this.BtnToothCenter_83.Name = "BtnToothCenter_83";
-            this.BtnToothCenter_83.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_83.TabIndex = 9;
-            this.BtnToothCenter_83.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_55
-            // 
-            this.BtnToothCenter_55.Location = new System.Drawing.Point(212, 350);
-            this.BtnToothCenter_55.Name = "BtnToothCenter_55";
-            this.BtnToothCenter_55.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_55.TabIndex = 9;
-            this.BtnToothCenter_55.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_64
-            // 
-            this.BtnToothCenter_64.Location = new System.Drawing.Point(790, 350);
-            this.BtnToothCenter_64.Name = "BtnToothCenter_64";
-            this.BtnToothCenter_64.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_64.TabIndex = 9;
-            this.BtnToothCenter_64.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_85
-            // 
-            this.BtnToothCenter_85.Location = new System.Drawing.Point(212, 453);
-            this.BtnToothCenter_85.Name = "BtnToothCenter_85";
-            this.BtnToothCenter_85.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_85.TabIndex = 9;
-            this.BtnToothCenter_85.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_51
-            // 
-            this.BtnToothCenter_51.Location = new System.Drawing.Point(468, 350);
-            this.BtnToothCenter_51.Name = "BtnToothCenter_51";
-            this.BtnToothCenter_51.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_51.TabIndex = 9;
-            this.BtnToothCenter_51.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_74
-            // 
-            this.BtnToothCenter_74.Location = new System.Drawing.Point(790, 453);
-            this.BtnToothCenter_74.Name = "BtnToothCenter_74";
-            this.BtnToothCenter_74.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_74.TabIndex = 9;
-            this.BtnToothCenter_74.UseVisualStyleBackColor = true;
-            // 
-            // BtnToothCenter_81
-            // 
-            this.BtnToothCenter_81.Location = new System.Drawing.Point(468, 453);
-            this.BtnToothCenter_81.Name = "BtnToothCenter_81";
-            this.BtnToothCenter_81.Size = new System.Drawing.Size(30, 30);
-            this.BtnToothCenter_81.TabIndex = 9;
-            this.BtnToothCenter_81.UseVisualStyleBackColor = true;
-            // 
-            // button214
-            // 
-            this.button214.Location = new System.Drawing.Point(629, 350);
-            this.button214.Name = "button214";
-            this.button214.Size = new System.Drawing.Size(15, 30);
-            this.button214.TabIndex = 10;
-            this.button214.UseVisualStyleBackColor = true;
-            // 
-            // button215
-            // 
-            this.button215.Location = new System.Drawing.Point(307, 350);
-            this.button215.Name = "button215";
-            this.button215.Size = new System.Drawing.Size(15, 30);
-            this.button215.TabIndex = 10;
-            this.button215.UseVisualStyleBackColor = true;
-            // 
-            // button216
-            // 
-            this.button216.Location = new System.Drawing.Point(629, 453);
-            this.button216.Name = "button216";
-            this.button216.Size = new System.Drawing.Size(15, 30);
-            this.button216.TabIndex = 10;
-            this.button216.UseVisualStyleBackColor = true;
-            // 
-            // button217
-            // 
-            this.button217.Location = new System.Drawing.Point(307, 453);
-            this.button217.Name = "button217";
-            this.button217.Size = new System.Drawing.Size(15, 30);
-            this.button217.TabIndex = 10;
-            this.button217.UseVisualStyleBackColor = true;
-            // 
-            // button218
-            // 
-            this.button218.Location = new System.Drawing.Point(757, 350);
-            this.button218.Name = "button218";
-            this.button218.Size = new System.Drawing.Size(15, 30);
-            this.button218.TabIndex = 10;
-            this.button218.UseVisualStyleBackColor = true;
-            // 
-            // button219
-            // 
-            this.button219.Location = new System.Drawing.Point(435, 350);
-            this.button219.Name = "button219";
-            this.button219.Size = new System.Drawing.Size(15, 30);
-            this.button219.TabIndex = 10;
-            this.button219.UseVisualStyleBackColor = true;
-            // 
-            // button220
-            // 
-            this.button220.Location = new System.Drawing.Point(757, 453);
-            this.button220.Name = "button220";
-            this.button220.Size = new System.Drawing.Size(15, 30);
-            this.button220.TabIndex = 10;
-            this.button220.UseVisualStyleBackColor = true;
-            // 
-            // button221
-            // 
-            this.button221.Location = new System.Drawing.Point(435, 453);
-            this.button221.Name = "button221";
-            this.button221.Size = new System.Drawing.Size(15, 30);
-            this.button221.TabIndex = 10;
-            this.button221.UseVisualStyleBackColor = true;
-            // 
-            // button222
-            // 
-            this.button222.Location = new System.Drawing.Point(693, 350);
-            this.button222.Name = "button222";
-            this.button222.Size = new System.Drawing.Size(15, 30);
-            this.button222.TabIndex = 10;
-            this.button222.UseVisualStyleBackColor = true;
-            // 
-            // button223
-            // 
-            this.button223.Location = new System.Drawing.Point(371, 350);
-            this.button223.Name = "button223";
-            this.button223.Size = new System.Drawing.Size(15, 30);
-            this.button223.TabIndex = 10;
-            this.button223.UseVisualStyleBackColor = true;
-            // 
-            // button224
-            // 
-            this.button224.Location = new System.Drawing.Point(693, 453);
-            this.button224.Name = "button224";
-            this.button224.Size = new System.Drawing.Size(15, 30);
-            this.button224.TabIndex = 10;
-            this.button224.UseVisualStyleBackColor = true;
-            // 
-            // button225
-            // 
-            this.button225.Location = new System.Drawing.Point(371, 453);
-            this.button225.Name = "button225";
-            this.button225.Size = new System.Drawing.Size(15, 30);
-            this.button225.TabIndex = 10;
-            this.button225.UseVisualStyleBackColor = true;
-            // 
-            // button226
-            // 
-            this.button226.Location = new System.Drawing.Point(243, 350);
-            this.button226.Name = "button226";
-            this.button226.Size = new System.Drawing.Size(15, 30);
-            this.button226.TabIndex = 10;
-            this.button226.UseVisualStyleBackColor = true;
-            // 
-            // button227
-            // 
-            this.button227.Location = new System.Drawing.Point(821, 350);
-            this.button227.Name = "button227";
-            this.button227.Size = new System.Drawing.Size(15, 30);
-            this.button227.TabIndex = 10;
-            this.button227.UseVisualStyleBackColor = true;
-            // 
-            // button228
-            // 
-            this.button228.Location = new System.Drawing.Point(243, 453);
-            this.button228.Name = "button228";
-            this.button228.Size = new System.Drawing.Size(15, 30);
-            this.button228.TabIndex = 10;
-            this.button228.UseVisualStyleBackColor = true;
-            // 
-            // button229
-            // 
-            this.button229.Location = new System.Drawing.Point(499, 350);
-            this.button229.Name = "button229";
-            this.button229.Size = new System.Drawing.Size(15, 30);
-            this.button229.TabIndex = 10;
-            this.button229.UseVisualStyleBackColor = true;
-            // 
-            // button230
-            // 
-            this.button230.Location = new System.Drawing.Point(821, 453);
-            this.button230.Name = "button230";
-            this.button230.Size = new System.Drawing.Size(15, 30);
-            this.button230.TabIndex = 10;
-            this.button230.UseVisualStyleBackColor = true;
-            // 
-            // button231
-            // 
-            this.button231.Location = new System.Drawing.Point(499, 453);
-            this.button231.Name = "button231";
-            this.button231.Size = new System.Drawing.Size(15, 30);
-            this.button231.TabIndex = 10;
-            this.button231.UseVisualStyleBackColor = true;
-            // 
-            // button232
-            // 
-            this.button232.Location = new System.Drawing.Point(598, 381);
-            this.button232.Name = "button232";
-            this.button232.Size = new System.Drawing.Size(30, 15);
-            this.button232.TabIndex = 5;
-            this.button232.UseVisualStyleBackColor = true;
-            // 
-            // button233
-            // 
-            this.button233.Location = new System.Drawing.Point(276, 381);
-            this.button233.Name = "button233";
-            this.button233.Size = new System.Drawing.Size(30, 15);
-            this.button233.TabIndex = 5;
-            this.button233.UseVisualStyleBackColor = true;
-            // 
-            // button234
-            // 
-            this.button234.Location = new System.Drawing.Point(598, 484);
-            this.button234.Name = "button234";
-            this.button234.Size = new System.Drawing.Size(30, 15);
-            this.button234.TabIndex = 5;
-            this.button234.UseVisualStyleBackColor = true;
-            // 
-            // button235
-            // 
-            this.button235.Location = new System.Drawing.Point(854, 381);
-            this.button235.Name = "button235";
-            this.button235.Size = new System.Drawing.Size(30, 15);
-            this.button235.TabIndex = 5;
-            this.button235.UseVisualStyleBackColor = true;
-            // 
-            // button236
-            // 
-            this.button236.Location = new System.Drawing.Point(276, 484);
-            this.button236.Name = "button236";
-            this.button236.Size = new System.Drawing.Size(30, 15);
-            this.button236.TabIndex = 5;
-            this.button236.UseVisualStyleBackColor = true;
-            // 
-            // button237
-            // 
-            this.button237.Location = new System.Drawing.Point(854, 484);
-            this.button237.Name = "button237";
-            this.button237.Size = new System.Drawing.Size(30, 15);
-            this.button237.TabIndex = 5;
-            this.button237.UseVisualStyleBackColor = true;
-            // 
-            // button238
-            // 
-            this.button238.Location = new System.Drawing.Point(726, 381);
-            this.button238.Name = "button238";
-            this.button238.Size = new System.Drawing.Size(30, 15);
-            this.button238.TabIndex = 5;
-            this.button238.UseVisualStyleBackColor = true;
-            // 
-            // button239
-            // 
-            this.button239.Location = new System.Drawing.Point(404, 381);
-            this.button239.Name = "button239";
-            this.button239.Size = new System.Drawing.Size(30, 15);
-            this.button239.TabIndex = 5;
-            this.button239.UseVisualStyleBackColor = true;
-            // 
-            // button240
-            // 
-            this.button240.Location = new System.Drawing.Point(726, 484);
-            this.button240.Name = "button240";
-            this.button240.Size = new System.Drawing.Size(30, 15);
-            this.button240.TabIndex = 5;
-            this.button240.UseVisualStyleBackColor = true;
-            // 
-            // button241
-            // 
-            this.button241.Location = new System.Drawing.Point(404, 484);
-            this.button241.Name = "button241";
-            this.button241.Size = new System.Drawing.Size(30, 15);
-            this.button241.TabIndex = 5;
-            this.button241.UseVisualStyleBackColor = true;
-            // 
-            // button242
-            // 
-            this.button242.Location = new System.Drawing.Point(662, 381);
-            this.button242.Name = "button242";
-            this.button242.Size = new System.Drawing.Size(30, 15);
-            this.button242.TabIndex = 5;
-            this.button242.UseVisualStyleBackColor = true;
-            // 
-            // button243
-            // 
-            this.button243.Location = new System.Drawing.Point(340, 381);
-            this.button243.Name = "button243";
-            this.button243.Size = new System.Drawing.Size(30, 15);
-            this.button243.TabIndex = 5;
-            this.button243.UseVisualStyleBackColor = true;
-            // 
-            // button244
-            // 
-            this.button244.Location = new System.Drawing.Point(662, 484);
-            this.button244.Name = "button244";
-            this.button244.Size = new System.Drawing.Size(30, 15);
-            this.button244.TabIndex = 5;
-            this.button244.UseVisualStyleBackColor = true;
-            // 
-            // button245
-            // 
-            this.button245.Location = new System.Drawing.Point(340, 484);
-            this.button245.Name = "button245";
-            this.button245.Size = new System.Drawing.Size(30, 15);
-            this.button245.TabIndex = 5;
-            this.button245.UseVisualStyleBackColor = true;
-            // 
-            // button246
-            // 
-            this.button246.Location = new System.Drawing.Point(212, 381);
-            this.button246.Name = "button246";
-            this.button246.Size = new System.Drawing.Size(30, 15);
-            this.button246.TabIndex = 5;
-            this.button246.UseVisualStyleBackColor = true;
-            // 
-            // button247
-            // 
-            this.button247.Location = new System.Drawing.Point(212, 484);
-            this.button247.Name = "button247";
-            this.button247.Size = new System.Drawing.Size(30, 15);
-            this.button247.TabIndex = 5;
-            this.button247.UseVisualStyleBackColor = true;
-            // 
-            // button248
-            // 
-            this.button248.Location = new System.Drawing.Point(790, 381);
-            this.button248.Name = "button248";
-            this.button248.Size = new System.Drawing.Size(30, 15);
-            this.button248.TabIndex = 5;
-            this.button248.UseVisualStyleBackColor = true;
-            // 
-            // button249
-            // 
-            this.button249.Location = new System.Drawing.Point(790, 484);
-            this.button249.Name = "button249";
-            this.button249.Size = new System.Drawing.Size(30, 15);
-            this.button249.TabIndex = 5;
-            this.button249.UseVisualStyleBackColor = true;
-            // 
-            // button250
-            // 
-            this.button250.Location = new System.Drawing.Point(468, 381);
-            this.button250.Name = "button250";
-            this.button250.Size = new System.Drawing.Size(30, 15);
-            this.button250.TabIndex = 5;
-            this.button250.UseVisualStyleBackColor = true;
-            // 
-            // button251
-            // 
-            this.button251.Location = new System.Drawing.Point(468, 484);
-            this.button251.Name = "button251";
-            this.button251.Size = new System.Drawing.Size(30, 15);
-            this.button251.TabIndex = 5;
-            this.button251.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(195, 418);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(706, 2);
-            this.panel3.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.Location = new System.Drawing.Point(547, 334);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(2, 168);
-            this.panel5.TabIndex = 11;
-            // 
-            // button252
-            // 
-            this.button252.Location = new System.Drawing.Point(885, 350);
-            this.button252.Name = "button252";
-            this.button252.Size = new System.Drawing.Size(15, 30);
-            this.button252.TabIndex = 10;
-            this.button252.UseVisualStyleBackColor = true;
-            // 
-            // button253
-            // 
-            this.button253.Location = new System.Drawing.Point(885, 453);
-            this.button253.Name = "button253";
-            this.button253.Size = new System.Drawing.Size(15, 30);
-            this.button253.TabIndex = 10;
-            this.button253.UseVisualStyleBackColor = true;
-            // 
-            // button254
-            // 
-            this.button254.Location = new System.Drawing.Point(196, 350);
-            this.button254.Name = "button254";
-            this.button254.Size = new System.Drawing.Size(15, 30);
-            this.button254.TabIndex = 9;
-            this.button254.UseVisualStyleBackColor = true;
-            // 
-            // button255
-            // 
-            this.button255.Location = new System.Drawing.Point(196, 453);
-            this.button255.Name = "button255";
-            this.button255.Size = new System.Drawing.Size(15, 30);
-            this.button255.TabIndex = 9;
-            this.button255.UseVisualStyleBackColor = true;
-            // 
-            // BtnSaveOdontogram
-            // 
-            this.BtnSaveOdontogram.Location = new System.Drawing.Point(136, 8);
-            this.BtnSaveOdontogram.Name = "BtnSaveOdontogram";
-            this.BtnSaveOdontogram.Size = new System.Drawing.Size(126, 40);
-            this.BtnSaveOdontogram.TabIndex = 36;
-            this.BtnSaveOdontogram.Text = "Guardar";
-            this.BtnSaveOdontogram.UseVisualStyleBackColor = true;
-            this.BtnSaveOdontogram.Visible = false;
-            // 
-            // BtnNewOdontogram
-            // 
-            this.BtnNewOdontogram.Location = new System.Drawing.Point(5, 8);
-            this.BtnNewOdontogram.Name = "BtnNewOdontogram";
-            this.BtnNewOdontogram.Size = new System.Drawing.Size(126, 40);
-            this.BtnNewOdontogram.TabIndex = 36;
-            this.BtnNewOdontogram.Text = "Nuevo";
-            this.BtnNewOdontogram.UseVisualStyleBackColor = true;
-            this.BtnNewOdontogram.Visible = false;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(86, 75);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 22);
-            this.label30.TabIndex = 26;
-            this.label30.Text = "17";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(149, 75);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 22);
-            this.label31.TabIndex = 26;
-            this.label31.Text = "16";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(213, 75);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(32, 22);
-            this.label32.TabIndex = 26;
-            this.label32.Text = "15";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(277, 75);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 22);
-            this.label33.TabIndex = 26;
-            this.label33.Text = "14";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(341, 75);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(32, 22);
-            this.label34.TabIndex = 26;
-            this.label34.Text = "13";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(405, 75);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(32, 22);
-            this.label35.TabIndex = 26;
-            this.label35.Text = "12";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(469, 75);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(31, 22);
-            this.label36.TabIndex = 26;
-            this.label36.Text = "11";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(22, 262);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(32, 22);
-            this.label37.TabIndex = 26;
-            this.label37.Text = "48";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(212, 262);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(32, 22);
-            this.label38.TabIndex = 26;
-            this.label38.Text = "45";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(86, 262);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 22);
-            this.label39.TabIndex = 26;
-            this.label39.Text = "47";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(277, 262);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(32, 22);
-            this.label40.TabIndex = 26;
-            this.label40.Text = "44";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(149, 262);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 22);
-            this.label41.TabIndex = 26;
-            this.label41.Text = "46";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(405, 262);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 22);
-            this.label42.TabIndex = 26;
-            this.label42.Text = "42";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(341, 262);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(32, 22);
-            this.label43.TabIndex = 26;
-            this.label43.Text = "43";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(469, 262);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(32, 22);
-            this.label44.TabIndex = 26;
-            this.label44.Text = "41";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(20, 75);
-            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(32, 22);
-            this.label45.TabIndex = 26;
-            this.label45.Text = "18";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(790, 75);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(32, 22);
-            this.label46.TabIndex = 26;
-            this.label46.Text = "24";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(663, 75);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(32, 22);
-            this.label47.TabIndex = 26;
-            this.label47.Text = "22";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(854, 75);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(32, 22);
-            this.label48.TabIndex = 26;
-            this.label48.Text = "25";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(726, 75);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(32, 22);
-            this.label49.TabIndex = 26;
-            this.label49.Text = "23";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(982, 75);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(32, 22);
-            this.label50.TabIndex = 26;
-            this.label50.Text = "27";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(918, 75);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(32, 22);
-            this.label51.TabIndex = 26;
-            this.label51.Text = "26";
-            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(1046, 75);
-            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(32, 22);
-            this.label52.TabIndex = 26;
-            this.label52.Text = "28";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(597, 75);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(32, 22);
-            this.label53.TabIndex = 26;
-            this.label53.Text = "21";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(790, 262);
-            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(32, 22);
-            this.label54.TabIndex = 26;
-            this.label54.Text = "34";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(663, 262);
-            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(32, 22);
-            this.label55.TabIndex = 26;
-            this.label55.Text = "32";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(854, 262);
-            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(32, 22);
-            this.label56.TabIndex = 26;
-            this.label56.Text = "35";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(726, 262);
-            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(32, 22);
-            this.label57.TabIndex = 26;
-            this.label57.Text = "33";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(982, 262);
-            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(32, 22);
-            this.label58.TabIndex = 26;
-            this.label58.Text = "37";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(918, 262);
-            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(32, 22);
-            this.label59.TabIndex = 26;
-            this.label59.Text = "36";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(1046, 262);
-            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(32, 22);
-            this.label60.TabIndex = 26;
-            this.label60.Text = "38";
-            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(597, 262);
-            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(32, 22);
-            this.label61.TabIndex = 26;
-            this.label61.Text = "31";
-            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(212, 314);
-            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(32, 22);
-            this.label62.TabIndex = 26;
-            this.label62.Text = "55";
-            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(277, 314);
-            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(32, 22);
-            this.label63.TabIndex = 26;
-            this.label63.Text = "54";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(405, 314);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(32, 22);
-            this.label64.TabIndex = 26;
-            this.label64.Text = "52";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(341, 314);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(32, 22);
-            this.label65.TabIndex = 26;
-            this.label65.Text = "53";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(469, 314);
-            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(32, 22);
-            this.label66.TabIndex = 26;
-            this.label66.Text = "51";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(212, 500);
-            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(32, 22);
-            this.label67.TabIndex = 26;
-            this.label67.Text = "85";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(277, 500);
-            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(32, 22);
-            this.label68.TabIndex = 26;
-            this.label68.Text = "84";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(405, 500);
-            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(32, 22);
-            this.label69.TabIndex = 26;
-            this.label69.Text = "82";
-            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(341, 500);
-            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(32, 22);
-            this.label70.TabIndex = 26;
-            this.label70.Text = "83";
-            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(469, 500);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(32, 22);
-            this.label71.TabIndex = 26;
-            this.label71.Text = "81";
-            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(599, 314);
-            this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(32, 22);
-            this.label72.TabIndex = 26;
-            this.label72.Text = "61";
-            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(664, 314);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(32, 22);
-            this.label73.TabIndex = 26;
-            this.label73.Text = "62";
-            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(792, 314);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(32, 22);
-            this.label74.TabIndex = 26;
-            this.label74.Text = "64";
-            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(728, 314);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(32, 22);
-            this.label75.TabIndex = 26;
-            this.label75.Text = "63";
-            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(856, 314);
-            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(32, 22);
-            this.label76.TabIndex = 26;
-            this.label76.Text = "65";
-            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(599, 500);
-            this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(32, 22);
-            this.label77.TabIndex = 26;
-            this.label77.Text = "71";
-            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.Location = new System.Drawing.Point(664, 500);
-            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(32, 22);
-            this.label78.TabIndex = 26;
-            this.label78.Text = "72";
-            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(792, 500);
-            this.label79.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(32, 22);
-            this.label79.TabIndex = 26;
-            this.label79.Text = "74";
-            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(728, 500);
-            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(32, 22);
-            this.label80.TabIndex = 26;
-            this.label80.Text = "73";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(856, 500);
-            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(32, 22);
-            this.label81.TabIndex = 26;
-            this.label81.Text = "75";
-            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.BtnNewOdontogram);
+            this.panel6.Controls.Add(this.BtnSaveOdontogram);
+            this.panel6.Location = new System.Drawing.Point(5, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(273, 51);
+            this.panel6.TabIndex = 37;
             // 
             // FrmVisitManagement
             // 
@@ -5004,6 +5014,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5207,38 +5218,38 @@
         private System.Windows.Forms.Button BtnToothTop_14;
         private System.Windows.Forms.Button BtnToothTop_21;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button155;
-        private System.Windows.Forms.Button button154;
-        private System.Windows.Forms.Button button153;
-        private System.Windows.Forms.Button button152;
-        private System.Windows.Forms.Button button151;
-        private System.Windows.Forms.Button button150;
-        private System.Windows.Forms.Button button149;
-        private System.Windows.Forms.Button button148;
-        private System.Windows.Forms.Button button147;
-        private System.Windows.Forms.Button button146;
-        private System.Windows.Forms.Button button145;
-        private System.Windows.Forms.Button button144;
-        private System.Windows.Forms.Button button143;
-        private System.Windows.Forms.Button button142;
-        private System.Windows.Forms.Button button141;
-        private System.Windows.Forms.Button button140;
-        private System.Windows.Forms.Button button139;
-        private System.Windows.Forms.Button button138;
-        private System.Windows.Forms.Button button137;
-        private System.Windows.Forms.Button button136;
-        private System.Windows.Forms.Button button135;
-        private System.Windows.Forms.Button button134;
-        private System.Windows.Forms.Button button133;
-        private System.Windows.Forms.Button button132;
-        private System.Windows.Forms.Button button131;
-        private System.Windows.Forms.Button button130;
-        private System.Windows.Forms.Button button129;
-        private System.Windows.Forms.Button button128;
-        private System.Windows.Forms.Button button127;
-        private System.Windows.Forms.Button button126;
-        private System.Windows.Forms.Button button125;
-        private System.Windows.Forms.Button button124;
+        private System.Windows.Forms.Button BtnToothBottom_38;
+        private System.Windows.Forms.Button BtnToothBottom_41;
+        private System.Windows.Forms.Button BtnToothBottom_34;
+        private System.Windows.Forms.Button BtnToothBottom_45;
+        private System.Windows.Forms.Button BtnToothBottom_36;
+        private System.Windows.Forms.Button BtnToothBottom_43;
+        private System.Windows.Forms.Button BtnToothBottom_32;
+        private System.Windows.Forms.Button BtnToothBottom_47;
+        private System.Windows.Forms.Button BtnToothBottom_37;
+        private System.Windows.Forms.Button BtnToothBottom_42;
+        private System.Windows.Forms.Button BtnToothBottom_33;
+        private System.Windows.Forms.Button BtnToothBottom_46;
+        private System.Windows.Forms.Button BtnToothBottom_35;
+        private System.Windows.Forms.Button BtnToothBottom_44;
+        private System.Windows.Forms.Button BtnToothBottom_31;
+        private System.Windows.Forms.Button BtnToothBottom_48;
+        private System.Windows.Forms.Button BtnToothRight_38;
+        private System.Windows.Forms.Button BtnToothRight_41;
+        private System.Windows.Forms.Button BtnToothRight_34;
+        private System.Windows.Forms.Button BtnToothRight_45;
+        private System.Windows.Forms.Button BtnToothRight_36;
+        private System.Windows.Forms.Button BtnToothRight_43;
+        private System.Windows.Forms.Button BtnToothRight_32;
+        private System.Windows.Forms.Button BtnToothRight_47;
+        private System.Windows.Forms.Button BtnToothRight_37;
+        private System.Windows.Forms.Button BtnToothRight_42;
+        private System.Windows.Forms.Button BtnToothRight_33;
+        private System.Windows.Forms.Button BtnToothRight_46;
+        private System.Windows.Forms.Button BtnToothRight_35;
+        private System.Windows.Forms.Button BtnToothRight_44;
+        private System.Windows.Forms.Button BtnToothRight_31;
+        private System.Windows.Forms.Button BtnToothRight_48;
         private System.Windows.Forms.Button BtnToothCenter_38;
         private System.Windows.Forms.Button BtnToothCenter_41;
         private System.Windows.Forms.Button BtnToothCenter_34;
@@ -5246,16 +5257,16 @@
         private System.Windows.Forms.Button BtnToothCenter_36;
         private System.Windows.Forms.Button BtnToothCenter_43;
         private System.Windows.Forms.Button BtnToothCenter_32;
-        private System.Windows.Forms.Button button116;
+        private System.Windows.Forms.Button BtnToothLeft_38;
         private System.Windows.Forms.Button BtnToothCenter_47;
-        private System.Windows.Forms.Button button114;
-        private System.Windows.Forms.Button button113;
-        private System.Windows.Forms.Button button112;
-        private System.Windows.Forms.Button button111;
-        private System.Windows.Forms.Button button110;
-        private System.Windows.Forms.Button button109;
+        private System.Windows.Forms.Button BtnToothLeft_34;
+        private System.Windows.Forms.Button BtnToothLeft_41;
+        private System.Windows.Forms.Button BtnToothLeft_36;
+        private System.Windows.Forms.Button BtnToothLeft_45;
+        private System.Windows.Forms.Button BtnToothLeft_32;
+        private System.Windows.Forms.Button BtnToothLeft_43;
         private System.Windows.Forms.Button BtnToothCenter_37;
-        private System.Windows.Forms.Button button107;
+        private System.Windows.Forms.Button BtnToothLeft_47;
         private System.Windows.Forms.Button BtnToothCenter_33;
         private System.Windows.Forms.Button BtnToothCenter_42;
         private System.Windows.Forms.Button BtnToothTop_38;
@@ -5264,72 +5275,72 @@
         private System.Windows.Forms.Button BtnToothTop_41;
         private System.Windows.Forms.Button BtnToothCenter_35;
         private System.Windows.Forms.Button BtnToothTop_45;
-        private System.Windows.Forms.Button button98;
+        private System.Windows.Forms.Button BtnToothLeft_37;
         private System.Windows.Forms.Button BtnToothCenter_44;
         private System.Windows.Forms.Button BtnToothCenter_31;
-        private System.Windows.Forms.Button button95;
+        private System.Windows.Forms.Button BtnToothLeft_42;
         private System.Windows.Forms.Button BtnToothTop_36;
         private System.Windows.Forms.Button BtnToothCenter_48;
-        private System.Windows.Forms.Button button92;
+        private System.Windows.Forms.Button BtnToothLeft_33;
         private System.Windows.Forms.Button BtnToothTop_43;
         private System.Windows.Forms.Button BtnToothTop_37;
-        private System.Windows.Forms.Button button89;
+        private System.Windows.Forms.Button BtnToothLeft_46;
         private System.Windows.Forms.Button BtnToothTop_32;
         private System.Windows.Forms.Button BtnToothTop_42;
-        private System.Windows.Forms.Button button86;
+        private System.Windows.Forms.Button BtnToothLeft_35;
         private System.Windows.Forms.Button BtnToothTop_47;
         private System.Windows.Forms.Button BtnToothTop_33;
-        private System.Windows.Forms.Button button83;
+        private System.Windows.Forms.Button BtnToothLeft_44;
         private System.Windows.Forms.Button BtnToothTop_35;
         private System.Windows.Forms.Button BtnToothTop_46;
-        private System.Windows.Forms.Button button80;
+        private System.Windows.Forms.Button BtnToothLeft_31;
         private System.Windows.Forms.Button BtnToothTop_44;
         private System.Windows.Forms.Button BtnToothTop_31;
-        private System.Windows.Forms.Button button77;
+        private System.Windows.Forms.Button BtnToothLeft_48;
         private System.Windows.Forms.Button BtnToothTop_48;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button251;
-        private System.Windows.Forms.Button button250;
-        private System.Windows.Forms.Button button249;
-        private System.Windows.Forms.Button button248;
-        private System.Windows.Forms.Button button247;
-        private System.Windows.Forms.Button button246;
-        private System.Windows.Forms.Button button245;
-        private System.Windows.Forms.Button button244;
-        private System.Windows.Forms.Button button243;
-        private System.Windows.Forms.Button button242;
-        private System.Windows.Forms.Button button241;
-        private System.Windows.Forms.Button button240;
-        private System.Windows.Forms.Button button239;
-        private System.Windows.Forms.Button button238;
-        private System.Windows.Forms.Button button237;
-        private System.Windows.Forms.Button button236;
-        private System.Windows.Forms.Button button235;
-        private System.Windows.Forms.Button button234;
-        private System.Windows.Forms.Button button233;
-        private System.Windows.Forms.Button button232;
-        private System.Windows.Forms.Button button231;
-        private System.Windows.Forms.Button button230;
-        private System.Windows.Forms.Button button229;
-        private System.Windows.Forms.Button button228;
-        private System.Windows.Forms.Button button227;
-        private System.Windows.Forms.Button button226;
-        private System.Windows.Forms.Button button225;
-        private System.Windows.Forms.Button button224;
-        private System.Windows.Forms.Button button223;
-        private System.Windows.Forms.Button button222;
-        private System.Windows.Forms.Button button221;
-        private System.Windows.Forms.Button button220;
-        private System.Windows.Forms.Button button219;
-        private System.Windows.Forms.Button button218;
-        private System.Windows.Forms.Button button253;
-        private System.Windows.Forms.Button button217;
-        private System.Windows.Forms.Button button252;
-        private System.Windows.Forms.Button button216;
-        private System.Windows.Forms.Button button215;
-        private System.Windows.Forms.Button button214;
+        private System.Windows.Forms.Button BtnToothBottom_81;
+        private System.Windows.Forms.Button BtnToothBottom_51;
+        private System.Windows.Forms.Button BtnToothBottom_74;
+        private System.Windows.Forms.Button BtnToothBottom_64;
+        private System.Windows.Forms.Button BtnToothBottom_85;
+        private System.Windows.Forms.Button BtnToothBottom_55;
+        private System.Windows.Forms.Button BtnToothBottom_83;
+        private System.Windows.Forms.Button BtnToothBottom_72;
+        private System.Windows.Forms.Button BtnToothBottom_53;
+        private System.Windows.Forms.Button BtnToothBottom_62;
+        private System.Windows.Forms.Button BtnToothBottom_82;
+        private System.Windows.Forms.Button BtnToothBottom_73;
+        private System.Windows.Forms.Button BtnToothBottom_52;
+        private System.Windows.Forms.Button BtnToothBottom_63;
+        private System.Windows.Forms.Button BtnToothBottom_75;
+        private System.Windows.Forms.Button BtnToothBottom_84;
+        private System.Windows.Forms.Button BtnToothBottom_65;
+        private System.Windows.Forms.Button BtnToothBottom_71;
+        private System.Windows.Forms.Button BtnToothBottom_54;
+        private System.Windows.Forms.Button BtnToothBottom_61;
+        private System.Windows.Forms.Button BtnToothRight_81;
+        private System.Windows.Forms.Button BtnToothRight_74;
+        private System.Windows.Forms.Button BtnToothRight_51;
+        private System.Windows.Forms.Button BtnToothRight_85;
+        private System.Windows.Forms.Button BtnToothRight_64;
+        private System.Windows.Forms.Button BtnToothRight_55;
+        private System.Windows.Forms.Button BtnToothRight_83;
+        private System.Windows.Forms.Button BtnToothRight_72;
+        private System.Windows.Forms.Button BtnToothRight_53;
+        private System.Windows.Forms.Button BtnToothRight_62;
+        private System.Windows.Forms.Button BtnToothRight_82;
+        private System.Windows.Forms.Button BtnToothRight_73;
+        private System.Windows.Forms.Button BtnToothRight_52;
+        private System.Windows.Forms.Button BtnToothRight_63;
+        private System.Windows.Forms.Button BtnToothRight_75;
+        private System.Windows.Forms.Button BtnToothRight_84;
+        private System.Windows.Forms.Button BtnToothRight_65;
+        private System.Windows.Forms.Button BtnToothRight_71;
+        private System.Windows.Forms.Button BtnToothRight_54;
+        private System.Windows.Forms.Button BtnToothRight_61;
         private System.Windows.Forms.Button BtnToothCenter_81;
         private System.Windows.Forms.Button BtnToothCenter_74;
         private System.Windows.Forms.Button BtnToothCenter_51;
@@ -5340,56 +5351,56 @@
         private System.Windows.Forms.Button BtnToothCenter_72;
         private System.Windows.Forms.Button BtnToothCenter_53;
         private System.Windows.Forms.Button BtnToothCenter_62;
-        private System.Windows.Forms.Button button203;
-        private System.Windows.Forms.Button button202;
-        private System.Windows.Forms.Button button201;
-        private System.Windows.Forms.Button button200;
-        private System.Windows.Forms.Button button255;
-        private System.Windows.Forms.Button button199;
-        private System.Windows.Forms.Button button254;
-        private System.Windows.Forms.Button button198;
-        private System.Windows.Forms.Button button197;
-        private System.Windows.Forms.Button button196;
+        private System.Windows.Forms.Button BtnToothLeft_74;
+        private System.Windows.Forms.Button BtnToothLeft_81;
+        private System.Windows.Forms.Button BtnToothLeft_64;
+        private System.Windows.Forms.Button BtnToothLeft_51;
+        private System.Windows.Forms.Button BtnToothLeft_85;
+        private System.Windows.Forms.Button BtnToothLeft_72;
+        private System.Windows.Forms.Button BtnToothLeft_55;
+        private System.Windows.Forms.Button BtnToothLeft_83;
+        private System.Windows.Forms.Button BtnToothLeft_62;
+        private System.Windows.Forms.Button BtnToothLeft_53;
         private System.Windows.Forms.Button BtnToothCenter_73;
         private System.Windows.Forms.Button BtnToothCenter_82;
         private System.Windows.Forms.Button BtnToothCenter_63;
         private System.Windows.Forms.Button BtnToothCenter_52;
-        private System.Windows.Forms.Button button191;
-        private System.Windows.Forms.Button button190;
-        private System.Windows.Forms.Button button189;
+        private System.Windows.Forms.Button BtnToothTop_74;
+        private System.Windows.Forms.Button BtnToothTop_81;
+        private System.Windows.Forms.Button BtnToothTop_64;
         private System.Windows.Forms.Button BtnToothCenter_75;
-        private System.Windows.Forms.Button button187;
-        private System.Windows.Forms.Button button186;
+        private System.Windows.Forms.Button BtnToothTop_51;
+        private System.Windows.Forms.Button BtnToothTop_85;
         private System.Windows.Forms.Button BtnToothCenter_65;
-        private System.Windows.Forms.Button button184;
+        private System.Windows.Forms.Button BtnToothTop_55;
         private System.Windows.Forms.Button BtnToothCenter_84;
         private System.Windows.Forms.Button BtnToothCenter_71;
         private System.Windows.Forms.Button BtnToothCenter_54;
-        private System.Windows.Forms.Button button180;
+        private System.Windows.Forms.Button BtnToothLeft_82;
         private System.Windows.Forms.Button BtnToothCenter_61;
-        private System.Windows.Forms.Button button178;
-        private System.Windows.Forms.Button button177;
-        private System.Windows.Forms.Button button176;
-        private System.Windows.Forms.Button button175;
-        private System.Windows.Forms.Button button174;
-        private System.Windows.Forms.Button button173;
-        private System.Windows.Forms.Button button172;
-        private System.Windows.Forms.Button button171;
-        private System.Windows.Forms.Button button170;
-        private System.Windows.Forms.Button button169;
-        private System.Windows.Forms.Button button168;
-        private System.Windows.Forms.Button button167;
-        private System.Windows.Forms.Button button166;
-        private System.Windows.Forms.Button button165;
-        private System.Windows.Forms.Button button164;
-        private System.Windows.Forms.Button button163;
-        private System.Windows.Forms.Button button162;
-        private System.Windows.Forms.Button button161;
-        private System.Windows.Forms.Button button160;
-        private System.Windows.Forms.Button button159;
-        private System.Windows.Forms.Button button158;
-        private System.Windows.Forms.Button button157;
-        private System.Windows.Forms.Button button156;
+        private System.Windows.Forms.Button BtnToothLeft_52;
+        private System.Windows.Forms.Button BtnToothLeft_73;
+        private System.Windows.Forms.Button BtnToothTop_83;
+        private System.Windows.Forms.Button BtnToothLeft_63;
+        private System.Windows.Forms.Button BtnToothTop_53;
+        private System.Windows.Forms.Button BtnToothTop_72;
+        private System.Windows.Forms.Button BtnToothTop_82;
+        private System.Windows.Forms.Button BtnToothTop_62;
+        private System.Windows.Forms.Button BtnToothLeft_75;
+        private System.Windows.Forms.Button BtnToothTop_52;
+        private System.Windows.Forms.Button BtnToothLeft_65;
+        private System.Windows.Forms.Button BtnToothTop_73;
+        private System.Windows.Forms.Button BtnToothLeft_84;
+        private System.Windows.Forms.Button BtnToothTop_63;
+        private System.Windows.Forms.Button BtnToothTop_75;
+        private System.Windows.Forms.Button BtnToothLeft_54;
+        private System.Windows.Forms.Button BtnToothTop_65;
+        private System.Windows.Forms.Button BtnToothLeft_71;
+        private System.Windows.Forms.Button BtnToothTop_84;
+        private System.Windows.Forms.Button BtnToothLeft_61;
+        private System.Windows.Forms.Button BtnToothTop_71;
+        private System.Windows.Forms.Button BtnToothTop_54;
+        private System.Windows.Forms.Button BtnToothTop_61;
         private System.Windows.Forms.Button BtnNewOdontogram;
         private System.Windows.Forms.Button BtnSaveOdontogram;
         private System.Windows.Forms.Label label44;
@@ -5444,5 +5455,6 @@
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Panel panel6;
     }
 }
