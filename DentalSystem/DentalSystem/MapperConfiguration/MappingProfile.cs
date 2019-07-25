@@ -8,12 +8,14 @@ using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Payment;
+using DentalSystem.Entities.Requests.PlateRegistration;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.AccountsReceivable;
 using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.Payment;
+using DentalSystem.Entities.Results.PlateRegistration;
 using DentalSystem.Entities.Results.Visit;
 
 namespace DentalSystem.MapperConfiguration
@@ -96,6 +98,12 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<Payment, GetPaymentsByAccountReceivableIdResultModel>()
                 .ForMember(w => w.PaymentDate, y => y.MapFrom(r => r.PaymentDate.ToString("dd/M/yyyy")));
 
+            CreateMap<Visit, GetVisitsByPatientIdResultModel>()
+                .ForMember(w => w.CreatedOn, y => y.MapFrom(r => r.CreatedOn.ToString("dd/M/yyyy")))
+                .ForMember(w => w.Status,
+                    y => y.MapFrom(r =>
+                        r.HasEnded != null ? (bool) r.HasEnded ? "Finalizada" : "En progreso" : "En progreso"));
+
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -113,9 +121,11 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.HeartValve, y => y.MapFrom(r => r.PatientHealth.HeartValve))
                 .ForMember(w => w.IsEpileptic, y => y.MapFrom(r => r.PatientHealth.IsEpileptic));
 
+            CreateMap<PlateRegistration, GetPlateRegistrationByPatientIdResult>();
 
             // ADD
-            CreateMap<AddPatientRequest, Entities.Models.Patient>();
+            CreateMap<AddPatientRequest, Entities.Models.Patient>()
+                .ForMember(w => w.PlateRegistration, y => y.MapFrom(r => new PlateRegistration()));
             CreateMap<AddPatientHealthRequest, PatientHealth>();
             CreateMap<AddActivityPerformedRequest, ActivityPerformed>();
             CreateMap<AddVisitRequest, Visit>();
@@ -133,6 +143,7 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<UpdateInvoiceDetailRequest, InvoiceDetail>();
             CreateMap<UpdateTotalPaidRequest, AccountsReceivable>();
             CreateMap<SetVisitAsBilledRequest, Visit>();
+            CreateMap<UpdatePlateRegistrationRequest, PlateRegistration>();
 
             //DELETE
             CreateMap<DeletePaymentRequest, Payment>();

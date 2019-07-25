@@ -46,6 +46,7 @@
     <Compile Include="IInvoiceDetailRepository.cs" />
     <Compile Include="IPatientRepository.cs" />
     <Compile Include="IPaymentRepository.cs" />
+    <Compile Include="IPlateRegistrationRepository.cs" />
     <Compile Include="IVisitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

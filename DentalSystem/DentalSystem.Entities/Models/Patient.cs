@@ -27,6 +27,7 @@ namespace DentalSystem.Entities.Models
         public DateTime? DeletedOn { get; set; }
 
         public virtual PatientHealth PatientHealth { get; set; }
+        public virtual PlateRegistration PlateRegistration { get; set; }
         public virtual ICollection<Visit> Visits { get; set; }
         public virtual List<AccountsReceivable> AccountReceivables { get; set; }
     }

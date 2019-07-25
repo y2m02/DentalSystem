@@ -1,4 +1,5 @@
-﻿using DentalSystem.Entities.Models;
+﻿using System.Collections.Generic;
+using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Contract.Repositories
 {
@@ -9,5 +10,6 @@ namespace DentalSystem.Contract.Repositories
         void SetVisitAsBilled(Visit visit);
         int GetVisitNumber(int patientId);
         bool ValidateIfVisitHasBeenBilled(int visitId);
+        List<Visit> GetVisitsByPatientId(int patientId);
     }
 }

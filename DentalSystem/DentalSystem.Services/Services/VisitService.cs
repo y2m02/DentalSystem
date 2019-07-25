@@ -1,8 +1,11 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.Visit;
+using DentalSystem.Entities.Results.AccountsReceivable;
+using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.Visit;
 
 namespace DentalSystem.Services.Services
@@ -45,6 +48,18 @@ namespace DentalSystem.Services.Services
             };
 
             return getVisitNumberResult;
+        }
+
+        public GetVisitsByPatientIdResult GetVisitsByPatientId(GetVisitsByPatientIdRequest request)
+        {
+            var result = _visitRepository.GetVisitsByPatientId(request.PatientId);
+            var visits = request.Mapper.Map<List<GetVisitsByPatientIdResultModel>>(result);
+
+            var getVisitsByPatientIdResult = new GetVisitsByPatientIdResult
+            {
+                Visits = visits
+            };
+            return getVisitsByPatientIdResult;
         }
     }
 }

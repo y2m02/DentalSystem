@@ -39,7 +39,7 @@
             this.BtnSearch = new System.Windows.Forms.Button();
             this.PnlSearch = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.BtnDetails = new System.Windows.Forms.Button();
+            this.BtnVisits = new System.Windows.Forms.Button();
             this.BtnCreateVisit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -66,6 +66,7 @@
             this.DgvPatientList.MultiSelect = false;
             this.DgvPatientList.Name = "DgvPatientList";
             this.DgvPatientList.ReadOnly = true;
+            this.DgvPatientList.RowHeadersVisible = false;
             this.DgvPatientList.RowHeadersWidth = 51;
             this.DgvPatientList.RowTemplate.Height = 24;
             this.DgvPatientList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -171,20 +172,20 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // BtnDetails
+            // BtnVisits
             // 
-            this.BtnDetails.Location = new System.Drawing.Point(198, 151);
-            this.BtnDetails.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnDetails.Name = "BtnDetails";
-            this.BtnDetails.Size = new System.Drawing.Size(180, 51);
-            this.BtnDetails.TabIndex = 1;
-            this.BtnDetails.Text = "Ver detalles";
-            this.BtnDetails.UseVisualStyleBackColor = true;
-            this.BtnDetails.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.BtnVisits.Location = new System.Drawing.Point(380, 151);
+            this.BtnVisits.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnVisits.Name = "BtnVisits";
+            this.BtnVisits.Size = new System.Drawing.Size(180, 51);
+            this.BtnVisits.TabIndex = 1;
+            this.BtnVisits.Text = "Ver visitas";
+            this.BtnVisits.UseVisualStyleBackColor = true;
+            this.BtnVisits.Click += new System.EventHandler(this.BtnVisits_Click);
             // 
             // BtnCreateVisit
             // 
-            this.BtnCreateVisit.Location = new System.Drawing.Point(380, 151);
+            this.BtnCreateVisit.Location = new System.Drawing.Point(198, 151);
             this.BtnCreateVisit.Margin = new System.Windows.Forms.Padding(1);
             this.BtnCreateVisit.Name = "BtnCreateVisit";
             this.BtnCreateVisit.Size = new System.Drawing.Size(180, 51);
@@ -255,6 +256,7 @@
             this.BtnBackToVisit.TabIndex = 3;
             this.BtnBackToVisit.Text = "Volver a la visita";
             this.BtnBackToVisit.UseVisualStyleBackColor = true;
+            this.BtnBackToVisit.Visible = false;
             this.BtnBackToVisit.Click += new System.EventHandler(this.BtnBackToVisit_Click);
             // 
             // BtnAccountReceivable
@@ -282,7 +284,7 @@
             this.Controls.Add(this.BtnBackToVisit);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnCreateVisit);
-            this.Controls.Add(this.BtnDetails);
+            this.Controls.Add(this.BtnVisits);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.DgvPatientList);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -317,7 +319,7 @@
         public System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.Panel PnlSearch;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button BtnDetails;
+        private System.Windows.Forms.Button BtnVisits;
         private System.Windows.Forms.Button BtnCreateVisit;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.MenuStrip menuStrip1;

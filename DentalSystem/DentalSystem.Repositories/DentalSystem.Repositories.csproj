@@ -54,6 +54,7 @@
     <Compile Include="Repositories\InvoiceDetailRepository.cs" />
     <Compile Include="Repositories\PatientRepository.cs" />
     <Compile Include="Repositories\PaymentRepository.cs" />
+    <Compile Include="Repositories\PlateRegistrationRepository.cs" />
     <Compile Include="Repositories\VisitRepository.cs" />
   </ItemGroup>
   <ItemGroup>

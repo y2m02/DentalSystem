@@ -114,6 +114,12 @@
     <Compile Include="VisitManagement\FrmVisitManagement.Designer.cs">
       <DependentUpon>FrmVisitManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisitManagement\FrmVisitsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitManagement\FrmVisitsList.Designer.cs">
+      <DependentUpon>FrmVisitsList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountReceivable\FrmAccountReceivableList.resx">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VisitManagement\FrmVisitManagement.resx">
       <DependentUpon>FrmVisitManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitManagement\FrmVisitsList.resx">
+      <DependentUpon>FrmVisitsList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

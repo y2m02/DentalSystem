@@ -30,13 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnDeletePayment = new System.Windows.Forms.Button();
+            this.LblPatientName = new System.Windows.Forms.Label();
             this.BtnAddPayment = new System.Windows.Forms.Button();
+            this.LblTotalPending = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.DgvPaymentList = new System.Windows.Forms.DataGridView();
             this.DgvAccountReceivableList = new System.Windows.Forms.DataGridView();
-            this.LblPatientName = new System.Windows.Forms.Label();
-            this.LblTotalPending = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPaymentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
@@ -67,6 +67,17 @@
             this.BtnDeletePayment.UseVisualStyleBackColor = true;
             this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click);
             // 
+            // LblPatientName
+            // 
+            this.LblPatientName.AutoSize = true;
+            this.LblPatientName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientName.Location = new System.Drawing.Point(4, 6);
+            this.LblPatientName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientName.Name = "LblPatientName";
+            this.LblPatientName.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientName.TabIndex = 36;
+            this.LblPatientName.Text = "Nombre del paciente";
+            // 
             // BtnAddPayment
             // 
             this.BtnAddPayment.Location = new System.Drawing.Point(19, 42);
@@ -76,6 +87,17 @@
             this.BtnAddPayment.Text = "Abonar";
             this.BtnAddPayment.UseVisualStyleBackColor = true;
             this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
+            // 
+            // LblTotalPending
+            // 
+            this.LblTotalPending.AutoSize = true;
+            this.LblTotalPending.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalPending.Location = new System.Drawing.Point(502, 87);
+            this.LblTotalPending.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotalPending.Name = "LblTotalPending";
+            this.LblTotalPending.Size = new System.Drawing.Size(219, 24);
+            this.LblTotalPending.TabIndex = 34;
+            this.LblTotalPending.Text = "Total pendiente: RD$0";
             // 
             // label18
             // 
@@ -111,6 +133,7 @@
             this.DgvPaymentList.MultiSelect = false;
             this.DgvPaymentList.Name = "DgvPaymentList";
             this.DgvPaymentList.ReadOnly = true;
+            this.DgvPaymentList.RowHeadersVisible = false;
             this.DgvPaymentList.RowHeadersWidth = 51;
             this.DgvPaymentList.RowTemplate.Height = 24;
             this.DgvPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -129,34 +152,13 @@
             this.DgvAccountReceivableList.MultiSelect = false;
             this.DgvAccountReceivableList.Name = "DgvAccountReceivableList";
             this.DgvAccountReceivableList.ReadOnly = true;
+            this.DgvAccountReceivableList.RowHeadersVisible = false;
             this.DgvAccountReceivableList.RowHeadersWidth = 51;
             this.DgvAccountReceivableList.RowTemplate.Height = 24;
             this.DgvAccountReceivableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvAccountReceivableList.Size = new System.Drawing.Size(893, 260);
             this.DgvAccountReceivableList.TabIndex = 10;
             this.DgvAccountReceivableList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAccountReceivableList_CellClick);
-            // 
-            // LblPatientName
-            // 
-            this.LblPatientName.AutoSize = true;
-            this.LblPatientName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientName.Location = new System.Drawing.Point(4, 6);
-            this.LblPatientName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientName.Name = "LblPatientName";
-            this.LblPatientName.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientName.TabIndex = 36;
-            this.LblPatientName.Text = "Nombre del paciente";
-            // 
-            // LblTotalPending
-            // 
-            this.LblTotalPending.AutoSize = true;
-            this.LblTotalPending.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalPending.Location = new System.Drawing.Point(502, 87);
-            this.LblTotalPending.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotalPending.Name = "LblTotalPending";
-            this.LblTotalPending.Size = new System.Drawing.Size(219, 24);
-            this.LblTotalPending.TabIndex = 34;
-            this.LblTotalPending.Text = "Total pendiente: RD$0";
             // 
             // FrmAccountReceivableList
             // 
@@ -165,7 +167,7 @@
             this.ClientSize = new System.Drawing.Size(948, 683);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(966, 730);
             this.MinimizeBox = false;

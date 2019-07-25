@@ -1,4 +1,5 @@
 ﻿using System;
+using DentalSystem.Entities.Results.PlateRegistration;
 
 namespace DentalSystem.Entities.Results.Patient
 {
@@ -33,5 +34,7 @@ namespace DentalSystem.Entities.Results.Patient
         public bool? HasBleeding { get; set; }
         public bool? HasHepatitis { get; set; }
         public bool? HasAllergicReaction { get; set; }
+
+        public GetPlateRegistrationByPatientIdResult PlateRegistration { get; set; }
     }
 }

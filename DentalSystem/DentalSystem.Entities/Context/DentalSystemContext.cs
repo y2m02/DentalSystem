@@ -21,6 +21,7 @@ namespace DentalSystem.Entities.Context
         public DbSet<Visit> Visits { get; set; }
         public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<PlateRegistration> PlateRegistrations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -33,6 +34,7 @@ namespace DentalSystem.Entities.Context
         public PatientMappings()
         {
             HasRequired(c => c.PatientHealth).WithRequiredPrincipal(e => e.Patient);
+            HasRequired(c => c.PlateRegistration).WithRequiredPrincipal(e => e.Patient);
         }
     }
 
@@ -40,7 +42,7 @@ namespace DentalSystem.Entities.Context
     {
         public VisitMappings()
         {
-            HasRequired(c => c.Odontogram).WithRequiredPrincipal(e => e.Visit);
+            //HasRequired(c => c.Odontogram).WithRequiredPrincipal(e => e.Visit);
             HasRequired(c => c.AccountsReceivable).WithRequiredPrincipal(e => e.Visit);
         }
     }
@@ -50,6 +52,14 @@ namespace DentalSystem.Entities.Context
         public ActivityPerformedMappings()
         {
             HasRequired(c => c.InvoiceDetail).WithRequiredPrincipal(e => e.ActivityPerformed);
+        }
+    }
+
+    public class OdontogramMappings : EntityTypeConfiguration<Odontogram>
+    {
+        public OdontogramMappings()
+        {
+            HasRequired(c => c.TreatmentOdontogram).WithRequiredPrincipal(e => e.Odontogram);
         }
     }
 }

@@ -38,6 +38,9 @@ namespace DentalSystem
             container.RegisterType<IPaymentService, PaymentService>();
             container.RegisterType<IPaymentRepository, PaymentRepository>();
 
+            container.RegisterType<IPlateRegistrationService, PlateRegistrationService>();
+            container.RegisterType<IPlateRegistrationRepository, PlateRegistrationRepository>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(container.Resolve<FrmPatientList>());

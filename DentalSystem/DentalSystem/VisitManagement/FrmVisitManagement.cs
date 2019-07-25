@@ -12,8 +12,10 @@ using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Payment;
+using DentalSystem.Entities.Requests.PlateRegistration;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.InvoiceDetail;
+using DentalSystem.Entities.Results.PlateRegistration;
 
 namespace DentalSystem.VisitManagement
 {
@@ -26,12 +28,13 @@ namespace DentalSystem.VisitManagement
         private readonly IPatientService _patientService;
         private readonly IPaymentService _paymentService;
         private readonly IVisitService _visitService;
+        private readonly IPlateRegistrationService _plateRegistrationService;
         private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
             IActivityPerformedService activityPerformedService, IVisitService visitService,
             IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService,
-            IPaymentService paymentService)
+            IPaymentService paymentService, IPlateRegistrationService plateRegistrationService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
@@ -40,6 +43,7 @@ namespace DentalSystem.VisitManagement
             _invoiceDetailService = invoiceDetailService;
             _accountReceivableService = accountReceivableService;
             _paymentService = paymentService;
+            _plateRegistrationService = plateRegistrationService;
             InitializeComponent();
         }
 
@@ -57,7 +61,7 @@ namespace DentalSystem.VisitManagement
             LblPatientNameInitialOdontogram.Text = LblPatientNameTreatmentOdontogram.Text =
                 LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = "Paciente: " + PatientName;
 
-            SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth);
+            SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth, PnlPlateRegistration);
         }
 
         private void FrmVisitManagement_SizeChanged(object sender, EventArgs e)
@@ -145,6 +149,16 @@ namespace DentalSystem.VisitManagement
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            if (GenericProperties.VisitHasBeenBilled)
+            {
+                MessageBox.Show(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
+                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                ChangeControlsOnSaveOrCancel();
+                SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth);
+                return;
+            }
+
             if (string.IsNullOrEmpty(TxtName.Text.Trim()))
             {
                 MessageBox.Show("El campo Nombre es requerido", "Información", MessageBoxButtons.OK,
@@ -214,6 +228,14 @@ namespace DentalSystem.VisitManagement
 
         private void BtnModify_Click(object sender, EventArgs e)
         {
+            if (GenericProperties.VisitHasBeenBilled)
+            {
+                MessageBox.Show(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
+                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             BtnModifyGeneralInfo.Visible = false;
             BtnSaveGeneralInfo.Visible = true;
 
@@ -262,11 +284,18 @@ namespace DentalSystem.VisitManagement
             e.Handled = true;
         }
 
+        public void ValidateOnlyNumbersNoMsg(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            e.Handled = true;
+        }
+
         private void InitializeControlPositions()
         {
             TclVisitManagement.Width = Width - 158;
 
             BtnModifyGeneralInfo.Location = new Point(BtnSaveGeneralInfo.Location.X, BtnSaveGeneralInfo.Location.Y);
+            BtnModifyRegistration.Location = new Point(BtnSaveRegistration.Location.X, BtnSaveRegistration.Location.Y);
             TxtAdmissionDate.Location = new Point(DtpAdmissionDate.Location.X, DtpAdmissionDate.Location.Y);
             TxtBirthDate.Location = new Point(DtpBirthDate.Location.X, DtpBirthDate.Location.Y);
             TxtAge.Location = new Point(NudAge.Location.X, NudAge.Location.Y);
@@ -312,6 +341,12 @@ namespace DentalSystem.VisitManagement
                             }
 
                         break;
+
+                    case "PnlPlateRegistration":
+                        foreach (var control in panel.Controls)
+                            if (control is TextBox textBox)
+                                textBox.ReadOnly = !isModify;
+                        break;
                 }
 
                 if (!panel.Name.Equals("PnlGender") && !panel.Name.Equals("PnlZone") &&
@@ -326,6 +361,19 @@ namespace DentalSystem.VisitManagement
             }
         }
 
+        private void FillPlateRegistrationInformation(GetPlateRegistrationByPatientIdResult result)
+        {
+            TxtPdb.Text = result.PDB;
+            TxtN16.Text = result.N16;
+            TxtN11.Text = result.N11;
+            TxtN26.Text = result.N26;
+            TxtN36.Text = result.N36;
+            TxtN32.Text = result.N32;
+            TxtN46.Text = result.N46;
+            TxtCt.Text = result.CT;
+            TxtX.Text = result.X;
+            TxtRadiographicInterpretation.Text = result.RadiographicInterpretation;
+        }
         private void FillInformation()
         {
             try
@@ -371,6 +419,7 @@ namespace DentalSystem.VisitManagement
                 ChkHasBeenSickRecently.Checked = patientInfoResult.HasBeenSickRecently.Value;
                 TxtDiseaseCause.Text = patientInfoResult.DiseaseCause;
 
+                FillPlateRegistrationInformation(patientInfoResult.PlateRegistration);
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -1051,6 +1100,79 @@ namespace DentalSystem.VisitManagement
                 MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void BtnModifyRegistration_Click(object sender, EventArgs e)
+        {
+            if (GenericProperties.VisitHasBeenBilled)
+            {
+                MessageBox.Show(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
+                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            BtnModifyRegistration.Visible = false;
+            BtnSaveRegistration.Visible = true;
+
+            SetControlsStatus(true, PnlPlateRegistration);
+        }
+
+        private void BtnSaveRegistration_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (GenericProperties.VisitHasBeenBilled)
+                {
+                    MessageBox.Show(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    BtnSaveRegistration.Visible = false;
+                    BtnModifyRegistration.Visible = true;
+                    SetControlsStatus(false, PnlPlateRegistration);
+                    return;
+                }
+
+                Cursor.Current = Cursors.WaitCursor;
+                var updatePlateRegistrationRequest = new UpdatePlateRegistrationRequest
+                {
+                    PlateRegistrationId = PatientId,
+                    RadiographicInterpretation = TxtRadiographicInterpretation.Text.Trim(),
+                    N36 = TxtN36.Text.Trim(),
+                    N11 = TxtN11.Text.Trim(),
+                    N16 = TxtN16.Text.Trim(),
+                    CT = TxtCt.Text.Trim(),
+                    N32 = TxtN32.Text.Trim(),
+                    PDB = TxtPdb.Text.Trim(),
+                    X = TxtX.Text.Trim(),
+                    N46 = TxtN46.Text.Trim(),
+                    N26 = TxtN26.Text.Trim(),
+                    Mapper = _iMapper
+                };
+
+                _plateRegistrationService.UpdatePlateRegistration(updatePlateRegistrationRequest);
+
+                BtnSaveRegistration.Visible = false;
+                BtnModifyRegistration.Visible = true;
+                SetControlsStatus(false, PnlPlateRegistration);
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnCancelRegistration_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.None;
+            BtnSaveRegistration.Visible = false;
+            BtnModifyRegistration.Visible = true;
+            SetControlsStatus(false, PnlPlateRegistration);
         }
     }
 }

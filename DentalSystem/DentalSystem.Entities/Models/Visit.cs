@@ -15,7 +15,7 @@ namespace DentalSystem.Entities.Models
         public bool HasBeenBilled { get; set; }
 
         public Patient Patient { get; set; }
-        public virtual Odontogram Odontogram { get; set; }
+        public virtual List<Odontogram> Odontograms { get; set; }
         public virtual AccountsReceivable AccountsReceivable { get; set; }
         public virtual ICollection<ActivityPerformed> ActivitiesPerformed { get; set; }
         //public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }

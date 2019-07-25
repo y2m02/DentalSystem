@@ -14,7 +14,7 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var patient = context.Patients.Include(w => w.PatientHealth)
+                var patient = context.Patients.Include(w => w.PatientHealth).Include(w => w.PlateRegistration)
                     .FirstOrDefault(w => w.PatientId == patientId && w.DeletedOn == null);
 
                 return patient;

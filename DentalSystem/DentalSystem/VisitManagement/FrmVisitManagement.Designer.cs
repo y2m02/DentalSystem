@@ -91,6 +91,30 @@
             this.TabActivitiesPermormed = new System.Windows.Forms.TabPage();
             this.LblPatientNameActivitiesPerformed = new System.Windows.Forms.Label();
             this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
+            this.PnlPlateRegistration = new System.Windows.Forms.Panel();
+            this.TxtPdb = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.TxtRadiographicInterpretation = new System.Windows.Forms.TextBox();
+            this.TxtX = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TxtCt = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.TxtN46 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.TxtN32 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.TxtN36 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.TxtN26 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.TxtN11 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.TxtN16 = new System.Windows.Forms.TextBox();
+            this.BtnModifyRegistration = new System.Windows.Forms.Button();
+            this.BtnSaveRegistration = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
             this.BtnDeleteActivity = new System.Windows.Forms.Button();
@@ -100,8 +124,10 @@
             this.TabInvoice = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnEndInvoice = new System.Windows.Forms.Button();
+            this.BtnDeletePayment = new System.Windows.Forms.Button();
             this.BtnAddPayment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -116,8 +142,7 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.BtnDeletePayment = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
+            this.BtnCancelRegistration = new System.Windows.Forms.Button();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -130,6 +155,7 @@
             this.TabTreatmentOdontogram.SuspendLayout();
             this.TabActivitiesPermormed.SuspendLayout();
             this.PnlActivitiesPerformed.SuspendLayout();
+            this.PnlPlateRegistration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).BeginInit();
             this.TabInvoice.SuspendLayout();
@@ -842,16 +868,20 @@
             // LblPatientNameActivitiesPerformed
             // 
             this.LblPatientNameActivitiesPerformed.AutoSize = true;
-            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
             this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
-            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(249, 29);
+            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
             this.LblPatientNameActivitiesPerformed.TabIndex = 33;
             this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
             // 
             // PnlActivitiesPerformed
             // 
+            this.PnlActivitiesPerformed.Controls.Add(this.PnlPlateRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnCancelRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnSaveRegistration);
             this.PnlActivitiesPerformed.Controls.Add(this.label10);
             this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesListHistory);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnDeleteActivity);
@@ -863,11 +893,291 @@
             this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 618);
             this.PnlActivitiesPerformed.TabIndex = 32;
             // 
+            // PnlPlateRegistration
+            // 
+            this.PnlPlateRegistration.Controls.Add(this.TxtPdb);
+            this.PnlPlateRegistration.Controls.Add(this.label19);
+            this.PnlPlateRegistration.Controls.Add(this.label21);
+            this.PnlPlateRegistration.Controls.Add(this.label22);
+            this.PnlPlateRegistration.Controls.Add(this.TxtRadiographicInterpretation);
+            this.PnlPlateRegistration.Controls.Add(this.TxtX);
+            this.PnlPlateRegistration.Controls.Add(this.label20);
+            this.PnlPlateRegistration.Controls.Add(this.label23);
+            this.PnlPlateRegistration.Controls.Add(this.TxtCt);
+            this.PnlPlateRegistration.Controls.Add(this.label24);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN46);
+            this.PnlPlateRegistration.Controls.Add(this.label25);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN32);
+            this.PnlPlateRegistration.Controls.Add(this.label26);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN36);
+            this.PnlPlateRegistration.Controls.Add(this.label27);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN26);
+            this.PnlPlateRegistration.Controls.Add(this.label28);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN11);
+            this.PnlPlateRegistration.Controls.Add(this.label29);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN16);
+            this.PnlPlateRegistration.Location = new System.Drawing.Point(3, 390);
+            this.PnlPlateRegistration.Name = "PnlPlateRegistration";
+            this.PnlPlateRegistration.Size = new System.Drawing.Size(1083, 224);
+            this.PnlPlateRegistration.TabIndex = 42;
+            // 
+            // TxtPdb
+            // 
+            this.TxtPdb.Location = new System.Drawing.Point(5, 31);
+            this.TxtPdb.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPdb.MaxLength = 30;
+            this.TxtPdb.Name = "TxtPdb";
+            this.TxtPdb.ShortcutsEnabled = false;
+            this.TxtPdb.Size = new System.Drawing.Size(102, 30);
+            this.TxtPdb.TabIndex = 0;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1, 3);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(175, 24);
+            this.label19.TabIndex = 34;
+            this.label19.Text = "Registro de placa";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(27, 62);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(51, 24);
+            this.label21.TabIndex = 34;
+            this.label21.Text = "PDB";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(146, 62);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(32, 24);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "16";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtRadiographicInterpretation
+            // 
+            this.TxtRadiographicInterpretation.Location = new System.Drawing.Point(5, 128);
+            this.TxtRadiographicInterpretation.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtRadiographicInterpretation.MaxLength = 399;
+            this.TxtRadiographicInterpretation.Multiline = true;
+            this.TxtRadiographicInterpretation.Name = "TxtRadiographicInterpretation";
+            this.TxtRadiographicInterpretation.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.TxtRadiographicInterpretation.Size = new System.Drawing.Size(1074, 92);
+            this.TxtRadiographicInterpretation.TabIndex = 9;
+            // 
+            // TxtX
+            // 
+            this.TxtX.Location = new System.Drawing.Point(978, 31);
+            this.TxtX.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtX.MaxLength = 30;
+            this.TxtX.Name = "TxtX";
+            this.TxtX.ShortcutsEnabled = false;
+            this.TxtX.Size = new System.Drawing.Size(102, 30);
+            this.TxtX.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(1, 100);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(261, 24);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Interpretación radiográfica";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(260, 62);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(31, 24);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "11";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtCt
+            // 
+            this.TxtCt.Location = new System.Drawing.Point(868, 31);
+            this.TxtCt.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCt.MaxLength = 30;
+            this.TxtCt.Name = "TxtCt";
+            this.TxtCt.ShortcutsEnabled = false;
+            this.TxtCt.Size = new System.Drawing.Size(102, 30);
+            this.TxtCt.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(369, 62);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(32, 24);
+            this.label24.TabIndex = 34;
+            this.label24.Text = "26";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN46
+            // 
+            this.TxtN46.Location = new System.Drawing.Point(758, 31);
+            this.TxtN46.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN46.MaxLength = 30;
+            this.TxtN46.Name = "TxtN46";
+            this.TxtN46.ShortcutsEnabled = false;
+            this.TxtN46.Size = new System.Drawing.Size(102, 30);
+            this.TxtN46.TabIndex = 6;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(505, 62);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(32, 24);
+            this.label25.TabIndex = 34;
+            this.label25.Text = "36";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN32
+            // 
+            this.TxtN32.Location = new System.Drawing.Point(602, 31);
+            this.TxtN32.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN32.MaxLength = 30;
+            this.TxtN32.Name = "TxtN32";
+            this.TxtN32.ShortcutsEnabled = false;
+            this.TxtN32.Size = new System.Drawing.Size(149, 30);
+            this.TxtN32.TabIndex = 5;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(663, 62);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(32, 24);
+            this.label26.TabIndex = 34;
+            this.label26.Text = "32";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN36
+            // 
+            this.TxtN36.Location = new System.Drawing.Point(445, 31);
+            this.TxtN36.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN36.MaxLength = 30;
+            this.TxtN36.Name = "TxtN36";
+            this.TxtN36.ShortcutsEnabled = false;
+            this.TxtN36.Size = new System.Drawing.Size(149, 30);
+            this.TxtN36.TabIndex = 4;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(794, 62);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(32, 24);
+            this.label27.TabIndex = 34;
+            this.label27.Text = "46";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN26
+            // 
+            this.TxtN26.Location = new System.Drawing.Point(335, 31);
+            this.TxtN26.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN26.MaxLength = 30;
+            this.TxtN26.Name = "TxtN26";
+            this.TxtN26.ShortcutsEnabled = false;
+            this.TxtN26.Size = new System.Drawing.Size(102, 30);
+            this.TxtN26.TabIndex = 3;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(902, 62);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(37, 24);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "CT";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN11
+            // 
+            this.TxtN11.Location = new System.Drawing.Point(225, 31);
+            this.TxtN11.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN11.MaxLength = 30;
+            this.TxtN11.Name = "TxtN11";
+            this.TxtN11.ShortcutsEnabled = false;
+            this.TxtN11.Size = new System.Drawing.Size(102, 30);
+            this.TxtN11.TabIndex = 2;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(1019, 62);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(23, 24);
+            this.label29.TabIndex = 34;
+            this.label29.Text = "X";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN16
+            // 
+            this.TxtN16.Location = new System.Drawing.Point(115, 31);
+            this.TxtN16.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN16.MaxLength = 30;
+            this.TxtN16.Name = "TxtN16";
+            this.TxtN16.ShortcutsEnabled = false;
+            this.TxtN16.Size = new System.Drawing.Size(102, 30);
+            this.TxtN16.TabIndex = 1;
+            // 
+            // BtnModifyRegistration
+            // 
+            this.BtnModifyRegistration.Location = new System.Drawing.Point(240, 351);
+            this.BtnModifyRegistration.Name = "BtnModifyRegistration";
+            this.BtnModifyRegistration.Size = new System.Drawing.Size(110, 35);
+            this.BtnModifyRegistration.TabIndex = 39;
+            this.BtnModifyRegistration.Text = "Modificar";
+            this.BtnModifyRegistration.UseVisualStyleBackColor = true;
+            this.BtnModifyRegistration.Click += new System.EventHandler(this.BtnModifyRegistration_Click);
+            // 
+            // BtnSaveRegistration
+            // 
+            this.BtnSaveRegistration.Location = new System.Drawing.Point(8, 351);
+            this.BtnSaveRegistration.Name = "BtnSaveRegistration";
+            this.BtnSaveRegistration.Size = new System.Drawing.Size(110, 35);
+            this.BtnSaveRegistration.TabIndex = 40;
+            this.BtnSaveRegistration.Text = "Guardar";
+            this.BtnSaveRegistration.UseVisualStyleBackColor = true;
+            this.BtnSaveRegistration.Visible = false;
+            this.BtnSaveRegistration.Click += new System.EventHandler(this.BtnSaveRegistration_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 320);
+            this.label10.Location = new System.Drawing.Point(540, 22);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(418, 24);
@@ -881,24 +1191,25 @@
             this.DgvActivitiesListHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvActivitiesListHistory.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvActivitiesListHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvActivitiesListHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(0, 348);
+            this.DgvActivitiesListHistory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(540, 52);
             this.DgvActivitiesListHistory.Margin = new System.Windows.Forms.Padding(4);
             this.DgvActivitiesListHistory.MultiSelect = false;
             this.DgvActivitiesListHistory.Name = "DgvActivitiesListHistory";
             this.DgvActivitiesListHistory.ReadOnly = true;
+            this.DgvActivitiesListHistory.RowHeadersVisible = false;
             this.DgvActivitiesListHistory.RowHeadersWidth = 51;
             this.DgvActivitiesListHistory.RowTemplate.Height = 24;
             this.DgvActivitiesListHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(1086, 270);
+            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(543, 268);
             this.DgvActivitiesListHistory.TabIndex = 10;
             // 
             // BtnDeleteActivity
             // 
-            this.BtnDeleteActivity.Location = new System.Drawing.Point(365, 10);
+            this.BtnDeleteActivity.Location = new System.Drawing.Point(339, 6);
             this.BtnDeleteActivity.Margin = new System.Windows.Forms.Padding(1);
             this.BtnDeleteActivity.Name = "BtnDeleteActivity";
-            this.BtnDeleteActivity.Size = new System.Drawing.Size(180, 51);
+            this.BtnDeleteActivity.Size = new System.Drawing.Size(167, 41);
             this.BtnDeleteActivity.TabIndex = 8;
             this.BtnDeleteActivity.Text = "Eliminar";
             this.BtnDeleteActivity.UseVisualStyleBackColor = true;
@@ -906,10 +1217,10 @@
             // 
             // BtnModifyActivity
             // 
-            this.BtnModifyActivity.Location = new System.Drawing.Point(183, 10);
+            this.BtnModifyActivity.Location = new System.Drawing.Point(170, 6);
             this.BtnModifyActivity.Margin = new System.Windows.Forms.Padding(1);
             this.BtnModifyActivity.Name = "BtnModifyActivity";
-            this.BtnModifyActivity.Size = new System.Drawing.Size(180, 51);
+            this.BtnModifyActivity.Size = new System.Drawing.Size(167, 41);
             this.BtnModifyActivity.TabIndex = 6;
             this.BtnModifyActivity.Text = "Modificar";
             this.BtnModifyActivity.UseVisualStyleBackColor = true;
@@ -917,10 +1228,10 @@
             // 
             // btnAddActivity
             // 
-            this.btnAddActivity.Location = new System.Drawing.Point(1, 10);
+            this.btnAddActivity.Location = new System.Drawing.Point(1, 6);
             this.btnAddActivity.Margin = new System.Windows.Forms.Padding(1);
             this.btnAddActivity.Name = "btnAddActivity";
-            this.btnAddActivity.Size = new System.Drawing.Size(180, 51);
+            this.btnAddActivity.Size = new System.Drawing.Size(167, 41);
             this.btnAddActivity.TabIndex = 5;
             this.btnAddActivity.Text = "Agregar";
             this.btnAddActivity.UseVisualStyleBackColor = true;
@@ -933,15 +1244,16 @@
             this.DgvActivitiesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvActivitiesList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvActivitiesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 70);
+            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 52);
             this.DgvActivitiesList.Margin = new System.Windows.Forms.Padding(4);
             this.DgvActivitiesList.MultiSelect = false;
             this.DgvActivitiesList.Name = "DgvActivitiesList";
             this.DgvActivitiesList.ReadOnly = true;
+            this.DgvActivitiesList.RowHeadersVisible = false;
             this.DgvActivitiesList.RowHeadersWidth = 51;
             this.DgvActivitiesList.RowTemplate.Height = 24;
             this.DgvActivitiesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivitiesList.Size = new System.Drawing.Size(1086, 228);
+            this.DgvActivitiesList.Size = new System.Drawing.Size(532, 268);
             this.DgvActivitiesList.TabIndex = 9;
             // 
             // TabInvoice
@@ -984,6 +1296,16 @@
             this.BtnEndInvoice.UseVisualStyleBackColor = true;
             this.BtnEndInvoice.Click += new System.EventHandler(this.BtnEndInvoice_Click);
             // 
+            // BtnDeletePayment
+            // 
+            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 300);
+            this.BtnDeletePayment.Name = "BtnDeletePayment";
+            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnDeletePayment.TabIndex = 40;
+            this.BtnDeletePayment.Text = "Eliminar abono";
+            this.BtnDeletePayment.UseVisualStyleBackColor = true;
+            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click_1);
+            // 
             // BtnAddPayment
             // 
             this.BtnAddPayment.Location = new System.Drawing.Point(8, 300);
@@ -998,23 +1320,34 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(556, 5);
+            this.label17.Location = new System.Drawing.Point(544, 12);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(324, 24);
+            this.label17.Size = new System.Drawing.Size(317, 24);
             this.label17.TabIndex = 34;
-            this.label17.Text = "Actividades de visitas anteriores:";
+            this.label17.Text = "Actividades de visitas anteriores";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(2, 345);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(194, 24);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "Cuentas por cobrar";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(556, 345);
+            this.label13.Location = new System.Drawing.Point(544, 345);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 24);
+            this.label13.Size = new System.Drawing.Size(82, 24);
             this.label13.TabIndex = 34;
-            this.label13.Text = "Abonos:";
+            this.label13.Text = "Abonos";
             // 
             // LblTotalCurrentVisit
             // 
@@ -1031,12 +1364,12 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(4, 5);
+            this.label14.Location = new System.Drawing.Point(2, 12);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(257, 24);
+            this.label14.Size = new System.Drawing.Size(250, 24);
             this.label14.TabIndex = 34;
-            this.label14.Text = "Actividades de esta visita:";
+            this.label14.Text = "Actividades de esta visita";
             // 
             // DgvPaymentList
             // 
@@ -1045,15 +1378,16 @@
             this.DgvPaymentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvPaymentList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvPaymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPaymentList.Location = new System.Drawing.Point(551, 373);
+            this.DgvPaymentList.Location = new System.Drawing.Point(540, 373);
             this.DgvPaymentList.Margin = new System.Windows.Forms.Padding(4);
             this.DgvPaymentList.MultiSelect = false;
             this.DgvPaymentList.Name = "DgvPaymentList";
             this.DgvPaymentList.ReadOnly = true;
+            this.DgvPaymentList.RowHeadersVisible = false;
             this.DgvPaymentList.RowHeadersWidth = 51;
             this.DgvPaymentList.RowTemplate.Height = 24;
             this.DgvPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvPaymentList.Size = new System.Drawing.Size(532, 245);
+            this.DgvPaymentList.Size = new System.Drawing.Size(543, 245);
             this.DgvPaymentList.TabIndex = 10;
             // 
             // DgvAccountReceivableList
@@ -1068,6 +1402,7 @@
             this.DgvAccountReceivableList.MultiSelect = false;
             this.DgvAccountReceivableList.Name = "DgvAccountReceivableList";
             this.DgvAccountReceivableList.ReadOnly = true;
+            this.DgvAccountReceivableList.RowHeadersVisible = false;
             this.DgvAccountReceivableList.RowHeadersWidth = 51;
             this.DgvAccountReceivableList.RowTemplate.Height = 24;
             this.DgvAccountReceivableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1082,15 +1417,16 @@
             this.DgvItemsToBillOtherVisits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvItemsToBillOtherVisits.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvItemsToBillOtherVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvItemsToBillOtherVisits.Location = new System.Drawing.Point(551, 41);
+            this.DgvItemsToBillOtherVisits.Location = new System.Drawing.Point(540, 41);
             this.DgvItemsToBillOtherVisits.Margin = new System.Windows.Forms.Padding(4);
             this.DgvItemsToBillOtherVisits.MultiSelect = false;
             this.DgvItemsToBillOtherVisits.Name = "DgvItemsToBillOtherVisits";
             this.DgvItemsToBillOtherVisits.ReadOnly = true;
+            this.DgvItemsToBillOtherVisits.RowHeadersVisible = false;
             this.DgvItemsToBillOtherVisits.RowHeadersWidth = 51;
             this.DgvItemsToBillOtherVisits.RowTemplate.Height = 24;
             this.DgvItemsToBillOtherVisits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvItemsToBillOtherVisits.Size = new System.Drawing.Size(532, 219);
+            this.DgvItemsToBillOtherVisits.Size = new System.Drawing.Size(543, 219);
             this.DgvItemsToBillOtherVisits.TabIndex = 9;
             this.DgvItemsToBillOtherVisits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
             this.DgvItemsToBillOtherVisits.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
@@ -1108,6 +1444,7 @@
             this.DgvItemsToBill.MultiSelect = false;
             this.DgvItemsToBill.Name = "DgvItemsToBill";
             this.DgvItemsToBill.ReadOnly = true;
+            this.DgvItemsToBill.RowHeadersVisible = false;
             this.DgvItemsToBill.RowHeadersWidth = 51;
             this.DgvItemsToBill.RowTemplate.Height = 24;
             this.DgvItemsToBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1195,26 +1532,15 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
-            // BtnDeletePayment
+            // BtnCancelRegistration
             // 
-            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 300);
-            this.BtnDeletePayment.Name = "BtnDeletePayment";
-            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
-            this.BtnDeletePayment.TabIndex = 40;
-            this.BtnDeletePayment.Text = "Eliminar abono";
-            this.BtnDeletePayment.UseVisualStyleBackColor = true;
-            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click_1);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(4, 345);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(201, 24);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "Cuentas por cobrar:";
+            this.BtnCancelRegistration.Location = new System.Drawing.Point(124, 351);
+            this.BtnCancelRegistration.Name = "BtnCancelRegistration";
+            this.BtnCancelRegistration.Size = new System.Drawing.Size(110, 35);
+            this.BtnCancelRegistration.TabIndex = 39;
+            this.BtnCancelRegistration.Text = "Cancelar";
+            this.BtnCancelRegistration.UseVisualStyleBackColor = true;
+            this.BtnCancelRegistration.Click += new System.EventHandler(this.BtnCancelRegistration_Click);
             // 
             // FrmVisitManagement
             // 
@@ -1262,6 +1588,8 @@
             this.TabActivitiesPermormed.PerformLayout();
             this.PnlActivitiesPerformed.ResumeLayout(false);
             this.PnlActivitiesPerformed.PerformLayout();
+            this.PnlPlateRegistration.ResumeLayout(false);
+            this.PnlPlateRegistration.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).EndInit();
             this.TabInvoice.ResumeLayout(false);
@@ -1353,7 +1681,6 @@
         private System.Windows.Forms.Label LblPatientNameTreatmentOdontogram;
         private System.Windows.Forms.Label LblPatientNameActivitiesPerformed;
         private System.Windows.Forms.Label LblPatientNameInvoice;
-        private System.Windows.Forms.DataGridView DgvActivitiesListHistory;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView DgvAccountReceivableList;
@@ -1368,5 +1695,31 @@
         private System.Windows.Forms.DataGridView DgvPaymentList;
         private System.Windows.Forms.Button BtnDeletePayment;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox TxtRadiographicInterpretation;
+        private System.Windows.Forms.TextBox TxtPdb;
+        private System.Windows.Forms.TextBox TxtX;
+        private System.Windows.Forms.TextBox TxtCt;
+        private System.Windows.Forms.TextBox TxtN46;
+        private System.Windows.Forms.TextBox TxtN32;
+        private System.Windows.Forms.TextBox TxtN36;
+        private System.Windows.Forms.TextBox TxtN26;
+        private System.Windows.Forms.TextBox TxtN11;
+        private System.Windows.Forms.TextBox TxtN16;
+        private System.Windows.Forms.Panel PnlPlateRegistration;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button BtnModifyRegistration;
+        private System.Windows.Forms.Button BtnSaveRegistration;
+        private System.Windows.Forms.DataGridView DgvActivitiesListHistory;
+        private System.Windows.Forms.Button BtnCancelRegistration;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
@@ -58,7 +58,17 @@ namespace DentalSystem.Repositories.Repositories
                 var hasBeenBilled = context.Visits.Where(w => w.VisitId == visitId).Select(w => w.HasBeenBilled);
 
                 return hasBeenBilled.FirstOrDefault();
+            }
+        }
 
+        public List<Visit> GetVisitsByPatientId(int patientId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var visit = context.Visits.Where(w => w.PatientId == patientId).OrderByDescending(w => w.VisitId)
+                    .ToList();
+
+                return visit;
             }
         }
     }

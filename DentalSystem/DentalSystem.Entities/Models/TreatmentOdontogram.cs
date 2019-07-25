@@ -1,17 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DentalSystem.Entities.Models
 {
-    public class Odontogram
+    public class TreatmentOdontogram
     {
-        [Key] public int OdontogramId { get; set; }
+        [Key,ForeignKey("Odontogram")] public int TreatmentOdontogramId { get; set; }
         [ForeignKey("Visit")] public int VisitId { get; set; }
         [Required] public string Information { get; set; }
         [Required] public int CavitiesQuantity { get; set; }
 
         public Visit Visit { get; set; }
-        public TreatmentOdontogram TreatmentOdontogram { get; set; }
+        public Odontogram Odontogram { get; set; }
     }
 }
