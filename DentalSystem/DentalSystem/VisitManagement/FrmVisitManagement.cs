@@ -1257,7 +1257,7 @@ namespace DentalSystem.VisitManagement
 
                 var updateTreatmentOdontogramRequest = new UpdateTreatmentOdontogramRequest
                 {
-                    TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text.Split('/')[1].Trim()),
+                    TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text),
                     //TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text),
                     Information = jsonButtonList,
                     CavitiesQuantity = cavitiesQuantity
@@ -1265,7 +1265,7 @@ namespace DentalSystem.VisitManagement
 
                 var updateOdontogramRequest = new UpdateOdontogramRequest
                 {
-                    OdontogramId = Convert.ToInt32(LblOdontogramId.Text.Split('/')[1].Trim()),
+                    OdontogramId = Convert.ToInt32(LblOdontogramId.Text),
                     //OdontogramId = Convert.ToInt32(LblOdontogramId.Text),
                     Information = jsonButtonList,
                     CavitiesQuantity = cavitiesQuantity,
