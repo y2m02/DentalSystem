@@ -800,6 +800,7 @@
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
             this.LblOdontogramId = new System.Windows.Forms.Label();
+            this.LblTotalCavities = new System.Windows.Forms.Label();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -1493,6 +1494,7 @@
             this.TabInitialOdontogram.BackColor = System.Drawing.SystemColors.Control;
             this.TabInitialOdontogram.Controls.Add(this.PnlTeeth);
             this.TabInitialOdontogram.Controls.Add(this.LblOdontogramId);
+            this.TabInitialOdontogram.Controls.Add(this.LblTotalCavities);
             this.TabInitialOdontogram.Controls.Add(this.LblPatientNameInitialOdontogram);
             this.TabInitialOdontogram.Location = new System.Drawing.Point(4, 32);
             this.TabInitialOdontogram.Name = "TabInitialOdontogram";
@@ -1843,2083 +1845,2343 @@
             // 
             // BtnToothBottom_38
             // 
+            this.BtnToothBottom_38.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_38.Location = new System.Drawing.Point(1046, 246);
             this.BtnToothBottom_38.Name = "BtnToothBottom_38";
             this.BtnToothBottom_38.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_38.TabIndex = 5;
-            this.BtnToothBottom_38.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_38.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_28
             // 
+            this.BtnToothBottom_28.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_28.Location = new System.Drawing.Point(1046, 143);
             this.BtnToothBottom_28.Name = "BtnToothBottom_28";
             this.BtnToothBottom_28.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_28.TabIndex = 5;
-            this.BtnToothBottom_28.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_28.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_81
             // 
+            this.BtnToothBottom_81.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_81.Location = new System.Drawing.Point(468, 484);
             this.BtnToothBottom_81.Name = "BtnToothBottom_81";
             this.BtnToothBottom_81.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_81.TabIndex = 5;
-            this.BtnToothBottom_81.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_81.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_41
             // 
+            this.BtnToothBottom_41.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_41.Location = new System.Drawing.Point(468, 246);
             this.BtnToothBottom_41.Name = "BtnToothBottom_41";
             this.BtnToothBottom_41.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_41.TabIndex = 5;
-            this.BtnToothBottom_41.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_41.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_51
             // 
+            this.BtnToothBottom_51.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_51.Location = new System.Drawing.Point(468, 381);
             this.BtnToothBottom_51.Name = "BtnToothBottom_51";
             this.BtnToothBottom_51.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_51.TabIndex = 5;
-            this.BtnToothBottom_51.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_51.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_11
             // 
+            this.BtnToothBottom_11.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_11.Location = new System.Drawing.Point(468, 143);
             this.BtnToothBottom_11.Name = "BtnToothBottom_11";
             this.BtnToothBottom_11.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_11.TabIndex = 5;
-            this.BtnToothBottom_11.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_11.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_74
             // 
+            this.BtnToothBottom_74.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_74.Location = new System.Drawing.Point(790, 484);
             this.BtnToothBottom_74.Name = "BtnToothBottom_74";
             this.BtnToothBottom_74.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_74.TabIndex = 5;
-            this.BtnToothBottom_74.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_74.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_34
             // 
+            this.BtnToothBottom_34.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_34.Location = new System.Drawing.Point(790, 246);
             this.BtnToothBottom_34.Name = "BtnToothBottom_34";
             this.BtnToothBottom_34.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_34.TabIndex = 5;
-            this.BtnToothBottom_34.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_34.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_64
             // 
+            this.BtnToothBottom_64.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_64.Location = new System.Drawing.Point(790, 381);
             this.BtnToothBottom_64.Name = "BtnToothBottom_64";
             this.BtnToothBottom_64.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_64.TabIndex = 5;
-            this.BtnToothBottom_64.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_64.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_24
             // 
+            this.BtnToothBottom_24.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_24.Location = new System.Drawing.Point(790, 143);
             this.BtnToothBottom_24.Name = "BtnToothBottom_24";
             this.BtnToothBottom_24.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_24.TabIndex = 5;
-            this.BtnToothBottom_24.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_24.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_85
             // 
+            this.BtnToothBottom_85.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_85.Location = new System.Drawing.Point(212, 484);
             this.BtnToothBottom_85.Name = "BtnToothBottom_85";
             this.BtnToothBottom_85.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_85.TabIndex = 5;
-            this.BtnToothBottom_85.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_85.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_45
             // 
+            this.BtnToothBottom_45.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_45.Location = new System.Drawing.Point(212, 246);
             this.BtnToothBottom_45.Name = "BtnToothBottom_45";
             this.BtnToothBottom_45.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_45.TabIndex = 5;
-            this.BtnToothBottom_45.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_45.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_55
             // 
+            this.BtnToothBottom_55.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_55.Location = new System.Drawing.Point(212, 381);
             this.BtnToothBottom_55.Name = "BtnToothBottom_55";
             this.BtnToothBottom_55.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_55.TabIndex = 5;
-            this.BtnToothBottom_55.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_55.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_15
             // 
+            this.BtnToothBottom_15.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_15.Location = new System.Drawing.Point(212, 143);
             this.BtnToothBottom_15.Name = "BtnToothBottom_15";
             this.BtnToothBottom_15.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_15.TabIndex = 5;
-            this.BtnToothBottom_15.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_15.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_36
             // 
+            this.BtnToothBottom_36.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_36.Location = new System.Drawing.Point(918, 246);
             this.BtnToothBottom_36.Name = "BtnToothBottom_36";
             this.BtnToothBottom_36.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_36.TabIndex = 5;
-            this.BtnToothBottom_36.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_36.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_26
             // 
+            this.BtnToothBottom_26.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_26.Location = new System.Drawing.Point(918, 143);
             this.BtnToothBottom_26.Name = "BtnToothBottom_26";
             this.BtnToothBottom_26.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_26.TabIndex = 5;
-            this.BtnToothBottom_26.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_26.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_83
             // 
+            this.BtnToothBottom_83.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_83.Location = new System.Drawing.Point(340, 484);
             this.BtnToothBottom_83.Name = "BtnToothBottom_83";
             this.BtnToothBottom_83.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_83.TabIndex = 5;
-            this.BtnToothBottom_83.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_83.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_43
             // 
+            this.BtnToothBottom_43.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_43.Location = new System.Drawing.Point(340, 246);
             this.BtnToothBottom_43.Name = "BtnToothBottom_43";
             this.BtnToothBottom_43.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_43.TabIndex = 5;
-            this.BtnToothBottom_43.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_43.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_72
             // 
+            this.BtnToothBottom_72.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_72.Location = new System.Drawing.Point(662, 484);
             this.BtnToothBottom_72.Name = "BtnToothBottom_72";
             this.BtnToothBottom_72.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_72.TabIndex = 5;
-            this.BtnToothBottom_72.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_72.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_32
             // 
+            this.BtnToothBottom_32.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_32.Location = new System.Drawing.Point(662, 246);
             this.BtnToothBottom_32.Name = "BtnToothBottom_32";
             this.BtnToothBottom_32.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_32.TabIndex = 5;
-            this.BtnToothBottom_32.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_32.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_53
             // 
+            this.BtnToothBottom_53.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_53.Location = new System.Drawing.Point(340, 381);
             this.BtnToothBottom_53.Name = "BtnToothBottom_53";
             this.BtnToothBottom_53.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_53.TabIndex = 5;
-            this.BtnToothBottom_53.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_53.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_13
             // 
+            this.BtnToothBottom_13.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_13.Location = new System.Drawing.Point(340, 143);
             this.BtnToothBottom_13.Name = "BtnToothBottom_13";
             this.BtnToothBottom_13.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_13.TabIndex = 5;
-            this.BtnToothBottom_13.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_13.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_47
             // 
+            this.BtnToothBottom_47.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_47.Location = new System.Drawing.Point(84, 246);
             this.BtnToothBottom_47.Name = "BtnToothBottom_47";
             this.BtnToothBottom_47.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_47.TabIndex = 5;
-            this.BtnToothBottom_47.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_47.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_62
             // 
+            this.BtnToothBottom_62.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_62.Location = new System.Drawing.Point(662, 381);
             this.BtnToothBottom_62.Name = "BtnToothBottom_62";
             this.BtnToothBottom_62.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_62.TabIndex = 5;
-            this.BtnToothBottom_62.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_62.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_22
             // 
+            this.BtnToothBottom_22.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_22.Location = new System.Drawing.Point(662, 143);
             this.BtnToothBottom_22.Name = "BtnToothBottom_22";
             this.BtnToothBottom_22.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_22.TabIndex = 5;
-            this.BtnToothBottom_22.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_22.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_37
             // 
+            this.BtnToothBottom_37.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_37.Location = new System.Drawing.Point(982, 246);
             this.BtnToothBottom_37.Name = "BtnToothBottom_37";
             this.BtnToothBottom_37.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_37.TabIndex = 5;
-            this.BtnToothBottom_37.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_37.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_17
             // 
+            this.BtnToothBottom_17.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_17.Location = new System.Drawing.Point(84, 143);
             this.BtnToothBottom_17.Name = "BtnToothBottom_17";
             this.BtnToothBottom_17.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_17.TabIndex = 5;
-            this.BtnToothBottom_17.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_17.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_82
             // 
+            this.BtnToothBottom_82.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_82.Location = new System.Drawing.Point(404, 484);
             this.BtnToothBottom_82.Name = "BtnToothBottom_82";
             this.BtnToothBottom_82.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_82.TabIndex = 5;
-            this.BtnToothBottom_82.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_82.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_42
             // 
+            this.BtnToothBottom_42.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_42.Location = new System.Drawing.Point(404, 246);
             this.BtnToothBottom_42.Name = "BtnToothBottom_42";
             this.BtnToothBottom_42.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_42.TabIndex = 5;
-            this.BtnToothBottom_42.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_42.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_27
             // 
+            this.BtnToothBottom_27.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_27.Location = new System.Drawing.Point(982, 143);
             this.BtnToothBottom_27.Name = "BtnToothBottom_27";
             this.BtnToothBottom_27.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_27.TabIndex = 5;
-            this.BtnToothBottom_27.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_27.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_73
             // 
+            this.BtnToothBottom_73.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_73.Location = new System.Drawing.Point(726, 484);
             this.BtnToothBottom_73.Name = "BtnToothBottom_73";
             this.BtnToothBottom_73.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_73.TabIndex = 5;
-            this.BtnToothBottom_73.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_73.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_33
             // 
+            this.BtnToothBottom_33.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_33.Location = new System.Drawing.Point(726, 246);
             this.BtnToothBottom_33.Name = "BtnToothBottom_33";
             this.BtnToothBottom_33.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_33.TabIndex = 5;
-            this.BtnToothBottom_33.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_33.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_52
             // 
+            this.BtnToothBottom_52.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_52.Location = new System.Drawing.Point(404, 381);
             this.BtnToothBottom_52.Name = "BtnToothBottom_52";
             this.BtnToothBottom_52.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_52.TabIndex = 5;
-            this.BtnToothBottom_52.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_52.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_12
             // 
+            this.BtnToothBottom_12.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_12.Location = new System.Drawing.Point(404, 143);
             this.BtnToothBottom_12.Name = "BtnToothBottom_12";
             this.BtnToothBottom_12.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_12.TabIndex = 5;
-            this.BtnToothBottom_12.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_12.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_46
             // 
+            this.BtnToothBottom_46.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_46.Location = new System.Drawing.Point(148, 246);
             this.BtnToothBottom_46.Name = "BtnToothBottom_46";
             this.BtnToothBottom_46.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_46.TabIndex = 5;
-            this.BtnToothBottom_46.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_46.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_63
             // 
+            this.BtnToothBottom_63.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_63.Location = new System.Drawing.Point(726, 381);
             this.BtnToothBottom_63.Name = "BtnToothBottom_63";
             this.BtnToothBottom_63.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_63.TabIndex = 5;
-            this.BtnToothBottom_63.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_63.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_23
             // 
+            this.BtnToothBottom_23.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_23.Location = new System.Drawing.Point(726, 143);
             this.BtnToothBottom_23.Name = "BtnToothBottom_23";
             this.BtnToothBottom_23.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_23.TabIndex = 5;
-            this.BtnToothBottom_23.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_23.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_75
             // 
+            this.BtnToothBottom_75.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_75.Location = new System.Drawing.Point(854, 484);
             this.BtnToothBottom_75.Name = "BtnToothBottom_75";
             this.BtnToothBottom_75.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_75.TabIndex = 5;
-            this.BtnToothBottom_75.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_75.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_35
             // 
+            this.BtnToothBottom_35.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_35.Location = new System.Drawing.Point(854, 246);
             this.BtnToothBottom_35.Name = "BtnToothBottom_35";
             this.BtnToothBottom_35.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_35.TabIndex = 5;
-            this.BtnToothBottom_35.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_35.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_16
             // 
+            this.BtnToothBottom_16.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_16.Location = new System.Drawing.Point(148, 143);
             this.BtnToothBottom_16.Name = "BtnToothBottom_16";
             this.BtnToothBottom_16.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_16.TabIndex = 5;
-            this.BtnToothBottom_16.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_16.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_84
             // 
+            this.BtnToothBottom_84.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_84.Location = new System.Drawing.Point(276, 484);
             this.BtnToothBottom_84.Name = "BtnToothBottom_84";
             this.BtnToothBottom_84.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_84.TabIndex = 5;
-            this.BtnToothBottom_84.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_84.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_44
             // 
+            this.BtnToothBottom_44.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_44.Location = new System.Drawing.Point(276, 246);
             this.BtnToothBottom_44.Name = "BtnToothBottom_44";
             this.BtnToothBottom_44.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_44.TabIndex = 5;
-            this.BtnToothBottom_44.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_44.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_65
             // 
+            this.BtnToothBottom_65.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_65.Location = new System.Drawing.Point(854, 381);
             this.BtnToothBottom_65.Name = "BtnToothBottom_65";
             this.BtnToothBottom_65.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_65.TabIndex = 5;
-            this.BtnToothBottom_65.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_65.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_25
             // 
+            this.BtnToothBottom_25.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_25.Location = new System.Drawing.Point(854, 143);
             this.BtnToothBottom_25.Name = "BtnToothBottom_25";
             this.BtnToothBottom_25.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_25.TabIndex = 5;
-            this.BtnToothBottom_25.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_25.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_71
             // 
+            this.BtnToothBottom_71.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_71.Location = new System.Drawing.Point(598, 484);
             this.BtnToothBottom_71.Name = "BtnToothBottom_71";
             this.BtnToothBottom_71.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_71.TabIndex = 5;
-            this.BtnToothBottom_71.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_71.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_31
             // 
+            this.BtnToothBottom_31.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_31.Location = new System.Drawing.Point(598, 246);
             this.BtnToothBottom_31.Name = "BtnToothBottom_31";
             this.BtnToothBottom_31.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_31.TabIndex = 5;
-            this.BtnToothBottom_31.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_31.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_54
             // 
+            this.BtnToothBottom_54.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_54.Location = new System.Drawing.Point(276, 381);
             this.BtnToothBottom_54.Name = "BtnToothBottom_54";
             this.BtnToothBottom_54.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_54.TabIndex = 5;
-            this.BtnToothBottom_54.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_54.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_14
             // 
+            this.BtnToothBottom_14.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_14.Location = new System.Drawing.Point(276, 143);
             this.BtnToothBottom_14.Name = "BtnToothBottom_14";
             this.BtnToothBottom_14.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_14.TabIndex = 5;
-            this.BtnToothBottom_14.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_14.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_48
             // 
+            this.BtnToothBottom_48.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_48.Location = new System.Drawing.Point(20, 246);
             this.BtnToothBottom_48.Name = "BtnToothBottom_48";
             this.BtnToothBottom_48.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_48.TabIndex = 5;
-            this.BtnToothBottom_48.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_48.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_61
             // 
+            this.BtnToothBottom_61.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_61.Location = new System.Drawing.Point(598, 381);
             this.BtnToothBottom_61.Name = "BtnToothBottom_61";
             this.BtnToothBottom_61.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_61.TabIndex = 5;
-            this.BtnToothBottom_61.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_61.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_21
             // 
+            this.BtnToothBottom_21.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_21.Location = new System.Drawing.Point(598, 143);
             this.BtnToothBottom_21.Name = "BtnToothBottom_21";
             this.BtnToothBottom_21.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_21.TabIndex = 5;
-            this.BtnToothBottom_21.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_21.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_38
             // 
+            this.BtnToothRight_38.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_38.Location = new System.Drawing.Point(1077, 215);
             this.BtnToothRight_38.Name = "BtnToothRight_38";
             this.BtnToothRight_38.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_38.TabIndex = 10;
-            this.BtnToothRight_38.UseVisualStyleBackColor = true;
+            this.BtnToothRight_38.UseVisualStyleBackColor = false;
             // 
             // BtnToothBottom_18
             // 
+            this.BtnToothBottom_18.BackColor = System.Drawing.Color.White;
             this.BtnToothBottom_18.Location = new System.Drawing.Point(20, 143);
             this.BtnToothBottom_18.Name = "BtnToothBottom_18";
             this.BtnToothBottom_18.Size = new System.Drawing.Size(30, 15);
             this.BtnToothBottom_18.TabIndex = 5;
-            this.BtnToothBottom_18.UseVisualStyleBackColor = true;
+            this.BtnToothBottom_18.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_81
             // 
+            this.BtnToothRight_81.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_81.Location = new System.Drawing.Point(499, 453);
             this.BtnToothRight_81.Name = "BtnToothRight_81";
             this.BtnToothRight_81.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_81.TabIndex = 10;
-            this.BtnToothRight_81.UseVisualStyleBackColor = true;
+            this.BtnToothRight_81.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_41
             // 
+            this.BtnToothRight_41.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_41.Location = new System.Drawing.Point(499, 215);
             this.BtnToothRight_41.Name = "BtnToothRight_41";
             this.BtnToothRight_41.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_41.TabIndex = 10;
-            this.BtnToothRight_41.UseVisualStyleBackColor = true;
+            this.BtnToothRight_41.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_28
             // 
+            this.BtnToothRight_28.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_28.Location = new System.Drawing.Point(1077, 112);
             this.BtnToothRight_28.Name = "BtnToothRight_28";
             this.BtnToothRight_28.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_28.TabIndex = 10;
-            this.BtnToothRight_28.UseVisualStyleBackColor = true;
+            this.BtnToothRight_28.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_74
             // 
+            this.BtnToothRight_74.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_74.Location = new System.Drawing.Point(821, 453);
             this.BtnToothRight_74.Name = "BtnToothRight_74";
             this.BtnToothRight_74.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_74.TabIndex = 10;
-            this.BtnToothRight_74.UseVisualStyleBackColor = true;
+            this.BtnToothRight_74.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_34
             // 
+            this.BtnToothRight_34.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_34.Location = new System.Drawing.Point(821, 215);
             this.BtnToothRight_34.Name = "BtnToothRight_34";
             this.BtnToothRight_34.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_34.TabIndex = 10;
-            this.BtnToothRight_34.UseVisualStyleBackColor = true;
+            this.BtnToothRight_34.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_51
             // 
+            this.BtnToothRight_51.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_51.Location = new System.Drawing.Point(499, 350);
             this.BtnToothRight_51.Name = "BtnToothRight_51";
             this.BtnToothRight_51.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_51.TabIndex = 10;
-            this.BtnToothRight_51.UseVisualStyleBackColor = true;
+            this.BtnToothRight_51.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_11
             // 
+            this.BtnToothRight_11.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_11.Location = new System.Drawing.Point(499, 112);
             this.BtnToothRight_11.Name = "BtnToothRight_11";
             this.BtnToothRight_11.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_11.TabIndex = 10;
-            this.BtnToothRight_11.UseVisualStyleBackColor = true;
+            this.BtnToothRight_11.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_85
             // 
+            this.BtnToothRight_85.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_85.Location = new System.Drawing.Point(243, 453);
             this.BtnToothRight_85.Name = "BtnToothRight_85";
             this.BtnToothRight_85.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_85.TabIndex = 10;
-            this.BtnToothRight_85.UseVisualStyleBackColor = true;
+            this.BtnToothRight_85.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_45
             // 
+            this.BtnToothRight_45.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_45.Location = new System.Drawing.Point(243, 215);
             this.BtnToothRight_45.Name = "BtnToothRight_45";
             this.BtnToothRight_45.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_45.TabIndex = 10;
-            this.BtnToothRight_45.UseVisualStyleBackColor = true;
+            this.BtnToothRight_45.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_64
             // 
+            this.BtnToothRight_64.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_64.Location = new System.Drawing.Point(821, 350);
             this.BtnToothRight_64.Name = "BtnToothRight_64";
             this.BtnToothRight_64.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_64.TabIndex = 10;
-            this.BtnToothRight_64.UseVisualStyleBackColor = true;
+            this.BtnToothRight_64.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_24
             // 
+            this.BtnToothRight_24.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_24.Location = new System.Drawing.Point(821, 112);
             this.BtnToothRight_24.Name = "BtnToothRight_24";
             this.BtnToothRight_24.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_24.TabIndex = 10;
-            this.BtnToothRight_24.UseVisualStyleBackColor = true;
+            this.BtnToothRight_24.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_36
             // 
+            this.BtnToothRight_36.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_36.Location = new System.Drawing.Point(949, 215);
             this.BtnToothRight_36.Name = "BtnToothRight_36";
             this.BtnToothRight_36.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_36.TabIndex = 10;
-            this.BtnToothRight_36.UseVisualStyleBackColor = true;
+            this.BtnToothRight_36.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_55
             // 
+            this.BtnToothRight_55.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_55.Location = new System.Drawing.Point(243, 350);
             this.BtnToothRight_55.Name = "BtnToothRight_55";
             this.BtnToothRight_55.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_55.TabIndex = 10;
-            this.BtnToothRight_55.UseVisualStyleBackColor = true;
+            this.BtnToothRight_55.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_15
             // 
+            this.BtnToothRight_15.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_15.Location = new System.Drawing.Point(243, 112);
             this.BtnToothRight_15.Name = "BtnToothRight_15";
             this.BtnToothRight_15.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_15.TabIndex = 10;
-            this.BtnToothRight_15.UseVisualStyleBackColor = true;
+            this.BtnToothRight_15.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_83
             // 
+            this.BtnToothRight_83.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_83.Location = new System.Drawing.Point(371, 453);
             this.BtnToothRight_83.Name = "BtnToothRight_83";
             this.BtnToothRight_83.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_83.TabIndex = 10;
-            this.BtnToothRight_83.UseVisualStyleBackColor = true;
+            this.BtnToothRight_83.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_43
             // 
+            this.BtnToothRight_43.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_43.Location = new System.Drawing.Point(371, 215);
             this.BtnToothRight_43.Name = "BtnToothRight_43";
             this.BtnToothRight_43.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_43.TabIndex = 10;
-            this.BtnToothRight_43.UseVisualStyleBackColor = true;
+            this.BtnToothRight_43.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_26
             // 
+            this.BtnToothRight_26.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_26.Location = new System.Drawing.Point(949, 112);
             this.BtnToothRight_26.Name = "BtnToothRight_26";
             this.BtnToothRight_26.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_26.TabIndex = 10;
-            this.BtnToothRight_26.UseVisualStyleBackColor = true;
+            this.BtnToothRight_26.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_72
             // 
+            this.BtnToothRight_72.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_72.Location = new System.Drawing.Point(693, 453);
             this.BtnToothRight_72.Name = "BtnToothRight_72";
             this.BtnToothRight_72.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_72.TabIndex = 10;
-            this.BtnToothRight_72.UseVisualStyleBackColor = true;
+            this.BtnToothRight_72.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_32
             // 
+            this.BtnToothRight_32.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_32.Location = new System.Drawing.Point(693, 215);
             this.BtnToothRight_32.Name = "BtnToothRight_32";
             this.BtnToothRight_32.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_32.TabIndex = 10;
-            this.BtnToothRight_32.UseVisualStyleBackColor = true;
+            this.BtnToothRight_32.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_53
             // 
+            this.BtnToothRight_53.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_53.Location = new System.Drawing.Point(371, 350);
             this.BtnToothRight_53.Name = "BtnToothRight_53";
             this.BtnToothRight_53.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_53.TabIndex = 10;
-            this.BtnToothRight_53.UseVisualStyleBackColor = true;
+            this.BtnToothRight_53.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_13
             // 
+            this.BtnToothRight_13.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_13.Location = new System.Drawing.Point(371, 112);
             this.BtnToothRight_13.Name = "BtnToothRight_13";
             this.BtnToothRight_13.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_13.TabIndex = 10;
-            this.BtnToothRight_13.UseVisualStyleBackColor = true;
+            this.BtnToothRight_13.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_47
             // 
+            this.BtnToothRight_47.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_47.Location = new System.Drawing.Point(115, 215);
             this.BtnToothRight_47.Name = "BtnToothRight_47";
             this.BtnToothRight_47.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_47.TabIndex = 10;
-            this.BtnToothRight_47.UseVisualStyleBackColor = true;
+            this.BtnToothRight_47.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_62
             // 
+            this.BtnToothRight_62.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_62.Location = new System.Drawing.Point(693, 350);
             this.BtnToothRight_62.Name = "BtnToothRight_62";
             this.BtnToothRight_62.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_62.TabIndex = 10;
-            this.BtnToothRight_62.UseVisualStyleBackColor = true;
+            this.BtnToothRight_62.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_22
             // 
+            this.BtnToothRight_22.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_22.Location = new System.Drawing.Point(693, 112);
             this.BtnToothRight_22.Name = "BtnToothRight_22";
             this.BtnToothRight_22.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_22.TabIndex = 10;
-            this.BtnToothRight_22.UseVisualStyleBackColor = true;
+            this.BtnToothRight_22.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_37
             // 
+            this.BtnToothRight_37.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_37.Location = new System.Drawing.Point(1013, 215);
             this.BtnToothRight_37.Name = "BtnToothRight_37";
             this.BtnToothRight_37.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_37.TabIndex = 10;
-            this.BtnToothRight_37.UseVisualStyleBackColor = true;
+            this.BtnToothRight_37.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_17
             // 
+            this.BtnToothRight_17.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_17.Location = new System.Drawing.Point(115, 112);
             this.BtnToothRight_17.Name = "BtnToothRight_17";
             this.BtnToothRight_17.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_17.TabIndex = 10;
-            this.BtnToothRight_17.UseVisualStyleBackColor = true;
+            this.BtnToothRight_17.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_82
             // 
+            this.BtnToothRight_82.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_82.Location = new System.Drawing.Point(435, 453);
             this.BtnToothRight_82.Name = "BtnToothRight_82";
             this.BtnToothRight_82.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_82.TabIndex = 10;
-            this.BtnToothRight_82.UseVisualStyleBackColor = true;
+            this.BtnToothRight_82.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_42
             // 
+            this.BtnToothRight_42.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_42.Location = new System.Drawing.Point(435, 215);
             this.BtnToothRight_42.Name = "BtnToothRight_42";
             this.BtnToothRight_42.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_42.TabIndex = 10;
-            this.BtnToothRight_42.UseVisualStyleBackColor = true;
+            this.BtnToothRight_42.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_27
             // 
+            this.BtnToothRight_27.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_27.Location = new System.Drawing.Point(1013, 112);
             this.BtnToothRight_27.Name = "BtnToothRight_27";
             this.BtnToothRight_27.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_27.TabIndex = 10;
-            this.BtnToothRight_27.UseVisualStyleBackColor = true;
+            this.BtnToothRight_27.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_73
             // 
+            this.BtnToothRight_73.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_73.Location = new System.Drawing.Point(757, 453);
             this.BtnToothRight_73.Name = "BtnToothRight_73";
             this.BtnToothRight_73.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_73.TabIndex = 10;
-            this.BtnToothRight_73.UseVisualStyleBackColor = true;
+            this.BtnToothRight_73.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_33
             // 
+            this.BtnToothRight_33.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_33.Location = new System.Drawing.Point(757, 215);
             this.BtnToothRight_33.Name = "BtnToothRight_33";
             this.BtnToothRight_33.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_33.TabIndex = 10;
-            this.BtnToothRight_33.UseVisualStyleBackColor = true;
+            this.BtnToothRight_33.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_52
             // 
+            this.BtnToothRight_52.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_52.Location = new System.Drawing.Point(435, 350);
             this.BtnToothRight_52.Name = "BtnToothRight_52";
             this.BtnToothRight_52.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_52.TabIndex = 10;
-            this.BtnToothRight_52.UseVisualStyleBackColor = true;
+            this.BtnToothRight_52.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_12
             // 
+            this.BtnToothRight_12.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_12.Location = new System.Drawing.Point(435, 112);
             this.BtnToothRight_12.Name = "BtnToothRight_12";
             this.BtnToothRight_12.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_12.TabIndex = 10;
-            this.BtnToothRight_12.UseVisualStyleBackColor = true;
+            this.BtnToothRight_12.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_46
             // 
+            this.BtnToothRight_46.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_46.Location = new System.Drawing.Point(179, 215);
             this.BtnToothRight_46.Name = "BtnToothRight_46";
             this.BtnToothRight_46.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_46.TabIndex = 10;
-            this.BtnToothRight_46.UseVisualStyleBackColor = true;
+            this.BtnToothRight_46.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_63
             // 
+            this.BtnToothRight_63.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_63.Location = new System.Drawing.Point(757, 350);
             this.BtnToothRight_63.Name = "BtnToothRight_63";
             this.BtnToothRight_63.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_63.TabIndex = 10;
-            this.BtnToothRight_63.UseVisualStyleBackColor = true;
+            this.BtnToothRight_63.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_23
             // 
+            this.BtnToothRight_23.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_23.Location = new System.Drawing.Point(757, 112);
             this.BtnToothRight_23.Name = "BtnToothRight_23";
             this.BtnToothRight_23.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_23.TabIndex = 10;
-            this.BtnToothRight_23.UseVisualStyleBackColor = true;
+            this.BtnToothRight_23.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_75
             // 
+            this.BtnToothRight_75.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_75.Location = new System.Drawing.Point(885, 453);
             this.BtnToothRight_75.Name = "BtnToothRight_75";
             this.BtnToothRight_75.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_75.TabIndex = 10;
-            this.BtnToothRight_75.UseVisualStyleBackColor = true;
+            this.BtnToothRight_75.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_35
             // 
+            this.BtnToothRight_35.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_35.Location = new System.Drawing.Point(885, 215);
             this.BtnToothRight_35.Name = "BtnToothRight_35";
             this.BtnToothRight_35.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_35.TabIndex = 10;
-            this.BtnToothRight_35.UseVisualStyleBackColor = true;
+            this.BtnToothRight_35.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_16
             // 
+            this.BtnToothRight_16.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_16.Location = new System.Drawing.Point(179, 112);
             this.BtnToothRight_16.Name = "BtnToothRight_16";
             this.BtnToothRight_16.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_16.TabIndex = 10;
-            this.BtnToothRight_16.UseVisualStyleBackColor = true;
+            this.BtnToothRight_16.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_84
             // 
+            this.BtnToothRight_84.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_84.Location = new System.Drawing.Point(307, 453);
             this.BtnToothRight_84.Name = "BtnToothRight_84";
             this.BtnToothRight_84.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_84.TabIndex = 10;
-            this.BtnToothRight_84.UseVisualStyleBackColor = true;
+            this.BtnToothRight_84.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_65
             // 
+            this.BtnToothRight_65.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_65.Location = new System.Drawing.Point(885, 350);
             this.BtnToothRight_65.Name = "BtnToothRight_65";
             this.BtnToothRight_65.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_65.TabIndex = 10;
-            this.BtnToothRight_65.UseVisualStyleBackColor = true;
+            this.BtnToothRight_65.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_44
             // 
+            this.BtnToothRight_44.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_44.Location = new System.Drawing.Point(307, 215);
             this.BtnToothRight_44.Name = "BtnToothRight_44";
             this.BtnToothRight_44.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_44.TabIndex = 10;
-            this.BtnToothRight_44.UseVisualStyleBackColor = true;
+            this.BtnToothRight_44.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_25
             // 
+            this.BtnToothRight_25.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_25.Location = new System.Drawing.Point(885, 112);
             this.BtnToothRight_25.Name = "BtnToothRight_25";
             this.BtnToothRight_25.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_25.TabIndex = 10;
-            this.BtnToothRight_25.UseVisualStyleBackColor = true;
+            this.BtnToothRight_25.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_71
             // 
+            this.BtnToothRight_71.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_71.Location = new System.Drawing.Point(629, 453);
             this.BtnToothRight_71.Name = "BtnToothRight_71";
             this.BtnToothRight_71.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_71.TabIndex = 10;
-            this.BtnToothRight_71.UseVisualStyleBackColor = true;
+            this.BtnToothRight_71.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_31
             // 
+            this.BtnToothRight_31.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_31.Location = new System.Drawing.Point(629, 215);
             this.BtnToothRight_31.Name = "BtnToothRight_31";
             this.BtnToothRight_31.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_31.TabIndex = 10;
-            this.BtnToothRight_31.UseVisualStyleBackColor = true;
+            this.BtnToothRight_31.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_54
             // 
+            this.BtnToothRight_54.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_54.Location = new System.Drawing.Point(307, 350);
             this.BtnToothRight_54.Name = "BtnToothRight_54";
             this.BtnToothRight_54.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_54.TabIndex = 10;
-            this.BtnToothRight_54.UseVisualStyleBackColor = true;
+            this.BtnToothRight_54.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_14
             // 
+            this.BtnToothRight_14.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_14.Location = new System.Drawing.Point(307, 112);
             this.BtnToothRight_14.Name = "BtnToothRight_14";
             this.BtnToothRight_14.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_14.TabIndex = 10;
-            this.BtnToothRight_14.UseVisualStyleBackColor = true;
+            this.BtnToothRight_14.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_48
             // 
+            this.BtnToothRight_48.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_48.Location = new System.Drawing.Point(51, 215);
             this.BtnToothRight_48.Name = "BtnToothRight_48";
             this.BtnToothRight_48.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_48.TabIndex = 10;
-            this.BtnToothRight_48.UseVisualStyleBackColor = true;
+            this.BtnToothRight_48.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_61
             // 
+            this.BtnToothRight_61.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_61.Location = new System.Drawing.Point(629, 350);
             this.BtnToothRight_61.Name = "BtnToothRight_61";
             this.BtnToothRight_61.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_61.TabIndex = 10;
-            this.BtnToothRight_61.UseVisualStyleBackColor = true;
+            this.BtnToothRight_61.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_21
             // 
+            this.BtnToothRight_21.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_21.Location = new System.Drawing.Point(629, 112);
             this.BtnToothRight_21.Name = "BtnToothRight_21";
             this.BtnToothRight_21.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_21.TabIndex = 10;
-            this.BtnToothRight_21.UseVisualStyleBackColor = true;
+            this.BtnToothRight_21.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_38
             // 
+            this.BtnToothCenter_38.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_38.Location = new System.Drawing.Point(1046, 215);
             this.BtnToothCenter_38.Name = "BtnToothCenter_38";
             this.BtnToothCenter_38.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_38.TabIndex = 9;
-            this.BtnToothCenter_38.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_38.UseVisualStyleBackColor = false;
             // 
             // BtnToothRight_18
             // 
+            this.BtnToothRight_18.BackColor = System.Drawing.Color.White;
             this.BtnToothRight_18.Location = new System.Drawing.Point(51, 112);
             this.BtnToothRight_18.Name = "BtnToothRight_18";
             this.BtnToothRight_18.Size = new System.Drawing.Size(15, 30);
             this.BtnToothRight_18.TabIndex = 10;
-            this.BtnToothRight_18.UseVisualStyleBackColor = true;
+            this.BtnToothRight_18.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_81
             // 
+            this.BtnToothCenter_81.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_81.Location = new System.Drawing.Point(468, 453);
             this.BtnToothCenter_81.Name = "BtnToothCenter_81";
             this.BtnToothCenter_81.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_81.TabIndex = 9;
-            this.BtnToothCenter_81.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_81.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_41
             // 
+            this.BtnToothCenter_41.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_41.Location = new System.Drawing.Point(468, 215);
             this.BtnToothCenter_41.Name = "BtnToothCenter_41";
             this.BtnToothCenter_41.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_41.TabIndex = 9;
-            this.BtnToothCenter_41.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_41.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_74
             // 
+            this.BtnToothCenter_74.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_74.Location = new System.Drawing.Point(790, 453);
             this.BtnToothCenter_74.Name = "BtnToothCenter_74";
             this.BtnToothCenter_74.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_74.TabIndex = 9;
-            this.BtnToothCenter_74.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_74.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_28
             // 
+            this.BtnToothCenter_28.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_28.Location = new System.Drawing.Point(1046, 112);
             this.BtnToothCenter_28.Name = "BtnToothCenter_28";
             this.BtnToothCenter_28.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_28.TabIndex = 9;
-            this.BtnToothCenter_28.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_28.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_51
             // 
+            this.BtnToothCenter_51.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_51.Location = new System.Drawing.Point(468, 350);
             this.BtnToothCenter_51.Name = "BtnToothCenter_51";
             this.BtnToothCenter_51.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_51.TabIndex = 9;
-            this.BtnToothCenter_51.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_51.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_34
             // 
+            this.BtnToothCenter_34.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_34.Location = new System.Drawing.Point(790, 215);
             this.BtnToothCenter_34.Name = "BtnToothCenter_34";
             this.BtnToothCenter_34.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_34.TabIndex = 9;
-            this.BtnToothCenter_34.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_34.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_85
             // 
+            this.BtnToothCenter_85.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_85.Location = new System.Drawing.Point(212, 453);
             this.BtnToothCenter_85.Name = "BtnToothCenter_85";
             this.BtnToothCenter_85.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_85.TabIndex = 9;
-            this.BtnToothCenter_85.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_85.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_11
             // 
+            this.BtnToothCenter_11.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_11.Location = new System.Drawing.Point(468, 112);
             this.BtnToothCenter_11.Name = "BtnToothCenter_11";
             this.BtnToothCenter_11.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_11.TabIndex = 9;
-            this.BtnToothCenter_11.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_11.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_64
             // 
+            this.BtnToothCenter_64.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_64.Location = new System.Drawing.Point(790, 350);
             this.BtnToothCenter_64.Name = "BtnToothCenter_64";
             this.BtnToothCenter_64.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_64.TabIndex = 9;
-            this.BtnToothCenter_64.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_64.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_45
             // 
+            this.BtnToothCenter_45.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_45.Location = new System.Drawing.Point(212, 215);
             this.BtnToothCenter_45.Name = "BtnToothCenter_45";
             this.BtnToothCenter_45.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_45.TabIndex = 9;
-            this.BtnToothCenter_45.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_45.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_24
             // 
+            this.BtnToothCenter_24.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_24.Location = new System.Drawing.Point(790, 112);
             this.BtnToothCenter_24.Name = "BtnToothCenter_24";
             this.BtnToothCenter_24.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_24.TabIndex = 9;
-            this.BtnToothCenter_24.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_24.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_55
             // 
+            this.BtnToothCenter_55.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_55.Location = new System.Drawing.Point(212, 350);
             this.BtnToothCenter_55.Name = "BtnToothCenter_55";
             this.BtnToothCenter_55.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_55.TabIndex = 9;
-            this.BtnToothCenter_55.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_55.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_36
             // 
+            this.BtnToothCenter_36.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_36.Location = new System.Drawing.Point(918, 215);
             this.BtnToothCenter_36.Name = "BtnToothCenter_36";
             this.BtnToothCenter_36.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_36.TabIndex = 9;
-            this.BtnToothCenter_36.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_36.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_83
             // 
+            this.BtnToothCenter_83.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_83.Location = new System.Drawing.Point(340, 453);
             this.BtnToothCenter_83.Name = "BtnToothCenter_83";
             this.BtnToothCenter_83.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_83.TabIndex = 9;
-            this.BtnToothCenter_83.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_83.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_15
             // 
+            this.BtnToothCenter_15.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_15.Location = new System.Drawing.Point(212, 112);
             this.BtnToothCenter_15.Name = "BtnToothCenter_15";
             this.BtnToothCenter_15.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_15.TabIndex = 9;
-            this.BtnToothCenter_15.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_15.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_43
             // 
+            this.BtnToothCenter_43.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_43.Location = new System.Drawing.Point(340, 215);
             this.BtnToothCenter_43.Name = "BtnToothCenter_43";
             this.BtnToothCenter_43.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_43.TabIndex = 9;
-            this.BtnToothCenter_43.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_43.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_72
             // 
+            this.BtnToothCenter_72.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_72.Location = new System.Drawing.Point(662, 453);
             this.BtnToothCenter_72.Name = "BtnToothCenter_72";
             this.BtnToothCenter_72.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_72.TabIndex = 9;
-            this.BtnToothCenter_72.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_72.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_26
             // 
+            this.BtnToothCenter_26.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_26.Location = new System.Drawing.Point(918, 112);
             this.BtnToothCenter_26.Name = "BtnToothCenter_26";
             this.BtnToothCenter_26.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_26.TabIndex = 9;
-            this.BtnToothCenter_26.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_26.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_53
             // 
+            this.BtnToothCenter_53.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_53.Location = new System.Drawing.Point(340, 350);
             this.BtnToothCenter_53.Name = "BtnToothCenter_53";
             this.BtnToothCenter_53.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_53.TabIndex = 9;
-            this.BtnToothCenter_53.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_53.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_32
             // 
+            this.BtnToothCenter_32.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_32.Location = new System.Drawing.Point(662, 215);
             this.BtnToothCenter_32.Name = "BtnToothCenter_32";
             this.BtnToothCenter_32.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_32.TabIndex = 9;
-            this.BtnToothCenter_32.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_32.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_13
             // 
+            this.BtnToothCenter_13.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_13.Location = new System.Drawing.Point(340, 112);
             this.BtnToothCenter_13.Name = "BtnToothCenter_13";
             this.BtnToothCenter_13.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_13.TabIndex = 9;
-            this.BtnToothCenter_13.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_13.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_62
             // 
+            this.BtnToothCenter_62.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_62.Location = new System.Drawing.Point(662, 350);
             this.BtnToothCenter_62.Name = "BtnToothCenter_62";
             this.BtnToothCenter_62.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_62.TabIndex = 9;
-            this.BtnToothCenter_62.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_62.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_38
             // 
+            this.BtnToothLeft_38.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_38.Location = new System.Drawing.Point(1030, 215);
             this.BtnToothLeft_38.Name = "BtnToothLeft_38";
             this.BtnToothLeft_38.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_38.TabIndex = 9;
-            this.BtnToothLeft_38.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_38.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_22
             // 
+            this.BtnToothCenter_22.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_22.Location = new System.Drawing.Point(662, 112);
             this.BtnToothCenter_22.Name = "BtnToothCenter_22";
             this.BtnToothCenter_22.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_22.TabIndex = 9;
-            this.BtnToothCenter_22.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_22.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_47
             // 
+            this.BtnToothCenter_47.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_47.Location = new System.Drawing.Point(84, 215);
             this.BtnToothCenter_47.Name = "BtnToothCenter_47";
             this.BtnToothCenter_47.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_47.TabIndex = 9;
-            this.BtnToothCenter_47.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_47.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_74
             // 
+            this.BtnToothLeft_74.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_74.Location = new System.Drawing.Point(774, 453);
             this.BtnToothLeft_74.Name = "BtnToothLeft_74";
             this.BtnToothLeft_74.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_74.TabIndex = 9;
-            this.BtnToothLeft_74.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_74.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_28
             // 
+            this.BtnToothLeft_28.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_28.Location = new System.Drawing.Point(1030, 112);
             this.BtnToothLeft_28.Name = "BtnToothLeft_28";
             this.BtnToothLeft_28.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_28.TabIndex = 9;
-            this.BtnToothLeft_28.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_28.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_34
             // 
+            this.BtnToothLeft_34.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_34.Location = new System.Drawing.Point(774, 215);
             this.BtnToothLeft_34.Name = "BtnToothLeft_34";
             this.BtnToothLeft_34.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_34.TabIndex = 9;
-            this.BtnToothLeft_34.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_34.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_81
             // 
+            this.BtnToothLeft_81.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_81.Location = new System.Drawing.Point(452, 453);
             this.BtnToothLeft_81.Name = "BtnToothLeft_81";
             this.BtnToothLeft_81.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_81.TabIndex = 9;
-            this.BtnToothLeft_81.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_81.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_17
             // 
+            this.BtnToothCenter_17.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_17.Location = new System.Drawing.Point(84, 112);
             this.BtnToothCenter_17.Name = "BtnToothCenter_17";
             this.BtnToothCenter_17.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_17.TabIndex = 9;
-            this.BtnToothCenter_17.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_17.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_64
             // 
+            this.BtnToothLeft_64.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_64.Location = new System.Drawing.Point(774, 350);
             this.BtnToothLeft_64.Name = "BtnToothLeft_64";
             this.BtnToothLeft_64.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_64.TabIndex = 9;
-            this.BtnToothLeft_64.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_64.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_41
             // 
+            this.BtnToothLeft_41.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_41.Location = new System.Drawing.Point(452, 215);
             this.BtnToothLeft_41.Name = "BtnToothLeft_41";
             this.BtnToothLeft_41.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_41.TabIndex = 9;
-            this.BtnToothLeft_41.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_41.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_24
             // 
+            this.BtnToothLeft_24.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_24.Location = new System.Drawing.Point(774, 112);
             this.BtnToothLeft_24.Name = "BtnToothLeft_24";
             this.BtnToothLeft_24.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_24.TabIndex = 9;
-            this.BtnToothLeft_24.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_24.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_51
             // 
+            this.BtnToothLeft_51.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_51.Location = new System.Drawing.Point(452, 350);
             this.BtnToothLeft_51.Name = "BtnToothLeft_51";
             this.BtnToothLeft_51.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_51.TabIndex = 9;
-            this.BtnToothLeft_51.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_51.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_36
             // 
+            this.BtnToothLeft_36.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_36.Location = new System.Drawing.Point(902, 215);
             this.BtnToothLeft_36.Name = "BtnToothLeft_36";
             this.BtnToothLeft_36.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_36.TabIndex = 9;
-            this.BtnToothLeft_36.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_36.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_11
             // 
+            this.BtnToothLeft_11.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_11.Location = new System.Drawing.Point(452, 112);
             this.BtnToothLeft_11.Name = "BtnToothLeft_11";
             this.BtnToothLeft_11.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_11.TabIndex = 9;
-            this.BtnToothLeft_11.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_11.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_85
             // 
+            this.BtnToothLeft_85.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_85.Location = new System.Drawing.Point(196, 453);
             this.BtnToothLeft_85.Name = "BtnToothLeft_85";
             this.BtnToothLeft_85.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_85.TabIndex = 9;
-            this.BtnToothLeft_85.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_85.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_45
             // 
+            this.BtnToothLeft_45.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_45.Location = new System.Drawing.Point(196, 215);
             this.BtnToothLeft_45.Name = "BtnToothLeft_45";
             this.BtnToothLeft_45.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_45.TabIndex = 9;
-            this.BtnToothLeft_45.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_45.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_72
             // 
+            this.BtnToothLeft_72.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_72.Location = new System.Drawing.Point(646, 453);
             this.BtnToothLeft_72.Name = "BtnToothLeft_72";
             this.BtnToothLeft_72.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_72.TabIndex = 9;
-            this.BtnToothLeft_72.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_72.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_26
             // 
+            this.BtnToothLeft_26.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_26.Location = new System.Drawing.Point(902, 112);
             this.BtnToothLeft_26.Name = "BtnToothLeft_26";
             this.BtnToothLeft_26.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_26.TabIndex = 9;
-            this.BtnToothLeft_26.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_26.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_32
             // 
+            this.BtnToothLeft_32.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_32.Location = new System.Drawing.Point(646, 215);
             this.BtnToothLeft_32.Name = "BtnToothLeft_32";
             this.BtnToothLeft_32.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_32.TabIndex = 9;
-            this.BtnToothLeft_32.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_32.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_55
             // 
+            this.BtnToothLeft_55.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_55.Location = new System.Drawing.Point(196, 350);
             this.BtnToothLeft_55.Name = "BtnToothLeft_55";
             this.BtnToothLeft_55.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_55.TabIndex = 9;
-            this.BtnToothLeft_55.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_55.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_83
             // 
+            this.BtnToothLeft_83.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_83.Location = new System.Drawing.Point(324, 453);
             this.BtnToothLeft_83.Name = "BtnToothLeft_83";
             this.BtnToothLeft_83.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_83.TabIndex = 9;
-            this.BtnToothLeft_83.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_83.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_15
             // 
+            this.BtnToothLeft_15.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_15.Location = new System.Drawing.Point(196, 112);
             this.BtnToothLeft_15.Name = "BtnToothLeft_15";
             this.BtnToothLeft_15.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_15.TabIndex = 9;
-            this.BtnToothLeft_15.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_15.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_62
             // 
+            this.BtnToothLeft_62.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_62.Location = new System.Drawing.Point(646, 350);
             this.BtnToothLeft_62.Name = "BtnToothLeft_62";
             this.BtnToothLeft_62.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_62.TabIndex = 9;
-            this.BtnToothLeft_62.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_62.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_43
             // 
+            this.BtnToothLeft_43.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_43.Location = new System.Drawing.Point(324, 215);
             this.BtnToothLeft_43.Name = "BtnToothLeft_43";
             this.BtnToothLeft_43.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_43.TabIndex = 9;
-            this.BtnToothLeft_43.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_43.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_22
             // 
+            this.BtnToothLeft_22.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_22.Location = new System.Drawing.Point(646, 112);
             this.BtnToothLeft_22.Name = "BtnToothLeft_22";
             this.BtnToothLeft_22.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_22.TabIndex = 9;
-            this.BtnToothLeft_22.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_22.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_53
             // 
+            this.BtnToothLeft_53.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_53.Location = new System.Drawing.Point(324, 350);
             this.BtnToothLeft_53.Name = "BtnToothLeft_53";
             this.BtnToothLeft_53.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_53.TabIndex = 9;
-            this.BtnToothLeft_53.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_53.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_37
             // 
+            this.BtnToothCenter_37.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_37.Location = new System.Drawing.Point(982, 215);
             this.BtnToothCenter_37.Name = "BtnToothCenter_37";
             this.BtnToothCenter_37.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_37.TabIndex = 9;
-            this.BtnToothCenter_37.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_37.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_13
             // 
+            this.BtnToothLeft_13.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_13.Location = new System.Drawing.Point(324, 112);
             this.BtnToothLeft_13.Name = "BtnToothLeft_13";
             this.BtnToothLeft_13.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_13.TabIndex = 9;
-            this.BtnToothLeft_13.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_13.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_47
             // 
+            this.BtnToothLeft_47.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_47.Location = new System.Drawing.Point(68, 215);
             this.BtnToothLeft_47.Name = "BtnToothLeft_47";
             this.BtnToothLeft_47.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_47.TabIndex = 9;
-            this.BtnToothLeft_47.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_47.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_73
             // 
+            this.BtnToothCenter_73.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_73.Location = new System.Drawing.Point(726, 453);
             this.BtnToothCenter_73.Name = "BtnToothCenter_73";
             this.BtnToothCenter_73.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_73.TabIndex = 9;
-            this.BtnToothCenter_73.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_73.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_27
             // 
+            this.BtnToothCenter_27.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_27.Location = new System.Drawing.Point(982, 112);
             this.BtnToothCenter_27.Name = "BtnToothCenter_27";
             this.BtnToothCenter_27.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_27.TabIndex = 9;
-            this.BtnToothCenter_27.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_27.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_33
             // 
+            this.BtnToothCenter_33.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_33.Location = new System.Drawing.Point(726, 215);
             this.BtnToothCenter_33.Name = "BtnToothCenter_33";
             this.BtnToothCenter_33.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_33.TabIndex = 9;
-            this.BtnToothCenter_33.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_33.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_82
             // 
+            this.BtnToothCenter_82.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_82.Location = new System.Drawing.Point(404, 453);
             this.BtnToothCenter_82.Name = "BtnToothCenter_82";
             this.BtnToothCenter_82.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_82.TabIndex = 9;
-            this.BtnToothCenter_82.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_82.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_17
             // 
+            this.BtnToothLeft_17.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_17.Location = new System.Drawing.Point(68, 112);
             this.BtnToothLeft_17.Name = "BtnToothLeft_17";
             this.BtnToothLeft_17.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_17.TabIndex = 9;
-            this.BtnToothLeft_17.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_17.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_63
             // 
+            this.BtnToothCenter_63.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_63.Location = new System.Drawing.Point(726, 350);
             this.BtnToothCenter_63.Name = "BtnToothCenter_63";
             this.BtnToothCenter_63.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_63.TabIndex = 9;
-            this.BtnToothCenter_63.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_63.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_42
             // 
+            this.BtnToothCenter_42.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_42.Location = new System.Drawing.Point(404, 215);
             this.BtnToothCenter_42.Name = "BtnToothCenter_42";
             this.BtnToothCenter_42.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_42.TabIndex = 9;
-            this.BtnToothCenter_42.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_42.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_23
             // 
+            this.BtnToothCenter_23.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_23.Location = new System.Drawing.Point(726, 112);
             this.BtnToothCenter_23.Name = "BtnToothCenter_23";
             this.BtnToothCenter_23.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_23.TabIndex = 9;
-            this.BtnToothCenter_23.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_23.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_52
             // 
+            this.BtnToothCenter_52.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_52.Location = new System.Drawing.Point(404, 350);
             this.BtnToothCenter_52.Name = "BtnToothCenter_52";
             this.BtnToothCenter_52.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_52.TabIndex = 9;
-            this.BtnToothCenter_52.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_52.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_38
             // 
+            this.BtnToothTop_38.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_38.Location = new System.Drawing.Point(1046, 199);
             this.BtnToothTop_38.Name = "BtnToothTop_38";
             this.BtnToothTop_38.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_38.TabIndex = 7;
-            this.BtnToothTop_38.UseVisualStyleBackColor = true;
+            this.BtnToothTop_38.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_12
             // 
+            this.BtnToothCenter_12.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_12.Location = new System.Drawing.Point(404, 112);
             this.BtnToothCenter_12.Name = "BtnToothCenter_12";
             this.BtnToothCenter_12.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_12.TabIndex = 9;
-            this.BtnToothCenter_12.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_12.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_46
             // 
+            this.BtnToothCenter_46.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_46.Location = new System.Drawing.Point(148, 215);
             this.BtnToothCenter_46.Name = "BtnToothCenter_46";
             this.BtnToothCenter_46.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_46.TabIndex = 9;
-            this.BtnToothCenter_46.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_46.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_74
             // 
+            this.BtnToothTop_74.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_74.Location = new System.Drawing.Point(790, 437);
             this.BtnToothTop_74.Name = "BtnToothTop_74";
             this.BtnToothTop_74.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_74.TabIndex = 7;
-            this.BtnToothTop_74.UseVisualStyleBackColor = true;
+            this.BtnToothTop_74.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_28
             // 
+            this.BtnToothTop_28.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_28.Location = new System.Drawing.Point(1046, 96);
             this.BtnToothTop_28.Name = "BtnToothTop_28";
             this.BtnToothTop_28.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_28.TabIndex = 7;
-            this.BtnToothTop_28.UseVisualStyleBackColor = true;
+            this.BtnToothTop_28.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_34
             // 
+            this.BtnToothTop_34.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_34.Location = new System.Drawing.Point(790, 199);
             this.BtnToothTop_34.Name = "BtnToothTop_34";
             this.BtnToothTop_34.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_34.TabIndex = 7;
-            this.BtnToothTop_34.UseVisualStyleBackColor = true;
+            this.BtnToothTop_34.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_81
             // 
+            this.BtnToothTop_81.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_81.Location = new System.Drawing.Point(468, 437);
             this.BtnToothTop_81.Name = "BtnToothTop_81";
             this.BtnToothTop_81.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_81.TabIndex = 7;
-            this.BtnToothTop_81.UseVisualStyleBackColor = true;
+            this.BtnToothTop_81.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_16
             // 
+            this.BtnToothCenter_16.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_16.Location = new System.Drawing.Point(148, 112);
             this.BtnToothCenter_16.Name = "BtnToothCenter_16";
             this.BtnToothCenter_16.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_16.TabIndex = 9;
-            this.BtnToothCenter_16.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_16.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_64
             // 
+            this.BtnToothTop_64.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_64.Location = new System.Drawing.Point(790, 334);
             this.BtnToothTop_64.Name = "BtnToothTop_64";
             this.BtnToothTop_64.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_64.TabIndex = 7;
-            this.BtnToothTop_64.UseVisualStyleBackColor = true;
+            this.BtnToothTop_64.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_41
             // 
+            this.BtnToothTop_41.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_41.Location = new System.Drawing.Point(468, 199);
             this.BtnToothTop_41.Name = "BtnToothTop_41";
             this.BtnToothTop_41.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_41.TabIndex = 7;
-            this.BtnToothTop_41.UseVisualStyleBackColor = true;
+            this.BtnToothTop_41.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_75
             // 
+            this.BtnToothCenter_75.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_75.Location = new System.Drawing.Point(854, 453);
             this.BtnToothCenter_75.Name = "BtnToothCenter_75";
             this.BtnToothCenter_75.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_75.TabIndex = 9;
-            this.BtnToothCenter_75.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_75.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_24
             // 
+            this.BtnToothTop_24.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_24.Location = new System.Drawing.Point(790, 96);
             this.BtnToothTop_24.Name = "BtnToothTop_24";
             this.BtnToothTop_24.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_24.TabIndex = 7;
-            this.BtnToothTop_24.UseVisualStyleBackColor = true;
+            this.BtnToothTop_24.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_51
             // 
+            this.BtnToothTop_51.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_51.Location = new System.Drawing.Point(468, 334);
             this.BtnToothTop_51.Name = "BtnToothTop_51";
             this.BtnToothTop_51.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_51.TabIndex = 7;
-            this.BtnToothTop_51.UseVisualStyleBackColor = true;
+            this.BtnToothTop_51.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_35
             // 
+            this.BtnToothCenter_35.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_35.Location = new System.Drawing.Point(854, 215);
             this.BtnToothCenter_35.Name = "BtnToothCenter_35";
             this.BtnToothCenter_35.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_35.TabIndex = 9;
-            this.BtnToothCenter_35.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_35.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_85
             // 
+            this.BtnToothTop_85.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_85.Location = new System.Drawing.Point(212, 437);
             this.BtnToothTop_85.Name = "BtnToothTop_85";
             this.BtnToothTop_85.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_85.TabIndex = 7;
-            this.BtnToothTop_85.UseVisualStyleBackColor = true;
+            this.BtnToothTop_85.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_11
             // 
+            this.BtnToothTop_11.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_11.Location = new System.Drawing.Point(468, 96);
             this.BtnToothTop_11.Name = "BtnToothTop_11";
             this.BtnToothTop_11.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_11.TabIndex = 7;
-            this.BtnToothTop_11.UseVisualStyleBackColor = true;
+            this.BtnToothTop_11.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_65
             // 
+            this.BtnToothCenter_65.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_65.Location = new System.Drawing.Point(854, 350);
             this.BtnToothCenter_65.Name = "BtnToothCenter_65";
             this.BtnToothCenter_65.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_65.TabIndex = 9;
-            this.BtnToothCenter_65.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_65.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_45
             // 
+            this.BtnToothTop_45.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_45.Location = new System.Drawing.Point(212, 199);
             this.BtnToothTop_45.Name = "BtnToothTop_45";
             this.BtnToothTop_45.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_45.TabIndex = 7;
-            this.BtnToothTop_45.UseVisualStyleBackColor = true;
+            this.BtnToothTop_45.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_25
             // 
+            this.BtnToothCenter_25.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_25.Location = new System.Drawing.Point(854, 112);
             this.BtnToothCenter_25.Name = "BtnToothCenter_25";
             this.BtnToothCenter_25.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_25.TabIndex = 9;
-            this.BtnToothCenter_25.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_25.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_55
             // 
+            this.BtnToothTop_55.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_55.Location = new System.Drawing.Point(212, 334);
             this.BtnToothTop_55.Name = "BtnToothTop_55";
             this.BtnToothTop_55.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_55.TabIndex = 7;
-            this.BtnToothTop_55.UseVisualStyleBackColor = true;
+            this.BtnToothTop_55.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_37
             // 
+            this.BtnToothLeft_37.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_37.Location = new System.Drawing.Point(966, 215);
             this.BtnToothLeft_37.Name = "BtnToothLeft_37";
             this.BtnToothLeft_37.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_37.TabIndex = 9;
-            this.BtnToothLeft_37.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_37.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_84
             // 
+            this.BtnToothCenter_84.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_84.Location = new System.Drawing.Point(276, 453);
             this.BtnToothCenter_84.Name = "BtnToothCenter_84";
             this.BtnToothCenter_84.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_84.TabIndex = 9;
-            this.BtnToothCenter_84.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_84.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_15
             // 
+            this.BtnToothTop_15.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_15.Location = new System.Drawing.Point(212, 96);
             this.BtnToothTop_15.Name = "BtnToothTop_15";
             this.BtnToothTop_15.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_15.TabIndex = 7;
-            this.BtnToothTop_15.UseVisualStyleBackColor = true;
+            this.BtnToothTop_15.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_44
             // 
+            this.BtnToothCenter_44.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_44.Location = new System.Drawing.Point(276, 215);
             this.BtnToothCenter_44.Name = "BtnToothCenter_44";
             this.BtnToothCenter_44.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_44.TabIndex = 9;
-            this.BtnToothCenter_44.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_44.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_71
             // 
+            this.BtnToothCenter_71.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_71.Location = new System.Drawing.Point(598, 453);
             this.BtnToothCenter_71.Name = "BtnToothCenter_71";
             this.BtnToothCenter_71.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_71.TabIndex = 9;
-            this.BtnToothCenter_71.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_71.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_27
             // 
+            this.BtnToothLeft_27.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_27.Location = new System.Drawing.Point(966, 112);
             this.BtnToothLeft_27.Name = "BtnToothLeft_27";
             this.BtnToothLeft_27.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_27.TabIndex = 9;
-            this.BtnToothLeft_27.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_27.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_54
             // 
+            this.BtnToothCenter_54.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_54.Location = new System.Drawing.Point(276, 350);
             this.BtnToothCenter_54.Name = "BtnToothCenter_54";
             this.BtnToothCenter_54.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_54.TabIndex = 9;
-            this.BtnToothCenter_54.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_54.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_31
             // 
+            this.BtnToothCenter_31.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_31.Location = new System.Drawing.Point(598, 215);
             this.BtnToothCenter_31.Name = "BtnToothCenter_31";
             this.BtnToothCenter_31.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_31.TabIndex = 9;
-            this.BtnToothCenter_31.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_31.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_82
             // 
+            this.BtnToothLeft_82.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_82.Location = new System.Drawing.Point(388, 453);
             this.BtnToothLeft_82.Name = "BtnToothLeft_82";
             this.BtnToothLeft_82.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_82.TabIndex = 9;
-            this.BtnToothLeft_82.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_82.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_14
             // 
+            this.BtnToothCenter_14.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_14.Location = new System.Drawing.Point(276, 112);
             this.BtnToothCenter_14.Name = "BtnToothCenter_14";
             this.BtnToothCenter_14.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_14.TabIndex = 9;
-            this.BtnToothCenter_14.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_14.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_61
             // 
+            this.BtnToothCenter_61.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_61.Location = new System.Drawing.Point(598, 350);
             this.BtnToothCenter_61.Name = "BtnToothCenter_61";
             this.BtnToothCenter_61.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_61.TabIndex = 9;
-            this.BtnToothCenter_61.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_61.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_42
             // 
+            this.BtnToothLeft_42.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_42.Location = new System.Drawing.Point(388, 215);
             this.BtnToothLeft_42.Name = "BtnToothLeft_42";
             this.BtnToothLeft_42.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_42.TabIndex = 9;
-            this.BtnToothLeft_42.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_42.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_21
             // 
+            this.BtnToothCenter_21.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_21.Location = new System.Drawing.Point(598, 112);
             this.BtnToothCenter_21.Name = "BtnToothCenter_21";
             this.BtnToothCenter_21.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_21.TabIndex = 9;
-            this.BtnToothCenter_21.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_21.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_52
             // 
+            this.BtnToothLeft_52.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_52.Location = new System.Drawing.Point(388, 350);
             this.BtnToothLeft_52.Name = "BtnToothLeft_52";
             this.BtnToothLeft_52.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_52.TabIndex = 9;
-            this.BtnToothLeft_52.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_52.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_36
             // 
+            this.BtnToothTop_36.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_36.Location = new System.Drawing.Point(918, 199);
             this.BtnToothTop_36.Name = "BtnToothTop_36";
             this.BtnToothTop_36.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_36.TabIndex = 7;
-            this.BtnToothTop_36.UseVisualStyleBackColor = true;
+            this.BtnToothTop_36.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_12
             // 
+            this.BtnToothLeft_12.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_12.Location = new System.Drawing.Point(388, 112);
             this.BtnToothLeft_12.Name = "BtnToothLeft_12";
             this.BtnToothLeft_12.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_12.TabIndex = 9;
-            this.BtnToothLeft_12.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_12.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_48
             // 
+            this.BtnToothCenter_48.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_48.Location = new System.Drawing.Point(20, 215);
             this.BtnToothCenter_48.Name = "BtnToothCenter_48";
             this.BtnToothCenter_48.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_48.TabIndex = 9;
-            this.BtnToothCenter_48.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_48.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_73
             // 
+            this.BtnToothLeft_73.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_73.Location = new System.Drawing.Point(710, 453);
             this.BtnToothLeft_73.Name = "BtnToothLeft_73";
             this.BtnToothLeft_73.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_73.TabIndex = 9;
-            this.BtnToothLeft_73.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_73.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_26
             // 
+            this.BtnToothTop_26.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_26.Location = new System.Drawing.Point(918, 96);
             this.BtnToothTop_26.Name = "BtnToothTop_26";
             this.BtnToothTop_26.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_26.TabIndex = 7;
-            this.BtnToothTop_26.UseVisualStyleBackColor = true;
+            this.BtnToothTop_26.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_33
             // 
+            this.BtnToothLeft_33.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_33.Location = new System.Drawing.Point(710, 215);
             this.BtnToothLeft_33.Name = "BtnToothLeft_33";
             this.BtnToothLeft_33.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_33.TabIndex = 9;
-            this.BtnToothLeft_33.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_33.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_83
             // 
+            this.BtnToothTop_83.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_83.Location = new System.Drawing.Point(340, 437);
             this.BtnToothTop_83.Name = "BtnToothTop_83";
             this.BtnToothTop_83.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_83.TabIndex = 7;
-            this.BtnToothTop_83.UseVisualStyleBackColor = true;
+            this.BtnToothTop_83.UseVisualStyleBackColor = false;
             // 
             // BtnToothCenter_18
             // 
+            this.BtnToothCenter_18.BackColor = System.Drawing.Color.White;
             this.BtnToothCenter_18.Location = new System.Drawing.Point(20, 112);
             this.BtnToothCenter_18.Name = "BtnToothCenter_18";
             this.BtnToothCenter_18.Size = new System.Drawing.Size(30, 30);
             this.BtnToothCenter_18.TabIndex = 9;
-            this.BtnToothCenter_18.UseVisualStyleBackColor = true;
+            this.BtnToothCenter_18.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_63
             // 
+            this.BtnToothLeft_63.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_63.Location = new System.Drawing.Point(710, 350);
             this.BtnToothLeft_63.Name = "BtnToothLeft_63";
             this.BtnToothLeft_63.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_63.TabIndex = 9;
-            this.BtnToothLeft_63.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_63.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_43
             // 
+            this.BtnToothTop_43.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_43.Location = new System.Drawing.Point(340, 199);
             this.BtnToothTop_43.Name = "BtnToothTop_43";
             this.BtnToothTop_43.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_43.TabIndex = 7;
-            this.BtnToothTop_43.UseVisualStyleBackColor = true;
+            this.BtnToothTop_43.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_23
             // 
+            this.BtnToothLeft_23.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_23.Location = new System.Drawing.Point(710, 112);
             this.BtnToothLeft_23.Name = "BtnToothLeft_23";
             this.BtnToothLeft_23.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_23.TabIndex = 9;
-            this.BtnToothLeft_23.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_23.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_53
             // 
+            this.BtnToothTop_53.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_53.Location = new System.Drawing.Point(340, 334);
             this.BtnToothTop_53.Name = "BtnToothTop_53";
             this.BtnToothTop_53.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_53.TabIndex = 7;
-            this.BtnToothTop_53.UseVisualStyleBackColor = true;
+            this.BtnToothTop_53.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_37
             // 
+            this.BtnToothTop_37.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_37.Location = new System.Drawing.Point(982, 199);
             this.BtnToothTop_37.Name = "BtnToothTop_37";
             this.BtnToothTop_37.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_37.TabIndex = 7;
-            this.BtnToothTop_37.UseVisualStyleBackColor = true;
+            this.BtnToothTop_37.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_13
             // 
+            this.BtnToothTop_13.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_13.Location = new System.Drawing.Point(340, 96);
             this.BtnToothTop_13.Name = "BtnToothTop_13";
             this.BtnToothTop_13.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_13.TabIndex = 7;
-            this.BtnToothTop_13.UseVisualStyleBackColor = true;
+            this.BtnToothTop_13.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_46
             // 
+            this.BtnToothLeft_46.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_46.Location = new System.Drawing.Point(132, 215);
             this.BtnToothLeft_46.Name = "BtnToothLeft_46";
             this.BtnToothLeft_46.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_46.TabIndex = 9;
-            this.BtnToothLeft_46.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_46.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_72
             // 
+            this.BtnToothTop_72.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_72.Location = new System.Drawing.Point(662, 437);
             this.BtnToothTop_72.Name = "BtnToothTop_72";
             this.BtnToothTop_72.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_72.TabIndex = 7;
-            this.BtnToothTop_72.UseVisualStyleBackColor = true;
+            this.BtnToothTop_72.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_27
             // 
+            this.BtnToothTop_27.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_27.Location = new System.Drawing.Point(982, 96);
             this.BtnToothTop_27.Name = "BtnToothTop_27";
             this.BtnToothTop_27.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_27.TabIndex = 7;
-            this.BtnToothTop_27.UseVisualStyleBackColor = true;
+            this.BtnToothTop_27.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_32
             // 
+            this.BtnToothTop_32.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_32.Location = new System.Drawing.Point(662, 199);
             this.BtnToothTop_32.Name = "BtnToothTop_32";
             this.BtnToothTop_32.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_32.TabIndex = 7;
-            this.BtnToothTop_32.UseVisualStyleBackColor = true;
+            this.BtnToothTop_32.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_82
             // 
+            this.BtnToothTop_82.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_82.Location = new System.Drawing.Point(404, 437);
             this.BtnToothTop_82.Name = "BtnToothTop_82";
             this.BtnToothTop_82.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_82.TabIndex = 7;
-            this.BtnToothTop_82.UseVisualStyleBackColor = true;
+            this.BtnToothTop_82.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_16
             // 
+            this.BtnToothLeft_16.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_16.Location = new System.Drawing.Point(132, 112);
             this.BtnToothLeft_16.Name = "BtnToothLeft_16";
             this.BtnToothLeft_16.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_16.TabIndex = 9;
-            this.BtnToothLeft_16.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_16.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_62
             // 
+            this.BtnToothTop_62.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_62.Location = new System.Drawing.Point(662, 334);
             this.BtnToothTop_62.Name = "BtnToothTop_62";
             this.BtnToothTop_62.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_62.TabIndex = 7;
-            this.BtnToothTop_62.UseVisualStyleBackColor = true;
+            this.BtnToothTop_62.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_42
             // 
+            this.BtnToothTop_42.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_42.Location = new System.Drawing.Point(404, 199);
             this.BtnToothTop_42.Name = "BtnToothTop_42";
             this.BtnToothTop_42.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_42.TabIndex = 7;
-            this.BtnToothTop_42.UseVisualStyleBackColor = true;
+            this.BtnToothTop_42.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_75
             // 
+            this.BtnToothLeft_75.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_75.Location = new System.Drawing.Point(838, 453);
             this.BtnToothLeft_75.Name = "BtnToothLeft_75";
             this.BtnToothLeft_75.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_75.TabIndex = 9;
-            this.BtnToothLeft_75.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_75.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_22
             // 
+            this.BtnToothTop_22.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_22.Location = new System.Drawing.Point(662, 96);
             this.BtnToothTop_22.Name = "BtnToothTop_22";
             this.BtnToothTop_22.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_22.TabIndex = 7;
-            this.BtnToothTop_22.UseVisualStyleBackColor = true;
+            this.BtnToothTop_22.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_52
             // 
+            this.BtnToothTop_52.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_52.Location = new System.Drawing.Point(404, 334);
             this.BtnToothTop_52.Name = "BtnToothTop_52";
             this.BtnToothTop_52.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_52.TabIndex = 7;
-            this.BtnToothTop_52.UseVisualStyleBackColor = true;
+            this.BtnToothTop_52.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_35
             // 
+            this.BtnToothLeft_35.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_35.Location = new System.Drawing.Point(838, 215);
             this.BtnToothLeft_35.Name = "BtnToothLeft_35";
             this.BtnToothLeft_35.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_35.TabIndex = 9;
-            this.BtnToothLeft_35.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_35.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_12
             // 
+            this.BtnToothTop_12.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_12.Location = new System.Drawing.Point(404, 96);
             this.BtnToothTop_12.Name = "BtnToothTop_12";
             this.BtnToothTop_12.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_12.TabIndex = 7;
-            this.BtnToothTop_12.UseVisualStyleBackColor = true;
+            this.BtnToothTop_12.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_65
             // 
+            this.BtnToothLeft_65.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_65.Location = new System.Drawing.Point(838, 350);
             this.BtnToothLeft_65.Name = "BtnToothLeft_65";
             this.BtnToothLeft_65.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_65.TabIndex = 9;
-            this.BtnToothLeft_65.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_65.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_47
             // 
+            this.BtnToothTop_47.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_47.Location = new System.Drawing.Point(84, 199);
             this.BtnToothTop_47.Name = "BtnToothTop_47";
             this.BtnToothTop_47.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_47.TabIndex = 7;
-            this.BtnToothTop_47.UseVisualStyleBackColor = true;
+            this.BtnToothTop_47.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_73
             // 
+            this.BtnToothTop_73.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_73.Location = new System.Drawing.Point(726, 437);
             this.BtnToothTop_73.Name = "BtnToothTop_73";
             this.BtnToothTop_73.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_73.TabIndex = 7;
-            this.BtnToothTop_73.UseVisualStyleBackColor = true;
+            this.BtnToothTop_73.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_25
             // 
+            this.BtnToothLeft_25.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_25.Location = new System.Drawing.Point(838, 112);
             this.BtnToothLeft_25.Name = "BtnToothLeft_25";
             this.BtnToothLeft_25.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_25.TabIndex = 9;
-            this.BtnToothLeft_25.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_25.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_33
             // 
+            this.BtnToothTop_33.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_33.Location = new System.Drawing.Point(726, 199);
             this.BtnToothTop_33.Name = "BtnToothTop_33";
             this.BtnToothTop_33.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_33.TabIndex = 7;
-            this.BtnToothTop_33.UseVisualStyleBackColor = true;
+            this.BtnToothTop_33.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_84
             // 
+            this.BtnToothLeft_84.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_84.Location = new System.Drawing.Point(260, 453);
             this.BtnToothLeft_84.Name = "BtnToothLeft_84";
             this.BtnToothLeft_84.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_84.TabIndex = 9;
-            this.BtnToothLeft_84.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_84.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_17
             // 
+            this.BtnToothTop_17.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_17.Location = new System.Drawing.Point(84, 96);
             this.BtnToothTop_17.Name = "BtnToothTop_17";
             this.BtnToothTop_17.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_17.TabIndex = 7;
-            this.BtnToothTop_17.UseVisualStyleBackColor = true;
+            this.BtnToothTop_17.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_63
             // 
+            this.BtnToothTop_63.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_63.Location = new System.Drawing.Point(726, 334);
             this.BtnToothTop_63.Name = "BtnToothTop_63";
             this.BtnToothTop_63.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_63.TabIndex = 7;
-            this.BtnToothTop_63.UseVisualStyleBackColor = true;
+            this.BtnToothTop_63.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_44
             // 
+            this.BtnToothLeft_44.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_44.Location = new System.Drawing.Point(260, 215);
             this.BtnToothLeft_44.Name = "BtnToothLeft_44";
             this.BtnToothLeft_44.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_44.TabIndex = 9;
-            this.BtnToothLeft_44.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_44.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_75
             // 
+            this.BtnToothTop_75.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_75.Location = new System.Drawing.Point(854, 437);
             this.BtnToothTop_75.Name = "BtnToothTop_75";
             this.BtnToothTop_75.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_75.TabIndex = 7;
-            this.BtnToothTop_75.UseVisualStyleBackColor = true;
+            this.BtnToothTop_75.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_23
             // 
+            this.BtnToothTop_23.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_23.Location = new System.Drawing.Point(726, 96);
             this.BtnToothTop_23.Name = "BtnToothTop_23";
             this.BtnToothTop_23.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_23.TabIndex = 7;
-            this.BtnToothTop_23.UseVisualStyleBackColor = true;
+            this.BtnToothTop_23.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_54
             // 
+            this.BtnToothLeft_54.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_54.Location = new System.Drawing.Point(260, 350);
             this.BtnToothLeft_54.Name = "BtnToothLeft_54";
             this.BtnToothLeft_54.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_54.TabIndex = 9;
-            this.BtnToothLeft_54.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_54.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_35
             // 
+            this.BtnToothTop_35.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_35.Location = new System.Drawing.Point(854, 199);
             this.BtnToothTop_35.Name = "BtnToothTop_35";
             this.BtnToothTop_35.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_35.TabIndex = 7;
-            this.BtnToothTop_35.UseVisualStyleBackColor = true;
+            this.BtnToothTop_35.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_14
             // 
+            this.BtnToothLeft_14.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_14.Location = new System.Drawing.Point(260, 112);
             this.BtnToothLeft_14.Name = "BtnToothLeft_14";
             this.BtnToothLeft_14.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_14.TabIndex = 9;
-            this.BtnToothLeft_14.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_14.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_65
             // 
+            this.BtnToothTop_65.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_65.Location = new System.Drawing.Point(854, 334);
             this.BtnToothTop_65.Name = "BtnToothTop_65";
             this.BtnToothTop_65.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_65.TabIndex = 7;
-            this.BtnToothTop_65.UseVisualStyleBackColor = true;
+            this.BtnToothTop_65.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_46
             // 
+            this.BtnToothTop_46.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_46.Location = new System.Drawing.Point(148, 199);
             this.BtnToothTop_46.Name = "BtnToothTop_46";
             this.BtnToothTop_46.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_46.TabIndex = 7;
-            this.BtnToothTop_46.UseVisualStyleBackColor = true;
+            this.BtnToothTop_46.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_71
             // 
+            this.BtnToothLeft_71.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_71.Location = new System.Drawing.Point(582, 453);
             this.BtnToothLeft_71.Name = "BtnToothLeft_71";
             this.BtnToothLeft_71.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_71.TabIndex = 9;
-            this.BtnToothLeft_71.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_71.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_25
             // 
+            this.BtnToothTop_25.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_25.Location = new System.Drawing.Point(854, 96);
             this.BtnToothTop_25.Name = "BtnToothTop_25";
             this.BtnToothTop_25.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_25.TabIndex = 7;
-            this.BtnToothTop_25.UseVisualStyleBackColor = true;
+            this.BtnToothTop_25.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_31
             // 
+            this.BtnToothLeft_31.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_31.Location = new System.Drawing.Point(582, 215);
             this.BtnToothLeft_31.Name = "BtnToothLeft_31";
             this.BtnToothLeft_31.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_31.TabIndex = 9;
-            this.BtnToothLeft_31.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_31.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_84
             // 
+            this.BtnToothTop_84.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_84.Location = new System.Drawing.Point(276, 437);
             this.BtnToothTop_84.Name = "BtnToothTop_84";
             this.BtnToothTop_84.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_84.TabIndex = 7;
-            this.BtnToothTop_84.UseVisualStyleBackColor = true;
+            this.BtnToothTop_84.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_16
             // 
+            this.BtnToothTop_16.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_16.Location = new System.Drawing.Point(148, 96);
             this.BtnToothTop_16.Name = "BtnToothTop_16";
             this.BtnToothTop_16.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_16.TabIndex = 7;
-            this.BtnToothTop_16.UseVisualStyleBackColor = true;
+            this.BtnToothTop_16.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_61
             // 
+            this.BtnToothLeft_61.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_61.Location = new System.Drawing.Point(582, 350);
             this.BtnToothLeft_61.Name = "BtnToothLeft_61";
             this.BtnToothLeft_61.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_61.TabIndex = 9;
-            this.BtnToothLeft_61.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_61.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_44
             // 
+            this.BtnToothTop_44.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_44.Location = new System.Drawing.Point(276, 199);
             this.BtnToothTop_44.Name = "BtnToothTop_44";
             this.BtnToothTop_44.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_44.TabIndex = 7;
-            this.BtnToothTop_44.UseVisualStyleBackColor = true;
+            this.BtnToothTop_44.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_71
             // 
+            this.BtnToothTop_71.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_71.Location = new System.Drawing.Point(598, 437);
             this.BtnToothTop_71.Name = "BtnToothTop_71";
             this.BtnToothTop_71.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_71.TabIndex = 7;
-            this.BtnToothTop_71.UseVisualStyleBackColor = true;
+            this.BtnToothTop_71.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_21
             // 
+            this.BtnToothLeft_21.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_21.Location = new System.Drawing.Point(582, 112);
             this.BtnToothLeft_21.Name = "BtnToothLeft_21";
             this.BtnToothLeft_21.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_21.TabIndex = 9;
-            this.BtnToothLeft_21.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_21.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_54
             // 
+            this.BtnToothTop_54.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_54.Location = new System.Drawing.Point(276, 334);
             this.BtnToothTop_54.Name = "BtnToothTop_54";
             this.BtnToothTop_54.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_54.TabIndex = 7;
-            this.BtnToothTop_54.UseVisualStyleBackColor = true;
+            this.BtnToothTop_54.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_31
             // 
+            this.BtnToothTop_31.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_31.Location = new System.Drawing.Point(598, 199);
             this.BtnToothTop_31.Name = "BtnToothTop_31";
             this.BtnToothTop_31.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_31.TabIndex = 7;
-            this.BtnToothTop_31.UseVisualStyleBackColor = true;
+            this.BtnToothTop_31.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_14
             // 
+            this.BtnToothTop_14.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_14.Location = new System.Drawing.Point(276, 96);
             this.BtnToothTop_14.Name = "BtnToothTop_14";
             this.BtnToothTop_14.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_14.TabIndex = 7;
-            this.BtnToothTop_14.UseVisualStyleBackColor = true;
+            this.BtnToothTop_14.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_61
             // 
+            this.BtnToothTop_61.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_61.Location = new System.Drawing.Point(598, 334);
             this.BtnToothTop_61.Name = "BtnToothTop_61";
             this.BtnToothTop_61.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_61.TabIndex = 7;
-            this.BtnToothTop_61.UseVisualStyleBackColor = true;
+            this.BtnToothTop_61.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_48
             // 
+            this.BtnToothLeft_48.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_48.Location = new System.Drawing.Point(4, 215);
             this.BtnToothLeft_48.Name = "BtnToothLeft_48";
             this.BtnToothLeft_48.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_48.TabIndex = 9;
-            this.BtnToothLeft_48.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_48.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_21
             // 
+            this.BtnToothTop_21.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_21.Location = new System.Drawing.Point(598, 96);
             this.BtnToothTop_21.Name = "BtnToothTop_21";
             this.BtnToothTop_21.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_21.TabIndex = 7;
-            this.BtnToothTop_21.UseVisualStyleBackColor = true;
+            this.BtnToothTop_21.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_48
             // 
+            this.BtnToothTop_48.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_48.Location = new System.Drawing.Point(20, 199);
             this.BtnToothTop_48.Name = "BtnToothTop_48";
             this.BtnToothTop_48.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_48.TabIndex = 7;
-            this.BtnToothTop_48.UseVisualStyleBackColor = true;
+            this.BtnToothTop_48.UseVisualStyleBackColor = false;
             // 
             // BtnToothLeft_18
             // 
+            this.BtnToothLeft_18.BackColor = System.Drawing.Color.White;
             this.BtnToothLeft_18.Location = new System.Drawing.Point(4, 112);
             this.BtnToothLeft_18.Name = "BtnToothLeft_18";
             this.BtnToothLeft_18.Size = new System.Drawing.Size(15, 30);
             this.BtnToothLeft_18.TabIndex = 9;
-            this.BtnToothLeft_18.UseVisualStyleBackColor = true;
+            this.BtnToothLeft_18.UseVisualStyleBackColor = false;
             // 
             // BtnToothTop_18
             // 
+            this.BtnToothTop_18.BackColor = System.Drawing.Color.White;
             this.BtnToothTop_18.Location = new System.Drawing.Point(20, 96);
             this.BtnToothTop_18.Name = "BtnToothTop_18";
             this.BtnToothTop_18.Size = new System.Drawing.Size(30, 15);
             this.BtnToothTop_18.TabIndex = 7;
-            this.BtnToothTop_18.UseVisualStyleBackColor = true;
+            this.BtnToothTop_18.UseVisualStyleBackColor = false;
             // 
             // label61
             // 
@@ -8538,6 +8800,17 @@
             this.LblOdontogramId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblOdontogramId.Visible = false;
             // 
+            // LblTotalCavities
+            // 
+            this.LblTotalCavities.AutoSize = true;
+            this.LblTotalCavities.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalCavities.Location = new System.Drawing.Point(859, 9);
+            this.LblTotalCavities.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotalCavities.Name = "LblTotalCavities";
+            this.LblTotalCavities.Size = new System.Drawing.Size(169, 22);
+            this.LblTotalCavities.TabIndex = 26;
+            this.LblTotalCavities.Text = "Total de caries: 0";
+            // 
             // FrmVisitManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -9410,5 +9683,6 @@
         private System.Windows.Forms.Label label132;
         private System.Windows.Forms.Label label133;
         private System.Windows.Forms.Label LblOdontogramId;
+        private System.Windows.Forms.Label LblTotalCavities;
     }
 }

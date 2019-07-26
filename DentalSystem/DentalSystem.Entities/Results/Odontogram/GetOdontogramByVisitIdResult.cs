@@ -13,6 +13,6 @@ namespace DentalSystem.Entities.Results.Odontogram
         public string Information { get; set; }
         public int CavitiesQuantity { get; set; }
         public bool HasInformation { get; set; }
-        public GetTreatmentOdontogramByOdontogramIdResultModel TreatmentOdontogram { get; set; }
+        //public GetTreatmentOdontogramByOdontogramIdResultModel TreatmentOdontogram { get; set; }
     }
 }

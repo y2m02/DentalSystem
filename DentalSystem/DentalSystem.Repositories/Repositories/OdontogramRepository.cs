@@ -12,7 +12,8 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                var odontogram = context.Odontograms.Include(w => w.TreatmentOdontogram).OrderByDescending(w=>w.OdontogramId)
+                var odontogram = context.Odontograms.Include(w => w.TreatmentOdontogram)
+                    .OrderByDescending(w => w.OdontogramId)
                     .FirstOrDefault(w => w.VisitId == visitId);
 
                 return odontogram;

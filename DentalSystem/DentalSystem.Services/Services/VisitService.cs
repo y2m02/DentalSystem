@@ -54,7 +54,11 @@ namespace DentalSystem.Services.Services
                         {
                             CavitiesQuantity = result.CavitiesQuantity,
                             Information = result.Information,
-                            TreatmentOdontogram = result.TreatmentOdontogram
+                            TreatmentOdontogram = new TreatmentOdontogram
+                            {
+                                Information = result.Information,
+                                CavitiesQuantity = result.CavitiesQuantity
+                            }
                         }
                     };
                 }
