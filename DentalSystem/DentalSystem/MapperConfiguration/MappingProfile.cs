@@ -5,17 +5,21 @@ using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.InvoiceDetail;
+using DentalSystem.Entities.Requests.Odontogram;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Requests.PlateRegistration;
+using DentalSystem.Entities.Requests.TreatmentOdontogram;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.AccountsReceivable;
 using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.InvoiceDetail;
+using DentalSystem.Entities.Results.Odontogram;
 using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.Payment;
 using DentalSystem.Entities.Results.PlateRegistration;
+using DentalSystem.Entities.Results.TreatmentOdontogram;
 using DentalSystem.Entities.Results.Visit;
 
 namespace DentalSystem.MapperConfiguration
@@ -123,6 +127,12 @@ namespace DentalSystem.MapperConfiguration
 
             CreateMap<PlateRegistration, GetPlateRegistrationByPatientIdResult>();
 
+            CreateMap<Entities.Models.Odontogram, GetOdontogramByVisitIdResultModel>()
+                .ForMember(w => w.HasInformation, y => y.MapFrom(r => !string.IsNullOrEmpty(r.Information)));
+
+
+            CreateMap<TreatmentOdontogram, GetTreatmentOdontogramByOdontogramIdResultModel>();
+
             // ADD
             CreateMap<AddPatientRequest, Entities.Models.Patient>()
                 .ForMember(w => w.PlateRegistration, y => y.MapFrom(r => new PlateRegistration()));
@@ -132,6 +142,9 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddInvoiceDetailRequest, InvoiceDetail>();
             CreateMap<AddAccountsReceivableRequest, AccountsReceivable>();
             CreateMap<AddPaymentRequest, Payment>();
+            CreateMap<AddOdontogramRequest, Entities.Models.Odontogram>();
+            CreateMap<AddTreatmentOdontogramRequest, TreatmentOdontogram>();
+
             CreateMap<Visit, AddVisitResult>();
 
 
@@ -144,6 +157,8 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<UpdateTotalPaidRequest, AccountsReceivable>();
             CreateMap<SetVisitAsBilledRequest, Visit>();
             CreateMap<UpdatePlateRegistrationRequest, PlateRegistration>();
+            CreateMap<UpdateOdontogramRequest, Entities.Models.Odontogram>();
+            CreateMap<UpdateTreatmentOdontogramRequest, TreatmentOdontogram>();
 
             //DELETE
             CreateMap<DeletePaymentRequest, Payment>();

@@ -22,6 +22,7 @@ namespace DentalSystem.Entities.Context
         public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PlateRegistration> PlateRegistrations { get; set; }
+        public DbSet<TreatmentOdontogram> TreatmentOdontograms { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

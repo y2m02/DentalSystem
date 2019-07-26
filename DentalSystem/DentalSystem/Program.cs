@@ -41,6 +41,12 @@ namespace DentalSystem
             container.RegisterType<IPlateRegistrationService, PlateRegistrationService>();
             container.RegisterType<IPlateRegistrationRepository, PlateRegistrationRepository>();
 
+            container.RegisterType<IOdontogramService, OdontogramService>();
+            container.RegisterType<IOdontogramRepository, OdontogramRepository>();
+
+            container.RegisterType<ITreatmentOdontogramService, TreatmentOdontogramService>();
+            container.RegisterType<ITreatmentOdontogramRepository, TreatmentOdontogramRepository>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(container.Resolve<FrmPatientList>());

@@ -52,9 +52,11 @@
     <Compile Include="Repositories\AccountReceivableRepository.cs" />
     <Compile Include="Repositories\ActivityPerformedRepository.cs" />
     <Compile Include="Repositories\InvoiceDetailRepository.cs" />
+    <Compile Include="Repositories\OdontogramRepository.cs" />
     <Compile Include="Repositories\PatientRepository.cs" />
     <Compile Include="Repositories\PaymentRepository.cs" />
     <Compile Include="Repositories\PlateRegistrationRepository.cs" />
+    <Compile Include="Repositories\TreatmentOdontogramRepository.cs" />
     <Compile Include="Repositories\VisitRepository.cs" />
   </ItemGroup>
   <ItemGroup>

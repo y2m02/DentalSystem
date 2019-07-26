@@ -81,6 +81,10 @@
     <Compile Include="Requests\InvoiceDetail\GetInvoiceDetailByVisitIdRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\GetInvoiceDetailFromOtherVisitsRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\UpdateInvoiceDetailRequest.cs" />
+    <Compile Include="Requests\Odontogram\AddOdontogramRequest.cs" />
+    <Compile Include="Requests\Odontogram\GetOdontogramByVisitIdRequest.cs" />
+    <Compile Include="Requests\Odontogram\UpdateOdontogramRequest.cs" />
+    <Compile Include="Requests\Odontogram\ValidateIfVisitHasOdontogramsRequest.cs" />
     <Compile Include="Requests\PatientHealth\AddPatientHealthRequest.cs" />
     <Compile Include="Requests\Patient\AddPatientRequest.cs" />
     <Compile Include="Requests\Patient\DeletePatientRequest.cs" />
@@ -92,6 +96,9 @@
     <Compile Include="Requests\Payment\GetPaymentsByAccountReceivableIdRequest.cs" />
     <Compile Include="Requests\PlateRegistration\GetPlateRegistrationByPatientIdRequest.cs" />
     <Compile Include="Requests\PlateRegistration\UpdatePlateRegistrationRequest.cs" />
+    <Compile Include="Requests\TreatmentOdontogram\AddTreatmentOdontogramRequest.cs" />
+    <Compile Include="Requests\TreatmentOdontogram\GetTreatmentOdontogramByOdontogramIdRequest.cs" />
+    <Compile Include="Requests\TreatmentOdontogram\UpdateTreatmentOdontogramRequest.cs" />
     <Compile Include="Requests\Visit\AddVisitRequest.cs" />
     <Compile Include="Requests\Visit\EndVisitRequest.cs" />
     <Compile Include="Requests\Visit\GetVisitNumberRequest.cs" />
@@ -102,12 +109,15 @@
     <Compile Include="Results\AccountsReceivable\GetAccountsReceivableByPatientIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailByVisitIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailFromOtherVisitsResult.cs" />
+    <Compile Include="Results\Odontogram\GetOdontogramByVisitIdResult.cs" />
+    <Compile Include="Results\Odontogram\ValidateIfVisitHasOdontogramsResult.cs" />
     <Compile Include="Results\Patient\GetAllPatientsResult.cs" />
     <Compile Include="Results\Patient\GetPatientByIdResult.cs" />
     <Compile Include="Results\Payment\AddPaymentResult.cs" />
     <Compile Include="Results\Payment\DeletePaymentResult.cs" />
     <Compile Include="Results\Payment\GetPaymentsByAccountReceivableIdResult.cs" />
     <Compile Include="Results\PlateRegistration\GetPlateRegistrationByPatientIdResult.cs" />
+    <Compile Include="Results\TreatmentOdontogram\GetTreatmentOdontogramByOdontogramIdResult.cs" />
     <Compile Include="Results\Visit\AddVisitResult.cs" />
     <Compile Include="Results\Visit\GetVisitsByPatientIdResult.cs" />
     <Compile Include="Results\Visit\GetVisitNumberResult.cs" />

@@ -18,12 +18,14 @@ namespace DentalSystem.VisitManagement
         private readonly IPaymentService _paymentService;
         private readonly IVisitService _visitService;
         private readonly IPlateRegistrationService _plateRegistrationService;
+        private readonly IOdontogramService _odontogramService;
+        private readonly ITreatmentOdontogramService _treatmentOdontogramService;
         private bool _alreadyLoaded;
 
         public FrmVisitsList(IVisitService visitService, IMapper iMapper,
             IAccountReceivableService accountReceivableService, IActivityPerformedService activityPerformedService,
             IInvoiceDetailService invoiceDetailService, IPatientService patientService, IPaymentService paymentService,
-            IPlateRegistrationService plateRegistrationService)
+            IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService, ITreatmentOdontogramService treatmentOdontogramService)
         {
             _visitService = visitService;
             _iMapper = iMapper;
@@ -33,6 +35,8 @@ namespace DentalSystem.VisitManagement
             _patientService = patientService;
             _paymentService = paymentService;
             _plateRegistrationService = plateRegistrationService;
+            _odontogramService = odontogramService;
+            _treatmentOdontogramService = treatmentOdontogramService;
             InitializeComponent();
         }
 
@@ -86,6 +90,7 @@ namespace DentalSystem.VisitManagement
             dgv.Columns["Status"].HeaderText = "Estado";
             dgv.Columns["HasEnded"].Visible = false;
             dgv.Columns["HasBeenBilled"].Visible = false;
+            //dgv.Columns["HasOdontograms"].Visible = false;
         }
 
         private void FrmVisitsList_Activated(object sender, EventArgs e)
@@ -102,15 +107,18 @@ namespace DentalSystem.VisitManagement
                 var patientName = LblPatientName.Text.Split(':')[1].Trim();
                 var visitHasBeenBilled =
                     Convert.ToBoolean(DgvVisitList.SelectedRows[0].Cells["HasBeenBilled"].Value);
+                //var hasOdontograms =
+                //    Convert.ToBoolean(DgvVisitList.SelectedRows[0].Cells["HasOdontograms"].Value);
 
                 GenericProperties.VisitId = visitId;
                 GenericProperties.VisitHasBeenBilled = visitHasBeenBilled;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService)
+                    _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService,_odontogramService,_treatmentOdontogramService)
                 {
                     PatientId = PatientId,
                     PatientName = patientName,
+                    //VisitHasOdontograms = hasOdontograms,
                     DialogResult = DialogResult.None
                 };
                 frm.ShowDialog();

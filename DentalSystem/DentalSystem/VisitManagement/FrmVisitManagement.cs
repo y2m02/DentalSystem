@@ -9,13 +9,17 @@ using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.InvoiceDetail;
+using DentalSystem.Entities.Requests.Odontogram;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Requests.PlateRegistration;
+using DentalSystem.Entities.Requests.TreatmentOdontogram;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.PlateRegistration;
+using DentalSystem.Odontogram;
+using Newtonsoft.Json;
 
 namespace DentalSystem.VisitManagement
 {
@@ -27,14 +31,16 @@ namespace DentalSystem.VisitManagement
         private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IPatientService _patientService;
         private readonly IPaymentService _paymentService;
-        private readonly IVisitService _visitService;
         private readonly IPlateRegistrationService _plateRegistrationService;
+        private readonly IVisitService _visitService;
+        private readonly IOdontogramService _odontogramService;
+        private readonly ITreatmentOdontogramService _treatmentOdontogramService;
         private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
             IActivityPerformedService activityPerformedService, IVisitService visitService,
             IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService,
-            IPaymentService paymentService, IPlateRegistrationService plateRegistrationService)
+            IPaymentService paymentService, IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService, ITreatmentOdontogramService treatmentOdontogramService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
@@ -44,15 +50,20 @@ namespace DentalSystem.VisitManagement
             _accountReceivableService = accountReceivableService;
             _paymentService = paymentService;
             _plateRegistrationService = plateRegistrationService;
+            _odontogramService = odontogramService;
+            _treatmentOdontogramService = treatmentOdontogramService;
             InitializeComponent();
         }
 
         public int PatientId { get; set; }
         public string PatientName { get; set; }
+        //public bool VisitHasOdontograms { get; set; }
 
         private void FrmVisitManagement_Load(object sender, EventArgs e)
         {
+            //BtnSaveOdontogram.Enabled = !VisitHasOdontograms;
             InitializeControlPositions();
+            SetInitialOdontogramButtonsFunctionality();
             FillInformation();
             DtpBirthDate.MaxDate = DtpAdmissionDate.MaxDate = DateTime.Now;
             TxtAdmissionDate.Text = DtpAdmissionDate.Value.ToString("dd/MM/yyyy");
@@ -61,7 +72,8 @@ namespace DentalSystem.VisitManagement
             LblPatientNameInitialOdontogram.Text = LblPatientNameTreatmentOdontogram.Text =
                 LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = "Paciente: " + PatientName;
 
-            SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth, PnlPlateRegistration);
+            SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth,
+                PnlPlateRegistration);
         }
 
         private void FrmVisitManagement_SizeChanged(object sender, EventArgs e)
@@ -98,7 +110,7 @@ namespace DentalSystem.VisitManagement
             TclVisitManagement.SelectedIndex = 4;
             ChangeButtonSelectedStatus(BtnInvoice);
             GetInvoiceLists();
-            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
@@ -125,7 +137,7 @@ namespace DentalSystem.VisitManagement
                     ChangeButtonSelectedStatus(BtnInvoice);
                     GetInvoiceLists();
                     var invoiceDetailsCurrentVisit =
-                        (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+                        (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                     LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
@@ -197,7 +209,7 @@ namespace DentalSystem.VisitManagement
                     AdmissionDate = DtpAdmissionDate.Value,
                     PhoneNumber = TxtPhoneNumber.Text.Trim(),
                     Sector = TxtSector.Text.Trim(),
-                    Age = (int) NudAge.Value,
+                    Age = (int)NudAge.Value,
                     BirthDate = DtpBirthDate.Value,
                     HasInsurancePlan = RbtInsuranceYes.Checked,
                     NSS = TxtNss.Text.Trim(),
@@ -277,7 +289,7 @@ namespace DentalSystem.VisitManagement
         public void ValidateOnlyNumbers(KeyPressEventArgs e)
         {
             if (TxtIdentificationCard.ReadOnly) return;
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
 
             MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
@@ -286,7 +298,7 @@ namespace DentalSystem.VisitManagement
 
         public void ValidateOnlyNumbersNoMsg(KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
             e.Handled = true;
         }
 
@@ -374,6 +386,7 @@ namespace DentalSystem.VisitManagement
             TxtX.Text = result.X;
             TxtRadiographicInterpretation.Text = result.RadiographicInterpretation;
         }
+
         private void FillInformation()
         {
             try
@@ -759,7 +772,7 @@ namespace DentalSystem.VisitManagement
 
                 _invoiceDetailService.UpdateInvoiceDetail(updateActivityPerformedRequest);
 
-                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                 var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                 LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
 
@@ -1173,6 +1186,90 @@ namespace DentalSystem.VisitManagement
             BtnSaveRegistration.Visible = false;
             BtnModifyRegistration.Visible = true;
             SetControlsStatus(false, PnlPlateRegistration);
+        }
+
+        private void SetInitialOdontogramButtonsFunctionality()
+        {
+            foreach (var control in PnlTeeth.Controls)
+                if (control is Button button)
+                    button.Click += delegate
+                    {
+                        button.BackColor = button.BackColor == Color.Red ? SystemColors.Control : Color.Red;
+                    };
+        }
+
+        private void BtnSaveOdontogram_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (GenericProperties.VisitHasBeenBilled)
+                {
+                    MessageBox.Show(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                var result = MessageBox.Show("Una vez que guarde este odontograma, no podrá volver a modificarlo. " +
+                                             "Solo podrá modificar el odontograma de tratamientos. " +
+                                             "Para realizar algún cambio deberá crear uno nuevo", "Información",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information);
+
+                if (result != DialogResult.OK) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var buttonList = new List<OdontogramButtonsModel>();
+                var buttonCount = 1;
+                var cavitiesQuantity = 0;
+
+                foreach (var control in PnlTeeth.Controls)
+                {
+                    if (!(control is Button button)) continue;
+
+                    buttonList.Add(new OdontogramButtonsModel
+                    {
+                        Id = buttonCount,
+                        ButtonName = button.Name,
+                        HasCavities = button.BackColor == Color.Red
+                    });
+
+                    if (button.BackColor == Color.Red) cavitiesQuantity++;
+
+                     buttonCount++;
+                }
+
+                var jsonButtonList = JsonConvert.SerializeObject(buttonList);
+
+                var updateTreatmentOdontogramRequest = new UpdateTreatmentOdontogramRequest
+                {
+                    TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text),
+                    Information = jsonButtonList,
+                    CavitiesQuantity = cavitiesQuantity
+                };
+
+                var updateOdontogramRequest = new UpdateOdontogramRequest()
+                {
+                    OdontogramId = Convert.ToInt32(LblOdontogramId.Text),
+                    Information = jsonButtonList,
+                    CavitiesQuantity = cavitiesQuantity,
+                    TreatmentOdontogram = updateTreatmentOdontogramRequest,
+                    Mapper = _iMapper
+                };
+
+                _odontogramService.UpdateOdontogram(updateOdontogramRequest);
+
+                //var a = JsonConvert.DeserializeObject < List<OdontogramButtonsModel>>(jsonButtonList);
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }

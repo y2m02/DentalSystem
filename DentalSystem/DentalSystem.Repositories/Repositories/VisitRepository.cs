@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
@@ -48,6 +49,21 @@ namespace DentalSystem.Repositories.Repositories
                 var visitNumber = totalVisit + 1;
 
                 return visitNumber;
+            }
+        }
+
+        public int GetVisitId(int patientId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var visit = context.Visits.OrderByDescending(w=>w.VisitId).FirstOrDefault(w => w.PatientId == patientId);
+
+                if (visit == null) return 0;
+
+                var visitId = visit.VisitId;
+
+                return visitId;
+
             }
         }
 
