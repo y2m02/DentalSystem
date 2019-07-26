@@ -67,7 +67,7 @@ namespace DentalSystem.Services.Services
                     {
                         CavitiesQuantity = 0,
                         Information = string.Empty,
-                        TreatmentOdontogram = new TreatmentOdontogram()
+                        TreatmentOdontogram = new TreatmentOdontogram
                         {
                             Information = string.Empty,
                             CavitiesQuantity = 0

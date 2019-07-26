@@ -179,9 +179,9 @@ namespace DentalSystem.Patient
         private void InitializeButtons()
         {
             if (DgvPatientList.RowCount < 1)
-                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnVisits.Enabled = BtnDelete.Enabled = false;
+                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnVisits.Enabled = BtnAccountReceivable.Enabled = BtnDelete.Enabled = false;
             else
-                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnVisits.Enabled = BtnDelete.Enabled = true;
+                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnVisits.Enabled = BtnAccountReceivable.Enabled = BtnDelete.Enabled = true;
 
             //ValidateIfVisitFinished();
         }
@@ -197,7 +197,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?) visitHasEnded ?? true;
+            var visitHasFinished = (bool?)visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -209,7 +209,7 @@ namespace DentalSystem.Patient
             {
                 var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-                var visitHasFinished = (bool?) visitHasEnded ?? true;
+                var visitHasFinished = (bool?)visitHasEnded ?? true;
 
                 if (!visitHasFinished)
                 {

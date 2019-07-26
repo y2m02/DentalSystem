@@ -53,9 +53,9 @@
   <ItemGroup>
     <Compile Include="Context\DentalSystemContext.cs" />
     <Compile Include="GenericProperties\GenericProperties.cs" />
-    <Compile Include="Migrations\201907180134300_Created.cs" />
-    <Compile Include="Migrations\201907180134300_Created.Designer.cs">
-      <DependentUpon>201907180134300_Created.cs</DependentUpon>
+    <Compile Include="Migrations\201907261722512_InitialCreate.cs" />
+    <Compile Include="Migrations\201907261722512_InitialCreate.Designer.cs">
+      <DependentUpon>201907261722512_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityPerformed.cs" />
@@ -127,10 +127,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907180134300_Created.resx">
-      <DependentUpon>201907180134300_Created.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907261722512_InitialCreate.resx">
+      <DependentUpon>201907261722512_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

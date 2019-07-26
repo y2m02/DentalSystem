@@ -48,8 +48,8 @@ namespace DentalSystem.Repositories.Repositories
                 context.Odontograms.Attach(odontogram);
                 context.Entry(odontogram).Property(x => x.Information).IsModified = true;
                 context.Entry(odontogram).Property(x => x.CavitiesQuantity).IsModified = true;
-                context.Entry(odontogram).Property(x => x.TreatmentOdontogram.Information).IsModified = true;
-                context.Entry(odontogram).Property(x => x.TreatmentOdontogram.CavitiesQuantity).IsModified = true;
+                context.Entry(odontogram.TreatmentOdontogram).Property(x => x.Information).IsModified = true;
+                context.Entry(odontogram.TreatmentOdontogram).Property(x => x.CavitiesQuantity).IsModified = true;
                 context.SaveChanges();
             }
         }
