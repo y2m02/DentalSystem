@@ -428,6 +428,11 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.CmsTeethStatus = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.curadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.extraídoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cariesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ningunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -804,11 +809,6 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.CmsTeethStatus = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.curadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.extraídoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cariesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ningunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -831,6 +831,7 @@
             this.TabTreatmentOdontogram.SuspendLayout();
             this.PnlTreatmentOdontogramTeeth.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.CmsTeethStatus.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -850,7 +851,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
-            this.CmsTeethStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -5336,6 +5336,45 @@
             this.button3.TabIndex = 5;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // CmsTeethStatus
+            // 
+            this.CmsTeethStatus.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.CmsTeethStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.curadoToolStripMenuItem,
+            this.extraídoToolStripMenuItem,
+            this.cariesToolStripMenuItem,
+            this.ningunaToolStripMenuItem});
+            this.CmsTeethStatus.Name = "CmsTeethStatus";
+            this.CmsTeethStatus.Size = new System.Drawing.Size(135, 100);
+            // 
+            // curadoToolStripMenuItem
+            // 
+            this.curadoToolStripMenuItem.Name = "curadoToolStripMenuItem";
+            this.curadoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.curadoToolStripMenuItem.Text = "Curado";
+            this.curadoToolStripMenuItem.Click += new System.EventHandler(this.CuradoToolStripMenuItem_Click);
+            // 
+            // extraídoToolStripMenuItem
+            // 
+            this.extraídoToolStripMenuItem.Name = "extraídoToolStripMenuItem";
+            this.extraídoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.extraídoToolStripMenuItem.Text = "Extraído";
+            this.extraídoToolStripMenuItem.Click += new System.EventHandler(this.ExtraídoToolStripMenuItem_Click);
+            // 
+            // cariesToolStripMenuItem
+            // 
+            this.cariesToolStripMenuItem.Name = "cariesToolStripMenuItem";
+            this.cariesToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.cariesToolStripMenuItem.Text = "Caries";
+            this.cariesToolStripMenuItem.Click += new System.EventHandler(this.CariesToolStripMenuItem_Click);
+            // 
+            // ningunaToolStripMenuItem
+            // 
+            this.ningunaToolStripMenuItem.Name = "ningunaToolStripMenuItem";
+            this.ningunaToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.ningunaToolStripMenuItem.Text = "Ninguna";
+            this.ningunaToolStripMenuItem.Click += new System.EventHandler(this.NingunaToolStripMenuItem_Click);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
@@ -9369,45 +9408,6 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
-            // CmsTeethStatus
-            // 
-            this.CmsTeethStatus.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.CmsTeethStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.curadoToolStripMenuItem,
-            this.extraídoToolStripMenuItem,
-            this.cariesToolStripMenuItem,
-            this.ningunaToolStripMenuItem});
-            this.CmsTeethStatus.Name = "CmsTeethStatus";
-            this.CmsTeethStatus.Size = new System.Drawing.Size(211, 128);
-            // 
-            // curadoToolStripMenuItem
-            // 
-            this.curadoToolStripMenuItem.Name = "curadoToolStripMenuItem";
-            this.curadoToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.curadoToolStripMenuItem.Text = "Curado";
-            this.curadoToolStripMenuItem.Click += new System.EventHandler(this.CuradoToolStripMenuItem_Click);
-            // 
-            // extraídoToolStripMenuItem
-            // 
-            this.extraídoToolStripMenuItem.Name = "extraídoToolStripMenuItem";
-            this.extraídoToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.extraídoToolStripMenuItem.Text = "Extraído";
-            this.extraídoToolStripMenuItem.Click += new System.EventHandler(this.ExtraídoToolStripMenuItem_Click);
-            // 
-            // cariesToolStripMenuItem
-            // 
-            this.cariesToolStripMenuItem.Name = "cariesToolStripMenuItem";
-            this.cariesToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.cariesToolStripMenuItem.Text = "Caries";
-            this.cariesToolStripMenuItem.Click += new System.EventHandler(this.CariesToolStripMenuItem_Click);
-            // 
-            // ningunaToolStripMenuItem
-            // 
-            this.ningunaToolStripMenuItem.Name = "ningunaToolStripMenuItem";
-            this.ningunaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.ningunaToolStripMenuItem.Text = "Ninguna";
-            this.ningunaToolStripMenuItem.Click += new System.EventHandler(this.NingunaToolStripMenuItem_Click);
-            // 
             // FrmVisitManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -9470,6 +9470,7 @@
             this.TabTreatmentOdontogram.PerformLayout();
             this.PnlTreatmentOdontogramTeeth.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.CmsTeethStatus.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -9502,7 +9503,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
-            this.CmsTeethStatus.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
