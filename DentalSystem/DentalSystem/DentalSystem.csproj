@@ -77,6 +77,7 @@
     <Compile Include="AccountReceivable\FrmAccountReceivableList.Designer.cs">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enum\TeethStatus.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,7 @@
     <Compile Include="MapperConfiguration\AutoMapperConfiguration.cs" />
     <Compile Include="MapperConfiguration\MappingProfile.cs" />
     <Compile Include="Odontogram\OdontogramButtonsModel.cs" />
+    <Compile Include="Odontogram\TreatmentOdontogramButtonsModel.cs" />
     <Compile Include="Patient\FrmAddPatient.cs">
       <SubType>Form</SubType>
     </Compile>

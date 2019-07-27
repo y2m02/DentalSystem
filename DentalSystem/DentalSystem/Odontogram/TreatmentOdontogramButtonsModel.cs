@@ -1,6 +1,6 @@
 ﻿namespace DentalSystem.Odontogram
 {
-    public class OdontogramButtonsModel
+    public class TreatmentOdontogramButtonsModel
     {
         public int Id { get; set; }
         public string ButtonName { get; set; }

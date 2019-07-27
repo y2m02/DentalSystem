@@ -19,6 +19,7 @@ using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.Odontogram;
 using DentalSystem.Entities.Results.PlateRegistration;
+using DentalSystem.Enum;
 using DentalSystem.Odontogram;
 using Newtonsoft.Json;
 
@@ -102,6 +103,7 @@ namespace DentalSystem.VisitManagement
         {
             TclVisitManagement.SelectedIndex = 2;
             ChangeButtonSelectedStatus(BtnTreatmentOdontogram);
+            GetTreatmentOdontogramInformation();
         }
 
         private void BtnActivitiesPerformed_Click(object sender, EventArgs e)
@@ -134,6 +136,7 @@ namespace DentalSystem.VisitManagement
                     break;
                 case 2:
                     ChangeButtonSelectedStatus(BtnTreatmentOdontogram);
+                    GetTreatmentOdontogramInformation();
                     break;
                 case 3:
                     ChangeButtonSelectedStatus(BtnActivitiesPerformed);
@@ -1204,11 +1207,18 @@ namespace DentalSystem.VisitManagement
             //};
         }
 
-        private void DisableInitialOdontogramButtons()
+        private void SetInitialOdontogramButtonsStatus(bool isActive)
         {
             foreach (var control in PnlTeeth.Controls)
                 if (control is Button button)
-                    button.Enabled = false;
+                    button.Enabled = isActive;
+        }
+
+        private void SetTreatmentOdontogramButtonsStatus(bool isActive)
+        {
+            foreach (var control in PnlTreatmentOdontogramTeeth.Controls)
+                if (control is Button button)
+                    button.Enabled = isActive;
         }
 
         private void BtnSaveOdontogram_Click(object sender, EventArgs e)
@@ -1245,7 +1255,8 @@ namespace DentalSystem.VisitManagement
                     {
                         Id = buttonCount,
                         ButtonName = button.Name,
-                        HasCavities = button.BackColor == Color.Red
+                        HasCavities = button.BackColor == Color.Red,
+                        TeethStatus = (int)TeethStatus.HasCavities
                     });
 
                     if (button.BackColor == Color.Red) cavitiesQuantity++;
@@ -1276,7 +1287,7 @@ namespace DentalSystem.VisitManagement
                 _odontogramService.UpdateOdontogram(updateOdontogramRequest);
 
                 BtnSaveOdontogram.Visible = false;
-                DisableInitialOdontogramButtons();
+                SetInitialOdontogramButtonsStatus(false);
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -1334,9 +1345,40 @@ namespace DentalSystem.VisitManagement
                     var buttonList = JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult.Odontogram.Information);
                     SetInitialOdontogramButtonsStatus(buttonList);
 
-                    DisableInitialOdontogramButtons();
+                    SetInitialOdontogramButtonsStatus(false);
                 }
-          
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void GetTreatmentOdontogramInformation()
+        {
+            try
+            {
+                var getTreatmentOdontogramByOdontogramIdRequest = new GetTreatmentOdontogramByOdontogramIdRequest
+                {
+                    OdontogramId = Convert.ToInt32(LblOdontogramId.Text),
+                    Mapper = _iMapper
+                };
+
+                Cursor.Current = Cursors.WaitCursor;
+                var treatmentOdontogramResult = _treatmentOdontogramService.GetTreatmentOdontogramByOdontogramId(getTreatmentOdontogramByOdontogramIdRequest);
+
+                LblTreatmentOdontogramId.Text = treatmentOdontogramResult.TreatmentOdontogram.TreatmentOdontogramId.ToString();
+
+                var buttonList = JsonConvert.DeserializeObject<List<TreatmentOdontogramButtonsModel>>(treatmentOdontogramResult.TreatmentOdontogram.Information);
+                SetTreatmentOdontogramButtonsStatus(buttonList);
+
+                SetTreatmentOdontogramButtonsStatus(false);
+
+
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -1355,6 +1397,82 @@ namespace DentalSystem.VisitManagement
 
                 var btn = buttonList.FirstOrDefault(w => w.ButtonName == button.Name);
                 button.BackColor = btn != null && btn.HasCavities ? Color.Red : Color.White;
+            }
+        }
+
+        private void SetTreatmentOdontogramButtonsStatus(IReadOnlyCollection<TreatmentOdontogramButtonsModel> buttonList)
+        {
+            foreach (var control in PnlTreatmentOdontogramTeeth.Controls)
+            {
+                if (!(control is Button button)) continue;
+
+                var btn = buttonList.FirstOrDefault(w => w.ButtonName == button.Name);
+
+                if (btn == null) continue;
+
+                switch (btn.TeethStatus)
+                {
+                    case 1:
+                        button.BackColor = Color.Red;
+                        break;
+
+                    case 2:
+                        button.BackColor = Color.Blue;
+                        break;
+
+                    case 3:
+                        button.BackColor = Color.DeepSkyBlue;
+                        break;
+                }
+            }
+        }
+
+        private void BtnNewOdontogram_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (GenericProperties.VisitHasBeenBilled)
+                {
+                    MessageBox.Show(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                var result = MessageBox.Show("Si crea un nuevo odontograma se perderán los datos del anterior", "Información",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information);
+
+                if (result != DialogResult.OK) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var addTreatmentOdontogramRequest = new AddTreatmentOdontogramRequest
+                {
+                    Information = string.Empty,
+                    CavitiesQuantity = 0
+                };
+
+                var addOdontogramRequest = new AddOdontogramRequest
+                {
+                    VisitId = GenericProperties.VisitId,
+                    Information = string.Empty,
+                    CavitiesQuantity = 0,
+                    TreatmentOdontogram = addTreatmentOdontogramRequest,
+                    Mapper = _iMapper
+                };
+
+                _odontogramService.AddOdontogram(addOdontogramRequest);
+
+                BtnSaveOdontogram.Visible = true;
+                SetInitialOdontogramButtonsStatus(true);
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }
