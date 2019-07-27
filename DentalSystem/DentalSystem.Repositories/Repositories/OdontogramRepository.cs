@@ -33,12 +33,14 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public void AddOdontogram(Odontogram odontogram)
+        public int AddOdontogram(Odontogram odontogram)
         {
             using (var context = new DentalSystemContext())
             {
                 context.Odontograms.Add(odontogram);
                 context.SaveChanges();
+
+                return odontogram.OdontogramId;
             }
         }
 

@@ -7,7 +7,7 @@ namespace DentalSystem.Contract.Services
     {
         GetOdontogramByVisitIdResult GetOdontogramByVisitId(GetOdontogramByVisitIdRequest request);
         ValidateIfVisitHasOdontogramsResult ValidateIfVisitHasOdontogram(ValidateIfVisitHasOdontogramsRequest request);
-        void AddOdontogram(AddOdontogramRequest request);
+        AddOdontogramResult AddOdontogram(AddOdontogramRequest request);
         void UpdateOdontogram(UpdateOdontogramRequest request);
     }
 }

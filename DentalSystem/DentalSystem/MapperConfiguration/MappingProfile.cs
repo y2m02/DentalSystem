@@ -131,8 +131,8 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.HasInformation, y => y.MapFrom(r => !string.IsNullOrEmpty(r.Information)));
 
 
-            CreateMap<TreatmentOdontogram, GetTreatmentOdontogramByOdontogramIdResultModel>();
-
+            CreateMap<TreatmentOdontogram, GetTreatmentOdontogramByOdontogramIdResultModel>()
+                .ForMember(w => w.HasInformation, y => y.MapFrom(r => !string.IsNullOrEmpty(r.Information)));
             // ADD
             CreateMap<AddPatientRequest, Entities.Models.Patient>()
                 .ForMember(w => w.PlateRegistration, y => y.MapFrom(r => new PlateRegistration()));

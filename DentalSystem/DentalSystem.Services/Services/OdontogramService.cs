@@ -39,10 +39,17 @@ namespace DentalSystem.Services.Services
             return result;
         }
 
-        public void AddOdontogram(AddOdontogramRequest request)
+        public AddOdontogramResult AddOdontogram(AddOdontogramRequest request)
         {
             var odontogram = request.Mapper.Map<Odontogram>(request);
-            _odontogramRepository.AddOdontogram(odontogram);
+            var odontogramId = _odontogramRepository.AddOdontogram(odontogram);
+
+            var result = new AddOdontogramResult
+            {
+                OdontogramId = odontogramId
+            };
+
+            return result;
         }
 
         public void UpdateOdontogram(UpdateOdontogramRequest request)

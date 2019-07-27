@@ -7,7 +7,7 @@ namespace DentalSystem.Contract.Repositories
         Odontogram GetOdontogramByVisitId(int visitId);
         bool ValidateIfVisitHasOdontogram(int visitId);
         //Odontogram ValidateIfVisitHasOdontograms(int visitId);
-        void AddOdontogram(Odontogram odontogram);
+        int AddOdontogram(Odontogram odontogram);
         void UpdateOdontogram(Odontogram odontogram);
     }
 }

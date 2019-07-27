@@ -10,5 +10,6 @@
         public int TreatmentOdontogramId { get; set; }
         public string Information { get; set; }
         public int CavitiesQuantity { get; set; }
+        public bool HasInformation { get; set; }
     }
 }

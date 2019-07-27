@@ -353,128 +353,74 @@
             this.BtnToothTop_48 = new System.Windows.Forms.Button();
             this.BtnToothLeft_18 = new System.Windows.Forms.Button();
             this.BtnToothTop_18 = new System.Windows.Forms.Button();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.label45 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label81 = new System.Windows.Forms.Label();
+            this.LblOdontogramId = new System.Windows.Forms.Label();
+            this.LblTotalCavities = new System.Windows.Forms.Label();
             this.LblPatientNameInitialOdontogram = new System.Windows.Forms.Label();
             this.TabTreatmentOdontogram = new System.Windows.Forms.TabPage();
-            this.LblPatientNameTreatmentOdontogram = new System.Windows.Forms.Label();
-            this.TabActivitiesPermormed = new System.Windows.Forms.TabPage();
-            this.LblPatientNameActivitiesPerformed = new System.Windows.Forms.Label();
-            this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
-            this.PnlPlateRegistration = new System.Windows.Forms.Panel();
-            this.TxtPdb = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.TxtRadiographicInterpretation = new System.Windows.Forms.TextBox();
-            this.TxtX = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.TxtCt = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.TxtN46 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.TxtN32 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.TxtN36 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.TxtN26 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.TxtN11 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.TxtN16 = new System.Windows.Forms.TextBox();
-            this.BtnCancelRegistration = new System.Windows.Forms.Button();
-            this.BtnModifyRegistration = new System.Windows.Forms.Button();
-            this.BtnSaveRegistration = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
-            this.BtnDeleteActivity = new System.Windows.Forms.Button();
-            this.BtnModifyActivity = new System.Windows.Forms.Button();
-            this.btnAddActivity = new System.Windows.Forms.Button();
-            this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
-            this.TabInvoice = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnEndInvoice = new System.Windows.Forms.Button();
-            this.BtnDeletePayment = new System.Windows.Forms.Button();
-            this.BtnAddPayment = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.DgvPaymentList = new System.Windows.Forms.DataGridView();
-            this.DgvAccountReceivableList = new System.Windows.Forms.DataGridView();
-            this.DgvItemsToBillOtherVisits = new System.Windows.Forms.DataGridView();
-            this.DgvItemsToBill = new System.Windows.Forms.DataGridView();
-            this.LblPatientNameInvoice = new System.Windows.Forms.Label();
-            this.BtnGeneralInfo = new System.Windows.Forms.Button();
-            this.BtnInitialOdontogram = new System.Windows.Forms.Button();
-            this.BtnTreatmentOdontogram = new System.Windows.Forms.Button();
-            this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
-            this.BtnInvoice = new System.Windows.Forms.Button();
-            this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.PnlTreatmentOdontogramTeeth = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnSaveTreatment = new System.Windows.Forms.Button();
+            this.BtnCancelTreatment = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -799,9 +745,64 @@
             this.label131 = new System.Windows.Forms.Label();
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
-            this.LblOdontogramId = new System.Windows.Forms.Label();
-            this.LblTotalCavities = new System.Windows.Forms.Label();
             this.LblTreatmentOdontogramId = new System.Windows.Forms.Label();
+            this.LblPatientNameTreatmentOdontogram = new System.Windows.Forms.Label();
+            this.TabActivitiesPermormed = new System.Windows.Forms.TabPage();
+            this.LblPatientNameActivitiesPerformed = new System.Windows.Forms.Label();
+            this.PnlActivitiesPerformed = new System.Windows.Forms.Panel();
+            this.PnlPlateRegistration = new System.Windows.Forms.Panel();
+            this.TxtPdb = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.TxtRadiographicInterpretation = new System.Windows.Forms.TextBox();
+            this.TxtX = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TxtCt = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.TxtN46 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.TxtN32 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.TxtN36 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.TxtN26 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.TxtN11 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.TxtN16 = new System.Windows.Forms.TextBox();
+            this.BtnCancelRegistration = new System.Windows.Forms.Button();
+            this.BtnModifyRegistration = new System.Windows.Forms.Button();
+            this.BtnSaveRegistration = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
+            this.BtnDeleteActivity = new System.Windows.Forms.Button();
+            this.BtnModifyActivity = new System.Windows.Forms.Button();
+            this.btnAddActivity = new System.Windows.Forms.Button();
+            this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
+            this.TabInvoice = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnEndInvoice = new System.Windows.Forms.Button();
+            this.BtnDeletePayment = new System.Windows.Forms.Button();
+            this.BtnAddPayment = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.DgvPaymentList = new System.Windows.Forms.DataGridView();
+            this.DgvAccountReceivableList = new System.Windows.Forms.DataGridView();
+            this.DgvItemsToBillOtherVisits = new System.Windows.Forms.DataGridView();
+            this.DgvItemsToBill = new System.Windows.Forms.DataGridView();
+            this.LblPatientNameInvoice = new System.Windows.Forms.Label();
+            this.BtnGeneralInfo = new System.Windows.Forms.Button();
+            this.BtnInitialOdontogram = new System.Windows.Forms.Button();
+            this.BtnTreatmentOdontogram = new System.Windows.Forms.Button();
+            this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
+            this.BtnInvoice = new System.Windows.Forms.Button();
+            this.BtnEndVisit = new System.Windows.Forms.Button();
+            this.BtnModifyTreatment = new System.Windows.Forms.Button();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -813,7 +814,25 @@
             this.TabInitialOdontogram.SuspendLayout();
             this.PnlTeeth.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.TabTreatmentOdontogram.SuspendLayout();
+            this.PnlTreatmentOdontogramTeeth.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
             this.TabActivitiesPermormed.SuspendLayout();
             this.PnlActivitiesPerformed.SuspendLayout();
             this.PnlPlateRegistration.SuspendLayout();
@@ -825,24 +844,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.PnlTreatmentOdontogramTeeth.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -4185,29 +4186,20 @@
             this.BtnToothTop_18.TabIndex = 7;
             this.BtnToothTop_18.UseVisualStyleBackColor = false;
             // 
-            // label61
+            // panel13
             // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(-2, 2);
-            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(32, 22);
-            this.label61.TabIndex = 26;
-            this.label61.Text = "31";
-            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(3, 2);
-            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(32, 22);
-            this.label53.TabIndex = 26;
-            this.label53.Text = "21";
-            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel13.Controls.Add(this.label45);
+            this.panel13.Controls.Add(this.label32);
+            this.panel13.Controls.Add(this.label36);
+            this.panel13.Controls.Add(this.label34);
+            this.panel13.Controls.Add(this.label35);
+            this.panel13.Controls.Add(this.label31);
+            this.panel13.Controls.Add(this.label33);
+            this.panel13.Controls.Add(this.label30);
+            this.panel13.Location = new System.Drawing.Point(17, 76);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(481, 26);
+            this.panel13.TabIndex = 37;
             // 
             // label45
             // 
@@ -4221,29 +4213,17 @@
             this.label45.Text = "18";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label60
+            // label32
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(447, 2);
-            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(32, 22);
-            this.label60.TabIndex = 26;
-            this.label60.Text = "38";
-            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(452, 2);
-            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(32, 22);
-            this.label52.TabIndex = 26;
-            this.label52.Text = "28";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(197, 1);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(32, 22);
+            this.label32.TabIndex = 26;
+            this.label32.Text = "15";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label36
             // 
@@ -4257,30 +4237,6 @@
             this.label36.Text = "11";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(319, 2);
-            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(32, 22);
-            this.label59.TabIndex = 26;
-            this.label59.Text = "36";
-            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(324, 2);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(32, 22);
-            this.label51.TabIndex = 26;
-            this.label51.Text = "26";
-            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -4292,30 +4248,6 @@
             this.label34.TabIndex = 26;
             this.label34.Text = "13";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(383, 2);
-            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(32, 22);
-            this.label58.TabIndex = 26;
-            this.label58.Text = "37";
-            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(388, 2);
-            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(32, 22);
-            this.label50.TabIndex = 26;
-            this.label50.Text = "27";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label35
             // 
@@ -4329,30 +4261,6 @@
             this.label35.Text = "12";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(127, 2);
-            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(32, 22);
-            this.label57.TabIndex = 26;
-            this.label57.Text = "33";
-            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(132, 2);
-            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(32, 22);
-            this.label49.TabIndex = 26;
-            this.label49.Text = "23";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -4364,66 +4272,6 @@
             this.label31.TabIndex = 26;
             this.label31.Text = "16";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(255, 2);
-            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(32, 22);
-            this.label56.TabIndex = 26;
-            this.label56.Text = "35";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(260, 2);
-            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(32, 22);
-            this.label48.TabIndex = 26;
-            this.label48.Text = "25";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(64, 2);
-            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(32, 22);
-            this.label55.TabIndex = 26;
-            this.label55.Text = "32";
-            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(69, 2);
-            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(32, 22);
-            this.label47.TabIndex = 26;
-            this.label47.Text = "22";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(191, 2);
-            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(32, 22);
-            this.label54.TabIndex = 26;
-            this.label54.Text = "34";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
             // 
@@ -4437,18 +4285,6 @@
             this.label33.Text = "14";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(196, 2);
-            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(32, 22);
-            this.label46.TabIndex = 26;
-            this.label46.Text = "24";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -4461,329 +4297,143 @@
             this.label30.Text = "17";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
+            // panel14
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(197, 1);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(32, 22);
-            this.label32.TabIndex = 26;
-            this.label32.Text = "15";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel14.Controls.Add(this.label53);
+            this.panel14.Controls.Add(this.label46);
+            this.panel14.Controls.Add(this.label47);
+            this.panel14.Controls.Add(this.label48);
+            this.panel14.Controls.Add(this.label49);
+            this.panel14.Controls.Add(this.label50);
+            this.panel14.Controls.Add(this.label51);
+            this.panel14.Controls.Add(this.label52);
+            this.panel14.Location = new System.Drawing.Point(596, 75);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(491, 26);
+            this.panel14.TabIndex = 37;
             // 
-            // label71
+            // label53
             // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(260, 1);
-            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(32, 22);
-            this.label71.TabIndex = 26;
-            this.label71.Text = "81";
-            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(3, 2);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(32, 22);
+            this.label53.TabIndex = 26;
+            this.label53.Text = "21";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label81
+            // label46
             // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label81.Location = new System.Drawing.Point(261, 2);
-            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(32, 22);
-            this.label81.TabIndex = 26;
-            this.label81.Text = "75";
-            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(196, 2);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(32, 22);
+            this.label46.TabIndex = 26;
+            this.label46.Text = "24";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label76
+            // label47
             // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.Location = new System.Drawing.Point(259, 1);
-            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(32, 22);
-            this.label76.TabIndex = 26;
-            this.label76.Text = "65";
-            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(69, 2);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(32, 22);
+            this.label47.TabIndex = 26;
+            this.label47.Text = "22";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label66
+            // label48
             // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(259, 2);
-            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(32, 22);
-            this.label66.TabIndex = 26;
-            this.label66.Text = "51";
-            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(260, 2);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(32, 22);
+            this.label48.TabIndex = 26;
+            this.label48.Text = "25";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label44
+            // label49
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(451, 2);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(32, 22);
-            this.label44.TabIndex = 26;
-            this.label44.Text = "41";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(132, 2);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(32, 22);
+            this.label49.TabIndex = 26;
+            this.label49.Text = "23";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label70
+            // label50
             // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.Location = new System.Drawing.Point(131, 1);
-            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(32, 22);
-            this.label70.TabIndex = 26;
-            this.label70.Text = "83";
-            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(388, 2);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(32, 22);
+            this.label50.TabIndex = 26;
+            this.label50.Text = "27";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label80
+            // label51
             // 
-            this.label80.AutoSize = true;
-            this.label80.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.Location = new System.Drawing.Point(133, 2);
-            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(32, 22);
-            this.label80.TabIndex = 26;
-            this.label80.Text = "73";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(324, 2);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(32, 22);
+            this.label51.TabIndex = 26;
+            this.label51.Text = "26";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label75
+            // label52
             // 
-            this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.Location = new System.Drawing.Point(132, 1);
-            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(32, 22);
-            this.label75.TabIndex = 26;
-            this.label75.Text = "63";
-            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(452, 2);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(32, 22);
+            this.label52.TabIndex = 26;
+            this.label52.Text = "28";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label65
+            // panel7
             // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(131, 2);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(32, 22);
-            this.label65.TabIndex = 26;
-            this.label65.Text = "53";
-            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel7.Controls.Add(this.label37);
+            this.panel7.Controls.Add(this.label38);
+            this.panel7.Controls.Add(this.label39);
+            this.panel7.Controls.Add(this.label40);
+            this.panel7.Controls.Add(this.label41);
+            this.panel7.Controls.Add(this.label42);
+            this.panel7.Controls.Add(this.label43);
+            this.panel7.Controls.Add(this.label44);
+            this.panel7.Location = new System.Drawing.Point(18, 260);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(491, 26);
+            this.panel7.TabIndex = 37;
             // 
-            // label43
+            // label37
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(323, 2);
-            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(32, 22);
-            this.label43.TabIndex = 26;
-            this.label43.Text = "43";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.Location = new System.Drawing.Point(195, 1);
-            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(32, 22);
-            this.label69.TabIndex = 26;
-            this.label69.Text = "82";
-            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label79.Location = new System.Drawing.Point(197, 2);
-            this.label79.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(32, 22);
-            this.label79.TabIndex = 26;
-            this.label79.Text = "74";
-            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.Location = new System.Drawing.Point(196, 1);
-            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(32, 22);
-            this.label74.TabIndex = 26;
-            this.label74.Text = "64";
-            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(195, 2);
-            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(32, 22);
-            this.label64.TabIndex = 26;
-            this.label64.Text = "52";
-            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(387, 2);
-            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 22);
-            this.label42.TabIndex = 26;
-            this.label42.Text = "42";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(131, 2);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 22);
-            this.label41.TabIndex = 26;
-            this.label41.Text = "46";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(67, 1);
-            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(32, 22);
-            this.label68.TabIndex = 26;
-            this.label68.Text = "84";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.Location = new System.Drawing.Point(69, 2);
-            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(32, 22);
-            this.label78.TabIndex = 26;
-            this.label78.Text = "72";
-            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(68, 1);
-            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(32, 22);
-            this.label73.TabIndex = 26;
-            this.label73.Text = "62";
-            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(67, 2);
-            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(32, 22);
-            this.label63.TabIndex = 26;
-            this.label63.Text = "54";
-            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(259, 2);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(32, 22);
-            this.label40.TabIndex = 26;
-            this.label40.Text = "44";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(4, 1);
-            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(32, 22);
-            this.label67.TabIndex = 26;
-            this.label67.Text = "85";
-            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(68, 2);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 22);
-            this.label39.TabIndex = 26;
-            this.label39.Text = "47";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.Location = new System.Drawing.Point(4, 2);
-            this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(32, 22);
-            this.label77.TabIndex = 26;
-            this.label77.Text = "71";
-            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(3, 1);
-            this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(32, 22);
-            this.label72.TabIndex = 26;
-            this.label72.Text = "61";
-            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(2, 2);
-            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(32, 22);
-            this.label62.TabIndex = 26;
-            this.label62.Text = "55";
-            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(4, 2);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(32, 22);
+            this.label37.TabIndex = 26;
+            this.label37.Text = "48";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label38
             // 
@@ -4797,17 +4447,500 @@
             this.label38.Text = "45";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label37
+            // label39
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(4, 2);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(32, 22);
-            this.label37.TabIndex = 26;
-            this.label37.Text = "48";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(68, 2);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(32, 22);
+            this.label39.TabIndex = 26;
+            this.label39.Text = "47";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(259, 2);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(32, 22);
+            this.label40.TabIndex = 26;
+            this.label40.Text = "44";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(131, 2);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(32, 22);
+            this.label41.TabIndex = 26;
+            this.label41.Text = "46";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(387, 2);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(32, 22);
+            this.label42.TabIndex = 26;
+            this.label42.Text = "42";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(323, 2);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(32, 22);
+            this.label43.TabIndex = 26;
+            this.label43.Text = "43";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(451, 2);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(32, 22);
+            this.label44.TabIndex = 26;
+            this.label44.Text = "41";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.label57);
+            this.panel16.Controls.Add(this.label54);
+            this.panel16.Controls.Add(this.label55);
+            this.panel16.Controls.Add(this.label56);
+            this.panel16.Controls.Add(this.label58);
+            this.panel16.Controls.Add(this.label59);
+            this.panel16.Controls.Add(this.label60);
+            this.panel16.Controls.Add(this.label61);
+            this.panel16.Location = new System.Drawing.Point(600, 260);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(491, 26);
+            this.panel16.TabIndex = 37;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(127, 2);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(32, 22);
+            this.label57.TabIndex = 26;
+            this.label57.Text = "33";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(191, 2);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(32, 22);
+            this.label54.TabIndex = 26;
+            this.label54.Text = "34";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(64, 2);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(32, 22);
+            this.label55.TabIndex = 26;
+            this.label55.Text = "32";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(255, 2);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(32, 22);
+            this.label56.TabIndex = 26;
+            this.label56.Text = "35";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(383, 2);
+            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(32, 22);
+            this.label58.TabIndex = 26;
+            this.label58.Text = "37";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(319, 2);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(32, 22);
+            this.label59.TabIndex = 26;
+            this.label59.Text = "36";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(447, 2);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(32, 22);
+            this.label60.TabIndex = 26;
+            this.label60.Text = "38";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(-2, 2);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(32, 22);
+            this.label61.TabIndex = 26;
+            this.label61.Text = "31";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.label62);
+            this.panel15.Controls.Add(this.label63);
+            this.panel15.Controls.Add(this.label64);
+            this.panel15.Controls.Add(this.label65);
+            this.panel15.Controls.Add(this.label66);
+            this.panel15.Location = new System.Drawing.Point(211, 312);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(292, 26);
+            this.panel15.TabIndex = 37;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(2, 2);
+            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(32, 22);
+            this.label62.TabIndex = 26;
+            this.label62.Text = "55";
+            this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(67, 2);
+            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(32, 22);
+            this.label63.TabIndex = 26;
+            this.label63.Text = "54";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(195, 2);
+            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(32, 22);
+            this.label64.TabIndex = 26;
+            this.label64.Text = "52";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(131, 2);
+            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(32, 22);
+            this.label65.TabIndex = 26;
+            this.label65.Text = "53";
+            this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(259, 2);
+            this.label66.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(32, 22);
+            this.label66.TabIndex = 26;
+            this.label66.Text = "51";
+            this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.label72);
+            this.panel19.Controls.Add(this.label73);
+            this.panel19.Controls.Add(this.label74);
+            this.panel19.Controls.Add(this.label75);
+            this.panel19.Controls.Add(this.label76);
+            this.panel19.Location = new System.Drawing.Point(596, 313);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(296, 26);
+            this.panel19.TabIndex = 37;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Location = new System.Drawing.Point(3, 1);
+            this.label72.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(32, 22);
+            this.label72.TabIndex = 26;
+            this.label72.Text = "61";
+            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Location = new System.Drawing.Point(68, 1);
+            this.label73.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(32, 22);
+            this.label73.TabIndex = 26;
+            this.label73.Text = "62";
+            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Location = new System.Drawing.Point(196, 1);
+            this.label74.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(32, 22);
+            this.label74.TabIndex = 26;
+            this.label74.Text = "64";
+            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Location = new System.Drawing.Point(132, 1);
+            this.label75.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(32, 22);
+            this.label75.TabIndex = 26;
+            this.label75.Text = "63";
+            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Location = new System.Drawing.Point(259, 1);
+            this.label76.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(32, 22);
+            this.label76.TabIndex = 26;
+            this.label76.Text = "65";
+            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label67);
+            this.panel18.Controls.Add(this.label68);
+            this.panel18.Controls.Add(this.label69);
+            this.panel18.Controls.Add(this.label70);
+            this.panel18.Controls.Add(this.label71);
+            this.panel18.Location = new System.Drawing.Point(210, 499);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(297, 26);
+            this.panel18.TabIndex = 37;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Location = new System.Drawing.Point(4, 1);
+            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(32, 22);
+            this.label67.TabIndex = 26;
+            this.label67.Text = "85";
+            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(67, 1);
+            this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(32, 22);
+            this.label68.TabIndex = 26;
+            this.label68.Text = "84";
+            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(195, 1);
+            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(32, 22);
+            this.label69.TabIndex = 26;
+            this.label69.Text = "82";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Location = new System.Drawing.Point(131, 1);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(32, 22);
+            this.label70.TabIndex = 26;
+            this.label70.Text = "83";
+            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(260, 1);
+            this.label71.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(32, 22);
+            this.label71.TabIndex = 26;
+            this.label71.Text = "81";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.label77);
+            this.panel17.Controls.Add(this.label78);
+            this.panel17.Controls.Add(this.label79);
+            this.panel17.Controls.Add(this.label80);
+            this.panel17.Controls.Add(this.label81);
+            this.panel17.Location = new System.Drawing.Point(595, 498);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(291, 26);
+            this.panel17.TabIndex = 37;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Location = new System.Drawing.Point(4, 2);
+            this.label77.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(32, 22);
+            this.label77.TabIndex = 26;
+            this.label77.Text = "71";
+            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Location = new System.Drawing.Point(69, 2);
+            this.label78.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(32, 22);
+            this.label78.TabIndex = 26;
+            this.label78.Text = "72";
+            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(197, 2);
+            this.label79.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(32, 22);
+            this.label79.TabIndex = 26;
+            this.label79.Text = "74";
+            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Location = new System.Drawing.Point(133, 2);
+            this.label80.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(32, 22);
+            this.label80.TabIndex = 26;
+            this.label80.Text = "73";
+            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Location = new System.Drawing.Point(261, 2);
+            this.label81.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(32, 22);
+            this.label81.TabIndex = 26;
+            this.label81.Text = "75";
+            this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblOdontogramId
+            // 
+            this.LblOdontogramId.AutoSize = true;
+            this.LblOdontogramId.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblOdontogramId.Location = new System.Drawing.Point(544, 8);
+            this.LblOdontogramId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblOdontogramId.Name = "LblOdontogramId";
+            this.LblOdontogramId.Size = new System.Drawing.Size(27, 22);
+            this.LblOdontogramId.TabIndex = 26;
+            this.LblOdontogramId.Text = "Id";
+            this.LblOdontogramId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblOdontogramId.Visible = false;
+            // 
+            // LblTotalCavities
+            // 
+            this.LblTotalCavities.AutoSize = true;
+            this.LblTotalCavities.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalCavities.Location = new System.Drawing.Point(859, 9);
+            this.LblTotalCavities.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotalCavities.Name = "LblTotalCavities";
+            this.LblTotalCavities.Size = new System.Drawing.Size(173, 24);
+            this.LblTotalCavities.TabIndex = 26;
+            this.LblTotalCavities.Text = "Total de caries: 0";
             // 
             // LblPatientNameInitialOdontogram
             // 
@@ -4831,813 +4964,6 @@
             this.TabTreatmentOdontogram.Size = new System.Drawing.Size(1098, 647);
             this.TabTreatmentOdontogram.TabIndex = 2;
             this.TabTreatmentOdontogram.Text = "Odontograma tratamiento";
-            // 
-            // LblPatientNameTreatmentOdontogram
-            // 
-            this.LblPatientNameTreatmentOdontogram.AutoSize = true;
-            this.LblPatientNameTreatmentOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameTreatmentOdontogram.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameTreatmentOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameTreatmentOdontogram.Name = "LblPatientNameTreatmentOdontogram";
-            this.LblPatientNameTreatmentOdontogram.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameTreatmentOdontogram.TabIndex = 27;
-            this.LblPatientNameTreatmentOdontogram.Text = "Nombre del paciente";
-            // 
-            // TabActivitiesPermormed
-            // 
-            this.TabActivitiesPermormed.BackColor = System.Drawing.SystemColors.Control;
-            this.TabActivitiesPermormed.Controls.Add(this.LblPatientNameActivitiesPerformed);
-            this.TabActivitiesPermormed.Controls.Add(this.PnlActivitiesPerformed);
-            this.TabActivitiesPermormed.Location = new System.Drawing.Point(4, 32);
-            this.TabActivitiesPermormed.Name = "TabActivitiesPermormed";
-            this.TabActivitiesPermormed.Size = new System.Drawing.Size(1098, 647);
-            this.TabActivitiesPermormed.TabIndex = 3;
-            this.TabActivitiesPermormed.Text = "Actividades realizadas";
-            // 
-            // LblPatientNameActivitiesPerformed
-            // 
-            this.LblPatientNameActivitiesPerformed.AutoSize = true;
-            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
-            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameActivitiesPerformed.TabIndex = 33;
-            this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
-            // 
-            // PnlActivitiesPerformed
-            // 
-            this.PnlActivitiesPerformed.Controls.Add(this.PnlPlateRegistration);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnCancelRegistration);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyRegistration);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnSaveRegistration);
-            this.PnlActivitiesPerformed.Controls.Add(this.label10);
-            this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesListHistory);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnDeleteActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.btnAddActivity);
-            this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesList);
-            this.PnlActivitiesPerformed.Location = new System.Drawing.Point(11, 30);
-            this.PnlActivitiesPerformed.Name = "PnlActivitiesPerformed";
-            this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 618);
-            this.PnlActivitiesPerformed.TabIndex = 32;
-            // 
-            // PnlPlateRegistration
-            // 
-            this.PnlPlateRegistration.Controls.Add(this.TxtPdb);
-            this.PnlPlateRegistration.Controls.Add(this.label19);
-            this.PnlPlateRegistration.Controls.Add(this.label21);
-            this.PnlPlateRegistration.Controls.Add(this.label22);
-            this.PnlPlateRegistration.Controls.Add(this.TxtRadiographicInterpretation);
-            this.PnlPlateRegistration.Controls.Add(this.TxtX);
-            this.PnlPlateRegistration.Controls.Add(this.label20);
-            this.PnlPlateRegistration.Controls.Add(this.label23);
-            this.PnlPlateRegistration.Controls.Add(this.TxtCt);
-            this.PnlPlateRegistration.Controls.Add(this.label24);
-            this.PnlPlateRegistration.Controls.Add(this.TxtN46);
-            this.PnlPlateRegistration.Controls.Add(this.label25);
-            this.PnlPlateRegistration.Controls.Add(this.TxtN32);
-            this.PnlPlateRegistration.Controls.Add(this.label26);
-            this.PnlPlateRegistration.Controls.Add(this.TxtN36);
-            this.PnlPlateRegistration.Controls.Add(this.label27);
-            this.PnlPlateRegistration.Controls.Add(this.TxtN26);
-            this.PnlPlateRegistration.Controls.Add(this.label28);
-            this.PnlPlateRegistration.Controls.Add(this.TxtN11);
-            this.PnlPlateRegistration.Controls.Add(this.label29);
-            this.PnlPlateRegistration.Controls.Add(this.TxtN16);
-            this.PnlPlateRegistration.Location = new System.Drawing.Point(3, 390);
-            this.PnlPlateRegistration.Name = "PnlPlateRegistration";
-            this.PnlPlateRegistration.Size = new System.Drawing.Size(1083, 224);
-            this.PnlPlateRegistration.TabIndex = 42;
-            // 
-            // TxtPdb
-            // 
-            this.TxtPdb.Location = new System.Drawing.Point(5, 31);
-            this.TxtPdb.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtPdb.MaxLength = 30;
-            this.TxtPdb.Name = "TxtPdb";
-            this.TxtPdb.ShortcutsEnabled = false;
-            this.TxtPdb.Size = new System.Drawing.Size(102, 30);
-            this.TxtPdb.TabIndex = 0;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1, 3);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(175, 24);
-            this.label19.TabIndex = 34;
-            this.label19.Text = "Registro de placa";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(27, 62);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(51, 24);
-            this.label21.TabIndex = 34;
-            this.label21.Text = "PDB";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(146, 62);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(32, 24);
-            this.label22.TabIndex = 34;
-            this.label22.Text = "16";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtRadiographicInterpretation
-            // 
-            this.TxtRadiographicInterpretation.Location = new System.Drawing.Point(5, 128);
-            this.TxtRadiographicInterpretation.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtRadiographicInterpretation.MaxLength = 399;
-            this.TxtRadiographicInterpretation.Multiline = true;
-            this.TxtRadiographicInterpretation.Name = "TxtRadiographicInterpretation";
-            this.TxtRadiographicInterpretation.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.TxtRadiographicInterpretation.Size = new System.Drawing.Size(1074, 92);
-            this.TxtRadiographicInterpretation.TabIndex = 9;
-            // 
-            // TxtX
-            // 
-            this.TxtX.Location = new System.Drawing.Point(978, 31);
-            this.TxtX.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtX.MaxLength = 30;
-            this.TxtX.Name = "TxtX";
-            this.TxtX.ShortcutsEnabled = false;
-            this.TxtX.Size = new System.Drawing.Size(102, 30);
-            this.TxtX.TabIndex = 8;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1, 100);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(261, 24);
-            this.label20.TabIndex = 34;
-            this.label20.Text = "Interpretación radiográfica";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(260, 62);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 24);
-            this.label23.TabIndex = 34;
-            this.label23.Text = "11";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtCt
-            // 
-            this.TxtCt.Location = new System.Drawing.Point(868, 31);
-            this.TxtCt.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtCt.MaxLength = 30;
-            this.TxtCt.Name = "TxtCt";
-            this.TxtCt.ShortcutsEnabled = false;
-            this.TxtCt.Size = new System.Drawing.Size(102, 30);
-            this.TxtCt.TabIndex = 7;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(369, 62);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(32, 24);
-            this.label24.TabIndex = 34;
-            this.label24.Text = "26";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtN46
-            // 
-            this.TxtN46.Location = new System.Drawing.Point(758, 31);
-            this.TxtN46.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtN46.MaxLength = 30;
-            this.TxtN46.Name = "TxtN46";
-            this.TxtN46.ShortcutsEnabled = false;
-            this.TxtN46.Size = new System.Drawing.Size(102, 30);
-            this.TxtN46.TabIndex = 6;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(505, 62);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(32, 24);
-            this.label25.TabIndex = 34;
-            this.label25.Text = "36";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtN32
-            // 
-            this.TxtN32.Location = new System.Drawing.Point(602, 31);
-            this.TxtN32.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtN32.MaxLength = 30;
-            this.TxtN32.Name = "TxtN32";
-            this.TxtN32.ShortcutsEnabled = false;
-            this.TxtN32.Size = new System.Drawing.Size(149, 30);
-            this.TxtN32.TabIndex = 5;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(663, 62);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(32, 24);
-            this.label26.TabIndex = 34;
-            this.label26.Text = "32";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtN36
-            // 
-            this.TxtN36.Location = new System.Drawing.Point(445, 31);
-            this.TxtN36.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtN36.MaxLength = 30;
-            this.TxtN36.Name = "TxtN36";
-            this.TxtN36.ShortcutsEnabled = false;
-            this.TxtN36.Size = new System.Drawing.Size(149, 30);
-            this.TxtN36.TabIndex = 4;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(794, 62);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(32, 24);
-            this.label27.TabIndex = 34;
-            this.label27.Text = "46";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtN26
-            // 
-            this.TxtN26.Location = new System.Drawing.Point(335, 31);
-            this.TxtN26.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtN26.MaxLength = 30;
-            this.TxtN26.Name = "TxtN26";
-            this.TxtN26.ShortcutsEnabled = false;
-            this.TxtN26.Size = new System.Drawing.Size(102, 30);
-            this.TxtN26.TabIndex = 3;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(902, 62);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(37, 24);
-            this.label28.TabIndex = 34;
-            this.label28.Text = "CT";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtN11
-            // 
-            this.TxtN11.Location = new System.Drawing.Point(225, 31);
-            this.TxtN11.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtN11.MaxLength = 30;
-            this.TxtN11.Name = "TxtN11";
-            this.TxtN11.ShortcutsEnabled = false;
-            this.TxtN11.Size = new System.Drawing.Size(102, 30);
-            this.TxtN11.TabIndex = 2;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(1019, 62);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(23, 24);
-            this.label29.TabIndex = 34;
-            this.label29.Text = "X";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtN16
-            // 
-            this.TxtN16.Location = new System.Drawing.Point(115, 31);
-            this.TxtN16.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtN16.MaxLength = 30;
-            this.TxtN16.Name = "TxtN16";
-            this.TxtN16.ShortcutsEnabled = false;
-            this.TxtN16.Size = new System.Drawing.Size(102, 30);
-            this.TxtN16.TabIndex = 1;
-            // 
-            // BtnCancelRegistration
-            // 
-            this.BtnCancelRegistration.Location = new System.Drawing.Point(124, 351);
-            this.BtnCancelRegistration.Name = "BtnCancelRegistration";
-            this.BtnCancelRegistration.Size = new System.Drawing.Size(110, 35);
-            this.BtnCancelRegistration.TabIndex = 39;
-            this.BtnCancelRegistration.Text = "Cancelar";
-            this.BtnCancelRegistration.UseVisualStyleBackColor = true;
-            this.BtnCancelRegistration.Click += new System.EventHandler(this.BtnCancelRegistration_Click);
-            // 
-            // BtnModifyRegistration
-            // 
-            this.BtnModifyRegistration.Location = new System.Drawing.Point(240, 351);
-            this.BtnModifyRegistration.Name = "BtnModifyRegistration";
-            this.BtnModifyRegistration.Size = new System.Drawing.Size(110, 35);
-            this.BtnModifyRegistration.TabIndex = 39;
-            this.BtnModifyRegistration.Text = "Modificar";
-            this.BtnModifyRegistration.UseVisualStyleBackColor = true;
-            this.BtnModifyRegistration.Click += new System.EventHandler(this.BtnModifyRegistration_Click);
-            // 
-            // BtnSaveRegistration
-            // 
-            this.BtnSaveRegistration.Location = new System.Drawing.Point(8, 351);
-            this.BtnSaveRegistration.Name = "BtnSaveRegistration";
-            this.BtnSaveRegistration.Size = new System.Drawing.Size(110, 35);
-            this.BtnSaveRegistration.TabIndex = 40;
-            this.BtnSaveRegistration.Text = "Guardar";
-            this.BtnSaveRegistration.UseVisualStyleBackColor = true;
-            this.BtnSaveRegistration.Visible = false;
-            this.BtnSaveRegistration.Click += new System.EventHandler(this.BtnSaveRegistration_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(540, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(418, 24);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Actividades realizadas en visitas anteriores";
-            // 
-            // DgvActivitiesListHistory
-            // 
-            this.DgvActivitiesListHistory.AllowUserToAddRows = false;
-            this.DgvActivitiesListHistory.AllowUserToDeleteRows = false;
-            this.DgvActivitiesListHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvActivitiesListHistory.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvActivitiesListHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvActivitiesListHistory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(540, 52);
-            this.DgvActivitiesListHistory.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvActivitiesListHistory.MultiSelect = false;
-            this.DgvActivitiesListHistory.Name = "DgvActivitiesListHistory";
-            this.DgvActivitiesListHistory.ReadOnly = true;
-            this.DgvActivitiesListHistory.RowHeadersVisible = false;
-            this.DgvActivitiesListHistory.RowHeadersWidth = 51;
-            this.DgvActivitiesListHistory.RowTemplate.Height = 24;
-            this.DgvActivitiesListHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(543, 268);
-            this.DgvActivitiesListHistory.TabIndex = 10;
-            // 
-            // BtnDeleteActivity
-            // 
-            this.BtnDeleteActivity.Location = new System.Drawing.Point(339, 6);
-            this.BtnDeleteActivity.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnDeleteActivity.Name = "BtnDeleteActivity";
-            this.BtnDeleteActivity.Size = new System.Drawing.Size(167, 41);
-            this.BtnDeleteActivity.TabIndex = 8;
-            this.BtnDeleteActivity.Text = "Eliminar";
-            this.BtnDeleteActivity.UseVisualStyleBackColor = true;
-            this.BtnDeleteActivity.Click += new System.EventHandler(this.BtnDeleteActivity_Click);
-            // 
-            // BtnModifyActivity
-            // 
-            this.BtnModifyActivity.Location = new System.Drawing.Point(170, 6);
-            this.BtnModifyActivity.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnModifyActivity.Name = "BtnModifyActivity";
-            this.BtnModifyActivity.Size = new System.Drawing.Size(167, 41);
-            this.BtnModifyActivity.TabIndex = 6;
-            this.BtnModifyActivity.Text = "Modificar";
-            this.BtnModifyActivity.UseVisualStyleBackColor = true;
-            this.BtnModifyActivity.Click += new System.EventHandler(this.BtnModifyActivity_Click);
-            // 
-            // btnAddActivity
-            // 
-            this.btnAddActivity.Location = new System.Drawing.Point(1, 6);
-            this.btnAddActivity.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAddActivity.Name = "btnAddActivity";
-            this.btnAddActivity.Size = new System.Drawing.Size(167, 41);
-            this.btnAddActivity.TabIndex = 5;
-            this.btnAddActivity.Text = "Agregar";
-            this.btnAddActivity.UseVisualStyleBackColor = true;
-            this.btnAddActivity.Click += new System.EventHandler(this.BtnAddActivity_Click);
-            // 
-            // DgvActivitiesList
-            // 
-            this.DgvActivitiesList.AllowUserToAddRows = false;
-            this.DgvActivitiesList.AllowUserToDeleteRows = false;
-            this.DgvActivitiesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvActivitiesList.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvActivitiesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 52);
-            this.DgvActivitiesList.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvActivitiesList.MultiSelect = false;
-            this.DgvActivitiesList.Name = "DgvActivitiesList";
-            this.DgvActivitiesList.ReadOnly = true;
-            this.DgvActivitiesList.RowHeadersVisible = false;
-            this.DgvActivitiesList.RowHeadersWidth = 51;
-            this.DgvActivitiesList.RowTemplate.Height = 24;
-            this.DgvActivitiesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvActivitiesList.Size = new System.Drawing.Size(532, 268);
-            this.DgvActivitiesList.TabIndex = 9;
-            // 
-            // TabInvoice
-            // 
-            this.TabInvoice.BackColor = System.Drawing.SystemColors.Control;
-            this.TabInvoice.Controls.Add(this.panel1);
-            this.TabInvoice.Controls.Add(this.LblPatientNameInvoice);
-            this.TabInvoice.Location = new System.Drawing.Point(4, 32);
-            this.TabInvoice.Name = "TabInvoice";
-            this.TabInvoice.Size = new System.Drawing.Size(1098, 647);
-            this.TabInvoice.TabIndex = 4;
-            this.TabInvoice.Text = "Facturación";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.BtnEndInvoice);
-            this.panel1.Controls.Add(this.BtnDeletePayment);
-            this.panel1.Controls.Add(this.BtnAddPayment);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.LblTotalCurrentVisit);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.DgvPaymentList);
-            this.panel1.Controls.Add(this.DgvAccountReceivableList);
-            this.panel1.Controls.Add(this.DgvItemsToBillOtherVisits);
-            this.panel1.Controls.Add(this.DgvItemsToBill);
-            this.panel1.Location = new System.Drawing.Point(11, 30);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1086, 618);
-            this.panel1.TabIndex = 35;
-            // 
-            // BtnEndInvoice
-            // 
-            this.BtnEndInvoice.Location = new System.Drawing.Point(367, 3);
-            this.BtnEndInvoice.Name = "BtnEndInvoice";
-            this.BtnEndInvoice.Size = new System.Drawing.Size(165, 33);
-            this.BtnEndInvoice.TabIndex = 40;
-            this.BtnEndInvoice.Text = "Finalizar";
-            this.BtnEndInvoice.UseVisualStyleBackColor = true;
-            this.BtnEndInvoice.Click += new System.EventHandler(this.BtnEndInvoice_Click);
-            // 
-            // BtnDeletePayment
-            // 
-            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 300);
-            this.BtnDeletePayment.Name = "BtnDeletePayment";
-            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
-            this.BtnDeletePayment.TabIndex = 40;
-            this.BtnDeletePayment.Text = "Eliminar abono";
-            this.BtnDeletePayment.UseVisualStyleBackColor = true;
-            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click_1);
-            // 
-            // BtnAddPayment
-            // 
-            this.BtnAddPayment.Location = new System.Drawing.Point(8, 300);
-            this.BtnAddPayment.Name = "BtnAddPayment";
-            this.BtnAddPayment.Size = new System.Drawing.Size(165, 39);
-            this.BtnAddPayment.TabIndex = 40;
-            this.BtnAddPayment.Text = "Abonar";
-            this.BtnAddPayment.UseVisualStyleBackColor = true;
-            this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(544, 12);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(317, 24);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Actividades de visitas anteriores";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(2, 345);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(194, 24);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "Cuentas por cobrar";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(544, 345);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 24);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Abonos";
-            // 
-            // LblTotalCurrentVisit
-            // 
-            this.LblTotalCurrentVisit.AutoSize = true;
-            this.LblTotalCurrentVisit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalCurrentVisit.Location = new System.Drawing.Point(4, 264);
-            this.LblTotalCurrentVisit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotalCurrentVisit.Name = "LblTotalCurrentVisit";
-            this.LblTotalCurrentVisit.Size = new System.Drawing.Size(301, 24);
-            this.LblTotalCurrentVisit.TabIndex = 34;
-            this.LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(2, 12);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(250, 24);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Actividades de esta visita";
-            // 
-            // DgvPaymentList
-            // 
-            this.DgvPaymentList.AllowUserToAddRows = false;
-            this.DgvPaymentList.AllowUserToDeleteRows = false;
-            this.DgvPaymentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvPaymentList.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvPaymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPaymentList.Location = new System.Drawing.Point(540, 373);
-            this.DgvPaymentList.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvPaymentList.MultiSelect = false;
-            this.DgvPaymentList.Name = "DgvPaymentList";
-            this.DgvPaymentList.ReadOnly = true;
-            this.DgvPaymentList.RowHeadersVisible = false;
-            this.DgvPaymentList.RowHeadersWidth = 51;
-            this.DgvPaymentList.RowTemplate.Height = 24;
-            this.DgvPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvPaymentList.Size = new System.Drawing.Size(543, 245);
-            this.DgvPaymentList.TabIndex = 10;
-            // 
-            // DgvAccountReceivableList
-            // 
-            this.DgvAccountReceivableList.AllowUserToAddRows = false;
-            this.DgvAccountReceivableList.AllowUserToDeleteRows = false;
-            this.DgvAccountReceivableList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvAccountReceivableList.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvAccountReceivableList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvAccountReceivableList.Location = new System.Drawing.Point(0, 373);
-            this.DgvAccountReceivableList.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvAccountReceivableList.MultiSelect = false;
-            this.DgvAccountReceivableList.Name = "DgvAccountReceivableList";
-            this.DgvAccountReceivableList.ReadOnly = true;
-            this.DgvAccountReceivableList.RowHeadersVisible = false;
-            this.DgvAccountReceivableList.RowHeadersWidth = 51;
-            this.DgvAccountReceivableList.RowTemplate.Height = 24;
-            this.DgvAccountReceivableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvAccountReceivableList.Size = new System.Drawing.Size(532, 245);
-            this.DgvAccountReceivableList.TabIndex = 10;
-            this.DgvAccountReceivableList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAccountReceivableList_CellClick);
-            // 
-            // DgvItemsToBillOtherVisits
-            // 
-            this.DgvItemsToBillOtherVisits.AllowUserToAddRows = false;
-            this.DgvItemsToBillOtherVisits.AllowUserToDeleteRows = false;
-            this.DgvItemsToBillOtherVisits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvItemsToBillOtherVisits.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvItemsToBillOtherVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvItemsToBillOtherVisits.Location = new System.Drawing.Point(540, 41);
-            this.DgvItemsToBillOtherVisits.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvItemsToBillOtherVisits.MultiSelect = false;
-            this.DgvItemsToBillOtherVisits.Name = "DgvItemsToBillOtherVisits";
-            this.DgvItemsToBillOtherVisits.ReadOnly = true;
-            this.DgvItemsToBillOtherVisits.RowHeadersVisible = false;
-            this.DgvItemsToBillOtherVisits.RowHeadersWidth = 51;
-            this.DgvItemsToBillOtherVisits.RowTemplate.Height = 24;
-            this.DgvItemsToBillOtherVisits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvItemsToBillOtherVisits.Size = new System.Drawing.Size(543, 219);
-            this.DgvItemsToBillOtherVisits.TabIndex = 9;
-            this.DgvItemsToBillOtherVisits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
-            this.DgvItemsToBillOtherVisits.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
-            this.DgvItemsToBillOtherVisits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
-            // 
-            // DgvItemsToBill
-            // 
-            this.DgvItemsToBill.AllowUserToAddRows = false;
-            this.DgvItemsToBill.AllowUserToDeleteRows = false;
-            this.DgvItemsToBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvItemsToBill.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DgvItemsToBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvItemsToBill.Location = new System.Drawing.Point(0, 41);
-            this.DgvItemsToBill.Margin = new System.Windows.Forms.Padding(4);
-            this.DgvItemsToBill.MultiSelect = false;
-            this.DgvItemsToBill.Name = "DgvItemsToBill";
-            this.DgvItemsToBill.ReadOnly = true;
-            this.DgvItemsToBill.RowHeadersVisible = false;
-            this.DgvItemsToBill.RowHeadersWidth = 51;
-            this.DgvItemsToBill.RowTemplate.Height = 24;
-            this.DgvItemsToBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvItemsToBill.Size = new System.Drawing.Size(532, 219);
-            this.DgvItemsToBill.TabIndex = 9;
-            this.DgvItemsToBill.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
-            this.DgvItemsToBill.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
-            this.DgvItemsToBill.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
-            // 
-            // LblPatientNameInvoice
-            // 
-            this.LblPatientNameInvoice.AutoSize = true;
-            this.LblPatientNameInvoice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPatientNameInvoice.Location = new System.Drawing.Point(7, 6);
-            this.LblPatientNameInvoice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPatientNameInvoice.Name = "LblPatientNameInvoice";
-            this.LblPatientNameInvoice.Size = new System.Drawing.Size(204, 24);
-            this.LblPatientNameInvoice.TabIndex = 34;
-            this.LblPatientNameInvoice.Text = "Nombre del paciente";
-            // 
-            // BtnGeneralInfo
-            // 
-            this.BtnGeneralInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnGeneralInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGeneralInfo.Location = new System.Drawing.Point(0, 0);
-            this.BtnGeneralInfo.Name = "BtnGeneralInfo";
-            this.BtnGeneralInfo.Size = new System.Drawing.Size(185, 62);
-            this.BtnGeneralInfo.TabIndex = 0;
-            this.BtnGeneralInfo.Text = "Datos generales";
-            this.BtnGeneralInfo.UseVisualStyleBackColor = true;
-            this.BtnGeneralInfo.Click += new System.EventHandler(this.BtnGeneralInfo_Click);
-            // 
-            // BtnInitialOdontogram
-            // 
-            this.BtnInitialOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInitialOdontogram.Location = new System.Drawing.Point(0, 62);
-            this.BtnInitialOdontogram.Name = "BtnInitialOdontogram";
-            this.BtnInitialOdontogram.Size = new System.Drawing.Size(185, 62);
-            this.BtnInitialOdontogram.TabIndex = 1;
-            this.BtnInitialOdontogram.Text = "Odontograma inicial";
-            this.BtnInitialOdontogram.UseVisualStyleBackColor = true;
-            this.BtnInitialOdontogram.Click += new System.EventHandler(this.BtnInitialOdontogram_Click);
-            // 
-            // BtnTreatmentOdontogram
-            // 
-            this.BtnTreatmentOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnTreatmentOdontogram.Location = new System.Drawing.Point(0, 124);
-            this.BtnTreatmentOdontogram.Name = "BtnTreatmentOdontogram";
-            this.BtnTreatmentOdontogram.Size = new System.Drawing.Size(185, 62);
-            this.BtnTreatmentOdontogram.TabIndex = 2;
-            this.BtnTreatmentOdontogram.Text = "Odontograma tratamiento";
-            this.BtnTreatmentOdontogram.UseVisualStyleBackColor = true;
-            this.BtnTreatmentOdontogram.Click += new System.EventHandler(this.BtnTreatmentOdontogram_Click);
-            // 
-            // BtnActivitiesPerformed
-            // 
-            this.BtnActivitiesPerformed.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnActivitiesPerformed.Location = new System.Drawing.Point(0, 186);
-            this.BtnActivitiesPerformed.Name = "BtnActivitiesPerformed";
-            this.BtnActivitiesPerformed.Size = new System.Drawing.Size(185, 62);
-            this.BtnActivitiesPerformed.TabIndex = 3;
-            this.BtnActivitiesPerformed.Text = "Actividades realizadas";
-            this.BtnActivitiesPerformed.UseVisualStyleBackColor = true;
-            this.BtnActivitiesPerformed.Click += new System.EventHandler(this.BtnActivitiesPerformed_Click);
-            // 
-            // BtnInvoice
-            // 
-            this.BtnInvoice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnInvoice.Location = new System.Drawing.Point(0, 248);
-            this.BtnInvoice.Name = "BtnInvoice";
-            this.BtnInvoice.Size = new System.Drawing.Size(185, 62);
-            this.BtnInvoice.TabIndex = 4;
-            this.BtnInvoice.Text = "Facturación";
-            this.BtnInvoice.UseVisualStyleBackColor = true;
-            this.BtnInvoice.Click += new System.EventHandler(this.BtnInvoice_Click);
-            // 
-            // BtnEndVisit
-            // 
-            this.BtnEndVisit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEndVisit.Location = new System.Drawing.Point(0, 310);
-            this.BtnEndVisit.Name = "BtnEndVisit";
-            this.BtnEndVisit.Size = new System.Drawing.Size(185, 62);
-            this.BtnEndVisit.TabIndex = 5;
-            this.BtnEndVisit.Text = "Finalizar visita";
-            this.BtnEndVisit.UseVisualStyleBackColor = true;
-            this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label37);
-            this.panel7.Controls.Add(this.label38);
-            this.panel7.Controls.Add(this.label39);
-            this.panel7.Controls.Add(this.label40);
-            this.panel7.Controls.Add(this.label41);
-            this.panel7.Controls.Add(this.label42);
-            this.panel7.Controls.Add(this.label43);
-            this.panel7.Controls.Add(this.label44);
-            this.panel7.Location = new System.Drawing.Point(18, 258);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(491, 26);
-            this.panel7.TabIndex = 37;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.label45);
-            this.panel13.Controls.Add(this.label32);
-            this.panel13.Controls.Add(this.label36);
-            this.panel13.Controls.Add(this.label34);
-            this.panel13.Controls.Add(this.label35);
-            this.panel13.Controls.Add(this.label31);
-            this.panel13.Controls.Add(this.label33);
-            this.panel13.Controls.Add(this.label30);
-            this.panel13.Location = new System.Drawing.Point(17, 76);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(481, 26);
-            this.panel13.TabIndex = 37;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.label53);
-            this.panel14.Controls.Add(this.label46);
-            this.panel14.Controls.Add(this.label47);
-            this.panel14.Controls.Add(this.label48);
-            this.panel14.Controls.Add(this.label49);
-            this.panel14.Controls.Add(this.label50);
-            this.panel14.Controls.Add(this.label51);
-            this.panel14.Controls.Add(this.label52);
-            this.panel14.Location = new System.Drawing.Point(596, 75);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(491, 26);
-            this.panel14.TabIndex = 37;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label62);
-            this.panel15.Controls.Add(this.label63);
-            this.panel15.Controls.Add(this.label64);
-            this.panel15.Controls.Add(this.label65);
-            this.panel15.Controls.Add(this.label66);
-            this.panel15.Location = new System.Drawing.Point(211, 312);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(292, 26);
-            this.panel15.TabIndex = 37;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.label57);
-            this.panel16.Controls.Add(this.label54);
-            this.panel16.Controls.Add(this.label55);
-            this.panel16.Controls.Add(this.label56);
-            this.panel16.Controls.Add(this.label58);
-            this.panel16.Controls.Add(this.label59);
-            this.panel16.Controls.Add(this.label60);
-            this.panel16.Controls.Add(this.label61);
-            this.panel16.Location = new System.Drawing.Point(600, 258);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(491, 26);
-            this.panel16.TabIndex = 37;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.label77);
-            this.panel17.Controls.Add(this.label78);
-            this.panel17.Controls.Add(this.label79);
-            this.panel17.Controls.Add(this.label80);
-            this.panel17.Controls.Add(this.label81);
-            this.panel17.Location = new System.Drawing.Point(595, 496);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(291, 26);
-            this.panel17.TabIndex = 37;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.label67);
-            this.panel18.Controls.Add(this.label68);
-            this.panel18.Controls.Add(this.label69);
-            this.panel18.Controls.Add(this.label70);
-            this.panel18.Controls.Add(this.label71);
-            this.panel18.Location = new System.Drawing.Point(210, 497);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(297, 26);
-            this.panel18.TabIndex = 37;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.label72);
-            this.panel19.Controls.Add(this.label73);
-            this.panel19.Controls.Add(this.label74);
-            this.panel19.Controls.Add(this.label75);
-            this.panel19.Controls.Add(this.label76);
-            this.panel19.Location = new System.Drawing.Point(596, 313);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(296, 26);
-            this.panel19.TabIndex = 37;
             // 
             // PnlTreatmentOdontogramTeeth
             // 
@@ -5922,30 +5248,34 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button1);
-            this.panel9.Controls.Add(this.button2);
+            this.panel9.Controls.Add(this.BtnSaveTreatment);
+            this.panel9.Controls.Add(this.BtnModifyTreatment);
+            this.panel9.Controls.Add(this.BtnCancelTreatment);
             this.panel9.Location = new System.Drawing.Point(5, 5);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(273, 51);
+            this.panel9.Size = new System.Drawing.Size(433, 51);
             this.panel9.TabIndex = 37;
             // 
-            // button1
+            // BtnSaveTreatment
             // 
-            this.button1.Location = new System.Drawing.Point(4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 40);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnSaveTreatment.Location = new System.Drawing.Point(4, 3);
+            this.BtnSaveTreatment.Name = "BtnSaveTreatment";
+            this.BtnSaveTreatment.Size = new System.Drawing.Size(126, 40);
+            this.BtnSaveTreatment.TabIndex = 0;
+            this.BtnSaveTreatment.Text = "Guardar";
+            this.BtnSaveTreatment.UseVisualStyleBackColor = true;
+            this.BtnSaveTreatment.Visible = false;
+            this.BtnSaveTreatment.Click += new System.EventHandler(this.BtnSaveTreatment_Click);
             // 
-            // button2
+            // BtnCancelTreatment
             // 
-            this.button2.Location = new System.Drawing.Point(135, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 40);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnCancelTreatment.Location = new System.Drawing.Point(135, 3);
+            this.BtnCancelTreatment.Name = "BtnCancelTreatment";
+            this.BtnCancelTreatment.Size = new System.Drawing.Size(126, 40);
+            this.BtnCancelTreatment.TabIndex = 2;
+            this.BtnCancelTreatment.Text = "Cancelar";
+            this.BtnCancelTreatment.UseVisualStyleBackColor = true;
+            this.BtnCancelTreatment.Click += new System.EventHandler(this.BtnCancelTreatment_Click);
             // 
             // panel10
             // 
@@ -8551,7 +7881,7 @@
             this.panel23.Controls.Add(this.label103);
             this.panel23.Controls.Add(this.label104);
             this.panel23.Controls.Add(this.label105);
-            this.panel23.Location = new System.Drawing.Point(18, 257);
+            this.panel23.Location = new System.Drawing.Point(18, 259);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(491, 26);
             this.panel23.TabIndex = 37;
@@ -8662,7 +7992,7 @@
             this.panel24.Controls.Add(this.label111);
             this.panel24.Controls.Add(this.label112);
             this.panel24.Controls.Add(this.label113);
-            this.panel24.Location = new System.Drawing.Point(600, 257);
+            this.panel24.Location = new System.Drawing.Point(600, 259);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(491, 26);
             this.panel24.TabIndex = 37;
@@ -8914,7 +8244,7 @@
             this.panel27.Controls.Add(this.label126);
             this.panel27.Controls.Add(this.label127);
             this.panel27.Controls.Add(this.label128);
-            this.panel27.Location = new System.Drawing.Point(210, 496);
+            this.panel27.Location = new System.Drawing.Point(210, 498);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(297, 26);
             this.panel27.TabIndex = 37;
@@ -8986,7 +8316,7 @@
             this.panel28.Controls.Add(this.label131);
             this.panel28.Controls.Add(this.label132);
             this.panel28.Controls.Add(this.label133);
-            this.panel28.Location = new System.Drawing.Point(595, 495);
+            this.panel28.Location = new System.Drawing.Point(595, 497);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(291, 26);
             this.panel28.TabIndex = 37;
@@ -9051,30 +8381,6 @@
             this.label133.Text = "75";
             this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LblOdontogramId
-            // 
-            this.LblOdontogramId.AutoSize = true;
-            this.LblOdontogramId.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblOdontogramId.Location = new System.Drawing.Point(544, 8);
-            this.LblOdontogramId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblOdontogramId.Name = "LblOdontogramId";
-            this.LblOdontogramId.Size = new System.Drawing.Size(27, 22);
-            this.LblOdontogramId.TabIndex = 26;
-            this.LblOdontogramId.Text = "Id";
-            this.LblOdontogramId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LblOdontogramId.Visible = false;
-            // 
-            // LblTotalCavities
-            // 
-            this.LblTotalCavities.AutoSize = true;
-            this.LblTotalCavities.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotalCavities.Location = new System.Drawing.Point(859, 9);
-            this.LblTotalCavities.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblTotalCavities.Name = "LblTotalCavities";
-            this.LblTotalCavities.Size = new System.Drawing.Size(173, 24);
-            this.LblTotalCavities.TabIndex = 26;
-            this.LblTotalCavities.Text = "Total de caries: 0";
-            // 
             // LblTreatmentOdontogramId
             // 
             this.LblTreatmentOdontogramId.AutoSize = true;
@@ -9086,6 +8392,715 @@
             this.LblTreatmentOdontogramId.TabIndex = 27;
             this.LblTreatmentOdontogramId.Text = "LblTreatmentOdontogramId";
             this.LblTreatmentOdontogramId.Visible = false;
+            // 
+            // LblPatientNameTreatmentOdontogram
+            // 
+            this.LblPatientNameTreatmentOdontogram.AutoSize = true;
+            this.LblPatientNameTreatmentOdontogram.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameTreatmentOdontogram.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameTreatmentOdontogram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameTreatmentOdontogram.Name = "LblPatientNameTreatmentOdontogram";
+            this.LblPatientNameTreatmentOdontogram.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameTreatmentOdontogram.TabIndex = 27;
+            this.LblPatientNameTreatmentOdontogram.Text = "Nombre del paciente";
+            // 
+            // TabActivitiesPermormed
+            // 
+            this.TabActivitiesPermormed.BackColor = System.Drawing.SystemColors.Control;
+            this.TabActivitiesPermormed.Controls.Add(this.LblPatientNameActivitiesPerformed);
+            this.TabActivitiesPermormed.Controls.Add(this.PnlActivitiesPerformed);
+            this.TabActivitiesPermormed.Location = new System.Drawing.Point(4, 32);
+            this.TabActivitiesPermormed.Name = "TabActivitiesPermormed";
+            this.TabActivitiesPermormed.Size = new System.Drawing.Size(1098, 647);
+            this.TabActivitiesPermormed.TabIndex = 3;
+            this.TabActivitiesPermormed.Text = "Actividades realizadas";
+            // 
+            // LblPatientNameActivitiesPerformed
+            // 
+            this.LblPatientNameActivitiesPerformed.AutoSize = true;
+            this.LblPatientNameActivitiesPerformed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameActivitiesPerformed.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameActivitiesPerformed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameActivitiesPerformed.Name = "LblPatientNameActivitiesPerformed";
+            this.LblPatientNameActivitiesPerformed.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameActivitiesPerformed.TabIndex = 33;
+            this.LblPatientNameActivitiesPerformed.Text = "Nombre del paciente";
+            // 
+            // PnlActivitiesPerformed
+            // 
+            this.PnlActivitiesPerformed.Controls.Add(this.PnlPlateRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnCancelRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnSaveRegistration);
+            this.PnlActivitiesPerformed.Controls.Add(this.label10);
+            this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesListHistory);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnDeleteActivity);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyActivity);
+            this.PnlActivitiesPerformed.Controls.Add(this.btnAddActivity);
+            this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesList);
+            this.PnlActivitiesPerformed.Location = new System.Drawing.Point(11, 30);
+            this.PnlActivitiesPerformed.Name = "PnlActivitiesPerformed";
+            this.PnlActivitiesPerformed.Size = new System.Drawing.Size(1086, 618);
+            this.PnlActivitiesPerformed.TabIndex = 32;
+            // 
+            // PnlPlateRegistration
+            // 
+            this.PnlPlateRegistration.Controls.Add(this.TxtPdb);
+            this.PnlPlateRegistration.Controls.Add(this.label19);
+            this.PnlPlateRegistration.Controls.Add(this.label21);
+            this.PnlPlateRegistration.Controls.Add(this.label22);
+            this.PnlPlateRegistration.Controls.Add(this.TxtRadiographicInterpretation);
+            this.PnlPlateRegistration.Controls.Add(this.TxtX);
+            this.PnlPlateRegistration.Controls.Add(this.label20);
+            this.PnlPlateRegistration.Controls.Add(this.label23);
+            this.PnlPlateRegistration.Controls.Add(this.TxtCt);
+            this.PnlPlateRegistration.Controls.Add(this.label24);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN46);
+            this.PnlPlateRegistration.Controls.Add(this.label25);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN32);
+            this.PnlPlateRegistration.Controls.Add(this.label26);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN36);
+            this.PnlPlateRegistration.Controls.Add(this.label27);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN26);
+            this.PnlPlateRegistration.Controls.Add(this.label28);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN11);
+            this.PnlPlateRegistration.Controls.Add(this.label29);
+            this.PnlPlateRegistration.Controls.Add(this.TxtN16);
+            this.PnlPlateRegistration.Location = new System.Drawing.Point(3, 390);
+            this.PnlPlateRegistration.Name = "PnlPlateRegistration";
+            this.PnlPlateRegistration.Size = new System.Drawing.Size(1083, 224);
+            this.PnlPlateRegistration.TabIndex = 42;
+            // 
+            // TxtPdb
+            // 
+            this.TxtPdb.Location = new System.Drawing.Point(5, 31);
+            this.TxtPdb.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPdb.MaxLength = 30;
+            this.TxtPdb.Name = "TxtPdb";
+            this.TxtPdb.ShortcutsEnabled = false;
+            this.TxtPdb.Size = new System.Drawing.Size(102, 30);
+            this.TxtPdb.TabIndex = 0;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1, 3);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(175, 24);
+            this.label19.TabIndex = 34;
+            this.label19.Text = "Registro de placa";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(27, 62);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(51, 24);
+            this.label21.TabIndex = 34;
+            this.label21.Text = "PDB";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(146, 62);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(32, 24);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "16";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtRadiographicInterpretation
+            // 
+            this.TxtRadiographicInterpretation.Location = new System.Drawing.Point(5, 128);
+            this.TxtRadiographicInterpretation.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtRadiographicInterpretation.MaxLength = 399;
+            this.TxtRadiographicInterpretation.Multiline = true;
+            this.TxtRadiographicInterpretation.Name = "TxtRadiographicInterpretation";
+            this.TxtRadiographicInterpretation.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.TxtRadiographicInterpretation.Size = new System.Drawing.Size(1074, 92);
+            this.TxtRadiographicInterpretation.TabIndex = 9;
+            // 
+            // TxtX
+            // 
+            this.TxtX.Location = new System.Drawing.Point(978, 31);
+            this.TxtX.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtX.MaxLength = 30;
+            this.TxtX.Name = "TxtX";
+            this.TxtX.ShortcutsEnabled = false;
+            this.TxtX.Size = new System.Drawing.Size(102, 30);
+            this.TxtX.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(1, 100);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(261, 24);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Interpretación radiográfica";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(260, 62);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(31, 24);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "11";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtCt
+            // 
+            this.TxtCt.Location = new System.Drawing.Point(868, 31);
+            this.TxtCt.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCt.MaxLength = 30;
+            this.TxtCt.Name = "TxtCt";
+            this.TxtCt.ShortcutsEnabled = false;
+            this.TxtCt.Size = new System.Drawing.Size(102, 30);
+            this.TxtCt.TabIndex = 7;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(369, 62);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(32, 24);
+            this.label24.TabIndex = 34;
+            this.label24.Text = "26";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN46
+            // 
+            this.TxtN46.Location = new System.Drawing.Point(758, 31);
+            this.TxtN46.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN46.MaxLength = 30;
+            this.TxtN46.Name = "TxtN46";
+            this.TxtN46.ShortcutsEnabled = false;
+            this.TxtN46.Size = new System.Drawing.Size(102, 30);
+            this.TxtN46.TabIndex = 6;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(505, 62);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(32, 24);
+            this.label25.TabIndex = 34;
+            this.label25.Text = "36";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN32
+            // 
+            this.TxtN32.Location = new System.Drawing.Point(602, 31);
+            this.TxtN32.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN32.MaxLength = 30;
+            this.TxtN32.Name = "TxtN32";
+            this.TxtN32.ShortcutsEnabled = false;
+            this.TxtN32.Size = new System.Drawing.Size(149, 30);
+            this.TxtN32.TabIndex = 5;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(663, 62);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(32, 24);
+            this.label26.TabIndex = 34;
+            this.label26.Text = "32";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN36
+            // 
+            this.TxtN36.Location = new System.Drawing.Point(445, 31);
+            this.TxtN36.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN36.MaxLength = 30;
+            this.TxtN36.Name = "TxtN36";
+            this.TxtN36.ShortcutsEnabled = false;
+            this.TxtN36.Size = new System.Drawing.Size(149, 30);
+            this.TxtN36.TabIndex = 4;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(794, 62);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(32, 24);
+            this.label27.TabIndex = 34;
+            this.label27.Text = "46";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN26
+            // 
+            this.TxtN26.Location = new System.Drawing.Point(335, 31);
+            this.TxtN26.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN26.MaxLength = 30;
+            this.TxtN26.Name = "TxtN26";
+            this.TxtN26.ShortcutsEnabled = false;
+            this.TxtN26.Size = new System.Drawing.Size(102, 30);
+            this.TxtN26.TabIndex = 3;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(902, 62);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(37, 24);
+            this.label28.TabIndex = 34;
+            this.label28.Text = "CT";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN11
+            // 
+            this.TxtN11.Location = new System.Drawing.Point(225, 31);
+            this.TxtN11.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN11.MaxLength = 30;
+            this.TxtN11.Name = "TxtN11";
+            this.TxtN11.ShortcutsEnabled = false;
+            this.TxtN11.Size = new System.Drawing.Size(102, 30);
+            this.TxtN11.TabIndex = 2;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(1019, 62);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(23, 24);
+            this.label29.TabIndex = 34;
+            this.label29.Text = "X";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TxtN16
+            // 
+            this.TxtN16.Location = new System.Drawing.Point(115, 31);
+            this.TxtN16.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtN16.MaxLength = 30;
+            this.TxtN16.Name = "TxtN16";
+            this.TxtN16.ShortcutsEnabled = false;
+            this.TxtN16.Size = new System.Drawing.Size(102, 30);
+            this.TxtN16.TabIndex = 1;
+            // 
+            // BtnCancelRegistration
+            // 
+            this.BtnCancelRegistration.Location = new System.Drawing.Point(124, 351);
+            this.BtnCancelRegistration.Name = "BtnCancelRegistration";
+            this.BtnCancelRegistration.Size = new System.Drawing.Size(110, 35);
+            this.BtnCancelRegistration.TabIndex = 39;
+            this.BtnCancelRegistration.Text = "Cancelar";
+            this.BtnCancelRegistration.UseVisualStyleBackColor = true;
+            this.BtnCancelRegistration.Click += new System.EventHandler(this.BtnCancelRegistration_Click);
+            // 
+            // BtnModifyRegistration
+            // 
+            this.BtnModifyRegistration.Location = new System.Drawing.Point(240, 351);
+            this.BtnModifyRegistration.Name = "BtnModifyRegistration";
+            this.BtnModifyRegistration.Size = new System.Drawing.Size(110, 35);
+            this.BtnModifyRegistration.TabIndex = 39;
+            this.BtnModifyRegistration.Text = "Modificar";
+            this.BtnModifyRegistration.UseVisualStyleBackColor = true;
+            this.BtnModifyRegistration.Click += new System.EventHandler(this.BtnModifyRegistration_Click);
+            // 
+            // BtnSaveRegistration
+            // 
+            this.BtnSaveRegistration.Location = new System.Drawing.Point(8, 351);
+            this.BtnSaveRegistration.Name = "BtnSaveRegistration";
+            this.BtnSaveRegistration.Size = new System.Drawing.Size(110, 35);
+            this.BtnSaveRegistration.TabIndex = 40;
+            this.BtnSaveRegistration.Text = "Guardar";
+            this.BtnSaveRegistration.UseVisualStyleBackColor = true;
+            this.BtnSaveRegistration.Visible = false;
+            this.BtnSaveRegistration.Click += new System.EventHandler(this.BtnSaveRegistration_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(540, 22);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(418, 24);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Actividades realizadas en visitas anteriores";
+            // 
+            // DgvActivitiesListHistory
+            // 
+            this.DgvActivitiesListHistory.AllowUserToAddRows = false;
+            this.DgvActivitiesListHistory.AllowUserToDeleteRows = false;
+            this.DgvActivitiesListHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvActivitiesListHistory.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvActivitiesListHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvActivitiesListHistory.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DgvActivitiesListHistory.Location = new System.Drawing.Point(540, 52);
+            this.DgvActivitiesListHistory.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvActivitiesListHistory.MultiSelect = false;
+            this.DgvActivitiesListHistory.Name = "DgvActivitiesListHistory";
+            this.DgvActivitiesListHistory.ReadOnly = true;
+            this.DgvActivitiesListHistory.RowHeadersVisible = false;
+            this.DgvActivitiesListHistory.RowHeadersWidth = 51;
+            this.DgvActivitiesListHistory.RowTemplate.Height = 24;
+            this.DgvActivitiesListHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvActivitiesListHistory.Size = new System.Drawing.Size(543, 268);
+            this.DgvActivitiesListHistory.TabIndex = 10;
+            // 
+            // BtnDeleteActivity
+            // 
+            this.BtnDeleteActivity.Location = new System.Drawing.Point(339, 6);
+            this.BtnDeleteActivity.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnDeleteActivity.Name = "BtnDeleteActivity";
+            this.BtnDeleteActivity.Size = new System.Drawing.Size(167, 41);
+            this.BtnDeleteActivity.TabIndex = 8;
+            this.BtnDeleteActivity.Text = "Eliminar";
+            this.BtnDeleteActivity.UseVisualStyleBackColor = true;
+            this.BtnDeleteActivity.Click += new System.EventHandler(this.BtnDeleteActivity_Click);
+            // 
+            // BtnModifyActivity
+            // 
+            this.BtnModifyActivity.Location = new System.Drawing.Point(170, 6);
+            this.BtnModifyActivity.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnModifyActivity.Name = "BtnModifyActivity";
+            this.BtnModifyActivity.Size = new System.Drawing.Size(167, 41);
+            this.BtnModifyActivity.TabIndex = 6;
+            this.BtnModifyActivity.Text = "Modificar";
+            this.BtnModifyActivity.UseVisualStyleBackColor = true;
+            this.BtnModifyActivity.Click += new System.EventHandler(this.BtnModifyActivity_Click);
+            // 
+            // btnAddActivity
+            // 
+            this.btnAddActivity.Location = new System.Drawing.Point(1, 6);
+            this.btnAddActivity.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAddActivity.Name = "btnAddActivity";
+            this.btnAddActivity.Size = new System.Drawing.Size(167, 41);
+            this.btnAddActivity.TabIndex = 5;
+            this.btnAddActivity.Text = "Agregar";
+            this.btnAddActivity.UseVisualStyleBackColor = true;
+            this.btnAddActivity.Click += new System.EventHandler(this.BtnAddActivity_Click);
+            // 
+            // DgvActivitiesList
+            // 
+            this.DgvActivitiesList.AllowUserToAddRows = false;
+            this.DgvActivitiesList.AllowUserToDeleteRows = false;
+            this.DgvActivitiesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvActivitiesList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvActivitiesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvActivitiesList.Location = new System.Drawing.Point(0, 52);
+            this.DgvActivitiesList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvActivitiesList.MultiSelect = false;
+            this.DgvActivitiesList.Name = "DgvActivitiesList";
+            this.DgvActivitiesList.ReadOnly = true;
+            this.DgvActivitiesList.RowHeadersVisible = false;
+            this.DgvActivitiesList.RowHeadersWidth = 51;
+            this.DgvActivitiesList.RowTemplate.Height = 24;
+            this.DgvActivitiesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvActivitiesList.Size = new System.Drawing.Size(532, 268);
+            this.DgvActivitiesList.TabIndex = 9;
+            // 
+            // TabInvoice
+            // 
+            this.TabInvoice.BackColor = System.Drawing.SystemColors.Control;
+            this.TabInvoice.Controls.Add(this.panel1);
+            this.TabInvoice.Controls.Add(this.LblPatientNameInvoice);
+            this.TabInvoice.Location = new System.Drawing.Point(4, 32);
+            this.TabInvoice.Name = "TabInvoice";
+            this.TabInvoice.Size = new System.Drawing.Size(1098, 647);
+            this.TabInvoice.TabIndex = 4;
+            this.TabInvoice.Text = "Facturación";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.BtnEndInvoice);
+            this.panel1.Controls.Add(this.BtnDeletePayment);
+            this.panel1.Controls.Add(this.BtnAddPayment);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.LblTotalCurrentVisit);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.DgvPaymentList);
+            this.panel1.Controls.Add(this.DgvAccountReceivableList);
+            this.panel1.Controls.Add(this.DgvItemsToBillOtherVisits);
+            this.panel1.Controls.Add(this.DgvItemsToBill);
+            this.panel1.Location = new System.Drawing.Point(11, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1086, 618);
+            this.panel1.TabIndex = 35;
+            // 
+            // BtnEndInvoice
+            // 
+            this.BtnEndInvoice.Location = new System.Drawing.Point(367, 3);
+            this.BtnEndInvoice.Name = "BtnEndInvoice";
+            this.BtnEndInvoice.Size = new System.Drawing.Size(165, 33);
+            this.BtnEndInvoice.TabIndex = 40;
+            this.BtnEndInvoice.Text = "Finalizar";
+            this.BtnEndInvoice.UseVisualStyleBackColor = true;
+            this.BtnEndInvoice.Click += new System.EventHandler(this.BtnEndInvoice_Click);
+            // 
+            // BtnDeletePayment
+            // 
+            this.BtnDeletePayment.Location = new System.Drawing.Point(179, 300);
+            this.BtnDeletePayment.Name = "BtnDeletePayment";
+            this.BtnDeletePayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnDeletePayment.TabIndex = 40;
+            this.BtnDeletePayment.Text = "Eliminar abono";
+            this.BtnDeletePayment.UseVisualStyleBackColor = true;
+            this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click_1);
+            // 
+            // BtnAddPayment
+            // 
+            this.BtnAddPayment.Location = new System.Drawing.Point(8, 300);
+            this.BtnAddPayment.Name = "BtnAddPayment";
+            this.BtnAddPayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnAddPayment.TabIndex = 40;
+            this.BtnAddPayment.Text = "Abonar";
+            this.BtnAddPayment.UseVisualStyleBackColor = true;
+            this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(544, 12);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(317, 24);
+            this.label17.TabIndex = 34;
+            this.label17.Text = "Actividades de visitas anteriores";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(2, 345);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(194, 24);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "Cuentas por cobrar";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(544, 345);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 24);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Abonos";
+            // 
+            // LblTotalCurrentVisit
+            // 
+            this.LblTotalCurrentVisit.AutoSize = true;
+            this.LblTotalCurrentVisit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalCurrentVisit.Location = new System.Drawing.Point(4, 264);
+            this.LblTotalCurrentVisit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblTotalCurrentVisit.Name = "LblTotalCurrentVisit";
+            this.LblTotalCurrentVisit.Size = new System.Drawing.Size(301, 24);
+            this.LblTotalCurrentVisit.TabIndex = 34;
+            this.LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(2, 12);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(250, 24);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Actividades de esta visita";
+            // 
+            // DgvPaymentList
+            // 
+            this.DgvPaymentList.AllowUserToAddRows = false;
+            this.DgvPaymentList.AllowUserToDeleteRows = false;
+            this.DgvPaymentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvPaymentList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvPaymentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPaymentList.Location = new System.Drawing.Point(540, 373);
+            this.DgvPaymentList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvPaymentList.MultiSelect = false;
+            this.DgvPaymentList.Name = "DgvPaymentList";
+            this.DgvPaymentList.ReadOnly = true;
+            this.DgvPaymentList.RowHeadersVisible = false;
+            this.DgvPaymentList.RowHeadersWidth = 51;
+            this.DgvPaymentList.RowTemplate.Height = 24;
+            this.DgvPaymentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvPaymentList.Size = new System.Drawing.Size(543, 245);
+            this.DgvPaymentList.TabIndex = 10;
+            // 
+            // DgvAccountReceivableList
+            // 
+            this.DgvAccountReceivableList.AllowUserToAddRows = false;
+            this.DgvAccountReceivableList.AllowUserToDeleteRows = false;
+            this.DgvAccountReceivableList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvAccountReceivableList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvAccountReceivableList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvAccountReceivableList.Location = new System.Drawing.Point(0, 373);
+            this.DgvAccountReceivableList.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvAccountReceivableList.MultiSelect = false;
+            this.DgvAccountReceivableList.Name = "DgvAccountReceivableList";
+            this.DgvAccountReceivableList.ReadOnly = true;
+            this.DgvAccountReceivableList.RowHeadersVisible = false;
+            this.DgvAccountReceivableList.RowHeadersWidth = 51;
+            this.DgvAccountReceivableList.RowTemplate.Height = 24;
+            this.DgvAccountReceivableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvAccountReceivableList.Size = new System.Drawing.Size(532, 245);
+            this.DgvAccountReceivableList.TabIndex = 10;
+            this.DgvAccountReceivableList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAccountReceivableList_CellClick);
+            // 
+            // DgvItemsToBillOtherVisits
+            // 
+            this.DgvItemsToBillOtherVisits.AllowUserToAddRows = false;
+            this.DgvItemsToBillOtherVisits.AllowUserToDeleteRows = false;
+            this.DgvItemsToBillOtherVisits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvItemsToBillOtherVisits.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvItemsToBillOtherVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvItemsToBillOtherVisits.Location = new System.Drawing.Point(540, 41);
+            this.DgvItemsToBillOtherVisits.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvItemsToBillOtherVisits.MultiSelect = false;
+            this.DgvItemsToBillOtherVisits.Name = "DgvItemsToBillOtherVisits";
+            this.DgvItemsToBillOtherVisits.ReadOnly = true;
+            this.DgvItemsToBillOtherVisits.RowHeadersVisible = false;
+            this.DgvItemsToBillOtherVisits.RowHeadersWidth = 51;
+            this.DgvItemsToBillOtherVisits.RowTemplate.Height = 24;
+            this.DgvItemsToBillOtherVisits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvItemsToBillOtherVisits.Size = new System.Drawing.Size(543, 219);
+            this.DgvItemsToBillOtherVisits.TabIndex = 9;
+            this.DgvItemsToBillOtherVisits.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
+            this.DgvItemsToBillOtherVisits.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
+            this.DgvItemsToBillOtherVisits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
+            // 
+            // DgvItemsToBill
+            // 
+            this.DgvItemsToBill.AllowUserToAddRows = false;
+            this.DgvItemsToBill.AllowUserToDeleteRows = false;
+            this.DgvItemsToBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvItemsToBill.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DgvItemsToBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvItemsToBill.Location = new System.Drawing.Point(0, 41);
+            this.DgvItemsToBill.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvItemsToBill.MultiSelect = false;
+            this.DgvItemsToBill.Name = "DgvItemsToBill";
+            this.DgvItemsToBill.ReadOnly = true;
+            this.DgvItemsToBill.RowHeadersVisible = false;
+            this.DgvItemsToBill.RowHeadersWidth = 51;
+            this.DgvItemsToBill.RowTemplate.Height = 24;
+            this.DgvItemsToBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvItemsToBill.Size = new System.Drawing.Size(532, 219);
+            this.DgvItemsToBill.TabIndex = 9;
+            this.DgvItemsToBill.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvItemsToBill_CellEndEdit);
+            this.DgvItemsToBill.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.DgvItemsToBill_CellValidating);
+            this.DgvItemsToBill.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIdentificationCard_KeyPress);
+            // 
+            // LblPatientNameInvoice
+            // 
+            this.LblPatientNameInvoice.AutoSize = true;
+            this.LblPatientNameInvoice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPatientNameInvoice.Location = new System.Drawing.Point(7, 6);
+            this.LblPatientNameInvoice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPatientNameInvoice.Name = "LblPatientNameInvoice";
+            this.LblPatientNameInvoice.Size = new System.Drawing.Size(204, 24);
+            this.LblPatientNameInvoice.TabIndex = 34;
+            this.LblPatientNameInvoice.Text = "Nombre del paciente";
+            // 
+            // BtnGeneralInfo
+            // 
+            this.BtnGeneralInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGeneralInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGeneralInfo.Location = new System.Drawing.Point(0, 0);
+            this.BtnGeneralInfo.Name = "BtnGeneralInfo";
+            this.BtnGeneralInfo.Size = new System.Drawing.Size(185, 62);
+            this.BtnGeneralInfo.TabIndex = 0;
+            this.BtnGeneralInfo.Text = "Datos generales";
+            this.BtnGeneralInfo.UseVisualStyleBackColor = true;
+            this.BtnGeneralInfo.Click += new System.EventHandler(this.BtnGeneralInfo_Click);
+            // 
+            // BtnInitialOdontogram
+            // 
+            this.BtnInitialOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInitialOdontogram.Location = new System.Drawing.Point(0, 62);
+            this.BtnInitialOdontogram.Name = "BtnInitialOdontogram";
+            this.BtnInitialOdontogram.Size = new System.Drawing.Size(185, 62);
+            this.BtnInitialOdontogram.TabIndex = 1;
+            this.BtnInitialOdontogram.Text = "Odontograma inicial";
+            this.BtnInitialOdontogram.UseVisualStyleBackColor = true;
+            this.BtnInitialOdontogram.Click += new System.EventHandler(this.BtnInitialOdontogram_Click);
+            // 
+            // BtnTreatmentOdontogram
+            // 
+            this.BtnTreatmentOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnTreatmentOdontogram.Location = new System.Drawing.Point(0, 124);
+            this.BtnTreatmentOdontogram.Name = "BtnTreatmentOdontogram";
+            this.BtnTreatmentOdontogram.Size = new System.Drawing.Size(185, 62);
+            this.BtnTreatmentOdontogram.TabIndex = 2;
+            this.BtnTreatmentOdontogram.Text = "Odontograma tratamiento";
+            this.BtnTreatmentOdontogram.UseVisualStyleBackColor = true;
+            this.BtnTreatmentOdontogram.Click += new System.EventHandler(this.BtnTreatmentOdontogram_Click);
+            // 
+            // BtnActivitiesPerformed
+            // 
+            this.BtnActivitiesPerformed.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnActivitiesPerformed.Location = new System.Drawing.Point(0, 186);
+            this.BtnActivitiesPerformed.Name = "BtnActivitiesPerformed";
+            this.BtnActivitiesPerformed.Size = new System.Drawing.Size(185, 62);
+            this.BtnActivitiesPerformed.TabIndex = 3;
+            this.BtnActivitiesPerformed.Text = "Actividades realizadas";
+            this.BtnActivitiesPerformed.UseVisualStyleBackColor = true;
+            this.BtnActivitiesPerformed.Click += new System.EventHandler(this.BtnActivitiesPerformed_Click);
+            // 
+            // BtnInvoice
+            // 
+            this.BtnInvoice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnInvoice.Location = new System.Drawing.Point(0, 248);
+            this.BtnInvoice.Name = "BtnInvoice";
+            this.BtnInvoice.Size = new System.Drawing.Size(185, 62);
+            this.BtnInvoice.TabIndex = 4;
+            this.BtnInvoice.Text = "Facturación";
+            this.BtnInvoice.UseVisualStyleBackColor = true;
+            this.BtnInvoice.Click += new System.EventHandler(this.BtnInvoice_Click);
+            // 
+            // BtnEndVisit
+            // 
+            this.BtnEndVisit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEndVisit.Location = new System.Drawing.Point(0, 310);
+            this.BtnEndVisit.Name = "BtnEndVisit";
+            this.BtnEndVisit.Size = new System.Drawing.Size(185, 62);
+            this.BtnEndVisit.TabIndex = 5;
+            this.BtnEndVisit.Text = "Finalizar visita";
+            this.BtnEndVisit.UseVisualStyleBackColor = true;
+            this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
+            // 
+            // BtnModifyTreatment
+            // 
+            this.BtnModifyTreatment.Location = new System.Drawing.Point(267, 3);
+            this.BtnModifyTreatment.Name = "BtnModifyTreatment";
+            this.BtnModifyTreatment.Size = new System.Drawing.Size(126, 40);
+            this.BtnModifyTreatment.TabIndex = 1;
+            this.BtnModifyTreatment.Text = "Modificar";
+            this.BtnModifyTreatment.UseVisualStyleBackColor = true;
+            this.BtnModifyTreatment.Click += new System.EventHandler(this.BtnModifyTreatment_Click);
             // 
             // FrmVisitManagement
             // 
@@ -9129,40 +9144,24 @@
             this.TabInitialOdontogram.PerformLayout();
             this.PnlTeeth.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.TabTreatmentOdontogram.ResumeLayout(false);
-            this.TabTreatmentOdontogram.PerformLayout();
-            this.TabActivitiesPermormed.ResumeLayout(false);
-            this.TabActivitiesPermormed.PerformLayout();
-            this.PnlActivitiesPerformed.ResumeLayout(false);
-            this.PnlActivitiesPerformed.PerformLayout();
-            this.PnlPlateRegistration.ResumeLayout(false);
-            this.PnlPlateRegistration.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).EndInit();
-            this.TabInvoice.ResumeLayout(false);
-            this.TabInvoice.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvPaymentList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.TabTreatmentOdontogram.ResumeLayout(false);
+            this.TabTreatmentOdontogram.PerformLayout();
             this.PnlTreatmentOdontogramTeeth.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
@@ -9181,6 +9180,22 @@
             this.panel27.PerformLayout();
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
+            this.TabActivitiesPermormed.ResumeLayout(false);
+            this.TabActivitiesPermormed.PerformLayout();
+            this.PnlActivitiesPerformed.ResumeLayout(false);
+            this.PnlActivitiesPerformed.PerformLayout();
+            this.PnlPlateRegistration.ResumeLayout(false);
+            this.PnlPlateRegistration.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesList)).EndInit();
+            this.TabInvoice.ResumeLayout(false);
+            this.TabInvoice.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPaymentList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -9632,8 +9647,8 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel PnlTreatmentOdontogramTeeth;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnSaveTreatment;
+        private System.Windows.Forms.Button BtnCancelTreatment;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
@@ -9961,5 +9976,6 @@
         private System.Windows.Forms.Label LblOdontogramId;
         private System.Windows.Forms.Label LblTotalCavities;
         private System.Windows.Forms.Label LblTreatmentOdontogramId;
+        private System.Windows.Forms.Button BtnModifyTreatment;
     }
 }
