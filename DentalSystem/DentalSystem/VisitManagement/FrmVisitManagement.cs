@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
@@ -18,7 +17,6 @@ using DentalSystem.Entities.Requests.PlateRegistration;
 using DentalSystem.Entities.Requests.TreatmentOdontogram;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.InvoiceDetail;
-using DentalSystem.Entities.Results.Odontogram;
 using DentalSystem.Entities.Results.PlateRegistration;
 using DentalSystem.Enum;
 using DentalSystem.Odontogram;
@@ -1347,7 +1345,9 @@ namespace DentalSystem.VisitManagement
                 {
                     BtnSaveOdontogram.Visible = false;
                     LblTotalCavities.Text = $"Total de caries: {odontogramResult.Odontogram.CavitiesQuantity}";
-                    var buttonList = JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult.Odontogram.Information);
+                    var buttonList =
+                        JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult.Odontogram
+                            .Information);
                     SetInitialOdontogramButtonColors(buttonList);
 
                     SetInitialOdontogramButtonsStatus(false);
@@ -1374,22 +1374,29 @@ namespace DentalSystem.VisitManagement
                 };
 
                 Cursor.Current = Cursors.WaitCursor;
-                var treatmentOdontogramResult = _treatmentOdontogramService.GetTreatmentOdontogramByOdontogramId(getTreatmentOdontogramByOdontogramIdRequest);
+                var treatmentOdontogramResult =
+                    _treatmentOdontogramService.GetTreatmentOdontogramByOdontogramId(
+                        getTreatmentOdontogramByOdontogramIdRequest);
 
-                LblTreatmentOdontogramId.Text = treatmentOdontogramResult.TreatmentOdontogram.TreatmentOdontogramId.ToString();
+                LblTreatmentOdontogramId.Text =
+                    treatmentOdontogramResult.TreatmentOdontogram.TreatmentOdontogramId.ToString();
 
                 if (treatmentOdontogramResult.TreatmentOdontogram.HasInformation)
                 {
-                    var buttonList = JsonConvert.DeserializeObject<List<TreatmentOdontogramButtonsModel>>(treatmentOdontogramResult.TreatmentOdontogram.Information);
+                    var buttonList =
+                        JsonConvert.DeserializeObject<List<TreatmentOdontogramButtonsModel>>(treatmentOdontogramResult
+                            .TreatmentOdontogram.Information);
                     SetTreatmentOdontogramButtonColors(buttonList);
                 }
                 else
                 {
-                    SetTreatmentOdontogramButtonColors(isEmpty:true);
+                    SetTreatmentOdontogramButtonColors(isEmpty: true);
                 }
 
                 SetTreatmentOdontogramButtonsStatus(false);
 
+                BtnSaveTreatment.Visible = false;
+                BtnModifyTreatment.Visible = true;
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -1400,7 +1407,8 @@ namespace DentalSystem.VisitManagement
             }
         }
 
-        private void SetInitialOdontogramButtonColors(IReadOnlyCollection<OdontogramButtonsModel> buttonList = null, bool isEmpty = false)
+        private void SetInitialOdontogramButtonColors(IReadOnlyCollection<OdontogramButtonsModel> buttonList = null,
+            bool isEmpty = false)
         {
             foreach (var control in PnlTeeth.Controls)
             {
@@ -1418,14 +1426,15 @@ namespace DentalSystem.VisitManagement
             }
         }
 
-        private void SetTreatmentOdontogramButtonColors(IReadOnlyCollection<TreatmentOdontogramButtonsModel> buttonList = null, bool isEmpty = false)
+        private void SetTreatmentOdontogramButtonColors(
+            IReadOnlyCollection<TreatmentOdontogramButtonsModel> buttonList = null, bool isEmpty = false)
         {
             foreach (var control in PnlTreatmentOdontogramTeeth.Controls)
             {
                 if (!(control is Button button)) continue;
                 if (!isEmpty)
                 {
-                    var id = Convert.ToInt32(button.Name.Split('_')[1]);
+                    var id = Convert.ToInt32(button.Name.Split('_')[2]);
                     var btn = buttonList.FirstOrDefault(w => w.Id == id);
 
                     if (btn == null) continue;
@@ -1442,6 +1451,10 @@ namespace DentalSystem.VisitManagement
 
                         case 3:
                             button.BackColor = Color.DeepSkyBlue;
+                            break;
+
+                        case 0:
+                            button.BackColor = Color.White;
                             break;
                     }
                 }
@@ -1464,7 +1477,8 @@ namespace DentalSystem.VisitManagement
                     return;
                 }
 
-                var result = MessageBox.Show("Si crea un nuevo odontograma se perderán los datos del anterior", "Información",
+                var result = MessageBox.Show("Si crea un nuevo odontograma se perderán los datos del anterior",
+                    "Información",
                     MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Information);
 
@@ -1503,6 +1517,7 @@ namespace DentalSystem.VisitManagement
                     MessageBoxIcon.Error);
             }
         }
+
         private void SetOdontogramBtnNames()
         {
             var initialOdontogramControls = PnlTeeth.Controls;
@@ -1513,9 +1528,9 @@ namespace DentalSystem.VisitManagement
             {
                 if (!(initialOdontogramControls[i] is Button buttonI)) continue;
                 var buttonT = treatmentOdontogramControls[i];
-
+                var buttonITeethNumber = Convert.ToInt32(buttonI.Name.Split('_')[1]);
                 buttonI.Name = $"{buttonI.Name}_{counter}";
-                buttonT.Name = $"{buttonT.Name}_{counter}";
+                buttonT.Name = $"{buttonT.Name}_{buttonITeethNumber}_{counter}";
                 counter++;
             }
         }
@@ -1523,7 +1538,6 @@ namespace DentalSystem.VisitManagement
         private void BtnCancelTreatment_Click(object sender, EventArgs e)
         {
             GetTreatmentOdontogramInformation();
-            SetTreatmentOdontogramButtonsStatus(false);
         }
 
         private void BtnModifyTreatment_Click(object sender, EventArgs e)
@@ -1569,9 +1583,9 @@ namespace DentalSystem.VisitManagement
                         ButtonNumber = buttonCount,
                         ButtonName = button.Name,
                         HasCavities = button.BackColor == Color.Red,
-                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities : 
-                            button.BackColor == Color.Blue ? (int)TeethStatus.WasCured:
-                            button.BackColor == Color.DeepSkyBlue ? (int)TeethStatus.WasExtracted:
+                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities :
+                            button.BackColor == Color.Blue ? (int)TeethStatus.WasCured :
+                            button.BackColor == Color.DeepSkyBlue ? (int)TeethStatus.WasExtracted :
                             0
                     });
 
@@ -1586,7 +1600,8 @@ namespace DentalSystem.VisitManagement
                 {
                     TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text),
                     Information = jsonButtonList,
-                    CavitiesQuantity = cavitiesQuantity
+                    CavitiesQuantity = cavitiesQuantity,
+                    Mapper = _iMapper
                 };
 
                 _treatmentOdontogramService.UpdateTreatmentOdontogram(updateTreatmentOdontogramRequest);
@@ -1602,6 +1617,30 @@ namespace DentalSystem.VisitManagement
                 MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void CuradoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            button.BackColor = Color.Blue;
+        }
+
+        private void ExtraídoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            button.BackColor = Color.DeepSkyBlue;
+        }
+
+        private void CariesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            button.BackColor = Color.Red;
+        }
+
+        private void NingunaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            button.BackColor = Color.White;
         }
     }
 }

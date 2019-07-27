@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TclVisitManagement = new System.Windows.Forms.TabControl();
             this.TabGeneralInfo = new System.Windows.Forms.TabPage();
             this.PnlInformation = new System.Windows.Forms.Panel();
@@ -420,6 +421,7 @@
             this.PnlTreatmentOdontogramTeeth = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.BtnSaveTreatment = new System.Windows.Forms.Button();
+            this.BtnModifyTreatment = new System.Windows.Forms.Button();
             this.BtnCancelTreatment = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -802,7 +804,11 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.BtnModifyTreatment = new System.Windows.Forms.Button();
+            this.CmsTeethStatus = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.curadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.extraídoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cariesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ningunaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -844,6 +850,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).BeginInit();
+            this.CmsTeethStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // TclVisitManagement
@@ -5253,7 +5260,7 @@
             this.panel9.Controls.Add(this.BtnCancelTreatment);
             this.panel9.Location = new System.Drawing.Point(5, 5);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(433, 51);
+            this.panel9.Size = new System.Drawing.Size(404, 51);
             this.panel9.TabIndex = 37;
             // 
             // BtnSaveTreatment
@@ -5266,6 +5273,16 @@
             this.BtnSaveTreatment.UseVisualStyleBackColor = true;
             this.BtnSaveTreatment.Visible = false;
             this.BtnSaveTreatment.Click += new System.EventHandler(this.BtnSaveTreatment_Click);
+            // 
+            // BtnModifyTreatment
+            // 
+            this.BtnModifyTreatment.Location = new System.Drawing.Point(267, 3);
+            this.BtnModifyTreatment.Name = "BtnModifyTreatment";
+            this.BtnModifyTreatment.Size = new System.Drawing.Size(126, 40);
+            this.BtnModifyTreatment.TabIndex = 1;
+            this.BtnModifyTreatment.Text = "Modificar";
+            this.BtnModifyTreatment.UseVisualStyleBackColor = true;
+            this.BtnModifyTreatment.Click += new System.EventHandler(this.BtnModifyTreatment_Click);
             // 
             // BtnCancelTreatment
             // 
@@ -5312,6 +5329,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.ContextMenuStrip = this.CmsTeethStatus;
             this.button3.Location = new System.Drawing.Point(1046, 246);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 15);
@@ -5321,6 +5339,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.ContextMenuStrip = this.CmsTeethStatus;
             this.button4.Location = new System.Drawing.Point(1046, 143);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(30, 15);
@@ -5330,6 +5349,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.ContextMenuStrip = this.CmsTeethStatus;
             this.button5.Location = new System.Drawing.Point(468, 484);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(30, 15);
@@ -5339,6 +5359,7 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.ContextMenuStrip = this.CmsTeethStatus;
             this.button6.Location = new System.Drawing.Point(468, 246);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(30, 15);
@@ -5348,6 +5369,7 @@
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.ContextMenuStrip = this.CmsTeethStatus;
             this.button7.Location = new System.Drawing.Point(468, 381);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(30, 15);
@@ -5357,6 +5379,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.ContextMenuStrip = this.CmsTeethStatus;
             this.button8.Location = new System.Drawing.Point(468, 143);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 15);
@@ -5366,6 +5389,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.ContextMenuStrip = this.CmsTeethStatus;
             this.button9.Location = new System.Drawing.Point(790, 484);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(30, 15);
@@ -5375,6 +5399,7 @@
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.ContextMenuStrip = this.CmsTeethStatus;
             this.button10.Location = new System.Drawing.Point(790, 246);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(30, 15);
@@ -5384,6 +5409,7 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.White;
+            this.button11.ContextMenuStrip = this.CmsTeethStatus;
             this.button11.Location = new System.Drawing.Point(790, 381);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(30, 15);
@@ -5393,6 +5419,7 @@
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.White;
+            this.button12.ContextMenuStrip = this.CmsTeethStatus;
             this.button12.Location = new System.Drawing.Point(790, 143);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(30, 15);
@@ -5402,6 +5429,7 @@
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.White;
+            this.button13.ContextMenuStrip = this.CmsTeethStatus;
             this.button13.Location = new System.Drawing.Point(212, 484);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(30, 15);
@@ -5411,6 +5439,7 @@
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.White;
+            this.button14.ContextMenuStrip = this.CmsTeethStatus;
             this.button14.Location = new System.Drawing.Point(212, 246);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(30, 15);
@@ -5420,6 +5449,7 @@
             // button15
             // 
             this.button15.BackColor = System.Drawing.Color.White;
+            this.button15.ContextMenuStrip = this.CmsTeethStatus;
             this.button15.Location = new System.Drawing.Point(212, 381);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(30, 15);
@@ -5429,6 +5459,7 @@
             // button16
             // 
             this.button16.BackColor = System.Drawing.Color.White;
+            this.button16.ContextMenuStrip = this.CmsTeethStatus;
             this.button16.Location = new System.Drawing.Point(212, 143);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(30, 15);
@@ -5438,6 +5469,7 @@
             // button17
             // 
             this.button17.BackColor = System.Drawing.Color.White;
+            this.button17.ContextMenuStrip = this.CmsTeethStatus;
             this.button17.Location = new System.Drawing.Point(918, 246);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(30, 15);
@@ -5447,6 +5479,7 @@
             // button18
             // 
             this.button18.BackColor = System.Drawing.Color.White;
+            this.button18.ContextMenuStrip = this.CmsTeethStatus;
             this.button18.Location = new System.Drawing.Point(918, 143);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(30, 15);
@@ -5456,6 +5489,7 @@
             // button19
             // 
             this.button19.BackColor = System.Drawing.Color.White;
+            this.button19.ContextMenuStrip = this.CmsTeethStatus;
             this.button19.Location = new System.Drawing.Point(340, 484);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(30, 15);
@@ -5465,6 +5499,7 @@
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.White;
+            this.button20.ContextMenuStrip = this.CmsTeethStatus;
             this.button20.Location = new System.Drawing.Point(340, 246);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(30, 15);
@@ -5474,6 +5509,7 @@
             // button21
             // 
             this.button21.BackColor = System.Drawing.Color.White;
+            this.button21.ContextMenuStrip = this.CmsTeethStatus;
             this.button21.Location = new System.Drawing.Point(662, 484);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(30, 15);
@@ -5483,6 +5519,7 @@
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.White;
+            this.button22.ContextMenuStrip = this.CmsTeethStatus;
             this.button22.Location = new System.Drawing.Point(662, 246);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(30, 15);
@@ -5492,6 +5529,7 @@
             // button23
             // 
             this.button23.BackColor = System.Drawing.Color.White;
+            this.button23.ContextMenuStrip = this.CmsTeethStatus;
             this.button23.Location = new System.Drawing.Point(340, 381);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(30, 15);
@@ -5501,6 +5539,7 @@
             // button24
             // 
             this.button24.BackColor = System.Drawing.Color.White;
+            this.button24.ContextMenuStrip = this.CmsTeethStatus;
             this.button24.Location = new System.Drawing.Point(340, 143);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(30, 15);
@@ -5510,6 +5549,7 @@
             // button25
             // 
             this.button25.BackColor = System.Drawing.Color.White;
+            this.button25.ContextMenuStrip = this.CmsTeethStatus;
             this.button25.Location = new System.Drawing.Point(84, 246);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(30, 15);
@@ -5519,6 +5559,7 @@
             // button26
             // 
             this.button26.BackColor = System.Drawing.Color.White;
+            this.button26.ContextMenuStrip = this.CmsTeethStatus;
             this.button26.Location = new System.Drawing.Point(662, 381);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(30, 15);
@@ -5528,6 +5569,7 @@
             // button27
             // 
             this.button27.BackColor = System.Drawing.Color.White;
+            this.button27.ContextMenuStrip = this.CmsTeethStatus;
             this.button27.Location = new System.Drawing.Point(662, 143);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(30, 15);
@@ -5537,6 +5579,7 @@
             // button28
             // 
             this.button28.BackColor = System.Drawing.Color.White;
+            this.button28.ContextMenuStrip = this.CmsTeethStatus;
             this.button28.Location = new System.Drawing.Point(982, 246);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(30, 15);
@@ -5546,6 +5589,7 @@
             // button29
             // 
             this.button29.BackColor = System.Drawing.Color.White;
+            this.button29.ContextMenuStrip = this.CmsTeethStatus;
             this.button29.Location = new System.Drawing.Point(84, 143);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(30, 15);
@@ -5555,6 +5599,7 @@
             // button30
             // 
             this.button30.BackColor = System.Drawing.Color.White;
+            this.button30.ContextMenuStrip = this.CmsTeethStatus;
             this.button30.Location = new System.Drawing.Point(404, 484);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(30, 15);
@@ -5564,6 +5609,7 @@
             // button31
             // 
             this.button31.BackColor = System.Drawing.Color.White;
+            this.button31.ContextMenuStrip = this.CmsTeethStatus;
             this.button31.Location = new System.Drawing.Point(404, 246);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(30, 15);
@@ -5573,6 +5619,7 @@
             // button32
             // 
             this.button32.BackColor = System.Drawing.Color.White;
+            this.button32.ContextMenuStrip = this.CmsTeethStatus;
             this.button32.Location = new System.Drawing.Point(982, 143);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(30, 15);
@@ -5582,6 +5629,7 @@
             // button33
             // 
             this.button33.BackColor = System.Drawing.Color.White;
+            this.button33.ContextMenuStrip = this.CmsTeethStatus;
             this.button33.Location = new System.Drawing.Point(726, 484);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(30, 15);
@@ -5591,6 +5639,7 @@
             // button34
             // 
             this.button34.BackColor = System.Drawing.Color.White;
+            this.button34.ContextMenuStrip = this.CmsTeethStatus;
             this.button34.Location = new System.Drawing.Point(726, 246);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(30, 15);
@@ -5600,6 +5649,7 @@
             // button35
             // 
             this.button35.BackColor = System.Drawing.Color.White;
+            this.button35.ContextMenuStrip = this.CmsTeethStatus;
             this.button35.Location = new System.Drawing.Point(404, 381);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(30, 15);
@@ -5609,6 +5659,7 @@
             // button36
             // 
             this.button36.BackColor = System.Drawing.Color.White;
+            this.button36.ContextMenuStrip = this.CmsTeethStatus;
             this.button36.Location = new System.Drawing.Point(404, 143);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(30, 15);
@@ -5618,6 +5669,7 @@
             // button37
             // 
             this.button37.BackColor = System.Drawing.Color.White;
+            this.button37.ContextMenuStrip = this.CmsTeethStatus;
             this.button37.Location = new System.Drawing.Point(148, 246);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(30, 15);
@@ -5627,6 +5679,7 @@
             // button38
             // 
             this.button38.BackColor = System.Drawing.Color.White;
+            this.button38.ContextMenuStrip = this.CmsTeethStatus;
             this.button38.Location = new System.Drawing.Point(726, 381);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(30, 15);
@@ -5636,6 +5689,7 @@
             // button39
             // 
             this.button39.BackColor = System.Drawing.Color.White;
+            this.button39.ContextMenuStrip = this.CmsTeethStatus;
             this.button39.Location = new System.Drawing.Point(726, 143);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(30, 15);
@@ -5645,6 +5699,7 @@
             // button40
             // 
             this.button40.BackColor = System.Drawing.Color.White;
+            this.button40.ContextMenuStrip = this.CmsTeethStatus;
             this.button40.Location = new System.Drawing.Point(854, 484);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(30, 15);
@@ -5654,6 +5709,7 @@
             // button41
             // 
             this.button41.BackColor = System.Drawing.Color.White;
+            this.button41.ContextMenuStrip = this.CmsTeethStatus;
             this.button41.Location = new System.Drawing.Point(854, 246);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(30, 15);
@@ -5663,6 +5719,7 @@
             // button42
             // 
             this.button42.BackColor = System.Drawing.Color.White;
+            this.button42.ContextMenuStrip = this.CmsTeethStatus;
             this.button42.Location = new System.Drawing.Point(148, 143);
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(30, 15);
@@ -5672,6 +5729,7 @@
             // button43
             // 
             this.button43.BackColor = System.Drawing.Color.White;
+            this.button43.ContextMenuStrip = this.CmsTeethStatus;
             this.button43.Location = new System.Drawing.Point(276, 484);
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(30, 15);
@@ -5681,6 +5739,7 @@
             // button44
             // 
             this.button44.BackColor = System.Drawing.Color.White;
+            this.button44.ContextMenuStrip = this.CmsTeethStatus;
             this.button44.Location = new System.Drawing.Point(276, 246);
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(30, 15);
@@ -5690,6 +5749,7 @@
             // button45
             // 
             this.button45.BackColor = System.Drawing.Color.White;
+            this.button45.ContextMenuStrip = this.CmsTeethStatus;
             this.button45.Location = new System.Drawing.Point(854, 381);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(30, 15);
@@ -5699,6 +5759,7 @@
             // button46
             // 
             this.button46.BackColor = System.Drawing.Color.White;
+            this.button46.ContextMenuStrip = this.CmsTeethStatus;
             this.button46.Location = new System.Drawing.Point(854, 143);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(30, 15);
@@ -5708,6 +5769,7 @@
             // button47
             // 
             this.button47.BackColor = System.Drawing.Color.White;
+            this.button47.ContextMenuStrip = this.CmsTeethStatus;
             this.button47.Location = new System.Drawing.Point(598, 484);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(30, 15);
@@ -5717,6 +5779,7 @@
             // button48
             // 
             this.button48.BackColor = System.Drawing.Color.White;
+            this.button48.ContextMenuStrip = this.CmsTeethStatus;
             this.button48.Location = new System.Drawing.Point(598, 246);
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(30, 15);
@@ -5726,6 +5789,7 @@
             // button49
             // 
             this.button49.BackColor = System.Drawing.Color.White;
+            this.button49.ContextMenuStrip = this.CmsTeethStatus;
             this.button49.Location = new System.Drawing.Point(276, 381);
             this.button49.Name = "button49";
             this.button49.Size = new System.Drawing.Size(30, 15);
@@ -5735,6 +5799,7 @@
             // button50
             // 
             this.button50.BackColor = System.Drawing.Color.White;
+            this.button50.ContextMenuStrip = this.CmsTeethStatus;
             this.button50.Location = new System.Drawing.Point(276, 143);
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(30, 15);
@@ -5744,6 +5809,7 @@
             // button51
             // 
             this.button51.BackColor = System.Drawing.Color.White;
+            this.button51.ContextMenuStrip = this.CmsTeethStatus;
             this.button51.Location = new System.Drawing.Point(20, 246);
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(30, 15);
@@ -5753,6 +5819,7 @@
             // button52
             // 
             this.button52.BackColor = System.Drawing.Color.White;
+            this.button52.ContextMenuStrip = this.CmsTeethStatus;
             this.button52.Location = new System.Drawing.Point(598, 381);
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(30, 15);
@@ -5762,6 +5829,7 @@
             // button53
             // 
             this.button53.BackColor = System.Drawing.Color.White;
+            this.button53.ContextMenuStrip = this.CmsTeethStatus;
             this.button53.Location = new System.Drawing.Point(598, 143);
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(30, 15);
@@ -5771,6 +5839,7 @@
             // button54
             // 
             this.button54.BackColor = System.Drawing.Color.White;
+            this.button54.ContextMenuStrip = this.CmsTeethStatus;
             this.button54.Location = new System.Drawing.Point(1077, 215);
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(15, 30);
@@ -5780,6 +5849,7 @@
             // button55
             // 
             this.button55.BackColor = System.Drawing.Color.White;
+            this.button55.ContextMenuStrip = this.CmsTeethStatus;
             this.button55.Location = new System.Drawing.Point(20, 143);
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(30, 15);
@@ -5789,6 +5859,7 @@
             // button56
             // 
             this.button56.BackColor = System.Drawing.Color.White;
+            this.button56.ContextMenuStrip = this.CmsTeethStatus;
             this.button56.Location = new System.Drawing.Point(499, 453);
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(15, 30);
@@ -5798,6 +5869,7 @@
             // button57
             // 
             this.button57.BackColor = System.Drawing.Color.White;
+            this.button57.ContextMenuStrip = this.CmsTeethStatus;
             this.button57.Location = new System.Drawing.Point(499, 215);
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(15, 30);
@@ -5807,6 +5879,7 @@
             // button58
             // 
             this.button58.BackColor = System.Drawing.Color.White;
+            this.button58.ContextMenuStrip = this.CmsTeethStatus;
             this.button58.Location = new System.Drawing.Point(1077, 112);
             this.button58.Name = "button58";
             this.button58.Size = new System.Drawing.Size(15, 30);
@@ -5816,6 +5889,7 @@
             // button59
             // 
             this.button59.BackColor = System.Drawing.Color.White;
+            this.button59.ContextMenuStrip = this.CmsTeethStatus;
             this.button59.Location = new System.Drawing.Point(821, 453);
             this.button59.Name = "button59";
             this.button59.Size = new System.Drawing.Size(15, 30);
@@ -5825,6 +5899,7 @@
             // button60
             // 
             this.button60.BackColor = System.Drawing.Color.White;
+            this.button60.ContextMenuStrip = this.CmsTeethStatus;
             this.button60.Location = new System.Drawing.Point(821, 215);
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(15, 30);
@@ -5834,6 +5909,7 @@
             // button61
             // 
             this.button61.BackColor = System.Drawing.Color.White;
+            this.button61.ContextMenuStrip = this.CmsTeethStatus;
             this.button61.Location = new System.Drawing.Point(499, 350);
             this.button61.Name = "button61";
             this.button61.Size = new System.Drawing.Size(15, 30);
@@ -5843,6 +5919,7 @@
             // button62
             // 
             this.button62.BackColor = System.Drawing.Color.White;
+            this.button62.ContextMenuStrip = this.CmsTeethStatus;
             this.button62.Location = new System.Drawing.Point(499, 112);
             this.button62.Name = "button62";
             this.button62.Size = new System.Drawing.Size(15, 30);
@@ -5852,6 +5929,7 @@
             // button63
             // 
             this.button63.BackColor = System.Drawing.Color.White;
+            this.button63.ContextMenuStrip = this.CmsTeethStatus;
             this.button63.Location = new System.Drawing.Point(243, 453);
             this.button63.Name = "button63";
             this.button63.Size = new System.Drawing.Size(15, 30);
@@ -5861,6 +5939,7 @@
             // button64
             // 
             this.button64.BackColor = System.Drawing.Color.White;
+            this.button64.ContextMenuStrip = this.CmsTeethStatus;
             this.button64.Location = new System.Drawing.Point(243, 215);
             this.button64.Name = "button64";
             this.button64.Size = new System.Drawing.Size(15, 30);
@@ -5870,6 +5949,7 @@
             // button65
             // 
             this.button65.BackColor = System.Drawing.Color.White;
+            this.button65.ContextMenuStrip = this.CmsTeethStatus;
             this.button65.Location = new System.Drawing.Point(821, 350);
             this.button65.Name = "button65";
             this.button65.Size = new System.Drawing.Size(15, 30);
@@ -5879,6 +5959,7 @@
             // button66
             // 
             this.button66.BackColor = System.Drawing.Color.White;
+            this.button66.ContextMenuStrip = this.CmsTeethStatus;
             this.button66.Location = new System.Drawing.Point(821, 112);
             this.button66.Name = "button66";
             this.button66.Size = new System.Drawing.Size(15, 30);
@@ -5888,6 +5969,7 @@
             // button67
             // 
             this.button67.BackColor = System.Drawing.Color.White;
+            this.button67.ContextMenuStrip = this.CmsTeethStatus;
             this.button67.Location = new System.Drawing.Point(949, 215);
             this.button67.Name = "button67";
             this.button67.Size = new System.Drawing.Size(15, 30);
@@ -5897,6 +5979,7 @@
             // button68
             // 
             this.button68.BackColor = System.Drawing.Color.White;
+            this.button68.ContextMenuStrip = this.CmsTeethStatus;
             this.button68.Location = new System.Drawing.Point(243, 350);
             this.button68.Name = "button68";
             this.button68.Size = new System.Drawing.Size(15, 30);
@@ -5906,6 +5989,7 @@
             // button69
             // 
             this.button69.BackColor = System.Drawing.Color.White;
+            this.button69.ContextMenuStrip = this.CmsTeethStatus;
             this.button69.Location = new System.Drawing.Point(243, 112);
             this.button69.Name = "button69";
             this.button69.Size = new System.Drawing.Size(15, 30);
@@ -5915,6 +5999,7 @@
             // button70
             // 
             this.button70.BackColor = System.Drawing.Color.White;
+            this.button70.ContextMenuStrip = this.CmsTeethStatus;
             this.button70.Location = new System.Drawing.Point(371, 453);
             this.button70.Name = "button70";
             this.button70.Size = new System.Drawing.Size(15, 30);
@@ -5924,6 +6009,7 @@
             // button71
             // 
             this.button71.BackColor = System.Drawing.Color.White;
+            this.button71.ContextMenuStrip = this.CmsTeethStatus;
             this.button71.Location = new System.Drawing.Point(371, 215);
             this.button71.Name = "button71";
             this.button71.Size = new System.Drawing.Size(15, 30);
@@ -5933,6 +6019,7 @@
             // button72
             // 
             this.button72.BackColor = System.Drawing.Color.White;
+            this.button72.ContextMenuStrip = this.CmsTeethStatus;
             this.button72.Location = new System.Drawing.Point(949, 112);
             this.button72.Name = "button72";
             this.button72.Size = new System.Drawing.Size(15, 30);
@@ -5942,6 +6029,7 @@
             // button73
             // 
             this.button73.BackColor = System.Drawing.Color.White;
+            this.button73.ContextMenuStrip = this.CmsTeethStatus;
             this.button73.Location = new System.Drawing.Point(693, 453);
             this.button73.Name = "button73";
             this.button73.Size = new System.Drawing.Size(15, 30);
@@ -5951,6 +6039,7 @@
             // button74
             // 
             this.button74.BackColor = System.Drawing.Color.White;
+            this.button74.ContextMenuStrip = this.CmsTeethStatus;
             this.button74.Location = new System.Drawing.Point(693, 215);
             this.button74.Name = "button74";
             this.button74.Size = new System.Drawing.Size(15, 30);
@@ -5960,6 +6049,7 @@
             // button75
             // 
             this.button75.BackColor = System.Drawing.Color.White;
+            this.button75.ContextMenuStrip = this.CmsTeethStatus;
             this.button75.Location = new System.Drawing.Point(371, 350);
             this.button75.Name = "button75";
             this.button75.Size = new System.Drawing.Size(15, 30);
@@ -5969,6 +6059,7 @@
             // button76
             // 
             this.button76.BackColor = System.Drawing.Color.White;
+            this.button76.ContextMenuStrip = this.CmsTeethStatus;
             this.button76.Location = new System.Drawing.Point(371, 112);
             this.button76.Name = "button76";
             this.button76.Size = new System.Drawing.Size(15, 30);
@@ -5978,6 +6069,7 @@
             // button77
             // 
             this.button77.BackColor = System.Drawing.Color.White;
+            this.button77.ContextMenuStrip = this.CmsTeethStatus;
             this.button77.Location = new System.Drawing.Point(115, 215);
             this.button77.Name = "button77";
             this.button77.Size = new System.Drawing.Size(15, 30);
@@ -5987,6 +6079,7 @@
             // button78
             // 
             this.button78.BackColor = System.Drawing.Color.White;
+            this.button78.ContextMenuStrip = this.CmsTeethStatus;
             this.button78.Location = new System.Drawing.Point(693, 350);
             this.button78.Name = "button78";
             this.button78.Size = new System.Drawing.Size(15, 30);
@@ -5996,6 +6089,7 @@
             // button79
             // 
             this.button79.BackColor = System.Drawing.Color.White;
+            this.button79.ContextMenuStrip = this.CmsTeethStatus;
             this.button79.Location = new System.Drawing.Point(693, 112);
             this.button79.Name = "button79";
             this.button79.Size = new System.Drawing.Size(15, 30);
@@ -6005,6 +6099,7 @@
             // button80
             // 
             this.button80.BackColor = System.Drawing.Color.White;
+            this.button80.ContextMenuStrip = this.CmsTeethStatus;
             this.button80.Location = new System.Drawing.Point(1013, 215);
             this.button80.Name = "button80";
             this.button80.Size = new System.Drawing.Size(15, 30);
@@ -6014,6 +6109,7 @@
             // button81
             // 
             this.button81.BackColor = System.Drawing.Color.White;
+            this.button81.ContextMenuStrip = this.CmsTeethStatus;
             this.button81.Location = new System.Drawing.Point(115, 112);
             this.button81.Name = "button81";
             this.button81.Size = new System.Drawing.Size(15, 30);
@@ -6023,6 +6119,7 @@
             // button82
             // 
             this.button82.BackColor = System.Drawing.Color.White;
+            this.button82.ContextMenuStrip = this.CmsTeethStatus;
             this.button82.Location = new System.Drawing.Point(435, 453);
             this.button82.Name = "button82";
             this.button82.Size = new System.Drawing.Size(15, 30);
@@ -6032,6 +6129,7 @@
             // button83
             // 
             this.button83.BackColor = System.Drawing.Color.White;
+            this.button83.ContextMenuStrip = this.CmsTeethStatus;
             this.button83.Location = new System.Drawing.Point(435, 215);
             this.button83.Name = "button83";
             this.button83.Size = new System.Drawing.Size(15, 30);
@@ -6041,6 +6139,7 @@
             // button84
             // 
             this.button84.BackColor = System.Drawing.Color.White;
+            this.button84.ContextMenuStrip = this.CmsTeethStatus;
             this.button84.Location = new System.Drawing.Point(1013, 112);
             this.button84.Name = "button84";
             this.button84.Size = new System.Drawing.Size(15, 30);
@@ -6050,6 +6149,7 @@
             // button85
             // 
             this.button85.BackColor = System.Drawing.Color.White;
+            this.button85.ContextMenuStrip = this.CmsTeethStatus;
             this.button85.Location = new System.Drawing.Point(757, 453);
             this.button85.Name = "button85";
             this.button85.Size = new System.Drawing.Size(15, 30);
@@ -6059,6 +6159,7 @@
             // button86
             // 
             this.button86.BackColor = System.Drawing.Color.White;
+            this.button86.ContextMenuStrip = this.CmsTeethStatus;
             this.button86.Location = new System.Drawing.Point(757, 215);
             this.button86.Name = "button86";
             this.button86.Size = new System.Drawing.Size(15, 30);
@@ -6068,6 +6169,7 @@
             // button87
             // 
             this.button87.BackColor = System.Drawing.Color.White;
+            this.button87.ContextMenuStrip = this.CmsTeethStatus;
             this.button87.Location = new System.Drawing.Point(435, 350);
             this.button87.Name = "button87";
             this.button87.Size = new System.Drawing.Size(15, 30);
@@ -6077,6 +6179,7 @@
             // button88
             // 
             this.button88.BackColor = System.Drawing.Color.White;
+            this.button88.ContextMenuStrip = this.CmsTeethStatus;
             this.button88.Location = new System.Drawing.Point(435, 112);
             this.button88.Name = "button88";
             this.button88.Size = new System.Drawing.Size(15, 30);
@@ -6086,6 +6189,7 @@
             // button89
             // 
             this.button89.BackColor = System.Drawing.Color.White;
+            this.button89.ContextMenuStrip = this.CmsTeethStatus;
             this.button89.Location = new System.Drawing.Point(179, 215);
             this.button89.Name = "button89";
             this.button89.Size = new System.Drawing.Size(15, 30);
@@ -6095,6 +6199,7 @@
             // button90
             // 
             this.button90.BackColor = System.Drawing.Color.White;
+            this.button90.ContextMenuStrip = this.CmsTeethStatus;
             this.button90.Location = new System.Drawing.Point(757, 350);
             this.button90.Name = "button90";
             this.button90.Size = new System.Drawing.Size(15, 30);
@@ -6104,6 +6209,7 @@
             // button91
             // 
             this.button91.BackColor = System.Drawing.Color.White;
+            this.button91.ContextMenuStrip = this.CmsTeethStatus;
             this.button91.Location = new System.Drawing.Point(757, 112);
             this.button91.Name = "button91";
             this.button91.Size = new System.Drawing.Size(15, 30);
@@ -6113,6 +6219,7 @@
             // button92
             // 
             this.button92.BackColor = System.Drawing.Color.White;
+            this.button92.ContextMenuStrip = this.CmsTeethStatus;
             this.button92.Location = new System.Drawing.Point(885, 453);
             this.button92.Name = "button92";
             this.button92.Size = new System.Drawing.Size(15, 30);
@@ -6122,6 +6229,7 @@
             // button93
             // 
             this.button93.BackColor = System.Drawing.Color.White;
+            this.button93.ContextMenuStrip = this.CmsTeethStatus;
             this.button93.Location = new System.Drawing.Point(885, 215);
             this.button93.Name = "button93";
             this.button93.Size = new System.Drawing.Size(15, 30);
@@ -6131,6 +6239,7 @@
             // button94
             // 
             this.button94.BackColor = System.Drawing.Color.White;
+            this.button94.ContextMenuStrip = this.CmsTeethStatus;
             this.button94.Location = new System.Drawing.Point(179, 112);
             this.button94.Name = "button94";
             this.button94.Size = new System.Drawing.Size(15, 30);
@@ -6140,6 +6249,7 @@
             // button95
             // 
             this.button95.BackColor = System.Drawing.Color.White;
+            this.button95.ContextMenuStrip = this.CmsTeethStatus;
             this.button95.Location = new System.Drawing.Point(307, 453);
             this.button95.Name = "button95";
             this.button95.Size = new System.Drawing.Size(15, 30);
@@ -6149,6 +6259,7 @@
             // button96
             // 
             this.button96.BackColor = System.Drawing.Color.White;
+            this.button96.ContextMenuStrip = this.CmsTeethStatus;
             this.button96.Location = new System.Drawing.Point(885, 350);
             this.button96.Name = "button96";
             this.button96.Size = new System.Drawing.Size(15, 30);
@@ -6158,6 +6269,7 @@
             // button97
             // 
             this.button97.BackColor = System.Drawing.Color.White;
+            this.button97.ContextMenuStrip = this.CmsTeethStatus;
             this.button97.Location = new System.Drawing.Point(307, 215);
             this.button97.Name = "button97";
             this.button97.Size = new System.Drawing.Size(15, 30);
@@ -6167,6 +6279,7 @@
             // button98
             // 
             this.button98.BackColor = System.Drawing.Color.White;
+            this.button98.ContextMenuStrip = this.CmsTeethStatus;
             this.button98.Location = new System.Drawing.Point(885, 112);
             this.button98.Name = "button98";
             this.button98.Size = new System.Drawing.Size(15, 30);
@@ -6176,6 +6289,7 @@
             // button99
             // 
             this.button99.BackColor = System.Drawing.Color.White;
+            this.button99.ContextMenuStrip = this.CmsTeethStatus;
             this.button99.Location = new System.Drawing.Point(629, 453);
             this.button99.Name = "button99";
             this.button99.Size = new System.Drawing.Size(15, 30);
@@ -6185,6 +6299,7 @@
             // button100
             // 
             this.button100.BackColor = System.Drawing.Color.White;
+            this.button100.ContextMenuStrip = this.CmsTeethStatus;
             this.button100.Location = new System.Drawing.Point(629, 215);
             this.button100.Name = "button100";
             this.button100.Size = new System.Drawing.Size(15, 30);
@@ -6194,6 +6309,7 @@
             // button101
             // 
             this.button101.BackColor = System.Drawing.Color.White;
+            this.button101.ContextMenuStrip = this.CmsTeethStatus;
             this.button101.Location = new System.Drawing.Point(307, 350);
             this.button101.Name = "button101";
             this.button101.Size = new System.Drawing.Size(15, 30);
@@ -6203,6 +6319,7 @@
             // button102
             // 
             this.button102.BackColor = System.Drawing.Color.White;
+            this.button102.ContextMenuStrip = this.CmsTeethStatus;
             this.button102.Location = new System.Drawing.Point(307, 112);
             this.button102.Name = "button102";
             this.button102.Size = new System.Drawing.Size(15, 30);
@@ -6212,6 +6329,7 @@
             // button103
             // 
             this.button103.BackColor = System.Drawing.Color.White;
+            this.button103.ContextMenuStrip = this.CmsTeethStatus;
             this.button103.Location = new System.Drawing.Point(51, 215);
             this.button103.Name = "button103";
             this.button103.Size = new System.Drawing.Size(15, 30);
@@ -6221,6 +6339,7 @@
             // button104
             // 
             this.button104.BackColor = System.Drawing.Color.White;
+            this.button104.ContextMenuStrip = this.CmsTeethStatus;
             this.button104.Location = new System.Drawing.Point(629, 350);
             this.button104.Name = "button104";
             this.button104.Size = new System.Drawing.Size(15, 30);
@@ -6230,6 +6349,7 @@
             // button105
             // 
             this.button105.BackColor = System.Drawing.Color.White;
+            this.button105.ContextMenuStrip = this.CmsTeethStatus;
             this.button105.Location = new System.Drawing.Point(629, 112);
             this.button105.Name = "button105";
             this.button105.Size = new System.Drawing.Size(15, 30);
@@ -6239,6 +6359,7 @@
             // button106
             // 
             this.button106.BackColor = System.Drawing.Color.White;
+            this.button106.ContextMenuStrip = this.CmsTeethStatus;
             this.button106.Location = new System.Drawing.Point(1046, 215);
             this.button106.Name = "button106";
             this.button106.Size = new System.Drawing.Size(30, 30);
@@ -6248,6 +6369,7 @@
             // button107
             // 
             this.button107.BackColor = System.Drawing.Color.White;
+            this.button107.ContextMenuStrip = this.CmsTeethStatus;
             this.button107.Location = new System.Drawing.Point(51, 112);
             this.button107.Name = "button107";
             this.button107.Size = new System.Drawing.Size(15, 30);
@@ -6257,6 +6379,7 @@
             // button108
             // 
             this.button108.BackColor = System.Drawing.Color.White;
+            this.button108.ContextMenuStrip = this.CmsTeethStatus;
             this.button108.Location = new System.Drawing.Point(468, 453);
             this.button108.Name = "button108";
             this.button108.Size = new System.Drawing.Size(30, 30);
@@ -6266,6 +6389,7 @@
             // button109
             // 
             this.button109.BackColor = System.Drawing.Color.White;
+            this.button109.ContextMenuStrip = this.CmsTeethStatus;
             this.button109.Location = new System.Drawing.Point(468, 215);
             this.button109.Name = "button109";
             this.button109.Size = new System.Drawing.Size(30, 30);
@@ -6275,6 +6399,7 @@
             // button110
             // 
             this.button110.BackColor = System.Drawing.Color.White;
+            this.button110.ContextMenuStrip = this.CmsTeethStatus;
             this.button110.Location = new System.Drawing.Point(790, 453);
             this.button110.Name = "button110";
             this.button110.Size = new System.Drawing.Size(30, 30);
@@ -6284,6 +6409,7 @@
             // button111
             // 
             this.button111.BackColor = System.Drawing.Color.White;
+            this.button111.ContextMenuStrip = this.CmsTeethStatus;
             this.button111.Location = new System.Drawing.Point(1046, 112);
             this.button111.Name = "button111";
             this.button111.Size = new System.Drawing.Size(30, 30);
@@ -6293,6 +6419,7 @@
             // button112
             // 
             this.button112.BackColor = System.Drawing.Color.White;
+            this.button112.ContextMenuStrip = this.CmsTeethStatus;
             this.button112.Location = new System.Drawing.Point(468, 350);
             this.button112.Name = "button112";
             this.button112.Size = new System.Drawing.Size(30, 30);
@@ -6302,6 +6429,7 @@
             // button113
             // 
             this.button113.BackColor = System.Drawing.Color.White;
+            this.button113.ContextMenuStrip = this.CmsTeethStatus;
             this.button113.Location = new System.Drawing.Point(790, 215);
             this.button113.Name = "button113";
             this.button113.Size = new System.Drawing.Size(30, 30);
@@ -6311,6 +6439,7 @@
             // button114
             // 
             this.button114.BackColor = System.Drawing.Color.White;
+            this.button114.ContextMenuStrip = this.CmsTeethStatus;
             this.button114.Location = new System.Drawing.Point(212, 453);
             this.button114.Name = "button114";
             this.button114.Size = new System.Drawing.Size(30, 30);
@@ -6320,6 +6449,7 @@
             // button115
             // 
             this.button115.BackColor = System.Drawing.Color.White;
+            this.button115.ContextMenuStrip = this.CmsTeethStatus;
             this.button115.Location = new System.Drawing.Point(468, 112);
             this.button115.Name = "button115";
             this.button115.Size = new System.Drawing.Size(30, 30);
@@ -6329,6 +6459,7 @@
             // button116
             // 
             this.button116.BackColor = System.Drawing.Color.White;
+            this.button116.ContextMenuStrip = this.CmsTeethStatus;
             this.button116.Location = new System.Drawing.Point(790, 350);
             this.button116.Name = "button116";
             this.button116.Size = new System.Drawing.Size(30, 30);
@@ -6338,6 +6469,7 @@
             // button117
             // 
             this.button117.BackColor = System.Drawing.Color.White;
+            this.button117.ContextMenuStrip = this.CmsTeethStatus;
             this.button117.Location = new System.Drawing.Point(212, 215);
             this.button117.Name = "button117";
             this.button117.Size = new System.Drawing.Size(30, 30);
@@ -6347,6 +6479,7 @@
             // button118
             // 
             this.button118.BackColor = System.Drawing.Color.White;
+            this.button118.ContextMenuStrip = this.CmsTeethStatus;
             this.button118.Location = new System.Drawing.Point(790, 112);
             this.button118.Name = "button118";
             this.button118.Size = new System.Drawing.Size(30, 30);
@@ -6356,6 +6489,7 @@
             // button119
             // 
             this.button119.BackColor = System.Drawing.Color.White;
+            this.button119.ContextMenuStrip = this.CmsTeethStatus;
             this.button119.Location = new System.Drawing.Point(212, 350);
             this.button119.Name = "button119";
             this.button119.Size = new System.Drawing.Size(30, 30);
@@ -6365,6 +6499,7 @@
             // button120
             // 
             this.button120.BackColor = System.Drawing.Color.White;
+            this.button120.ContextMenuStrip = this.CmsTeethStatus;
             this.button120.Location = new System.Drawing.Point(918, 215);
             this.button120.Name = "button120";
             this.button120.Size = new System.Drawing.Size(30, 30);
@@ -6374,6 +6509,7 @@
             // button121
             // 
             this.button121.BackColor = System.Drawing.Color.White;
+            this.button121.ContextMenuStrip = this.CmsTeethStatus;
             this.button121.Location = new System.Drawing.Point(340, 453);
             this.button121.Name = "button121";
             this.button121.Size = new System.Drawing.Size(30, 30);
@@ -6383,6 +6519,7 @@
             // button122
             // 
             this.button122.BackColor = System.Drawing.Color.White;
+            this.button122.ContextMenuStrip = this.CmsTeethStatus;
             this.button122.Location = new System.Drawing.Point(212, 112);
             this.button122.Name = "button122";
             this.button122.Size = new System.Drawing.Size(30, 30);
@@ -6392,6 +6529,7 @@
             // button123
             // 
             this.button123.BackColor = System.Drawing.Color.White;
+            this.button123.ContextMenuStrip = this.CmsTeethStatus;
             this.button123.Location = new System.Drawing.Point(340, 215);
             this.button123.Name = "button123";
             this.button123.Size = new System.Drawing.Size(30, 30);
@@ -6401,6 +6539,7 @@
             // button124
             // 
             this.button124.BackColor = System.Drawing.Color.White;
+            this.button124.ContextMenuStrip = this.CmsTeethStatus;
             this.button124.Location = new System.Drawing.Point(662, 453);
             this.button124.Name = "button124";
             this.button124.Size = new System.Drawing.Size(30, 30);
@@ -6410,6 +6549,7 @@
             // button125
             // 
             this.button125.BackColor = System.Drawing.Color.White;
+            this.button125.ContextMenuStrip = this.CmsTeethStatus;
             this.button125.Location = new System.Drawing.Point(918, 112);
             this.button125.Name = "button125";
             this.button125.Size = new System.Drawing.Size(30, 30);
@@ -6419,6 +6559,7 @@
             // button126
             // 
             this.button126.BackColor = System.Drawing.Color.White;
+            this.button126.ContextMenuStrip = this.CmsTeethStatus;
             this.button126.Location = new System.Drawing.Point(340, 350);
             this.button126.Name = "button126";
             this.button126.Size = new System.Drawing.Size(30, 30);
@@ -6428,6 +6569,7 @@
             // button127
             // 
             this.button127.BackColor = System.Drawing.Color.White;
+            this.button127.ContextMenuStrip = this.CmsTeethStatus;
             this.button127.Location = new System.Drawing.Point(662, 215);
             this.button127.Name = "button127";
             this.button127.Size = new System.Drawing.Size(30, 30);
@@ -6437,6 +6579,7 @@
             // button128
             // 
             this.button128.BackColor = System.Drawing.Color.White;
+            this.button128.ContextMenuStrip = this.CmsTeethStatus;
             this.button128.Location = new System.Drawing.Point(340, 112);
             this.button128.Name = "button128";
             this.button128.Size = new System.Drawing.Size(30, 30);
@@ -6446,6 +6589,7 @@
             // button129
             // 
             this.button129.BackColor = System.Drawing.Color.White;
+            this.button129.ContextMenuStrip = this.CmsTeethStatus;
             this.button129.Location = new System.Drawing.Point(662, 350);
             this.button129.Name = "button129";
             this.button129.Size = new System.Drawing.Size(30, 30);
@@ -6455,6 +6599,7 @@
             // button130
             // 
             this.button130.BackColor = System.Drawing.Color.White;
+            this.button130.ContextMenuStrip = this.CmsTeethStatus;
             this.button130.Location = new System.Drawing.Point(1030, 215);
             this.button130.Name = "button130";
             this.button130.Size = new System.Drawing.Size(15, 30);
@@ -6464,6 +6609,7 @@
             // button131
             // 
             this.button131.BackColor = System.Drawing.Color.White;
+            this.button131.ContextMenuStrip = this.CmsTeethStatus;
             this.button131.Location = new System.Drawing.Point(662, 112);
             this.button131.Name = "button131";
             this.button131.Size = new System.Drawing.Size(30, 30);
@@ -6473,6 +6619,7 @@
             // button132
             // 
             this.button132.BackColor = System.Drawing.Color.White;
+            this.button132.ContextMenuStrip = this.CmsTeethStatus;
             this.button132.Location = new System.Drawing.Point(84, 215);
             this.button132.Name = "button132";
             this.button132.Size = new System.Drawing.Size(30, 30);
@@ -6482,6 +6629,7 @@
             // button133
             // 
             this.button133.BackColor = System.Drawing.Color.White;
+            this.button133.ContextMenuStrip = this.CmsTeethStatus;
             this.button133.Location = new System.Drawing.Point(774, 453);
             this.button133.Name = "button133";
             this.button133.Size = new System.Drawing.Size(15, 30);
@@ -6491,6 +6639,7 @@
             // button134
             // 
             this.button134.BackColor = System.Drawing.Color.White;
+            this.button134.ContextMenuStrip = this.CmsTeethStatus;
             this.button134.Location = new System.Drawing.Point(1030, 112);
             this.button134.Name = "button134";
             this.button134.Size = new System.Drawing.Size(15, 30);
@@ -6500,6 +6649,7 @@
             // button135
             // 
             this.button135.BackColor = System.Drawing.Color.White;
+            this.button135.ContextMenuStrip = this.CmsTeethStatus;
             this.button135.Location = new System.Drawing.Point(774, 215);
             this.button135.Name = "button135";
             this.button135.Size = new System.Drawing.Size(15, 30);
@@ -6509,6 +6659,7 @@
             // button136
             // 
             this.button136.BackColor = System.Drawing.Color.White;
+            this.button136.ContextMenuStrip = this.CmsTeethStatus;
             this.button136.Location = new System.Drawing.Point(452, 453);
             this.button136.Name = "button136";
             this.button136.Size = new System.Drawing.Size(15, 30);
@@ -6518,6 +6669,7 @@
             // button137
             // 
             this.button137.BackColor = System.Drawing.Color.White;
+            this.button137.ContextMenuStrip = this.CmsTeethStatus;
             this.button137.Location = new System.Drawing.Point(84, 112);
             this.button137.Name = "button137";
             this.button137.Size = new System.Drawing.Size(30, 30);
@@ -6527,6 +6679,7 @@
             // button138
             // 
             this.button138.BackColor = System.Drawing.Color.White;
+            this.button138.ContextMenuStrip = this.CmsTeethStatus;
             this.button138.Location = new System.Drawing.Point(774, 350);
             this.button138.Name = "button138";
             this.button138.Size = new System.Drawing.Size(15, 30);
@@ -6536,6 +6689,7 @@
             // button139
             // 
             this.button139.BackColor = System.Drawing.Color.White;
+            this.button139.ContextMenuStrip = this.CmsTeethStatus;
             this.button139.Location = new System.Drawing.Point(452, 215);
             this.button139.Name = "button139";
             this.button139.Size = new System.Drawing.Size(15, 30);
@@ -6545,6 +6699,7 @@
             // button140
             // 
             this.button140.BackColor = System.Drawing.Color.White;
+            this.button140.ContextMenuStrip = this.CmsTeethStatus;
             this.button140.Location = new System.Drawing.Point(774, 112);
             this.button140.Name = "button140";
             this.button140.Size = new System.Drawing.Size(15, 30);
@@ -6554,6 +6709,7 @@
             // button141
             // 
             this.button141.BackColor = System.Drawing.Color.White;
+            this.button141.ContextMenuStrip = this.CmsTeethStatus;
             this.button141.Location = new System.Drawing.Point(452, 350);
             this.button141.Name = "button141";
             this.button141.Size = new System.Drawing.Size(15, 30);
@@ -6563,6 +6719,7 @@
             // button142
             // 
             this.button142.BackColor = System.Drawing.Color.White;
+            this.button142.ContextMenuStrip = this.CmsTeethStatus;
             this.button142.Location = new System.Drawing.Point(902, 215);
             this.button142.Name = "button142";
             this.button142.Size = new System.Drawing.Size(15, 30);
@@ -6572,6 +6729,7 @@
             // button143
             // 
             this.button143.BackColor = System.Drawing.Color.White;
+            this.button143.ContextMenuStrip = this.CmsTeethStatus;
             this.button143.Location = new System.Drawing.Point(452, 112);
             this.button143.Name = "button143";
             this.button143.Size = new System.Drawing.Size(15, 30);
@@ -6581,6 +6739,7 @@
             // button144
             // 
             this.button144.BackColor = System.Drawing.Color.White;
+            this.button144.ContextMenuStrip = this.CmsTeethStatus;
             this.button144.Location = new System.Drawing.Point(196, 453);
             this.button144.Name = "button144";
             this.button144.Size = new System.Drawing.Size(15, 30);
@@ -6590,6 +6749,7 @@
             // button145
             // 
             this.button145.BackColor = System.Drawing.Color.White;
+            this.button145.ContextMenuStrip = this.CmsTeethStatus;
             this.button145.Location = new System.Drawing.Point(196, 215);
             this.button145.Name = "button145";
             this.button145.Size = new System.Drawing.Size(15, 30);
@@ -6599,6 +6759,7 @@
             // button146
             // 
             this.button146.BackColor = System.Drawing.Color.White;
+            this.button146.ContextMenuStrip = this.CmsTeethStatus;
             this.button146.Location = new System.Drawing.Point(646, 453);
             this.button146.Name = "button146";
             this.button146.Size = new System.Drawing.Size(15, 30);
@@ -6608,6 +6769,7 @@
             // button147
             // 
             this.button147.BackColor = System.Drawing.Color.White;
+            this.button147.ContextMenuStrip = this.CmsTeethStatus;
             this.button147.Location = new System.Drawing.Point(902, 112);
             this.button147.Name = "button147";
             this.button147.Size = new System.Drawing.Size(15, 30);
@@ -6617,6 +6779,7 @@
             // button148
             // 
             this.button148.BackColor = System.Drawing.Color.White;
+            this.button148.ContextMenuStrip = this.CmsTeethStatus;
             this.button148.Location = new System.Drawing.Point(646, 215);
             this.button148.Name = "button148";
             this.button148.Size = new System.Drawing.Size(15, 30);
@@ -6626,6 +6789,7 @@
             // button149
             // 
             this.button149.BackColor = System.Drawing.Color.White;
+            this.button149.ContextMenuStrip = this.CmsTeethStatus;
             this.button149.Location = new System.Drawing.Point(196, 350);
             this.button149.Name = "button149";
             this.button149.Size = new System.Drawing.Size(15, 30);
@@ -6635,6 +6799,7 @@
             // button150
             // 
             this.button150.BackColor = System.Drawing.Color.White;
+            this.button150.ContextMenuStrip = this.CmsTeethStatus;
             this.button150.Location = new System.Drawing.Point(324, 453);
             this.button150.Name = "button150";
             this.button150.Size = new System.Drawing.Size(15, 30);
@@ -6644,6 +6809,7 @@
             // button151
             // 
             this.button151.BackColor = System.Drawing.Color.White;
+            this.button151.ContextMenuStrip = this.CmsTeethStatus;
             this.button151.Location = new System.Drawing.Point(196, 112);
             this.button151.Name = "button151";
             this.button151.Size = new System.Drawing.Size(15, 30);
@@ -6653,6 +6819,7 @@
             // button152
             // 
             this.button152.BackColor = System.Drawing.Color.White;
+            this.button152.ContextMenuStrip = this.CmsTeethStatus;
             this.button152.Location = new System.Drawing.Point(646, 350);
             this.button152.Name = "button152";
             this.button152.Size = new System.Drawing.Size(15, 30);
@@ -6662,6 +6829,7 @@
             // button153
             // 
             this.button153.BackColor = System.Drawing.Color.White;
+            this.button153.ContextMenuStrip = this.CmsTeethStatus;
             this.button153.Location = new System.Drawing.Point(324, 215);
             this.button153.Name = "button153";
             this.button153.Size = new System.Drawing.Size(15, 30);
@@ -6671,6 +6839,7 @@
             // button154
             // 
             this.button154.BackColor = System.Drawing.Color.White;
+            this.button154.ContextMenuStrip = this.CmsTeethStatus;
             this.button154.Location = new System.Drawing.Point(646, 112);
             this.button154.Name = "button154";
             this.button154.Size = new System.Drawing.Size(15, 30);
@@ -6680,6 +6849,7 @@
             // button155
             // 
             this.button155.BackColor = System.Drawing.Color.White;
+            this.button155.ContextMenuStrip = this.CmsTeethStatus;
             this.button155.Location = new System.Drawing.Point(324, 350);
             this.button155.Name = "button155";
             this.button155.Size = new System.Drawing.Size(15, 30);
@@ -6689,6 +6859,7 @@
             // button156
             // 
             this.button156.BackColor = System.Drawing.Color.White;
+            this.button156.ContextMenuStrip = this.CmsTeethStatus;
             this.button156.Location = new System.Drawing.Point(982, 215);
             this.button156.Name = "button156";
             this.button156.Size = new System.Drawing.Size(30, 30);
@@ -6698,6 +6869,7 @@
             // button157
             // 
             this.button157.BackColor = System.Drawing.Color.White;
+            this.button157.ContextMenuStrip = this.CmsTeethStatus;
             this.button157.Location = new System.Drawing.Point(324, 112);
             this.button157.Name = "button157";
             this.button157.Size = new System.Drawing.Size(15, 30);
@@ -6707,6 +6879,7 @@
             // button158
             // 
             this.button158.BackColor = System.Drawing.Color.White;
+            this.button158.ContextMenuStrip = this.CmsTeethStatus;
             this.button158.Location = new System.Drawing.Point(68, 215);
             this.button158.Name = "button158";
             this.button158.Size = new System.Drawing.Size(15, 30);
@@ -6716,6 +6889,7 @@
             // button159
             // 
             this.button159.BackColor = System.Drawing.Color.White;
+            this.button159.ContextMenuStrip = this.CmsTeethStatus;
             this.button159.Location = new System.Drawing.Point(726, 453);
             this.button159.Name = "button159";
             this.button159.Size = new System.Drawing.Size(30, 30);
@@ -6725,6 +6899,7 @@
             // button160
             // 
             this.button160.BackColor = System.Drawing.Color.White;
+            this.button160.ContextMenuStrip = this.CmsTeethStatus;
             this.button160.Location = new System.Drawing.Point(982, 112);
             this.button160.Name = "button160";
             this.button160.Size = new System.Drawing.Size(30, 30);
@@ -6734,6 +6909,7 @@
             // button161
             // 
             this.button161.BackColor = System.Drawing.Color.White;
+            this.button161.ContextMenuStrip = this.CmsTeethStatus;
             this.button161.Location = new System.Drawing.Point(726, 215);
             this.button161.Name = "button161";
             this.button161.Size = new System.Drawing.Size(30, 30);
@@ -6743,6 +6919,7 @@
             // button162
             // 
             this.button162.BackColor = System.Drawing.Color.White;
+            this.button162.ContextMenuStrip = this.CmsTeethStatus;
             this.button162.Location = new System.Drawing.Point(404, 453);
             this.button162.Name = "button162";
             this.button162.Size = new System.Drawing.Size(30, 30);
@@ -6752,6 +6929,7 @@
             // button163
             // 
             this.button163.BackColor = System.Drawing.Color.White;
+            this.button163.ContextMenuStrip = this.CmsTeethStatus;
             this.button163.Location = new System.Drawing.Point(68, 112);
             this.button163.Name = "button163";
             this.button163.Size = new System.Drawing.Size(15, 30);
@@ -6761,6 +6939,7 @@
             // button164
             // 
             this.button164.BackColor = System.Drawing.Color.White;
+            this.button164.ContextMenuStrip = this.CmsTeethStatus;
             this.button164.Location = new System.Drawing.Point(726, 350);
             this.button164.Name = "button164";
             this.button164.Size = new System.Drawing.Size(30, 30);
@@ -6770,6 +6949,7 @@
             // button165
             // 
             this.button165.BackColor = System.Drawing.Color.White;
+            this.button165.ContextMenuStrip = this.CmsTeethStatus;
             this.button165.Location = new System.Drawing.Point(404, 215);
             this.button165.Name = "button165";
             this.button165.Size = new System.Drawing.Size(30, 30);
@@ -6779,6 +6959,7 @@
             // button166
             // 
             this.button166.BackColor = System.Drawing.Color.White;
+            this.button166.ContextMenuStrip = this.CmsTeethStatus;
             this.button166.Location = new System.Drawing.Point(726, 112);
             this.button166.Name = "button166";
             this.button166.Size = new System.Drawing.Size(30, 30);
@@ -6788,6 +6969,7 @@
             // button167
             // 
             this.button167.BackColor = System.Drawing.Color.White;
+            this.button167.ContextMenuStrip = this.CmsTeethStatus;
             this.button167.Location = new System.Drawing.Point(404, 350);
             this.button167.Name = "button167";
             this.button167.Size = new System.Drawing.Size(30, 30);
@@ -6797,6 +6979,7 @@
             // button168
             // 
             this.button168.BackColor = System.Drawing.Color.White;
+            this.button168.ContextMenuStrip = this.CmsTeethStatus;
             this.button168.Location = new System.Drawing.Point(1046, 199);
             this.button168.Name = "button168";
             this.button168.Size = new System.Drawing.Size(30, 15);
@@ -6806,6 +6989,7 @@
             // button169
             // 
             this.button169.BackColor = System.Drawing.Color.White;
+            this.button169.ContextMenuStrip = this.CmsTeethStatus;
             this.button169.Location = new System.Drawing.Point(404, 112);
             this.button169.Name = "button169";
             this.button169.Size = new System.Drawing.Size(30, 30);
@@ -6815,6 +6999,7 @@
             // button170
             // 
             this.button170.BackColor = System.Drawing.Color.White;
+            this.button170.ContextMenuStrip = this.CmsTeethStatus;
             this.button170.Location = new System.Drawing.Point(148, 215);
             this.button170.Name = "button170";
             this.button170.Size = new System.Drawing.Size(30, 30);
@@ -6824,6 +7009,7 @@
             // button171
             // 
             this.button171.BackColor = System.Drawing.Color.White;
+            this.button171.ContextMenuStrip = this.CmsTeethStatus;
             this.button171.Location = new System.Drawing.Point(790, 437);
             this.button171.Name = "button171";
             this.button171.Size = new System.Drawing.Size(30, 15);
@@ -6833,6 +7019,7 @@
             // button172
             // 
             this.button172.BackColor = System.Drawing.Color.White;
+            this.button172.ContextMenuStrip = this.CmsTeethStatus;
             this.button172.Location = new System.Drawing.Point(1046, 96);
             this.button172.Name = "button172";
             this.button172.Size = new System.Drawing.Size(30, 15);
@@ -6842,6 +7029,7 @@
             // button173
             // 
             this.button173.BackColor = System.Drawing.Color.White;
+            this.button173.ContextMenuStrip = this.CmsTeethStatus;
             this.button173.Location = new System.Drawing.Point(790, 199);
             this.button173.Name = "button173";
             this.button173.Size = new System.Drawing.Size(30, 15);
@@ -6851,6 +7039,7 @@
             // button174
             // 
             this.button174.BackColor = System.Drawing.Color.White;
+            this.button174.ContextMenuStrip = this.CmsTeethStatus;
             this.button174.Location = new System.Drawing.Point(468, 437);
             this.button174.Name = "button174";
             this.button174.Size = new System.Drawing.Size(30, 15);
@@ -6860,6 +7049,7 @@
             // button175
             // 
             this.button175.BackColor = System.Drawing.Color.White;
+            this.button175.ContextMenuStrip = this.CmsTeethStatus;
             this.button175.Location = new System.Drawing.Point(148, 112);
             this.button175.Name = "button175";
             this.button175.Size = new System.Drawing.Size(30, 30);
@@ -6869,6 +7059,7 @@
             // button176
             // 
             this.button176.BackColor = System.Drawing.Color.White;
+            this.button176.ContextMenuStrip = this.CmsTeethStatus;
             this.button176.Location = new System.Drawing.Point(790, 334);
             this.button176.Name = "button176";
             this.button176.Size = new System.Drawing.Size(30, 15);
@@ -6878,6 +7069,7 @@
             // button177
             // 
             this.button177.BackColor = System.Drawing.Color.White;
+            this.button177.ContextMenuStrip = this.CmsTeethStatus;
             this.button177.Location = new System.Drawing.Point(468, 199);
             this.button177.Name = "button177";
             this.button177.Size = new System.Drawing.Size(30, 15);
@@ -6887,6 +7079,7 @@
             // button178
             // 
             this.button178.BackColor = System.Drawing.Color.White;
+            this.button178.ContextMenuStrip = this.CmsTeethStatus;
             this.button178.Location = new System.Drawing.Point(854, 453);
             this.button178.Name = "button178";
             this.button178.Size = new System.Drawing.Size(30, 30);
@@ -6896,6 +7089,7 @@
             // button179
             // 
             this.button179.BackColor = System.Drawing.Color.White;
+            this.button179.ContextMenuStrip = this.CmsTeethStatus;
             this.button179.Location = new System.Drawing.Point(790, 96);
             this.button179.Name = "button179";
             this.button179.Size = new System.Drawing.Size(30, 15);
@@ -6905,6 +7099,7 @@
             // button180
             // 
             this.button180.BackColor = System.Drawing.Color.White;
+            this.button180.ContextMenuStrip = this.CmsTeethStatus;
             this.button180.Location = new System.Drawing.Point(468, 334);
             this.button180.Name = "button180";
             this.button180.Size = new System.Drawing.Size(30, 15);
@@ -6914,6 +7109,7 @@
             // button181
             // 
             this.button181.BackColor = System.Drawing.Color.White;
+            this.button181.ContextMenuStrip = this.CmsTeethStatus;
             this.button181.Location = new System.Drawing.Point(854, 215);
             this.button181.Name = "button181";
             this.button181.Size = new System.Drawing.Size(30, 30);
@@ -6923,6 +7119,7 @@
             // button182
             // 
             this.button182.BackColor = System.Drawing.Color.White;
+            this.button182.ContextMenuStrip = this.CmsTeethStatus;
             this.button182.Location = new System.Drawing.Point(212, 437);
             this.button182.Name = "button182";
             this.button182.Size = new System.Drawing.Size(30, 15);
@@ -6932,6 +7129,7 @@
             // button183
             // 
             this.button183.BackColor = System.Drawing.Color.White;
+            this.button183.ContextMenuStrip = this.CmsTeethStatus;
             this.button183.Location = new System.Drawing.Point(468, 96);
             this.button183.Name = "button183";
             this.button183.Size = new System.Drawing.Size(30, 15);
@@ -6941,6 +7139,7 @@
             // button184
             // 
             this.button184.BackColor = System.Drawing.Color.White;
+            this.button184.ContextMenuStrip = this.CmsTeethStatus;
             this.button184.Location = new System.Drawing.Point(854, 350);
             this.button184.Name = "button184";
             this.button184.Size = new System.Drawing.Size(30, 30);
@@ -6950,6 +7149,7 @@
             // button185
             // 
             this.button185.BackColor = System.Drawing.Color.White;
+            this.button185.ContextMenuStrip = this.CmsTeethStatus;
             this.button185.Location = new System.Drawing.Point(212, 199);
             this.button185.Name = "button185";
             this.button185.Size = new System.Drawing.Size(30, 15);
@@ -6959,6 +7159,7 @@
             // button186
             // 
             this.button186.BackColor = System.Drawing.Color.White;
+            this.button186.ContextMenuStrip = this.CmsTeethStatus;
             this.button186.Location = new System.Drawing.Point(854, 112);
             this.button186.Name = "button186";
             this.button186.Size = new System.Drawing.Size(30, 30);
@@ -6968,6 +7169,7 @@
             // button187
             // 
             this.button187.BackColor = System.Drawing.Color.White;
+            this.button187.ContextMenuStrip = this.CmsTeethStatus;
             this.button187.Location = new System.Drawing.Point(212, 334);
             this.button187.Name = "button187";
             this.button187.Size = new System.Drawing.Size(30, 15);
@@ -6977,6 +7179,7 @@
             // button188
             // 
             this.button188.BackColor = System.Drawing.Color.White;
+            this.button188.ContextMenuStrip = this.CmsTeethStatus;
             this.button188.Location = new System.Drawing.Point(966, 215);
             this.button188.Name = "button188";
             this.button188.Size = new System.Drawing.Size(15, 30);
@@ -6986,6 +7189,7 @@
             // button189
             // 
             this.button189.BackColor = System.Drawing.Color.White;
+            this.button189.ContextMenuStrip = this.CmsTeethStatus;
             this.button189.Location = new System.Drawing.Point(276, 453);
             this.button189.Name = "button189";
             this.button189.Size = new System.Drawing.Size(30, 30);
@@ -6995,6 +7199,7 @@
             // button190
             // 
             this.button190.BackColor = System.Drawing.Color.White;
+            this.button190.ContextMenuStrip = this.CmsTeethStatus;
             this.button190.Location = new System.Drawing.Point(212, 96);
             this.button190.Name = "button190";
             this.button190.Size = new System.Drawing.Size(30, 15);
@@ -7004,6 +7209,7 @@
             // button191
             // 
             this.button191.BackColor = System.Drawing.Color.White;
+            this.button191.ContextMenuStrip = this.CmsTeethStatus;
             this.button191.Location = new System.Drawing.Point(276, 215);
             this.button191.Name = "button191";
             this.button191.Size = new System.Drawing.Size(30, 30);
@@ -7013,6 +7219,7 @@
             // button192
             // 
             this.button192.BackColor = System.Drawing.Color.White;
+            this.button192.ContextMenuStrip = this.CmsTeethStatus;
             this.button192.Location = new System.Drawing.Point(598, 453);
             this.button192.Name = "button192";
             this.button192.Size = new System.Drawing.Size(30, 30);
@@ -7022,6 +7229,7 @@
             // button193
             // 
             this.button193.BackColor = System.Drawing.Color.White;
+            this.button193.ContextMenuStrip = this.CmsTeethStatus;
             this.button193.Location = new System.Drawing.Point(966, 112);
             this.button193.Name = "button193";
             this.button193.Size = new System.Drawing.Size(15, 30);
@@ -7031,6 +7239,7 @@
             // button194
             // 
             this.button194.BackColor = System.Drawing.Color.White;
+            this.button194.ContextMenuStrip = this.CmsTeethStatus;
             this.button194.Location = new System.Drawing.Point(276, 350);
             this.button194.Name = "button194";
             this.button194.Size = new System.Drawing.Size(30, 30);
@@ -7040,6 +7249,7 @@
             // button195
             // 
             this.button195.BackColor = System.Drawing.Color.White;
+            this.button195.ContextMenuStrip = this.CmsTeethStatus;
             this.button195.Location = new System.Drawing.Point(598, 215);
             this.button195.Name = "button195";
             this.button195.Size = new System.Drawing.Size(30, 30);
@@ -7049,6 +7259,7 @@
             // button196
             // 
             this.button196.BackColor = System.Drawing.Color.White;
+            this.button196.ContextMenuStrip = this.CmsTeethStatus;
             this.button196.Location = new System.Drawing.Point(388, 453);
             this.button196.Name = "button196";
             this.button196.Size = new System.Drawing.Size(15, 30);
@@ -7058,6 +7269,7 @@
             // button197
             // 
             this.button197.BackColor = System.Drawing.Color.White;
+            this.button197.ContextMenuStrip = this.CmsTeethStatus;
             this.button197.Location = new System.Drawing.Point(276, 112);
             this.button197.Name = "button197";
             this.button197.Size = new System.Drawing.Size(30, 30);
@@ -7067,6 +7279,7 @@
             // button198
             // 
             this.button198.BackColor = System.Drawing.Color.White;
+            this.button198.ContextMenuStrip = this.CmsTeethStatus;
             this.button198.Location = new System.Drawing.Point(598, 350);
             this.button198.Name = "button198";
             this.button198.Size = new System.Drawing.Size(30, 30);
@@ -7076,6 +7289,7 @@
             // button199
             // 
             this.button199.BackColor = System.Drawing.Color.White;
+            this.button199.ContextMenuStrip = this.CmsTeethStatus;
             this.button199.Location = new System.Drawing.Point(388, 215);
             this.button199.Name = "button199";
             this.button199.Size = new System.Drawing.Size(15, 30);
@@ -7085,6 +7299,7 @@
             // button200
             // 
             this.button200.BackColor = System.Drawing.Color.White;
+            this.button200.ContextMenuStrip = this.CmsTeethStatus;
             this.button200.Location = new System.Drawing.Point(598, 112);
             this.button200.Name = "button200";
             this.button200.Size = new System.Drawing.Size(30, 30);
@@ -7094,6 +7309,7 @@
             // button201
             // 
             this.button201.BackColor = System.Drawing.Color.White;
+            this.button201.ContextMenuStrip = this.CmsTeethStatus;
             this.button201.Location = new System.Drawing.Point(388, 350);
             this.button201.Name = "button201";
             this.button201.Size = new System.Drawing.Size(15, 30);
@@ -7103,6 +7319,7 @@
             // button202
             // 
             this.button202.BackColor = System.Drawing.Color.White;
+            this.button202.ContextMenuStrip = this.CmsTeethStatus;
             this.button202.Location = new System.Drawing.Point(918, 199);
             this.button202.Name = "button202";
             this.button202.Size = new System.Drawing.Size(30, 15);
@@ -7112,6 +7329,7 @@
             // button203
             // 
             this.button203.BackColor = System.Drawing.Color.White;
+            this.button203.ContextMenuStrip = this.CmsTeethStatus;
             this.button203.Location = new System.Drawing.Point(388, 112);
             this.button203.Name = "button203";
             this.button203.Size = new System.Drawing.Size(15, 30);
@@ -7121,6 +7339,7 @@
             // button204
             // 
             this.button204.BackColor = System.Drawing.Color.White;
+            this.button204.ContextMenuStrip = this.CmsTeethStatus;
             this.button204.Location = new System.Drawing.Point(20, 215);
             this.button204.Name = "button204";
             this.button204.Size = new System.Drawing.Size(30, 30);
@@ -7130,6 +7349,7 @@
             // button205
             // 
             this.button205.BackColor = System.Drawing.Color.White;
+            this.button205.ContextMenuStrip = this.CmsTeethStatus;
             this.button205.Location = new System.Drawing.Point(710, 453);
             this.button205.Name = "button205";
             this.button205.Size = new System.Drawing.Size(15, 30);
@@ -7139,6 +7359,7 @@
             // button206
             // 
             this.button206.BackColor = System.Drawing.Color.White;
+            this.button206.ContextMenuStrip = this.CmsTeethStatus;
             this.button206.Location = new System.Drawing.Point(918, 96);
             this.button206.Name = "button206";
             this.button206.Size = new System.Drawing.Size(30, 15);
@@ -7148,6 +7369,7 @@
             // button207
             // 
             this.button207.BackColor = System.Drawing.Color.White;
+            this.button207.ContextMenuStrip = this.CmsTeethStatus;
             this.button207.Location = new System.Drawing.Point(710, 215);
             this.button207.Name = "button207";
             this.button207.Size = new System.Drawing.Size(15, 30);
@@ -7157,6 +7379,7 @@
             // button208
             // 
             this.button208.BackColor = System.Drawing.Color.White;
+            this.button208.ContextMenuStrip = this.CmsTeethStatus;
             this.button208.Location = new System.Drawing.Point(340, 437);
             this.button208.Name = "button208";
             this.button208.Size = new System.Drawing.Size(30, 15);
@@ -7166,6 +7389,7 @@
             // button209
             // 
             this.button209.BackColor = System.Drawing.Color.White;
+            this.button209.ContextMenuStrip = this.CmsTeethStatus;
             this.button209.Location = new System.Drawing.Point(20, 112);
             this.button209.Name = "button209";
             this.button209.Size = new System.Drawing.Size(30, 30);
@@ -7175,6 +7399,7 @@
             // button210
             // 
             this.button210.BackColor = System.Drawing.Color.White;
+            this.button210.ContextMenuStrip = this.CmsTeethStatus;
             this.button210.Location = new System.Drawing.Point(710, 350);
             this.button210.Name = "button210";
             this.button210.Size = new System.Drawing.Size(15, 30);
@@ -7184,6 +7409,7 @@
             // button211
             // 
             this.button211.BackColor = System.Drawing.Color.White;
+            this.button211.ContextMenuStrip = this.CmsTeethStatus;
             this.button211.Location = new System.Drawing.Point(340, 199);
             this.button211.Name = "button211";
             this.button211.Size = new System.Drawing.Size(30, 15);
@@ -7193,6 +7419,7 @@
             // button212
             // 
             this.button212.BackColor = System.Drawing.Color.White;
+            this.button212.ContextMenuStrip = this.CmsTeethStatus;
             this.button212.Location = new System.Drawing.Point(710, 112);
             this.button212.Name = "button212";
             this.button212.Size = new System.Drawing.Size(15, 30);
@@ -7202,6 +7429,7 @@
             // button213
             // 
             this.button213.BackColor = System.Drawing.Color.White;
+            this.button213.ContextMenuStrip = this.CmsTeethStatus;
             this.button213.Location = new System.Drawing.Point(340, 334);
             this.button213.Name = "button213";
             this.button213.Size = new System.Drawing.Size(30, 15);
@@ -7211,6 +7439,7 @@
             // button214
             // 
             this.button214.BackColor = System.Drawing.Color.White;
+            this.button214.ContextMenuStrip = this.CmsTeethStatus;
             this.button214.Location = new System.Drawing.Point(982, 199);
             this.button214.Name = "button214";
             this.button214.Size = new System.Drawing.Size(30, 15);
@@ -7220,6 +7449,7 @@
             // button215
             // 
             this.button215.BackColor = System.Drawing.Color.White;
+            this.button215.ContextMenuStrip = this.CmsTeethStatus;
             this.button215.Location = new System.Drawing.Point(340, 96);
             this.button215.Name = "button215";
             this.button215.Size = new System.Drawing.Size(30, 15);
@@ -7229,6 +7459,7 @@
             // button216
             // 
             this.button216.BackColor = System.Drawing.Color.White;
+            this.button216.ContextMenuStrip = this.CmsTeethStatus;
             this.button216.Location = new System.Drawing.Point(132, 215);
             this.button216.Name = "button216";
             this.button216.Size = new System.Drawing.Size(15, 30);
@@ -7238,6 +7469,7 @@
             // button217
             // 
             this.button217.BackColor = System.Drawing.Color.White;
+            this.button217.ContextMenuStrip = this.CmsTeethStatus;
             this.button217.Location = new System.Drawing.Point(662, 437);
             this.button217.Name = "button217";
             this.button217.Size = new System.Drawing.Size(30, 15);
@@ -7247,6 +7479,7 @@
             // button218
             // 
             this.button218.BackColor = System.Drawing.Color.White;
+            this.button218.ContextMenuStrip = this.CmsTeethStatus;
             this.button218.Location = new System.Drawing.Point(982, 96);
             this.button218.Name = "button218";
             this.button218.Size = new System.Drawing.Size(30, 15);
@@ -7256,6 +7489,7 @@
             // button219
             // 
             this.button219.BackColor = System.Drawing.Color.White;
+            this.button219.ContextMenuStrip = this.CmsTeethStatus;
             this.button219.Location = new System.Drawing.Point(662, 199);
             this.button219.Name = "button219";
             this.button219.Size = new System.Drawing.Size(30, 15);
@@ -7265,6 +7499,7 @@
             // button220
             // 
             this.button220.BackColor = System.Drawing.Color.White;
+            this.button220.ContextMenuStrip = this.CmsTeethStatus;
             this.button220.Location = new System.Drawing.Point(404, 437);
             this.button220.Name = "button220";
             this.button220.Size = new System.Drawing.Size(30, 15);
@@ -7274,6 +7509,7 @@
             // button221
             // 
             this.button221.BackColor = System.Drawing.Color.White;
+            this.button221.ContextMenuStrip = this.CmsTeethStatus;
             this.button221.Location = new System.Drawing.Point(132, 112);
             this.button221.Name = "button221";
             this.button221.Size = new System.Drawing.Size(15, 30);
@@ -7283,6 +7519,7 @@
             // button222
             // 
             this.button222.BackColor = System.Drawing.Color.White;
+            this.button222.ContextMenuStrip = this.CmsTeethStatus;
             this.button222.Location = new System.Drawing.Point(662, 334);
             this.button222.Name = "button222";
             this.button222.Size = new System.Drawing.Size(30, 15);
@@ -7292,6 +7529,7 @@
             // button223
             // 
             this.button223.BackColor = System.Drawing.Color.White;
+            this.button223.ContextMenuStrip = this.CmsTeethStatus;
             this.button223.Location = new System.Drawing.Point(404, 199);
             this.button223.Name = "button223";
             this.button223.Size = new System.Drawing.Size(30, 15);
@@ -7301,6 +7539,7 @@
             // button224
             // 
             this.button224.BackColor = System.Drawing.Color.White;
+            this.button224.ContextMenuStrip = this.CmsTeethStatus;
             this.button224.Location = new System.Drawing.Point(838, 453);
             this.button224.Name = "button224";
             this.button224.Size = new System.Drawing.Size(15, 30);
@@ -7310,6 +7549,7 @@
             // button225
             // 
             this.button225.BackColor = System.Drawing.Color.White;
+            this.button225.ContextMenuStrip = this.CmsTeethStatus;
             this.button225.Location = new System.Drawing.Point(662, 96);
             this.button225.Name = "button225";
             this.button225.Size = new System.Drawing.Size(30, 15);
@@ -7319,6 +7559,7 @@
             // button226
             // 
             this.button226.BackColor = System.Drawing.Color.White;
+            this.button226.ContextMenuStrip = this.CmsTeethStatus;
             this.button226.Location = new System.Drawing.Point(404, 334);
             this.button226.Name = "button226";
             this.button226.Size = new System.Drawing.Size(30, 15);
@@ -7328,6 +7569,7 @@
             // button227
             // 
             this.button227.BackColor = System.Drawing.Color.White;
+            this.button227.ContextMenuStrip = this.CmsTeethStatus;
             this.button227.Location = new System.Drawing.Point(838, 215);
             this.button227.Name = "button227";
             this.button227.Size = new System.Drawing.Size(15, 30);
@@ -7337,6 +7579,7 @@
             // button228
             // 
             this.button228.BackColor = System.Drawing.Color.White;
+            this.button228.ContextMenuStrip = this.CmsTeethStatus;
             this.button228.Location = new System.Drawing.Point(404, 96);
             this.button228.Name = "button228";
             this.button228.Size = new System.Drawing.Size(30, 15);
@@ -7346,6 +7589,7 @@
             // button229
             // 
             this.button229.BackColor = System.Drawing.Color.White;
+            this.button229.ContextMenuStrip = this.CmsTeethStatus;
             this.button229.Location = new System.Drawing.Point(838, 350);
             this.button229.Name = "button229";
             this.button229.Size = new System.Drawing.Size(15, 30);
@@ -7355,6 +7599,7 @@
             // button230
             // 
             this.button230.BackColor = System.Drawing.Color.White;
+            this.button230.ContextMenuStrip = this.CmsTeethStatus;
             this.button230.Location = new System.Drawing.Point(84, 199);
             this.button230.Name = "button230";
             this.button230.Size = new System.Drawing.Size(30, 15);
@@ -7364,6 +7609,7 @@
             // button231
             // 
             this.button231.BackColor = System.Drawing.Color.White;
+            this.button231.ContextMenuStrip = this.CmsTeethStatus;
             this.button231.Location = new System.Drawing.Point(726, 437);
             this.button231.Name = "button231";
             this.button231.Size = new System.Drawing.Size(30, 15);
@@ -7373,6 +7619,7 @@
             // button232
             // 
             this.button232.BackColor = System.Drawing.Color.White;
+            this.button232.ContextMenuStrip = this.CmsTeethStatus;
             this.button232.Location = new System.Drawing.Point(838, 112);
             this.button232.Name = "button232";
             this.button232.Size = new System.Drawing.Size(15, 30);
@@ -7382,6 +7629,7 @@
             // button233
             // 
             this.button233.BackColor = System.Drawing.Color.White;
+            this.button233.ContextMenuStrip = this.CmsTeethStatus;
             this.button233.Location = new System.Drawing.Point(726, 199);
             this.button233.Name = "button233";
             this.button233.Size = new System.Drawing.Size(30, 15);
@@ -7391,6 +7639,7 @@
             // button234
             // 
             this.button234.BackColor = System.Drawing.Color.White;
+            this.button234.ContextMenuStrip = this.CmsTeethStatus;
             this.button234.Location = new System.Drawing.Point(260, 453);
             this.button234.Name = "button234";
             this.button234.Size = new System.Drawing.Size(15, 30);
@@ -7400,6 +7649,7 @@
             // button235
             // 
             this.button235.BackColor = System.Drawing.Color.White;
+            this.button235.ContextMenuStrip = this.CmsTeethStatus;
             this.button235.Location = new System.Drawing.Point(84, 96);
             this.button235.Name = "button235";
             this.button235.Size = new System.Drawing.Size(30, 15);
@@ -7409,6 +7659,7 @@
             // button236
             // 
             this.button236.BackColor = System.Drawing.Color.White;
+            this.button236.ContextMenuStrip = this.CmsTeethStatus;
             this.button236.Location = new System.Drawing.Point(726, 334);
             this.button236.Name = "button236";
             this.button236.Size = new System.Drawing.Size(30, 15);
@@ -7418,6 +7669,7 @@
             // button237
             // 
             this.button237.BackColor = System.Drawing.Color.White;
+            this.button237.ContextMenuStrip = this.CmsTeethStatus;
             this.button237.Location = new System.Drawing.Point(260, 215);
             this.button237.Name = "button237";
             this.button237.Size = new System.Drawing.Size(15, 30);
@@ -7427,6 +7679,7 @@
             // button238
             // 
             this.button238.BackColor = System.Drawing.Color.White;
+            this.button238.ContextMenuStrip = this.CmsTeethStatus;
             this.button238.Location = new System.Drawing.Point(854, 437);
             this.button238.Name = "button238";
             this.button238.Size = new System.Drawing.Size(30, 15);
@@ -7436,6 +7689,7 @@
             // button239
             // 
             this.button239.BackColor = System.Drawing.Color.White;
+            this.button239.ContextMenuStrip = this.CmsTeethStatus;
             this.button239.Location = new System.Drawing.Point(726, 96);
             this.button239.Name = "button239";
             this.button239.Size = new System.Drawing.Size(30, 15);
@@ -7445,6 +7699,7 @@
             // button240
             // 
             this.button240.BackColor = System.Drawing.Color.White;
+            this.button240.ContextMenuStrip = this.CmsTeethStatus;
             this.button240.Location = new System.Drawing.Point(260, 350);
             this.button240.Name = "button240";
             this.button240.Size = new System.Drawing.Size(15, 30);
@@ -7454,6 +7709,7 @@
             // button241
             // 
             this.button241.BackColor = System.Drawing.Color.White;
+            this.button241.ContextMenuStrip = this.CmsTeethStatus;
             this.button241.Location = new System.Drawing.Point(854, 199);
             this.button241.Name = "button241";
             this.button241.Size = new System.Drawing.Size(30, 15);
@@ -7463,6 +7719,7 @@
             // button242
             // 
             this.button242.BackColor = System.Drawing.Color.White;
+            this.button242.ContextMenuStrip = this.CmsTeethStatus;
             this.button242.Location = new System.Drawing.Point(260, 112);
             this.button242.Name = "button242";
             this.button242.Size = new System.Drawing.Size(15, 30);
@@ -7472,6 +7729,7 @@
             // button243
             // 
             this.button243.BackColor = System.Drawing.Color.White;
+            this.button243.ContextMenuStrip = this.CmsTeethStatus;
             this.button243.Location = new System.Drawing.Point(854, 334);
             this.button243.Name = "button243";
             this.button243.Size = new System.Drawing.Size(30, 15);
@@ -7481,6 +7739,7 @@
             // button244
             // 
             this.button244.BackColor = System.Drawing.Color.White;
+            this.button244.ContextMenuStrip = this.CmsTeethStatus;
             this.button244.Location = new System.Drawing.Point(148, 199);
             this.button244.Name = "button244";
             this.button244.Size = new System.Drawing.Size(30, 15);
@@ -7490,6 +7749,7 @@
             // button245
             // 
             this.button245.BackColor = System.Drawing.Color.White;
+            this.button245.ContextMenuStrip = this.CmsTeethStatus;
             this.button245.Location = new System.Drawing.Point(582, 453);
             this.button245.Name = "button245";
             this.button245.Size = new System.Drawing.Size(15, 30);
@@ -7499,6 +7759,7 @@
             // button246
             // 
             this.button246.BackColor = System.Drawing.Color.White;
+            this.button246.ContextMenuStrip = this.CmsTeethStatus;
             this.button246.Location = new System.Drawing.Point(854, 96);
             this.button246.Name = "button246";
             this.button246.Size = new System.Drawing.Size(30, 15);
@@ -7508,6 +7769,7 @@
             // button247
             // 
             this.button247.BackColor = System.Drawing.Color.White;
+            this.button247.ContextMenuStrip = this.CmsTeethStatus;
             this.button247.Location = new System.Drawing.Point(582, 215);
             this.button247.Name = "button247";
             this.button247.Size = new System.Drawing.Size(15, 30);
@@ -7517,6 +7779,7 @@
             // button248
             // 
             this.button248.BackColor = System.Drawing.Color.White;
+            this.button248.ContextMenuStrip = this.CmsTeethStatus;
             this.button248.Location = new System.Drawing.Point(276, 437);
             this.button248.Name = "button248";
             this.button248.Size = new System.Drawing.Size(30, 15);
@@ -7526,6 +7789,7 @@
             // button249
             // 
             this.button249.BackColor = System.Drawing.Color.White;
+            this.button249.ContextMenuStrip = this.CmsTeethStatus;
             this.button249.Location = new System.Drawing.Point(148, 96);
             this.button249.Name = "button249";
             this.button249.Size = new System.Drawing.Size(30, 15);
@@ -7535,6 +7799,7 @@
             // button250
             // 
             this.button250.BackColor = System.Drawing.Color.White;
+            this.button250.ContextMenuStrip = this.CmsTeethStatus;
             this.button250.Location = new System.Drawing.Point(582, 350);
             this.button250.Name = "button250";
             this.button250.Size = new System.Drawing.Size(15, 30);
@@ -7544,6 +7809,7 @@
             // button251
             // 
             this.button251.BackColor = System.Drawing.Color.White;
+            this.button251.ContextMenuStrip = this.CmsTeethStatus;
             this.button251.Location = new System.Drawing.Point(276, 199);
             this.button251.Name = "button251";
             this.button251.Size = new System.Drawing.Size(30, 15);
@@ -7553,6 +7819,7 @@
             // button252
             // 
             this.button252.BackColor = System.Drawing.Color.White;
+            this.button252.ContextMenuStrip = this.CmsTeethStatus;
             this.button252.Location = new System.Drawing.Point(598, 437);
             this.button252.Name = "button252";
             this.button252.Size = new System.Drawing.Size(30, 15);
@@ -7562,6 +7829,7 @@
             // button253
             // 
             this.button253.BackColor = System.Drawing.Color.White;
+            this.button253.ContextMenuStrip = this.CmsTeethStatus;
             this.button253.Location = new System.Drawing.Point(582, 112);
             this.button253.Name = "button253";
             this.button253.Size = new System.Drawing.Size(15, 30);
@@ -7571,6 +7839,7 @@
             // button254
             // 
             this.button254.BackColor = System.Drawing.Color.White;
+            this.button254.ContextMenuStrip = this.CmsTeethStatus;
             this.button254.Location = new System.Drawing.Point(276, 334);
             this.button254.Name = "button254";
             this.button254.Size = new System.Drawing.Size(30, 15);
@@ -7580,6 +7849,7 @@
             // button255
             // 
             this.button255.BackColor = System.Drawing.Color.White;
+            this.button255.ContextMenuStrip = this.CmsTeethStatus;
             this.button255.Location = new System.Drawing.Point(598, 199);
             this.button255.Name = "button255";
             this.button255.Size = new System.Drawing.Size(30, 15);
@@ -7589,6 +7859,7 @@
             // button256
             // 
             this.button256.BackColor = System.Drawing.Color.White;
+            this.button256.ContextMenuStrip = this.CmsTeethStatus;
             this.button256.Location = new System.Drawing.Point(276, 96);
             this.button256.Name = "button256";
             this.button256.Size = new System.Drawing.Size(30, 15);
@@ -7598,6 +7869,7 @@
             // button257
             // 
             this.button257.BackColor = System.Drawing.Color.White;
+            this.button257.ContextMenuStrip = this.CmsTeethStatus;
             this.button257.Location = new System.Drawing.Point(598, 334);
             this.button257.Name = "button257";
             this.button257.Size = new System.Drawing.Size(30, 15);
@@ -7607,6 +7879,7 @@
             // button258
             // 
             this.button258.BackColor = System.Drawing.Color.White;
+            this.button258.ContextMenuStrip = this.CmsTeethStatus;
             this.button258.Location = new System.Drawing.Point(4, 215);
             this.button258.Name = "button258";
             this.button258.Size = new System.Drawing.Size(15, 30);
@@ -7616,6 +7889,7 @@
             // button259
             // 
             this.button259.BackColor = System.Drawing.Color.White;
+            this.button259.ContextMenuStrip = this.CmsTeethStatus;
             this.button259.Location = new System.Drawing.Point(598, 96);
             this.button259.Name = "button259";
             this.button259.Size = new System.Drawing.Size(30, 15);
@@ -7625,6 +7899,7 @@
             // button260
             // 
             this.button260.BackColor = System.Drawing.Color.White;
+            this.button260.ContextMenuStrip = this.CmsTeethStatus;
             this.button260.Location = new System.Drawing.Point(20, 199);
             this.button260.Name = "button260";
             this.button260.Size = new System.Drawing.Size(30, 15);
@@ -7634,6 +7909,7 @@
             // button261
             // 
             this.button261.BackColor = System.Drawing.Color.White;
+            this.button261.ContextMenuStrip = this.CmsTeethStatus;
             this.button261.Location = new System.Drawing.Point(4, 112);
             this.button261.Name = "button261";
             this.button261.Size = new System.Drawing.Size(15, 30);
@@ -7643,6 +7919,7 @@
             // button262
             // 
             this.button262.BackColor = System.Drawing.Color.White;
+            this.button262.ContextMenuStrip = this.CmsTeethStatus;
             this.button262.Location = new System.Drawing.Point(20, 96);
             this.button262.Name = "button262";
             this.button262.Size = new System.Drawing.Size(30, 15);
@@ -9092,15 +9369,44 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
-            // BtnModifyTreatment
+            // CmsTeethStatus
             // 
-            this.BtnModifyTreatment.Location = new System.Drawing.Point(267, 3);
-            this.BtnModifyTreatment.Name = "BtnModifyTreatment";
-            this.BtnModifyTreatment.Size = new System.Drawing.Size(126, 40);
-            this.BtnModifyTreatment.TabIndex = 1;
-            this.BtnModifyTreatment.Text = "Modificar";
-            this.BtnModifyTreatment.UseVisualStyleBackColor = true;
-            this.BtnModifyTreatment.Click += new System.EventHandler(this.BtnModifyTreatment_Click);
+            this.CmsTeethStatus.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.CmsTeethStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.curadoToolStripMenuItem,
+            this.extraídoToolStripMenuItem,
+            this.cariesToolStripMenuItem,
+            this.ningunaToolStripMenuItem});
+            this.CmsTeethStatus.Name = "CmsTeethStatus";
+            this.CmsTeethStatus.Size = new System.Drawing.Size(211, 128);
+            // 
+            // curadoToolStripMenuItem
+            // 
+            this.curadoToolStripMenuItem.Name = "curadoToolStripMenuItem";
+            this.curadoToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.curadoToolStripMenuItem.Text = "Curado";
+            this.curadoToolStripMenuItem.Click += new System.EventHandler(this.CuradoToolStripMenuItem_Click);
+            // 
+            // extraídoToolStripMenuItem
+            // 
+            this.extraídoToolStripMenuItem.Name = "extraídoToolStripMenuItem";
+            this.extraídoToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.extraídoToolStripMenuItem.Text = "Extraído";
+            this.extraídoToolStripMenuItem.Click += new System.EventHandler(this.ExtraídoToolStripMenuItem_Click);
+            // 
+            // cariesToolStripMenuItem
+            // 
+            this.cariesToolStripMenuItem.Name = "cariesToolStripMenuItem";
+            this.cariesToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.cariesToolStripMenuItem.Text = "Caries";
+            this.cariesToolStripMenuItem.Click += new System.EventHandler(this.CariesToolStripMenuItem_Click);
+            // 
+            // ningunaToolStripMenuItem
+            // 
+            this.ningunaToolStripMenuItem.Name = "ningunaToolStripMenuItem";
+            this.ningunaToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.ningunaToolStripMenuItem.Text = "Ninguna";
+            this.ningunaToolStripMenuItem.Click += new System.EventHandler(this.NingunaToolStripMenuItem_Click);
             // 
             // FrmVisitManagement
             // 
@@ -9196,6 +9502,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvAccountReceivableList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBillOtherVisits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvItemsToBill)).EndInit();
+            this.CmsTeethStatus.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -9977,5 +10284,10 @@
         private System.Windows.Forms.Label LblTotalCavities;
         private System.Windows.Forms.Label LblTreatmentOdontogramId;
         private System.Windows.Forms.Button BtnModifyTreatment;
+        private System.Windows.Forms.ContextMenuStrip CmsTeethStatus;
+        private System.Windows.Forms.ToolStripMenuItem curadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem extraídoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cariesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ningunaToolStripMenuItem;
     }
 }
