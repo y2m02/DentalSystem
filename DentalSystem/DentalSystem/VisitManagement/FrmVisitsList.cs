@@ -99,7 +99,7 @@ namespace DentalSystem.VisitManagement
             DgvVisitList.Rows[0].Selected = true;
         }
 
-        private void BackToVisit()
+   private void BackToVisit(bool isDetail)
         {
             try
             {
@@ -114,10 +114,11 @@ namespace DentalSystem.VisitManagement
                 GenericProperties.VisitHasBeenBilled = visitHasBeenBilled;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService,_odontogramService,_treatmentOdontogramService)
+                    _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService, _odontogramService, _treatmentOdontogramService)
                 {
                     PatientId = PatientId,
                     PatientName = patientName,
+                    IsDetail = isDetail,
                     //VisitHasOdontograms = hasOdontograms,
                     DialogResult = DialogResult.None
                 };
@@ -134,7 +135,7 @@ namespace DentalSystem.VisitManagement
 
         private void BtnBackToVisit_Click(object sender, EventArgs e)
         {
-            BackToVisit();
+            BackToVisit(false);
         }
         private void InitializeButtons()
         {
@@ -147,6 +148,7 @@ namespace DentalSystem.VisitManagement
         }
         private void BtnVisitDetails_Click(object sender, EventArgs e)
         {
+            BackToVisit(true);
         }
 
         private void DgvVisitList_SelectionChanged(object sender, EventArgs e)
@@ -158,14 +160,14 @@ namespace DentalSystem.VisitManagement
         {
             if (DgvVisitList.RowCount == 0)
             {
-                BtnBackToVisit.Visible = true;
+                BtnBackToVisit.Visible = false;
                 BtnVisitDetails.Visible = false;
                 return;
             }
 
             var visitHasEnded = DgvVisitList.SelectedRows[0].Cells["HasEnded"].Value;
 
-            var visitHasFinished = (bool?) visitHasEnded ?? true;
+            var visitHasFinished = (bool?)visitHasEnded ?? true;
 
             BtnBackToVisit.Visible = !visitHasFinished;
             BtnVisitDetails.Visible = visitHasFinished;

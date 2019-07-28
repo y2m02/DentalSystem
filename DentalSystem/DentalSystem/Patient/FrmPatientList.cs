@@ -249,6 +249,7 @@ namespace DentalSystem.Patient
                 {
                     PatientId = patientId,
                     PatientName = patientName,
+                    IsDetail = false,
                     //VisitHasOdontograms = false,
                     DialogResult = DialogResult.None
                 };
@@ -289,6 +290,7 @@ namespace DentalSystem.Patient
                 {
                     PatientId = patientId,
                     PatientName = patientName,
+                    IsDetail = false,
                     DialogResult = DialogResult.None
                 };
                 frm.ShowDialog();

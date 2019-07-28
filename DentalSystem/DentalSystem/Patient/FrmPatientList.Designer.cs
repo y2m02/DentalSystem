@@ -42,16 +42,11 @@
             this.BtnVisits = new System.Windows.Forms.Button();
             this.BtnCreateVisit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LblTitle = new System.Windows.Forms.Label();
             this.BtnBackToVisit = new System.Windows.Forms.Button();
             this.BtnAccountReceivable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvPatientList
@@ -205,38 +200,6 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem,
-            this.cuentasPorCobrarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1264, 28);
-            this.menuStrip1.TabIndex = 26;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // opcionesToolStripMenuItem
-            // 
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem});
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.opcionesToolStripMenuItem.Text = "Opciones";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // cuentasPorCobrarToolStripMenuItem
-            // 
-            this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
-            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
-            this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
-            // 
             // LblTitle
             // 
             this.LblTitle.AutoSize = true;
@@ -279,7 +242,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.BtnAccountReceivable);
             this.Controls.Add(this.LblTitle);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.PnlSearch);
             this.Controls.Add(this.BtnBackToVisit);
             this.Controls.Add(this.BtnDelete);
@@ -300,8 +262,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).EndInit();
             this.PnlSearch.ResumeLayout(false);
             this.PnlSearch.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,10 +282,6 @@
         private System.Windows.Forms.Button BtnVisits;
         private System.Windows.Forms.Button BtnCreateVisit;
         private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.Button BtnBackToVisit;
         private System.Windows.Forms.Button BtnAccountReceivable;

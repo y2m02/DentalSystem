@@ -61,7 +61,36 @@ namespace DentalSystem.VisitManagement
         public int PatientId { get; set; }
 
         public string PatientName { get; set; }
+
+        public bool IsDetail { get; set; }
         //public bool VisitHasOdontograms { get; set; }
+
+        private void DisableAllButtons()
+        {
+            BtnSaveGeneralInfo.Enabled = false;
+            BtnModifyGeneralInfo.Enabled = false;
+            BtnCancelGeneralInfo.Enabled = false;
+
+            BtnNewOdontogram.Enabled = false;
+            BtnSaveOdontogram.Enabled = false;
+
+            BtnSaveTreatment.Enabled = false;
+            BtnModifyTreatment.Enabled = false;
+            BtnCancelTreatment.Enabled = false;
+
+            BtnSaveRegistration.Enabled = false;
+            BtnModifyRegistration.Enabled = false;
+            BtnCancelRegistration.Enabled = false;
+
+            BtnAddPayment.Enabled = false;
+            BtnDeletePayment.Enabled = false;
+
+            BtnEndInvoice.Enabled = false;
+            BtnEndVisit.Enabled = false;
+
+            //SetInitialOdontogramButtonsStatus(false);
+            //SetTreatmentOdontogramButtonsStatus(false);
+        }
 
         private void FrmVisitManagement_Load(object sender, EventArgs e)
         {
@@ -79,6 +108,17 @@ namespace DentalSystem.VisitManagement
                 PnlPlateRegistration);
             SetOdontogramBtnNames();
             GetInitialOdontogramInformation();
+
+            if (!IsDetail) return;
+
+            GetTreatmentOdontogramInformation();
+
+            GetInvoiceLists();
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+            var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
+            LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+
+            DisableAllButtons();
         }
 
         private void FrmVisitManagement_SizeChanged(object sender, EventArgs e)
@@ -102,6 +142,7 @@ namespace DentalSystem.VisitManagement
         {
             TclVisitManagement.SelectedIndex = 2;
             ChangeButtonSelectedStatus(BtnTreatmentOdontogram);
+            if (IsDetail) return;
             GetTreatmentOdontogramInformation();
         }
 
@@ -115,6 +156,7 @@ namespace DentalSystem.VisitManagement
         {
             TclVisitManagement.SelectedIndex = 4;
             ChangeButtonSelectedStatus(BtnInvoice);
+            if (IsDetail) return;
             GetInvoiceLists();
             var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
@@ -128,6 +170,7 @@ namespace DentalSystem.VisitManagement
             switch (TclVisitManagement.SelectedIndex)
             {
                 case 0:
+                    TclVisitManagement.TabPages[0].BackColor = Color.Red;
                     ChangeButtonSelectedStatus(BtnGeneralInfo);
                     break;
                 case 1:
@@ -135,6 +178,8 @@ namespace DentalSystem.VisitManagement
                     break;
                 case 2:
                     ChangeButtonSelectedStatus(BtnTreatmentOdontogram);
+                    if (IsDetail) return;
+
                     GetTreatmentOdontogramInformation();
                     break;
                 case 3:
@@ -142,6 +187,7 @@ namespace DentalSystem.VisitManagement
                     break;
                 case 4:
                     ChangeButtonSelectedStatus(BtnInvoice);
+                    if (IsDetail) return;
                     GetInvoiceLists();
                     var invoiceDetailsCurrentVisit =
                         (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
@@ -523,6 +569,11 @@ namespace DentalSystem.VisitManagement
         private void FrmVisitManagement_Activated(object sender, EventArgs e)
         {
             ListActivitiesPerformed();
+
+            if (!IsDetail) return;
+            btnAddActivity.Enabled = false;
+            BtnModifyActivity.Enabled = false;
+            BtnDeleteActivity.Enabled = false;
         }
 
         private void BtnDeleteActivity_Click(object sender, EventArgs e)
@@ -629,7 +680,7 @@ namespace DentalSystem.VisitManagement
             try
             {
                 var result = MessageBox.Show(
-                    "Está a punto de finalizar esta visita. Una vez ejecute esta acción, solo podrá realizar abonos a través del módulo \"Cuentas por cobrar\"",
+                    "Está a punto de finalizar esta visita. Una vez ejecute esta acción, solo podrá realizar abonos a través del botón \"Ver deudas\" en el listado de pacientes",
                     "Información",
                     MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Warning);
@@ -661,7 +712,7 @@ namespace DentalSystem.VisitManagement
         {
             try
             {
-                if (!_isClosing)
+                if (!_isClosing && !IsDetail)
                 {
                     var result = MessageBox.Show("¿Desea salir sin finalizar la visita?", "Información",
                         MessageBoxButtons.YesNo,
@@ -1133,8 +1184,8 @@ namespace DentalSystem.VisitManagement
                 return;
             }
 
-            BtnModifyRegistration.Visible = false;
             BtnSaveRegistration.Visible = true;
+            BtnModifyRegistration.Visible = false;
 
             SetControlsStatus(true, PnlPlateRegistration);
         }
@@ -1149,8 +1200,9 @@ namespace DentalSystem.VisitManagement
                         "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
                         "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    BtnSaveRegistration.Visible = false;
                     BtnModifyRegistration.Visible = true;
+                    BtnSaveRegistration.Visible = false;
+                  
                     SetControlsStatus(false, PnlPlateRegistration);
                     return;
                 }
@@ -1174,8 +1226,9 @@ namespace DentalSystem.VisitManagement
 
                 _plateRegistrationService.UpdatePlateRegistration(updatePlateRegistrationRequest);
 
-                BtnSaveRegistration.Visible = false;
                 BtnModifyRegistration.Visible = true;
+                BtnSaveRegistration.Visible = false;
+        
                 SetControlsStatus(false, PnlPlateRegistration);
 
                 Cursor.Current = Cursors.Default;
@@ -1191,8 +1244,9 @@ namespace DentalSystem.VisitManagement
         private void BtnCancelRegistration_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.None;
-            BtnSaveRegistration.Visible = false;
             BtnModifyRegistration.Visible = true;
+            BtnSaveRegistration.Visible = false;
+           
             SetControlsStatus(false, PnlPlateRegistration);
         }
 
@@ -1405,8 +1459,9 @@ namespace DentalSystem.VisitManagement
 
                 SetTreatmentOdontogramButtonsStatus(false);
 
-                BtnSaveTreatment.Visible = false;
                 BtnModifyTreatment.Visible = true;
+                BtnSaveTreatment.Visible = false;
+             
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -1569,8 +1624,9 @@ namespace DentalSystem.VisitManagement
                 return;
             }
 
-            BtnModifyTreatment.Visible = false;
             BtnSaveTreatment.Visible = true;
+            BtnModifyTreatment.Visible = false;
+          
             SetTreatmentOdontogramButtonsStatus(true);
         }
 
@@ -1625,8 +1681,9 @@ namespace DentalSystem.VisitManagement
 
                 _treatmentOdontogramService.UpdateTreatmentOdontogram(updateTreatmentOdontogramRequest);
 
-                BtnSaveTreatment.Visible = false;
                 BtnModifyTreatment.Visible = true;
+                BtnSaveTreatment.Visible = false;
+              
                 SetTreatmentOdontogramButtonsStatus(false);
                 Cursor.Current = Cursors.Default;
             }
