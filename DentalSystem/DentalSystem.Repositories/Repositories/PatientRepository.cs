@@ -10,6 +10,24 @@ namespace DentalSystem.Repositories.Repositories
 {
     public class PatientRepository : IPatientRepository
     {
+        public Patient GetPatientInformation(int patientId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var patient = context.Patients
+                    .Include(w => w.Visits)
+                    .Include(w => w.Visits.Select(c => c.Odontograms))
+                    .Include(w => w.Visits.Select(c => c.Odontograms.Select(x => x.TreatmentOdontogram)))
+                    .Include(w => w.Visits.Select(c => c.ActivitiesPerformed))
+                    .Include(w => w.Visits.Select(c => c.ActivitiesPerformed.Select(x => x.InvoiceDetail)))
+                    .Include(w => w.PatientHealth)
+                    .Include(w => w.PlateRegistration)
+                    .FirstOrDefault(w => w.PatientId == patientId && w.DeletedOn == null);
+
+                return patient;
+            }
+        }
+
         public Patient GetPatientById(int patientId)
         {
             using (var context = new DentalSystemContext())
@@ -85,6 +103,7 @@ namespace DentalSystem.Repositories.Repositories
                             break;
                     }
             }
+
             return patients;
         }
     }

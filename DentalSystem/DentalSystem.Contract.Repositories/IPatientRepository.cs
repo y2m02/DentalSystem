@@ -6,6 +6,7 @@ namespace DentalSystem.Contract.Repositories
     public interface IPatientRepository
     {
         List<Patient> GetAllPatients(string filter, bool isFilterByName);
+        Patient GetPatientInformation(int patientId);
         Patient GetPatientById(int patientId);
         void AddPatient(Patient patient);
         void UpdatePatient(Patient patient);

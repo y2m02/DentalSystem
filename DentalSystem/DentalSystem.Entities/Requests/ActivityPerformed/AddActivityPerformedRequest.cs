@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using AutoMapper;
 using DentalSystem.Entities.Requests.InvoiceDetail;
 
 namespace DentalSystem.Entities.Requests.ActivityPerformed
@@ -11,7 +11,8 @@ namespace DentalSystem.Entities.Requests.ActivityPerformed
         public int Section { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
+        public IMapper Mapper { get; set; }
 
-        public AddInvoiceDetailRequest InvoiceDetail{ get; set; }
+        public AddInvoiceDetailRequest InvoiceDetail { get; set; }
     }
 }

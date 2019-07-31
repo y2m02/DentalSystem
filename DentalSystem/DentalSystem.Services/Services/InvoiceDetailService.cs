@@ -26,8 +26,8 @@ namespace DentalSystem.Services.Services
             var result = _invoiceDetailRepository.GetInvoiceDetailByVisitId(request.VisitId);
             var itemsToBill = request.Mapper.Map<List<GetInvoiceDetailByVisitIdResultModel>>(result);
 
-            var resultFromOtherVisits = _invoiceDetailRepository.GetInvoiceDetailFromOtherVisits(request.VisitId, request.PatientId);
-            var invoiceDetailFromOtherVisits = request.Mapper.Map<List<GetInvoiceDetailFromOtherVisitsResultModel>>(resultFromOtherVisits);
+            //var resultFromOtherVisits = _invoiceDetailRepository.GetInvoiceDetailFromOtherVisits(request.VisitId, request.PatientId);
+            //var invoiceDetailFromOtherVisits = request.Mapper.Map<List<GetInvoiceDetailFromOtherVisitsResultModel>>(resultFromOtherVisits);
 
             var resultGetAccountsReceivableByPatientId = _accountReceivableRepository.GetAccountsReceivableByPatientId(request.PatientId);
             var accountsReceivable = request.Mapper.Map<List<GetAccountsReceivableByPatientIdResultModel>>(resultGetAccountsReceivableByPatientId);
@@ -38,7 +38,7 @@ namespace DentalSystem.Services.Services
             {
                 ItemsToBill = itemsToBill,
                 AccountsReceivable = accountsReceivable,
-                InvoiceDetailFromOtherVisits = invoiceDetailFromOtherVisits,
+                //InvoiceDetailFromOtherVisits = invoiceDetailFromOtherVisits,
                 VisitHasBeenBilled = hasBeenBilled
             };
 

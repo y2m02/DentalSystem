@@ -90,6 +90,7 @@
     <Compile Include="Requests\Patient\DeletePatientRequest.cs" />
     <Compile Include="Requests\Patient\GetPatientByIdRequest.cs" />
     <Compile Include="Requests\PatientHealth\UpdatePatientHealthRequest.cs" />
+    <Compile Include="Requests\Patient\GetPatientInformationRequest.cs" />
     <Compile Include="Requests\Patient\UpdatePatientRequest.cs" />
     <Compile Include="Requests\Payment\AddPaymentRequest.cs" />
     <Compile Include="Requests\Payment\DeletePaymentRequest.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Results\Odontogram\ValidateIfVisitHasOdontogramsResult.cs" />
     <Compile Include="Results\Patient\GetAllPatientsResult.cs" />
     <Compile Include="Results\Patient\GetPatientByIdResult.cs" />
+    <Compile Include="Results\Patient\GetPatientInformationResult.cs" />
     <Compile Include="Results\Payment\AddPaymentResult.cs" />
     <Compile Include="Results\Payment\DeletePaymentResult.cs" />
     <Compile Include="Results\Payment\GetPaymentsByAccountReceivableIdResult.cs" />

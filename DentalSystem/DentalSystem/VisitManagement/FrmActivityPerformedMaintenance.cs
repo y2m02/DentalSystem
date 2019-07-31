@@ -6,6 +6,7 @@ using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.InvoiceDetail;
+using DentalSystem.Entities.Results.ActivityPerformed;
 
 namespace DentalSystem.VisitManagement
 {
@@ -27,13 +28,14 @@ namespace DentalSystem.VisitManagement
         public string Responsable { get; set; }
         public DateTime Date { get; set; }
         public bool IsCreate { get; set; }
+        public GetAllActivitiesPerformedResult ActivityList { get; set; }
 
         private void FrmActivityPerformedMaintenance_Load(object sender, EventArgs e)
         {
             BtnModifyActivity.Location = new Point(BtnSaveActivity.Location.X, BtnSaveActivity.Location.Y);
             BtnSaveActivity.Visible = IsCreate;
             BtnModifyActivity.Visible = !IsCreate;
-            DtpActivityDate.MaxDate = DateTime.Now;
+            //DtpActivityDate.MaxDate = DateTime.Now;
             var date = DateTime.Now.Date;
             if (IsCreate)
             {
@@ -93,10 +95,11 @@ namespace DentalSystem.VisitManagement
                     Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
                     Responsable = TxtActivityResponsable.Text,
-                    InvoiceDetail = addInvoiceDetailRequests
+                    InvoiceDetail = addInvoiceDetailRequests,
+                    Mapper = _iMapper
                 };
 
-                _activityPerformedService.AddActivityPerformed(_iMapper, addActivityPerformedRequest);
+                ActivityList = _activityPerformedService.AddActivityPerformed(addActivityPerformedRequest);
 
                 Close();
 
@@ -146,10 +149,11 @@ namespace DentalSystem.VisitManagement
                     Section = CbxSection.SelectedIndex + 1,
                     Date = DtpActivityDate.Value.Date,
                     Description = TxtActivityDescription.Text,
-                    Responsable = TxtActivityResponsable.Text
+                    Responsable = TxtActivityResponsable.Text,
+                    Mapper = _iMapper
                 };
 
-                _activityPerformedService.UpdateActivityPerformed(_iMapper, updateActivityPerformedRequest);
+                ActivityList = _activityPerformedService.UpdateActivityPerformed(updateActivityPerformedRequest);
 
                 Close();
 

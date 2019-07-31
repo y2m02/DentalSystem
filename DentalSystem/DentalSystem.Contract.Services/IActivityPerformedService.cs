@@ -1,16 +1,15 @@
-﻿using AutoMapper;
-using DentalSystem.Entities.Requests.ActivityPerformed;
+﻿using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Results.ActivityPerformed;
 
 namespace DentalSystem.Contract.Services
 {
     public interface IActivityPerformedService
     {
-        GetAllActivitiesPerformedResult GetAllActivitiesPerformed(IMapper iMapper,
-            GetAllActivitiesPerformedRequest request);
+        GetAllActivitiesPerformedResult GetAllActivitiesPerformed(GetAllActivitiesPerformedRequest request);
+        GetAllActivitiesPerformedResult GetOtherVisitActivitiesPerformed(GetAllActivitiesPerformedRequest request);
 
-        void AddActivityPerformed(IMapper iMapper, AddActivityPerformedRequest request);
-        void UpdateActivityPerformed(IMapper iMapper, UpdateActivityPerformedRequest request);
-        void DeleteActivityPerformed(DeleteActivityPerformedRequest request);
+        GetAllActivitiesPerformedResult AddActivityPerformed(AddActivityPerformedRequest request);
+        GetAllActivitiesPerformedResult UpdateActivityPerformed(UpdateActivityPerformedRequest request);
+        GetAllActivitiesPerformedResult DeleteActivityPerformed(DeleteActivityPerformedRequest request);
     }
 }

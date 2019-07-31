@@ -782,10 +782,10 @@
             this.BtnCancelRegistration = new System.Windows.Forms.Button();
             this.BtnModifyRegistration = new System.Windows.Forms.Button();
             this.BtnSaveRegistration = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.DgvActivitiesListHistory = new System.Windows.Forms.DataGridView();
             this.BtnDeleteActivity = new System.Windows.Forms.Button();
             this.BtnModifyActivity = new System.Windows.Forms.Button();
+            this.BtnListOtherVisitActivities = new System.Windows.Forms.Button();
             this.btnAddActivity = new System.Windows.Forms.Button();
             this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TabInvoice = new System.Windows.Forms.TabPage();
@@ -793,7 +793,6 @@
             this.BtnEndInvoice = new System.Windows.Forms.Button();
             this.BtnDeletePayment = new System.Windows.Forms.Button();
             this.BtnAddPayment = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
@@ -809,6 +808,7 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
+            this.BtnOtherVisitItemsToBill = new System.Windows.Forms.Button();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -8748,10 +8748,10 @@
             this.PnlActivitiesPerformed.Controls.Add(this.BtnCancelRegistration);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyRegistration);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnSaveRegistration);
-            this.PnlActivitiesPerformed.Controls.Add(this.label10);
             this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesListHistory);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnDeleteActivity);
             this.PnlActivitiesPerformed.Controls.Add(this.BtnModifyActivity);
+            this.PnlActivitiesPerformed.Controls.Add(this.BtnListOtherVisitActivities);
             this.PnlActivitiesPerformed.Controls.Add(this.btnAddActivity);
             this.PnlActivitiesPerformed.Controls.Add(this.DgvActivitiesList);
             this.PnlActivitiesPerformed.Location = new System.Drawing.Point(11, 30);
@@ -9049,17 +9049,6 @@
             this.BtnSaveRegistration.Visible = false;
             this.BtnSaveRegistration.Click += new System.EventHandler(this.BtnSaveRegistration_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(540, 22);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(418, 24);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "Actividades realizadas en visitas anteriores";
-            // 
             // DgvActivitiesListHistory
             // 
             this.DgvActivitiesListHistory.AllowUserToAddRows = false;
@@ -9101,6 +9090,17 @@
             this.BtnModifyActivity.Text = "Modificar";
             this.BtnModifyActivity.UseVisualStyleBackColor = true;
             this.BtnModifyActivity.Click += new System.EventHandler(this.BtnModifyActivity_Click);
+            // 
+            // BtnListOtherVisitActivities
+            // 
+            this.BtnListOtherVisitActivities.Location = new System.Drawing.Point(540, 6);
+            this.BtnListOtherVisitActivities.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnListOtherVisitActivities.Name = "BtnListOtherVisitActivities";
+            this.BtnListOtherVisitActivities.Size = new System.Drawing.Size(296, 41);
+            this.BtnListOtherVisitActivities.TabIndex = 5;
+            this.BtnListOtherVisitActivities.Text = "Listar actividades de las otras visitas";
+            this.BtnListOtherVisitActivities.UseVisualStyleBackColor = true;
+            this.BtnListOtherVisitActivities.Click += new System.EventHandler(this.BtnListOtherVisitActivities_Click);
             // 
             // btnAddActivity
             // 
@@ -9145,10 +9145,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnOtherVisitItemsToBill);
             this.panel1.Controls.Add(this.BtnEndInvoice);
             this.panel1.Controls.Add(this.BtnDeletePayment);
             this.panel1.Controls.Add(this.BtnAddPayment);
-            this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.LblTotalCurrentVisit);
@@ -9191,17 +9191,6 @@
             this.BtnAddPayment.Text = "Abonar";
             this.BtnAddPayment.UseVisualStyleBackColor = true;
             this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(544, 12);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(317, 24);
-            this.label17.TabIndex = 34;
-            this.label17.Text = "Actividades de visitas anteriores";
             // 
             // label18
             // 
@@ -9408,6 +9397,17 @@
             this.BtnEndVisit.UseVisualStyleBackColor = true;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
+            // BtnOtherVisitItemsToBill
+            // 
+            this.BtnOtherVisitItemsToBill.Location = new System.Drawing.Point(540, 3);
+            this.BtnOtherVisitItemsToBill.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnOtherVisitItemsToBill.Name = "BtnOtherVisitItemsToBill";
+            this.BtnOtherVisitItemsToBill.Size = new System.Drawing.Size(296, 33);
+            this.BtnOtherVisitItemsToBill.TabIndex = 41;
+            this.BtnOtherVisitItemsToBill.Text = "Listar actividades de las otras visitas";
+            this.BtnOtherVisitItemsToBill.UseVisualStyleBackColor = true;
+            this.BtnOtherVisitItemsToBill.Click += new System.EventHandler(this.BtnOtherVisitItemsToBill_Click);
+            // 
             // FrmVisitManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -9490,7 +9490,6 @@
             this.TabActivitiesPermormed.ResumeLayout(false);
             this.TabActivitiesPermormed.PerformLayout();
             this.PnlActivitiesPerformed.ResumeLayout(false);
-            this.PnlActivitiesPerformed.PerformLayout();
             this.PnlPlateRegistration.ResumeLayout(false);
             this.PnlPlateRegistration.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvActivitiesListHistory)).EndInit();
@@ -9584,12 +9583,10 @@
         private System.Windows.Forms.Label LblPatientNameTreatmentOdontogram;
         private System.Windows.Forms.Label LblPatientNameActivitiesPerformed;
         private System.Windows.Forms.Label LblPatientNameInvoice;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView DgvAccountReceivableList;
         private System.Windows.Forms.DataGridView DgvItemsToBill;
         private System.Windows.Forms.DataGridView DgvItemsToBillOtherVisits;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label LblTotalCurrentVisit;
         private System.Windows.Forms.Button BtnAddPayment;
@@ -10289,5 +10286,7 @@
         private System.Windows.Forms.ToolStripMenuItem extraídoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cariesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ningunaToolStripMenuItem;
+        private System.Windows.Forms.Button BtnListOtherVisitActivities;
+        private System.Windows.Forms.Button BtnOtherVisitItemsToBill;
     }
 }

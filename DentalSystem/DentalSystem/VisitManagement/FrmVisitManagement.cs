@@ -17,7 +17,10 @@ using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Requests.PlateRegistration;
 using DentalSystem.Entities.Requests.TreatmentOdontogram;
 using DentalSystem.Entities.Requests.Visit;
+using DentalSystem.Entities.Results.ActivityPerformed;
 using DentalSystem.Entities.Results.InvoiceDetail;
+using DentalSystem.Entities.Results.Odontogram;
+using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.PlateRegistration;
 using DentalSystem.Enum;
 using DentalSystem.Odontogram;
@@ -63,6 +66,8 @@ namespace DentalSystem.VisitManagement
         public string PatientName { get; set; }
 
         public bool IsDetail { get; set; }
+
+        //public GetPatientInformationResult PatientInformation { get; set; }
         //public bool VisitHasOdontograms { get; set; }
 
         private void DisableAllButtons()
@@ -94,10 +99,19 @@ namespace DentalSystem.VisitManagement
 
         private void FrmVisitManagement_Load(object sender, EventArgs e)
         {
+            var getPatientInformationRequest = new GetPatientInformationRequest
+            {
+                PatientId = PatientId,
+                VisitId = GenericProperties.VisitId,
+                Mapper = _iMapper
+            };
+
+            var patInfo = _patientService.GetPatientInformation(getPatientInformationRequest);
+
             InitializeControlPositions();
             SetInitialOdontogramButtonsFunctionality();
-            FillInformation();
-            DtpBirthDate.MaxDate = DtpAdmissionDate.MaxDate = DateTime.Now;
+            FillInformation(patInfo.PatientInformation);
+            //DtpBirthDate.MaxDate = DtpAdmissionDate.MaxDate = DateTime.Now;
             TxtAdmissionDate.Text = DtpAdmissionDate.Value.ToString("dd/MM/yyyy");
             TxtBirthDate.Text = DtpBirthDate.Value.ToString("dd/MM/yyyy");
             TxtAge.Text = NudAge.Text;
@@ -107,7 +121,9 @@ namespace DentalSystem.VisitManagement
             SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth,
                 PnlPlateRegistration);
             SetOdontogramBtnNames();
-            GetInitialOdontogramInformation();
+            GetInitialOdontogramInformation(patInfo.Odontogram);
+            ListActivitiesPerformed(patInfo.VisitActivities.Any() ? patInfo.VisitActivities : new List<GetAllActivitiesPerformedResultModel>());
+            FillPlateRegistrationInformation(patInfo.PlateRegistration);
 
             if (!IsDetail) return;
 
@@ -116,7 +132,7 @@ namespace DentalSystem.VisitManagement
             GetInvoiceLists();
             var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-            LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+            LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
 
             DisableAllButtons();
         }
@@ -157,10 +173,11 @@ namespace DentalSystem.VisitManagement
             TclVisitManagement.SelectedIndex = 4;
             ChangeButtonSelectedStatus(BtnInvoice);
             if (IsDetail) return;
+
             GetInvoiceLists();
             var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-            LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+            LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
             BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
         }
@@ -170,7 +187,6 @@ namespace DentalSystem.VisitManagement
             switch (TclVisitManagement.SelectedIndex)
             {
                 case 0:
-                    TclVisitManagement.TabPages[0].BackColor = Color.Red;
                     ChangeButtonSelectedStatus(BtnGeneralInfo);
                     break;
                 case 1:
@@ -188,11 +204,12 @@ namespace DentalSystem.VisitManagement
                 case 4:
                     ChangeButtonSelectedStatus(BtnInvoice);
                     if (IsDetail) return;
+
                     GetInvoiceLists();
                     var invoiceDetailsCurrentVisit =
                         (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-                    LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+                    LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
                     BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
                     break;
@@ -441,16 +458,17 @@ namespace DentalSystem.VisitManagement
             TxtRadiographicInterpretation.Text = result.RadiographicInterpretation;
         }
 
-        private void FillInformation()
+        private void FillInformation(GetPatientByIdResult patientInfoResult)
         {
             try
             {
-                var getPatientByIdRequest = new GetPatientByIdRequest
-                {
-                    PatientId = PatientId
-                };
                 Cursor.Current = Cursors.WaitCursor;
-                var patientInfoResult = _patientService.GetPatientById(_iMapper, getPatientByIdRequest);
+                //var getPatientByIdRequest = new GetPatientByIdRequest
+                //{
+                //    PatientId = PatientId
+                //};
+                //Cursor.Current = Cursors.WaitCursor;
+                //var patientInfoResult = _patientService.GetPatientById(_iMapper, getPatientByIdRequest);
 
                 TxtName.Text = patientInfoResult.FullName;
                 TxtIdentificationCard.Text = patientInfoResult.IdentificationCard;
@@ -486,7 +504,6 @@ namespace DentalSystem.VisitManagement
                 ChkHasBeenSickRecently.Checked = patientInfoResult.HasBeenSickRecently.Value;
                 TxtDiseaseCause.Text = patientInfoResult.DiseaseCause;
 
-                FillPlateRegistrationInformation(patientInfoResult.PlateRegistration);
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -514,22 +531,22 @@ namespace DentalSystem.VisitManagement
             TxtAge.Text = NudAge.Text;
         }
 
-        private void ListActivitiesPerformed()
+        private void ListActivitiesPerformed(List<GetAllActivitiesPerformedResultModel> activities)
         {
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
-                {
-                    PatientId = PatientId,
-                    VisitId = GenericProperties.VisitId
-                };
+                //var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
+                //{
+                //    PatientId = PatientId,
+                //    VisitId = GenericProperties.VisitId
+                //};
 
-                var activities =
-                    _activityPerformedService.GetAllActivitiesPerformed(_iMapper, getAllActivitiesPerformedRequest);
-                DgvActivitiesList.DataSource = activities.VisitActivities;
-                DgvActivitiesListHistory.DataSource = activities.PatientActivities;
+                //var activities =
+                //    _activityPerformedService.GetAllActivitiesPerformed(_iMapper, getAllActivitiesPerformedRequest);
+                DgvActivitiesList.DataSource = activities;
+                DgvActivitiesListHistory.DataSource = new List<GetAllActivitiesPerformedResultModel>();
 
                 NameGridHeader(DgvActivitiesList, DgvActivitiesListHistory);
                 InitializeModifyAndDeleteButtons();
@@ -566,10 +583,21 @@ namespace DentalSystem.VisitManagement
             dgvHistory.Columns["InvoiceDetailId"].Visible = false;
         }
 
+        private static void NameOtherVisitActivitiesGridHeader(DataGridView dgvHistory)
+        {
+            if (dgvHistory == null) return;
+
+            dgvHistory.Columns["ActivityPerformedId"].Visible = false;
+            dgvHistory.Columns["VisitNumber"].HeaderText = "# visita";
+            dgvHistory.Columns["Section"].HeaderText = "Sección de trabajo";
+            dgvHistory.Columns["Description"].HeaderText = "Actividad realizada";
+            dgvHistory.Columns["Responsable"].HeaderText = "Responsable";
+            dgvHistory.Columns["Date"].HeaderText = "Fecha";
+            dgvHistory.Columns["InvoiceDetailId"].Visible = false;
+        }
+
         private void FrmVisitManagement_Activated(object sender, EventArgs e)
         {
-            ListActivitiesPerformed();
-
             if (!IsDetail) return;
             btnAddActivity.Enabled = false;
             BtnModifyActivity.Enabled = false;
@@ -603,11 +631,14 @@ namespace DentalSystem.VisitManagement
                 var deleteActivityPerformedRequest = new DeleteActivityPerformedRequest
                 {
                     ActivityPerformedId = id,
-                    InvoiceDetailId = invoiceDetailId
+                    InvoiceDetailId = invoiceDetailId,
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
                 };
 
-                _activityPerformedService.DeleteActivityPerformed(deleteActivityPerformedRequest);
-                ListActivitiesPerformed();
+                var activities = _activityPerformedService.DeleteActivityPerformed(deleteActivityPerformedRequest);
+
+                ListActivitiesPerformed(activities.VisitActivities);
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -643,6 +674,26 @@ namespace DentalSystem.VisitManagement
                 DialogResult = DialogResult.None
             };
             frm.ShowDialog();
+
+            GetAllActivitiesPerformedResult activities;
+
+            if (frm.ActivityList == null)
+            {
+                var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
+                {
+                    PatientId = PatientId,
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
+                };
+
+                activities = _activityPerformedService.GetAllActivitiesPerformed(getAllActivitiesPerformedRequest);
+            }
+            else
+            {
+                activities = frm.ActivityList;
+            }
+
+            ListActivitiesPerformed(activities.VisitActivities);
         }
 
         private void BtnModifyActivity_Click(object sender, EventArgs e)
@@ -673,6 +724,26 @@ namespace DentalSystem.VisitManagement
                 DialogResult = DialogResult.None
             };
             frm.ShowDialog();
+
+            GetAllActivitiesPerformedResult activities;
+
+            if (frm.ActivityList == null)
+            {
+                var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
+                {
+                    PatientId = PatientId,
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
+                };
+
+                activities = _activityPerformedService.GetAllActivitiesPerformed(getAllActivitiesPerformedRequest);
+            }
+            else
+            {
+                activities = frm.ActivityList;
+            }
+
+            ListActivitiesPerformed(activities.VisitActivities);
         }
 
         private void BtnEndVisit_Click(object sender, EventArgs e)
@@ -752,7 +823,7 @@ namespace DentalSystem.VisitManagement
                     _invoiceDetailService.GetInvoiceDetailByVisitId(getInvoiceDetailByVisitIdRequest);
                 DgvItemsToBill.DataSource = invoiceLists.ItemsToBill;
 
-                DgvItemsToBillOtherVisits.DataSource = invoiceLists.InvoiceDetailFromOtherVisits;
+                DgvItemsToBillOtherVisits.DataSource = new List<GetInvoiceDetailFromOtherVisitsResultModel>();
                 DgvAccountReceivableList.DataSource = invoiceLists.AccountsReceivable;
 
                 NameItemsToBillGridHeader(DgvItemsToBill, DgvItemsToBillOtherVisits);
@@ -797,6 +868,16 @@ namespace DentalSystem.VisitManagement
             dgvOtherVisits.Columns["Price"].HeaderText = "Monto";
         }
 
+        private static void NameOtherVisitItemsToBillGridHeader(DataGridView dgvOtherVisits)
+        {
+            if (dgvOtherVisits == null) return;
+            dgvOtherVisits.Columns["InvoiceDetailId"].Visible = false;
+            dgvOtherVisits.Columns["VisitNumber"].HeaderText = "# visita";
+            dgvOtherVisits.Columns["ActivityPerformed"].HeaderText = "Actividad";
+            dgvOtherVisits.Columns["Section"].HeaderText = "Sección";
+            dgvOtherVisits.Columns["Price"].HeaderText = "Monto";
+        }
+
         private void DgvItemsToBill_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             if (e.ColumnIndex != 3) return;
@@ -833,7 +914,7 @@ namespace DentalSystem.VisitManagement
 
                 var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                 var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-                LblTotalCurrentVisit.Text = "Monto total de esta visita: RD$" + totalCurrentVisit;
+                LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
 
                 Cursor.Current = Cursors.Default;
             }
@@ -916,7 +997,7 @@ namespace DentalSystem.VisitManagement
 
                 if (result != DialogResult.OK) return;
 
-                var total = Convert.ToInt32(LblTotalCurrentVisit.Text.Split('$')[1]);
+                var total = Convert.ToInt32(LblTotalCurrentVisit.Text.Split('$')[1].Replace(",", "").Replace(".00", ""));
 
                 var setVisitAsBilled = new SetVisitAsBilledRequest
                 {
@@ -1202,7 +1283,7 @@ namespace DentalSystem.VisitManagement
 
                     BtnModifyRegistration.Visible = true;
                     BtnSaveRegistration.Visible = false;
-                  
+
                     SetControlsStatus(false, PnlPlateRegistration);
                     return;
                 }
@@ -1228,7 +1309,7 @@ namespace DentalSystem.VisitManagement
 
                 BtnModifyRegistration.Visible = true;
                 BtnSaveRegistration.Visible = false;
-        
+
                 SetControlsStatus(false, PnlPlateRegistration);
 
                 Cursor.Current = Cursors.Default;
@@ -1246,7 +1327,7 @@ namespace DentalSystem.VisitManagement
             DialogResult = DialogResult.None;
             BtnModifyRegistration.Visible = true;
             BtnSaveRegistration.Visible = false;
-           
+
             SetControlsStatus(false, PnlPlateRegistration);
         }
 
@@ -1391,26 +1472,27 @@ namespace DentalSystem.VisitManagement
             if (sender is Button button) button.BackColor = button.BackColor;
         }
 
-        private void GetInitialOdontogramInformation()
+        private void GetInitialOdontogramInformation(GetOdontogramByVisitIdResultModel odontogramResult)
         {
             try
             {
-                var getOdontogramByVisitIdRequest = new GetOdontogramByVisitIdRequest
-                {
-                    VisitId = GenericProperties.VisitId,
-                    Mapper = _iMapper
-                };
-
                 Cursor.Current = Cursors.WaitCursor;
-                var odontogramResult = _odontogramService.GetOdontogramByVisitId(getOdontogramByVisitIdRequest);
+                //var getOdontogramByVisitIdRequest = new GetOdontogramByVisitIdRequest
+                //{
+                //    VisitId = GenericProperties.VisitId,
+                //    Mapper = _iMapper
+                //};
 
-                LblOdontogramId.Text = odontogramResult.Odontogram.OdontogramId.ToString();
-                if (odontogramResult.Odontogram.HasInformation)
+                //Cursor.Current = Cursors.WaitCursor;
+                //var odontogramResult = _odontogramService.GetOdontogramByVisitId(getOdontogramByVisitIdRequest);
+
+                LblOdontogramId.Text = odontogramResult.OdontogramId.ToString();
+                if (odontogramResult.HasInformation)
                 {
                     BtnSaveOdontogram.Visible = false;
-                    LblTotalCavities.Text = $"Total de caries: {odontogramResult.Odontogram.CavitiesQuantity}";
+                    LblTotalCavities.Text = $"Total de caries: {odontogramResult.CavitiesQuantity}";
                     var buttonList =
-                        JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult.Odontogram
+                        JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult
                             .Information);
                     SetInitialOdontogramButtonColors(buttonList);
 
@@ -1461,7 +1543,7 @@ namespace DentalSystem.VisitManagement
 
                 BtnModifyTreatment.Visible = true;
                 BtnSaveTreatment.Visible = false;
-             
+
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -1626,7 +1708,7 @@ namespace DentalSystem.VisitManagement
 
             BtnSaveTreatment.Visible = true;
             BtnModifyTreatment.Visible = false;
-          
+
             SetTreatmentOdontogramButtonsStatus(true);
         }
 
@@ -1658,10 +1740,17 @@ namespace DentalSystem.VisitManagement
                         ButtonNumber = buttonCount,
                         ButtonName = button.Name,
                         HasCavities = button.BackColor == Color.Red,
-                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities :
-                            button.BackColor == Color.Blue ? (int)TeethStatus.WasCured :
-                            button.BackColor == Color.White && button.BackgroundImage != null ? (int)TeethStatus.WasExtracted :
-                            0
+                        TeethStatus = button.BackColor == Color.Red
+                            ? (int)TeethStatus.HasCavities
+                            :
+                            button.BackColor == Color.Blue
+                                ? (int)TeethStatus.WasCured
+                                :
+                                button.BackColor == Color.White && button.BackgroundImage != null
+                                    ?
+                                    (int)TeethStatus.WasExtracted
+                                    :
+                                    0
                     });
 
                     if (button.BackColor == Color.Red) cavitiesQuantity++;
@@ -1683,7 +1772,7 @@ namespace DentalSystem.VisitManagement
 
                 BtnModifyTreatment.Visible = true;
                 BtnSaveTreatment.Visible = false;
-              
+
                 SetTreatmentOdontogramButtonsStatus(false);
                 Cursor.Current = Cursors.Default;
             }
@@ -1717,11 +1806,14 @@ namespace DentalSystem.VisitManagement
                 if (!(control is Button btn)) continue;
                 var btnName = btn.Name.Split('_')[0] + "_" + btn.Name.Split('_')[1];
                 var btnFamilyNumber = button.Name.Split('_')[1];
-                string[] btnNames = { $"BtnToothCenterT_{btnFamilyNumber}",
+                string[] btnNames =
+                {
+                    $"BtnToothCenterT_{btnFamilyNumber}",
                     $"BtnToothTopT_{btnFamilyNumber}",
                     $"BtnToothBottomT_{btnFamilyNumber}",
                     $"BtnToothRightT_{btnFamilyNumber}",
-                    $"BtnToothLeftT_{btnFamilyNumber}" };
+                    $"BtnToothLeftT_{btnFamilyNumber}"
+                };
 
                 if (!btnNames.Contains(btnName)) continue;
 
@@ -1756,17 +1848,76 @@ namespace DentalSystem.VisitManagement
                 if (!(control is Button btn)) continue;
                 var btnName = btn.Name.Split('_')[0] + "_" + btn.Name.Split('_')[1];
                 var btnFamilyNumber = button.Name.Split('_')[1];
-                string[] btnNames = { $"BtnToothCenterT_{btnFamilyNumber}",
+                string[] btnNames =
+                {
+                    $"BtnToothCenterT_{btnFamilyNumber}",
                     $"BtnToothTopT_{btnFamilyNumber}",
                     $"BtnToothBottomT_{btnFamilyNumber}",
                     $"BtnToothRightT_{btnFamilyNumber}",
-                    $"BtnToothLeftT_{btnFamilyNumber}" };
+                    $"BtnToothLeftT_{btnFamilyNumber}"
+                };
 
                 if (!btnNames.Contains(btnName)) continue;
                 if (btn.BackgroundImage == null) continue;
 
                 btn.BackColor = Color.White;
                 btn.BackgroundImage = null;
+            }
+        }
+
+        private void BtnListOtherVisitActivities_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var getAllActivitiesPerformedRequest = new GetAllActivitiesPerformedRequest
+                {
+                    PatientId = PatientId,
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
+                };
+
+                var activities =
+                    _activityPerformedService.GetOtherVisitActivitiesPerformed(getAllActivitiesPerformedRequest);
+                DgvActivitiesListHistory.DataSource = activities.PatientActivities;
+
+                NameOtherVisitActivitiesGridHeader(DgvActivitiesListHistory);
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnOtherVisitItemsToBill_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var getInvoiceDetailFromOtherVisitsRequest = new GetInvoiceDetailFromOtherVisitsRequest
+                {
+                    PatientId = PatientId,
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
+                };
+
+                var activities =
+                    _invoiceDetailService.GetInvoiceDetailFromOtherVisits(getInvoiceDetailFromOtherVisitsRequest);
+                DgvItemsToBillOtherVisits.DataSource = activities.InvoiceDetailFromOtherVisits;
+
+                NameOtherVisitItemsToBillGridHeader(DgvItemsToBillOtherVisits);
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
     }

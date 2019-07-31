@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -9,6 +10,7 @@ using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.Visit;
+using DentalSystem.Entities.Results.Patient;
 using DentalSystem.MapperConfiguration;
 using DentalSystem.VisitManagement;
 
@@ -52,7 +54,8 @@ namespace DentalSystem.Patient
 
         private void FrmPatientList_Load(object sender, EventArgs e)
         {
-            ListPatients("", false);
+            var patients = _patientService.GetAllPatients(_iMapper, "", false);
+            ListPatients(patients);
         }
 
         private void FrmPatientList_SizeChanged(object sender, EventArgs e)
@@ -76,14 +79,14 @@ namespace DentalSystem.Patient
             //BtnBackToVisit.Location = new Point(BtnCreateVisit.Location.X, BtnCreateVisit.Location.Y);
         }
 
-        private void ListPatients(string filter, bool isFilterByName)
+        private void ListPatients(IReadOnlyCollection<GetAllPatientsResult> patientList)
         {
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
                 //_alreadyLoaded = false;
-                var patients = _patientService.GetAllPatients(_iMapper, filter, isFilterByName);
-                DgvPatientList.DataSource = patients;
+                //var patients = _patientService.GetAllPatients(_iMapper, filter, isFilterByName);
+                DgvPatientList.DataSource = patientList;
                 //_alreadyLoaded = true;
                 NameGridHeader(DgvPatientList);
 
@@ -118,13 +121,15 @@ namespace DentalSystem.Patient
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            ListPatients(TxtSearch.Text.Trim(), RbtName.Checked);
+            var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
+            ListPatients(patients);
         }
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
             TxtSearch.Clear();
-            ListPatients("", false);
+            var patients = _patientService.GetAllPatients(_iMapper, "", false);
+            ListPatients(patients);
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -135,7 +140,9 @@ namespace DentalSystem.Patient
             };
             frm.ShowDialog();
 
-            ListPatients("", false);
+            var patients = frm.PatientList ?? _patientService.GetAllPatients(_iMapper, "", false);
+
+            ListPatients(patients);
         }
 
         private void FrmPatientList_Activated(object sender, EventArgs e)
@@ -159,12 +166,13 @@ namespace DentalSystem.Patient
                 Cursor.Current = Cursors.WaitCursor;
                 var deletePatientRequest = new DeletePatientRequest
                 {
-                    PatientId = id
+                    PatientId = id,
+                    Mapper = _iMapper
                 };
 
-                _patientService.DeletePatient(deletePatientRequest);
+                var patients = _patientService.DeletePatient(deletePatientRequest);
 
-                ListPatients("", false);
+                ListPatients(patients);
 
                 Cursor.Current = Cursors.Default;
             }
@@ -255,7 +263,8 @@ namespace DentalSystem.Patient
                 };
                 frm.ShowDialog();
 
-                ListPatients("", false);
+                var patients = _patientService.GetAllPatients(_iMapper, "", false);
+                ListPatients(patients);
             }
             catch (Exception ex)
             {
@@ -295,7 +304,8 @@ namespace DentalSystem.Patient
                 };
                 frm.ShowDialog();
 
-                ListPatients("", false);
+                var patients = _patientService.GetAllPatients(_iMapper, "", false);
+                ListPatients(patients);
             }
             catch (Exception ex)
             {
@@ -373,7 +383,8 @@ namespace DentalSystem.Patient
                 };
                 frm.ShowDialog();
 
-                ListPatients("", false);
+                var patients = _patientService.GetAllPatients(_iMapper, "", false);
+                ListPatients(patients);
             }
             catch (Exception ex)
             {

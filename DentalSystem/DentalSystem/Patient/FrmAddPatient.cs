@@ -1,12 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
-using DentalSystem.Entities.GenericProperties;
-using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
+using DentalSystem.Entities.Results.Patient;
 
 namespace DentalSystem.Patient
 {
@@ -22,9 +22,11 @@ namespace DentalSystem.Patient
             InitializeComponent();
         }
 
+        public List<GetAllPatientsResult> PatientList { get; set; }
+
         private void FrmAddPatient_Load(object sender, EventArgs e)
         {
-            DtpBirthDate.MaxDate = DtpAdmissionDate.MaxDate = DateTime.Now;
+            //DtpBirthDate.MaxDate = DtpAdmissionDate.MaxDate = DateTime.Now;
 
             LblGeneralInfo.Location = new Point(
                 ClientSize.Width / 2 - LblGeneralInfo.Size.Width / 2,
@@ -33,9 +35,30 @@ namespace DentalSystem.Patient
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            var requiredFields = string.Empty;
+            var isValid = true;
+
             if (string.IsNullOrEmpty(TxtName.Text.Trim()))
             {
-                MessageBox.Show("El campo Nombre es requerido", "Información", MessageBoxButtons.OK,
+                isValid = false;
+                requiredFields = "\nEl campo Nombre es requerido.\n";
+            }
+
+            if (DtpBirthDate.Value.Date > DateTime.Now.Date)
+            {
+                isValid = false;
+                requiredFields += "\nLa fecha de nacimiento no puede ser mayor que la fecha actual.\n";
+            }
+
+            if (DtpAdmissionDate.Value.Date > DateTime.Now.Date)
+            {
+                isValid = false;
+                requiredFields += "\nLa fecha de registro no puede ser mayor que la fecha actual.";
+            }
+
+            if (!isValid)
+            {
+                MessageBox.Show("Validaciones:\n" + requiredFields, "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
                 return;
             }
@@ -70,16 +93,19 @@ namespace DentalSystem.Patient
                     AdmissionDate = DtpAdmissionDate.Value,
                     PhoneNumber = TxtPhoneNumber.Text.Trim(),
                     Sector = TxtSector.Text.Trim(),
-                    Age = (int)NudAge.Value,
+                    Age = (int) NudAge.Value,
                     BirthDate = DtpBirthDate.Value,
                     HasInsurancePlan = RbtInsuranceYes.Checked,
                     NSS = TxtNss.Text.Trim(),
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
-                    Gender = RbtMale.Checked ? "M" : "F"
+                    Gender = RbtMale.Checked ? "M" : "F",
+                    Mapper = _iMapper
                 };
 
-                _patientService.AddPatient(_iMapper, addPatient);
+                var patients = _patientService.AddPatient(addPatient);
+                PatientList = patients;
+
                 Cursor.Current = Cursors.Default;
                 Close();
             }
@@ -96,7 +122,12 @@ namespace DentalSystem.Patient
             var years = Convert.ToInt32(DateTime.Now.Year - DtpBirthDate.Value.Year);
             if (DtpBirthDate.Value > DateTime.Now.AddYears(-years)) years--;
 
-            NudAge.Value = years;
+            NudAge.Value = years < 0 ? 0 : years;
+
+            //var years = Convert.ToInt32(DateTime.Now.Year - DtpBirthDate.Value.Year);
+            //if (DtpBirthDate.Value > DateTime.Now.AddYears(-years)) years--;
+
+            //NudAge.Value = years;
         }
 
         private void ChkHasBeenSickRecently_CheckedChanged(object sender, EventArgs e)
@@ -111,10 +142,24 @@ namespace DentalSystem.Patient
 
         public void ValidateOnlyNumbers(KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Enter)) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
 
-            MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation);
             e.Handled = true;
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void DtpBirthDate_Leave(object sender, EventArgs e)
+        {
+            //var years = Convert.ToInt32(DateTime.Now.Year - DtpBirthDate.Value.Year);
+            //if (DtpBirthDate.Value > DateTime.Now.AddYears(-years)) years--;
+
+            //NudAge.Value = years < 0 ? 0 : years;
         }
     }
 }

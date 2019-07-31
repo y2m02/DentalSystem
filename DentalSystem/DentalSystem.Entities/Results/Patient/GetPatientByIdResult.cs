@@ -35,6 +35,6 @@ namespace DentalSystem.Entities.Results.Patient
         public bool? HasHepatitis { get; set; }
         public bool? HasAllergicReaction { get; set; }
 
-        public GetPlateRegistrationByPatientIdResult PlateRegistration { get; set; }
+        //public GetPlateRegistrationByPatientIdResult PlateRegistration { get; set; }
     }
 }

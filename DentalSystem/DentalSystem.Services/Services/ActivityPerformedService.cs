@@ -20,41 +20,79 @@ namespace DentalSystem.Services.Services
             _invoiceDetailRepository = invoiceDetailRepository;
         }
 
-        public GetAllActivitiesPerformedResult GetAllActivitiesPerformed(IMapper iMapper,
-            GetAllActivitiesPerformedRequest request)
+        public GetAllActivitiesPerformedResult GetAllActivitiesPerformed(GetAllActivitiesPerformedRequest request)
         {
             var result = _activityPerformedRepository.GetAllActivitiesPerformed(request.VisitId);
-            var visitActivities = iMapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
-
-            result = _activityPerformedRepository.GetAllActivitiesPerformedByPatientId(request.PatientId,
-                request.VisitId);
-            var patientActivities = iMapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
+            var visitActivities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
 
             var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
             {
-                VisitActivities = visitActivities,
+                VisitActivities = visitActivities
+            };
+
+            return getAllActivitiesPerformedResult;
+        }
+
+        public GetAllActivitiesPerformedResult GetOtherVisitActivitiesPerformed(GetAllActivitiesPerformedRequest request)
+        {
+           var result = _activityPerformedRepository.GetAllActivitiesPerformedByPatientId(request.PatientId,
+                request.VisitId);
+            var patientActivities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
+
+            var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
+            {
                 PatientActivities = patientActivities
             };
 
             return getAllActivitiesPerformedResult;
         }
 
-        public void AddActivityPerformed(IMapper iMapper, AddActivityPerformedRequest request)
+        public GetAllActivitiesPerformedResult AddActivityPerformed(AddActivityPerformedRequest request)
         {
-            var activityPerformed = iMapper.Map<ActivityPerformed>(request);
+            var activityPerformed = request.Mapper.Map<ActivityPerformed>(request);
             _activityPerformedRepository.AddActivityPerformed(activityPerformed);
+
+            var result = _activityPerformedRepository.GetAllActivitiesPerformed(request.VisitId);
+            var visitActivities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
+
+            var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
+            {
+                VisitActivities = visitActivities
+            };
+
+            return getAllActivitiesPerformedResult;
         }
 
-        public void UpdateActivityPerformed(IMapper iMapper, UpdateActivityPerformedRequest request)
+        public GetAllActivitiesPerformedResult UpdateActivityPerformed(UpdateActivityPerformedRequest request)
         {
-            var activity = iMapper.Map<ActivityPerformed>(request);
+            var activity = request.Mapper.Map<ActivityPerformed>(request);
             _activityPerformedRepository.UpdateActivityPerformed(activity);
+
+            var result = _activityPerformedRepository.GetAllActivitiesPerformed(request.VisitId);
+            var visitActivities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
+
+            var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
+            {
+                VisitActivities = visitActivities
+            };
+
+            return getAllActivitiesPerformedResult;
         }
 
-        public void DeleteActivityPerformed(DeleteActivityPerformedRequest request)
+        public GetAllActivitiesPerformedResult DeleteActivityPerformed(DeleteActivityPerformedRequest request)
         {
             _activityPerformedRepository.DeleteActivityPerformed(request.ActivityPerformedId);
             _invoiceDetailRepository.DeleteInvoiceDetail(request.InvoiceDetailId);
+
+            var result = _activityPerformedRepository.GetAllActivitiesPerformed(request.VisitId);
+            var visitActivities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result);
+
+            var getAllActivitiesPerformedResult = new GetAllActivitiesPerformedResult
+            {
+                VisitActivities = visitActivities
+            };
+
+            return getAllActivitiesPerformedResult;
         }
     }
 }

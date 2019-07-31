@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 
 namespace DentalSystem.Entities.Requests.ActivityPerformed
 {
@@ -10,5 +11,6 @@ namespace DentalSystem.Entities.Requests.ActivityPerformed
         public int Section { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
+        public IMapper Mapper { get; set; }
     }
 }
