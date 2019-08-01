@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVisitManagement));
             this.TclVisitManagement = new System.Windows.Forms.TabControl();
             this.TabGeneralInfo = new System.Windows.Forms.TabPage();
             this.PnlInformation = new System.Windows.Forms.Panel();
@@ -9332,6 +9333,7 @@
             // 
             // BtnGeneralInfo
             // 
+            this.BtnGeneralInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnGeneralInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnGeneralInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGeneralInfo.Location = new System.Drawing.Point(0, 0);
@@ -9339,62 +9341,67 @@
             this.BtnGeneralInfo.Size = new System.Drawing.Size(185, 62);
             this.BtnGeneralInfo.TabIndex = 0;
             this.BtnGeneralInfo.Text = "Datos generales";
-            this.BtnGeneralInfo.UseVisualStyleBackColor = true;
+            this.BtnGeneralInfo.UseVisualStyleBackColor = false;
             this.BtnGeneralInfo.Click += new System.EventHandler(this.BtnGeneralInfo_Click);
             // 
             // BtnInitialOdontogram
             // 
+            this.BtnInitialOdontogram.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BtnInitialOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnInitialOdontogram.Location = new System.Drawing.Point(0, 62);
             this.BtnInitialOdontogram.Name = "BtnInitialOdontogram";
             this.BtnInitialOdontogram.Size = new System.Drawing.Size(185, 62);
             this.BtnInitialOdontogram.TabIndex = 1;
             this.BtnInitialOdontogram.Text = "Odontograma inicial";
-            this.BtnInitialOdontogram.UseVisualStyleBackColor = true;
+            this.BtnInitialOdontogram.UseVisualStyleBackColor = false;
             this.BtnInitialOdontogram.Click += new System.EventHandler(this.BtnInitialOdontogram_Click);
             // 
             // BtnTreatmentOdontogram
             // 
+            this.BtnTreatmentOdontogram.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BtnTreatmentOdontogram.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnTreatmentOdontogram.Location = new System.Drawing.Point(0, 124);
             this.BtnTreatmentOdontogram.Name = "BtnTreatmentOdontogram";
             this.BtnTreatmentOdontogram.Size = new System.Drawing.Size(185, 62);
             this.BtnTreatmentOdontogram.TabIndex = 2;
             this.BtnTreatmentOdontogram.Text = "Odontograma tratamiento";
-            this.BtnTreatmentOdontogram.UseVisualStyleBackColor = true;
+            this.BtnTreatmentOdontogram.UseVisualStyleBackColor = false;
             this.BtnTreatmentOdontogram.Click += new System.EventHandler(this.BtnTreatmentOdontogram_Click);
             // 
             // BtnActivitiesPerformed
             // 
+            this.BtnActivitiesPerformed.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BtnActivitiesPerformed.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnActivitiesPerformed.Location = new System.Drawing.Point(0, 186);
             this.BtnActivitiesPerformed.Name = "BtnActivitiesPerformed";
             this.BtnActivitiesPerformed.Size = new System.Drawing.Size(185, 62);
             this.BtnActivitiesPerformed.TabIndex = 3;
             this.BtnActivitiesPerformed.Text = "Actividades realizadas";
-            this.BtnActivitiesPerformed.UseVisualStyleBackColor = true;
+            this.BtnActivitiesPerformed.UseVisualStyleBackColor = false;
             this.BtnActivitiesPerformed.Click += new System.EventHandler(this.BtnActivitiesPerformed_Click);
             // 
             // BtnInvoice
             // 
+            this.BtnInvoice.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BtnInvoice.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnInvoice.Location = new System.Drawing.Point(0, 248);
             this.BtnInvoice.Name = "BtnInvoice";
             this.BtnInvoice.Size = new System.Drawing.Size(185, 62);
             this.BtnInvoice.TabIndex = 4;
             this.BtnInvoice.Text = "Facturación";
-            this.BtnInvoice.UseVisualStyleBackColor = true;
+            this.BtnInvoice.UseVisualStyleBackColor = false;
             this.BtnInvoice.Click += new System.EventHandler(this.BtnInvoice_Click);
             // 
             // BtnEndVisit
             // 
+            this.BtnEndVisit.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BtnEndVisit.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnEndVisit.Location = new System.Drawing.Point(0, 310);
             this.BtnEndVisit.Name = "BtnEndVisit";
             this.BtnEndVisit.Size = new System.Drawing.Size(185, 62);
             this.BtnEndVisit.TabIndex = 5;
             this.BtnEndVisit.Text = "Finalizar visita";
-            this.BtnEndVisit.UseVisualStyleBackColor = true;
+            this.BtnEndVisit.UseVisualStyleBackColor = false;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
             // 
             // BtnOtherVisitItemsToBill
@@ -9421,6 +9428,7 @@
             this.Controls.Add(this.BtnGeneralInfo);
             this.Controls.Add(this.TclVisitManagement);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1309, 730);

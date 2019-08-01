@@ -72,26 +72,26 @@ namespace DentalSystem.VisitManagement
 
         private void DisableAllButtons()
         {
-            BtnSaveGeneralInfo.Enabled = false;
-            BtnModifyGeneralInfo.Enabled = false;
-            BtnCancelGeneralInfo.Enabled = false;
+            BtnSaveGeneralInfo.Visible = false;
+            BtnModifyGeneralInfo.Visible = false;
+            BtnCancelGeneralInfo.Visible = false;
 
-            BtnNewOdontogram.Enabled = false;
-            BtnSaveOdontogram.Enabled = false;
+            BtnNewOdontogram.Visible = false;
+            BtnSaveOdontogram.Visible = false;
 
-            BtnSaveTreatment.Enabled = false;
-            BtnModifyTreatment.Enabled = false;
-            BtnCancelTreatment.Enabled = false;
+            BtnSaveTreatment.Visible = false;
+            BtnModifyTreatment.Visible = false;
+            BtnCancelTreatment.Visible = false;
 
-            BtnSaveRegistration.Enabled = false;
-            BtnModifyRegistration.Enabled = false;
-            BtnCancelRegistration.Enabled = false;
+            BtnSaveRegistration.Visible = false;
+            BtnModifyRegistration.Visible = false;
+            BtnCancelRegistration.Visible = false;
 
-            BtnAddPayment.Enabled = false;
-            BtnDeletePayment.Enabled = false;
+            BtnAddPayment.Visible = false;
+            BtnDeletePayment.Visible = false;
 
-            BtnEndInvoice.Enabled = false;
-            BtnEndVisit.Enabled = false;
+            BtnEndInvoice.Visible = false;
+            BtnEndVisit.Visible = false;
 
             //SetInitialOdontogramButtonsStatus(false);
             //SetTreatmentOdontogramButtonsStatus(false);
@@ -116,7 +116,7 @@ namespace DentalSystem.VisitManagement
             TxtBirthDate.Text = DtpBirthDate.Value.ToString("dd/MM/yyyy");
             TxtAge.Text = NudAge.Text;
             LblPatientNameInitialOdontogram.Text = LblPatientNameTreatmentOdontogram.Text =
-                LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = "Paciente: " + PatientName;
+                LblPatientNameActivitiesPerformed.Text = LblPatientNameInvoice.Text = $"Paciente: {PatientName}";
 
             SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth,
                 PnlPlateRegistration);
@@ -124,7 +124,7 @@ namespace DentalSystem.VisitManagement
             GetInitialOdontogramInformation(patInfo.Odontogram);
             ListActivitiesPerformed(patInfo.VisitActivities.Any() ? patInfo.VisitActivities : new List<GetAllActivitiesPerformedResultModel>());
             FillPlateRegistrationInformation(patInfo.PlateRegistration);
-
+            
             if (!IsDetail) return;
 
             GetTreatmentOdontogramInformation();
@@ -219,6 +219,7 @@ namespace DentalSystem.VisitManagement
         private void ChangeButtonSelectedStatus(Button button)
         {
             button.Font = button.Font = new Font(button.Font, FontStyle.Bold);
+            button.BackColor = SystemColors.ActiveCaption;
 
             foreach (Control control in Controls)
             {
@@ -226,6 +227,7 @@ namespace DentalSystem.VisitManagement
                 if (control.Name == button.Name) continue;
 
                 control.Font = new Font(control.Font, FontStyle.Regular);
+                control.BackColor = SystemColors.ControlLight;
             }
         }
 
@@ -599,9 +601,9 @@ namespace DentalSystem.VisitManagement
         private void FrmVisitManagement_Activated(object sender, EventArgs e)
         {
             if (!IsDetail) return;
-            btnAddActivity.Enabled = false;
-            BtnModifyActivity.Enabled = false;
-            BtnDeleteActivity.Enabled = false;
+            btnAddActivity.Visible = false;
+            BtnModifyActivity.Visible = false;
+            BtnDeleteActivity.Visible = false;
         }
 
         private void BtnDeleteActivity_Click(object sender, EventArgs e)

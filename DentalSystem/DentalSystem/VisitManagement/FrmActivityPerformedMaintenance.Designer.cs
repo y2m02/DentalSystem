@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActivityPerformedMaintenance));
             this.CbxSection = new System.Windows.Forms.ComboBox();
             this.BtnModifyActivity = new System.Windows.Forms.Button();
             this.BtnCancelActivity = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             "Cuarto"});
             this.CbxSection.Location = new System.Drawing.Point(29, 54);
             this.CbxSection.Name = "CbxSection";
-            this.CbxSection.Size = new System.Drawing.Size(455, 26);
+            this.CbxSection.Size = new System.Drawing.Size(455, 31);
             this.CbxSection.TabIndex = 39;
             // 
             // BtnModifyActivity
@@ -94,7 +95,7 @@
             this.DtpActivityDate.Location = new System.Drawing.Point(29, 186);
             this.DtpActivityDate.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpActivityDate.Name = "DtpActivityDate";
-            this.DtpActivityDate.Size = new System.Drawing.Size(455, 26);
+            this.DtpActivityDate.Size = new System.Drawing.Size(455, 30);
             this.DtpActivityDate.TabIndex = 40;
             // 
             // label22
@@ -104,7 +105,7 @@
             this.label22.Location = new System.Drawing.Point(25, 225);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 19);
+            this.label22.Size = new System.Drawing.Size(132, 24);
             this.label22.TabIndex = 51;
             this.label22.Text = "Responsable";
             // 
@@ -115,7 +116,7 @@
             this.label25.Location = new System.Drawing.Point(25, 159);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 19);
+            this.label25.Size = new System.Drawing.Size(67, 24);
             this.label25.TabIndex = 46;
             this.label25.Text = "Fecha";
             // 
@@ -126,7 +127,7 @@
             this.label26.Location = new System.Drawing.Point(25, 94);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(153, 19);
+            this.label26.Size = new System.Drawing.Size(187, 24);
             this.label26.TabIndex = 45;
             this.label26.Text = "Actividad realizada";
             // 
@@ -137,7 +138,7 @@
             this.label27.Location = new System.Drawing.Point(25, 27);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 19);
+            this.label27.Size = new System.Drawing.Size(108, 24);
             this.label27.TabIndex = 44;
             this.label27.Text = "Cuadrante";
             // 
@@ -148,7 +149,7 @@
             this.TxtActivityDescription.MaxLength = 100;
             this.TxtActivityDescription.Name = "TxtActivityDescription";
             this.TxtActivityDescription.ShortcutsEnabled = false;
-            this.TxtActivityDescription.Size = new System.Drawing.Size(455, 26);
+            this.TxtActivityDescription.Size = new System.Drawing.Size(455, 30);
             this.TxtActivityDescription.TabIndex = 42;
             // 
             // TxtActivityResponsable
@@ -158,15 +159,15 @@
             this.TxtActivityResponsable.MaxLength = 100;
             this.TxtActivityResponsable.Name = "TxtActivityResponsable";
             this.TxtActivityResponsable.ShortcutsEnabled = false;
-            this.TxtActivityResponsable.Size = new System.Drawing.Size(455, 26);
+            this.TxtActivityResponsable.Size = new System.Drawing.Size(455, 30);
             this.TxtActivityResponsable.TabIndex = 43;
             // 
             // FrmActivityPerformedMaintenance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnCancelActivity;
-            this.ClientSize = new System.Drawing.Size(513, 366);
+            this.ClientSize = new System.Drawing.Size(511, 358);
             this.Controls.Add(this.CbxSection);
             this.Controls.Add(this.BtnModifyActivity);
             this.Controls.Add(this.BtnCancelActivity);
@@ -179,7 +180,8 @@
             this.Controls.Add(this.TxtActivityDescription);
             this.Controls.Add(this.TxtActivityResponsable);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(529, 405);
             this.MinimizeBox = false;

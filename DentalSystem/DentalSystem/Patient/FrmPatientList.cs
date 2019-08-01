@@ -56,6 +56,10 @@ namespace DentalSystem.Patient
         {
             var patients = _patientService.GetAllPatients(_iMapper, "", false);
             ListPatients(patients);
+
+            if (DgvPatientList.RowCount == 0) return;
+            DgvPatientList.Rows[0].Selected = true;
+
         }
 
         private void FrmPatientList_SizeChanged(object sender, EventArgs e)
@@ -147,8 +151,12 @@ namespace DentalSystem.Patient
 
         private void FrmPatientList_Activated(object sender, EventArgs e)
         {
-            if (DgvPatientList.RowCount == 0) return;
-            DgvPatientList.Rows[0].Selected = true;
+            //var rowIndex = DgvAccountReceivableList.SelectedRows[0].Index;
+            //ListReceivableByPatientId();
+
+            //DgvAccountReceivableList.Rows[rowIndex].Selected = true;
+            //if (DgvPatientList.RowCount == 0) return;
+            //DgvPatientList.Rows[0].Selected = true;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -263,8 +271,12 @@ namespace DentalSystem.Patient
                 };
                 frm.ShowDialog();
 
-                var patients = _patientService.GetAllPatients(_iMapper, "", false);
+                var rowIndex = DgvPatientList.SelectedRows[0].Index;
+
+                var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
                 ListPatients(patients);
+
+                DgvPatientList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
             {
@@ -304,8 +316,12 @@ namespace DentalSystem.Patient
                 };
                 frm.ShowDialog();
 
-                var patients = _patientService.GetAllPatients(_iMapper, "", false);
+                var rowIndex = DgvPatientList.SelectedRows[0].Index;
+
+                var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
                 ListPatients(patients);
+
+                DgvPatientList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
             {
@@ -383,8 +399,12 @@ namespace DentalSystem.Patient
                 };
                 frm.ShowDialog();
 
-                var patients = _patientService.GetAllPatients(_iMapper, "", false);
+                var rowIndex = DgvPatientList.SelectedRows[0].Index;
+
+                var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
                 ListPatients(patients);
+
+                DgvPatientList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
             {

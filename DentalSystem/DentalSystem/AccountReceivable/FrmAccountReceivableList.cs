@@ -57,7 +57,7 @@ namespace DentalSystem.AccountReceivable
 
                 var totalPending = accounts.Sum(w => w.TotalPending);
 
-                LblTotalPending.Text = $"Total pendiente: RD{totalPending:C0}";
+                LblTotalPending.Text = $"Total pendiente: RD{totalPending:C}";
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -127,7 +127,7 @@ namespace DentalSystem.AccountReceivable
 
                 var accounts = (List<GetAllAccountsReceivableByPatientIdResultModel>)DgvAccountReceivableList.DataSource;
                 var sumTotalPending = accounts.Sum(w => w.TotalPending);
-                LblTotalPending.Text = $"Total pendiente: RD{sumTotalPending:C0}";
+                LblTotalPending.Text = $"Total pendiente: RD{sumTotalPending:C}";
             }
             catch (Exception ex)
             {
@@ -197,7 +197,7 @@ namespace DentalSystem.AccountReceivable
 
                 var accounts = (List<GetAllAccountsReceivableByPatientIdResultModel>)DgvAccountReceivableList.DataSource;
                 var sumTotalPending = accounts.Sum(w => w.TotalPending);
-                LblTotalPending.Text = $"Total pendiente: RD{sumTotalPending:C0}";
+                LblTotalPending.Text = $"Total pendiente: RD{sumTotalPending:C}";
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)

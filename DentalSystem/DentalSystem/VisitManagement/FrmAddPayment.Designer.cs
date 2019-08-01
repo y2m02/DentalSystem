@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddPayment));
             this.label26 = new System.Windows.Forms.Label();
             this.TxtTotalPending = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             // TxtTotalPending
             // 
             this.TxtTotalPending.Location = new System.Drawing.Point(22, 57);
-            this.TxtTotalPending.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TxtTotalPending.Margin = new System.Windows.Forms.Padding(6);
             this.TxtTotalPending.MaxLength = 100;
             this.TxtTotalPending.Name = "TxtTotalPending";
             this.TxtTotalPending.ReadOnly = true;
@@ -119,7 +120,8 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.TxtTotalPending);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(358, 279);
             this.MinimizeBox = false;

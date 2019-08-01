@@ -57,6 +57,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_081DE4B9C33B43D88C46CCB7EF2E9FD0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_09FF6A2379954F8D9658CAFA8946A38C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -880,12 +886,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E17BDCAC6FE95E5D79CB4A60F025C2D6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_66319805BCB8404E93A15DEA50FFE467"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1621,6 +1621,12 @@
         "OwnerKey" = "8:_F034CA965317F36076B18042B302E84C"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E17BDCAC6FE95E5D79CB4A60F025C2D6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -1639,6 +1645,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -1655,6 +1677,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -1899,6 +1929,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_081DE4B9C33B43D88C46CCB7EF2E9FD0"
+            {
+            "SourcePath" = "8:..\\DentalSystem\\bin\\Debug\\Images\\Teeth.ico"
+            "TargetName" = "8:Teeth.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_92DCC076CCDC4FD38CFBD9B661963C30"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_09FF6A2379954F8D9658CAFA8946A38C"
@@ -5614,9 +5664,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Dental System Y2M14"
+        "ProductName" = "8:Sistema odontológico Dra. Ramírez"
         "ProductCode" = "8:{2FB3C71B-7433-4C0E-8F29-F8728AF4C3EC}"
-        "PackageCode" = "8:{18166A62-A79C-481B-8AEE-342E787B0A56}"
+        "PackageCode" = "8:{4ACF5E42-1E3C-4620-9CDB-374BAE21BF5B}"
         "UpgradeCode" = "8:{4A7EBBFD-A9EA-459C-9A9F-216E10DDA9CE}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -5627,11 +5677,11 @@
         "Manufacturer" = "8:Y2M14"
         "ARPHELPTELEPHONE" = "8:8295576198"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Sistema Dental Dra. Ramírez"
+        "Title" = "8:Sistema odontológico Dra. Ramírez"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Y2M14"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "ARPCOMMENTS" = "8:Sistema para clínica de odontología"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -5738,7 +5788,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0BD45690CC15458BBFFD286622A56ABA"
             {
-            "Name" = "8:Sistema Dental Dra. Ramírez"
+            "Name" = "8:Sistema odontológico Dra. Ramírez"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -5747,12 +5797,12 @@
             "Target" = "8:_66319805BCB8404E93A15DEA50FFE467"
             "Folder" = "8:_9BC6AE127B314F4DA06B8B413C3343B7"
             "WorkingFolder" = "8:_59D92942C9B64B0D9F72BDD4F4E4D6FE"
-            "Icon" = "8:"
+            "Icon" = "8:_081DE4B9C33B43D88C46CCB7EF2E9FD0"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2E54A2C983394401840CF5C8C853B424"
             {
-            "Name" = "8:Sistema Dental Dra. Ramírez"
+            "Name" = "8:Sistema odontológico Dra. Ramírez"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -5761,7 +5811,7 @@
             "Target" = "8:_66319805BCB8404E93A15DEA50FFE467"
             "Folder" = "8:_1C30C33652D94EBA99E64B298282034B"
             "WorkingFolder" = "8:_59D92942C9B64B0D9F72BDD4F4E4D6FE"
-            "Icon" = "8:"
+            "Icon" = "8:_081DE4B9C33B43D88C46CCB7EF2E9FD0"
             "Feature" = "8:"
             }
         }
