@@ -49,6 +49,9 @@ namespace DentalSystem.VisitManagement
 
             BtnVisitDetails.Location = new Point(BtnBackToVisit.Location.X, BtnBackToVisit.Location.Y);
             ListVisits();
+
+            if (DgvVisitList.RowCount == 0) return;
+            DgvVisitList.Rows[0].Selected = true;
         }
 
         private void ListVisits()
@@ -95,8 +98,8 @@ namespace DentalSystem.VisitManagement
 
         private void FrmVisitsList_Activated(object sender, EventArgs e)
         {
-            if (DgvVisitList.RowCount == 0) return;
-            DgvVisitList.Rows[0].Selected = true;
+            //if (DgvVisitList.RowCount == 0) return;
+            //DgvVisitList.Rows[0].Selected = true;
         }
 
    private void BackToVisit(bool isDetail)
@@ -123,8 +126,12 @@ namespace DentalSystem.VisitManagement
                     DialogResult = DialogResult.None
                 };
                 frm.ShowDialog();
-
+                var rowIndex = DgvVisitList.SelectedRows[0].Index;
+          
                 ListVisits();
+
+                if (DgvVisitList.RowCount == 0) return;
+                DgvVisitList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
             {

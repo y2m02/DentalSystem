@@ -791,6 +791,7 @@
             this.DgvActivitiesList = new System.Windows.Forms.DataGridView();
             this.TabInvoice = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnOtherVisitItemsToBill = new System.Windows.Forms.Button();
             this.BtnEndInvoice = new System.Windows.Forms.Button();
             this.BtnDeletePayment = new System.Windows.Forms.Button();
             this.BtnAddPayment = new System.Windows.Forms.Button();
@@ -809,7 +810,6 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
-            this.BtnOtherVisitItemsToBill = new System.Windows.Forms.Button();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -1810,6 +1810,7 @@
             this.BtnNewOdontogram.TabIndex = 36;
             this.BtnNewOdontogram.Text = "Nuevo";
             this.BtnNewOdontogram.UseVisualStyleBackColor = true;
+            this.BtnNewOdontogram.Visible = false;
             this.BtnNewOdontogram.Click += new System.EventHandler(this.BtnNewOdontogram_Click);
             // 
             // BtnSaveOdontogram
@@ -9163,6 +9164,17 @@
             this.panel1.Size = new System.Drawing.Size(1086, 618);
             this.panel1.TabIndex = 35;
             // 
+            // BtnOtherVisitItemsToBill
+            // 
+            this.BtnOtherVisitItemsToBill.Location = new System.Drawing.Point(540, 3);
+            this.BtnOtherVisitItemsToBill.Margin = new System.Windows.Forms.Padding(1);
+            this.BtnOtherVisitItemsToBill.Name = "BtnOtherVisitItemsToBill";
+            this.BtnOtherVisitItemsToBill.Size = new System.Drawing.Size(296, 33);
+            this.BtnOtherVisitItemsToBill.TabIndex = 41;
+            this.BtnOtherVisitItemsToBill.Text = "Listar actividades de las otras visitas";
+            this.BtnOtherVisitItemsToBill.UseVisualStyleBackColor = true;
+            this.BtnOtherVisitItemsToBill.Click += new System.EventHandler(this.BtnOtherVisitItemsToBill_Click);
+            // 
             // BtnEndInvoice
             // 
             this.BtnEndInvoice.Location = new System.Drawing.Point(367, 3);
@@ -9403,17 +9415,6 @@
             this.BtnEndVisit.Text = "Finalizar visita";
             this.BtnEndVisit.UseVisualStyleBackColor = false;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
-            // 
-            // BtnOtherVisitItemsToBill
-            // 
-            this.BtnOtherVisitItemsToBill.Location = new System.Drawing.Point(540, 3);
-            this.BtnOtherVisitItemsToBill.Margin = new System.Windows.Forms.Padding(1);
-            this.BtnOtherVisitItemsToBill.Name = "BtnOtherVisitItemsToBill";
-            this.BtnOtherVisitItemsToBill.Size = new System.Drawing.Size(296, 33);
-            this.BtnOtherVisitItemsToBill.TabIndex = 41;
-            this.BtnOtherVisitItemsToBill.Text = "Listar actividades de las otras visitas";
-            this.BtnOtherVisitItemsToBill.UseVisualStyleBackColor = true;
-            this.BtnOtherVisitItemsToBill.Click += new System.EventHandler(this.BtnOtherVisitItemsToBill_Click);
             // 
             // FrmVisitManagement
             // 

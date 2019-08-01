@@ -381,6 +381,7 @@ namespace DentalSystem.VisitManagement
             BtnModifyGeneralInfo.Location = new Point(BtnSaveGeneralInfo.Location.X, BtnSaveGeneralInfo.Location.Y);
             BtnModifyTreatment.Location = new Point(BtnSaveTreatment.Location.X, BtnSaveTreatment.Location.Y);
             BtnModifyRegistration.Location = new Point(BtnSaveRegistration.Location.X, BtnSaveRegistration.Location.Y);
+            BtnSaveOdontogram.Location = new Point(BtnNewOdontogram.Location.X, BtnNewOdontogram.Location.Y);
             TxtAdmissionDate.Location = new Point(DtpAdmissionDate.Location.X, DtpAdmissionDate.Location.Y);
             TxtBirthDate.Location = new Point(DtpBirthDate.Location.X, DtpBirthDate.Location.Y);
             TxtAge.Location = new Point(NudAge.Location.X, NudAge.Location.Y);
@@ -1436,7 +1437,9 @@ namespace DentalSystem.VisitManagement
 
                 _odontogramService.UpdateOdontogram(updateOdontogramRequest);
 
+                BtnNewOdontogram.Visible = true;
                 BtnSaveOdontogram.Visible = false;
+               
                 SetInitialOdontogramButtonsStatus(false);
                 Cursor.Current = Cursors.Default;
             }
@@ -1491,7 +1494,9 @@ namespace DentalSystem.VisitManagement
                 LblOdontogramId.Text = odontogramResult.OdontogramId.ToString();
                 if (odontogramResult.HasInformation)
                 {
+                    BtnNewOdontogram.Visible = true;
                     BtnSaveOdontogram.Visible = false;
+                   
                     LblTotalCavities.Text = $"Total de caries: {odontogramResult.CavitiesQuantity}";
                     var buttonList =
                         JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult
@@ -1663,6 +1668,7 @@ namespace DentalSystem.VisitManagement
                 LblTotalCavities.Text = "Total de caries: 0";
                 LblTreatmentOdontogramId.Text = odontogramResult.OdontogramId.ToString();
                 BtnSaveOdontogram.Visible = true;
+                BtnNewOdontogram.Visible = false;
                 SetInitialOdontogramButtonsStatus(true);
                 SetInitialOdontogramButtonColors(isEmpty: true);
                 Cursor.Current = Cursors.Default;
