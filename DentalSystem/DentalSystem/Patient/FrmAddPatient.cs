@@ -23,7 +23,9 @@ namespace DentalSystem.Patient
         }
 
         public List<GetAllPatientsResult> PatientList { get; set; }
-
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
+        public bool WithDateFilter { get; set; }
         private void FrmAddPatient_Load(object sender, EventArgs e)
         {
             //DtpBirthDate.MaxDate = DtpAdmissionDate.MaxDate = DateTime.Now;
@@ -48,12 +50,14 @@ namespace DentalSystem.Patient
             {
                 isValid = false;
                 requiredFields += "\nLa fecha de nacimiento no puede ser mayor que la fecha actual.\n";
+                DtpBirthDate.Value = DateTime.Now;
             }
 
             if (DtpAdmissionDate.Value.Date > DateTime.Now.Date)
             {
                 isValid = false;
                 requiredFields += "\nLa fecha de registro no puede ser mayor que la fecha actual.";
+                DtpAdmissionDate.Value = DateTime.Now;
             }
 
             if (!isValid)
@@ -100,7 +104,11 @@ namespace DentalSystem.Patient
                     Address = TxtAddress.Text.Trim(),
                     IsUrbanZone = RbtUrban.Checked,
                     Gender = RbtMale.Checked ? "M" : "F",
-                    Mapper = _iMapper
+                    Mapper = _iMapper,
+
+                    WithDateFilter = WithDateFilter,
+                    From = From,
+                    To = To
                 };
 
                 var patients = _patientService.AddPatient(addPatient);

@@ -76,35 +76,37 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public List<Patient> GetAllPatients(string filter, bool isFilterByName)
+        public List<Patient> GetAllPatients(string filter, bool isFilterByName, DateTime? from, DateTime? to)
         {
-            var patients = new List<Patient>();
-
             using (var context = new DentalSystemContext())
             {
+                IEnumerable<Patient> patients = new List<Patient>();
                 if (string.IsNullOrEmpty(filter.Trim()))
-
-                    patients = context.Patients.Where(w => w.DeletedOn == null).Include(w => w.Visits)
-                        .ToList();
-
+                    patients = context.Patients.Where(w => w.DeletedOn == null).Include(w => w.Visits);
                 else
                     switch (isFilterByName)
                     {
                         case true:
                             patients = context.Patients
                                 .Where(w => w.DeletedOn == null && w.FullName.Contains(filter.Trim()))
-                                .Include(w => w.Visits).OrderBy(w => w.FullName).ToList();
+                                .Include(w => w.Visits);
                             break;
 
                         case false:
                             patients = context.Patients
                                 .Where(w => w.DeletedOn == null && w.IdentificationCard.Contains(filter.Trim()))
-                                .Include(w => w.Visits).OrderBy(w => w.FullName).ToList();
+                                .Include(w => w.Visits);
                             break;
                     }
-            }
 
-            return patients;
+                var patientToShow = from == null
+                    ? patients
+                    : patients.Where(w =>
+                        w.AdmissionDate.Date <= Convert.ToDateTime(to).Date &&
+                        w.AdmissionDate.Date >= Convert.ToDateTime(from).Date);
+
+                return patientToShow.OrderBy(w => w.FullName).ToList();
+            }
         }
     }
 }

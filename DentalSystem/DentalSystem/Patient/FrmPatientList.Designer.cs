@@ -46,6 +46,11 @@
             this.LblTitle = new System.Windows.Forms.Label();
             this.BtnBackToVisit = new System.Windows.Forms.Button();
             this.BtnAccountReceivable = new System.Windows.Forms.Button();
+            this.DtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DtpTo = new System.Windows.Forms.DateTimePicker();
+            this.ChkDateRange = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +62,7 @@
             this.DgvPatientList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvPatientList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvPatientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPatientList.Location = new System.Drawing.Point(16, 219);
+            this.DgvPatientList.Location = new System.Drawing.Point(16, 244);
             this.DgvPatientList.Margin = new System.Windows.Forms.Padding(4);
             this.DgvPatientList.MultiSelect = false;
             this.DgvPatientList.Name = "DgvPatientList";
@@ -66,7 +71,7 @@
             this.DgvPatientList.RowHeadersWidth = 51;
             this.DgvPatientList.RowTemplate.Height = 24;
             this.DgvPatientList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvPatientList.Size = new System.Drawing.Size(1351, 726);
+            this.DgvPatientList.Size = new System.Drawing.Size(1351, 701);
             this.DgvPatientList.TabIndex = 4;
             this.DgvPatientList.SelectionChanged += new System.EventHandler(this.DgvPatientList_SelectionChanged);
             // 
@@ -114,7 +119,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(16, 151);
+            this.btnAdd.Location = new System.Drawing.Point(16, 188);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(1);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(180, 51);
@@ -150,16 +155,21 @@
             // 
             // PnlSearch
             // 
+            this.PnlSearch.Controls.Add(this.DtpTo);
+            this.PnlSearch.Controls.Add(this.label2);
+            this.PnlSearch.Controls.Add(this.DtpFrom);
+            this.PnlSearch.Controls.Add(this.label8);
             this.PnlSearch.Controls.Add(this.label1);
             this.PnlSearch.Controls.Add(this.BtnClear);
             this.PnlSearch.Controls.Add(this.TxtSearch);
             this.PnlSearch.Controls.Add(this.BtnSearch);
             this.PnlSearch.Controls.Add(this.RbtIdentification);
             this.PnlSearch.Controls.Add(this.RbtName);
+            this.PnlSearch.Controls.Add(this.ChkDateRange);
             this.PnlSearch.Location = new System.Drawing.Point(16, 96);
             this.PnlSearch.Margin = new System.Windows.Forms.Padding(4);
             this.PnlSearch.Name = "PnlSearch";
-            this.PnlSearch.Size = new System.Drawing.Size(951, 41);
+            this.PnlSearch.Size = new System.Drawing.Size(951, 88);
             this.PnlSearch.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -170,7 +180,7 @@
             // 
             // BtnVisits
             // 
-            this.BtnVisits.Location = new System.Drawing.Point(380, 151);
+            this.BtnVisits.Location = new System.Drawing.Point(380, 188);
             this.BtnVisits.Margin = new System.Windows.Forms.Padding(1);
             this.BtnVisits.Name = "BtnVisits";
             this.BtnVisits.Size = new System.Drawing.Size(180, 51);
@@ -181,7 +191,7 @@
             // 
             // BtnCreateVisit
             // 
-            this.BtnCreateVisit.Location = new System.Drawing.Point(198, 151);
+            this.BtnCreateVisit.Location = new System.Drawing.Point(198, 188);
             this.BtnCreateVisit.Margin = new System.Windows.Forms.Padding(1);
             this.BtnCreateVisit.Name = "BtnCreateVisit";
             this.BtnCreateVisit.Size = new System.Drawing.Size(180, 51);
@@ -192,7 +202,7 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(562, 151);
+            this.BtnDelete.Location = new System.Drawing.Point(562, 188);
             this.BtnDelete.Margin = new System.Windows.Forms.Padding(1);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(180, 51);
@@ -213,7 +223,7 @@
             // 
             // BtnBackToVisit
             // 
-            this.BtnBackToVisit.Location = new System.Drawing.Point(926, 151);
+            this.BtnBackToVisit.Location = new System.Drawing.Point(926, 188);
             this.BtnBackToVisit.Margin = new System.Windows.Forms.Padding(1);
             this.BtnBackToVisit.Name = "BtnBackToVisit";
             this.BtnBackToVisit.Size = new System.Drawing.Size(180, 51);
@@ -225,7 +235,7 @@
             // 
             // BtnAccountReceivable
             // 
-            this.BtnAccountReceivable.Location = new System.Drawing.Point(744, 151);
+            this.BtnAccountReceivable.Location = new System.Drawing.Point(744, 188);
             this.BtnAccountReceivable.Margin = new System.Windows.Forms.Padding(1);
             this.BtnAccountReceivable.Name = "BtnAccountReceivable";
             this.BtnAccountReceivable.Size = new System.Drawing.Size(180, 51);
@@ -233,6 +243,61 @@
             this.BtnAccountReceivable.Text = "Ver deudas";
             this.BtnAccountReceivable.UseVisualStyleBackColor = true;
             this.BtnAccountReceivable.Click += new System.EventHandler(this.BtnAccountReceivable_Click);
+            // 
+            // DtpFrom
+            // 
+            this.DtpFrom.CustomFormat = "dd/MM/yyyy";
+            this.DtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpFrom.Location = new System.Drawing.Point(333, 50);
+            this.DtpFrom.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
+            this.DtpFrom.Name = "DtpFrom";
+            this.DtpFrom.Size = new System.Drawing.Size(177, 30);
+            this.DtpFrom.TabIndex = 38;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(265, 52);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 23);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Desde:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(544, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 23);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Hasta:";
+            // 
+            // DtpTo
+            // 
+            this.DtpTo.CustomFormat = "dd/MM/yyyy";
+            this.DtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpTo.Location = new System.Drawing.Point(607, 50);
+            this.DtpTo.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
+            this.DtpTo.Name = "DtpTo";
+            this.DtpTo.Size = new System.Drawing.Size(177, 30);
+            this.DtpTo.TabIndex = 38;
+            // 
+            // ChkDateRange
+            // 
+            this.ChkDateRange.AutoSize = true;
+            this.ChkDateRange.Checked = true;
+            this.ChkDateRange.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChkDateRange.Location = new System.Drawing.Point(87, 50);
+            this.ChkDateRange.Name = "ChkDateRange";
+            this.ChkDateRange.Size = new System.Drawing.Size(187, 27);
+            this.ChkDateRange.TabIndex = 40;
+            this.ChkDateRange.Text = "Rango de fechas:";
+            this.ChkDateRange.UseVisualStyleBackColor = true;
+            this.ChkDateRange.CheckedChanged += new System.EventHandler(this.ChkDateRange_CheckedChanged);
             // 
             // FrmPatientList
             // 
@@ -287,5 +352,10 @@
         private System.Windows.Forms.Label LblTitle;
         private System.Windows.Forms.Button BtnBackToVisit;
         private System.Windows.Forms.Button BtnAccountReceivable;
+        private System.Windows.Forms.CheckBox ChkDateRange;
+        private System.Windows.Forms.DateTimePicker DtpTo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker DtpFrom;
+        private System.Windows.Forms.Label label8;
     }
 }

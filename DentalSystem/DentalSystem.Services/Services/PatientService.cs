@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using DentalSystem.Contract.Repositories;
@@ -6,7 +7,6 @@ using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Results.ActivityPerformed;
-using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.Odontogram;
 using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.PlateRegistration;
@@ -29,13 +29,15 @@ namespace DentalSystem.Services.Services
         //    _patientRepository.AddPatient(patient);
         //}
 
-        public List<GetAllPatientsResult> GetAllPatients(IMapper iMapper, string filter, bool isFilterByName)
+        public List<GetAllPatientsResult> GetAllPatients(IMapper iMapper, string filter, bool isFilterByName,
+            DateTime? from, DateTime? to)
         {
-            var result = _patientRepository.GetAllPatients(filter, isFilterByName);
+            var result = _patientRepository.GetAllPatients(filter, isFilterByName, from, to);
             var patients = iMapper.Map<List<GetAllPatientsResult>>(result);
 
             return patients;
         }
+
         public GetPatientByIdResult GetPatientById(IMapper iMapper, GetPatientByIdRequest request)
         {
             var result = _patientRepository.GetPatientById(request.PatientId);
@@ -49,11 +51,16 @@ namespace DentalSystem.Services.Services
             var result = _patientRepository.GetPatientInformation(request.PatientId);
             var patient = request.Mapper.Map<GetPatientByIdResult>(result);
             var plateRegistration = request.Mapper.Map<GetPlateRegistrationByPatientIdResult>(result.PlateRegistration);
-            var activities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result.Visits.FirstOrDefault(w => w.VisitId == request.VisitId)?.ActivitiesPerformed);
-            var odontogram = request.Mapper.Map<GetOdontogramByVisitIdResultModel>(result.Visits.FirstOrDefault(w => w.VisitId == request.VisitId)?.Odontograms.OrderByDescending(w=>w.OdontogramId).FirstOrDefault());
-            var treatmentOdontogram = request.Mapper.Map<GetTreatmentOdontogramByOdontogramIdResultModel>(result.Visits.FirstOrDefault(w => w.VisitId == request.VisitId)?.Odontograms.OrderByDescending(w=>w.OdontogramId).FirstOrDefault()?.TreatmentOdontogram);
+            var activities = request.Mapper.Map<List<GetAllActivitiesPerformedResultModel>>(result.Visits
+                .FirstOrDefault(w => w.VisitId == request.VisitId)?.ActivitiesPerformed);
+            var odontogram = request.Mapper.Map<GetOdontogramByVisitIdResultModel>(result.Visits
+                .FirstOrDefault(w => w.VisitId == request.VisitId)?.Odontograms.OrderByDescending(w => w.OdontogramId)
+                .FirstOrDefault());
+            var treatmentOdontogram = request.Mapper.Map<GetTreatmentOdontogramByOdontogramIdResultModel>(result.Visits
+                .FirstOrDefault(w => w.VisitId == request.VisitId)?.Odontograms.OrderByDescending(w => w.OdontogramId)
+                .FirstOrDefault()?.TreatmentOdontogram);
 
-    var getPatientInformationResult = new GetPatientInformationResult
+            var getPatientInformationResult = new GetPatientInformationResult
             {
                 PatientInformation = patient,
                 Odontogram = odontogram,
@@ -70,7 +77,8 @@ namespace DentalSystem.Services.Services
             var patient = request.Mapper.Map<Patient>(request);
             _patientRepository.AddPatient(patient);
 
-            var result = _patientRepository.GetAllPatients("", false);
+            var result = request.WithDateFilter ? _patientRepository.GetAllPatients("", false, request.From, request.To) :
+                _patientRepository.GetAllPatients("", false, null, null);
             var patients = request.Mapper.Map<List<GetAllPatientsResult>>(result);
 
             return patients;
@@ -91,7 +99,8 @@ namespace DentalSystem.Services.Services
         {
             _patientRepository.DeletePatient(request.PatientId);
 
-            var result = _patientRepository.GetAllPatients("", false);
+            var result = request.WithDateFilter ? _patientRepository.GetAllPatients("", false, request.From, request.To):
+             _patientRepository.GetAllPatients("", false, null, null);
             var patients = request.Mapper.Map<List<GetAllPatientsResult>>(result);
 
             return patients;

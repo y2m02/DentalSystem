@@ -533,7 +533,7 @@ namespace DentalSystem.VisitManagement
             TxtAge.Text = NudAge.Text;
         }
 
-        private void ListActivitiesPerformed(List<GetAllActivitiesPerformedResultModel> activities)
+        private void ListActivitiesPerformed(IReadOnlyCollection<GetAllActivitiesPerformedResultModel> activities)
         {
             try
             {

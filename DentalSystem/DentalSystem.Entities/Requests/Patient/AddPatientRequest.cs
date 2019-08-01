@@ -21,6 +21,10 @@ namespace DentalSystem.Entities.Requests.Patient
         public string NSS { get; set; }
         public DateTime AdmissionDate { get; set; }
         public IMapper Mapper { get; set; }
+
+        public bool WithDateFilter { get; set; }
+        public DateTime From { get; set; }
+        public DateTime To { get; set; }
         public AddPatientHealthRequest PatientHealth { get; set; }
     }
 }

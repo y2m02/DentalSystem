@@ -54,21 +54,21 @@ namespace DentalSystem.Patient
 
         private void FrmPatientList_Load(object sender, EventArgs e)
         {
-            var patients = _patientService.GetAllPatients(_iMapper, "", false);
+            DtpFrom.Value = DateTime.Now.AddDays(-15).Date;
+            var patients = _patientService.GetAllPatients(_iMapper, "", false, DtpFrom.Value.Date, DtpTo.Value.Date);
             ListPatients(patients);
 
             if (DgvPatientList.RowCount == 0) return;
             DgvPatientList.Rows[0].Selected = true;
-
         }
 
         private void FrmPatientList_SizeChanged(object sender, EventArgs e)
         {
             DgvPatientList.Width = Width - 100;
-            DgvPatientList.Height = Height - 300;
+            DgvPatientList.Height = Height - 320;
             DgvPatientList.Location = new Point(
                 ClientSize.Width / 2 - DgvPatientList.Size.Width / 2,
-                ClientSize.Height / 3 - DgvPatientList.Size.Height / 3 + 120);
+                ClientSize.Height / 3 - DgvPatientList.Size.Height / 3 + 170);
             DgvPatientList.Anchor = AnchorStyles.None;
 
             LblTitle.Location = new Point(
@@ -125,14 +125,32 @@ namespace DentalSystem.Patient
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
+            if (ChkDateRange.Checked && DtpTo.Value.Date < DtpFrom.Value.Date)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"", "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                DtpFrom.Value = DateTime.Now.AddDays(-15);
+                DtpTo.Value = DateTime.Now.Date;
+                return;
+            }
+
+            var patients = ChkDateRange.Checked
+                ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, DtpFrom.Value.Date,
+                    DtpTo.Value.Date)
+                : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
             ListPatients(patients);
         }
 
         private void BtnClear_Click(object sender, EventArgs e)
         {
             TxtSearch.Clear();
-            var patients = _patientService.GetAllPatients(_iMapper, "", false);
+            DtpFrom.Value = DateTime.Now.AddDays(-15).Date;
+            DtpTo.Value = DateTime.Now.Date;
+            var patients = ChkDateRange.Checked
+                ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, DtpFrom.Value.Date,
+                    DtpTo.Value.Date)
+                : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
             ListPatients(patients);
         }
 
@@ -140,11 +158,19 @@ namespace DentalSystem.Patient
         {
             var frm = new FrmAddPatient(_iMapper, _patientService)
             {
+                WithDateFilter = ChkDateRange.Checked,
+                From = DtpFrom.Value.Date,
+                To = DtpTo.Value.Date,
                 DialogResult = DialogResult.None
             };
             frm.ShowDialog();
 
-            var patients = frm.PatientList ?? _patientService.GetAllPatients(_iMapper, "", false);
+            var patients = frm.PatientList ?? (ChkDateRange.Checked
+                               ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked,
+                                   DtpFrom.Value.Date,
+                                   DtpTo.Value.Date)
+                               : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null,
+                                   null));
 
             ListPatients(patients);
         }
@@ -175,6 +201,9 @@ namespace DentalSystem.Patient
                 var deletePatientRequest = new DeletePatientRequest
                 {
                     PatientId = id,
+                    WithDateFilter = ChkDateRange.Checked,
+                    From = DtpFrom.Value.Date,
+                    To = DtpTo.Value.Date,
                     Mapper = _iMapper
                 };
 
@@ -195,9 +224,11 @@ namespace DentalSystem.Patient
         private void InitializeButtons()
         {
             if (DgvPatientList.RowCount < 1)
-                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnVisits.Enabled = BtnAccountReceivable.Enabled = BtnDelete.Enabled = false;
+                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled =
+                    BtnVisits.Enabled = BtnAccountReceivable.Enabled = BtnDelete.Enabled = false;
             else
-                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled = BtnVisits.Enabled = BtnAccountReceivable.Enabled = BtnDelete.Enabled = true;
+                BtnCreateVisit.Enabled = BtnBackToVisit.Enabled =
+                    BtnVisits.Enabled = BtnAccountReceivable.Enabled = BtnDelete.Enabled = true;
 
             //ValidateIfVisitFinished();
         }
@@ -213,7 +244,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?)visitHasEnded ?? true;
+            var visitHasFinished = (bool?) visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -225,7 +256,7 @@ namespace DentalSystem.Patient
             {
                 var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-                var visitHasFinished = (bool?)visitHasEnded ?? true;
+                var visitHasFinished = (bool?) visitHasEnded ?? true;
 
                 if (!visitHasFinished)
                 {
@@ -273,9 +304,15 @@ namespace DentalSystem.Patient
 
                 var rowIndex = DgvPatientList.SelectedRows[0].Index;
 
-                var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
+                var patients = ChkDateRange.Checked
+                    ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked,
+                        DtpFrom.Value.Date,
+                        DtpTo.Value.Date)
+                    : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
+
                 ListPatients(patients);
 
+                if (DgvPatientList.RowCount == 0) return;
                 DgvPatientList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
@@ -318,9 +355,15 @@ namespace DentalSystem.Patient
 
                 var rowIndex = DgvPatientList.SelectedRows[0].Index;
 
-                var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
+                var patients = ChkDateRange.Checked
+                    ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked,
+                        DtpFrom.Value.Date,
+                        DtpTo.Value.Date)
+                    : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
+
                 ListPatients(patients);
 
+                if (DgvPatientList.RowCount == 0) return;
                 DgvPatientList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
@@ -401,9 +444,15 @@ namespace DentalSystem.Patient
 
                 var rowIndex = DgvPatientList.SelectedRows[0].Index;
 
-                var patients = _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked);
+                var patients = ChkDateRange.Checked
+                    ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked,
+                        DtpFrom.Value.Date,
+                        DtpTo.Value.Date)
+                    : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
+
                 ListPatients(patients);
 
+                if (DgvPatientList.RowCount == 0) return;
                 DgvPatientList.Rows[rowIndex].Selected = true;
             }
             catch (Exception ex)
@@ -411,6 +460,24 @@ namespace DentalSystem.Patient
                 MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void ChkDateRange_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChkDateRange.Checked)
+            {
+                DtpFrom.Value = DateTime.Now.AddDays(-15).Date;
+                DtpTo.Value = DateTime.Now.Date;
+            }
+            DtpFrom.Enabled = DtpTo.Enabled = ChkDateRange.Checked;
+
+            //var patients = ChkDateRange.Checked
+            //    ? _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked,
+            //        DtpFrom.Value.Date,
+            //        DtpTo.Value.Date)
+            //    : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
+
+            //ListPatients(patients);
         }
     }
 }
