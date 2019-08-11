@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentalSystem.Contract.Repos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DentalSystem.Contract.Services", "DentalSystem.Contract.Services\DentalSystem.Contract.Services.csproj", "{28CEFB78-CF2B-4361-AF90-249D8C537D9E}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{8735024E-0EF5-4C7E-8B38-2B396C800370}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installation", "Installation\Installation.vdproj", "{F35B9409-62A6-4B56-8352-7A922450BC1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,8 +47,8 @@ Global
 		{28CEFB78-CF2B-4361-AF90-249D8C537D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28CEFB78-CF2B-4361-AF90-249D8C537D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28CEFB78-CF2B-4361-AF90-249D8C537D9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8735024E-0EF5-4C7E-8B38-2B396C800370}.Debug|Any CPU.ActiveCfg = Debug
-		{8735024E-0EF5-4C7E-8B38-2B396C800370}.Release|Any CPU.ActiveCfg = Release
+		{F35B9409-62A6-4B56-8352-7A922450BC1D}.Debug|Any CPU.ActiveCfg = Debug
+		{F35B9409-62A6-4B56-8352-7A922450BC1D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -128,7 +128,8 @@ namespace DentalSystem.Patient
             if (ChkDateRange.Checked && DtpTo.Value.Date < DtpFrom.Value.Date)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"", "Información", MessageBoxButtons.OK,
+                MessageBox.Show("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"", "Información",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
                 DtpFrom.Value = DateTime.Now.AddDays(-15);
                 DtpTo.Value = DateTime.Now.Date;
@@ -244,7 +245,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?) visitHasEnded ?? true;
+            var visitHasFinished = (bool?)visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -256,7 +257,7 @@ namespace DentalSystem.Patient
             {
                 var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-                var visitHasFinished = (bool?) visitHasEnded ?? true;
+                var visitHasFinished = (bool?)visitHasEnded ?? true;
 
                 if (!visitHasFinished)
                 {
@@ -469,6 +470,7 @@ namespace DentalSystem.Patient
                 DtpFrom.Value = DateTime.Now.AddDays(-15).Date;
                 DtpTo.Value = DateTime.Now.Date;
             }
+
             DtpFrom.Enabled = DtpTo.Enabled = ChkDateRange.Checked;
 
             //var patients = ChkDateRange.Checked
