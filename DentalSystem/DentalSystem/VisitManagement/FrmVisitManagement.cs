@@ -569,8 +569,8 @@ namespace DentalSystem.VisitManagement
 
             dgv.Columns["ActivityPerformedId"].Visible = false;
             dgv.Columns["VisitNumber"].Visible = false;
-            dgv.Columns["Section"].HeaderText = "Sección de trabajo";
-            dgv.Columns["Description"].HeaderText = "Actividad realizada";
+            dgv.Columns["Section"].HeaderText = "Cuadrante";
+            dgv.Columns["Description"].HeaderText = "Actividad";
             dgv.Columns["Responsable"].HeaderText = "Responsable";
             dgv.Columns["Date"].HeaderText = "Fecha";
             dgv.Columns["InvoiceDetailId"].Visible = false;
@@ -579,8 +579,8 @@ namespace DentalSystem.VisitManagement
 
             dgvHistory.Columns["ActivityPerformedId"].Visible = false;
             dgvHistory.Columns["VisitNumber"].HeaderText = "# visita";
-            dgvHistory.Columns["Section"].HeaderText = "Sección de trabajo";
-            dgvHistory.Columns["Description"].HeaderText = "Actividad realizada";
+            dgvHistory.Columns["Section"].HeaderText = "Cuadrante";
+            dgvHistory.Columns["Description"].HeaderText = "Actividad";
             dgvHistory.Columns["Responsable"].HeaderText = "Responsable";
             dgvHistory.Columns["Date"].HeaderText = "Fecha";
             dgvHistory.Columns["InvoiceDetailId"].Visible = false;
@@ -592,8 +592,8 @@ namespace DentalSystem.VisitManagement
 
             dgvHistory.Columns["ActivityPerformedId"].Visible = false;
             dgvHistory.Columns["VisitNumber"].HeaderText = "# visita";
-            dgvHistory.Columns["Section"].HeaderText = "Sección de trabajo";
-            dgvHistory.Columns["Description"].HeaderText = "Actividad realizada";
+            dgvHistory.Columns["Section"].HeaderText = "Cuadrante";
+            dgvHistory.Columns["Description"].HeaderText = "Actividad";
             dgvHistory.Columns["Responsable"].HeaderText = "Responsable";
             dgvHistory.Columns["Date"].HeaderText = "Fecha";
             dgvHistory.Columns["InvoiceDetailId"].Visible = false;
@@ -854,8 +854,8 @@ namespace DentalSystem.VisitManagement
             if (dgv == null) return;
             dgv.ReadOnly = GenericProperties.VisitHasBeenBilled;
             dgv.Columns["InvoiceDetailId"].Visible = false;
+            dgv.Columns["Section"].HeaderText = "Cuadrante";
             dgv.Columns["ActivityPerformed"].HeaderText = "Actividad";
-            dgv.Columns["Section"].HeaderText = "Sección";
             dgv.Columns["Price"].HeaderText = "Monto";
 
             dgv.Columns["Price"].ValueType = typeof(int);
@@ -866,8 +866,8 @@ namespace DentalSystem.VisitManagement
             if (dgvOtherVisits == null) return;
             dgvOtherVisits.Columns["InvoiceDetailId"].Visible = false;
             dgvOtherVisits.Columns["VisitNumber"].HeaderText = "# visita";
+            dgvOtherVisits.Columns["Section"].HeaderText = "Cuadrante";
             dgvOtherVisits.Columns["ActivityPerformed"].HeaderText = "Actividad";
-            dgvOtherVisits.Columns["Section"].HeaderText = "Sección";
             dgvOtherVisits.Columns["Price"].HeaderText = "Monto";
         }
 
@@ -876,8 +876,8 @@ namespace DentalSystem.VisitManagement
             if (dgvOtherVisits == null) return;
             dgvOtherVisits.Columns["InvoiceDetailId"].Visible = false;
             dgvOtherVisits.Columns["VisitNumber"].HeaderText = "# visita";
+            dgvOtherVisits.Columns["Section"].HeaderText = "Cuadrante";
             dgvOtherVisits.Columns["ActivityPerformed"].HeaderText = "Actividad";
-            dgvOtherVisits.Columns["Section"].HeaderText = "Sección";
             dgvOtherVisits.Columns["Price"].HeaderText = "Monto";
         }
 

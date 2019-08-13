@@ -68,26 +68,26 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.InvoiceDetailId, y => y.MapFrom(r => r.InvoiceDetail.InvoiceDetailId))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
-                        r.Section == 1 ? "Primer cuadrante" :
-                        r.Section == 2 ? "Segundo cuadrante" :
-                        r.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
+                        r.Section == 1 ? "Primer" :
+                        r.Section == 2 ? "Segundo" :
+                        r.Section == 3 ? "Tercer" : "Cuarto"));
 
             CreateMap<InvoiceDetail, GetInvoiceDetailByVisitIdResultModel>()
                 .ForMember(w => w.ActivityPerformed, y => y.MapFrom(r => r.ActivityPerformed.Description))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
-                        r.ActivityPerformed.Section == 1 ? "Primer cuadrante" :
-                        r.ActivityPerformed.Section == 2 ? "Segundo cuadrante" :
-                        r.ActivityPerformed.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
+                        r.ActivityPerformed.Section == 1 ? "Primer" :
+                        r.ActivityPerformed.Section == 2 ? "Segundo" :
+                        r.ActivityPerformed.Section == 3 ? "Tercer" : "Cuarto"));
 
             CreateMap<InvoiceDetail, GetInvoiceDetailFromOtherVisitsResultModel>()
                 .ForMember(w => w.ActivityPerformed, y => y.MapFrom(r => r.ActivityPerformed.Description))
                 .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.ActivityPerformed.Visit.VisitNumber))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
-                        r.ActivityPerformed.Section == 1 ? "Primer cuadrante" :
-                        r.ActivityPerformed.Section == 2 ? "Segundo cuadrante" :
-                        r.ActivityPerformed.Section == 3 ? "Tercer cuadrante" : "Cuarto cuadrante"));
+                        r.ActivityPerformed.Section == 1 ? "Primer" :
+                        r.ActivityPerformed.Section == 2 ? "Segundo" :
+                        r.ActivityPerformed.Section == 3 ? "Tercer" : "Cuarto"));
 
             CreateMap<AccountsReceivable, GetAccountsReceivableByPatientIdResultModel>()
                 .ForMember(w => w.TotalPending, y => y.MapFrom(r => r.Total - r.TotalPaid))
