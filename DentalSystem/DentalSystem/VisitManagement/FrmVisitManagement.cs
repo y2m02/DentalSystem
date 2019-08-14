@@ -24,6 +24,7 @@ using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.PlateRegistration;
 using DentalSystem.Enum;
 using DentalSystem.Odontogram;
+using DentalSystem.Printing;
 using Newtonsoft.Json;
 
 namespace DentalSystem.VisitManagement
@@ -180,6 +181,7 @@ namespace DentalSystem.VisitManagement
             LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
             BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
+            BtnPrintInvoice.Enabled = GenericProperties.VisitHasBeenBilled;
         }
 
         private void TclVisitManagement_Click(object sender, EventArgs e)
@@ -212,6 +214,7 @@ namespace DentalSystem.VisitManagement
                     LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
                     BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
+                    BtnPrintInvoice.Enabled = GenericProperties.VisitHasBeenBilled;
                     break;
             }
         }
@@ -1034,6 +1037,7 @@ namespace DentalSystem.VisitManagement
                 GenericProperties.VisitHasBeenBilled = true;
 
                 BtnAddPayment.Enabled = true;
+                BtnPrintInvoice.Enabled = true;
 
                 Cursor.Current = Cursors.Default;
             }
@@ -1919,6 +1923,51 @@ namespace DentalSystem.VisitManagement
                 DgvItemsToBillOtherVisits.DataSource = activities.InvoiceDetailFromOtherVisits;
 
                 NameOtherVisitItemsToBillGridHeader(DgvItemsToBillOtherVisits);
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnPrintInvoice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = MessageBox.Show("Está a punto de imprimir la factura",
+                    "Información",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information);
+
+                if (result != DialogResult.OK) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var getPrintingDetailsByVisitIdRequest = new GetPrintingDetailsByVisitIdRequest
+                {
+                    VisitId = GenericProperties.VisitId,
+                    Mapper = _iMapper
+                };
+
+                var printingDetail =
+                    _accountReceivableService.GetPrintingDetailsByVisitId(getPrintingDetailsByVisitIdRequest);
+
+                var printingModel = new PrintingModel
+                {
+                    VisitNumber = printingDetail.PrintingDetail.VisitNumber.ToString(),
+                    VisitDate = printingDetail.PrintingDetail.VisitDate,
+                    Total = printingDetail.PrintingDetail.Total,
+                    Paid = printingDetail.PrintingDetail.TotalPaid,
+                    Pending = printingDetail.PrintingDetail.TotalPending,
+                    ItemsToBill = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource
+                };
+                
+                var activitiesToPrint = new ActivitiesPerformedPrinter(printingModel);
+                activitiesToPrint.BillPrinting();
+
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)

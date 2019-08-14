@@ -41,6 +41,18 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
+        public AccountsReceivable GetPrintingDetailsByVisitId(int visitId)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var accountsReceivable =
+                    context.AccountsReceivables
+                        .Include(w => w.Visit).FirstOrDefault(w => w.Visit.VisitId == visitId);
+
+                return accountsReceivable;
+            }
+        }
+
         public List<AccountsReceivable> GetAccountsReceivableByPatientId(int patientId)
         {
             using (var context = new DentalSystemContext())

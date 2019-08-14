@@ -9,5 +9,6 @@ namespace DentalSystem.Contract.Repositories
         List<AccountsReceivable> GetAllAccountsReceivableByPatientId(int patientId);
         void AddAccountReceivable(AccountsReceivable accountsReceivable);
         void UpdateTotalPaid(AccountsReceivable accountsReceivable);
+        AccountsReceivable GetPrintingDetailsByVisitId(int visitId);
     }
 }

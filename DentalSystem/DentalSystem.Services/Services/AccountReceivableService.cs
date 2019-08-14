@@ -12,7 +12,8 @@ namespace DentalSystem.Services.Services
         private readonly IAccountReceivableRepository _accountReceivableRepository;
         private readonly IVisitRepository _visitRepository;
 
-        public AccountReceivableService(IAccountReceivableRepository accountReceivableRepository, IVisitRepository visitRepository)
+        public AccountReceivableService(IAccountReceivableRepository accountReceivableRepository,
+            IVisitRepository visitRepository)
         {
             _accountReceivableRepository = accountReceivableRepository;
             _visitRepository = visitRepository;
@@ -51,6 +52,18 @@ namespace DentalSystem.Services.Services
 
             var visit = request.Mapper.Map<Visit>(request.SetVisitAsBilledRequest);
             _visitRepository.SetVisitAsBilled(visit);
+        }
+
+        public GetPrintingDetailsByVisitIdResult GetPrintingDetailsByVisitId(GetPrintingDetailsByVisitIdRequest request)
+        {
+            var result = _accountReceivableRepository.GetPrintingDetailsByVisitId(request.VisitId);
+            var printingDetail = request.Mapper.Map<GetPrintingDetailsByVisitIdResultModel>(result);
+
+            var getAllAccountsReceivableByPatientIdResult = new GetPrintingDetailsByVisitIdResult
+            {
+                PrintingDetail = printingDetail
+            };
+            return getAllAccountsReceivableByPatientIdResult;
         }
     }
 }

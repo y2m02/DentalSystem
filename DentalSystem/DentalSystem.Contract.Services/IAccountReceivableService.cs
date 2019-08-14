@@ -12,5 +12,8 @@ namespace DentalSystem.Contract.Services
             GetAllAccountsReceivableByPatientIdRequest request);
 
         void AddAccountReceivable(AddAccountsReceivableRequest request);
+
+        GetPrintingDetailsByVisitIdResult GetPrintingDetailsByVisitId(
+            GetPrintingDetailsByVisitIdRequest request);
     }
 }

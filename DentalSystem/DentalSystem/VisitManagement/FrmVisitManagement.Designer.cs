@@ -794,7 +794,7 @@
             this.BtnOtherVisitItemsToBill = new System.Windows.Forms.Button();
             this.BtnEndInvoice = new System.Windows.Forms.Button();
             this.BtnDeletePayment = new System.Windows.Forms.Button();
-            this.BtnAddPayment = new System.Windows.Forms.Button();
+            this.BtnPrintInvoice = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.LblTotalCurrentVisit = new System.Windows.Forms.Label();
@@ -810,6 +810,7 @@
             this.BtnActivitiesPerformed = new System.Windows.Forms.Button();
             this.BtnInvoice = new System.Windows.Forms.Button();
             this.BtnEndVisit = new System.Windows.Forms.Button();
+            this.BtnAddPayment = new System.Windows.Forms.Button();
             this.TclVisitManagement.SuspendLayout();
             this.TabGeneralInfo.SuspendLayout();
             this.PnlInformation.SuspendLayout();
@@ -9150,6 +9151,7 @@
             this.panel1.Controls.Add(this.BtnOtherVisitItemsToBill);
             this.panel1.Controls.Add(this.BtnEndInvoice);
             this.panel1.Controls.Add(this.BtnDeletePayment);
+            this.panel1.Controls.Add(this.BtnPrintInvoice);
             this.panel1.Controls.Add(this.BtnAddPayment);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label13);
@@ -9195,15 +9197,16 @@
             this.BtnDeletePayment.UseVisualStyleBackColor = true;
             this.BtnDeletePayment.Click += new System.EventHandler(this.BtnDeletePayment_Click_1);
             // 
-            // BtnAddPayment
+            // BtnPrintInvoice
             // 
-            this.BtnAddPayment.Location = new System.Drawing.Point(8, 300);
-            this.BtnAddPayment.Name = "BtnAddPayment";
-            this.BtnAddPayment.Size = new System.Drawing.Size(165, 39);
-            this.BtnAddPayment.TabIndex = 40;
-            this.BtnAddPayment.Text = "Abonar";
-            this.BtnAddPayment.UseVisualStyleBackColor = true;
-            this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
+            this.BtnPrintInvoice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrintInvoice.Location = new System.Drawing.Point(894, 300);
+            this.BtnPrintInvoice.Name = "BtnPrintInvoice";
+            this.BtnPrintInvoice.Size = new System.Drawing.Size(185, 54);
+            this.BtnPrintInvoice.TabIndex = 40;
+            this.BtnPrintInvoice.Text = "Imprimir factura";
+            this.BtnPrintInvoice.UseVisualStyleBackColor = true;
+            this.BtnPrintInvoice.Click += new System.EventHandler(this.BtnPrintInvoice_Click);
             // 
             // label18
             // 
@@ -9415,6 +9418,16 @@
             this.BtnEndVisit.Text = "Finalizar visita";
             this.BtnEndVisit.UseVisualStyleBackColor = false;
             this.BtnEndVisit.Click += new System.EventHandler(this.BtnEndVisit_Click);
+            // 
+            // BtnAddPayment
+            // 
+            this.BtnAddPayment.Location = new System.Drawing.Point(8, 300);
+            this.BtnAddPayment.Name = "BtnAddPayment";
+            this.BtnAddPayment.Size = new System.Drawing.Size(165, 39);
+            this.BtnAddPayment.TabIndex = 40;
+            this.BtnAddPayment.Text = "Abonar";
+            this.BtnAddPayment.UseVisualStyleBackColor = true;
+            this.BtnAddPayment.Click += new System.EventHandler(this.BtnAddPayment_Click);
             // 
             // FrmVisitManagement
             // 
@@ -10297,5 +10310,6 @@
         private System.Windows.Forms.ToolStripMenuItem ningunaToolStripMenuItem;
         private System.Windows.Forms.Button BtnListOtherVisitActivities;
         private System.Windows.Forms.Button BtnOtherVisitItemsToBill;
+        private System.Windows.Forms.Button BtnPrintInvoice;
     }
 }

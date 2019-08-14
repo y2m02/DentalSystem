@@ -80,6 +80,7 @@
     <Compile Include="Requests\InvoiceDetail\AddInvoiceDetailRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\GetInvoiceDetailByVisitIdRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\GetInvoiceDetailFromOtherVisitsRequest.cs" />
+    <Compile Include="Requests\AccountsReceivable\GetPrintingDetailsByVisitIdRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\UpdateInvoiceDetailRequest.cs" />
     <Compile Include="Requests\Odontogram\AddOdontogramRequest.cs" />
     <Compile Include="Requests\Odontogram\GetOdontogramByVisitIdRequest.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Results\AccountsReceivable\GetAccountsReceivableByPatientIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailByVisitIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailFromOtherVisitsResult.cs" />
+    <Compile Include="Results\AccountsReceivable\GetPrintingDetailsByVisitIdResult.cs" />
     <Compile Include="Results\Odontogram\AddOdontogramResult.cs" />
     <Compile Include="Results\Odontogram\GetOdontogramByVisitIdResult.cs" />
     <Compile Include="Results\Odontogram\ValidateIfVisitHasOdontogramsResult.cs" />
