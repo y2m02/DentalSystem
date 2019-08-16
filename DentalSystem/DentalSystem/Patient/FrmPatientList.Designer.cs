@@ -39,6 +39,11 @@
             this.BtnClear = new System.Windows.Forms.Button();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.PnlSearch = new System.Windows.Forms.Panel();
+            this.DtpTo = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.DtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ChkDateRange = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.BtnVisits = new System.Windows.Forms.Button();
             this.BtnCreateVisit = new System.Windows.Forms.Button();
@@ -46,13 +51,13 @@
             this.LblTitle = new System.Windows.Forms.Label();
             this.BtnBackToVisit = new System.Windows.Forms.Button();
             this.BtnAccountReceivable = new System.Windows.Forms.Button();
-            this.DtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.DtpTo = new System.Windows.Forms.DateTimePicker();
-            this.ChkDateRange = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvPatientList
@@ -172,6 +177,61 @@
             this.PnlSearch.Size = new System.Drawing.Size(951, 88);
             this.PnlSearch.TabIndex = 0;
             // 
+            // DtpTo
+            // 
+            this.DtpTo.CustomFormat = "dd/MM/yyyy";
+            this.DtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpTo.Location = new System.Drawing.Point(607, 50);
+            this.DtpTo.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
+            this.DtpTo.Name = "DtpTo";
+            this.DtpTo.Size = new System.Drawing.Size(177, 30);
+            this.DtpTo.TabIndex = 38;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(544, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 23);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Hasta:";
+            // 
+            // DtpFrom
+            // 
+            this.DtpFrom.CustomFormat = "dd/MM/yyyy";
+            this.DtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpFrom.Location = new System.Drawing.Point(333, 50);
+            this.DtpFrom.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
+            this.DtpFrom.Name = "DtpFrom";
+            this.DtpFrom.Size = new System.Drawing.Size(177, 30);
+            this.DtpFrom.TabIndex = 38;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(265, 52);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 23);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Desde:";
+            // 
+            // ChkDateRange
+            // 
+            this.ChkDateRange.AutoSize = true;
+            this.ChkDateRange.Checked = true;
+            this.ChkDateRange.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChkDateRange.Location = new System.Drawing.Point(87, 50);
+            this.ChkDateRange.Name = "ChkDateRange";
+            this.ChkDateRange.Size = new System.Drawing.Size(187, 27);
+            this.ChkDateRange.TabIndex = 40;
+            this.ChkDateRange.Text = "Rango de fechas:";
+            this.ChkDateRange.UseVisualStyleBackColor = true;
+            this.ChkDateRange.CheckedChanged += new System.EventHandler(this.ChkDateRange_CheckedChanged);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -244,60 +304,39 @@
             this.BtnAccountReceivable.UseVisualStyleBackColor = true;
             this.BtnAccountReceivable.Click += new System.EventHandler(this.BtnAccountReceivable_Click);
             // 
-            // DtpFrom
+            // menuStrip1
             // 
-            this.DtpFrom.CustomFormat = "dd/MM/yyyy";
-            this.DtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpFrom.Location = new System.Drawing.Point(333, 50);
-            this.DtpFrom.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
-            this.DtpFrom.Name = "DtpFrom";
-            this.DtpFrom.Size = new System.Drawing.Size(177, 30);
-            this.DtpFrom.TabIndex = 38;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opcionesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 28);
+            this.menuStrip1.TabIndex = 29;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // label8
+            // opcionesToolStripMenuItem
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(265, 52);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 23);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Desde:";
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem,
+            this.salirToolStripMenuItem1});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
-            // label2
+            // salirToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(544, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 23);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Hasta:";
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(277, 26);
+            this.salirToolStripMenuItem.Text = "Realizar copia de seguridad";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
             // 
-            // DtpTo
+            // salirToolStripMenuItem1
             // 
-            this.DtpTo.CustomFormat = "dd/MM/yyyy";
-            this.DtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpTo.Location = new System.Drawing.Point(607, 50);
-            this.DtpTo.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
-            this.DtpTo.Name = "DtpTo";
-            this.DtpTo.Size = new System.Drawing.Size(177, 30);
-            this.DtpTo.TabIndex = 38;
-            // 
-            // ChkDateRange
-            // 
-            this.ChkDateRange.AutoSize = true;
-            this.ChkDateRange.Checked = true;
-            this.ChkDateRange.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkDateRange.Location = new System.Drawing.Point(87, 50);
-            this.ChkDateRange.Name = "ChkDateRange";
-            this.ChkDateRange.Size = new System.Drawing.Size(187, 27);
-            this.ChkDateRange.TabIndex = 40;
-            this.ChkDateRange.Text = "Rango de fechas:";
-            this.ChkDateRange.UseVisualStyleBackColor = true;
-            this.ChkDateRange.CheckedChanged += new System.EventHandler(this.ChkDateRange_CheckedChanged);
+            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(277, 26);
+            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem1.Click += new System.EventHandler(this.SalirToolStripMenuItem1_Click);
             // 
             // FrmPatientList
             // 
@@ -306,6 +345,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClear;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BtnAccountReceivable);
             this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.PnlSearch);
@@ -317,6 +357,7 @@
             this.Controls.Add(this.DgvPatientList);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "FrmPatientList";
@@ -329,6 +370,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).EndInit();
             this.PnlSearch.ResumeLayout(false);
             this.PnlSearch.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +400,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker DtpFrom;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
     }
 }

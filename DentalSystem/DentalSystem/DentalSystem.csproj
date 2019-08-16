@@ -235,8 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="3 lines.png" />
-    <None Include="Resources\add-circle-green-512.png" />
-    <None Include="Resources\add-circle-blue-512.png" />
     <Content Include="Teeth.ico" />
   </ItemGroup>
   <ItemGroup />

@@ -16,7 +16,8 @@ namespace DentalSystem.Repositories.Repositories
                 var accountsReceivable =
                     context.AccountsReceivables.Include(w => w.Visit)
                         .Where(w => w.Patient.PatientId == patientId)
-                        .OrderByDescending(w => (w.Total - w.TotalPaid)).ThenByDescending(w=>w.Visit.VisitNumber).ToList();
+                        .OrderByDescending(w => w.Total - w.TotalPaid).ThenByDescending(w => w.Visit.VisitNumber)
+                        .ToList();
 
                 return accountsReceivable;
             }

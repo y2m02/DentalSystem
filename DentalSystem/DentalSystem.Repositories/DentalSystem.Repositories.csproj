@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountReceivableRepository.cs" />
     <Compile Include="Repositories\ActivityPerformedRepository.cs" />
+    <Compile Include="Repositories\BackUpRepository.cs" />
     <Compile Include="Repositories\InvoiceDetailRepository.cs" />
     <Compile Include="Repositories\OdontogramRepository.cs" />
     <Compile Include="Repositories\PatientRepository.cs" />

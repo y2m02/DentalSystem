@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ using DentalSystem.AccountReceivable;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.AccountsReceivable;
+using DentalSystem.Entities.Requests.BackUp;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.Patient;
@@ -20,6 +22,7 @@ namespace DentalSystem.Patient
     {
         private readonly IAccountReceivableService _accountReceivableService;
         private readonly IActivityPerformedService _activityPerformedService;
+        private readonly IBackUpService _backUpService;
         private readonly IMapper _iMapper;
         private readonly IInvoiceDetailService _invoiceDetailService;
         private readonly IOdontogramService _odontogramService;
@@ -35,7 +38,7 @@ namespace DentalSystem.Patient
             IVisitService visitService, IInvoiceDetailService invoiceDetailService,
             IAccountReceivableService accountReceivableService, IPaymentService paymentService,
             IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService,
-            ITreatmentOdontogramService treatmentOdontogramService)
+            ITreatmentOdontogramService treatmentOdontogramService, IBackUpService backUpService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
@@ -49,6 +52,7 @@ namespace DentalSystem.Patient
             _plateRegistrationService = plateRegistrationService;
             _odontogramService = odontogramService;
             _treatmentOdontogramService = treatmentOdontogramService;
+            _backUpService = backUpService;
             InitializeComponent();
         }
 
@@ -245,7 +249,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?)visitHasEnded ?? true;
+            var visitHasFinished = (bool?) visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -257,7 +261,7 @@ namespace DentalSystem.Patient
             {
                 var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-                var visitHasFinished = (bool?)visitHasEnded ?? true;
+                var visitHasFinished = (bool?) visitHasEnded ?? true;
 
                 if (!visitHasFinished)
                 {
@@ -480,6 +484,48 @@ namespace DentalSystem.Patient
             //    : _patientService.GetAllPatients(_iMapper, TxtSearch.Text.Trim(), RbtName.Checked, null, null);
 
             //ListPatients(patients);
+        }
+
+        private void SalirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var result = MessageBox.Show("Está a punto de realizar una copia de seguridad de los datos",
+                    "Información",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Information);
+
+                if (result != DialogResult.OK) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var path = string.IsNullOrEmpty(ConfigurationSettings.AppSettings["BackUpDiskName"])
+                    ? ""
+                    : ConfigurationSettings.AppSettings["BackUpDiskName"];
+
+                var createBackUpRequest = new CreateBackUpRequest
+                {
+                    Path = path
+                };
+
+                _backUpService.CreateBackUp(createBackUpRequest);
+
+                MessageBox.Show("BackUp generado exitosamente", "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
     }
 }
