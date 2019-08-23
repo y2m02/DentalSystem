@@ -10,7 +10,8 @@ namespace DentalSystem.Entities.Models
         public int InvoiceDetailId { get; set; }
         //[ForeignKey("Visit")] public int VisitId { get; set; }
         //[ForeignKey("ActivityPerformed")] public int ActivityPerformedId { get; set; }
-        public int Price { get; set; }
+    
+        public decimal Price { get; set; }
         public DateTime? DeletedOn { get; set; }
 
         //public virtual Visit Visit { get; set; }

@@ -74,7 +74,7 @@ namespace DentalSystem.AccountReceivable
             {
                 var totalPending = DgvAccountReceivableList.SelectedRows[0].Cells["TotalPending"].Value.ToString();
 
-                if (Convert.ToInt32(totalPending) == 0)
+                if (Convert.ToDecimal(totalPending) == 0)
                 {
                     MessageBox.Show("Esta cuenta no tiene saldo pendiente", "Información", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
@@ -84,7 +84,7 @@ namespace DentalSystem.AccountReceivable
                 var accountReceivableId =
                     Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
 
-                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var totalPaid = Convert.ToDecimal(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
 
                 Cursor.Current = Cursors.Default;
 
@@ -153,8 +153,8 @@ namespace DentalSystem.AccountReceivable
 
                 var accountReceivableId =
                     Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
-                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
-                var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
+                var totalPaid = Convert.ToDecimal(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var paymentTotalPaid = Convert.ToDecimal(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
 
                 var updateTotalPaidRequest = new UpdateTotalPaidRequest
                 {

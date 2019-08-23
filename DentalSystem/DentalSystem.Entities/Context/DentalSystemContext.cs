@@ -27,6 +27,13 @@ namespace DentalSystem.Entities.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Entity<Payment>().Property(w => w.AmountPaid).HasPrecision(18, 2);
+            modelBuilder.Entity<InvoiceDetail>().Property(w => w.Price).HasPrecision(18, 2);
+            modelBuilder.Entity<AccountsReceivable>().Property(w => w.Total).HasPrecision(18, 2);
+            modelBuilder.Entity<AccountsReceivable>().Property(w => w.TotalPaid).HasPrecision(18, 2);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 

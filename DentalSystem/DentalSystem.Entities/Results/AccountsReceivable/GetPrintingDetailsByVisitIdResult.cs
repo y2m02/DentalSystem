@@ -11,8 +11,8 @@ namespace DentalSystem.Entities.Results.AccountsReceivable
     {
         public int VisitNumber { get; set; }
         public DateTime VisitDate { get; set; }
-        public int Total { get; set; }
-        public int TotalPaid { get; set; }
-        public int TotalPending { get; set; }
+        public decimal Total { get; set; }
+        public decimal TotalPaid { get; set; }
+        public decimal TotalPending { get; set; }
     }
 }

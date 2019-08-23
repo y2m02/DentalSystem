@@ -507,7 +507,7 @@ namespace DentalSystem.Patient
                 var path = string.IsNullOrEmpty(ConfigurationSettings.AppSettings["BackUpDiskName"])
                     ? ""
                     : ConfigurationSettings.AppSettings["BackUpDiskName"];
-
+           
                 var createBackUpRequest = new CreateBackUpRequest
                 {
                     Path = path
@@ -515,7 +515,8 @@ namespace DentalSystem.Patient
 
                 _backUpService.CreateBackUp(createBackUpRequest);
 
-                MessageBox.Show("BackUp generado exitosamente", "Información", MessageBoxButtons.OK,
+                MessageBox.Show("BackUp generado exitosamente." +
+                                $"\nUbicación: {path}", "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                 Cursor.Current = Cursors.Default;

@@ -13,6 +13,6 @@ namespace DentalSystem.Entities.Results.InvoiceDetail
         public int VisitNumber { get; set; }
         public string ActivityPerformed { get; set; }
         public string Section { get; set; }
-        public int Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

@@ -279,6 +279,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_47DED1578AB24EC1E550109DBCAA2BC7"
+        "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_49A66DC546CA3D65BBDEA2AF61628969"
         "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
         "MsmSig" = "8:_UNDEFINED"
@@ -292,6 +298,12 @@
         "Entry"
         {
         "MsmKey" = "8:_4F92CB2AC03BB13188E0B329C230E0E0"
+        "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5088000FBA17B12A9E5AE1D9E9CD6C31"
         "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -657,6 +669,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CF05B3323C1B745F3C445849123D95CC"
+        "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D1F0EE7C8CA197800E7D96067EE72495"
         "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
         "MsmSig" = "8:_UNDEFINED"
@@ -886,13 +904,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_61AD0E663EBA9FE9B32B12AD5FE95DA5"
+        "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
+        "OwnerKey" = "8:_47DED1578AB24EC1E550109DBCAA2BC7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -971,6 +989,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_1ECF60854C526552824FF4C43661EA22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5088000FBA17B12A9E5AE1D9E9CD6C31"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1627,6 +1651,18 @@
         "OwnerKey" = "8:_43B6FCE10357F7079414487B98EA852C"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_61AD0E663EBA9FE9B32B12AD5FE95DA5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CF05B3323C1B745F3C445849123D95CC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -1645,6 +1681,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -1661,6 +1705,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -2888,6 +2940,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_47DED1578AB24EC1E550109DBCAA2BC7"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64"
+                "ScatterAssemblies"
+                {
+                    "_47DED1578AB24EC1E550109DBCAA2BC7"
+                    {
+                    "Name" = "8:log4net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:log4net.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B43175A7E68943AFB852143A749C496B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_49A66DC546CA3D65BBDEA2AF61628969"
             {
             "AssemblyRegister" = "3:1"
@@ -2964,6 +3047,37 @@
                     }
                 }
             "SourcePath" = "8:System.Security.SecureString.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B43175A7E68943AFB852143A749C496B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5088000FBA17B12A9E5AE1D9E9CD6C31"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CrystalDecisions.ReportAppServer.Prompting, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5088000FBA17B12A9E5AE1D9E9CD6C31"
+                    {
+                    "Name" = "8:CrystalDecisions.ReportAppServer.Prompting.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:CrystalDecisions.ReportAppServer.Prompting.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B43175A7E68943AFB852143A749C496B"
@@ -4644,6 +4758,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CF05B3323C1B745F3C445849123D95CC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_CF05B3323C1B745F3C445849123D95CC"
+                    {
+                    "Name" = "8:stdole.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:stdole.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B43175A7E68943AFB852143A749C496B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D1F0EE7C8CA197800E7D96067EE72495"
             {
             "AssemblyRegister" = "3:1"
@@ -5762,6 +5907,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E0DF78C4E26341FBAD667442DC7BFC56"
+            {
+            "Name" = "8:Sistema odondológico Dra. Ramírez"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_943FD6AF09FB44228F9D0F9689D709C1"
+            "Folder" = "8:_2F10A5A1CC894DFF8BC4104EBDF0059C"
+            "WorkingFolder" = "8:_B43175A7E68943AFB852143A749C496B"
+            "Icon" = "8:_BBF5A5B7C44F40BEAEB0AE48F08A6FCA"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F65518D92B9B41AA9F28D3011A0793CE"
             {
             "Name" = "8:Sistema odondológico Dra. Ramírez"

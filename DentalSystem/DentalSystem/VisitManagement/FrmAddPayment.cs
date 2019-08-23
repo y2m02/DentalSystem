@@ -15,7 +15,7 @@ namespace DentalSystem.VisitManagement
 
         public int AccountsReceivableId { get; set; }
         public string TotalPending { get; set; }
-        public int TotalPaid { get; set; }
+        public decimal TotalPaid { get; set; }
 
         public FrmAddPayment(IPaymentService paymentService, IMapper iMapper)
         {
@@ -31,7 +31,7 @@ namespace DentalSystem.VisitManagement
 
         private void TxtPayment_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter || e.KeyChar == '.') return;
 
             MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
@@ -45,7 +45,7 @@ namespace DentalSystem.VisitManagement
 
         private void BtnAddPayment_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtPayment.Text.Trim()))
+            if (string.IsNullOrEmpty(TxtPayment.Text.Trim()) || Convert.ToDecimal(TxtPayment.Text.Trim()) == 0)
             {
                 MessageBox.Show("Debe ingresar un monto", "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
@@ -53,7 +53,15 @@ namespace DentalSystem.VisitManagement
                 return;
             }
 
-            if (Convert.ToInt32(TxtPayment.Text) > Convert.ToInt32(TxtTotalPending.Text))
+            if (!decimal.TryParse(TxtPayment.Text.Trim(),out _))
+            {
+                MessageBox.Show("Debe ingresar un monto válido", "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                DialogResult = DialogResult.None;
+                return;
+            }
+
+            if (Convert.ToDecimal(TxtPayment.Text) > Convert.ToDecimal(TxtTotalPending.Text))
             {
                 MessageBox.Show("El monto ingresado es mayor que el monto pendiente", "Información",
                     MessageBoxButtons.OK,
@@ -69,7 +77,7 @@ namespace DentalSystem.VisitManagement
                 var updateTotalPaidRequest = new UpdateTotalPaidRequest
                 {
                     AccountsReceivableId = AccountsReceivableId,
-                    TotalPaid = TotalPaid + Convert.ToInt32(TxtPayment.Text)
+                    TotalPaid = TotalPaid + Convert.ToDecimal(TxtPayment.Text)
                 };
 
                 var addPaymentRequest = new AddPaymentRequest
@@ -77,7 +85,7 @@ namespace DentalSystem.VisitManagement
                     Mapper = _iMapper,
                     AccountsReceivableId = AccountsReceivableId,
                     PaymentDate = DateTime.Now,
-                    AmountPaid = Convert.ToInt32(TxtPayment.Text),
+                    AmountPaid = Convert.ToDecimal(TxtPayment.Text),
                     UpdateTotalPaidRequest = updateTotalPaidRequest
                 };
 

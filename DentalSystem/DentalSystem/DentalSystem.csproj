@@ -107,6 +107,9 @@
       <DependentUpon>FrmPatientList.cs</DependentUpon>
     </Compile>
     <Compile Include="Printing\ActivitiesPerformedPrinter.cs" />
+    <Compile Include="Printing\DsActivitiesPerformed.cs">
+      <DependentUpon>DsActivitiesPerformed.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Printing\DsActivitiesPerformed.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

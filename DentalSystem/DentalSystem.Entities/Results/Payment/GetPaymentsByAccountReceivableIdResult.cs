@@ -11,7 +11,7 @@ namespace DentalSystem.Entities.Results.Payment
     public class GetPaymentsByAccountReceivableIdResultModel
     {
         public int PaymentId { get; set; }
-        public int AmountPaid { get; set; }
+        public decimal AmountPaid { get; set; }
         public DateTime PaymentDate { get; set; }
     }
 }

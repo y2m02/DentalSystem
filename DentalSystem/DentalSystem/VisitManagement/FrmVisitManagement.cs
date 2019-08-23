@@ -123,15 +123,17 @@ namespace DentalSystem.VisitManagement
                 PnlPlateRegistration);
             SetOdontogramBtnNames();
             GetInitialOdontogramInformation(patInfo.Odontogram);
-            ListActivitiesPerformed(patInfo.VisitActivities.Any() ? patInfo.VisitActivities : new List<GetAllActivitiesPerformedResultModel>());
+            ListActivitiesPerformed(patInfo.VisitActivities.Any()
+                ? patInfo.VisitActivities
+                : new List<GetAllActivitiesPerformedResultModel>());
             FillPlateRegistrationInformation(patInfo.PlateRegistration);
-            
+
             if (!IsDetail) return;
 
             GetTreatmentOdontogramInformation();
 
             GetInvoiceLists();
-            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
 
@@ -176,7 +178,7 @@ namespace DentalSystem.VisitManagement
             if (IsDetail) return;
 
             GetInvoiceLists();
-            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
@@ -209,7 +211,7 @@ namespace DentalSystem.VisitManagement
 
                     GetInvoiceLists();
                     var invoiceDetailsCurrentVisit =
-                        (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+                        (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                     LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
@@ -284,7 +286,7 @@ namespace DentalSystem.VisitManagement
                     AdmissionDate = DtpAdmissionDate.Value,
                     PhoneNumber = TxtPhoneNumber.Text.Trim(),
                     Sector = TxtSector.Text.Trim(),
-                    Age = (int)NudAge.Value,
+                    Age = (int) NudAge.Value,
                     BirthDate = DtpBirthDate.Value,
                     HasInsurancePlan = RbtInsuranceYes.Checked,
                     NSS = TxtNss.Text.Trim(),
@@ -364,7 +366,7 @@ namespace DentalSystem.VisitManagement
         public void ValidateOnlyNumbers(KeyPressEventArgs e)
         {
             if (TxtIdentificationCard.ReadOnly) return;
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
 
             MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
@@ -373,7 +375,7 @@ namespace DentalSystem.VisitManagement
 
         public void ValidateOnlyNumbersNoMsg(KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
             e.Handled = true;
         }
 
@@ -861,7 +863,8 @@ namespace DentalSystem.VisitManagement
             dgv.Columns["ActivityPerformed"].HeaderText = "Actividad";
             dgv.Columns["Price"].HeaderText = "Monto";
 
-            dgv.Columns["Price"].ValueType = typeof(int);
+            dgv.Columns["Price"].DefaultCellStyle.Format = "n2";
+            dgv.Columns["Price"].ValueType = typeof(decimal);
 
             dgv.Columns["ActivityPerformed"].ReadOnly = true;
             dgv.Columns["Section"].ReadOnly = true;
@@ -887,11 +890,12 @@ namespace DentalSystem.VisitManagement
         private void DgvItemsToBill_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
             if (e.ColumnIndex != 3) return;
-            if (int.TryParse(Convert.ToString(e.FormattedValue), out _) &&
-                Convert.ToInt32(e.FormattedValue) >= 0) return;
+            if (decimal.TryParse(Convert.ToString(e.FormattedValue), out _) &&
+                Convert.ToDecimal(e.FormattedValue) >= 0)
+                return;
 
             e.Cancel = true;
-            MessageBox.Show("Ingrese solo números enteros positivos", "Información", MessageBoxButtons.OK,
+            MessageBox.Show("Ingrese solo números positivos", "Información", MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
         }
 
@@ -907,7 +911,7 @@ namespace DentalSystem.VisitManagement
                 Cursor.Current = Cursors.WaitCursor;
 
                 var invoiceDetailId = Convert.ToInt32(DgvItemsToBill.Rows[e.RowIndex].Cells[0].Value);
-                var price = Convert.ToInt32(DgvItemsToBill.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                var price = Convert.ToDecimal(DgvItemsToBill.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
 
                 var updateActivityPerformedRequest = new UpdateInvoiceDetailRequest
                 {
@@ -918,7 +922,7 @@ namespace DentalSystem.VisitManagement
 
                 _invoiceDetailService.UpdateInvoiceDetail(updateActivityPerformedRequest);
 
-                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
+                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
                 var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                 LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
 
@@ -1003,7 +1007,7 @@ namespace DentalSystem.VisitManagement
 
                 if (result != DialogResult.OK) return;
 
-                var total = Convert.ToInt32(LblTotalCurrentVisit.Text.Split('$')[1].Replace(",", "").Replace(".00", ""));
+                var total = Convert.ToDecimal(LblTotalCurrentVisit.Text.Split('$')[1].Replace(",", ""));
 
                 var setVisitAsBilled = new SetVisitAsBilledRequest
                 {
@@ -1065,8 +1069,8 @@ namespace DentalSystem.VisitManagement
 
                 var accountReceivableId =
                     Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
-                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
-                var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
+                var totalPaid = Convert.ToDecimal(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var paymentTotalPaid = Convert.ToDecimal(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
 
                 var updateTotalPaidRequest = new UpdateTotalPaidRequest
                 {
@@ -1107,7 +1111,7 @@ namespace DentalSystem.VisitManagement
             {
                 var totalPending = DgvAccountReceivableList.SelectedRows[0].Cells["TotalPending"].Value.ToString();
 
-                if (Convert.ToInt32(totalPending) == 0)
+                if (Convert.ToDecimal(totalPending) == 0)
                 {
                     MessageBox.Show("Esta cuenta no tiene saldo pendiente", "Información", MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
@@ -1117,7 +1121,7 @@ namespace DentalSystem.VisitManagement
                 var accountReceivableId =
                     Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
 
-                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var totalPaid = Convert.ToDecimal(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
 
                 Cursor.Current = Cursors.Default;
 
@@ -1220,8 +1224,8 @@ namespace DentalSystem.VisitManagement
 
                 var accountReceivableId =
                     Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["AccountsReceivableId"].Value);
-                var totalPaid = Convert.ToInt32(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
-                var paymentTotalPaid = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
+                var totalPaid = Convert.ToDecimal(DgvAccountReceivableList.SelectedRows[0].Cells["TotalPaid"].Value);
+                var paymentTotalPaid = Convert.ToDecimal(DgvPaymentList.SelectedRows[0].Cells["AmountPaid"].Value);
 
                 var updateTotalPaidRequest = new UpdateTotalPaidRequest
                 {
@@ -1403,7 +1407,7 @@ namespace DentalSystem.VisitManagement
                         ButtonNumber = buttonCount,
                         ButtonName = button.Name,
                         HasCavities = button.BackColor == Color.Red,
-                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities : 0
+                        TeethStatus = button.BackColor == Color.Red ? (int) TeethStatus.HasCavities : 0
                     });
 
                     treatmentOdontogramButtonList.Add(new TreatmentOdontogramButtonsModel
@@ -1412,7 +1416,7 @@ namespace DentalSystem.VisitManagement
                         ButtonNumber = buttonCount,
                         ButtonName = button.Name.Replace('I', 'T'),
                         HasCavities = button.BackColor == Color.Red,
-                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities : 0
+                        TeethStatus = button.BackColor == Color.Red ? (int) TeethStatus.HasCavities : 0
                     });
 
                     if (button.BackColor == Color.Red) cavitiesQuantity++;
@@ -1443,7 +1447,7 @@ namespace DentalSystem.VisitManagement
 
                 BtnNewOdontogram.Visible = true;
                 BtnSaveOdontogram.Visible = false;
-               
+
                 SetInitialOdontogramButtonsStatus(false);
                 Cursor.Current = Cursors.Default;
             }
@@ -1500,7 +1504,7 @@ namespace DentalSystem.VisitManagement
                 {
                     BtnNewOdontogram.Visible = true;
                     BtnSaveOdontogram.Visible = false;
-                   
+
                     LblTotalCavities.Text = $"Total de caries: {odontogramResult.CavitiesQuantity}";
                     var buttonList =
                         JsonConvert.DeserializeObject<List<OdontogramButtonsModel>>(odontogramResult
@@ -1753,16 +1757,12 @@ namespace DentalSystem.VisitManagement
                         ButtonName = button.Name,
                         HasCavities = button.BackColor == Color.Red,
                         TeethStatus = button.BackColor == Color.Red
-                            ? (int)TeethStatus.HasCavities
-                            :
-                            button.BackColor == Color.Blue
-                                ? (int)TeethStatus.WasCured
-                                :
-                                button.BackColor == Color.White && button.BackgroundImage != null
-                                    ?
-                                    (int)TeethStatus.WasExtracted
-                                    :
-                                    0
+                            ? (int) TeethStatus.HasCavities
+                            : button.BackColor == Color.Blue
+                                ? (int) TeethStatus.WasCured
+                                : button.BackColor == Color.White && button.BackgroundImage != null
+                                    ? (int) TeethStatus.WasExtracted
+                                    : 0
                     });
 
                     if (button.BackColor == Color.Red) cavitiesQuantity++;
@@ -1798,7 +1798,7 @@ namespace DentalSystem.VisitManagement
 
         private void CuradoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
             button.BackgroundImage = null;
             button.BackColor = Color.Blue;
 
@@ -1807,7 +1807,7 @@ namespace DentalSystem.VisitManagement
 
         private void ExtraídoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
             button.BackColor = Color.White;
             var directory = Directory.GetCurrentDirectory();
             button.BackgroundImage = Image.FromFile($@"{directory}\Images\3 lines.png");
@@ -1837,7 +1837,7 @@ namespace DentalSystem.VisitManagement
 
         private void CariesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
             button.BackgroundImage = null;
             button.BackColor = Color.Red;
 
@@ -1846,7 +1846,7 @@ namespace DentalSystem.VisitManagement
 
         private void NingunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
             button.BackgroundImage = null;
             button.BackColor = Color.White;
 
@@ -1964,7 +1964,7 @@ namespace DentalSystem.VisitManagement
                     Pending = printingDetail.PrintingDetail.TotalPending,
                     ItemsToBill = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource
                 };
-                
+
                 var activitiesToPrint = new ActivitiesPerformedPrinter(printingModel);
                 activitiesToPrint.BillPrinting();
 

@@ -14,10 +14,10 @@ namespace DentalSystem.Entities.Models
         public int PatientId { get; set; }
 
         [Required]
-        public int Total { get; set; }
+        public decimal Total { get; set; }
 
         [Required]
-        public int TotalPaid { get; set; }
+        public decimal TotalPaid { get; set; }
 
         [Required] public DateTime CreatedDate { get; set; }
 

@@ -7,7 +7,7 @@ namespace DentalSystem.Entities.Requests.Payment
     public class AddPaymentRequest
     {
         public int AccountsReceivableId { get; set; }
-        public int AmountPaid { get; set; }
+        public decimal AmountPaid { get; set; }
         public DateTime PaymentDate { get; set; }
         public IMapper Mapper { get; set; }
 

@@ -33,7 +33,7 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.HasInsurancePlan,
                     y => y.MapFrom(r => r.HasInsurancePlan != null ? (bool) r.HasInsurancePlan ? "Sí" : "No" : ""))
                 .ForMember(w => w.AdmissionDate,
-                    y => y.MapFrom(r => r.AdmissionDate != null ? r.AdmissionDate.ToShortDateString() : ""))
+                    y => y.MapFrom(r => r.AdmissionDate != null ? r.AdmissionDate.ToString("d/M/yyyy") : ""))
                 .ForMember(w => w.LastVisitDate,
                     y => y.MapFrom(r =>
                         r.Visits != null && r.Visits.Count != 0
