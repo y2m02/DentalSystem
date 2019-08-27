@@ -55,9 +55,11 @@
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.PbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvPatientList
@@ -338,6 +340,16 @@
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.SalirToolStripMenuItem1_Click);
             // 
+            // PbxLogo
+            // 
+            this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
+            this.PbxLogo.Location = new System.Drawing.Point(974, 38);
+            this.PbxLogo.Name = "PbxLogo";
+            this.PbxLogo.Size = new System.Drawing.Size(266, 133);
+            this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbxLogo.TabIndex = 30;
+            this.PbxLogo.TabStop = false;
+            // 
             // FrmPatientList
             // 
             this.AcceptButton = this.BtnSearch;
@@ -345,6 +357,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClear;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.PbxLogo);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BtnAccountReceivable);
             this.Controls.Add(this.LblTitle);
@@ -372,6 +385,7 @@
             this.PnlSearch.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,5 +418,6 @@
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox PbxLogo;
     }
 }
