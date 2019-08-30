@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsAccountReceivable" targetNamespace="http://tempuri.org/DsAccountReceivable.xsd" xmlns:mstns="http://tempuri.org/DsAccountReceivable.xsd" xmlns="http://tempuri.org/DsAccountReceivable.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsAccountReceivable" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsAccountReceivable" msprop:Generator_UserDSName="DsAccountReceivable">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountReceivable" msprop:Generator_TableClassName="AccountReceivableDataTable" msprop:Generator_TableVarName="tableAccountReceivable" msprop:Generator_TablePropName="AccountReceivable" msprop:Generator_RowDeletingName="AccountReceivableRowDeleting" msprop:Generator_RowChangingName="AccountReceivableRowChanging" msprop:Generator_RowEvHandlerName="AccountReceivableRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountReceivableRowDeleted" msprop:Generator_UserTableName="AccountReceivable" msprop:Generator_RowChangedName="AccountReceivableRowChanged" msprop:Generator_RowEvArgName="AccountReceivableRowChangeEvent" msprop:Generator_RowClassName="AccountReceivableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VisitNumber" msprop:Generator_ColumnVarNameInTable="columnVisitNumber" msprop:Generator_ColumnPropNameInRow="VisitNumber" msprop:Generator_ColumnPropNameInTable="VisitNumberColumn" msprop:Generator_UserColumnName="VisitNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPaid" msprop:Generator_ColumnVarNameInTable="columnTotalPaid" msprop:Generator_ColumnPropNameInRow="TotalPaid" msprop:Generator_ColumnPropNameInTable="TotalPaidColumn" msprop:Generator_UserColumnName="TotalPaid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalPending" msprop:Generator_ColumnVarNameInTable="columnTotalPending" msprop:Generator_ColumnPropNameInRow="TotalPending" msprop:Generator_ColumnPropNameInTable="TotalPendingColumn" msprop:Generator_UserColumnName="TotalPending" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PatientName" msprop:Generator_ColumnVarNameInTable="columnPatientName" msprop:Generator_ColumnPropNameInRow="PatientName" msprop:Generator_ColumnPropNameInTable="PatientNameColumn" msprop:Generator_UserColumnName="PatientName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

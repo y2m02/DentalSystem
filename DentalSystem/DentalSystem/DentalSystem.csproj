@@ -124,6 +124,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AccountReceivable\DsAccountReceivable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsAccountReceivable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AccountReceivable\RptAccountReceivable.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptAccountReceivable.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="VisitManagement\FrmActivityPerformedMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +185,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\AccountReceivable\RptAccountReceivable.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptAccountReceivable.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="VisitManagement\FrmActivityPerformedMaintenance.resx">
       <DependentUpon>FrmActivityPerformedMaintenance.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +222,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reports\AccountReceivable\DsAccountReceivable.xsc">
+      <DependentUpon>DsAccountReceivable.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\AccountReceivable\DsAccountReceivable.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsAccountReceivable.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\AccountReceivable\DsAccountReceivable.xss">
+      <DependentUpon>DsAccountReceivable.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
