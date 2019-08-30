@@ -11,6 +11,7 @@ namespace DentalSystem.Entities.Requests.AccountsReceivable
         public decimal Total { get; set; }
         public decimal TotalPaid { get; set; }
         public DateTime CreatedDate { get; set; }
+
         public IMapper Mapper { get; set; }
         public SetVisitAsBilledRequest SetVisitAsBilledRequest { get; set; }
     }

@@ -10,6 +10,7 @@ namespace DentalSystem.Entities.Models
         [ForeignKey("AccountsReceivable")] public int AccountsReceivableId { get; set; }
    public decimal AmountPaid { get; set; }
         public DateTime PaymentDate { get; set; }
+        public int Month { get; set; }
         public DateTime? DeletedOn { get; set; }
         public AccountsReceivable AccountsReceivable { get; set; }
     }

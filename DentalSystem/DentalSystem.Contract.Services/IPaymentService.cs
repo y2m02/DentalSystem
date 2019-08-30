@@ -7,9 +7,9 @@ namespace DentalSystem.Contract.Services
     {
         GetPaymentsByAccountReceivableIdResult GetPaymentsByAccountReceivableId(
             GetPaymentsByAccountReceivableIdRequest request);
-
+        GetAllPaymentForReportResult GetAllPaymentForReport(
+            GetAllPaymentForReportRequest request);
         void AddPayment(AddPaymentRequest request);
-
         void DeletePayment(DeletePaymentRequest request);
     }
 }

@@ -65,5 +65,18 @@ namespace DentalSystem.Services.Services
             };
             return getAllAccountsReceivableByPatientIdResult;
         }
+
+        public GetAllAccountReceivableForReportResult
+            GetAllAccountReceivableForReport(GetAllAccountReceivableForReportRequest request)
+        {
+            var result = _accountReceivableRepository.GetAllAccountReceivableForReport(request.From,request.To);
+            var accountsReceivable = request.Mapper.Map<List<GetAllAccountReceivableForReportResultModel>>(result);
+
+            var getAllAccountReceivableForReportResult = new GetAllAccountReceivableForReportResult
+            {
+                AccountsReceivable = accountsReceivable
+            };
+            return getAllAccountReceivableForReportResult;
+        }
     }
 }

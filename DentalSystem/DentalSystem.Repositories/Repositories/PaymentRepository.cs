@@ -39,5 +39,20 @@ namespace DentalSystem.Repositories.Repositories
                 context.SaveChanges();
             }
         }
+
+        public List<Payment> GetAllPaymentForReport(DateTime? from, DateTime? to)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var payments = context.Payments.Where(w => from==null
+                        ?w.DeletedOn == null
+                         : w.DeletedOn == null &&
+                           w.PaymentDate.Date>=from.Value.Date&&
+                           w.PaymentDate.Date<=to.Value.Date)
+                    .OrderBy(w => w.Month).ToList();
+
+                return payments;
+            }
+        }
     }
 }

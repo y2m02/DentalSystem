@@ -108,6 +108,37 @@ namespace DentalSystem.MapperConfiguration
                     y => y.MapFrom(r =>
                         r.HasEnded != null ? (bool) r.HasEnded ? "Finalizada" : "En progreso" : "En progreso"));
 
+            CreateMap<AccountsReceivable, GetAllAccountReceivableForReportResultModel>()
+                .ForMember(w => w.TotalPending, y => y.MapFrom(r => r.Total - r.TotalPaid))
+                .ForMember(w => w.CreatedDate, y => y.MapFrom(r => r.CreatedDate.ToString("d/M/yyyy")))
+                .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.Visit.VisitNumber))
+                .ForMember(w => w.PatientName, y => y.MapFrom(r => r.Visit.Patient.FullName));
+
+            CreateMap<Payment, GetAllPaymentForReportResultModel>()
+                .ForMember(w => w.PaymentDate, y => y.MapFrom(r => r.PaymentDate.ToString("d/M/yyyy")))
+                .ForMember(w => w.Month, y => y.MapFrom(r => r.PaymentDate.Month == 1
+                    ? "Enero"
+                    : r.PaymentDate.Month == 1
+                        ? "Febrero"
+                        : r.PaymentDate.Month == 3
+                            ? "Marzo"
+                            : r.PaymentDate.Month == 4
+                                ? "Abril"
+                                : r.PaymentDate.Month == 5
+                                    ? "Mayo"
+                                    : r.PaymentDate.Month == 6
+                                        ? "Junio"
+                                        : r.PaymentDate.Month == 7
+                                            ? "Julio"
+                                            : r.PaymentDate.Month == 8
+                                                ? "Agosto"
+                                                : r.PaymentDate.Month == 9
+                                                    ? "Septiembre"
+                                                    : r.PaymentDate.Month == 10
+                                                        ? "Octubre"
+                                                        : r.PaymentDate.Month == 11
+                                                            ? "Noviembre"
+                                                            : "Diciembre"));
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))

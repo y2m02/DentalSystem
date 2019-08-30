@@ -18,7 +18,6 @@ namespace DentalSystem.Entities.Models
 
         [Required]
         public decimal TotalPaid { get; set; }
-
         [Required] public DateTime CreatedDate { get; set; }
 
         public Patient Patient { get; set; }

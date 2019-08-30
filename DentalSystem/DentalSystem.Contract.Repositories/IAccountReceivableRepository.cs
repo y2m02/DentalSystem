@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Contract.Repositories
@@ -10,5 +11,6 @@ namespace DentalSystem.Contract.Repositories
         void AddAccountReceivable(AccountsReceivable accountsReceivable);
         void UpdateTotalPaid(AccountsReceivable accountsReceivable);
         AccountsReceivable GetPrintingDetailsByVisitId(int visitId);
+        List<AccountsReceivable> GetAllAccountReceivableForReport(DateTime? from, DateTime? to);
     }
 }

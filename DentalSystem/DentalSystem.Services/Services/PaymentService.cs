@@ -33,6 +33,19 @@ namespace DentalSystem.Services.Services
             return getPaymentsByAccountReceivableIdResult;
         }
 
+        public GetAllPaymentForReportResult GetAllPaymentForReport(GetAllPaymentForReportRequest request)
+        {
+            var result = _paymentRepository.GetAllPaymentForReport(request.From, request.To);
+            var getPayments = request.Mapper.Map<List<GetAllPaymentForReportResultModel>>(result);
+
+            var getAllPaymentForReportResult = new GetAllPaymentForReportResult
+            {
+                PaymentList = getPayments
+            };
+
+            return getAllPaymentForReportResult;
+        }
+
         public void AddPayment(AddPaymentRequest request)
         {
             var payment = request.Mapper.Map<Payment>(request);

@@ -85,6 +85,7 @@ namespace DentalSystem.VisitManagement
                     Mapper = _iMapper,
                     AccountsReceivableId = AccountsReceivableId,
                     PaymentDate = DateTime.Now,
+                    Month = DateTime.Now.Month,
                     AmountPaid = Convert.ToDecimal(TxtPayment.Text),
                     UpdateTotalPaidRequest = updateTotalPaidRequest
                 };

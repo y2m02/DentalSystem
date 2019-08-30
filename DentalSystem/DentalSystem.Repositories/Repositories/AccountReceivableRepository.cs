@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
@@ -49,6 +50,25 @@ namespace DentalSystem.Repositories.Repositories
                 var accountsReceivable =
                     context.AccountsReceivables
                         .Include(w => w.Visit).FirstOrDefault(w => w.Visit.VisitId == visitId);
+
+                return accountsReceivable;
+            }
+        }
+
+        public List<AccountsReceivable> GetAllAccountReceivableForReport(DateTime? from, DateTime? to)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var accountsReceivable =
+                    context.AccountsReceivables.Include(w => w.Visit).Include(w=>w.Visit.Patient)
+                        .Where(w =>
+                            from == null
+                                ? w.Total > w.TotalPaid
+                                : w.Total > w.TotalPaid &&
+                                  w.CreatedDate.Date >= from.Value.Date && 
+                                  w.CreatedDate.Date <= to.Value.Date)
+                        .OrderByDescending(w => w.Visit.VisitNumber)
+                        .ToList();
 
                 return accountsReceivable;
             }

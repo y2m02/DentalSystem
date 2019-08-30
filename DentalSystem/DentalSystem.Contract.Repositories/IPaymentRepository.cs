@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Contract.Repositories
@@ -8,5 +9,6 @@ namespace DentalSystem.Contract.Repositories
         List<Payment> GetPaymentsByAccountReceivableId(int accountReceivableId);
         void AddPayment(Payment payment);
         void DeletePayment(Payment payment);
+        List<Payment> GetAllPaymentForReport(DateTime? from, DateTime? to);
     }
 }
