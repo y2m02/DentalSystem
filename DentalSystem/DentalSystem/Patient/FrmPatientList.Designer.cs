@@ -56,10 +56,12 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
+            this.PnlLogo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).BeginInit();
+            this.PnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvPatientList
@@ -342,13 +344,23 @@
             // 
             // PbxLogo
             // 
+            this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
-            this.PbxLogo.Location = new System.Drawing.Point(974, 38);
+            this.PbxLogo.Location = new System.Drawing.Point(0, 0);
             this.PbxLogo.Name = "PbxLogo";
-            this.PbxLogo.Size = new System.Drawing.Size(266, 133);
+            this.PbxLogo.Size = new System.Drawing.Size(273, 138);
             this.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbxLogo.TabIndex = 30;
             this.PbxLogo.TabStop = false;
+            // 
+            // PnlLogo
+            // 
+            this.PnlLogo.BackColor = System.Drawing.Color.White;
+            this.PnlLogo.Controls.Add(this.PbxLogo);
+            this.PnlLogo.Location = new System.Drawing.Point(974, 31);
+            this.PnlLogo.Name = "PnlLogo";
+            this.PnlLogo.Size = new System.Drawing.Size(273, 138);
+            this.PnlLogo.TabIndex = 31;
             // 
             // FrmPatientList
             // 
@@ -357,7 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClear;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.PbxLogo);
+            this.Controls.Add(this.PnlLogo);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.BtnAccountReceivable);
             this.Controls.Add(this.LblTitle);
@@ -386,6 +398,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxLogo)).EndInit();
+            this.PnlLogo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +432,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.PictureBox PbxLogo;
+        private System.Windows.Forms.Panel PnlLogo;
     }
 }

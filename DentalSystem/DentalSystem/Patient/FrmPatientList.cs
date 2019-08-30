@@ -58,7 +58,7 @@ namespace DentalSystem.Patient
 
         private void FrmPatientList_Load(object sender, EventArgs e)
         {
-            PbxLogo.Height += 10;
+            PnlLogo.Height += 15;
             DtpFrom.Value = DateTime.Now.AddDays(-15).Date;
             var patients = _patientService.GetAllPatients(_iMapper, "", false, DtpFrom.Value.Date, DtpTo.Value.Date);
             ListPatients(patients);
@@ -86,8 +86,9 @@ namespace DentalSystem.Patient
             BtnDelete.Left = BtnVisits.Left + 180;
             BtnAccountReceivable.Left = BtnDelete.Left + 180;
             //BtnBackToVisit.Location = new Point(BtnCreateVisit.Location.X, BtnCreateVisit.Location.Y);
-            PbxLogo.Width = Width-1000;
-   
+            PnlLogo.Left = PnlSearch.Left + 980;
+            PnlLogo.Width = Width - 1020;
+
             PbxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
