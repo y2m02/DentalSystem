@@ -13,6 +13,8 @@ namespace DentalSystem.Entities.Results.Payment
         public int PaymentId { get; set; }
         public decimal AmountPaid { get; set; }
         public DateTime PaymentDate { get; set; }
-        public string Month { get; set; }
+        public int Month { get; set; }
+        public string MonthDescription { get; set; }
+        public string PatientName { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace DentalSystem.Contract.Repositories
         List<Payment> GetPaymentsByAccountReceivableId(int accountReceivableId);
         void AddPayment(Payment payment);
         void DeletePayment(Payment payment);
-        List<Payment> GetAllPaymentForReport(DateTime? from, DateTime? to);
+        List<Payment> GetAllPaymentForReport(DateTime? from, DateTime? to, bool includeDate);
     }
 }

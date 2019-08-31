@@ -42,6 +42,7 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -51,6 +52,7 @@
     <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -60,6 +62,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +93,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDateRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDateRange.Designer.cs">
+      <DependentUpon>FrmDateRange.cs</DependentUpon>
     </Compile>
     <Compile Include="MapperConfiguration\AutoMapperConfiguration.cs" />
     <Compile Include="MapperConfiguration\MappingProfile.cs" />
@@ -129,10 +139,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsAccountReceivable.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\AccountReceivable\RptAccountReceivable.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RptAccountReceivable.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Income\DsIncome.cs">
+      <DependentUpon>DsIncome.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Income\DsIncome.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsIncome.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Income\RptIncome1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptIncome.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="VisitManagement\FrmActivityPerformedMaintenance.cs">
@@ -165,6 +195,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDateRange.resx">
+      <DependentUpon>FrmDateRange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient\FrmAddPatient.resx">
       <DependentUpon>FrmAddPatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,9 +218,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\AccountReceivable\RptAccountReceivable.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptAccountReceivable.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Income\RptIncome.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptIncome1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VisitManagement\FrmActivityPerformedMaintenance.resx">
       <DependentUpon>FrmActivityPerformedMaintenance.cs</DependentUpon>
@@ -232,6 +272,17 @@
     </None>
     <None Include="Reports\AccountReceivable\DsAccountReceivable.xss">
       <DependentUpon>DsAccountReceivable.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Income\DsIncome.xsc">
+      <DependentUpon>DsIncome.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Income\DsIncome.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsIncome.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Income\DsIncome.xss">
+      <DependentUpon>DsIncome.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

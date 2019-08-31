@@ -512,7 +512,7 @@ namespace DentalSystem.Patient
                 var path = string.IsNullOrEmpty(ConfigurationSettings.AppSettings["BackUpDiskName"])
                     ? ""
                     : ConfigurationSettings.AppSettings["BackUpDiskName"];
-           
+
                 var createBackUpRequest = new CreateBackUpRequest
                 {
                     Path = path
@@ -532,6 +532,18 @@ namespace DentalSystem.Patient
                 MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void CuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmDateRange(true, _iMapper, _accountReceivableService, _paymentService);
+            frm.ShowDialog();
+        }
+
+        private void IngresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmDateRange(false, _iMapper, _accountReceivableService, _paymentService);
+            frm.ShowDialog();
         }
     }
 }

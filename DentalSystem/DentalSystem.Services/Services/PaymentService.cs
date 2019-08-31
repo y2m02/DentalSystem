@@ -35,7 +35,7 @@ namespace DentalSystem.Services.Services
 
         public GetAllPaymentForReportResult GetAllPaymentForReport(GetAllPaymentForReportRequest request)
         {
-            var result = _paymentRepository.GetAllPaymentForReport(request.From, request.To);
+            var result = _paymentRepository.GetAllPaymentForReport(request.From, request.To, request.IncludeDate);
             var getPayments = request.Mapper.Map<List<GetAllPaymentForReportResultModel>>(result);
 
             var getAllPaymentForReportResult = new GetAllPaymentForReportResult

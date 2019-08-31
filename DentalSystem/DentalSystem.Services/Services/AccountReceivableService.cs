@@ -69,7 +69,7 @@ namespace DentalSystem.Services.Services
         public GetAllAccountReceivableForReportResult
             GetAllAccountReceivableForReport(GetAllAccountReceivableForReportRequest request)
         {
-            var result = _accountReceivableRepository.GetAllAccountReceivableForReport(request.From,request.To);
+            var result = _accountReceivableRepository.GetAllAccountReceivableForReport(request.From,request.To, request.IncludeDate);
             var accountsReceivable = request.Mapper.Map<List<GetAllAccountReceivableForReportResultModel>>(result);
 
             var getAllAccountReceivableForReportResult = new GetAllAccountReceivableForReportResult

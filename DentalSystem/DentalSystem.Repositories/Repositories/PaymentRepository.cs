@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
@@ -40,17 +41,29 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public List<Payment> GetAllPaymentForReport(DateTime? from, DateTime? to)
+        public List<Payment> GetAllPaymentForReport(DateTime? from, DateTime? to, bool includeDate)
         {
             using (var context = new DentalSystemContext())
             {
-                var payments = context.Payments.Where(w => from==null
-                        ?w.DeletedOn == null
-                         : w.DeletedOn == null &&
-                           w.PaymentDate.Date>=from.Value.Date&&
-                           w.PaymentDate.Date<=to.Value.Date)
-                    .OrderBy(w => w.Month).ToList();
+                List<Payment> payments;
 
+                if (includeDate)
+                    payments = context.Payments
+                        .Include(w => w.AccountsReceivable)
+                        .Include(w => w.AccountsReceivable.Visit)
+                        .Include(w => w.AccountsReceivable.Visit.Patient)
+                        .Where(w =>
+                            w.DeletedOn == null &&
+                            w.PaymentDate >= from &&
+                            w.PaymentDate <= to)
+                        .OrderBy(w => w.Month).ToList();
+                else
+                    payments = context.Payments
+                        .Include(w=>w.AccountsReceivable)
+                        .Include(w => w.AccountsReceivable.Visit)
+                        .Include(w => w.AccountsReceivable.Visit.Patient)
+                        .Where(w => w.DeletedOn == null)
+                        .OrderBy(w => w.Month).ToList();
                 return payments;
             }
         }

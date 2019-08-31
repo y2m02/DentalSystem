@@ -11,6 +11,6 @@ namespace DentalSystem.Contract.Repositories
         void AddAccountReceivable(AccountsReceivable accountsReceivable);
         void UpdateTotalPaid(AccountsReceivable accountsReceivable);
         AccountsReceivable GetPrintingDetailsByVisitId(int visitId);
-        List<AccountsReceivable> GetAllAccountReceivableForReport(DateTime? from, DateTime? to);
+        List<AccountsReceivable> GetAllAccountReceivableForReport(DateTime? from, DateTime? to, bool includeDate);
     }
 }

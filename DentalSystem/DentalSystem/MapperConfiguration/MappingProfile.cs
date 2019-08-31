@@ -116,7 +116,8 @@ namespace DentalSystem.MapperConfiguration
 
             CreateMap<Payment, GetAllPaymentForReportResultModel>()
                 .ForMember(w => w.PaymentDate, y => y.MapFrom(r => r.PaymentDate.ToString("d/M/yyyy")))
-                .ForMember(w => w.Month, y => y.MapFrom(r => r.PaymentDate.Month == 1
+                .ForMember(w => w.PatientName, y => y.MapFrom(r => r.AccountsReceivable.Visit.Patient.FullName))
+                .ForMember(w => w.MonthDescription, y => y.MapFrom(r => r.PaymentDate.Month == 1
                     ? "Enero"
                     : r.PaymentDate.Month == 1
                         ? "Febrero"

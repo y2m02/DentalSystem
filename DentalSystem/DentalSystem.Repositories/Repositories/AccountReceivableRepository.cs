@@ -55,21 +55,26 @@ namespace DentalSystem.Repositories.Repositories
             }
         }
 
-        public List<AccountsReceivable> GetAllAccountReceivableForReport(DateTime? from, DateTime? to)
+        public List<AccountsReceivable> GetAllAccountReceivableForReport(DateTime? from, DateTime? to, bool includeDate)
         {
             using (var context = new DentalSystemContext())
             {
-                var accountsReceivable =
-                    context.AccountsReceivables.Include(w => w.Visit).Include(w=>w.Visit.Patient)
-                        .Where(w =>
-                            from == null
-                                ? w.Total > w.TotalPaid
-                                : w.Total > w.TotalPaid &&
-                                  w.CreatedDate.Date >= from.Value.Date && 
-                                  w.CreatedDate.Date <= to.Value.Date)
-                        .OrderByDescending(w => w.Visit.VisitNumber)
-                        .ToList();
+                List<AccountsReceivable> accountsReceivable;
 
+                if (includeDate)
+                {
+                    accountsReceivable = context.AccountsReceivables.Include(w => w.Visit).Include(w => w.Visit.Patient)
+                        .Where(w => w.Total > w.TotalPaid && w.CreatedDate >= from.Value && w.CreatedDate <= to.Value)
+                        .OrderBy(w => w.Visit.VisitNumber)
+                        .ToList();
+                }
+                else
+                {
+                    accountsReceivable = context.AccountsReceivables.Include(w => w.Visit).Include(w => w.Visit.Patient)
+                        .Where(w => w.Total > w.TotalPaid)
+                        .OrderBy(w => w.Visit.VisitNumber)
+                        .ToList();
+                }
                 return accountsReceivable;
             }
         }

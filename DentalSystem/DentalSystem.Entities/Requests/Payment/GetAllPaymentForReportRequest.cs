@@ -7,6 +7,8 @@ namespace DentalSystem.Entities.Requests.Payment
     {
         public DateTime? From { get; set; }
         public DateTime? To { get; set; }
+
+        public bool IncludeDate { get; set; }
         public IMapper Mapper { get; set; }
     }
 }

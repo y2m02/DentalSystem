@@ -55,8 +55,11 @@
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.PnlLogo = new System.Windows.Forms.Panel();
+            this.ingresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -312,7 +315,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem});
+            this.opcionesToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 28);
@@ -342,6 +346,22 @@
             this.salirToolStripMenuItem1.Text = "Salir";
             this.salirToolStripMenuItem1.Click += new System.EventHandler(this.SalirToolStripMenuItem1_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cuentasPorCobrarToolStripMenuItem,
+            this.ingresosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // cuentasPorCobrarToolStripMenuItem
+            // 
+            this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
+            this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
+            this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.CuentasPorCobrarToolStripMenuItem_Click);
+            // 
             // PbxLogo
             // 
             this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -361,6 +381,13 @@
             this.PnlLogo.Name = "PnlLogo";
             this.PnlLogo.Size = new System.Drawing.Size(273, 138);
             this.PnlLogo.TabIndex = 31;
+            // 
+            // ingresosToolStripMenuItem
+            // 
+            this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ingresosToolStripMenuItem.Text = "Ingresos";
+            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.IngresosToolStripMenuItem_Click);
             // 
             // FrmPatientList
             // 
@@ -433,5 +460,8 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.PictureBox PbxLogo;
         private System.Windows.Forms.Panel PnlLogo;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresosToolStripMenuItem;
     }
 }
