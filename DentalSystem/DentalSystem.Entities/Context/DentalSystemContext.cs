@@ -24,6 +24,7 @@ namespace DentalSystem.Entities.Context
         public DbSet<PlateRegistration> PlateRegistrations { get; set; }
         public DbSet<TreatmentOdontogram> TreatmentOdontograms { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Models.AdminPassword> AdminPasswords { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

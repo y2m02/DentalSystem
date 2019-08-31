@@ -47,6 +47,9 @@ namespace DentalSystem
             container.RegisterType<ITreatmentOdontogramService, TreatmentOdontogramService>();
             container.RegisterType<ITreatmentOdontogramRepository, TreatmentOdontogramRepository>();
 
+            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IUserRepository, UserRepository>();
+
             container.RegisterType<IBackUpService, BackUpService>();
             container.RegisterType<IBackUpRepository, BackUpRepository>();
 

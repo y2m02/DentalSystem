@@ -57,9 +57,10 @@
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PbxLogo = new System.Windows.Forms.PictureBox();
             this.PnlLogo = new System.Windows.Forms.Panel();
-            this.ingresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPatientList)).BeginInit();
             this.PnlSearch.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -316,7 +317,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionesToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.gestionarEmpleadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1264, 28);
@@ -362,9 +364,15 @@
             this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
             this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.CuentasPorCobrarToolStripMenuItem_Click);
             // 
+            // ingresosToolStripMenuItem
+            // 
+            this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ingresosToolStripMenuItem.Text = "Ingresos";
+            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.IngresosToolStripMenuItem_Click);
+            // 
             // PbxLogo
             // 
-            this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
             this.PbxLogo.Location = new System.Drawing.Point(0, 0);
             this.PbxLogo.Name = "PbxLogo";
@@ -382,12 +390,12 @@
             this.PnlLogo.Size = new System.Drawing.Size(273, 138);
             this.PnlLogo.TabIndex = 31;
             // 
-            // ingresosToolStripMenuItem
+            // gestionarEmpleadosToolStripMenuItem
             // 
-            this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.ingresosToolStripMenuItem.Text = "Ingresos";
-            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.IngresosToolStripMenuItem_Click);
+            this.gestionarEmpleadosToolStripMenuItem.Name = "gestionarEmpleadosToolStripMenuItem";
+            this.gestionarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.gestionarEmpleadosToolStripMenuItem.Text = "Gestionar empleados";
+            this.gestionarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.GestionarEmpleadosToolStripMenuItem_Click);
             // 
             // FrmPatientList
             // 
@@ -463,5 +471,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasPorCobrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionarEmpleadosToolStripMenuItem;
     }
 }

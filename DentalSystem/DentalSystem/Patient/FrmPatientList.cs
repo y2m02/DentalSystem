@@ -14,6 +14,7 @@ using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.Patient;
 using DentalSystem.MapperConfiguration;
+using DentalSystem.User;
 using DentalSystem.VisitManagement;
 
 namespace DentalSystem.Patient
@@ -30,6 +31,7 @@ namespace DentalSystem.Patient
         private readonly IPaymentService _paymentService;
         private readonly IPlateRegistrationService _plateRegistrationService;
         private readonly ITreatmentOdontogramService _treatmentOdontogramService;
+        private readonly IUserService _userService;
 
         private readonly IVisitService _visitService;
         //private bool _alreadyLoaded;
@@ -38,7 +40,7 @@ namespace DentalSystem.Patient
             IVisitService visitService, IInvoiceDetailService invoiceDetailService,
             IAccountReceivableService accountReceivableService, IPaymentService paymentService,
             IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService,
-            ITreatmentOdontogramService treatmentOdontogramService, IBackUpService backUpService)
+            ITreatmentOdontogramService treatmentOdontogramService, IBackUpService backUpService, IUserService userService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
@@ -53,6 +55,7 @@ namespace DentalSystem.Patient
             _odontogramService = odontogramService;
             _treatmentOdontogramService = treatmentOdontogramService;
             _backUpService = backUpService;
+            _userService = userService;
             InitializeComponent();
         }
 
@@ -543,6 +546,12 @@ namespace DentalSystem.Patient
         private void IngresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new FrmDateRange(false, _iMapper, _accountReceivableService, _paymentService);
+            frm.ShowDialog();
+        }
+
+        private void GestionarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmEmployeeList(_userService,_iMapper);
             frm.ShowDialog();
         }
     }

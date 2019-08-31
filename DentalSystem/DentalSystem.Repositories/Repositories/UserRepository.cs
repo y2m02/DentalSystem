@@ -55,6 +55,7 @@ namespace DentalSystem.Repositories.Repositories
                 context.Entry(user).Property(w => w.IdentificationCard).IsModified = true;
                 context.Entry(user).Property(w => w.PhoneNumber).IsModified = true;
                 context.Entry(user).Property(w => w.Address).IsModified = true;
+                context.Entry(user).Property(w => w.Gender).IsModified = true;
                 context.SaveChanges();
             }
         }
@@ -63,8 +64,9 @@ namespace DentalSystem.Repositories.Repositories
         {
             using (var context = new DentalSystemContext())
             {
-                context.Users.Attach(user);
-                context.Entry(user).Property(w => w.DeletedOn).IsModified = true;
+                //context.Users.Attach(user);
+                var userToDelete = context.Users.Find(user.UserId);
+                userToDelete.DeletedOn = user.DeletedOn;
       
                 context.SaveChanges();
             }

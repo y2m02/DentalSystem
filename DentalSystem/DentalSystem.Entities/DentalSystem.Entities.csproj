@@ -57,9 +57,22 @@
     <Compile Include="Migrations\201907261722512_InitialCreate.Designer.cs">
       <DependentUpon>201907261722512_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908310601219_Updates.cs" />
+    <Compile Include="Migrations\201908310601219_Updates.Designer.cs">
+      <DependentUpon>201908310601219_Updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908310613434_Updates2.cs" />
+    <Compile Include="Migrations\201908310613434_Updates2.Designer.cs">
+      <DependentUpon>201908310613434_Updates2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908310639503_AdminPassword.cs" />
+    <Compile Include="Migrations\201908310639503_AdminPassword.Designer.cs">
+      <DependentUpon>201908310639503_AdminPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityPerformed.cs" />
     <Compile Include="Models\AccountsReceivable.cs" />
+    <Compile Include="Models\AdminPassword.cs" />
     <Compile Include="Models\InvoiceDetail.cs" />
     <Compile Include="Models\Odontogram.cs" />
     <Compile Include="Models\Patient.cs" />
@@ -147,6 +160,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201907261722512_InitialCreate.resx">
       <DependentUpon>201907261722512_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908310601219_Updates.resx">
+      <DependentUpon>201908310601219_Updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908310613434_Updates2.resx">
+      <DependentUpon>201908310613434_Updates2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908310639503_AdminPassword.resx">
+      <DependentUpon>201908310639503_AdminPassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

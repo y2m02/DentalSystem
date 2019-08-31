@@ -143,8 +143,12 @@ namespace DentalSystem.MapperConfiguration
                                                             ? "Noviembre"
                                                             : "Diciembre"));
 
-            CreateMap<User, GetAllUserResultModel>();
-
+            CreateMap<Entities.Models.User, GetAllUserResultModel>()
+                .ForMember(w => w.PhoneNumber,
+                y => y.MapFrom(r =>
+                    !string.IsNullOrEmpty(r.PhoneNumber)
+                        ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####")
+                        : ""));
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -175,7 +179,7 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<TreatmentOdontogram, GetTreatmentOdontogramByOdontogramIdResultModel>()
                 .ForMember(w => w.HasInformation, y => y.MapFrom(r => !string.IsNullOrEmpty(r.Information)));
 
-            CreateMap<User, GetUserByUserIdResultModel>();
+            CreateMap<Entities.Models.User, GetUserByUserIdResultModel>();
 
             // ADD
             CreateMap<AddPatientRequest, Entities.Models.Patient>()
@@ -188,7 +192,7 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddPaymentRequest, Payment>();
             CreateMap<AddOdontogramRequest, Entities.Models.Odontogram>();
             CreateMap<AddTreatmentOdontogramRequest, TreatmentOdontogram>();
-            CreateMap<AddUserRequest, User>();
+            CreateMap<AddUserRequest, Entities.Models.User>();
 
             CreateMap<Visit, AddVisitResult>();
 
@@ -204,11 +208,11 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<UpdatePlateRegistrationRequest, PlateRegistration>();
             CreateMap<UpdateOdontogramRequest, Entities.Models.Odontogram>();
             CreateMap<UpdateTreatmentOdontogramRequest, TreatmentOdontogram>();
-            CreateMap<UpdateUserRequest, User>();
+            CreateMap<UpdateUserRequest, Entities.Models.User>();
 
             //DELETE
             CreateMap<DeletePaymentRequest, Payment>();
-            CreateMap<DeleteUserRequest, User>();
+            CreateMap<DeleteUserRequest, Entities.Models.User>();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace DentalSystem.Entities.Models
         [Required] [StringLength(100)] public string FullName { get; set; }
 
         [StringLength(11)] public string IdentificationCard { get; set; }
+        [StringLength(1)] public string Gender { get; set; }
 
         [StringLength(10)] public string PhoneNumber { get; set; }
 

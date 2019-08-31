@@ -87,11 +87,17 @@
     <Compile Include="AccountReceivable\FrmAccountReceivableList.Designer.cs">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\FrmEmployeeList.cs">
+    <Compile Include="User\FrmUserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee\FrmEmployeeList.Designer.cs">
-      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    <Compile Include="User\FrmUserList.Designer.cs">
+      <DependentUpon>FrmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FrmUserMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FrmUserMaintenance.Designer.cs">
+      <DependentUpon>FrmUserMaintenance.cs</DependentUpon>
     </Compile>
     <Compile Include="Enum\TeethStatus.cs" />
     <Compile Include="Form1.cs">
@@ -198,8 +204,8 @@
     <EmbeddedResource Include="AccountReceivable\FrmAccountReceivableList.resx">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\FrmEmployeeList.resx">
-      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    <EmbeddedResource Include="User\FrmUserList.resx">
+      <DependentUpon>FrmUserList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -237,6 +243,9 @@
     <EmbeddedResource Include="Reports\Income\RptIncome.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptIncome1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FrmUserMaintenance.resx">
+      <DependentUpon>FrmUserMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisitManagement\FrmActivityPerformedMaintenance.resx">
       <DependentUpon>FrmActivityPerformedMaintenance.cs</DependentUpon>
