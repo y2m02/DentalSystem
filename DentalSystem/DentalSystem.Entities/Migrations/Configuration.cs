@@ -1,5 +1,6 @@
 using System.Data.Entity.Migrations;
 using DentalSystem.Entities.Context;
+using DentalSystem.Entities.Models;
 
 namespace DentalSystem.Entities.Migrations
 {
@@ -13,10 +14,15 @@ namespace DentalSystem.Entities.Migrations
 
         protected override void Seed(DentalSystemContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            context.Users.AddOrUpdate(x => x.UserId,
+                new User
+                {
+                 UserId = 1,
+                 FullName = "Dra. Ramírez",
+                 UserName = "rramírez",
+                 Password = "12345"
+                }
+            );
         }
     }
 }

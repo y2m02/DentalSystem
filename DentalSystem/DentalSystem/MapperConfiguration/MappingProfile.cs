@@ -11,6 +11,7 @@ using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Requests.PlateRegistration;
 using DentalSystem.Entities.Requests.TreatmentOdontogram;
+using DentalSystem.Entities.Requests.User;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.AccountsReceivable;
 using DentalSystem.Entities.Results.ActivityPerformed;
@@ -20,6 +21,7 @@ using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.Payment;
 using DentalSystem.Entities.Results.PlateRegistration;
 using DentalSystem.Entities.Results.TreatmentOdontogram;
+using DentalSystem.Entities.Results.User;
 using DentalSystem.Entities.Results.Visit;
 
 namespace DentalSystem.MapperConfiguration
@@ -140,6 +142,9 @@ namespace DentalSystem.MapperConfiguration
                                                         : r.PaymentDate.Month == 11
                                                             ? "Noviembre"
                                                             : "Diciembre"));
+
+            CreateMap<User, GetAllUserResultModel>();
+
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -169,6 +174,9 @@ namespace DentalSystem.MapperConfiguration
 
             CreateMap<TreatmentOdontogram, GetTreatmentOdontogramByOdontogramIdResultModel>()
                 .ForMember(w => w.HasInformation, y => y.MapFrom(r => !string.IsNullOrEmpty(r.Information)));
+
+            CreateMap<User, GetUserByUserIdResultModel>();
+
             // ADD
             CreateMap<AddPatientRequest, Entities.Models.Patient>()
                 .ForMember(w => w.PlateRegistration, y => y.MapFrom(r => new PlateRegistration()));
@@ -180,6 +188,7 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddPaymentRequest, Payment>();
             CreateMap<AddOdontogramRequest, Entities.Models.Odontogram>();
             CreateMap<AddTreatmentOdontogramRequest, TreatmentOdontogram>();
+            CreateMap<AddUserRequest, User>();
 
             CreateMap<Visit, AddVisitResult>();
 
@@ -195,9 +204,11 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<UpdatePlateRegistrationRequest, PlateRegistration>();
             CreateMap<UpdateOdontogramRequest, Entities.Models.Odontogram>();
             CreateMap<UpdateTreatmentOdontogramRequest, TreatmentOdontogram>();
+            CreateMap<UpdateUserRequest, User>();
 
             //DELETE
             CreateMap<DeletePaymentRequest, Payment>();
+            CreateMap<DeleteUserRequest, User>();
         }
     }
 }

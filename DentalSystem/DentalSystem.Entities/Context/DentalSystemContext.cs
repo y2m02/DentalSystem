@@ -23,6 +23,7 @@ namespace DentalSystem.Entities.Context
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PlateRegistration> PlateRegistrations { get; set; }
         public DbSet<TreatmentOdontogram> TreatmentOdontograms { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,42 +33,40 @@ namespace DentalSystem.Entities.Context
             modelBuilder.Entity<InvoiceDetail>().Property(w => w.Price).HasPrecision(18, 2);
             modelBuilder.Entity<AccountsReceivable>().Property(w => w.Total).HasPrecision(18, 2);
             modelBuilder.Entity<AccountsReceivable>().Property(w => w.TotalPaid).HasPrecision(18, 2);
-
-            base.OnModelCreating(modelBuilder);
         }
-    }
 
-    public class PatientMappings : EntityTypeConfiguration<Patient>
-    {
-        public PatientMappings()
+        public class PatientMappings : EntityTypeConfiguration<Patient>
         {
-            HasRequired(c => c.PatientHealth).WithRequiredPrincipal(e => e.Patient);
-            HasRequired(c => c.PlateRegistration).WithRequiredPrincipal(e => e.Patient);
+            public PatientMappings()
+            {
+                HasRequired(c => c.PatientHealth).WithRequiredPrincipal(e => e.Patient);
+                HasRequired(c => c.PlateRegistration).WithRequiredPrincipal(e => e.Patient);
+            }
         }
-    }
 
-    public class VisitMappings : EntityTypeConfiguration<Visit>
-    {
-        public VisitMappings()
+        public class VisitMappings : EntityTypeConfiguration<Visit>
         {
-            //HasRequired(c => c.Odontogram).WithRequiredPrincipal(e => e.Visit);
-            HasRequired(c => c.AccountsReceivable).WithRequiredPrincipal(e => e.Visit);
+            public VisitMappings()
+            {
+                //HasRequired(c => c.Odontogram).WithRequiredPrincipal(e => e.Visit);
+                HasRequired(c => c.AccountsReceivable).WithRequiredPrincipal(e => e.Visit);
+            }
         }
-    }
 
-    public class ActivityPerformedMappings : EntityTypeConfiguration<ActivityPerformed>
-    {
-        public ActivityPerformedMappings()
+        public class ActivityPerformedMappings : EntityTypeConfiguration<ActivityPerformed>
         {
-            HasRequired(c => c.InvoiceDetail).WithRequiredPrincipal(e => e.ActivityPerformed);
+            public ActivityPerformedMappings()
+            {
+                HasRequired(c => c.InvoiceDetail).WithRequiredPrincipal(e => e.ActivityPerformed);
+            }
         }
-    }
 
-    public class OdontogramMappings : EntityTypeConfiguration<Odontogram>
-    {
-        public OdontogramMappings()
+        public class OdontogramMappings : EntityTypeConfiguration<Odontogram>
         {
-            HasRequired(c => c.TreatmentOdontogram).WithRequiredPrincipal(e => e.Odontogram);
+            public OdontogramMappings()
+            {
+                HasRequired(c => c.TreatmentOdontogram).WithRequiredPrincipal(e => e.Odontogram);
+            }
         }
     }
 }

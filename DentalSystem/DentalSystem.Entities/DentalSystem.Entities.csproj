@@ -67,6 +67,7 @@
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\PlateRegistration.cs" />
     <Compile Include="Models\TreatmentOdontogram.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Visit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Requests\AccountsReceivable\AddAccountsReceivableRequest.cs" />
@@ -79,6 +80,9 @@
     <Compile Include="Requests\ActivityPerformed\GetAllActivitiesPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\UpdateActivityPerformedRequest.cs" />
     <Compile Include="Requests\BackUp\CreateBackUpRequest.cs" />
+    <Compile Include="Requests\User\AddUserRequest.cs" />
+    <Compile Include="Requests\User\DeleteUserRequest.cs" />
+    <Compile Include="Requests\User\GetAllUserRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\AddInvoiceDetailRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\GetInvoiceDetailByVisitIdRequest.cs" />
     <Compile Include="Requests\InvoiceDetail\GetInvoiceDetailFromOtherVisitsRequest.cs" />
@@ -104,6 +108,8 @@
     <Compile Include="Requests\TreatmentOdontogram\AddTreatmentOdontogramRequest.cs" />
     <Compile Include="Requests\TreatmentOdontogram\GetTreatmentOdontogramByOdontogramIdRequest.cs" />
     <Compile Include="Requests\TreatmentOdontogram\UpdateTreatmentOdontogramRequest.cs" />
+    <Compile Include="Requests\User\GetUserByUserIdRequest.cs" />
+    <Compile Include="Requests\User\UpdateUserRequest.cs" />
     <Compile Include="Requests\Visit\AddVisitRequest.cs" />
     <Compile Include="Requests\Visit\EndVisitRequest.cs" />
     <Compile Include="Requests\Visit\GetVisitNumberRequest.cs" />
@@ -128,6 +134,8 @@
     <Compile Include="Results\Payment\GetPaymentsByAccountReceivableIdResult.cs" />
     <Compile Include="Results\PlateRegistration\GetPlateRegistrationByPatientIdResult.cs" />
     <Compile Include="Results\TreatmentOdontogram\GetTreatmentOdontogramByOdontogramIdResult.cs" />
+    <Compile Include="Results\User\GetAllUserResult.cs" />
+    <Compile Include="Results\User\GetUserByUserIdResult.cs" />
     <Compile Include="Results\Visit\AddVisitResult.cs" />
     <Compile Include="Results\Visit\GetVisitsByPatientIdResult.cs" />
     <Compile Include="Results\Visit\GetVisitNumberResult.cs" />
@@ -141,5 +149,6 @@
       <DependentUpon>201907261722512_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,12 +23,6 @@ namespace DentalSystem.Services.Services
             _patientRepository = patientRepository;
         }
 
-        //public void AddPatient(IMapper iMapper, AddPatientRequest request)
-        //{
-        //    var patient = iMapper.Map<Patient>(request);
-        //    _patientRepository.AddPatient(patient);
-        //}
-
         public List<GetAllPatientsResult> GetAllPatients(IMapper iMapper, string filter, bool isFilterByName,
             DateTime? from, DateTime? to)
         {

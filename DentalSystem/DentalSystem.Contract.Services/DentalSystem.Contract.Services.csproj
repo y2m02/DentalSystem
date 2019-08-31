@@ -53,6 +53,7 @@
     <Compile Include="IPaymentService.cs" />
     <Compile Include="IPlateRegistrationService.cs" />
     <Compile Include="ITreatmentOdontogramService.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="IVisitService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

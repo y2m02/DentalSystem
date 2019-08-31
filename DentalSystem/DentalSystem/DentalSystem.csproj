@@ -87,6 +87,12 @@
     <Compile Include="AccountReceivable\FrmAccountReceivableList.Designer.cs">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\FrmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\FrmEmployeeList.Designer.cs">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enum\TeethStatus.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -191,6 +197,9 @@
     </Compile>
     <EmbeddedResource Include="AccountReceivable\FrmAccountReceivableList.resx">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\FrmEmployeeList.resx">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

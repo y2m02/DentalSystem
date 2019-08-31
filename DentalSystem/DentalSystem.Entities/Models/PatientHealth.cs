@@ -24,6 +24,6 @@ namespace DentalSystem.Entities.Models
         public bool? HasHepatitis { get; set; }
         public bool? HasAllergicReaction { get; set; }
 
-        public Patient Patient { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }

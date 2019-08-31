@@ -9,6 +9,6 @@ namespace DentalSystem.Entities.Models
         public string Information { get; set; }
         [Required] public int CavitiesQuantity { get; set; }
 
-        public Odontogram Odontogram { get; set; }
+        public virtual Odontogram Odontogram { get; set; }
     }
 }

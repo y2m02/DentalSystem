@@ -12,6 +12,6 @@ namespace DentalSystem.Entities.Models
         public DateTime PaymentDate { get; set; }
         public int Month { get; set; }
         public DateTime? DeletedOn { get; set; }
-        public AccountsReceivable AccountsReceivable { get; set; }
+        public virtual AccountsReceivable AccountsReceivable { get; set; }
     }
 }

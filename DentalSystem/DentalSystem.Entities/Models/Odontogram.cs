@@ -11,7 +11,7 @@ namespace DentalSystem.Entities.Models
         public string Information { get; set; }
         [Required] public int CavitiesQuantity { get; set; }
 
-        public Visit Visit { get; set; }
-        public TreatmentOdontogram TreatmentOdontogram { get; set; }
+        public virtual Visit Visit { get; set; }
+        public virtual TreatmentOdontogram TreatmentOdontogram { get; set; }
     }
 }

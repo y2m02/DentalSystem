@@ -20,9 +20,9 @@ namespace DentalSystem.Entities.Models
         public decimal TotalPaid { get; set; }
         [Required] public DateTime CreatedDate { get; set; }
 
-        public Patient Patient { get; set; }
-        public List<Payment> Payments { get; set; }
+        public virtual Patient Patient { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
 
-        public Visit Visit { get; set; }
+        public virtual Visit Visit { get; set; }
     }
 }

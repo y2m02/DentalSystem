@@ -50,6 +50,7 @@
     <Compile Include="IPaymentRepository.cs" />
     <Compile Include="IPlateRegistrationRepository.cs" />
     <Compile Include="ITreatmentOdontogramRepository.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="IVisitRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
