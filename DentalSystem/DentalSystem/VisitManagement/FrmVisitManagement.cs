@@ -41,13 +41,14 @@ namespace DentalSystem.VisitManagement
         private readonly IPlateRegistrationService _plateRegistrationService;
         private readonly ITreatmentOdontogramService _treatmentOdontogramService;
         private readonly IVisitService _visitService;
+        private readonly IUserService _userService;
         private bool _isClosing;
 
         public FrmVisitManagement(IMapper iMapper, IPatientService patientService,
             IActivityPerformedService activityPerformedService, IVisitService visitService,
             IInvoiceDetailService invoiceDetailService, IAccountReceivableService accountReceivableService,
             IPaymentService paymentService, IPlateRegistrationService plateRegistrationService,
-            IOdontogramService odontogramService, ITreatmentOdontogramService treatmentOdontogramService)
+            IOdontogramService odontogramService, ITreatmentOdontogramService treatmentOdontogramService, IUserService userService)
         {
             _iMapper = iMapper;
             _patientService = patientService;
@@ -59,6 +60,7 @@ namespace DentalSystem.VisitManagement
             _plateRegistrationService = plateRegistrationService;
             _odontogramService = odontogramService;
             _treatmentOdontogramService = treatmentOdontogramService;
+            _userService = userService;
             InitializeComponent();
         }
 
@@ -675,7 +677,7 @@ namespace DentalSystem.VisitManagement
                 return;
             }
 
-            var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService)
+            var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService, _userService)
             {
                 IsCreate = true,
                 Text = "Agregar actividad realizada",
@@ -720,7 +722,7 @@ namespace DentalSystem.VisitManagement
             var responsable = DgvActivitiesList.CurrentRow?.Cells["Responsable"].Value.ToString();
             var date = Convert.ToDateTime(DgvActivitiesList.CurrentRow?.Cells["Date"].Value);
 
-            var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService)
+            var frm = new FrmActivityPerformedMaintenance(_iMapper, _activityPerformedService, _userService)
             {
                 ActivityPerformedId = activityPerformedId,
                 Section = section,

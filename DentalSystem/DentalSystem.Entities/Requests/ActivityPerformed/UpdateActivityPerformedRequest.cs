@@ -6,7 +6,7 @@ namespace DentalSystem.Entities.Requests.ActivityPerformed
     public class UpdateActivityPerformedRequest
     {
         public int ActivityPerformedId { get; set; }
-        public string Responsable { get; set; }
+        public int UserId { get; set; }
         public int VisitId { get; set; }
         public int Section { get; set; }
         public DateTime Date { get; set; }

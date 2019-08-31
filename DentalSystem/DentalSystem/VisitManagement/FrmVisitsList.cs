@@ -20,12 +20,13 @@ namespace DentalSystem.VisitManagement
         private readonly IPlateRegistrationService _plateRegistrationService;
         private readonly IOdontogramService _odontogramService;
         private readonly ITreatmentOdontogramService _treatmentOdontogramService;
+        private readonly IUserService _userService;
         private bool _alreadyLoaded;
 
         public FrmVisitsList(IVisitService visitService, IMapper iMapper,
             IAccountReceivableService accountReceivableService, IActivityPerformedService activityPerformedService,
             IInvoiceDetailService invoiceDetailService, IPatientService patientService, IPaymentService paymentService,
-            IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService, ITreatmentOdontogramService treatmentOdontogramService)
+            IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService, ITreatmentOdontogramService treatmentOdontogramService, IUserService userService)
         {
             _visitService = visitService;
             _iMapper = iMapper;
@@ -37,6 +38,7 @@ namespace DentalSystem.VisitManagement
             _plateRegistrationService = plateRegistrationService;
             _odontogramService = odontogramService;
             _treatmentOdontogramService = treatmentOdontogramService;
+            _userService = userService;
             InitializeComponent();
         }
 
@@ -117,7 +119,7 @@ namespace DentalSystem.VisitManagement
                 GenericProperties.VisitHasBeenBilled = visitHasBeenBilled;
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
-                    _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService, _odontogramService, _treatmentOdontogramService)
+                    _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService, _odontogramService, _treatmentOdontogramService, _userService)
                 {
                     PatientId = PatientId,
                     PatientName = patientName,

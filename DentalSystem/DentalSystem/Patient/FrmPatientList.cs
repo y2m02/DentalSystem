@@ -305,7 +305,7 @@ namespace DentalSystem.Patient
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
                     _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService,
-                    _odontogramService, _treatmentOdontogramService)
+                    _odontogramService, _treatmentOdontogramService, _userService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,
@@ -357,7 +357,7 @@ namespace DentalSystem.Patient
 
                 var frm = new FrmVisitManagement(_iMapper, _patientService, _activityPerformedService, _visitService,
                     _invoiceDetailService, _accountReceivableService, _paymentService, _plateRegistrationService,
-                    _odontogramService, _treatmentOdontogramService)
+                    _odontogramService, _treatmentOdontogramService, _userService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,
@@ -447,7 +447,7 @@ namespace DentalSystem.Patient
                 var frm = new FrmVisitsList(_visitService, _iMapper, _accountReceivableService,
                     _activityPerformedService,
                     _invoiceDetailService, _patientService, _paymentService, _plateRegistrationService,
-                    _odontogramService, _treatmentOdontogramService)
+                    _odontogramService, _treatmentOdontogramService, _userService)
                 {
                     PatientId = patientId,
                     PatientName = patientName,

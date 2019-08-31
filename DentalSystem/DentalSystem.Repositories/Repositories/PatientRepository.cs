@@ -20,6 +20,7 @@ namespace DentalSystem.Repositories.Repositories
                     .Include(w => w.Visits.Select(c => c.Odontograms.Select(x => x.TreatmentOdontogram)))
                     .Include(w => w.Visits.Select(c => c.ActivitiesPerformed))
                     .Include(w => w.Visits.Select(c => c.ActivitiesPerformed.Select(x => x.InvoiceDetail)))
+                    .Include(w => w.Visits.Select(c => c.ActivitiesPerformed.Select(x => x.User)))
                     .Include(w => w.PatientHealth)
                     .Include(w => w.PlateRegistration)
                     .FirstOrDefault(w => w.PatientId == patientId && w.DeletedOn == null);

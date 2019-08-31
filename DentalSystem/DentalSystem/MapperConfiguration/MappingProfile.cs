@@ -68,6 +68,7 @@ namespace DentalSystem.MapperConfiguration
                 .ForMember(w => w.Date, y => y.MapFrom(r => r.Date.ToString("d/M/yyyy")))
                 .ForMember(w => w.VisitNumber, y => y.MapFrom(r => r.Visit.VisitNumber))
                 .ForMember(w => w.InvoiceDetailId, y => y.MapFrom(r => r.InvoiceDetail.InvoiceDetailId))
+                .ForMember(w => w.Responsable, y => y.MapFrom(r => r.User.FullName))
                 .ForMember(w => w.Section,
                     y => y.MapFrom(r =>
                         r.Section == 1 ? "Primer" :
@@ -149,6 +150,8 @@ namespace DentalSystem.MapperConfiguration
                     !string.IsNullOrEmpty(r.PhoneNumber)
                         ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####")
                         : ""));
+
+            CreateMap<Entities.Models.User, GetUsersToCbxResultModel>();
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))

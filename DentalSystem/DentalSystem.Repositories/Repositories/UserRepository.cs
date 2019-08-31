@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
@@ -22,6 +21,18 @@ namespace DentalSystem.Repositories.Repositories
                         .Where(w => w.DeletedOn == null &&
                                     (w.FullName.Contains(filter.Trim()) ||
                                      w.IdentificationCard.Contains(filter.Trim())));
+
+
+                return users.OrderBy(w => w.FullName).ToList();
+            }
+        }
+
+        public List<User> GetUsersToCbx(string fullName)
+        {
+            using (var context = new DentalSystemContext())
+            {
+                var users = context.Users.Where(w =>
+                    w.DeletedOn == null || w.DeletedOn == null && w.FullName == fullName);
 
 
                 return users.OrderBy(w => w.FullName).ToList();
@@ -67,7 +78,7 @@ namespace DentalSystem.Repositories.Repositories
                 //context.Users.Attach(user);
                 var userToDelete = context.Users.Find(user.UserId);
                 userToDelete.DeletedOn = user.DeletedOn;
-      
+
                 context.SaveChanges();
             }
         }

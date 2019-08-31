@@ -6,6 +6,7 @@ namespace DentalSystem.Contract.Services
     public interface IUserService
     {
         GetAllUserResult GetAllUser(GetAllUserRequest request);
+        GetUsersToCbxResult GetUsersToCbx(GetUsersToCbxRequest request);
         GetUserByUserIdResult GetUserByUserId(GetUserByUserIdRequest request);
         void AddUser(AddUserRequest request);
         void UpdateUser(UpdateUserRequest request);

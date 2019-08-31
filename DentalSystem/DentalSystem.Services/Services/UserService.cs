@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.User;
-using DentalSystem.Entities.Results.Patient;
 using DentalSystem.Entities.Results.User;
 
 namespace DentalSystem.Services.Services
 {
-    public class UserService:IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 
@@ -32,6 +27,19 @@ namespace DentalSystem.Services.Services
             };
 
             return getAllUserResult;
+        }
+
+        public GetUsersToCbxResult GetUsersToCbx(GetUsersToCbxRequest request)
+        {
+            var result = _userRepository.GetUsersToCbx(request.FullName);
+            var users = request.Mapper.Map<List<GetUsersToCbxResultModel>>(result);
+
+            var getUsersToCbxResult = new GetUsersToCbxResult
+            {
+                UserList = users
+            };
+
+            return getUsersToCbxResult;
         }
 
         public GetUserByUserIdResult GetUserByUserId(GetUserByUserIdRequest request)
