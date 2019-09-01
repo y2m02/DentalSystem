@@ -6,9 +6,11 @@ using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.AccountReceivable;
+using DentalSystem.AdminPassword;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.AccountsReceivable;
+using DentalSystem.Entities.Requests.AdminPassword;
 using DentalSystem.Entities.Requests.BackUp;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.Visit;
@@ -32,6 +34,7 @@ namespace DentalSystem.Patient
         private readonly IPlateRegistrationService _plateRegistrationService;
         private readonly ITreatmentOdontogramService _treatmentOdontogramService;
         private readonly IUserService _userService;
+        private readonly IAdminPasswordService _adminPasswordService;
 
         private readonly IVisitService _visitService;
         //private bool _alreadyLoaded;
@@ -40,7 +43,7 @@ namespace DentalSystem.Patient
             IVisitService visitService, IInvoiceDetailService invoiceDetailService,
             IAccountReceivableService accountReceivableService, IPaymentService paymentService,
             IPlateRegistrationService plateRegistrationService, IOdontogramService odontogramService,
-            ITreatmentOdontogramService treatmentOdontogramService, IBackUpService backUpService, IUserService userService)
+            ITreatmentOdontogramService treatmentOdontogramService, IBackUpService backUpService, IUserService userService, IAdminPasswordService adminPasswordService)
         {
             var config = new AutoMapperConfiguration().Configure();
             _iMapper = config.CreateMapper();
@@ -56,11 +59,39 @@ namespace DentalSystem.Patient
             _treatmentOdontogramService = treatmentOdontogramService;
             _backUpService = backUpService;
             _userService = userService;
+            _adminPasswordService = adminPasswordService;
             InitializeComponent();
         }
 
         private void FrmPatientList_Load(object sender, EventArgs e)
         {
+            var getAdminPasswordRequest = new GetAdminPasswordRequest
+            {
+                Mapper = _iMapper
+            };
+
+            var adminPasswordResult = _adminPasswordService.GetAdminPassword(getAdminPasswordRequest);
+
+            if (adminPasswordResult.AdminPassword == null)
+            {
+                MessageBox.Show("Esta es la primera vez que se accede al sistema, " +
+                                "por lo que debe crear una contraseña que le servirá para " +
+                                "poder acceder a algunas opciones de este", "Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                var frm = new FrmChangePassword(_adminPasswordService, _iMapper)
+                {
+                    IsModify = false
+                };
+
+                frm.ShowDialog();
+            }
+            else
+            {
+                GenericProperties.AdminPasswordId = adminPasswordResult.AdminPassword.AdminPasswordId;
+                GenericProperties.AdminPassword = adminPasswordResult.AdminPassword.Password;
+            }
+
             PnlLogo.Height += 15;
             DtpFrom.Value = DateTime.Now.AddDays(-15).Date;
             var patients = _patientService.GetAllPatients(_iMapper, "", false, DtpFrom.Value.Date, DtpTo.Value.Date);
@@ -202,6 +233,12 @@ namespace DentalSystem.Patient
         {
             try
             {
+                var frmConfirmPassword = new FrmConfirmPassword();
+                frmConfirmPassword.ShowDialog();
+                var isValidPassword = frmConfirmPassword.IsValidPassword;
+
+                if (!isValidPassword) return;
+
                 var id = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
 
                 var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
@@ -257,7 +294,7 @@ namespace DentalSystem.Patient
 
             var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-            var visitHasFinished = (bool?) visitHasEnded ?? true;
+            var visitHasFinished = (bool?)visitHasEnded ?? true;
 
             BtnCreateVisit.Visible = visitHasFinished;
             BtnBackToVisit.Visible = !visitHasFinished;
@@ -269,7 +306,7 @@ namespace DentalSystem.Patient
             {
                 var visitHasEnded = DgvPatientList.SelectedRows[0].Cells["VisitHasEnded"].Value;
 
-                var visitHasFinished = (bool?) visitHasEnded ?? true;
+                var visitHasFinished = (bool?)visitHasEnded ?? true;
 
                 if (!visitHasFinished)
                 {
@@ -544,19 +581,46 @@ namespace DentalSystem.Patient
 
         private void CuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var frmConfirmPassword = new FrmConfirmPassword();
+            frmConfirmPassword.ShowDialog();
+            var isValidPassword = frmConfirmPassword.IsValidPassword;
+
+            if (!isValidPassword) return;
+
             var frm = new FrmDateRange(true, _iMapper, _accountReceivableService, _paymentService);
             frm.ShowDialog();
         }
 
         private void IngresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var frmConfirmPassword = new FrmConfirmPassword();
+            frmConfirmPassword.ShowDialog();
+            var isValidPassword = frmConfirmPassword.IsValidPassword;
+
+            if (!isValidPassword) return;
+
             var frm = new FrmDateRange(false, _iMapper, _accountReceivableService, _paymentService);
             frm.ShowDialog();
         }
 
         private void GestionarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new FrmEmployeeList(_userService,_iMapper);
+            var frmConfirmPassword = new FrmConfirmPassword();
+            frmConfirmPassword.ShowDialog();
+            var isValidPassword = frmConfirmPassword.IsValidPassword;
+
+            if (!isValidPassword) return;
+
+            var frm = new FrmEmployeeList(_userService, _iMapper);
+            frm.ShowDialog();
+        }
+
+        private void CambiarContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmChangePassword(_adminPasswordService, _iMapper)
+            {
+                IsModify = true
+            };
             frm.ShowDialog();
         }
     }

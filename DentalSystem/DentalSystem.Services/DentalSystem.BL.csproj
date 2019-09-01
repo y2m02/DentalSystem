@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AccountReceivableService.cs" />
     <Compile Include="Services\ActivityPerformedService.cs" />
+    <Compile Include="Services\AdminPasswordService.cs" />
     <Compile Include="Services\BackUpService.cs" />
     <Compile Include="Services\InvoiceDetailService.cs" />
     <Compile Include="Services\OdontogramService.cs" />

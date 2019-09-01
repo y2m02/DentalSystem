@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoMapper;
+using DentalSystem.AdminPassword;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Payment;
@@ -141,6 +142,12 @@ namespace DentalSystem.AccountReceivable
         {
             try
             {
+                var frmConfirmPassword = new FrmConfirmPassword();
+                frmConfirmPassword.ShowDialog();
+                var isValidPassword = frmConfirmPassword.IsValidPassword;
+
+                if (!isValidPassword) return;
+
                 var id = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["PaymentId"].Value);
 
                 var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",

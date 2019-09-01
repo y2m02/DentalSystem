@@ -50,6 +50,9 @@ namespace DentalSystem
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IUserRepository, UserRepository>();
 
+            container.RegisterType<IAdminPasswordService, AdminPasswordService>();
+            container.RegisterType<IAdminPasswordRepository, AdminPasswordRepository>();
+
             container.RegisterType<IBackUpService, BackUpService>();
             container.RegisterType<IBackUpRepository, BackUpRepository>();
 

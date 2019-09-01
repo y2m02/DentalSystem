@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdminPasswordRepository.cs" />
     <Compile Include="IBackUpRepository.cs" />
     <Compile Include="IAccountReceivableRepository.cs" />
     <Compile Include="IActivityPerformedRepository.cs" />

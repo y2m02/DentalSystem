@@ -87,6 +87,18 @@
     <Compile Include="AccountReceivable\FrmAccountReceivableList.Designer.cs">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPassword\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPassword\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPassword\FrmConfirmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPassword\FrmConfirmPassword.Designer.cs">
+      <DependentUpon>FrmConfirmPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\FrmUserList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,12 @@
     </Compile>
     <EmbeddedResource Include="AccountReceivable\FrmAccountReceivableList.resx">
       <DependentUpon>FrmAccountReceivableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPassword\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPassword\FrmConfirmPassword.resx">
+      <DependentUpon>FrmConfirmPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\FrmUserList.resx">
       <DependentUpon>FrmUserList.cs</DependentUpon>

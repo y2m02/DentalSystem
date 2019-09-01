@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using AutoMapper;
@@ -189,6 +190,13 @@ namespace DentalSystem
             rpt.SetDataSource(dt);
             Cursor.Current = Cursors.Default;
             return rpt;
+        }
+
+        private void FrmDateRange_Load(object sender, EventArgs e)
+        {
+            PnlButtons.Location = new Point(
+                ClientSize.Width / 2 - PnlButtons.Size.Width / 2,
+                PnlButtons.Location.Y);
         }
     }
 }

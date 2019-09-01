@@ -35,6 +35,8 @@
             this.ChkDateRange = new System.Windows.Forms.CheckBox();
             this.BtnShowReport = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.PnlButtons = new System.Windows.Forms.Panel();
+            this.PnlButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // DtpTo
@@ -42,7 +44,7 @@
             this.DtpTo.CustomFormat = "dd/MM/yyyy";
             this.DtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpTo.Location = new System.Drawing.Point(373, 92);
-            this.DtpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtpTo.Margin = new System.Windows.Forms.Padding(4);
             this.DtpTo.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpTo.Name = "DtpTo";
             this.DtpTo.Size = new System.Drawing.Size(242, 30);
@@ -64,7 +66,7 @@
             this.DtpFrom.CustomFormat = "dd/MM/yyyy";
             this.DtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpFrom.Location = new System.Drawing.Point(48, 92);
-            this.DtpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DtpFrom.Margin = new System.Windows.Forms.Padding(4);
             this.DtpFrom.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DtpFrom.Name = "DtpFrom";
             this.DtpFrom.Size = new System.Drawing.Size(242, 30);
@@ -87,7 +89,7 @@
             this.ChkDateRange.Checked = true;
             this.ChkDateRange.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ChkDateRange.Location = new System.Drawing.Point(13, 25);
-            this.ChkDateRange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChkDateRange.Margin = new System.Windows.Forms.Padding(4);
             this.ChkDateRange.Name = "ChkDateRange";
             this.ChkDateRange.Size = new System.Drawing.Size(187, 27);
             this.ChkDateRange.TabIndex = 45;
@@ -97,7 +99,7 @@
             // 
             // BtnShowReport
             // 
-            this.BtnShowReport.Location = new System.Drawing.Point(284, 141);
+            this.BtnShowReport.Location = new System.Drawing.Point(3, 4);
             this.BtnShowReport.Margin = new System.Windows.Forms.Padding(1);
             this.BtnShowReport.Name = "BtnShowReport";
             this.BtnShowReport.Size = new System.Drawing.Size(180, 51);
@@ -108,7 +110,7 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(476, 141);
+            this.BtnCancel.Location = new System.Drawing.Point(195, 4);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(1);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(180, 51);
@@ -117,20 +119,28 @@
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
+            // PnlButtons
+            // 
+            this.PnlButtons.Controls.Add(this.BtnShowReport);
+            this.PnlButtons.Controls.Add(this.BtnCancel);
+            this.PnlButtons.Location = new System.Drawing.Point(152, 131);
+            this.PnlButtons.Name = "PnlButtons";
+            this.PnlButtons.Size = new System.Drawing.Size(382, 63);
+            this.PnlButtons.TabIndex = 46;
+            // 
             // FrmDateRange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 209);
-            this.Controls.Add(this.BtnCancel);
-            this.Controls.Add(this.BtnShowReport);
+            this.Controls.Add(this.PnlButtons);
             this.Controls.Add(this.DtpTo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DtpFrom);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ChkDateRange);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(694, 256);
             this.MinimizeBox = false;
@@ -138,6 +148,8 @@
             this.Name = "FrmDateRange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rango de fechas";
+            this.Load += new System.EventHandler(this.FrmDateRange_Load);
+            this.PnlButtons.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +164,6 @@
         private System.Windows.Forms.CheckBox ChkDateRange;
         private System.Windows.Forms.Button BtnShowReport;
         private System.Windows.Forms.Button BtnCancel;
+        private System.Windows.Forms.Panel PnlButtons;
     }
 }

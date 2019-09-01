@@ -23,9 +23,9 @@ namespace DentalSystem.Entities.Migrations
             //     Password = "12345"
             //    }
             //);
-            context.AdminPasswords.AddOrUpdate(x => x.AdminPasswordId,
-                new Models.AdminPassword {Password = "12345"}
-            );
+            //context.AdminPasswords.AddOrUpdate(x => x.AdminPasswordId,
+            //    new Models.AdminPassword {Password = "12345"}
+            //);
         }
     }
 }

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="IAccountReceivableService.cs" />
     <Compile Include="IActivityPerformedService.cs" />
+    <Compile Include="IAdminPasswordService.cs" />
     <Compile Include="IBackUpService.cs" />
     <Compile Include="IInvoiceDetailService.cs" />
     <Compile Include="IOdontogramService.cs" />

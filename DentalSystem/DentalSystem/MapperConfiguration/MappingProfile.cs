@@ -4,6 +4,7 @@ using AutoMapper;
 using DentalSystem.Entities.Models;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.ActivityPerformed;
+using DentalSystem.Entities.Requests.AdminPassword;
 using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.Odontogram;
 using DentalSystem.Entities.Requests.Patient;
@@ -15,6 +16,7 @@ using DentalSystem.Entities.Requests.User;
 using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.AccountsReceivable;
 using DentalSystem.Entities.Results.ActivityPerformed;
+using DentalSystem.Entities.Results.AdminPassword;
 using DentalSystem.Entities.Results.InvoiceDetail;
 using DentalSystem.Entities.Results.Odontogram;
 using DentalSystem.Entities.Results.Patient;
@@ -146,12 +148,14 @@ namespace DentalSystem.MapperConfiguration
 
             CreateMap<Entities.Models.User, GetAllUserResultModel>()
                 .ForMember(w => w.PhoneNumber,
-                y => y.MapFrom(r =>
-                    !string.IsNullOrEmpty(r.PhoneNumber)
-                        ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####")
-                        : ""));
+                    y => y.MapFrom(r =>
+                        !string.IsNullOrEmpty(r.PhoneNumber)
+                            ? Convert.ToDouble(r.PhoneNumber).ToString("(###) ###-####")
+                            : ""));
 
             CreateMap<Entities.Models.User, GetUsersToCbxResultModel>();
+
+            CreateMap<Entities.Models.AdminPassword, GetAdminPasswordResultModel>();
             // GETBYID
             CreateMap<Entities.Models.Patient, GetPatientByIdResult>()
                 .ForMember(w => w.DiseaseCause, y => y.MapFrom(r => r.PatientHealth.DiseaseCause))
@@ -196,8 +200,10 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<AddOdontogramRequest, Entities.Models.Odontogram>();
             CreateMap<AddTreatmentOdontogramRequest, TreatmentOdontogram>();
             CreateMap<AddUserRequest, Entities.Models.User>();
+            CreateMap<AddAdminPasswordRequest, Entities.Models.AdminPassword>();
 
             CreateMap<Visit, AddVisitResult>();
+            CreateMap<Entities.Models.AdminPassword, AddAdminPasswordResultModel>();
 
 
             // UPDATE
@@ -212,6 +218,7 @@ namespace DentalSystem.MapperConfiguration
             CreateMap<UpdateOdontogramRequest, Entities.Models.Odontogram>();
             CreateMap<UpdateTreatmentOdontogramRequest, TreatmentOdontogram>();
             CreateMap<UpdateUserRequest, Entities.Models.User>();
+            CreateMap<UpdatePasswordRequest, Entities.Models.AdminPassword>();
 
             //DELETE
             CreateMap<DeletePaymentRequest, Payment>();

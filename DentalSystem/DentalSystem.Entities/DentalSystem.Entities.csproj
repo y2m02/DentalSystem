@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201908310639503_AdminPassword.Designer.cs">
       <DependentUpon>201908310639503_AdminPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909010446252_RemoveHasData.cs" />
+    <Compile Include="Migrations\201909010446252_RemoveHasData.Designer.cs">
+      <DependentUpon>201909010446252_RemoveHasData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityPerformed.cs" />
     <Compile Include="Models\AccountsReceivable.cs" />
@@ -92,6 +96,9 @@
     <Compile Include="Requests\ActivityPerformed\DeleteActivityPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\GetAllActivitiesPerformedRequest.cs" />
     <Compile Include="Requests\ActivityPerformed\UpdateActivityPerformedRequest.cs" />
+    <Compile Include="Requests\AdminPassword\AddAdminPasswordRequest.cs" />
+    <Compile Include="Requests\AdminPassword\GetAdminPasswordRequest.cs" />
+    <Compile Include="Requests\AdminPassword\UpdatePasswordRequest.cs" />
     <Compile Include="Requests\BackUp\CreateBackUpRequest.cs" />
     <Compile Include="Requests\User\AddUserRequest.cs" />
     <Compile Include="Requests\User\DeleteUserRequest.cs" />
@@ -133,6 +140,8 @@
     <Compile Include="Results\AccountsReceivable\GetAllAccountsReceivableByPatientIdResult.cs" />
     <Compile Include="Results\ActivityPerformed\GetAllActivitiesPerformedResult.cs" />
     <Compile Include="Results\AccountsReceivable\GetAccountsReceivableByPatientIdResult.cs" />
+    <Compile Include="Results\AdminPassword\AddAdminPasswordResult.cs" />
+    <Compile Include="Results\AdminPassword\GetAdminPasswordResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailByVisitIdResult.cs" />
     <Compile Include="Results\InvoiceDetail\GetInvoiceDetailFromOtherVisitsResult.cs" />
     <Compile Include="Results\AccountsReceivable\GetPrintingDetailsByVisitIdResult.cs" />
@@ -171,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908310639503_AdminPassword.resx">
       <DependentUpon>201908310639503_AdminPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909010446252_RemoveHasData.resx">
+      <DependentUpon>201909010446252_RemoveHasData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
