@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using AutoMapper;
+using DentalSystem.AdminPassword;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.User;
 using DentalSystem.Utility;
@@ -84,6 +85,12 @@ namespace DentalSystem.User
         {
             try
             {
+                var frmConfirmPassword = new FrmConfirmPassword();
+                frmConfirmPassword.ShowDialog();
+                var isValidPassword = frmConfirmPassword.IsValidPassword;
+
+                if (!isValidPassword) return;
+
                 var id = Convert.ToInt32(DgvEmployeeList.SelectedRows[0].Cells["UserId"].Value);
              
                 var result = CustomMessage.QuestionMessage("¿Seguro que desea eliminar este registro?");

@@ -139,7 +139,7 @@ namespace DentalSystem.VisitManagement
             GetInvoiceLists();
             var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-            LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
+            LblTotalCurrentVisit.Text = $"Monto total de esta visita: {totalCurrentVisit:C}";
 
             DisableAllButtons();
         }
@@ -184,7 +184,7 @@ namespace DentalSystem.VisitManagement
             GetInvoiceLists();
             var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-            LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
+            LblTotalCurrentVisit.Text = $"Monto total de esta visita: {totalCurrentVisit:C}";
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
             BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
             BtnPrintInvoice.Enabled = GenericProperties.VisitHasBeenBilled;
@@ -217,7 +217,7 @@ namespace DentalSystem.VisitManagement
                     var invoiceDetailsCurrentVisit =
                         (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-                    LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
+                    LblTotalCurrentVisit.Text = $"Monto total de esta visita: {totalCurrentVisit:C}";
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
                     BtnDeletePayment.Enabled = DgvAccountReceivableList.RowCount != 0 && DgvPaymentList.RowCount != 0;
                     BtnPrintInvoice.Enabled = GenericProperties.VisitHasBeenBilled;
@@ -918,7 +918,7 @@ namespace DentalSystem.VisitManagement
 
                 var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                 var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
-                LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
+                LblTotalCurrentVisit.Text = $"Monto total de esta visita: {totalCurrentVisit:C}";
 
                 Cursor.Current = Cursors.Default;
             }
@@ -1925,7 +1925,6 @@ namespace DentalSystem.VisitManagement
         {
             try
             {
-                CustomMessage.WarningMessage("Está a punto de imprimir la factura");
                 var result = CustomMessage.WarningMessage("Está a punto de imprimir la factura");
 
                 if (result != DialogResult.OK) return;

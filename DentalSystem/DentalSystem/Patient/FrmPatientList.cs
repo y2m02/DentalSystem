@@ -493,8 +493,8 @@ namespace DentalSystem.Patient
             }
             catch (Exception ex)
             {
+                Cursor.Current = Cursors.Default;
                 CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
-                    
             }
         }
 
@@ -587,12 +587,6 @@ namespace DentalSystem.Patient
 
         private void GestionarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frmConfirmPassword = new FrmConfirmPassword();
-            frmConfirmPassword.ShowDialog();
-            var isValidPassword = frmConfirmPassword.IsValidPassword;
-
-            if (!isValidPassword) return;
-
             var frm = new FrmEmployeeList(_userService, _iMapper);
             frm.ShowDialog();
         }

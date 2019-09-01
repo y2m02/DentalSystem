@@ -49,10 +49,10 @@ namespace DentalSystem.Printing
                 if (rpt.ReportDefinition.ReportObjects["LblVisitNumber"] is TextObject visitNumber)
                     visitNumber.Text = _printingModel.VisitNumber;
                 if (rpt.ReportDefinition.ReportObjects["LblTotal"] is TextObject total)
-                    total.Text = $"RD{_printingModel.Total:C}"; 
-                if (rpt.ReportDefinition.ReportObjects["LblPaid"] is TextObject paid) paid.Text = $"RD{_printingModel.Paid:C}";
+                    total.Text = $"{_printingModel.Total:C}"; 
+                if (rpt.ReportDefinition.ReportObjects["LblPaid"] is TextObject paid) paid.Text = $"{_printingModel.Paid:C}";
                 if (rpt.ReportDefinition.ReportObjects["LblPending"] is TextObject pending)
-                    pending.Text = $"RD{_printingModel.Pending:C}";
+                    pending.Text = $"{_printingModel.Pending:C}";
 
                 rpt.SetDataSource(dtActivitiesPerformed);
                 var crReportDocument = rpt;
