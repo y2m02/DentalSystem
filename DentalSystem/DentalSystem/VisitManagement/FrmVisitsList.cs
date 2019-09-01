@@ -5,6 +5,7 @@ using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.Visit;
+using DentalSystem.Utility;
 
 namespace DentalSystem.VisitManagement
 {
@@ -80,8 +81,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -137,8 +138,8 @@ namespace DentalSystem.VisitManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 

@@ -17,6 +17,7 @@ using DentalSystem.Entities.Requests.Visit;
 using DentalSystem.Entities.Results.Patient;
 using DentalSystem.MapperConfiguration;
 using DentalSystem.User;
+using DentalSystem.Utility;
 using DentalSystem.VisitManagement;
 
 namespace DentalSystem.Patient
@@ -74,10 +75,9 @@ namespace DentalSystem.Patient
 
             if (adminPasswordResult.AdminPassword == null)
             {
-                MessageBox.Show("Esta es la primera vez que se accede al sistema, " +
-                                "por lo que debe crear una contraseña que le servirá para " +
-                                "poder acceder a algunas opciones de este", "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                CustomMessage.InformationMessage("Esta es la primera vez que se accede al sistema, " +
+                                                 "por lo que debe crear una contraseña que le servirá para " +
+                                                 "poder acceder a algunas opciones de este");
 
                 var frm = new FrmChangePassword(_adminPasswordService, _iMapper)
                 {
@@ -143,8 +143,7 @@ namespace DentalSystem.Patient
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -171,9 +170,7 @@ namespace DentalSystem.Patient
             if (ChkDateRange.Checked && DtpTo.Value.Date < DtpFrom.Value.Date)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"", "Información",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"");
                 DtpFrom.Value = DateTime.Now.AddDays(-15);
                 DtpTo.Value = DateTime.Now.Date;
                 return;
@@ -240,10 +237,8 @@ namespace DentalSystem.Patient
                 if (!isValidPassword) return;
 
                 var id = Convert.ToInt32(DgvPatientList.SelectedRows[0].Cells["PatientId"].Value);
-
-                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+  
+                var result = CustomMessage.QuestionMessage("¿Seguro que desea eliminar este registro?");
 
                 if (result != DialogResult.Yes) return;
 
@@ -266,8 +261,7 @@ namespace DentalSystem.Patient
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -311,10 +305,7 @@ namespace DentalSystem.Patient
                 if (!visitHasFinished)
                 {
                     var selectedRow = DgvPatientList.SelectedRows[0].Index;
-                    MessageBox.Show("Actualmente, este paciente tiene una visita activa", "Información",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-
+                    CustomMessage.InformationMessage("Actualmente, este paciente tiene una visita activa");
                     DgvPatientList.Rows[selectedRow].Selected = true;
                     BackToVisit();
                     return;
@@ -368,8 +359,7 @@ namespace DentalSystem.Patient
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -419,8 +409,7 @@ namespace DentalSystem.Patient
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -451,9 +440,7 @@ namespace DentalSystem.Patient
                 if (!accountsReceivable.AccountsReceivable.Any())
                 {
                     Cursor.Current = Cursors.Default;
-                    MessageBox.Show("Este paciente aún no tiene ningún registro monetario", "Información",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage("Este paciente aún no tiene ningún registro monetario");
                     return;
                 }
 
@@ -469,8 +456,7 @@ namespace DentalSystem.Patient
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -507,8 +493,8 @@ namespace DentalSystem.Patient
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -540,10 +526,7 @@ namespace DentalSystem.Patient
         {
             try
             {
-                var result = MessageBox.Show("Está a punto de realizar una copia de seguridad de los datos",
-                    "Información",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Information);
+               var result = CustomMessage.WarningMessage("Está a punto de realizar una copia de seguridad de los datos");
 
                 if (result != DialogResult.OK) return;
 
@@ -565,17 +548,16 @@ namespace DentalSystem.Patient
 
                 _backUpService.CreateBackUp(createBackUpRequest);
 
-                MessageBox.Show("BackUp generado exitosamente." +
-                                $"\nUbicación: {path}\\DentalSystemDBBackUp".Replace(@"\\", @"\"), "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                CustomMessage.InformationMessage("BackUp generado exitosamente." +
+                                                 $"\nUbicación: {path}\\DentalSystemDBBackUp".Replace(@"\\", @"\"));
 
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 

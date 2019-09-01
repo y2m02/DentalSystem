@@ -26,6 +26,7 @@ using DentalSystem.Entities.Results.PlateRegistration;
 using DentalSystem.Enum;
 using DentalSystem.Odontogram;
 using DentalSystem.Printing;
+using DentalSystem.Utility;
 using Newtonsoft.Json;
 
 namespace DentalSystem.VisitManagement
@@ -136,7 +137,7 @@ namespace DentalSystem.VisitManagement
             GetTreatmentOdontogramInformation();
 
             GetInvoiceLists();
-            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
 
@@ -181,7 +182,7 @@ namespace DentalSystem.VisitManagement
             if (IsDetail) return;
 
             GetInvoiceLists();
-            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+            var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
             var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
             LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
             BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
@@ -214,7 +215,7 @@ namespace DentalSystem.VisitManagement
 
                     GetInvoiceLists();
                     var invoiceDetailsCurrentVisit =
-                        (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+                        (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                     var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                     LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
                     BtnAddPayment.Enabled = DgvAccountReceivableList.RowCount != 0;
@@ -243,9 +244,7 @@ namespace DentalSystem.VisitManagement
         {
             if (GenericProperties.VisitHasBeenBilled)
             {
-                MessageBox.Show(
-                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                 ChangeControlsOnSaveOrCancel();
                 SetControlsStatus(false, PnlInformation, PnlGender, PnlZone, PnlInsurance, PnlPatientHealth);
                 return;
@@ -253,8 +252,7 @@ namespace DentalSystem.VisitManagement
 
             if (string.IsNullOrEmpty(TxtName.Text.Trim()))
             {
-                MessageBox.Show("El campo Nombre es requerido", "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("El campo Nombre es requerido");
                 return;
             }
 
@@ -289,7 +287,7 @@ namespace DentalSystem.VisitManagement
                     AdmissionDate = DtpAdmissionDate.Value,
                     PhoneNumber = TxtPhoneNumber.Text.Trim(),
                     Sector = TxtSector.Text.Trim(),
-                    Age = (int) NudAge.Value,
+                    Age = (int)NudAge.Value,
                     BirthDate = DtpBirthDate.Value,
                     HasInsurancePlan = RbtInsuranceYes.Checked,
                     NSS = TxtNss.Text.Trim(),
@@ -313,8 +311,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -322,9 +320,7 @@ namespace DentalSystem.VisitManagement
         {
             if (GenericProperties.VisitHasBeenBilled)
             {
-                MessageBox.Show(
-                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                 return;
             }
 
@@ -369,16 +365,15 @@ namespace DentalSystem.VisitManagement
         public void ValidateOnlyNumbers(KeyPressEventArgs e)
         {
             if (TxtIdentificationCard.ReadOnly) return;
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
 
-            MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation);
+            CustomMessage.ExclamationMessage("Solo se permiten números");
             e.Handled = true;
         }
 
         public void ValidateOnlyNumbersNoMsg(KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Enter) return;
             e.Handled = true;
         }
 
@@ -520,8 +515,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -566,8 +561,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -627,9 +622,8 @@ namespace DentalSystem.VisitManagement
 
                 if (GenericProperties.VisitHasBeenBilled)
                 {
-                    MessageBox.Show(
-                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                     return;
                 }
 
@@ -638,9 +632,7 @@ namespace DentalSystem.VisitManagement
                 var id = Convert.ToInt32(DgvActivitiesList.CurrentRow.Cells["ActivityPerformedId"].Value);
                 var invoiceDetailId = Convert.ToInt32(DgvActivitiesList.CurrentRow?.Cells["InvoiceDetailId"].Value);
 
-                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+                var result = CustomMessage.QuestionMessage("¿Seguro que desea eliminar este registro?");
 
                 if (result != DialogResult.Yes) return;
 
@@ -661,8 +653,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -678,9 +670,8 @@ namespace DentalSystem.VisitManagement
         {
             if (GenericProperties.VisitHasBeenBilled)
             {
-                MessageBox.Show(
-                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                 return;
             }
 
@@ -717,9 +708,8 @@ namespace DentalSystem.VisitManagement
         {
             if (GenericProperties.VisitHasBeenBilled)
             {
-                MessageBox.Show(
-                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                 return;
             }
 
@@ -767,11 +757,9 @@ namespace DentalSystem.VisitManagement
         {
             try
             {
-                var result = MessageBox.Show(
-                    "Está a punto de finalizar esta visita. Una vez ejecute esta acción, solo podrá realizar abonos a través del botón \"Ver deudas\" en el listado de pacientes",
-                    "Información",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Warning);
+
+                var result = CustomMessage.WarningMessage(
+                    "Está a punto de finalizar esta visita. Una vez ejecute esta acción, solo podrá realizar abonos a través del botón \"Ver deudas\" en el listado de pacientes");
 
                 if (result != DialogResult.OK) return;
 
@@ -791,8 +779,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -802,9 +790,7 @@ namespace DentalSystem.VisitManagement
             {
                 if (!_isClosing && !IsDetail)
                 {
-                    var result = MessageBox.Show("¿Desea salir sin finalizar la visita?", "Información",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
+                    var result = CustomMessage.QuestionMessage("¿Desea salir sin finalizar la visita?");
 
                     if (result != DialogResult.Yes)
                     {
@@ -818,8 +804,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -858,8 +844,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -904,8 +890,7 @@ namespace DentalSystem.VisitManagement
                 return;
 
             e.Cancel = true;
-            MessageBox.Show("Ingrese solo números positivos", "Información", MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation);
+            CustomMessage.ExclamationMessage("Ingrese solo números positivos");
         }
 
         private void DgvItemsToBill_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -931,7 +916,7 @@ namespace DentalSystem.VisitManagement
 
                 _invoiceDetailService.UpdateInvoiceDetail(updateActivityPerformedRequest);
 
-                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource;
+                var invoiceDetailsCurrentVisit = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource;
                 var totalCurrentVisit = invoiceDetailsCurrentVisit.Sum(w => w.Price);
                 LblTotalCurrentVisit.Text = $"Monto total de esta visita: RD{totalCurrentVisit:C}";
 
@@ -940,8 +925,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -970,8 +955,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -993,26 +978,21 @@ namespace DentalSystem.VisitManagement
             {
                 if (DgvItemsToBill.RowCount == 0)
                 {
-                    MessageBox.Show(
-                        "No hay actividades que facturar. Agregue las actividades en la ventana de Actividades Realizadas",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage("No hay actividades que facturar. Agregue las actividades en la ventana de Actividades Realizadas");
                     return;
                 }
 
                 if (GenericProperties.VisitHasBeenBilled)
                 {
-                    MessageBox.Show(
-                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                     return;
                 }
 
                 Cursor.Current = Cursors.WaitCursor;
-                var result = MessageBox.Show(
-                    "Está a punto de finalizar el proceso de asignación de precios. Una vez que ejecute esta acción, solo podrá realizar abonos",
-                    "Información",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Warning);
+
+                var result = CustomMessage.WarningMessage(
+                    "Está a punto de finalizar el proceso de asignación de precios. Una vez que ejecute esta acción, solo podrá realizar abonos");
 
                 if (result != DialogResult.OK) return;
 
@@ -1057,8 +1037,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1067,10 +1047,8 @@ namespace DentalSystem.VisitManagement
             try
             {
                 var id = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["PaymentId"].Value);
-
-                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+           
+                var result = CustomMessage.QuestionMessage("¿Seguro que desea eliminar este registro?");
 
                 if (result != DialogResult.Yes) return;
 
@@ -1109,8 +1087,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1122,8 +1100,7 @@ namespace DentalSystem.VisitManagement
 
                 if (Convert.ToDecimal(totalPending) == 0)
                 {
-                    MessageBox.Show("Esta cuenta no tiene saldo pendiente", "Información", MessageBoxButtons.OK,
-                        MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage("Esta cuenta no tiene saldo pendiente");
                     return;
                 }
 
@@ -1164,8 +1141,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1196,8 +1173,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1228,10 +1205,8 @@ namespace DentalSystem.VisitManagement
                 if (!isValidPassword) return;
 
                 var id = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["PaymentId"].Value);
-
-                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+           
+                var result = CustomMessage.QuestionMessage("¿Seguro que desea eliminar este registro?");
 
                 if (result != DialogResult.Yes) return;
 
@@ -1276,8 +1251,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1285,9 +1260,8 @@ namespace DentalSystem.VisitManagement
         {
             if (GenericProperties.VisitHasBeenBilled)
             {
-                MessageBox.Show(
-                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                 return;
             }
 
@@ -1303,9 +1277,8 @@ namespace DentalSystem.VisitManagement
             {
                 if (GenericProperties.VisitHasBeenBilled)
                 {
-                    MessageBox.Show(
-                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
 
                     BtnModifyRegistration.Visible = true;
                     BtnSaveRegistration.Visible = false;
@@ -1343,8 +1316,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1391,17 +1364,14 @@ namespace DentalSystem.VisitManagement
             {
                 if (GenericProperties.VisitHasBeenBilled)
                 {
-                    MessageBox.Show(
-                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                     return;
                 }
 
-                var result = MessageBox.Show("Una vez que guarde este odontograma, no podrá volver a modificarlo. " +
-                                             "Solo podrá modificar el odontograma de tratamientos. " +
-                                             "Para realizar algún cambio deberá crear uno nuevo", "Información",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Information);
+                var result = CustomMessage.WarningMessage("Una vez que guarde este odontograma, no podrá volver a modificarlo. " +
+                                                          "Solo podrá modificar el odontograma de tratamientos. " +
+                                                          "Para realizar algún cambio deberá crear uno nuevo");
 
                 if (result != DialogResult.OK) return;
 
@@ -1422,7 +1392,7 @@ namespace DentalSystem.VisitManagement
                         ButtonNumber = buttonCount,
                         ButtonName = button.Name,
                         HasCavities = button.BackColor == Color.Red,
-                        TeethStatus = button.BackColor == Color.Red ? (int) TeethStatus.HasCavities : 0
+                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities : 0
                     });
 
                     treatmentOdontogramButtonList.Add(new TreatmentOdontogramButtonsModel
@@ -1431,7 +1401,7 @@ namespace DentalSystem.VisitManagement
                         ButtonNumber = buttonCount,
                         ButtonName = button.Name.Replace('I', 'T'),
                         HasCavities = button.BackColor == Color.Red,
-                        TeethStatus = button.BackColor == Color.Red ? (int) TeethStatus.HasCavities : 0
+                        TeethStatus = button.BackColor == Color.Red ? (int)TeethStatus.HasCavities : 0
                     });
 
                     if (button.BackColor == Color.Red) cavitiesQuantity++;
@@ -1441,7 +1411,7 @@ namespace DentalSystem.VisitManagement
 
                 var jsonInitialOdontogramButtonList = JsonConvert.SerializeObject(initialOdontogramButtonList);
                 var jsonTreatmentOdontogramButtonList = JsonConvert.SerializeObject(treatmentOdontogramButtonList);
-                
+
                 var updateTreatmentOdontogramRequest = new UpdateTreatmentOdontogramRequest
                 {
                     TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text),
@@ -1469,8 +1439,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1534,8 +1504,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1579,8 +1549,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1655,16 +1625,11 @@ namespace DentalSystem.VisitManagement
             {
                 if (GenericProperties.VisitHasBeenBilled)
                 {
-                    MessageBox.Show(
-                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage("Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                     return;
                 }
 
-                var result = MessageBox.Show("Si crea un nuevo odontograma se perderán los datos del anterior",
-                    "Información",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Information);
+                var result = CustomMessage.WarningMessage("Si crea un nuevo odontograma se perderán los datos del anterior");
 
                 if (result != DialogResult.OK) return;
 
@@ -1699,8 +1664,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1731,9 +1696,8 @@ namespace DentalSystem.VisitManagement
         {
             if (GenericProperties.VisitHasBeenBilled)
             {
-                MessageBox.Show(
-                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage(
+                    "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                 return;
             }
 
@@ -1749,9 +1713,8 @@ namespace DentalSystem.VisitManagement
             {
                 if (GenericProperties.VisitHasBeenBilled)
                 {
-                    MessageBox.Show(
-                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage(
+                        "Usted ya finalizó el proceso de asignación de precios. Ahora solo puede realizar abonos");
                     return;
                 }
 
@@ -1772,11 +1735,11 @@ namespace DentalSystem.VisitManagement
                         ButtonName = button.Name,
                         HasCavities = button.BackColor == Color.Red,
                         TeethStatus = button.BackColor == Color.Red
-                            ? (int) TeethStatus.HasCavities
+                            ? (int)TeethStatus.HasCavities
                             : button.BackColor == Color.Blue
-                                ? (int) TeethStatus.WasCured
+                                ? (int)TeethStatus.WasCured
                                 : button.BackColor == Color.White && button.BackgroundImage != null
-                                    ? (int) TeethStatus.WasExtracted
+                                    ? (int)TeethStatus.WasExtracted
                                     : 0
                     });
 
@@ -1806,14 +1769,14 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
         private void CuradoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
             button.BackgroundImage = null;
             button.BackColor = Color.Blue;
 
@@ -1822,7 +1785,7 @@ namespace DentalSystem.VisitManagement
 
         private void ExtraídoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
             button.BackColor = Color.White;
             var directory = Directory.GetCurrentDirectory();
             button.BackgroundImage = Image.FromFile($@"{directory}\Images\3 lines.png");
@@ -1852,7 +1815,7 @@ namespace DentalSystem.VisitManagement
 
         private void CariesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
             button.BackgroundImage = null;
             button.BackColor = Color.Red;
 
@@ -1861,7 +1824,7 @@ namespace DentalSystem.VisitManagement
 
         private void NingunaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var button = ((ContextMenuStrip) ((ToolStripItem) sender).Owner).SourceControl;
+            var button = ((ContextMenuStrip)((ToolStripItem)sender).Owner).SourceControl;
             button.BackgroundImage = null;
             button.BackColor = Color.White;
 
@@ -1907,6 +1870,11 @@ namespace DentalSystem.VisitManagement
 
                 var activities =
                     _activityPerformedService.GetOtherVisitActivitiesPerformed(getAllActivitiesPerformedRequest);
+
+                if (!activities.PatientActivities.Any())
+                {
+                    CustomMessage.InformationMessage("No se encontró información");
+                }
                 DgvActivitiesListHistory.DataSource = activities.PatientActivities;
 
                 NameOtherVisitActivitiesGridHeader(DgvActivitiesListHistory);
@@ -1915,8 +1883,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1937,14 +1905,19 @@ namespace DentalSystem.VisitManagement
                     _invoiceDetailService.GetInvoiceDetailFromOtherVisits(getInvoiceDetailFromOtherVisitsRequest);
                 DgvItemsToBillOtherVisits.DataSource = activities.InvoiceDetailFromOtherVisits;
 
+                if (!activities.InvoiceDetailFromOtherVisits.Any())
+                {
+                    CustomMessage.InformationMessage("No se encontró información");
+                }
+
                 NameOtherVisitItemsToBillGridHeader(DgvItemsToBillOtherVisits);
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -1952,10 +1925,8 @@ namespace DentalSystem.VisitManagement
         {
             try
             {
-                var result = MessageBox.Show("Está a punto de imprimir la factura",
-                    "Información",
-                    MessageBoxButtons.OKCancel,
-                    MessageBoxIcon.Information);
+                CustomMessage.WarningMessage("Está a punto de imprimir la factura");
+                var result = CustomMessage.WarningMessage("Está a punto de imprimir la factura");
 
                 if (result != DialogResult.OK) return;
 
@@ -1977,7 +1948,7 @@ namespace DentalSystem.VisitManagement
                     Total = printingDetail.PrintingDetail.Total,
                     Paid = printingDetail.PrintingDetail.TotalPaid,
                     Pending = printingDetail.PrintingDetail.TotalPending,
-                    ItemsToBill = (List<GetInvoiceDetailByVisitIdResultModel>) DgvItemsToBill.DataSource
+                    ItemsToBill = (List<GetInvoiceDetailByVisitIdResultModel>)DgvItemsToBill.DataSource
                 };
 
                 var activitiesToPrint = new ActivitiesPerformedPrinter(printingModel);
@@ -1988,8 +1959,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DentalSystem.Entities.GenericProperties;
+using DentalSystem.Utility;
 
 namespace DentalSystem.AdminPassword
 {
@@ -29,8 +30,7 @@ namespace DentalSystem.AdminPassword
 
             if (!isValid)
             {
-                MessageBox.Show("Campos requeridos:\n" + requiredFields, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage($"Campos requeridos:\n{requiredFields}");
                 return;
             }
 
@@ -38,9 +38,7 @@ namespace DentalSystem.AdminPassword
 
             if (!password.Equals(GenericProperties.AdminPassword))
             {
-                MessageBox.Show("Contraseña inválida", "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
-
+                CustomMessage.ExclamationMessage("Contraseña inválida");
                 return;
             }
 

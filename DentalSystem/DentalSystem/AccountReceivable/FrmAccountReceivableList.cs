@@ -13,6 +13,7 @@ using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Entities.Results.AccountsReceivable;
+using DentalSystem.Utility;
 using DentalSystem.VisitManagement;
 
 namespace DentalSystem.AccountReceivable
@@ -64,8 +65,7 @@ namespace DentalSystem.AccountReceivable
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -77,8 +77,7 @@ namespace DentalSystem.AccountReceivable
 
                 if (Convert.ToDecimal(totalPending) == 0)
                 {
-                    MessageBox.Show("Esta cuenta no tiene saldo pendiente", "Información", MessageBoxButtons.OK,
-                        MessageBoxIcon.Exclamation);
+                    CustomMessage.ExclamationMessage("Esta cuenta no tiene saldo pendiente");
                     return;
                 }
 
@@ -133,8 +132,7 @@ namespace DentalSystem.AccountReceivable
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -149,10 +147,8 @@ namespace DentalSystem.AccountReceivable
                 if (!isValidPassword) return;
 
                 var id = Convert.ToInt32(DgvPaymentList.SelectedRows[0].Cells["PaymentId"].Value);
-
-                var result = MessageBox.Show("¿Seguro que desea eliminar este registro?", "Información",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+             
+                var result = CustomMessage.QuestionMessage("¿Seguro que desea eliminar este registro?");
 
                 if (result != DialogResult.Yes) return;
 
@@ -210,8 +206,7 @@ namespace DentalSystem.AccountReceivable
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -230,8 +225,7 @@ namespace DentalSystem.AccountReceivable
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -274,8 +268,7 @@ namespace DentalSystem.AccountReceivable
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 

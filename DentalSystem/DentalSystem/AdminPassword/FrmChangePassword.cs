@@ -5,6 +5,7 @@ using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.GenericProperties;
 using DentalSystem.Entities.Requests.AdminPassword;
+using DentalSystem.Utility;
 
 namespace DentalSystem.AdminPassword
 {
@@ -54,23 +55,19 @@ namespace DentalSystem.AdminPassword
 
             if (!isValid)
             {
-                MessageBox.Show("Campos requeridos:\n" + requiredFields, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage($"Campos requeridos:\n{requiredFields}");
                 return;
             }
 
             if (IsModify && !TxtCurrentPassword.Text.Trim().Equals(GenericProperties.AdminPassword))
             {
-                MessageBox.Show("La contraseña actual suministrada es incorrecta", "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("La contraseña actual suministrada es incorrecta");
                 return;
             }
 
             if (!TxtNewPassword.Text.Trim().Equals(TxtConfirmNewPassword.Text.Trim()))
             {
-                MessageBox.Show("Los campos \"Nueva contraseña\" y \"Confirmar nueva contraseña\" no coinciden",
-                    "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("Los campos \"Nueva contraseña\" y \"Confirmar nueva contraseña\" no coinciden");
                 return;
             }
 
@@ -103,8 +100,7 @@ namespace DentalSystem.AdminPassword
                     message = "Contraseña creada con éxito";
                 }
 
-                MessageBox.Show(message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                CustomMessage.InformationMessage(message);
                 GenericProperties.AdminPassword = TxtNewPassword.Text.Trim();
                 Close();
 
@@ -113,8 +109,7 @@ namespace DentalSystem.AdminPassword
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 

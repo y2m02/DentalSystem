@@ -7,6 +7,7 @@ using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.Patient;
 using DentalSystem.Entities.Requests.PatientHealth;
 using DentalSystem.Entities.Results.Patient;
+using DentalSystem.Utility;
 
 namespace DentalSystem.Patient
 {
@@ -62,8 +63,7 @@ namespace DentalSystem.Patient
 
             if (!isValid)
             {
-                MessageBox.Show("Validaciones:\n" + requiredFields, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage($"Validaciones:\n{requiredFields}");
                 return;
             }
 
@@ -120,8 +120,7 @@ namespace DentalSystem.Patient
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 
@@ -152,8 +151,7 @@ namespace DentalSystem.Patient
         {
             if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter) return;
 
-            MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation);
+            CustomMessage.ExclamationMessage("Solo se permiten números");
             e.Handled = true;
         }
 

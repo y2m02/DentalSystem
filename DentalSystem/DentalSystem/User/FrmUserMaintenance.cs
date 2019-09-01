@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.User;
+using DentalSystem.Utility;
 
 namespace DentalSystem.User
 {
@@ -56,8 +57,7 @@ namespace DentalSystem.User
 
             if (!isValid)
             {
-                MessageBox.Show("Campos requeridos:\n" + requiredFields, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage($"Campos requeridos:\n{requiredFields}");
                 return;
             }
 
@@ -102,8 +102,8 @@ namespace DentalSystem.User
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 

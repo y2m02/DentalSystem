@@ -189,6 +189,7 @@
       <DependentUpon>RptIncome.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Utility\CustomMessage.cs" />
     <Compile Include="VisitManagement\FrmActivityPerformedMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>

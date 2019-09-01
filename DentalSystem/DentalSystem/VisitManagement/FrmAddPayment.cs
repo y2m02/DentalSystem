@@ -4,6 +4,7 @@ using AutoMapper;
 using DentalSystem.Contract.Services;
 using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Payment;
+using DentalSystem.Utility;
 
 namespace DentalSystem.VisitManagement
 {
@@ -33,8 +34,7 @@ namespace DentalSystem.VisitManagement
         {
             if (char.IsNumber(e.KeyChar) || e.KeyChar == (char) Keys.Back || e.KeyChar == (char) Keys.Enter || e.KeyChar == '.') return;
 
-            MessageBox.Show("Solo se permiten números", "Información", MessageBoxButtons.OK,
-                MessageBoxIcon.Exclamation);
+            CustomMessage.ExclamationMessage("Solo se permiten números");
             e.Handled = true;
         }
 
@@ -47,25 +47,21 @@ namespace DentalSystem.VisitManagement
         {
             if (string.IsNullOrEmpty(TxtPayment.Text.Trim()) || Convert.ToDecimal(TxtPayment.Text.Trim()) == 0)
             {
-                MessageBox.Show("Debe ingresar un monto", "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("Debe ingresar un monto");
                 DialogResult = DialogResult.None;
                 return;
             }
 
             if (!decimal.TryParse(TxtPayment.Text.Trim(),out _))
             {
-                MessageBox.Show("Debe ingresar un monto válido", "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("Debe ingresar un monto válido");
                 DialogResult = DialogResult.None;
                 return;
             }
 
             if (Convert.ToDecimal(TxtPayment.Text) > Convert.ToDecimal(TxtTotalPending.Text))
             {
-                MessageBox.Show("El monto ingresado es mayor que el monto pendiente", "Información",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage("El monto ingresado es mayor que el monto pendiente");
                 DialogResult = DialogResult.None;
                 return;
             }
@@ -99,8 +95,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
                 DialogResult = DialogResult.None;
             }
         }

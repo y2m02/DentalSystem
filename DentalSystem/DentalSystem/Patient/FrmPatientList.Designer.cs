@@ -382,6 +382,7 @@
             // 
             // PbxLogo
             // 
+            this.PbxLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbxLogo.Image")));
             this.PbxLogo.Location = new System.Drawing.Point(0, 0);
             this.PbxLogo.Name = "PbxLogo";

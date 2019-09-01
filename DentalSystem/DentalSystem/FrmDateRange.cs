@@ -10,6 +10,7 @@ using DentalSystem.Entities.Requests.AccountsReceivable;
 using DentalSystem.Entities.Requests.Payment;
 using DentalSystem.Reports.AccountReceivable;
 using DentalSystem.Reports.Income;
+using DentalSystem.Utility;
 
 namespace DentalSystem
 {
@@ -45,9 +46,7 @@ namespace DentalSystem
         {
             if (ChkDateRange.Checked && DtpFrom.Value.Date > DtpTo.Value.Date)
             {
-                MessageBox.Show("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"", "Información",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                CustomMessage.ExclamationMessage("La fecha \"Desde\" no puede ser mayor que la fecha \"Hasta\"");
 
                 DtpFrom.Value = DtpTo.Value = DateTime.Now;
                 return;
@@ -64,8 +63,7 @@ namespace DentalSystem
                 if (rpt == null)
                 {
                     Cursor.Current = Cursors.Default;
-                    MessageBox.Show("No hay información para general el reporte", "Información", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    CustomMessage.InformationMessage("No hay información para general el reporte");
                     return;
                 }
 
@@ -79,8 +77,7 @@ namespace DentalSystem
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
             }
         }
 

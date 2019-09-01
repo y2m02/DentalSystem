@@ -32,7 +32,7 @@ namespace DentalSystem.Repositories.Repositories
             using (var context = new DentalSystemContext())
             {
                 var users = context.Users.Where(w =>
-                    w.DeletedOn == null && w.FullName != fullName || w.DeletedOn != null && w.FullName == fullName);
+                    w.DeletedOn == null || w.DeletedOn != null && w.FullName == fullName);
 
                 return users.OrderBy(w => w.FullName).ToList();
             }

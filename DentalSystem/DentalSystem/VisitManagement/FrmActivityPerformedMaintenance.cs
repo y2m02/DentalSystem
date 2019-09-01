@@ -8,6 +8,7 @@ using DentalSystem.Entities.Requests.ActivityPerformed;
 using DentalSystem.Entities.Requests.InvoiceDetail;
 using DentalSystem.Entities.Requests.User;
 using DentalSystem.Entities.Results.ActivityPerformed;
+using DentalSystem.Utility;
 
 namespace DentalSystem.VisitManagement
 {
@@ -88,8 +89,7 @@ namespace DentalSystem.VisitManagement
 
             if (!isValid)
             {
-                MessageBox.Show("Campos requeridos:\n" + requiredFields, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage($"Campos requeridos:\n{requiredFields}");
                 return;
             }
 
@@ -122,8 +122,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
 
@@ -146,8 +146,7 @@ namespace DentalSystem.VisitManagement
 
             if (!isValid)
             {
-                MessageBox.Show("Campos requeridos:\n" + requiredFields, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Exclamation);
+                CustomMessage.ExclamationMessage($"Campos requeridos:\n{requiredFields}");
                 DialogResult = DialogResult.None;
                 return;
             }
@@ -176,8 +175,8 @@ namespace DentalSystem.VisitManagement
             catch (Exception ex)
             {
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Hubo un error durante el proceso: " + ex.Message, "Información", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                CustomMessage.ErrorMessage($"Hubo un error durante el proceso: {ex.Message}");
+                    
             }
         }
     }
