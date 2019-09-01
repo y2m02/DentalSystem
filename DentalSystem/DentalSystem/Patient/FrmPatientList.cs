@@ -516,15 +516,20 @@ namespace DentalSystem.Patient
                     ? ""
                     : ConfigurationSettings.AppSettings["BackUpDiskName"];
 
+                var sqlServerName = string.IsNullOrEmpty(ConfigurationSettings.AppSettings["SqlServerName"])
+                    ? ""
+                    : ConfigurationSettings.AppSettings["SqlServerName"];
+
                 var createBackUpRequest = new CreateBackUpRequest
                 {
-                    Path = path
+                    Path = path,
+                    SqlServerName = sqlServerName
                 };
 
                 _backUpService.CreateBackUp(createBackUpRequest);
 
                 MessageBox.Show("BackUp generado exitosamente." +
-                                $"\nUbicación: {path}", "Información", MessageBoxButtons.OK,
+                                $"\nUbicación: {path}\\DentalSystemDBBackUp".Replace(@"\\", @"\"), "Información", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
                 Cursor.Current = Cursors.Default;

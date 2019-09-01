@@ -15,7 +15,7 @@ namespace DentalSystem.Services.Services
 
         public void CreateBackUp(CreateBackUpRequest request)
         {
-            _backUpRepository.CreateBackUp(request.Path);
+            _backUpRepository.CreateBackUp(request.Path, request.SqlServerName);
         }
     }
 }

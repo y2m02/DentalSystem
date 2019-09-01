@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.IO;
+using System.Security.AccessControl;
 using DentalSystem.Contract.Repositories;
 using DentalSystem.Entities.Context;
 
@@ -7,21 +8,32 @@ namespace DentalSystem.Repositories.Repositories
 {
     public class BackUpRepository : IBackUpRepository
     {
-        public void CreateBackUp(string path)
+        public void CreateBackUp(string path, string sqlServerName)
         {
             using (var context = new DentalSystemContext())
             {
-                var exists = Directory.Exists(path);
+                var folder = $@"{path}\DentalSystemDBBackUp".Replace(@"\\", @"\");
+                var exists = Directory.Exists(folder);
 
-                if (!exists)
-                {
-                    Directory.CreateDirectory(path);
-                }
+                if (!exists) Directory.CreateDirectory(folder);
+
+                var directoryInfo = new DirectoryInfo(folder);
+                var directorySecurity = directoryInfo.GetAccessControl();
+                //var currentUserIdentity = WindowsIdentity.GetCurrent();
+                var fileSystemRule = new FileSystemAccessRule(sqlServerName,
+                    FileSystemRights.FullControl,
+                    InheritanceFlags.ObjectInherit |
+                    InheritanceFlags.ContainerInherit,
+                    PropagationFlags.None,
+                    AccessControlType.Allow);
+
+                directorySecurity.AddAccessRule(fileSystemRule);
+                directoryInfo.SetAccessControl(directorySecurity);
 
                 var dbName = context.Database.Connection.Database;
                 var sqlCommand =
                     $@"BACKUP DATABASE [{dbName}] TO  
-                        DISK = N'{path}\Full Database Backup of {dbName}.bak' 
+                        DISK = N'{folder}\Full Database Backup of {dbName}.bak' 
                         WITH NOFORMAT, 
                         NOINIT,  
                         NAME = N'Full Database Backup of {dbName}', 

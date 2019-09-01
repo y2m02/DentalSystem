@@ -2,6 +2,6 @@
 {
     public interface IBackUpRepository
     {
-        void CreateBackUp(string path);
+        void CreateBackUp(string path, string sqlServerName);
     }
 }

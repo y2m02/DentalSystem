@@ -1428,7 +1428,7 @@ namespace DentalSystem.VisitManagement
 
                 var jsonInitialOdontogramButtonList = JsonConvert.SerializeObject(initialOdontogramButtonList);
                 var jsonTreatmentOdontogramButtonList = JsonConvert.SerializeObject(treatmentOdontogramButtonList);
-
+                
                 var updateTreatmentOdontogramRequest = new UpdateTreatmentOdontogramRequest
                 {
                     TreatmentOdontogramId = Convert.ToInt32(LblOdontogramId.Text),
